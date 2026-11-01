@@ -189,3 +189,17 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - ✅ Live-Duell echt über supabase.arndt-software.de getestet (2 Tabs, Code RAVEN-551-1): Verbinden, Bereit, gleiche Frage, Punkt an den Richtigen (1:0 / 0:1), nächste Frage, Verlassen → Ergebnis.
 - ⏳ `et_feedback` fehlt weiterhin (404) → Andre: `deploy/supabase_et_feedback.sql` im Studio ausführen.
 - Nächster Schritt: C „Mein Rabe“, danach Phase 6.
+
+## Release 0.7 (01.11.2026) – C „Mein Rabe“ ✅ → Schulbereich (A–H) komplett
+- Tab `raven` (`renderRaven`, `ravenSvg`, `RV_PARTS`), Karte im Album und im Schulbereich (`ravenCard`).
+- Federn = floor(XP/50) + 2 × gefundene Raben − ausgegeben (berechnet, nicht gespeichert → kann nicht verloren gehen). Gespeichert nur `S.raven = {on, own, name}` (neues Feld, Standardwerte bei Bedarf).
+- **RV_PARTS nur ergänzen, nie Kosten senken/IDs ändern** (sonst stimmen ausgegebene Federn nicht).
+- CSS-Fix: gewählte Chips in `.seg` hatten Text in Hintergrundfarbe (betraf auch Fehler-melden-Kategorien und Übersicht-Reiter).
+- Tests: UI 134 OK / 0 Fehler, Core 53.
+- Nächster Schritt: Phase 6 (Trail 2/3 auf Englisch, Themenpakete, Profi-Bereich, Tagebuch/Buch, B1 → für Schule eher „Cambridge A2 Key / B1 Preliminary“-Training), dann Phase 8 Design.
+
+## Release 0.8 (01.11.2026) – Phase 6 Teil 1: Trail 2 (A2)
+- `content/trail2.py`: 12 Orte (oxf, cam, str, sth, cnt, siv, snw, gla, sky, gal, crk, ncl) mit `r: 2`, je 20 Wörter, 8 Sätze, Szene, Mission, Radio, Emmas Postkarte (`D.diary`). Grammatik-Faden: going to, Wegbeschreibung, -ed/-ing, simple past, must/mustn’t, Wetter/Kleidung, Vergleiche, present perfect, should, Einladungen, much/many, will.
+- **Wichtig (Fehler gefunden):** Trail 2/3 werden aus `data-szlak.json` nachgeladen (build.py). Die Datei war in .gitignore und nicht im Dockerfile → jetzt im Repo, im Dockerfile und im Service-Worker-Cache.
+- progress_lock aktualisiert: 50 Orte, 885 Wörter.
+- Nächste Schritte: Abgleich Bildungsplan BW + Lehrwerks-Units (Andres Auftrag 01.11. 12:59), SEO/Google, Trail 3 (B1) + Cambridge-Training.

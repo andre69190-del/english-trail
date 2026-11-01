@@ -282,6 +282,8 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.8', '2026-11-01', ['Trail 2 (A2) ist da: 12 neue Orte von Oxford bis Newcastle – mit going to, simple past, Vergleichen, must, present perfect und will. Passt zu Klasse 6–8.', 'Emmas Postkarten: Nach jedem Ort von Trail 2 kannst du eine neue Karte lesen.']),
+  ('0.7', '2026-11-01', ['Mein Rabe: Gestalte deinen eigenen Raben – Gefieder, Krone, Zauberhut, Schal, Brille, Kopfhörer, Fußball … Federn dafür verdienst du nur durchs Üben. Keine Käufe.', 'Unter „Album“ und im Schulbereich.']),
   ('0.6', '2026-11-01', ['Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.', 'Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).', 'Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.', 'Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden.', 'English Trail ist jetzt blau, und die Reise startet in London.']),
   ('0.5', '2026-11-01', ['Live-Duell: Zwei Handys, gleiche Vokabeln in Echtzeit – wer zuerst richtig antwortet, bekommt den Punkt. Ohne Konto, nur mit Spitznamen.', 'Fehler melden geht jetzt mit einem Tipp: „Übersetzung falsch“, „Tippfehler“, „zu schwer“ … – auch direkt im Schulbereich.', 'Neu: „Was kann English Trail?“ – alle Funktionen auf einen Blick, für Kinder und für Eltern & Lehrkräfte (unter „Ich“).']),
   ('0.4', '2026-11-01', ['Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.', 'Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.', 'Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode.']),
@@ -316,6 +318,7 @@ GUIDE = {
     ['Blitz, Memory, Stadt-Land-Fluss, Zungenbrecher', 'Schnelle Spiele für zwischendurch.'],
     ['KI-Gespräch', 'Unterhalte dich auf Englisch – passend zu deiner Klasse.']]},
   {'ico': '🏅', 't': 'Sammeln & Belohnungen', 'go': 'album', 'items': [
+    ['Mein Rabe', 'Gestalte deinen eigenen Raben. Federn bekommst du fürs Üben (1 pro 50 XP, 2 pro gefundenem Raben).'],
     ['Raben-Album', 'Sammle 24 Raben auf deiner Reise.'],
     ['Wochenziel statt Tages-Druck', 'Ein Tag Pause ist kein Problem – es zählt die Woche.'],
     ['Joker', '50:50, Tipp und Pause-Joker für schwere Fragen.']]},

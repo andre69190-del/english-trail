@@ -16,6 +16,7 @@ import grammar  # noqa: E402
 import extras  # noqa: E402
 import school  # noqa: E402
 import interests  # noqa: E402
+import trail2  # noqa: E402
 
 DATA = os.path.join(ROOT, 'src', 'data.json')
 D = json.load(open(DATA, encoding='utf-8'))
@@ -118,8 +119,21 @@ for k in interests.PACKS:
 # Vor der Veröffentlichung (01.11.2026): alle noch polnischen Vorlage-Teile entfernen.
 # Trail 2/3, Themenpakete, Profi-Bereich, Tagebuch, Buch und B1-Prüfung kommen in Phase 6 neu auf Englisch dazu.
 D['units'] = [u for u in D['units'] if not u.get('legacy')]
+# Phase 6: Trail 2 (A2) direkt nach Trail 1, vor den Paketen
+D['units'] = [u for u in D['units'] if u.get('r') != 2]
+_r2 = []
+for k in trail2.UNITS:
+    u2 = unit(k); u2['r'] = 2; _r2.append(u2)
+D['units'] = D['units'][:12] + _r2 + D['units'][12:]
+for k in trail2.UNITS:
+    x = trail2.EXTRA[k['id']]
+    D['missions'][k['id']] = {'pl': x['mission'][0], 'd': P(x['mission'][1])}
+    D['listen']['radio'][k['id']] = list(x['radio'])
+D['diary'] = {'prolog': P(trail2.DIARY['prolog']), 'finale': P(trail2.DIARY['finale']),
+              'lines': [dict({'u': k['id'], 'pl': trail2.EXTRA[k['id']]['card'][0], 'tr': P(trail2.EXTRA[k['id']]['card'][1])},
+                             **({'bridge': P(trail2.EXTRA[k['id']]['card'][2])} if trail2.EXTRA[k['id']]['card'][2] else {})) for k in trail2.UNITS]}
 UID = {u['id'] for u in D['units']}
-for k in ('polacy', 'diary', 'book'):
+for k in ('polacy', 'book'):
     D.pop(k, None)
 D['missions'] = {k: v for k, v in D['missions'].items() if k in UID}
 D['listen']['radio'] = {k: v for k, v in D['listen']['radio'].items() if k in UID}
