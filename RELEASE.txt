@@ -1,1 +1,1 @@
-0.10 (01.11.2026) Vokabeln per Foto - Texterkennung direkt auf dem Handy
+0.10.1 (01.11.2026) Foto-Erkennung: ue-Lesefehler korrigiert

@@ -543,3 +543,8 @@ test('Vokabeln per Foto: schräges Foto wird ausgeglichen', () => {
   const lines = [[words[0], words[1]], [words[2], words[3]], [words[4], words[5]]];
   assert.equal(JSON.stringify(C.ocrToList(C.ocrRows(words, lines))), JSON.stringify([['house', 'Haus'], ['school', 'Schule'], ['garden', 'Garten']]));
 });
+
+test('Vokabeln per Foto: ü-Lesefehler „ii“ wird im Deutschen korrigiert', () => {
+  const W = (t, x0, x1) => ({ t, x0, x1, y0: 0, y1: 20 });
+  assert.equal(JSON.stringify(C.ocrToList([{ words: [W('bridge', 0, 60), W('Briicke', 300, 380)] }, { words: [W('to fly', 0, 60), W('fliegen', 300, 380)] }])), JSON.stringify([['bridge', 'Brücke'], ['to fly', 'fliegen']]));
+});

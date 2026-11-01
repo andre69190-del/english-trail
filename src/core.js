@@ -558,7 +558,7 @@
       if (!txt.length) return;
       var pair = txt.length >= 3 ? [txt[0], txt[txt.length - 1]] : txt.length === 2 ? [txt[0], txt[1]] : ocrSplitText(txt[0]);
       if (!pair) return;
-      var en = ocrClean(pair[0]), de = ocrClean(pair[1]);
+      var en = ocrClean(pair[0]), de = ocrClean(pair[1]).replace(/([a-zäöüß])ii(?=[a-zß])/g, '$1ü').replace(/^([A-Z])ii/, function (m, c) { return c + 'ü'; });   /* typischer Lesefehler: ü → ii */
       if (!/[a-z]{2}/i.test(en) || !/[a-zäöüß]{2}/i.test(de) || OCR_SKIP.test(en) || en.length > 60 || de.length > 80) return;
       var k = en.toLowerCase(); if (seen[k]) return; seen[k] = 1;
       out.push([en, de]);
