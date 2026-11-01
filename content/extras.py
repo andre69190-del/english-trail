@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.9', '2026-11-01', ['Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.', 'Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben.']),
   ('0.8', '2026-11-01', ['Trail 2 (A2) ist da: 12 neue Orte von Oxford bis Newcastle – mit going to, simple past, Vergleichen, must, present perfect und will. Passt zu Klasse 6–8.', 'Emmas Postkarten: Nach jedem Ort von Trail 2 kannst du eine neue Karte lesen.']),
   ('0.7', '2026-11-01', ['Mein Rabe: Gestalte deinen eigenen Raben – Gefieder, Krone, Zauberhut, Schal, Brille, Kopfhörer, Fußball … Federn dafür verdienst du nur durchs Üben. Keine Käufe.', 'Unter „Album“ und im Schulbereich.']),
   ('0.6', '2026-11-01', ['Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.', 'Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).', 'Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.', 'Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden.', 'English Trail ist jetzt blau, und die Reise startet in London.']),

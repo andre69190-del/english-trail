@@ -11195,6 +11195,1663 @@
    "ico": "🏴"
   },
   {
+   "id": "s5fam",
+   "city": "Family and friends",
+   "cityDe": "Klasse 5: Familie und Freunde",
+   "cityEn": "Family and friends",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Familie und Freunde",
+    "Familie und Freunde"
+   ],
+   "can": [
+    "Ich kann meine Familie und meine Freunde vorstellen und beschreiben.",
+    "Ich kann meine Familie und meine Freunde vorstellen und beschreiben."
+   ],
+   "tip": [
+    "Besitz zeigst du mit ’s: „my brother’s room“. Bei he/she/it im simple present das -s nicht vergessen: „She has got brown hair.“",
+    "Besitz zeigst du mit ’s: „my brother’s room“. Bei he/she/it im simple present das -s nicht vergessen: „She has got brown hair.“"
+   ],
+   "fact": [
+    "In Großbritannien nennen viele Kinder ihre Großeltern „Gran“ und „Grandad“ oder „Nana“ und „Grandpa“.",
+    "In Großbritannien nennen viele Kinder ihre Großeltern „Gran“ und „Grandad“ oder „Nana“ und „Grandpa“."
+   ],
+   "words": [
+    [
+     "family",
+     "Familie",
+     "Familie"
+    ],
+    [
+     "parents",
+     "Eltern",
+     "Eltern"
+    ],
+    [
+     "mother / mum",
+     "Mutter / Mama",
+     "Mutter / Mama"
+    ],
+    [
+     "father / dad",
+     "Vater / Papa",
+     "Vater / Papa"
+    ],
+    [
+     "brother",
+     "Bruder",
+     "Bruder"
+    ],
+    [
+     "sister",
+     "Schwester",
+     "Schwester"
+    ],
+    [
+     "grandparents",
+     "Großeltern",
+     "Großeltern"
+    ],
+    [
+     "aunt",
+     "Tante",
+     "Tante"
+    ],
+    [
+     "uncle",
+     "Onkel",
+     "Onkel"
+    ],
+    [
+     "cousin",
+     "Cousin / Cousine",
+     "Cousin / Cousine"
+    ],
+    [
+     "friend",
+     "Freund/in",
+     "Freund/in"
+    ],
+    [
+     "best friend",
+     "beste/r Freund/in",
+     "beste/r Freund/in"
+    ],
+    [
+     "tall",
+     "groß (Person)",
+     "groß (Person)"
+    ],
+    [
+     "short",
+     "klein / kurz",
+     "klein / kurz"
+    ],
+    [
+     "hair",
+     "Haare",
+     "Haare"
+    ],
+    [
+     "eyes",
+     "Augen",
+     "Augen"
+    ]
+   ],
+   "sentences": [
+    [
+     "This is my brother. His name is Max.",
+     "Das ist mein Bruder. Er heißt Max.",
+     "Das ist mein Bruder. Er heißt Max."
+    ],
+    [
+     "My best friend has got long brown hair.",
+     "Meine beste Freundin hat lange braune Haare.",
+     "Meine beste Freundin hat lange braune Haare."
+    ],
+    [
+     "My grandparents live in Ulm.",
+     "Meine Großeltern wohnen in Ulm.",
+     "Meine Großeltern wohnen in Ulm."
+    ],
+    [
+     "Have you got any brothers or sisters?",
+     "Hast du Geschwister?",
+     "Hast du Geschwister?"
+    ],
+    [
+     "My cousin's name is Lena.",
+     "Meine Cousine heißt Lena.",
+     "Meine Cousine heißt Lena."
+    ],
+    [
+     "My dad is tall and he has got blue eyes.",
+     "Mein Papa ist groß und hat blaue Augen.",
+     "Mein Papa ist groß und hat blaue Augen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Erster Tag an deiner Partnerschule in Bristol. Deine Austauschpartnerin Chloe zeigt dir Fotos auf ihrem Handy.",
+     "Erster Tag an deiner Partnerschule in Bristol. Deine Austauschpartnerin Chloe zeigt dir Fotos auf ihrem Handy."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "This is my family. Have you got any brothers or sisters?",
+       "Das ist meine Familie. Hast du Geschwister?",
+       "Das ist meine Familie. Hast du Geschwister?"
+      ],
+      "opts": [
+       [
+        "Yes, I have. I have got one sister.",
+        "Ja. Ich habe eine Schwester.",
+        "Ja. Ich habe eine Schwester.",
+        1
+       ],
+       [
+        "Yes, I am a sister.",
+        "Ja, ich bin eine Schwester (passt nicht).",
+        "Ja, ich bin eine Schwester (passt nicht).",
+        0
+       ]
+      ],
+      "hint": [
+       "„Have you got …?“ → „Yes, I have.“",
+       "„Have you got …?“ → „Yes, I have.“"
+      ]
+     },
+     {
+      "npc": [
+       "What's her name?",
+       "Wie heißt sie?",
+       "Wie heißt sie?"
+      ],
+      "opts": [
+       [
+        "Her name is Mia. She is nine.",
+        "Sie heißt Mia. Sie ist neun.",
+        "Sie heißt Mia. Sie ist neun.",
+        1
+       ],
+       [
+        "His name is Mia.",
+        "Sein Name ist Mia.",
+        "Sein Name ist Mia.",
+        0
+       ]
+      ],
+      "hint": [
+       "Bei einem Mädchen: her name.",
+       "Bei einem Mädchen: her name."
+      ]
+     },
+     {
+      "npc": [
+       "And who is your best friend?",
+       "Und wer ist dein bester Freund / deine beste Freundin?",
+       "Und wer ist dein bester Freund / deine beste Freundin?"
+      ],
+      "opts": [
+       [
+        "My best friend is Jonas. He is very funny.",
+        "Mein bester Freund ist Jonas. Er ist sehr lustig.",
+        "Mein bester Freund ist Jonas. Er ist sehr lustig.",
+        1
+       ],
+       [
+        "My best friend are Jonas.",
+        "Mein bester Freund sind Jonas.",
+        "Mein bester Freund sind Jonas.",
+        0
+       ]
+      ],
+      "hint": [
+       "Eine Person → is.",
+       "Eine Person → is."
+      ]
+     }
+    ],
+    "outro": [
+     "Chloe lacht: „Your sister looks just like you!“",
+     "Chloe lacht: „Your sister looks just like you!“"
+    ]
+   },
+   "pack": 1,
+   "sch": 5,
+   "ico": "👨‍👩‍👧",
+   "em": [
+    "👪",
+    "👨‍👩",
+    "👩",
+    "👨",
+    "👦",
+    "👧",
+    "👴",
+    "👩‍🦰",
+    "🧔",
+    "🧒",
+    "🤝",
+    "💛",
+    "🦒",
+    "🐭",
+    "💇",
+    "👀"
+   ]
+  },
+  {
+   "id": "s5day",
+   "city": "My day and the time",
+   "cityDe": "Klasse 5: Mein Tag und die Uhrzeit",
+   "cityEn": "My day and the time",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Mein Tag und die Uhrzeit",
+    "Mein Tag und die Uhrzeit"
+   ],
+   "can": [
+    "Ich kann meinen Tagesablauf beschreiben und die Uhrzeit sagen.",
+    "Ich kann meinen Tagesablauf beschreiben und die Uhrzeit sagen."
+   ],
+   "tip": [
+    "Uhrzeit: „half past seven“ = halb acht (!), „quarter to eight“ = Viertel vor acht. Tagesablauf im simple present: „I get up at seven.“",
+    "Uhrzeit: „half past seven“ = halb acht (!), „quarter to eight“ = Viertel vor acht. Tagesablauf im simple present: „I get up at seven.“"
+   ],
+   "fact": [
+    "In Großbritannien beginnt die Schule meist gegen 8:45 Uhr und dauert bis etwa 15:30 Uhr – mit Mittagessen in der Schule.",
+    "In Großbritannien beginnt die Schule meist gegen 8:45 Uhr und dauert bis etwa 15:30 Uhr – mit Mittagessen in der Schule."
+   ],
+   "words": [
+    [
+     "to get up",
+     "aufstehen",
+     "aufstehen"
+    ],
+    [
+     "to have breakfast",
+     "frühstücken",
+     "frühstücken"
+    ],
+    [
+     "to go to school",
+     "zur Schule gehen",
+     "zur Schule gehen"
+    ],
+    [
+     "lunch",
+     "Mittagessen",
+     "Mittagessen"
+    ],
+    [
+     "to come home",
+     "nach Hause kommen",
+     "nach Hause kommen"
+    ],
+    [
+     "to do homework",
+     "Hausaufgaben machen",
+     "Hausaufgaben machen"
+    ],
+    [
+     "dinner",
+     "Abendessen",
+     "Abendessen"
+    ],
+    [
+     "to go to bed",
+     "ins Bett gehen",
+     "ins Bett gehen"
+    ],
+    [
+     "o'clock",
+     "Uhr (volle Stunde)",
+     "Uhr (volle Stunde)"
+    ],
+    [
+     "half past",
+     "halb (nach)",
+     "halb (nach)"
+    ],
+    [
+     "quarter past",
+     "Viertel nach",
+     "Viertel nach"
+    ],
+    [
+     "quarter to",
+     "Viertel vor",
+     "Viertel vor"
+    ],
+    [
+     "morning",
+     "Morgen / Vormittag",
+     "Morgen / Vormittag"
+    ],
+    [
+     "afternoon",
+     "Nachmittag",
+     "Nachmittag"
+    ],
+    [
+     "evening",
+     "Abend",
+     "Abend"
+    ],
+    [
+     "What time is it?",
+     "Wie spät ist es?",
+     "Wie spät ist es?"
+    ]
+   ],
+   "sentences": [
+    [
+     "I get up at half past six.",
+     "Ich stehe um halb sieben auf.",
+     "Ich stehe um halb sieben auf."
+    ],
+    [
+     "What time is it? – It’s quarter to eight.",
+     "Wie spät ist es? – Viertel vor acht.",
+     "Wie spät ist es? – Viertel vor acht."
+    ],
+    [
+     "After school I do my homework.",
+     "Nach der Schule mache ich meine Hausaufgaben.",
+     "Nach der Schule mache ich meine Hausaufgaben."
+    ],
+    [
+     "We have dinner at seven o’clock.",
+     "Wir essen um sieben Uhr zu Abend.",
+     "Wir essen um sieben Uhr zu Abend."
+    ],
+    [
+     "She goes to bed at nine.",
+     "Sie geht um neun ins Bett.",
+     "Sie geht um neun ins Bett."
+    ],
+    [
+     "On Saturdays I get up late.",
+     "Samstags stehe ich spät auf.",
+     "Samstags stehe ich spät auf."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ein Videoanruf mit deiner Brieffreundin Amy aus York. Bei ihr ist es eine Stunde früher.",
+     "Ein Videoanruf mit deiner Brieffreundin Amy aus York. Bei ihr ist es eine Stunde früher."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What time is it in Germany?",
+       "Wie spät ist es in Deutschland?",
+       "Wie spät ist es in Deutschland?"
+      ],
+      "opts": [
+       [
+        "It's half past four.",
+        "Es ist halb fünf.",
+        "Es ist halb fünf.",
+        1
+       ],
+       [
+        "It's four half.",
+        "Es ist vier halb.",
+        "Es ist vier halb.",
+        0
+       ]
+      ],
+      "hint": [
+       "„half past four“ = 4:30.",
+       "„half past four“ = 4:30."
+      ]
+     },
+     {
+      "npc": [
+       "When do you get up for school?",
+       "Wann stehst du für die Schule auf?",
+       "Wann stehst du für die Schule auf?"
+      ],
+      "opts": [
+       [
+        "I get up at quarter past six.",
+        "Ich stehe um Viertel nach sechs auf.",
+        "Ich stehe um Viertel nach sechs auf.",
+        1
+       ],
+       [
+        "I gets up at six.",
+        "Ich steht um sechs auf.",
+        "Ich steht um sechs auf.",
+        0
+       ]
+      ],
+      "hint": [
+       "Bei I kein -s.",
+       "Bei I kein -s."
+      ]
+     },
+     {
+      "npc": [
+       "So early! What do you do after school?",
+       "So früh! Was machst du nach der Schule?",
+       "So früh! Was machst du nach der Schule?"
+      ],
+      "opts": [
+       [
+        "I have lunch and then I do my homework.",
+        "Ich esse zu Mittag und dann mache ich Hausaufgaben.",
+        "Ich esse zu Mittag und dann mache ich Hausaufgaben.",
+        1
+       ],
+       [
+        "I go to bed at lunch.",
+        "Ich gehe beim Mittagessen ins Bett.",
+        "Ich gehe beim Mittagessen ins Bett.",
+        0
+       ]
+      ],
+      "hint": [
+       "Reihenfolge mit „and then“.",
+       "Reihenfolge mit „and then“."
+      ]
+     }
+    ],
+    "outro": [
+     "„Same here!“, sagt Amy. Ihr verabredet euch für Samstag – um „half past ten“.",
+     "„Same here!“, sagt Amy. Ihr verabredet euch für Samstag – um „half past ten“."
+    ]
+   },
+   "pack": 1,
+   "sch": 5,
+   "ico": "⏰",
+   "em": [
+    "⏰",
+    "🥣",
+    "🏫",
+    "🥪",
+    "🏠",
+    "📝",
+    "🍽️",
+    "🛌",
+    "🕐",
+    "🕧",
+    "🕒",
+    "🕣",
+    "🌅",
+    "☀️",
+    "🌆",
+    "❓"
+   ]
+  },
+  {
+   "id": "s6wea",
+   "city": "Weather and clothes",
+   "cityDe": "Klasse 6: Wetter und Kleidung",
+   "cityEn": "Weather and clothes",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Wetter und Kleidung",
+    "Wetter und Kleidung"
+   ],
+   "can": [
+    "Ich kann über das Wetter sprechen und sagen, was ich anziehe.",
+    "Ich kann über das Wetter sprechen und sagen, was ich anziehe."
+   ],
+   "tip": [
+    "Was du gerade trägst: present progressive – „I’m wearing a jacket.“ Wetter: „It’s sunny / rainy / windy.“",
+    "Was du gerade trägst: present progressive – „I’m wearing a jacket.“ Wetter: „It’s sunny / rainy / windy.“"
+   ],
+   "fact": [
+    "Britisches Wetter wechselt schnell – viele Briten haben deshalb immer einen Regenschirm („brolly“) dabei.",
+    "Britisches Wetter wechselt schnell – viele Briten haben deshalb immer einen Regenschirm („brolly“) dabei."
+   ],
+   "words": [
+    [
+     "weather",
+     "Wetter",
+     "Wetter"
+    ],
+    [
+     "sunny",
+     "sonnig",
+     "sonnig"
+    ],
+    [
+     "rainy",
+     "regnerisch",
+     "regnerisch"
+    ],
+    [
+     "cloudy",
+     "bewölkt",
+     "bewölkt"
+    ],
+    [
+     "windy",
+     "windig",
+     "windig"
+    ],
+    [
+     "snowy",
+     "verschneit",
+     "verschneit"
+    ],
+    [
+     "foggy",
+     "neblig",
+     "neblig"
+    ],
+    [
+     "umbrella",
+     "Regenschirm",
+     "Regenschirm"
+    ],
+    [
+     "coat",
+     "Mantel",
+     "Mantel"
+    ],
+    [
+     "boots",
+     "Stiefel",
+     "Stiefel"
+    ],
+    [
+     "scarf",
+     "Schal",
+     "Schal"
+    ],
+    [
+     "gloves",
+     "Handschuhe",
+     "Handschuhe"
+    ],
+    [
+     "dress",
+     "Kleid",
+     "Kleid"
+    ],
+    [
+     "trousers",
+     "Hose",
+     "Hose"
+    ],
+    [
+     "trainers",
+     "Turnschuhe",
+     "Turnschuhe"
+    ],
+    [
+     "to wear",
+     "tragen",
+     "tragen"
+    ]
+   ],
+   "sentences": [
+    [
+     "It's cold and windy today.",
+     "Heute ist es kalt und windig.",
+     "Heute ist es kalt und windig."
+    ],
+    [
+     "I'm wearing my new trainers.",
+     "Ich trage meine neuen Turnschuhe.",
+     "Ich trage meine neuen Turnschuhe."
+    ],
+    [
+     "Take an umbrella – it's going to rain.",
+     "Nimm einen Schirm mit – es wird regnen.",
+     "Nimm einen Schirm mit – es wird regnen."
+    ],
+    [
+     "What’s the weather like in Scotland?",
+     "Wie ist das Wetter in Schottland?",
+     "Wie ist das Wetter in Schottland?"
+    ],
+    [
+     "In winter I wear gloves and a scarf.",
+     "Im Winter trage ich Handschuhe und einen Schal.",
+     "Im Winter trage ich Handschuhe und einen Schal."
+    ],
+    [
+     "Yesterday it was foggy.",
+     "Gestern war es neblig.",
+     "Gestern war es neblig."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Klassenfahrt nach Edinburgh. Morgens am Fenster der Jugendherberge – grauer Himmel. Dein Lehrer fragt in die Runde.",
+     "Klassenfahrt nach Edinburgh. Morgens am Fenster der Jugendherberge – grauer Himmel. Dein Lehrer fragt in die Runde."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What's the weather like today?",
+       "Wie ist das Wetter heute?",
+       "Wie ist das Wetter heute?"
+      ],
+      "opts": [
+       [
+        "It's cloudy and a bit rainy.",
+        "Bewölkt und ein bisschen regnerisch.",
+        "Bewölkt und ein bisschen regnerisch.",
+        1
+       ],
+       [
+        "It's trousers.",
+        "Es ist Hose.",
+        "Es ist Hose.",
+        0
+       ]
+      ],
+      "hint": [
+       "Wetter: It’s + Adjektiv.",
+       "Wetter: It’s + Adjektiv."
+      ]
+     },
+     {
+      "npc": [
+       "So what are you going to wear?",
+       "Und was ziehst du an?",
+       "Und was ziehst du an?"
+      ],
+      "opts": [
+       [
+        "I'm going to wear my coat and boots.",
+        "Ich ziehe meinen Mantel und meine Stiefel an.",
+        "Ich ziehe meinen Mantel und meine Stiefel an.",
+        1
+       ],
+       [
+        "I'm wear my coat.",
+        "Ich bin trage meinen Mantel.",
+        "Ich bin trage meinen Mantel.",
+        0
+       ]
+      ],
+      "hint": [
+       "going to + Grundform.",
+       "going to + Grundform."
+      ]
+     },
+     {
+      "npc": [
+       "Good idea. Don't forget your umbrella!",
+       "Gute Idee. Vergiss deinen Schirm nicht!",
+       "Gute Idee. Vergiss deinen Schirm nicht!"
+      ],
+      "opts": [
+       [
+        "Thanks! It's in my bag.",
+        "Danke! Er ist in meiner Tasche.",
+        "Danke! Er ist in meiner Tasche.",
+        1
+       ],
+       [
+        "Yes, it's sunny umbrella.",
+        "Ja, sonniger Schirm.",
+        "Ja, sonniger Schirm.",
+        0
+       ]
+      ],
+      "hint": [
+       "Kurz bedanken.",
+       "Kurz bedanken."
+      ]
+     }
+    ],
+    "outro": [
+     "Mittags kommt die Sonne raus. Typisch britisch!",
+     "Mittags kommt die Sonne raus. Typisch britisch!"
+    ]
+   },
+   "pack": 1,
+   "sch": 6,
+   "ico": "🌦️",
+   "em": [
+    "🌤️",
+    "☀️",
+    "🌧️",
+    "☁️",
+    "💨",
+    "❄️",
+    "🌫️",
+    "☂️",
+    "🧥",
+    "👢",
+    "🧣",
+    "🧤",
+    "👗",
+    "👖",
+    "👟",
+    "👕"
+   ]
+  },
+  {
+   "id": "s7rol",
+   "city": "Role models",
+   "cityDe": "Klasse 7: Vorbilder und Identität",
+   "cityEn": "Role models",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Vorbilder und Identität",
+    "Vorbilder und Identität"
+   ],
+   "can": [
+    "Ich kann eine Person beschreiben, die ich bewundere, und begründen, warum.",
+    "Ich kann eine Person beschreiben, die ich bewundere, und begründen, warum."
+   ],
+   "tip": [
+    "Begründen mit „because“ und Relativsätzen: „She’s a person who never gives up.“",
+    "Begründen mit „because“ und Relativsätzen: „She’s a person who never gives up.“"
+   ],
+   "fact": [
+    "Malala Yousafzai bekam mit 17 Jahren den Friedensnobelpreis – sie lebt heute in Großbritannien und setzt sich für Bildung für Mädchen ein.",
+    "Malala Yousafzai bekam mit 17 Jahren den Friedensnobelpreis – sie lebt heute in Großbritannien und setzt sich für Bildung für Mädchen ein."
+   ],
+   "words": [
+    [
+     "role model",
+     "Vorbild",
+     "Vorbild"
+    ],
+    [
+     "to admire",
+     "bewundern",
+     "bewundern"
+    ],
+    [
+     "brave",
+     "mutig",
+     "mutig"
+    ],
+    [
+     "kind",
+     "freundlich / gütig",
+     "freundlich / gütig"
+    ],
+    [
+     "honest",
+     "ehrlich",
+     "ehrlich"
+    ],
+    [
+     "confident",
+     "selbstbewusst",
+     "selbstbewusst"
+    ],
+    [
+     "hard-working",
+     "fleißig",
+     "fleißig"
+    ],
+    [
+     "talented",
+     "begabt",
+     "begabt"
+    ],
+    [
+     "to give up",
+     "aufgeben",
+     "aufgeben"
+    ],
+    [
+     "to achieve",
+     "erreichen",
+     "erreichen"
+    ],
+    [
+     "success",
+     "Erfolg",
+     "Erfolg"
+    ],
+    [
+     "famous",
+     "berühmt",
+     "berühmt"
+    ],
+    [
+     "to inspire",
+     "inspirieren",
+     "inspirieren"
+    ],
+    [
+     "personality",
+     "Persönlichkeit",
+     "Persönlichkeit"
+    ],
+    [
+     "to be proud of",
+     "stolz sein auf",
+     "stolz sein auf"
+    ],
+    [
+     "who",
+     "der/die/das (Person, Relativpronomen)",
+     "der/die/das (Person, Relativpronomen)"
+    ]
+   ],
+   "sentences": [
+    [
+     "My role model is my aunt because she is very brave.",
+     "Mein Vorbild ist meine Tante, weil sie sehr mutig ist.",
+     "Mein Vorbild ist meine Tante, weil sie sehr mutig ist."
+    ],
+    [
+     "I admire people who never give up.",
+     "Ich bewundere Menschen, die nie aufgeben.",
+     "Ich bewundere Menschen, die nie aufgeben."
+    ],
+    [
+     "She achieved a lot without being famous.",
+     "Sie hat viel erreicht, ohne berühmt zu sein.",
+     "Sie hat viel erreicht, ohne berühmt zu sein."
+    ],
+    [
+     "He inspires me to work harder.",
+     "Er inspiriert mich, mich mehr anzustrengen.",
+     "Er inspiriert mich, mich mehr anzustrengen."
+    ],
+    [
+     "A good friend is honest and kind.",
+     "Ein guter Freund ist ehrlich und freundlich.",
+     "Ein guter Freund ist ehrlich und freundlich."
+    ],
+    [
+     "I'm proud of my little brother.",
+     "Ich bin stolz auf meinen kleinen Bruder.",
+     "Ich bin stolz auf meinen kleinen Bruder."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Englischunterricht: Jeder stellt ein Vorbild vor. Deine Lehrerin Ms Carter fragt dich nach deiner Präsentation.",
+     "Englischunterricht: Jeder stellt ein Vorbild vor. Deine Lehrerin Ms Carter fragt dich nach deiner Präsentation."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Who is your role model?",
+       "Wer ist dein Vorbild?",
+       "Wer ist dein Vorbild?"
+      ],
+      "opts": [
+       [
+        "My role model is my grandma.",
+        "Mein Vorbild ist meine Oma.",
+        "Mein Vorbild ist meine Oma.",
+        1
+       ],
+       [
+        "My role model is brave because.",
+        "Mein Vorbild ist mutig weil.",
+        "Mein Vorbild ist mutig weil.",
+        0
+       ]
+      ],
+      "hint": [
+       "Erst die Person nennen.",
+       "Erst die Person nennen."
+      ]
+     },
+     {
+      "npc": [
+       "Why do you admire her?",
+       "Warum bewunderst du sie?",
+       "Warum bewunderst du sie?"
+      ],
+      "opts": [
+       [
+        "Because she is a person who helps everyone.",
+        "Weil sie ein Mensch ist, der allen hilft.",
+        "Weil sie ein Mensch ist, der allen hilft.",
+        1
+       ],
+       [
+        "Because she which helps.",
+        "Weil sie welches hilft.",
+        "Weil sie welches hilft.",
+        0
+       ]
+      ],
+      "hint": [
+       "Person → who.",
+       "Person → who."
+      ]
+     },
+     {
+      "npc": [
+       "Lovely. What has she achieved?",
+       "Schön. Was hat sie erreicht?",
+       "Schön. Was hat sie erreicht?"
+      ],
+      "opts": [
+       [
+        "She has raised four children and she still works in a café.",
+        "Sie hat vier Kinder großgezogen und arbeitet immer noch in einem Café.",
+        "Sie hat vier Kinder großgezogen und arbeitet immer noch in einem Café.",
+        1
+       ],
+       [
+        "She achieve yesterday.",
+        "Sie erreicht gestern.",
+        "Sie erreicht gestern.",
+        0
+       ]
+      ],
+      "hint": [
+       "present perfect: has achieved / has raised.",
+       "present perfect: has achieved / has raised."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Klasse klatscht. Ms Carter: „That was really inspiring!“",
+     "Die Klasse klatscht. Ms Carter: „That was really inspiring!“"
+    ]
+   },
+   "pack": 1,
+   "sch": 7,
+   "ico": "🌟"
+  },
+  {
+   "id": "s8his",
+   "city": "British history",
+   "cityDe": "Klasse 8: Britische Geschichte",
+   "cityEn": "British history",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Britische Geschichte",
+    "Britische Geschichte"
+   ],
+   "can": [
+    "Ich kann über wichtige Ereignisse der britischen Geschichte berichten (simple past, passive).",
+    "Ich kann über wichtige Ereignisse der britischen Geschichte berichten (simple past, passive)."
+   ],
+   "tip": [
+    "Geschichte erzählst du im simple past; das Passiv zeigt, was getan wurde: „The castle was built in 1070.“",
+    "Geschichte erzählst du im simple past; das Passiv zeigt, was getan wurde: „The castle was built in 1070.“"
+   ],
+   "fact": [
+    "Der Tower of London wurde ab 1078 unter Wilhelm dem Eroberer gebaut – heute bewachen ihn die „Beefeaters“ und die berühmten Raben.",
+    "Der Tower of London wurde ab 1078 unter Wilhelm dem Eroberer gebaut – heute bewachen ihn die „Beefeaters“ und die berühmten Raben."
+   ],
+   "words": [
+    [
+     "history",
+     "Geschichte",
+     "Geschichte"
+    ],
+    [
+     "century",
+     "Jahrhundert",
+     "Jahrhundert"
+    ],
+    [
+     "king",
+     "König",
+     "König"
+    ],
+    [
+     "queen",
+     "Königin",
+     "Königin"
+    ],
+    [
+     "castle",
+     "Burg / Schloss",
+     "Burg / Schloss"
+    ],
+    [
+     "battle",
+     "Schlacht",
+     "Schlacht"
+    ],
+    [
+     "to rule",
+     "herrschen",
+     "herrschen"
+    ],
+    [
+     "to invade",
+     "einfallen / erobern",
+     "einfallen / erobern"
+    ],
+    [
+     "empire",
+     "(Welt-)Reich",
+     "(Welt-)Reich"
+    ],
+    [
+     "war",
+     "Krieg",
+     "Krieg"
+    ],
+    [
+     "peace",
+     "Frieden",
+     "Frieden"
+    ],
+    [
+     "was built",
+     "wurde gebaut",
+     "wurde gebaut"
+    ],
+    [
+     "was crowned",
+     "wurde gekrönt",
+     "wurde gekrönt"
+    ],
+    [
+     "the Romans",
+     "die Römer",
+     "die Römer"
+    ],
+    [
+     "the Industrial Revolution",
+     "die Industrielle Revolution",
+     "die Industrielle Revolution"
+    ],
+    [
+     "factory",
+     "Fabrik",
+     "Fabrik"
+    ]
+   ],
+   "sentences": [
+    [
+     "The Romans came to Britain about 2,000 years ago.",
+     "Die Römer kamen vor etwa 2000 Jahren nach Britannien.",
+     "Die Römer kamen vor etwa 2000 Jahren nach Britannien."
+    ],
+    [
+     "The castle was built in the 11th century.",
+     "Die Burg wurde im 11. Jahrhundert gebaut.",
+     "Die Burg wurde im 11. Jahrhundert gebaut."
+    ],
+    [
+     "Queen Victoria ruled for 63 years.",
+     "Königin Victoria herrschte 63 Jahre lang.",
+     "Königin Victoria herrschte 63 Jahre lang."
+    ],
+    [
+     "Many factories were built during the Industrial Revolution.",
+     "Während der Industriellen Revolution wurden viele Fabriken gebaut.",
+     "Während der Industriellen Revolution wurden viele Fabriken gebaut."
+    ],
+    [
+     "William the Conqueror invaded England in 1066.",
+     "Wilhelm der Eroberer eroberte England im Jahr 1066.",
+     "Wilhelm der Eroberer eroberte England im Jahr 1066."
+    ],
+    [
+     "King Charles III was crowned in 2023.",
+     "König Charles III. wurde 2023 gekrönt.",
+     "König Charles III. wurde 2023 gekrönt."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Tower of London. Ein Beefeater in roter Uniform führt eure Gruppe herum und stellt Fragen.",
+     "Tower of London. Ein Beefeater in roter Uniform führt eure Gruppe herum und stellt Fragen."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Who knows when this tower was built?",
+       "Wer weiß, wann dieser Turm gebaut wurde?",
+       "Wer weiß, wann dieser Turm gebaut wurde?"
+      ],
+      "opts": [
+       [
+        "It was built about 900 years ago.",
+        "Er wurde vor etwa 900 Jahren gebaut.",
+        "Er wurde vor etwa 900 Jahren gebaut.",
+        1
+       ],
+       [
+        "It builds 900 years.",
+        "Er baut 900 Jahre.",
+        "Er baut 900 Jahre.",
+        0
+       ]
+      ],
+      "hint": [
+       "Passiv: was built.",
+       "Passiv: was built."
+      ]
+     },
+     {
+      "npc": [
+       "Correct! And who invaded England in 1066?",
+       "Richtig! Und wer eroberte England 1066?",
+       "Richtig! Und wer eroberte England 1066?"
+      ],
+      "opts": [
+       [
+        "William the Conqueror did.",
+        "Wilhelm der Eroberer.",
+        "Wilhelm der Eroberer.",
+        1
+       ],
+       [
+        "The Industrial Revolution.",
+        "Die Industrielle Revolution.",
+        "Die Industrielle Revolution.",
+        0
+       ]
+      ],
+      "hint": [
+       "Kurzantwort: … did.",
+       "Kurzantwort: … did."
+      ]
+     },
+     {
+      "npc": [
+       "Very good! Why are the ravens important?",
+       "Sehr gut! Warum sind die Raben wichtig?",
+       "Sehr gut! Warum sind die Raben wichtig?"
+      ],
+      "opts": [
+       [
+        "People say the kingdom will fall if they leave.",
+        "Man sagt, das Königreich fällt, wenn sie gehen.",
+        "Man sagt, das Königreich fällt, wenn sie gehen.",
+        1
+       ],
+       [
+        "Because they were crowned.",
+        "Weil sie gekrönt wurden.",
+        "Weil sie gekrönt wurden.",
+        0
+       ]
+      ],
+      "hint": [
+       "Legende: „If they leave, …“",
+       "Legende: „If they leave, …“"
+      ]
+     }
+    ],
+    "outro": [
+     "Ein Rabe krächzt laut – als wollte er dir recht geben.",
+     "Ein Rabe krächzt laut – als wollte er dir recht geben."
+    ]
+   },
+   "pack": 1,
+   "sch": 8,
+   "ico": "🏰"
+  },
+  {
+   "id": "s9aus",
+   "city": "Australia and New Zealand",
+   "cityDe": "Klasse 9: Australien und Neuseeland",
+   "cityEn": "Australia and New Zealand",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Australien und Neuseeland",
+    "Australien und Neuseeland"
+   ],
+   "can": [
+    "Ich kann über Australien und Neuseeland sprechen – Natur, Geschichte und Leben dort.",
+    "Ich kann über Australien und Neuseeland sprechen – Natur, Geschichte und Leben dort."
+   ],
+   "tip": [
+    "Australisches Englisch: „G’day!“ = Hallo, „arvo“ = afternoon, „mate“ = Kumpel. Im Unterricht trotzdem Standardenglisch!",
+    "Australisches Englisch: „G’day!“ = Hallo, „arvo“ = afternoon, „mate“ = Kumpel. Im Unterricht trotzdem Standardenglisch!"
+   ],
+   "fact": [
+    "Die Aborigines leben seit über 60 000 Jahren in Australien – sie gehören zu den ältesten durchgehenden Kulturen der Welt.",
+    "Die Aborigines leben seit über 60 000 Jahren in Australien – sie gehören zu den ältesten durchgehenden Kulturen der Welt."
+   ],
+   "words": [
+    [
+     "continent",
+     "Kontinent",
+     "Kontinent"
+    ],
+    [
+     "outback",
+     "Outback (Hinterland)",
+     "Outback (Hinterland)"
+    ],
+    [
+     "desert",
+     "Wüste",
+     "Wüste"
+    ],
+    [
+     "coast",
+     "Küste",
+     "Küste"
+    ],
+    [
+     "reef",
+     "Riff",
+     "Riff"
+    ],
+    [
+     "kangaroo",
+     "Känguru",
+     "Känguru"
+    ],
+    [
+     "Aboriginal people",
+     "Aborigines (Ureinwohner)",
+     "Aborigines (Ureinwohner)"
+    ],
+    [
+     "Maori",
+     "Māori",
+     "Māori"
+    ],
+    [
+     "indigenous",
+     "indigen / einheimisch",
+     "indigen / einheimisch"
+    ],
+    [
+     "settler",
+     "Siedler/in",
+     "Siedler/in"
+    ],
+    [
+     "convict",
+     "Sträfling",
+     "Sträfling"
+    ],
+    [
+     "bushfire",
+     "Buschfeuer",
+     "Buschfeuer"
+    ],
+    [
+     "drought",
+     "Dürre",
+     "Dürre"
+    ],
+    [
+     "to emigrate",
+     "auswandern",
+     "auswandern"
+    ],
+    [
+     "exchange year",
+     "Austauschjahr",
+     "Austauschjahr"
+    ],
+    [
+     "host country",
+     "Gastland",
+     "Gastland"
+    ]
+   ],
+   "sentences": [
+    [
+     "Australia is the only country that is also a continent.",
+     "Australien ist das einzige Land, das auch ein Kontinent ist.",
+     "Australien ist das einzige Land, das auch ein Kontinent ist."
+    ],
+    [
+     "The first British settlers were often convicts.",
+     "Die ersten britischen Siedler waren oft Sträflinge.",
+     "Die ersten britischen Siedler waren oft Sträflinge."
+    ],
+    [
+     "Bushfires have become more dangerous because of climate change.",
+     "Buschfeuer sind wegen des Klimawandels gefährlicher geworden.",
+     "Buschfeuer sind wegen des Klimawandels gefährlicher geworden."
+    ],
+    [
+     "The Great Barrier Reef can be seen from space.",
+     "Das Great Barrier Reef ist aus dem All zu sehen.",
+     "Das Great Barrier Reef ist aus dem All zu sehen."
+    ],
+    [
+     "Many Maori words are used in New Zealand English.",
+     "Viele Māori-Wörter werden im neuseeländischen Englisch benutzt.",
+     "Viele Māori-Wörter werden im neuseeländischen Englisch benutzt."
+    ],
+    [
+     "I'd love to spend an exchange year in Melbourne.",
+     "Ich würde gern ein Austauschjahr in Melbourne verbringen.",
+     "Ich würde gern ein Austauschjahr in Melbourne verbringen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Videocall mit deiner Gastfamilie in Melbourne vor deinem Austauschjahr. Dein Gastbruder Liam grinst in die Kamera.",
+     "Videocall mit deiner Gastfamilie in Melbourne vor deinem Austauschjahr. Dein Gastbruder Liam grinst in die Kamera."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "G'day! Are you excited about coming to Australia?",
+       "Hallo! Freust du dich auf Australien?",
+       "Hallo! Freust du dich auf Australien?"
+      ],
+      "opts": [
+       [
+        "Yes, I can't wait! I've never been so far away.",
+        "Ja, ich kann es kaum erwarten! Ich war noch nie so weit weg.",
+        "Ja, ich kann es kaum erwarten! Ich war noch nie so weit weg.",
+        1
+       ],
+       [
+        "Yes, I am a kangaroo.",
+        "Ja, ich bin ein Känguru.",
+        "Ja, ich bin ein Känguru.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vorfreude + present perfect (never been).",
+       "Vorfreude + present perfect (never been)."
+      ]
+     },
+     {
+      "npc": [
+       "What would you like to see first?",
+       "Was möchtest du zuerst sehen?",
+       "Was möchtest du zuerst sehen?"
+      ],
+      "opts": [
+       [
+        "I'd like to see the Great Barrier Reef.",
+        "Ich möchte das Great Barrier Reef sehen.",
+        "Ich möchte das Great Barrier Reef sehen.",
+        1
+       ],
+       [
+        "I like see reef yesterday.",
+        "Ich mag Riff sehen gestern.",
+        "Ich mag Riff sehen gestern.",
+        0
+       ]
+      ],
+      "hint": [
+       "Wunsch: I’d like to …",
+       "Wunsch: I’d like to …"
+      ]
+     },
+     {
+      "npc": [
+       "Awesome. But it's summer here in December – bring sunscreen!",
+       "Klasse. Aber im Dezember ist hier Sommer – bring Sonnencreme mit!",
+       "Klasse. Aber im Dezember ist hier Sommer – bring Sonnencreme mit!"
+      ],
+      "opts": [
+       [
+        "Christmas on the beach? That's so different!",
+        "Weihnachten am Strand? Das ist so anders!",
+        "Weihnachten am Strand? Das ist so anders!",
+        1
+       ],
+       [
+        "December is winter, mate.",
+        "Dezember ist Winter, Kumpel.",
+        "Dezember ist Winter, Kumpel.",
+        0
+       ]
+      ],
+      "hint": [
+       "Auf der Südhalbkugel sind die Jahreszeiten umgekehrt.",
+       "Auf der Südhalbkugel sind die Jahreszeiten umgekehrt."
+      ]
+     }
+    ],
+    "outro": [
+     "Liam lacht: „See you in the arvo – I mean, in January!“",
+     "Liam lacht: „See you in the arvo – I mean, in January!“"
+    ]
+   },
+   "pack": 1,
+   "sch": 9,
+   "ico": "🦘"
+  },
+  {
+   "id": "s10sus",
+   "city": "Sustainability and consumption",
+   "cityDe": "Klasse 10: Nachhaltigkeit und Konsum",
+   "cityEn": "Sustainability and consumption",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Nachhaltigkeit und Konsum",
+    "Nachhaltigkeit und Konsum"
+   ],
+   "can": [
+    "Ich kann über Konsum und Nachhaltigkeit diskutieren und meine Meinung begründen.",
+    "Ich kann über Konsum und Nachhaltigkeit diskutieren und meine Meinung begründen."
+   ],
+   "tip": [
+    "Meinung äußern und abwägen: „On the one hand … on the other hand …“, „In my opinion …“, „I’m convinced that …“",
+    "Meinung äußern und abwägen: „On the one hand … on the other hand …“, „In my opinion …“, „I’m convinced that …“"
+   ],
+   "fact": [
+    "Großbritannien produziert pro Jahr über 200 000 Tonnen Kleidungsabfall – „fast fashion“ ist dort ein großes Diskussionsthema.",
+    "Großbritannien produziert pro Jahr über 200 000 Tonnen Kleidungsabfall – „fast fashion“ ist dort ein großes Diskussionsthema."
+   ],
+   "words": [
+    [
+     "sustainable",
+     "nachhaltig",
+     "nachhaltig"
+    ],
+    [
+     "consumption",
+     "Konsum / Verbrauch",
+     "Konsum / Verbrauch"
+    ],
+    [
+     "consumer",
+     "Verbraucher/in",
+     "Verbraucher/in"
+    ],
+    [
+     "resources",
+     "Ressourcen",
+     "Ressourcen"
+    ],
+    [
+     "to waste",
+     "verschwenden",
+     "verschwenden"
+    ],
+    [
+     "fast fashion",
+     "Billigmode",
+     "Billigmode"
+    ],
+    [
+     "second-hand",
+     "gebraucht",
+     "gebraucht"
+    ],
+    [
+     "to reduce",
+     "verringern",
+     "verringern"
+    ],
+    [
+     "to reuse",
+     "wiederverwenden",
+     "wiederverwenden"
+    ],
+    [
+     "carbon footprint",
+     "CO₂-Fußabdruck",
+     "CO₂-Fußabdruck"
+    ],
+    [
+     "renewable energy",
+     "erneuerbare Energie",
+     "erneuerbare Energie"
+    ],
+    [
+     "on the one hand",
+     "einerseits",
+     "einerseits"
+    ],
+    [
+     "on the other hand",
+     "andererseits",
+     "andererseits"
+    ],
+    [
+     "in my opinion",
+     "meiner Meinung nach",
+     "meiner Meinung nach"
+    ],
+    [
+     "to be convinced",
+     "überzeugt sein",
+     "überzeugt sein"
+    ],
+    [
+     "advantage",
+     "Vorteil",
+     "Vorteil"
+    ]
+   ],
+   "sentences": [
+    [
+     "In my opinion, fast fashion wastes too many resources.",
+     "Meiner Meinung nach verschwendet Billigmode zu viele Ressourcen.",
+     "Meiner Meinung nach verschwendet Billigmode zu viele Ressourcen."
+    ],
+    [
+     "On the one hand it is cheap, on the other hand it is bad for the planet.",
+     "Einerseits ist sie billig, andererseits schlecht für den Planeten.",
+     "Einerseits ist sie billig, andererseits schlecht für den Planeten."
+    ],
+    [
+     "Buying second-hand reduces your carbon footprint.",
+     "Gebraucht kaufen verringert deinen CO₂-Fußabdruck.",
+     "Gebraucht kaufen verringert deinen CO₂-Fußabdruck."
+    ],
+    [
+     "I'm convinced that we can all change something.",
+     "Ich bin überzeugt, dass wir alle etwas ändern können.",
+     "Ich bin überzeugt, dass wir alle etwas ändern können."
+    ],
+    [
+     "If more people reused things, there would be less rubbish.",
+     "Wenn mehr Leute Dinge wiederverwenden würden, gäbe es weniger Müll.",
+     "Wenn mehr Leute Dinge wiederverwenden würden, gäbe es weniger Müll."
+    ],
+    [
+     "Renewable energy has many advantages.",
+     "Erneuerbare Energie hat viele Vorteile.",
+     "Erneuerbare Energie hat viele Vorteile."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Debattier-AG an deiner Partnerschule in Manchester. Thema: „Should fast fashion be banned?“ Du bist dran.",
+     "Debattier-AG an deiner Partnerschule in Manchester. Thema: „Should fast fashion be banned?“ Du bist dran."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What's your opinion?",
+       "Was ist deine Meinung?",
+       "Was ist deine Meinung?"
+      ],
+      "opts": [
+       [
+        "In my opinion, it shouldn't be banned, but it should be more expensive.",
+        "Meiner Meinung nach sollte sie nicht verboten werden, aber teurer sein.",
+        "Meiner Meinung nach sollte sie nicht verboten werden, aber teurer sein.",
+        1
+       ],
+       [
+        "My opinion is fashion.",
+        "Meine Meinung ist Mode.",
+        "Meine Meinung ist Mode.",
+        0
+       ]
+      ],
+      "hint": [
+       "Meinung einleiten: In my opinion …",
+       "Meinung einleiten: In my opinion …"
+      ]
+     },
+     {
+      "npc": [
+       "But poorer people need cheap clothes, don’t they?",
+       "Aber ärmere Menschen brauchen billige Kleidung, oder?",
+       "Aber ärmere Menschen brauchen billige Kleidung, oder?"
+      ],
+      "opts": [
+       [
+        "That's true. On the other hand, second-hand clothes are cheap too.",
+        "Stimmt. Andererseits ist gebrauchte Kleidung auch billig.",
+        "Stimmt. Andererseits ist gebrauchte Kleidung auch billig.",
+        1
+       ],
+       [
+        "No, they are fast.",
+        "Nein, sie sind schnell.",
+        "Nein, sie sind schnell.",
+        0
+       ]
+      ],
+      "hint": [
+       "Einwand anerkennen und Gegenargument bringen.",
+       "Einwand anerkennen und Gegenargument bringen."
+      ]
+     },
+     {
+      "npc": [
+       "Good point. What would you do personally?",
+       "Gutes Argument. Was würdest du persönlich tun?",
+       "Gutes Argument. Was würdest du persönlich tun?"
+      ],
+      "opts": [
+       [
+        "I would buy fewer clothes and swap them with friends.",
+        "Ich würde weniger Kleidung kaufen und mit Freunden tauschen.",
+        "Ich würde weniger Kleidung kaufen und mit Freunden tauschen.",
+        1
+       ],
+       [
+        "I will bought more.",
+        "Ich werde mehr gekauft.",
+        "Ich werde mehr gekauft.",
+        0
+       ]
+      ],
+      "hint": [
+       "would + Grundform.",
+       "would + Grundform."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Jury nickt. Dein Team gewinnt die Runde!",
+     "Die Jury nickt. Dein Team gewinnt die Runde!"
+    ]
+   },
+   "pack": 1,
+   "sch": 10,
+   "ico": "♻️"
+  },
+  {
    "id": "i_game",
    "city": "Gaming and streaming",
    "cityDe": "Gaming und Streaming",
@@ -15859,6 +17516,1446 @@
    ],
    "g": "part",
    "k": 10
+  },
+  {
+   "s": "This is my bike. It's ___.",
+   "base": "I",
+   "opts": [
+    "mine",
+    "my",
+    "me"
+   ],
+   "a": "mine",
+   "case": [
+    "Possessivbegleiter und Pronomen",
+    "Possessivbegleiter und Pronomen"
+   ],
+   "why": [
+    "Ohne Nomen danach: mine (meins).",
+    "Ohne Nomen danach: mine (meins)."
+   ],
+   "tr": [
+    "Das ist mein Fahrrad. Es ist meins.",
+    "Das ist mein Fahrrad. Es ist meins."
+   ],
+   "g": "poss",
+   "k": 5
+  },
+  {
+   "s": "Lisa and Tom love ___ dog.",
+   "base": "they",
+   "opts": [
+    "their",
+    "there",
+    "they're"
+   ],
+   "a": "their",
+   "case": [
+    "Possessivbegleiter und Pronomen",
+    "Possessivbegleiter und Pronomen"
+   ],
+   "why": [
+    "Besitz von they → their.",
+    "Besitz von they → their."
+   ],
+   "tr": [
+    "Lisa und Tom lieben ihren Hund.",
+    "Lisa und Tom lieben ihren Hund."
+   ],
+   "g": "poss",
+   "k": 5
+  },
+  {
+   "s": "Can you help ___, please?",
+   "base": "I",
+   "opts": [
+    "me",
+    "I",
+    "my"
+   ],
+   "a": "me",
+   "case": [
+    "Possessivbegleiter und Pronomen",
+    "Possessivbegleiter und Pronomen"
+   ],
+   "why": [
+    "Nach dem Verb (Objekt) → me.",
+    "Nach dem Verb (Objekt) → me."
+   ],
+   "tr": [
+    "Kannst du mir bitte helfen?",
+    "Kannst du mir bitte helfen?"
+   ],
+   "g": "poss",
+   "k": 5
+  },
+  {
+   "s": "Our teacher is nice. We like ___ a lot.",
+   "base": "she",
+   "opts": [
+    "her",
+    "she",
+    "hers"
+   ],
+   "a": "her",
+   "case": [
+    "Possessivbegleiter und Pronomen",
+    "Possessivbegleiter und Pronomen"
+   ],
+   "why": [
+    "Objekt von she → her.",
+    "Objekt von she → her."
+   ],
+   "tr": [
+    "Unsere Lehrerin ist nett. Wir mögen sie sehr.",
+    "Unsere Lehrerin ist nett. Wir mögen sie sehr."
+   ],
+   "g": "poss",
+   "k": 5
+  },
+  {
+   "s": "The cat is eating ___ food.",
+   "base": "it",
+   "opts": [
+    "its",
+    "it's",
+    "it"
+   ],
+   "a": "its",
+   "case": [
+    "Possessivbegleiter und Pronomen",
+    "Possessivbegleiter und Pronomen"
+   ],
+   "why": [
+    "Besitz von it → its (ohne Apostroph!).",
+    "Besitz von it → its (ohne Apostroph!)."
+   ],
+   "tr": [
+    "Die Katze frisst ihr Futter.",
+    "Die Katze frisst ihr Futter."
+   ],
+   "g": "poss",
+   "k": 5
+  },
+  {
+   "s": "Is this your pen or ___?",
+   "base": "he",
+   "opts": [
+    "his",
+    "him",
+    "he's"
+   ],
+   "a": "his",
+   "case": [
+    "Possessivbegleiter und Pronomen",
+    "Possessivbegleiter und Pronomen"
+   ],
+   "why": [
+    "Ohne Nomen: his (seins).",
+    "Ohne Nomen: his (seins)."
+   ],
+   "tr": [
+    "Ist das dein Stift oder seiner?",
+    "Ist das dein Stift oder seiner?"
+   ],
+   "g": "poss",
+   "k": 5
+  },
+  {
+   "s": "This is ___ room.",
+   "base": "Emma",
+   "opts": [
+    "Emma's",
+    "Emmas",
+    "Emmas'"
+   ],
+   "a": "Emma's",
+   "case": [
+    "s-Genitiv (Tom's, the girls')",
+    "s-Genitiv (Tom's, the girls')"
+   ],
+   "why": [
+    "Besitz einer Person: Name + 's.",
+    "Besitz einer Person: Name + 's."
+   ],
+   "tr": [
+    "Das ist Emmas Zimmer.",
+    "Das ist Emmas Zimmer."
+   ],
+   "g": "gen",
+   "k": 5
+  },
+  {
+   "s": "The ___ bikes are in the garden.",
+   "base": "boys",
+   "opts": [
+    "boys'",
+    "boy's",
+    "boys's"
+   ],
+   "a": "boys'",
+   "case": [
+    "s-Genitiv (Tom's, the girls')",
+    "s-Genitiv (Tom's, the girls')"
+   ],
+   "why": [
+    "Plural mit -s: nur Apostroph (boys').",
+    "Plural mit -s: nur Apostroph (boys')."
+   ],
+   "tr": [
+    "Die Fahrräder der Jungen sind im Garten.",
+    "Die Fahrräder der Jungen sind im Garten."
+   ],
+   "g": "gen",
+   "k": 5
+  },
+  {
+   "s": "My ___ car is red.",
+   "base": "parents",
+   "opts": [
+    "parents'",
+    "parent's",
+    "parents's"
+   ],
+   "a": "parents'",
+   "case": [
+    "s-Genitiv (Tom's, the girls')",
+    "s-Genitiv (Tom's, the girls')"
+   ],
+   "why": [
+    "Beide Eltern (Plural) → parents'.",
+    "Beide Eltern (Plural) → parents'."
+   ],
+   "tr": [
+    "Das Auto meiner Eltern ist rot.",
+    "Das Auto meiner Eltern ist rot."
+   ],
+   "g": "gen",
+   "k": 5
+  },
+  {
+   "s": "The ___ toys are everywhere.",
+   "base": "children",
+   "opts": [
+    "children's",
+    "childrens'",
+    "children'"
+   ],
+   "a": "children's",
+   "case": [
+    "s-Genitiv (Tom's, the girls')",
+    "s-Genitiv (Tom's, the girls')"
+   ],
+   "why": [
+    "Unregelmäßiger Plural ohne -s → children's.",
+    "Unregelmäßiger Plural ohne -s → children's."
+   ],
+   "tr": [
+    "Die Spielsachen der Kinder liegen überall.",
+    "Die Spielsachen der Kinder liegen überall."
+   ],
+   "g": "gen",
+   "k": 5
+  },
+  {
+   "s": "___ birthday is in May.",
+   "base": "my sister",
+   "opts": [
+    "My sister's",
+    "My sisters",
+    "My sister"
+   ],
+   "a": "My sister's",
+   "case": [
+    "s-Genitiv (Tom's, the girls')",
+    "s-Genitiv (Tom's, the girls')"
+   ],
+   "why": [
+    "Eine Schwester → sister's.",
+    "Eine Schwester → sister's."
+   ],
+   "tr": [
+    "Der Geburtstag meiner Schwester ist im Mai.",
+    "Der Geburtstag meiner Schwester ist im Mai."
+   ],
+   "g": "gen",
+   "k": 5
+  },
+  {
+   "s": "We met at ___ house.",
+   "base": "James",
+   "opts": [
+    "James's",
+    "James'",
+    "Jameses"
+   ],
+   "a": "James's",
+   "case": [
+    "s-Genitiv (Tom's, the girls')",
+    "s-Genitiv (Tom's, the girls')"
+   ],
+   "why": [
+    "Name auf -s: meist James's (James' ist auch möglich).",
+    "Name auf -s: meist James's (James' ist auch möglich)."
+   ],
+   "tr": [
+    "Wir haben uns bei James zu Hause getroffen.",
+    "Wir haben uns bei James zu Hause getroffen."
+   ],
+   "g": "gen",
+   "k": 5
+  },
+  {
+   "s": "___ do you live? – In Stuttgart.",
+   "base": "where",
+   "opts": [
+    "Where",
+    "What",
+    "Who"
+   ],
+   "a": "Where",
+   "case": [
+    "Fragewörter und Kurzantworten",
+    "Fragewörter und Kurzantworten"
+   ],
+   "why": [
+    "Ort → Where.",
+    "Ort → Where."
+   ],
+   "tr": [
+    "Wo wohnst du? – In Stuttgart.",
+    "Wo wohnst du? – In Stuttgart."
+   ],
+   "g": "qw",
+   "k": 5
+  },
+  {
+   "s": "___ is your birthday? – In June.",
+   "base": "when",
+   "opts": [
+    "When",
+    "Where",
+    "Who"
+   ],
+   "a": "When",
+   "case": [
+    "Fragewörter und Kurzantworten",
+    "Fragewörter und Kurzantworten"
+   ],
+   "why": [
+    "Zeitpunkt → When.",
+    "Zeitpunkt → When."
+   ],
+   "tr": [
+    "Wann hast du Geburtstag? – Im Juni.",
+    "Wann hast du Geburtstag? – Im Juni."
+   ],
+   "g": "qw",
+   "k": 5
+  },
+  {
+   "s": "___ is that girl? – My cousin.",
+   "base": "who",
+   "opts": [
+    "Who",
+    "Which",
+    "What"
+   ],
+   "a": "Who",
+   "case": [
+    "Fragewörter und Kurzantworten",
+    "Fragewörter und Kurzantworten"
+   ],
+   "why": [
+    "Person → Who.",
+    "Person → Who."
+   ],
+   "tr": [
+    "Wer ist das Mädchen? – Meine Cousine.",
+    "Wer ist das Mädchen? – Meine Cousine."
+   ],
+   "g": "qw",
+   "k": 5
+  },
+  {
+   "s": "Do you like pizza? – Yes, I ___.",
+   "base": "do",
+   "opts": [
+    "do",
+    "like",
+    "am"
+   ],
+   "a": "do",
+   "case": [
+    "Fragewörter und Kurzantworten",
+    "Fragewörter und Kurzantworten"
+   ],
+   "why": [
+    "Kurzantwort mit dem Hilfsverb der Frage: Yes, I do.",
+    "Kurzantwort mit dem Hilfsverb der Frage: Yes, I do."
+   ],
+   "tr": [
+    "Magst du Pizza? – Ja.",
+    "Magst du Pizza? – Ja."
+   ],
+   "g": "qw",
+   "k": 5
+  },
+  {
+   "s": "Is Tom at home? – No, he ___.",
+   "base": "be",
+   "opts": [
+    "isn't",
+    "doesn't",
+    "not"
+   ],
+   "a": "isn't",
+   "case": [
+    "Fragewörter und Kurzantworten",
+    "Fragewörter und Kurzantworten"
+   ],
+   "why": [
+    "Frage mit is → Kurzantwort mit isn't.",
+    "Frage mit is → Kurzantwort mit isn't."
+   ],
+   "tr": [
+    "Ist Tom zu Hause? – Nein.",
+    "Ist Tom zu Hause? – Nein."
+   ],
+   "g": "qw",
+   "k": 5
+  },
+  {
+   "s": "___ books have you got? – Five.",
+   "base": "how many",
+   "opts": [
+    "How many",
+    "How much",
+    "How"
+   ],
+   "a": "How many",
+   "case": [
+    "Fragewörter und Kurzantworten",
+    "Fragewörter und Kurzantworten"
+   ],
+   "why": [
+    "Zählbar → How many.",
+    "Zählbar → How many."
+   ],
+   "tr": [
+    "Wie viele Bücher hast du? – Fünf.",
+    "Wie viele Bücher hast du? – Fünf."
+   ],
+   "g": "qw",
+   "k": 5
+  },
+  {
+   "s": "I ___ late for school.",
+   "base": "never be",
+   "opts": [
+    "am never",
+    "never am",
+    "never be"
+   ],
+   "a": "am never",
+   "case": [
+    "Häufigkeitsadverbien (always, never …)",
+    "Häufigkeitsadverbien (always, never …)"
+   ],
+   "why": [
+    "Häufigkeitsadverb steht nach am/is/are.",
+    "Häufigkeitsadverb steht nach am/is/are."
+   ],
+   "tr": [
+    "Ich komme nie zu spät zur Schule.",
+    "Ich komme nie zu spät zur Schule."
+   ],
+   "g": "freq",
+   "k": 5
+  },
+  {
+   "s": "She ___ her homework after dinner.",
+   "base": "usually do",
+   "opts": [
+    "usually does",
+    "does usually",
+    "usually do"
+   ],
+   "a": "usually does",
+   "case": [
+    "Häufigkeitsadverbien (always, never …)",
+    "Häufigkeitsadverbien (always, never …)"
+   ],
+   "why": [
+    "Häufigkeitsadverb steht vor dem Vollverb.",
+    "Häufigkeitsadverb steht vor dem Vollverb."
+   ],
+   "tr": [
+    "Sie macht ihre Hausaufgaben normalerweise nach dem Abendessen.",
+    "Sie macht ihre Hausaufgaben normalerweise nach dem Abendessen."
+   ],
+   "g": "freq",
+   "k": 5
+  },
+  {
+   "s": "We ___ to the beach in summer.",
+   "base": "often go",
+   "opts": [
+    "often go",
+    "go often",
+    "often goes"
+   ],
+   "a": "often go",
+   "case": [
+    "Häufigkeitsadverbien (always, never …)",
+    "Häufigkeitsadverbien (always, never …)"
+   ],
+   "why": [
+    "Vor dem Vollverb: often go.",
+    "Vor dem Vollverb: often go."
+   ],
+   "tr": [
+    "Im Sommer fahren wir oft an den Strand.",
+    "Im Sommer fahren wir oft an den Strand."
+   ],
+   "g": "freq",
+   "k": 5
+  },
+  {
+   "s": "He ___ tired on Mondays.",
+   "base": "always be",
+   "opts": [
+    "is always",
+    "always is",
+    "always are"
+   ],
+   "a": "is always",
+   "case": [
+    "Häufigkeitsadverbien (always, never …)",
+    "Häufigkeitsadverbien (always, never …)"
+   ],
+   "why": [
+    "Nach is: is always.",
+    "Nach is: is always."
+   ],
+   "tr": [
+    "Montags ist er immer müde.",
+    "Montags ist er immer müde."
+   ],
+   "g": "freq",
+   "k": 5
+  },
+  {
+   "s": "My dad ___ coffee.",
+   "base": "never drink",
+   "opts": [
+    "never drinks",
+    "drinks never",
+    "never drink"
+   ],
+   "a": "never drinks",
+   "case": [
+    "Häufigkeitsadverbien (always, never …)",
+    "Häufigkeitsadverbien (always, never …)"
+   ],
+   "why": [
+    "he → drinks, Adverb davor.",
+    "he → drinks, Adverb davor."
+   ],
+   "tr": [
+    "Mein Vater trinkt nie Kaffee.",
+    "Mein Vater trinkt nie Kaffee."
+   ],
+   "g": "freq",
+   "k": 5
+  },
+  {
+   "s": "___ do you play tennis? – Twice a week.",
+   "base": "how often",
+   "opts": [
+    "How often",
+    "How many",
+    "How much"
+   ],
+   "a": "How often",
+   "case": [
+    "Häufigkeitsadverbien (always, never …)",
+    "Häufigkeitsadverbien (always, never …)"
+   ],
+   "why": [
+    "Nach Häufigkeit fragen: How often.",
+    "Nach Häufigkeit fragen: How often."
+   ],
+   "tr": [
+    "Wie oft spielst du Tennis? – Zweimal pro Woche.",
+    "Wie oft spielst du Tennis? – Zweimal pro Woche."
+   ],
+   "g": "freq",
+   "k": 5
+  },
+  {
+   "s": "It's Saturday. I ___ get up early.",
+   "base": "have to",
+   "opts": [
+    "don't have to",
+    "mustn't",
+    "haven't to"
+   ],
+   "a": "don't have to",
+   "case": [
+    "have to / needn't / mustn't",
+    "have to / needn't / mustn't"
+   ],
+   "why": [
+    "Nicht nötig → don't have to.",
+    "Nicht nötig → don't have to."
+   ],
+   "tr": [
+    "Es ist Samstag. Ich muss nicht früh aufstehen.",
+    "Es ist Samstag. Ich muss nicht früh aufstehen."
+   ],
+   "g": "haveto",
+   "k": 6
+  },
+  {
+   "s": "You ___ use your phone in the exam!",
+   "base": "must",
+   "opts": [
+    "mustn't",
+    "don't have to",
+    "needn't"
+   ],
+   "a": "mustn't",
+   "case": [
+    "have to / needn't / mustn't",
+    "have to / needn't / mustn't"
+   ],
+   "why": [
+    "Verboten → mustn't.",
+    "Verboten → mustn't."
+   ],
+   "tr": [
+    "Du darfst in der Prüfung dein Handy nicht benutzen!",
+    "Du darfst in der Prüfung dein Handy nicht benutzen!"
+   ],
+   "g": "haveto",
+   "k": 6
+  },
+  {
+   "s": "She ___ wear a uniform at her school.",
+   "base": "have to",
+   "opts": [
+    "has to",
+    "have to",
+    "must to"
+   ],
+   "a": "has to",
+   "case": [
+    "have to / needn't / mustn't",
+    "have to / needn't / mustn't"
+   ],
+   "why": [
+    "he/she/it → has to.",
+    "he/she/it → has to."
+   ],
+   "tr": [
+    "Sie muss an ihrer Schule eine Uniform tragen.",
+    "Sie muss an ihrer Schule eine Uniform tragen."
+   ],
+   "g": "haveto",
+   "k": 6
+  },
+  {
+   "s": "You ___ bring food – there's a café.",
+   "base": "need",
+   "opts": [
+    "needn't",
+    "mustn't",
+    "don't need"
+   ],
+   "a": "needn't",
+   "case": [
+    "have to / needn't / mustn't",
+    "have to / needn't / mustn't"
+   ],
+   "why": [
+    "Nicht nötig → needn't (+ Grundform).",
+    "Nicht nötig → needn't (+ Grundform)."
+   ],
+   "tr": [
+    "Du musst kein Essen mitbringen – es gibt ein Café.",
+    "Du musst kein Essen mitbringen – es gibt ein Café."
+   ],
+   "g": "haveto",
+   "k": 6
+  },
+  {
+   "s": "Yesterday we ___ walk home because the bus was late.",
+   "base": "have to",
+   "opts": [
+    "had to",
+    "must",
+    "have to"
+   ],
+   "a": "had to",
+   "case": [
+    "have to / needn't / mustn't",
+    "have to / needn't / mustn't"
+   ],
+   "why": [
+    "must hat keine Vergangenheit → had to.",
+    "must hat keine Vergangenheit → had to."
+   ],
+   "tr": [
+    "Gestern mussten wir nach Hause laufen, weil der Bus zu spät war.",
+    "Gestern mussten wir nach Hause laufen, weil der Bus zu spät war."
+   ],
+   "g": "haveto",
+   "k": 6
+  },
+  {
+   "s": "___ you have to tidy your room every day?",
+   "base": "do",
+   "opts": [
+    "Do",
+    "Must",
+    "Have"
+   ],
+   "a": "Do",
+   "case": [
+    "have to / needn't / mustn't",
+    "have to / needn't / mustn't"
+   ],
+   "why": [
+    "Frage mit have to → Do you have to …?",
+    "Frage mit have to → Do you have to …?"
+   ],
+   "tr": [
+    "Musst du jeden Tag dein Zimmer aufräumen?",
+    "Musst du jeden Tag dein Zimmer aufräumen?"
+   ],
+   "g": "haveto",
+   "k": 6
+  },
+  {
+   "s": "Anna: \"I like cats.\" → Anna says that she ___ cats.",
+   "base": "like",
+   "opts": [
+    "likes",
+    "like",
+    "liked"
+   ],
+   "a": "likes",
+   "case": [
+    "Indirekte Rede (ohne Zeitverschiebung)",
+    "Indirekte Rede (ohne Zeitverschiebung)"
+   ],
+   "why": [
+    "says (Gegenwart) → keine Zeitverschiebung, aber she → likes.",
+    "says (Gegenwart) → keine Zeitverschiebung, aber she → likes."
+   ],
+   "tr": [
+    "Anna sagt, dass sie Katzen mag.",
+    "Anna sagt, dass sie Katzen mag."
+   ],
+   "g": "repsimple",
+   "k": 6
+  },
+  {
+   "s": "Tom: \"I'm tired.\" → Tom says that he ___ tired.",
+   "base": "be",
+   "opts": [
+    "is",
+    "am",
+    "was"
+   ],
+   "a": "is",
+   "case": [
+    "Indirekte Rede (ohne Zeitverschiebung)",
+    "Indirekte Rede (ohne Zeitverschiebung)"
+   ],
+   "why": [
+    "I am → he is.",
+    "I am → he is."
+   ],
+   "tr": [
+    "Tom sagt, dass er müde ist.",
+    "Tom sagt, dass er müde ist."
+   ],
+   "g": "repsimple",
+   "k": 6
+  },
+  {
+   "s": "Mum: \"We are late.\" → Mum says that ___ are late.",
+   "base": "we",
+   "opts": [
+    "we",
+    "they",
+    "us"
+   ],
+   "a": "we",
+   "case": [
+    "Indirekte Rede (ohne Zeitverschiebung)",
+    "Indirekte Rede (ohne Zeitverschiebung)"
+   ],
+   "why": [
+    "Sprecherin schließt sich ein → we bleibt.",
+    "Sprecherin schließt sich ein → we bleibt."
+   ],
+   "tr": [
+    "Mama sagt, dass wir spät dran sind.",
+    "Mama sagt, dass wir spät dran sind."
+   ],
+   "g": "repsimple",
+   "k": 6
+  },
+  {
+   "s": "Ben: \"My bike is broken.\" → Ben says that ___ bike is broken.",
+   "base": "his",
+   "opts": [
+    "his",
+    "my",
+    "her"
+   ],
+   "a": "his",
+   "case": [
+    "Indirekte Rede (ohne Zeitverschiebung)",
+    "Indirekte Rede (ohne Zeitverschiebung)"
+   ],
+   "why": [
+    "my (Ben) → his.",
+    "my (Ben) → his."
+   ],
+   "tr": [
+    "Ben sagt, dass sein Fahrrad kaputt ist.",
+    "Ben sagt, dass sein Fahrrad kaputt ist."
+   ],
+   "g": "repsimple",
+   "k": 6
+  },
+  {
+   "s": "Lisa: \"I can swim.\" → Lisa says that she ___ swim.",
+   "base": "can",
+   "opts": [
+    "can",
+    "could",
+    "cans"
+   ],
+   "a": "can",
+   "case": [
+    "Indirekte Rede (ohne Zeitverschiebung)",
+    "Indirekte Rede (ohne Zeitverschiebung)"
+   ],
+   "why": [
+    "says → keine Zeitverschiebung: can bleibt.",
+    "says → keine Zeitverschiebung: can bleibt."
+   ],
+   "tr": [
+    "Lisa sagt, dass sie schwimmen kann.",
+    "Lisa sagt, dass sie schwimmen kann."
+   ],
+   "g": "repsimple",
+   "k": 6
+  },
+  {
+   "s": "The teacher: \"Open your books.\" → The teacher tells us ___ our books.",
+   "base": "open",
+   "opts": [
+    "to open",
+    "open",
+    "opening"
+   ],
+   "a": "to open",
+   "case": [
+    "Indirekte Rede (ohne Zeitverschiebung)",
+    "Indirekte Rede (ohne Zeitverschiebung)"
+   ],
+   "why": [
+    "Aufforderung → tell sb to + Grundform.",
+    "Aufforderung → tell sb to + Grundform."
+   ],
+   "tr": [
+    "Die Lehrerin sagt uns, wir sollen die Bücher öffnen.",
+    "Die Lehrerin sagt uns, wir sollen die Bücher öffnen."
+   ],
+   "g": "repsimple",
+   "k": 6
+  },
+  {
+   "s": "I'd like ___ apple, please.",
+   "base": "a",
+   "opts": [
+    "an",
+    "a",
+    "the"
+   ],
+   "a": "an",
+   "case": [
+    "Artikel: a, an, the oder ohne",
+    "Artikel: a, an, the oder ohne"
+   ],
+   "why": [
+    "Vor Vokal-Laut → an.",
+    "Vor Vokal-Laut → an."
+   ],
+   "tr": [
+    "Ich hätte gern einen Apfel, bitte.",
+    "Ich hätte gern einen Apfel, bitte."
+   ],
+   "g": "artic",
+   "k": 8
+  },
+  {
+   "s": "___ life is beautiful.",
+   "base": "the",
+   "opts": [
+    "–",
+    "The",
+    "A"
+   ],
+   "a": "–",
+   "case": [
+    "Artikel: a, an, the oder ohne",
+    "Artikel: a, an, the oder ohne"
+   ],
+   "why": [
+    "Allgemeine Begriffe ohne Artikel: Life is …",
+    "Allgemeine Begriffe ohne Artikel: Life is …"
+   ],
+   "tr": [
+    "Das Leben ist schön.",
+    "Das Leben ist schön."
+   ],
+   "g": "artic",
+   "k": 8
+  },
+  {
+   "s": "She goes to ___ school by bus.",
+   "base": "the",
+   "opts": [
+    "–",
+    "the",
+    "a"
+   ],
+   "a": "–",
+   "case": [
+    "Artikel: a, an, the oder ohne",
+    "Artikel: a, an, the oder ohne"
+   ],
+   "why": [
+    "Institution im üblichen Zweck (zur Schule gehen) → ohne Artikel.",
+    "Institution im üblichen Zweck (zur Schule gehen) → ohne Artikel."
+   ],
+   "tr": [
+    "Sie fährt mit dem Bus zur Schule.",
+    "Sie fährt mit dem Bus zur Schule."
+   ],
+   "g": "artic",
+   "k": 8
+  },
+  {
+   "s": "___ Thames flows through London.",
+   "base": "the",
+   "opts": [
+    "The",
+    "–",
+    "A"
+   ],
+   "a": "The",
+   "case": [
+    "Artikel: a, an, the oder ohne",
+    "Artikel: a, an, the oder ohne"
+   ],
+   "why": [
+    "Flüsse haben the.",
+    "Flüsse haben the."
+   ],
+   "tr": [
+    "Die Themse fließt durch London.",
+    "Die Themse fließt durch London."
+   ],
+   "g": "artic",
+   "k": 8
+  },
+  {
+   "s": "My cousin is ___ engineer.",
+   "base": "a",
+   "opts": [
+    "an",
+    "–",
+    "the"
+   ],
+   "a": "an",
+   "case": [
+    "Artikel: a, an, the oder ohne",
+    "Artikel: a, an, the oder ohne"
+   ],
+   "why": [
+    "Berufe mit a/an (vor Vokal: an).",
+    "Berufe mit a/an (vor Vokal: an)."
+   ],
+   "tr": [
+    "Mein Cousin ist Ingenieur.",
+    "Mein Cousin ist Ingenieur."
+   ],
+   "g": "artic",
+   "k": 8
+  },
+  {
+   "s": "We visited ___ Scotland last year.",
+   "base": "the",
+   "opts": [
+    "–",
+    "the",
+    "a"
+   ],
+   "a": "–",
+   "case": [
+    "Artikel: a, an, the oder ohne",
+    "Artikel: a, an, the oder ohne"
+   ],
+   "why": [
+    "Die meisten Länder ohne Artikel.",
+    "Die meisten Länder ohne Artikel."
+   ],
+   "tr": [
+    "Wir haben letztes Jahr Schottland besucht.",
+    "Wir haben letztes Jahr Schottland besucht."
+   ],
+   "g": "artic",
+   "k": 8
+  },
+  {
+   "s": "You're from Berlin, ___?",
+   "base": "be",
+   "opts": [
+    "aren't you",
+    "don't you",
+    "isn't it"
+   ],
+   "a": "aren't you",
+   "case": [
+    "Question tags",
+    "Question tags"
+   ],
+   "why": [
+    "Bejahter Satz mit are → aren't you?",
+    "Bejahter Satz mit are → aren't you?"
+   ],
+   "tr": [
+    "Du kommst aus Berlin, oder?",
+    "Du kommst aus Berlin, oder?"
+   ],
+   "g": "tags",
+   "k": 8
+  },
+  {
+   "s": "She plays the piano, ___?",
+   "base": "do",
+   "opts": [
+    "doesn't she",
+    "isn't she",
+    "don't she"
+   ],
+   "a": "doesn't she",
+   "case": [
+    "Question tags",
+    "Question tags"
+   ],
+   "why": [
+    "Vollverb im simple present → doesn't she?",
+    "Vollverb im simple present → doesn't she?"
+   ],
+   "tr": [
+    "Sie spielt Klavier, nicht wahr?",
+    "Sie spielt Klavier, nicht wahr?"
+   ],
+   "g": "tags",
+   "k": 8
+  },
+  {
+   "s": "They didn't come, ___?",
+   "base": "do",
+   "opts": [
+    "did they",
+    "didn't they",
+    "do they"
+   ],
+   "a": "did they",
+   "case": [
+    "Question tags",
+    "Question tags"
+   ],
+   "why": [
+    "Verneinter Satz → bejahter Anhang: did they?",
+    "Verneinter Satz → bejahter Anhang: did they?"
+   ],
+   "tr": [
+    "Sie sind nicht gekommen, oder?",
+    "Sie sind nicht gekommen, oder?"
+   ],
+   "g": "tags",
+   "k": 8
+  },
+  {
+   "s": "It was a great film, ___?",
+   "base": "be",
+   "opts": [
+    "wasn't it",
+    "didn't it",
+    "isn't it"
+   ],
+   "a": "wasn't it",
+   "case": [
+    "Question tags",
+    "Question tags"
+   ],
+   "why": [
+    "was → wasn't it?",
+    "was → wasn't it?"
+   ],
+   "tr": [
+    "Es war ein toller Film, oder?",
+    "Es war ein toller Film, oder?"
+   ],
+   "g": "tags",
+   "k": 8
+  },
+  {
+   "s": "You can swim, ___?",
+   "base": "can",
+   "opts": [
+    "can't you",
+    "don't you",
+    "can you"
+   ],
+   "a": "can't you",
+   "case": [
+    "Question tags",
+    "Question tags"
+   ],
+   "why": [
+    "can → can't you?",
+    "can → can't you?"
+   ],
+   "tr": [
+    "Du kannst schwimmen, oder?",
+    "Du kannst schwimmen, oder?"
+   ],
+   "g": "tags",
+   "k": 8
+  },
+  {
+   "s": "Let's go, ___?",
+   "base": "shall",
+   "opts": [
+    "shall we",
+    "will we",
+    "don't we"
+   ],
+   "a": "shall we",
+   "case": [
+    "Question tags",
+    "Question tags"
+   ],
+   "why": [
+    "Let's … → shall we?",
+    "Let's … → shall we?"
+   ],
+   "tr": [
+    "Lass uns gehen, ja?",
+    "Lass uns gehen, ja?"
+   ],
+   "g": "tags",
+   "k": 8
+  },
+  {
+   "s": "___ it was raining, we went for a walk.",
+   "base": "although",
+   "opts": [
+    "Although",
+    "Because",
+    "So"
+   ],
+   "a": "Although",
+   "case": [
+    "Verbindungswörter (although, because, so that …)",
+    "Verbindungswörter (although, because, so that …)"
+   ],
+   "why": [
+    "Gegensatz → Although (obwohl).",
+    "Gegensatz → Although (obwohl)."
+   ],
+   "tr": [
+    "Obwohl es regnete, gingen wir spazieren.",
+    "Obwohl es regnete, gingen wir spazieren."
+   ],
+   "g": "link",
+   "k": 8
+  },
+  {
+   "s": "I stayed at home ___ I was ill.",
+   "base": "because",
+   "opts": [
+    "because",
+    "although",
+    "so"
+   ],
+   "a": "because",
+   "case": [
+    "Verbindungswörter (although, because, so that …)",
+    "Verbindungswörter (although, because, so that …)"
+   ],
+   "why": [
+    "Grund → because.",
+    "Grund → because."
+   ],
+   "tr": [
+    "Ich blieb zu Hause, weil ich krank war.",
+    "Ich blieb zu Hause, weil ich krank war."
+   ],
+   "g": "link",
+   "k": 8
+  },
+  {
+   "s": "Speak louder ___ everybody can hear you.",
+   "base": "so that",
+   "opts": [
+    "so that",
+    "because",
+    "although"
+   ],
+   "a": "so that",
+   "case": [
+    "Verbindungswörter (although, because, so that …)",
+    "Verbindungswörter (although, because, so that …)"
+   ],
+   "why": [
+    "Zweck → so that (damit).",
+    "Zweck → so that (damit)."
+   ],
+   "tr": [
+    "Sprich lauter, damit dich alle hören.",
+    "Sprich lauter, damit dich alle hören."
+   ],
+   "g": "link",
+   "k": 8
+  },
+  {
+   "s": "It was late, ___ we took a taxi.",
+   "base": "so",
+   "opts": [
+    "so",
+    "because",
+    "although"
+   ],
+   "a": "so",
+   "case": [
+    "Verbindungswörter (although, because, so that …)",
+    "Verbindungswörter (although, because, so that …)"
+   ],
+   "why": [
+    "Folge → so (deshalb).",
+    "Folge → so (deshalb)."
+   ],
+   "tr": [
+    "Es war spät, deshalb nahmen wir ein Taxi.",
+    "Es war spät, deshalb nahmen wir ein Taxi."
+   ],
+   "g": "link",
+   "k": 8
+  },
+  {
+   "s": "I like football. ___, I don't like watching it on TV.",
+   "base": "however",
+   "opts": [
+    "However",
+    "Because",
+    "So that"
+   ],
+   "a": "However",
+   "case": [
+    "Verbindungswörter (although, because, so that …)",
+    "Verbindungswörter (although, because, so that …)"
+   ],
+   "why": [
+    "Gegensatz zwischen zwei Sätzen → However.",
+    "Gegensatz zwischen zwei Sätzen → However."
+   ],
+   "tr": [
+    "Ich mag Fußball. Allerdings schaue ich es nicht gern im Fernsehen.",
+    "Ich mag Fußball. Allerdings schaue ich es nicht gern im Fernsehen."
+   ],
+   "g": "link",
+   "k": 8
+  },
+  {
+   "s": "___ the bad weather, the match took place.",
+   "base": "despite",
+   "opts": [
+    "Despite",
+    "Although",
+    "Because"
+   ],
+   "a": "Despite",
+   "case": [
+    "Verbindungswörter (although, because, so that …)",
+    "Verbindungswörter (although, because, so that …)"
+   ],
+   "why": [
+    "Vor einem Nomen → Despite (trotz).",
+    "Vor einem Nomen → Despite (trotz)."
+   ],
+   "tr": [
+    "Trotz des schlechten Wetters fand das Spiel statt.",
+    "Trotz des schlechten Wetters fand das Spiel statt."
+   ],
+   "g": "link",
+   "k": 8
+  },
+  {
+   "s": "I ___ the answer now.",
+   "base": "know",
+   "opts": [
+    "know",
+    "am knowing",
+    "knowing"
+   ],
+   "a": "know",
+   "case": [
+    "Zustandsverben (know, like, belong …)",
+    "Zustandsverben (know, like, belong …)"
+   ],
+   "why": [
+    "know ist ein Zustandsverb → kein -ing.",
+    "know ist ein Zustandsverb → kein -ing."
+   ],
+   "tr": [
+    "Jetzt weiß ich die Antwort.",
+    "Jetzt weiß ich die Antwort."
+   ],
+   "g": "state",
+   "k": 10
+  },
+  {
+   "s": "This bag ___ to my brother.",
+   "base": "belong",
+   "opts": [
+    "belongs",
+    "is belonging",
+    "belong"
+   ],
+   "a": "belongs",
+   "case": [
+    "Zustandsverben (know, like, belong …)",
+    "Zustandsverben (know, like, belong …)"
+   ],
+   "why": [
+    "belong → kein progressive.",
+    "belong → kein progressive."
+   ],
+   "tr": [
+    "Diese Tasche gehört meinem Bruder.",
+    "Diese Tasche gehört meinem Bruder."
+   ],
+   "g": "state",
+   "k": 10
+  },
+  {
+   "s": "Look, she ___ a picture of the sea.",
+   "base": "draw",
+   "opts": [
+    "is drawing",
+    "draws",
+    "draw"
+   ],
+   "a": "is drawing",
+   "case": [
+    "Zustandsverben (know, like, belong …)",
+    "Zustandsverben (know, like, belong …)"
+   ],
+   "why": [
+    "Tätigkeit gerade jetzt → progressive.",
+    "Tätigkeit gerade jetzt → progressive."
+   ],
+   "tr": [
+    "Schau, sie malt ein Bild vom Meer.",
+    "Schau, sie malt ein Bild vom Meer."
+   ],
+   "g": "state",
+   "k": 10
+  },
+  {
+   "s": "I ___ what you mean.",
+   "base": "understand",
+   "opts": [
+    "understand",
+    "am understanding",
+    "understanding"
+   ],
+   "a": "understand",
+   "case": [
+    "Zustandsverben (know, like, belong …)",
+    "Zustandsverben (know, like, belong …)"
+   ],
+   "why": [
+    "understand ist ein Zustandsverb.",
+    "understand ist ein Zustandsverb."
+   ],
+   "tr": [
+    "Ich verstehe, was du meinst.",
+    "Ich verstehe, was du meinst."
+   ],
+   "g": "state",
+   "k": 10
+  },
+  {
+   "s": "We ___ about the trip right now.",
+   "base": "think",
+   "opts": [
+    "are thinking",
+    "think",
+    "thinks"
+   ],
+   "a": "are thinking",
+   "case": [
+    "Zustandsverben (know, like, belong …)",
+    "Zustandsverben (know, like, belong …)"
+   ],
+   "why": [
+    "think = nachdenken (Tätigkeit) → progressive möglich.",
+    "think = nachdenken (Tätigkeit) → progressive möglich."
+   ],
+   "tr": [
+    "Wir denken gerade über die Reise nach.",
+    "Wir denken gerade über die Reise nach."
+   ],
+   "g": "state",
+   "k": 10
+  },
+  {
+   "s": "I ___ that's a good idea.",
+   "base": "think",
+   "opts": [
+    "think",
+    "am thinking",
+    "thinking"
+   ],
+   "a": "think",
+   "case": [
+    "Zustandsverben (know, like, belong …)",
+    "Zustandsverben (know, like, belong …)"
+   ],
+   "why": [
+    "think = meinen (Meinung) → simple.",
+    "think = meinen (Meinung) → simple."
+   ],
+   "tr": [
+    "Ich finde, das ist eine gute Idee.",
+    "Ich finde, das ist eine gute Idee."
+   ],
+   "g": "state",
+   "k": 10
   }
  ],
  "sounds": [
@@ -19906,11 +23003,30 @@
     "s9gap",
     "s10gen",
     "s10med",
-    "s10ide"
+    "s10ide",
+    "s5fam",
+    "s5day",
+    "s6wea",
+    "s7rol",
+    "s8his",
+    "s9aus",
+    "s10sus"
    ]
   }
  ],
  "news": [
+  {
+   "v": "0.9",
+   "date": "2026-11-01",
+   "de": [
+    "Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.",
+    "Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben."
+   ],
+   "en": [
+    "Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.",
+    "Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben."
+   ]
+  },
   {
    "v": "0.8",
    "date": "2026-11-01",
@@ -20246,6 +23362,46 @@
    },
    "part": {
     "t": "Partizipialkonstruktionen",
+    "k": 10
+   },
+   "poss": {
+    "t": "Possessivbegleiter und Pronomen",
+    "k": 5
+   },
+   "gen": {
+    "t": "s-Genitiv (Tom's, the girls')",
+    "k": 5
+   },
+   "qw": {
+    "t": "Fragewörter und Kurzantworten",
+    "k": 5
+   },
+   "freq": {
+    "t": "Häufigkeitsadverbien (always, never …)",
+    "k": 5
+   },
+   "haveto": {
+    "t": "have to / needn't / mustn't",
+    "k": 6
+   },
+   "repsimple": {
+    "t": "Indirekte Rede (ohne Zeitverschiebung)",
+    "k": 6
+   },
+   "artic": {
+    "t": "Artikel: a, an, the oder ohne",
+    "k": 8
+   },
+   "tags": {
+    "t": "Question tags",
+    "k": 8
+   },
+   "link": {
+    "t": "Verbindungswörter (although, because, so that …)",
+    "k": 8
+   },
+   "state": {
+    "t": "Zustandsverben (know, like, belong …)",
     "k": 10
    }
   }

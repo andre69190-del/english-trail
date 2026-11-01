@@ -711,6 +711,274 @@ minority language | Minderheitensprache''',
              outro='Zum Abschied bringt sie dir einen Satz bei: „Diolch!“ – Danke auf Walisisch.'))
 
 
+# 01.11.2026: weitere Pakete gegen Lücken zum Bildungsplan (nur hinten anhängen – Hausaufgaben-Codes nutzen die Reihenfolge)
+K(id='s5fam', grade=5, ico='👨‍👩‍👧', name='Family and friends', title='Familie und Freunde',
+  can='Ich kann meine Familie und meine Freunde vorstellen und beschreiben.',
+  tip='Besitz zeigst du mit ’s: „my brother’s room“. Bei he/she/it im simple present das -s nicht vergessen: „She has got brown hair.“',
+  fact='In Großbritannien nennen viele Kinder ihre Großeltern „Gran“ und „Grandad“ oder „Nana“ und „Grandpa“.',
+  words="""family | Familie
+parents | Eltern
+mother / mum | Mutter / Mama
+father / dad | Vater / Papa
+brother | Bruder
+sister | Schwester
+grandparents | Großeltern
+aunt | Tante
+uncle | Onkel
+cousin | Cousin / Cousine
+friend | Freund/in
+best friend | beste/r Freund/in
+tall | groß (Person)
+short | klein / kurz
+hair | Haare
+eyes | Augen""",
+  sentences=[('This is my brother. His name is Max.', 'Das ist mein Bruder. Er heißt Max.'),
+             ('My best friend has got long brown hair.', 'Meine beste Freundin hat lange braune Haare.'),
+             ('My grandparents live in Ulm.', 'Meine Großeltern wohnen in Ulm.'),
+             ('Have you got any brothers or sisters?', 'Hast du Geschwister?'),
+             ("My cousin's name is Lena.", 'Meine Cousine heißt Lena.'),
+             ('My dad is tall and he has got blue eyes.', 'Mein Papa ist groß und hat blaue Augen.')],
+  scene=dict(intro='Erster Tag an deiner Partnerschule in Bristol. Deine Austauschpartnerin Chloe zeigt dir Fotos auf ihrem Handy.',
+             steps=[dict(npc=('This is my family. Have you got any brothers or sisters?', 'Das ist meine Familie. Hast du Geschwister?'),
+                         opts=[('Yes, I have. I have got one sister.', 'Ja. Ich habe eine Schwester.', 1), ('Yes, I am a sister.', 'Ja, ich bin eine Schwester (passt nicht).', 0)],
+                         hint='„Have you got …?“ → „Yes, I have.“'),
+                    dict(npc=("What's her name?", 'Wie heißt sie?'),
+                         opts=[('Her name is Mia. She is nine.', 'Sie heißt Mia. Sie ist neun.', 1), ('His name is Mia.', 'Sein Name ist Mia.', 0)],
+                         hint='Bei einem Mädchen: her name.'),
+                    dict(npc=('And who is your best friend?', 'Und wer ist dein bester Freund / deine beste Freundin?'),
+                         opts=[('My best friend is Jonas. He is very funny.', 'Mein bester Freund ist Jonas. Er ist sehr lustig.', 1), ('My best friend are Jonas.', 'Mein bester Freund sind Jonas.', 0)],
+                         hint='Eine Person → is.')],
+             outro='Chloe lacht: „Your sister looks just like you!“'))
+
+K(id='s5day', grade=5, ico='⏰', name='My day and the time', title='Mein Tag und die Uhrzeit',
+  can='Ich kann meinen Tagesablauf beschreiben und die Uhrzeit sagen.',
+  tip='Uhrzeit: „half past seven“ = halb acht (!), „quarter to eight“ = Viertel vor acht. Tagesablauf im simple present: „I get up at seven.“',
+  fact='In Großbritannien beginnt die Schule meist gegen 8:45 Uhr und dauert bis etwa 15:30 Uhr – mit Mittagessen in der Schule.',
+  words="""to get up | aufstehen
+to have breakfast | frühstücken
+to go to school | zur Schule gehen
+lunch | Mittagessen
+to come home | nach Hause kommen
+to do homework | Hausaufgaben machen
+dinner | Abendessen
+to go to bed | ins Bett gehen
+o'clock | Uhr (volle Stunde)
+half past | halb (nach)
+quarter past | Viertel nach
+quarter to | Viertel vor
+morning | Morgen / Vormittag
+afternoon | Nachmittag
+evening | Abend
+What time is it? | Wie spät ist es?""",
+  sentences=[('I get up at half past six.', 'Ich stehe um halb sieben auf.'),
+             ('What time is it? – It’s quarter to eight.', 'Wie spät ist es? – Viertel vor acht.'),
+             ('After school I do my homework.', 'Nach der Schule mache ich meine Hausaufgaben.'),
+             ('We have dinner at seven o’clock.', 'Wir essen um sieben Uhr zu Abend.'),
+             ('She goes to bed at nine.', 'Sie geht um neun ins Bett.'),
+             ('On Saturdays I get up late.', 'Samstags stehe ich spät auf.')],
+  scene=dict(intro='Ein Videoanruf mit deiner Brieffreundin Amy aus York. Bei ihr ist es eine Stunde früher.',
+             steps=[dict(npc=('What time is it in Germany?', 'Wie spät ist es in Deutschland?'),
+                         opts=[("It's half past four.", 'Es ist halb fünf.', 1), ("It's four half.", 'Es ist vier halb.', 0)],
+                         hint='„half past four“ = 4:30.'),
+                    dict(npc=('When do you get up for school?', 'Wann stehst du für die Schule auf?'),
+                         opts=[('I get up at quarter past six.', 'Ich stehe um Viertel nach sechs auf.', 1), ('I gets up at six.', 'Ich steht um sechs auf.', 0)],
+                         hint='Bei I kein -s.'),
+                    dict(npc=('So early! What do you do after school?', 'So früh! Was machst du nach der Schule?'),
+                         opts=[('I have lunch and then I do my homework.', 'Ich esse zu Mittag und dann mache ich Hausaufgaben.', 1), ('I go to bed at lunch.', 'Ich gehe beim Mittagessen ins Bett.', 0)],
+                         hint='Reihenfolge mit „and then“.')],
+             outro='„Same here!“, sagt Amy. Ihr verabredet euch für Samstag – um „half past ten“.'))
+
+K(id='s6wea', grade=6, ico='🌦️', name='Weather and clothes', title='Wetter und Kleidung',
+  can='Ich kann über das Wetter sprechen und sagen, was ich anziehe.',
+  tip='Was du gerade trägst: present progressive – „I’m wearing a jacket.“ Wetter: „It’s sunny / rainy / windy.“',
+  fact='Britisches Wetter wechselt schnell – viele Briten haben deshalb immer einen Regenschirm („brolly“) dabei.',
+  words="""weather | Wetter
+sunny | sonnig
+rainy | regnerisch
+cloudy | bewölkt
+windy | windig
+snowy | verschneit
+foggy | neblig
+umbrella | Regenschirm
+coat | Mantel
+boots | Stiefel
+scarf | Schal
+gloves | Handschuhe
+dress | Kleid
+trousers | Hose
+trainers | Turnschuhe
+to wear | tragen""",
+  sentences=[("It's cold and windy today.", 'Heute ist es kalt und windig.'),
+             ("I'm wearing my new trainers.", 'Ich trage meine neuen Turnschuhe.'),
+             ("Take an umbrella – it's going to rain.", 'Nimm einen Schirm mit – es wird regnen.'),
+             ('What’s the weather like in Scotland?', 'Wie ist das Wetter in Schottland?'),
+             ('In winter I wear gloves and a scarf.', 'Im Winter trage ich Handschuhe und einen Schal.'),
+             ('Yesterday it was foggy.', 'Gestern war es neblig.')],
+  scene=dict(intro='Klassenfahrt nach Edinburgh. Morgens am Fenster der Jugendherberge – grauer Himmel. Dein Lehrer fragt in die Runde.',
+             steps=[dict(npc=("What's the weather like today?", 'Wie ist das Wetter heute?'),
+                         opts=[("It's cloudy and a bit rainy.", 'Bewölkt und ein bisschen regnerisch.', 1), ("It's trousers.", 'Es ist Hose.', 0)],
+                         hint='Wetter: It’s + Adjektiv.'),
+                    dict(npc=('So what are you going to wear?', 'Und was ziehst du an?'),
+                         opts=[("I'm going to wear my coat and boots.", 'Ich ziehe meinen Mantel und meine Stiefel an.', 1), ("I'm wear my coat.", 'Ich bin trage meinen Mantel.', 0)],
+                         hint='going to + Grundform.'),
+                    dict(npc=("Good idea. Don't forget your umbrella!", 'Gute Idee. Vergiss deinen Schirm nicht!'),
+                         opts=[("Thanks! It's in my bag.", 'Danke! Er ist in meiner Tasche.', 1), ("Yes, it's sunny umbrella.", 'Ja, sonniger Schirm.', 0)],
+                         hint='Kurz bedanken.')],
+             outro='Mittags kommt die Sonne raus. Typisch britisch!'))
+
+K(id='s7rol', grade=7, ico='🌟', name='Role models', title='Vorbilder und Identität',
+  can='Ich kann eine Person beschreiben, die ich bewundere, und begründen, warum.',
+  tip='Begründen mit „because“ und Relativsätzen: „She’s a person who never gives up.“',
+  fact='Malala Yousafzai bekam mit 17 Jahren den Friedensnobelpreis – sie lebt heute in Großbritannien und setzt sich für Bildung für Mädchen ein.',
+  words="""role model | Vorbild
+to admire | bewundern
+brave | mutig
+kind | freundlich / gütig
+honest | ehrlich
+confident | selbstbewusst
+hard-working | fleißig
+talented | begabt
+to give up | aufgeben
+to achieve | erreichen
+success | Erfolg
+famous | berühmt
+to inspire | inspirieren
+personality | Persönlichkeit
+to be proud of | stolz sein auf
+who | der/die/das (Person, Relativpronomen)""",
+  sentences=[('My role model is my aunt because she is very brave.', 'Mein Vorbild ist meine Tante, weil sie sehr mutig ist.'),
+             ('I admire people who never give up.', 'Ich bewundere Menschen, die nie aufgeben.'),
+             ('She achieved a lot without being famous.', 'Sie hat viel erreicht, ohne berühmt zu sein.'),
+             ('He inspires me to work harder.', 'Er inspiriert mich, mich mehr anzustrengen.'),
+             ('A good friend is honest and kind.', 'Ein guter Freund ist ehrlich und freundlich.'),
+             ("I'm proud of my little brother.", 'Ich bin stolz auf meinen kleinen Bruder.')],
+  scene=dict(intro='Englischunterricht: Jeder stellt ein Vorbild vor. Deine Lehrerin Ms Carter fragt dich nach deiner Präsentation.',
+             steps=[dict(npc=('Who is your role model?', 'Wer ist dein Vorbild?'),
+                         opts=[('My role model is my grandma.', 'Mein Vorbild ist meine Oma.', 1), ('My role model is brave because.', 'Mein Vorbild ist mutig weil.', 0)],
+                         hint='Erst die Person nennen.'),
+                    dict(npc=('Why do you admire her?', 'Warum bewunderst du sie?'),
+                         opts=[("Because she is a person who helps everyone.", 'Weil sie ein Mensch ist, der allen hilft.', 1), ('Because she which helps.', 'Weil sie welches hilft.', 0)],
+                         hint='Person → who.'),
+                    dict(npc=('Lovely. What has she achieved?', 'Schön. Was hat sie erreicht?'),
+                         opts=[('She has raised four children and she still works in a café.', 'Sie hat vier Kinder großgezogen und arbeitet immer noch in einem Café.', 1), ('She achieve yesterday.', 'Sie erreicht gestern.', 0)],
+                         hint='present perfect: has achieved / has raised.')],
+             outro='Die Klasse klatscht. Ms Carter: „That was really inspiring!“'))
+
+K(id='s8his', grade=8, ico='🏰', name='British history', title='Britische Geschichte',
+  can='Ich kann über wichtige Ereignisse der britischen Geschichte berichten (simple past, passive).',
+  tip='Geschichte erzählst du im simple past; das Passiv zeigt, was getan wurde: „The castle was built in 1070.“',
+  fact='Der Tower of London wurde ab 1078 unter Wilhelm dem Eroberer gebaut – heute bewachen ihn die „Beefeaters“ und die berühmten Raben.',
+  words="""history | Geschichte
+century | Jahrhundert
+king | König
+queen | Königin
+castle | Burg / Schloss
+battle | Schlacht
+to rule | herrschen
+to invade | einfallen / erobern
+empire | (Welt-)Reich
+war | Krieg
+peace | Frieden
+was built | wurde gebaut
+was crowned | wurde gekrönt
+the Romans | die Römer
+the Industrial Revolution | die Industrielle Revolution
+factory | Fabrik""",
+  sentences=[('The Romans came to Britain about 2,000 years ago.', 'Die Römer kamen vor etwa 2000 Jahren nach Britannien.'),
+             ('The castle was built in the 11th century.', 'Die Burg wurde im 11. Jahrhundert gebaut.'),
+             ('Queen Victoria ruled for 63 years.', 'Königin Victoria herrschte 63 Jahre lang.'),
+             ('Many factories were built during the Industrial Revolution.', 'Während der Industriellen Revolution wurden viele Fabriken gebaut.'),
+             ('William the Conqueror invaded England in 1066.', 'Wilhelm der Eroberer eroberte England im Jahr 1066.'),
+             ('King Charles III was crowned in 2023.', 'König Charles III. wurde 2023 gekrönt.')],
+  scene=dict(intro='Tower of London. Ein Beefeater in roter Uniform führt eure Gruppe herum und stellt Fragen.',
+             steps=[dict(npc=('Who knows when this tower was built?', 'Wer weiß, wann dieser Turm gebaut wurde?'),
+                         opts=[('It was built about 900 years ago.', 'Er wurde vor etwa 900 Jahren gebaut.', 1), ('It builds 900 years.', 'Er baut 900 Jahre.', 0)],
+                         hint='Passiv: was built.'),
+                    dict(npc=('Correct! And who invaded England in 1066?', 'Richtig! Und wer eroberte England 1066?'),
+                         opts=[('William the Conqueror did.', 'Wilhelm der Eroberer.', 1), ('The Industrial Revolution.', 'Die Industrielle Revolution.', 0)],
+                         hint='Kurzantwort: … did.'),
+                    dict(npc=('Very good! Why are the ravens important?', 'Sehr gut! Warum sind die Raben wichtig?'),
+                         opts=[('People say the kingdom will fall if they leave.', 'Man sagt, das Königreich fällt, wenn sie gehen.', 1), ('Because they were crowned.', 'Weil sie gekrönt wurden.', 0)],
+                         hint='Legende: „If they leave, …“')],
+             outro='Ein Rabe krächzt laut – als wollte er dir recht geben.'))
+
+K(id='s9aus', grade=9, ico='🦘', name='Australia and New Zealand', title='Australien und Neuseeland',
+  can='Ich kann über Australien und Neuseeland sprechen – Natur, Geschichte und Leben dort.',
+  tip='Australisches Englisch: „G’day!“ = Hallo, „arvo“ = afternoon, „mate“ = Kumpel. Im Unterricht trotzdem Standardenglisch!',
+  fact='Die Aborigines leben seit über 60 000 Jahren in Australien – sie gehören zu den ältesten durchgehenden Kulturen der Welt.',
+  words="""continent | Kontinent
+outback | Outback (Hinterland)
+desert | Wüste
+coast | Küste
+reef | Riff
+kangaroo | Känguru
+Aboriginal people | Aborigines (Ureinwohner)
+Maori | Māori
+indigenous | indigen / einheimisch
+settler | Siedler/in
+convict | Sträfling
+bushfire | Buschfeuer
+drought | Dürre
+to emigrate | auswandern
+exchange year | Austauschjahr
+host country | Gastland""",
+  sentences=[('Australia is the only country that is also a continent.', 'Australien ist das einzige Land, das auch ein Kontinent ist.'),
+             ('The first British settlers were often convicts.', 'Die ersten britischen Siedler waren oft Sträflinge.'),
+             ('Bushfires have become more dangerous because of climate change.', 'Buschfeuer sind wegen des Klimawandels gefährlicher geworden.'),
+             ('The Great Barrier Reef can be seen from space.', 'Das Great Barrier Reef ist aus dem All zu sehen.'),
+             ('Many Maori words are used in New Zealand English.', 'Viele Māori-Wörter werden im neuseeländischen Englisch benutzt.'),
+             ("I'd love to spend an exchange year in Melbourne.", 'Ich würde gern ein Austauschjahr in Melbourne verbringen.')],
+  scene=dict(intro='Videocall mit deiner Gastfamilie in Melbourne vor deinem Austauschjahr. Dein Gastbruder Liam grinst in die Kamera.',
+             steps=[dict(npc=("G'day! Are you excited about coming to Australia?", 'Hallo! Freust du dich auf Australien?'),
+                         opts=[("Yes, I can't wait! I've never been so far away.", 'Ja, ich kann es kaum erwarten! Ich war noch nie so weit weg.', 1), ('Yes, I am a kangaroo.', 'Ja, ich bin ein Känguru.', 0)],
+                         hint='Vorfreude + present perfect (never been).'),
+                    dict(npc=('What would you like to see first?', 'Was möchtest du zuerst sehen?'),
+                         opts=[("I'd like to see the Great Barrier Reef.", 'Ich möchte das Great Barrier Reef sehen.', 1), ('I like see reef yesterday.', 'Ich mag Riff sehen gestern.', 0)],
+                         hint='Wunsch: I’d like to …'),
+                    dict(npc=("Awesome. But it's summer here in December – bring sunscreen!", 'Klasse. Aber im Dezember ist hier Sommer – bring Sonnencreme mit!'),
+                         opts=[("Christmas on the beach? That's so different!", 'Weihnachten am Strand? Das ist so anders!', 1), ('December is winter, mate.', 'Dezember ist Winter, Kumpel.', 0)],
+                         hint='Auf der Südhalbkugel sind die Jahreszeiten umgekehrt.')],
+             outro='Liam lacht: „See you in the arvo – I mean, in January!“'))
+
+K(id='s10sus', grade=10, ico='♻️', name='Sustainability and consumption', title='Nachhaltigkeit und Konsum',
+  can='Ich kann über Konsum und Nachhaltigkeit diskutieren und meine Meinung begründen.',
+  tip='Meinung äußern und abwägen: „On the one hand … on the other hand …“, „In my opinion …“, „I’m convinced that …“',
+  fact='Großbritannien produziert pro Jahr über 200 000 Tonnen Kleidungsabfall – „fast fashion“ ist dort ein großes Diskussionsthema.',
+  words="""sustainable | nachhaltig
+consumption | Konsum / Verbrauch
+consumer | Verbraucher/in
+resources | Ressourcen
+to waste | verschwenden
+fast fashion | Billigmode
+second-hand | gebraucht
+to reduce | verringern
+to reuse | wiederverwenden
+carbon footprint | CO₂-Fußabdruck
+renewable energy | erneuerbare Energie
+on the one hand | einerseits
+on the other hand | andererseits
+in my opinion | meiner Meinung nach
+to be convinced | überzeugt sein
+advantage | Vorteil""",
+  sentences=[('In my opinion, fast fashion wastes too many resources.', 'Meiner Meinung nach verschwendet Billigmode zu viele Ressourcen.'),
+             ('On the one hand it is cheap, on the other hand it is bad for the planet.', 'Einerseits ist sie billig, andererseits schlecht für den Planeten.'),
+             ('Buying second-hand reduces your carbon footprint.', 'Gebraucht kaufen verringert deinen CO₂-Fußabdruck.'),
+             ("I'm convinced that we can all change something.", 'Ich bin überzeugt, dass wir alle etwas ändern können.'),
+             ('If more people reused things, there would be less rubbish.', 'Wenn mehr Leute Dinge wiederverwenden würden, gäbe es weniger Müll.'),
+             ('Renewable energy has many advantages.', 'Erneuerbare Energie hat viele Vorteile.')],
+  scene=dict(intro='Debattier-AG an deiner Partnerschule in Manchester. Thema: „Should fast fashion be banned?“ Du bist dran.',
+             steps=[dict(npc=("What's your opinion?", 'Was ist deine Meinung?'),
+                         opts=[("In my opinion, it shouldn't be banned, but it should be more expensive.", 'Meiner Meinung nach sollte sie nicht verboten werden, aber teurer sein.', 1), ('My opinion is fashion.', 'Meine Meinung ist Mode.', 0)],
+                         hint='Meinung einleiten: In my opinion …'),
+                    dict(npc=('But poorer people need cheap clothes, don’t they?', 'Aber ärmere Menschen brauchen billige Kleidung, oder?'),
+                         opts=[("That's true. On the other hand, second-hand clothes are cheap too.", 'Stimmt. Andererseits ist gebrauchte Kleidung auch billig.', 1), ('No, they are fast.', 'Nein, sie sind schnell.', 0)],
+                         hint='Einwand anerkennen und Gegenargument bringen.'),
+                    dict(npc=('Good point. What would you do personally?', 'Gutes Argument. Was würdest du persönlich tun?'),
+                         opts=[('I would buy fewer clothes and swap them with friends.', 'Ich würde weniger Kleidung kaufen und mit Freunden tauschen.', 1), ('I will bought more.', 'Ich werde mehr gekauft.', 0)],
+                         hint='would + Grundform.')],
+             outro='Die Jury nickt. Dein Team gewinnt die Runde!'))
+
+
 # Emojis für Klasse 5/6 (gleiche Reihenfolge wie die Wörter; leer = kein passendes Bild)
 EMOJI = {
   's5sch': ['🏫', '🧑‍🏫', '📚', '➗', '🏰', '🎨', '🤸', '🗓️', '⏰', '🍎', '📝', '🖍️', '📒', '✏️', '👔', '🧽'],
@@ -718,5 +986,8 @@ EMOJI = {
   's5hob': ['⭐', '🕹️', '⚽', '🚲', '📖', '🏊', '💃', '✏️', '🎹', '', '', '', '', '', '🏅', '👥'],
   's6fes': ['🎪', '🎂', '🎄', '🐣', '🎃', '🔥', '🎆', '🦸', '🎁', '🥳', '🎉', '🕯️', '🎃', '🎊', '💌', ''],
   's6sho': ['🍾', '📦', '🍞', '🍰', '⚖️', '', '', '❓', '❓', '', '🫘', '🥔', '🍟', '🛒', '📝', '🐟'],
+  's5fam': ['👪', '👨‍👩', '👩', '👨', '👦', '👧', '👴', '👩‍🦰', '🧔', '🧒', '🤝', '💛', '🦒', '🐭', '💇', '👀'],
+  's5day': ['⏰', '🥣', '🏫', '🥪', '🏠', '📝', '🍽️', '🛌', '🕐', '🕧', '🕒', '🕣', '🌅', '☀️', '🌆', '❓'],
+  's6wea': ['🌤️', '☀️', '🌧️', '☁️', '💨', '❄️', '🌫️', '☂️', '🧥', '👢', '🧣', '🧤', '👗', '👖', '👟', '👕'],
   's6lon': ['📸', '🗼', '🏰', '🌉', '🚇', '🚌', '🏖️', '🏝️', '🪨', '🏘️', '🎣', '🏄', '', '', '', '✈️'],
 }

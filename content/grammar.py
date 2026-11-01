@@ -31,6 +31,17 @@ TOPICS = {
   'passive2': ('Passiv (alle Zeiten)', 9),
   'future': ('Zukunftsformen', 10),
   'part':   ('Partizipialkonstruktionen', 10),
+  # 01.11.2026: Lücken zum Bildungsplan BW geschlossen – nur hinten anhängen (Hausaufgaben-Codes nutzen die Reihenfolge)
+  'poss':   ('Possessivbegleiter und Pronomen', 5),
+  'gen':    ("s-Genitiv (Tom's, the girls')", 5),
+  'qw':     ('Fragewörter und Kurzantworten', 5),
+  'freq':   ('Häufigkeitsadverbien (always, never …)', 5),
+  'haveto': ("have to / needn't / mustn't", 6),
+  'repsimple': ('Indirekte Rede (ohne Zeitverschiebung)', 6),
+  'artic':  ('Artikel: a, an, the oder ohne', 8),
+  'tags':   ('Question tags', 8),
+  'link':   ('Verbindungswörter (although, because, so that …)', 8),
+  'state':  ('Zustandsverben (know, like, belong …)', 10),
 }
 
 CASES = '''
@@ -152,6 +163,66 @@ part | ___ the door, she saw a big dog. | open | Opening | Opened; To open | Gle
 part | The boy ___ next to me is my cousin. | sit | sitting | sat; who sitting | Verkürzter Relativsatz (who is sitting) → -ing. | Der Junge, der neben mir sitzt, ist mein Cousin.
 part | ___ in 1863, the Tube is the oldest underground in the world. | open | Opened | Opening; Having opening | Passivische Bedeutung → past participle. | 1863 eröffnet, ist die Tube die älteste U-Bahn der Welt.
 part | ___ finished his work, he went home. | have | Having | Had; Has | Vorzeitigkeit → having + 3. Form. | Nachdem er seine Arbeit beendet hatte, ging er nach Hause.
+poss | This is my bike. It's ___. | I | mine | my; me | Ohne Nomen danach: mine (meins). | Das ist mein Fahrrad. Es ist meins.
+poss | Lisa and Tom love ___ dog. | they | their | there; they're | Besitz von they → their. | Lisa und Tom lieben ihren Hund.
+poss | Can you help ___, please? | I | me | I; my | Nach dem Verb (Objekt) → me. | Kannst du mir bitte helfen?
+poss | Our teacher is nice. We like ___ a lot. | she | her | she; hers | Objekt von she → her. | Unsere Lehrerin ist nett. Wir mögen sie sehr.
+poss | The cat is eating ___ food. | it | its | it's; it | Besitz von it → its (ohne Apostroph!). | Die Katze frisst ihr Futter.
+poss | Is this your pen or ___? | he | his | him; he's | Ohne Nomen: his (seins). | Ist das dein Stift oder seiner?
+gen | This is ___ room. | Emma | Emma's | Emmas; Emmas' | Besitz einer Person: Name + 's. | Das ist Emmas Zimmer.
+gen | The ___ bikes are in the garden. | boys | boys' | boy's; boys's | Plural mit -s: nur Apostroph (boys'). | Die Fahrräder der Jungen sind im Garten.
+gen | My ___ car is red. | parents | parents' | parent's; parents's | Beide Eltern (Plural) → parents'. | Das Auto meiner Eltern ist rot.
+gen | The ___ toys are everywhere. | children | children's | childrens'; children' | Unregelmäßiger Plural ohne -s → children's. | Die Spielsachen der Kinder liegen überall.
+gen | ___ birthday is in May. | my sister | My sister's | My sisters; My sister | Eine Schwester → sister's. | Der Geburtstag meiner Schwester ist im Mai.
+gen | We met at ___ house. | James | James's | James'; Jameses | Name auf -s: meist James's (James' ist auch möglich). | Wir haben uns bei James zu Hause getroffen.
+qw | ___ do you live? – In Stuttgart. | where | Where | What; Who | Ort → Where. | Wo wohnst du? – In Stuttgart.
+qw | ___ is your birthday? – In June. | when | When | Where; Who | Zeitpunkt → When. | Wann hast du Geburtstag? – Im Juni.
+qw | ___ is that girl? – My cousin. | who | Who | Which; What | Person → Who. | Wer ist das Mädchen? – Meine Cousine.
+qw | Do you like pizza? – Yes, I ___. | do | do | like; am | Kurzantwort mit dem Hilfsverb der Frage: Yes, I do. | Magst du Pizza? – Ja.
+qw | Is Tom at home? – No, he ___. | be | isn't | doesn't; not | Frage mit is → Kurzantwort mit isn't. | Ist Tom zu Hause? – Nein.
+qw | ___ books have you got? – Five. | how many | How many | How much; How | Zählbar → How many. | Wie viele Bücher hast du? – Fünf.
+freq | I ___ late for school. | never be | am never | never am; never be | Häufigkeitsadverb steht nach am/is/are. | Ich komme nie zu spät zur Schule.
+freq | She ___ her homework after dinner. | usually do | usually does | does usually; usually do | Häufigkeitsadverb steht vor dem Vollverb. | Sie macht ihre Hausaufgaben normalerweise nach dem Abendessen.
+freq | We ___ to the beach in summer. | often go | often go | go often; often goes | Vor dem Vollverb: often go. | Im Sommer fahren wir oft an den Strand.
+freq | He ___ tired on Mondays. | always be | is always | always is; always are | Nach is: is always. | Montags ist er immer müde.
+freq | My dad ___ coffee. | never drink | never drinks | drinks never; never drink | he → drinks, Adverb davor. | Mein Vater trinkt nie Kaffee.
+freq | ___ do you play tennis? – Twice a week. | how often | How often | How many; How much | Nach Häufigkeit fragen: How often. | Wie oft spielst du Tennis? – Zweimal pro Woche.
+haveto | It's Saturday. I ___ get up early. | have to | don't have to | mustn't; haven't to | Nicht nötig → don't have to. | Es ist Samstag. Ich muss nicht früh aufstehen.
+haveto | You ___ use your phone in the exam! | must | mustn't | don't have to; needn't | Verboten → mustn't. | Du darfst in der Prüfung dein Handy nicht benutzen!
+haveto | She ___ wear a uniform at her school. | have to | has to | have to; must to | he/she/it → has to. | Sie muss an ihrer Schule eine Uniform tragen.
+haveto | You ___ bring food – there's a café. | need | needn't | mustn't; don't need | Nicht nötig → needn't (+ Grundform). | Du musst kein Essen mitbringen – es gibt ein Café.
+haveto | Yesterday we ___ walk home because the bus was late. | have to | had to | must; have to | must hat keine Vergangenheit → had to. | Gestern mussten wir nach Hause laufen, weil der Bus zu spät war.
+haveto | ___ you have to tidy your room every day? | do | Do | Must; Have | Frage mit have to → Do you have to …? | Musst du jeden Tag dein Zimmer aufräumen?
+repsimple | Anna: "I like cats." → Anna says that she ___ cats. | like | likes | like; liked | says (Gegenwart) → keine Zeitverschiebung, aber she → likes. | Anna sagt, dass sie Katzen mag.
+repsimple | Tom: "I'm tired." → Tom says that he ___ tired. | be | is | am; was | I am → he is. | Tom sagt, dass er müde ist.
+repsimple | Mum: "We are late." → Mum says that ___ are late. | we | we | they; us | Sprecherin schließt sich ein → we bleibt. | Mama sagt, dass wir spät dran sind.
+repsimple | Ben: "My bike is broken." → Ben says that ___ bike is broken. | his | his | my; her | my (Ben) → his. | Ben sagt, dass sein Fahrrad kaputt ist.
+repsimple | Lisa: "I can swim." → Lisa says that she ___ swim. | can | can | could; cans | says → keine Zeitverschiebung: can bleibt. | Lisa sagt, dass sie schwimmen kann.
+repsimple | The teacher: "Open your books." → The teacher tells us ___ our books. | open | to open | open; opening | Aufforderung → tell sb to + Grundform. | Die Lehrerin sagt uns, wir sollen die Bücher öffnen.
+artic | I'd like ___ apple, please. | a | an | a; the | Vor Vokal-Laut → an. | Ich hätte gern einen Apfel, bitte.
+artic | ___ life is beautiful. | the | – | The; A | Allgemeine Begriffe ohne Artikel: Life is … | Das Leben ist schön.
+artic | She goes to ___ school by bus. | the | – | the; a | Institution im üblichen Zweck (zur Schule gehen) → ohne Artikel. | Sie fährt mit dem Bus zur Schule.
+artic | ___ Thames flows through London. | the | The | –; A | Flüsse haben the. | Die Themse fließt durch London.
+artic | My cousin is ___ engineer. | a | an | –; the | Berufe mit a/an (vor Vokal: an). | Mein Cousin ist Ingenieur.
+artic | We visited ___ Scotland last year. | the | – | the; a | Die meisten Länder ohne Artikel. | Wir haben letztes Jahr Schottland besucht.
+tags | You're from Berlin, ___? | be | aren't you | don't you; isn't it | Bejahter Satz mit are → aren't you? | Du kommst aus Berlin, oder?
+tags | She plays the piano, ___? | do | doesn't she | isn't she; don't she | Vollverb im simple present → doesn't she? | Sie spielt Klavier, nicht wahr?
+tags | They didn't come, ___? | do | did they | didn't they; do they | Verneinter Satz → bejahter Anhang: did they? | Sie sind nicht gekommen, oder?
+tags | It was a great film, ___? | be | wasn't it | didn't it; isn't it | was → wasn't it? | Es war ein toller Film, oder?
+tags | You can swim, ___? | can | can't you | don't you; can you | can → can't you? | Du kannst schwimmen, oder?
+tags | Let's go, ___? | shall | shall we | will we; don't we | Let's … → shall we? | Lass uns gehen, ja?
+link | ___ it was raining, we went for a walk. | although | Although | Because; So | Gegensatz → Although (obwohl). | Obwohl es regnete, gingen wir spazieren.
+link | I stayed at home ___ I was ill. | because | because | although; so | Grund → because. | Ich blieb zu Hause, weil ich krank war.
+link | Speak louder ___ everybody can hear you. | so that | so that | because; although | Zweck → so that (damit). | Sprich lauter, damit dich alle hören.
+link | It was late, ___ we took a taxi. | so | so | because; although | Folge → so (deshalb). | Es war spät, deshalb nahmen wir ein Taxi.
+link | I like football. ___, I don't like watching it on TV. | however | However | Because; So that | Gegensatz zwischen zwei Sätzen → However. | Ich mag Fußball. Allerdings schaue ich es nicht gern im Fernsehen.
+link | ___ the bad weather, the match took place. | despite | Despite | Although; Because | Vor einem Nomen → Despite (trotz). | Trotz des schlechten Wetters fand das Spiel statt.
+state | I ___ the answer now. | know | know | am knowing; knowing | know ist ein Zustandsverb → kein -ing. | Jetzt weiß ich die Antwort.
+state | This bag ___ to my brother. | belong | belongs | is belonging; belong | belong → kein progressive. | Diese Tasche gehört meinem Bruder.
+state | Look, she ___ a picture of the sea. | draw | is drawing | draws; draw | Tätigkeit gerade jetzt → progressive. | Schau, sie malt ein Bild vom Meer.
+state | I ___ what you mean. | understand | understand | am understanding; understanding | understand ist ein Zustandsverb. | Ich verstehe, was du meinst.
+state | We ___ about the trip right now. | think | are thinking | think; thinks | think = nachdenken (Tätigkeit) → progressive möglich. | Wir denken gerade über die Reise nach.
+state | I ___ that's a good idea. | think | think | am thinking; thinking | think = meinen (Meinung) → simple. | Ich finde, das ist eine gute Idee.
 '''
 
 # Simple vs. Progressive (ersetzt Verb-Aspekt): pf = 1 → simple richtig, 0 → progressive richtig

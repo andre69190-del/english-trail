@@ -203,3 +203,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - **Wichtig (Fehler gefunden):** Trail 2/3 werden aus `data-szlak.json` nachgeladen (build.py). Die Datei war in .gitignore und nicht im Dockerfile → jetzt im Repo, im Dockerfile und im Service-Worker-Cache.
 - progress_lock aktualisiert: 50 Orte, 885 Wörter.
 - Nächste Schritte: Abgleich Bildungsplan BW + Lehrwerks-Units (Andres Auftrag 01.11. 12:59), SEO/Google, Trail 3 (B1) + Cambridge-Training.
+
+## Release 0.9 (01.11.2026) – Abdeckung BW + Google
+- Abgleich Bildungsplan → `content/schule/ABDECKUNG_BW.md`. 7 neue Pakete (s5fam, s5day, s6wea, s7rol, s8his, s9aus, s10sus, hinten angehängt), 10 neue Grammatik-Themen (60 Aufgaben, TOPICS hinten angehängt).
+- Google: statische Seiten `englisch-gymnasium-bw.html`, `englisch-klasse-5…10.html` (tools/seo_pages.py, nach Inhaltsänderungen neu erzeugen), sitemap.xml mit allen Seiten, JSON-LD, Footer-Link in der App. Seite war bei Google noch nicht gefunden (neu). Andre: Google Search Console → Domain-Property arndt-software.de, Sitemap einreichen.
+- Impressum: Polnisch-Rest „Stimmen Gosia/Darek“ entfernt. perf-Budget 820 KB.
+- Tests: UI 134 OK, Core 53.
