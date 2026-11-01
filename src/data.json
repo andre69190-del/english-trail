@@ -7993,6 +7993,1838 @@
    "pack": 1,
    "sch": 10,
    "ico": "🏴"
+  },
+  {
+   "id": "i_game",
+   "city": "Gaming and streaming",
+   "cityDe": "Gaming und Streaming",
+   "cityEn": "Gaming and streaming",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Gaming und Streaming",
+    "Gaming und Streaming"
+   ],
+   "can": [
+    "Ich kann über Spiele sprechen, Spielregeln erklären und sagen, was ich gestern gespielt habe.",
+    "Ich kann über Spiele sprechen, Spielregeln erklären und sagen, was ich gestern gespielt habe."
+   ],
+   "tip": [
+    "Beim Erzählen vom letzten Spiel: simple past – „We won the match.“ „I found a secret level.“ Regeln erklärt man im simple present: „You have to collect coins.“",
+    "Beim Erzählen vom letzten Spiel: simple past – „We won the match.“ „I found a secret level.“ Regeln erklärt man im simple present: „You have to collect coins.“"
+   ],
+   "fact": [
+    "Viele Spiele und Streams sind auf Englisch. Wer Begriffe wie „level up“ oder „respawn“ versteht, versteht oft auch die Schulgrammatik dahinter (to level up = aufsteigen).",
+    "Viele Spiele und Streams sind auf Englisch. Wer Begriffe wie „level up“ oder „respawn“ versteht, versteht oft auch die Schulgrammatik dahinter (to level up = aufsteigen)."
+   ],
+   "words": [
+    [
+     "game",
+     "Spiel",
+     "Spiel"
+    ],
+    [
+     "player",
+     "Spieler(in)",
+     "Spieler(in)"
+    ],
+    [
+     "level",
+     "Level / Stufe",
+     "Level / Stufe"
+    ],
+    [
+     "to level up",
+     "aufsteigen",
+     "aufsteigen"
+    ],
+    [
+     "to win",
+     "gewinnen",
+     "gewinnen"
+    ],
+    [
+     "to lose",
+     "verlieren",
+     "verlieren"
+    ],
+    [
+     "score",
+     "Punktestand",
+     "Punktestand"
+    ],
+    [
+     "team",
+     "Team",
+     "Team"
+    ],
+    [
+     "to build",
+     "bauen",
+     "bauen"
+    ],
+    [
+     "to collect",
+     "sammeln",
+     "sammeln"
+    ],
+    [
+     "enemy",
+     "Gegner / Feind",
+     "Gegner / Feind"
+    ],
+    [
+     "weapon",
+     "Waffe",
+     "Waffe"
+    ],
+    [
+     "health",
+     "Lebensenergie",
+     "Lebensenergie"
+    ],
+    [
+     "to save",
+     "speichern / retten",
+     "speichern / retten"
+    ],
+    [
+     "controller",
+     "Controller",
+     "Controller"
+    ],
+    [
+     "streamer",
+     "Streamer(in)",
+     "Streamer(in)"
+    ]
+   ],
+   "sentences": [
+    [
+     "You have to collect all the coins to level up.",
+     "Du musst alle Münzen sammeln, um aufzusteigen.",
+     "Du musst alle Münzen sammeln, um aufzusteigen."
+    ],
+    [
+     "Yesterday we won three matches in a row.",
+     "Gestern haben wir drei Spiele hintereinander gewonnen.",
+     "Gestern haben wir drei Spiele hintereinander gewonnen."
+    ],
+    [
+     "Don't forget to save the game!",
+     "Vergiss nicht, das Spiel zu speichern!",
+     "Vergiss nicht, das Spiel zu speichern!"
+    ],
+    [
+     "My favourite streamer plays every Friday.",
+     "Mein Lieblingsstreamer spielt jeden Freitag.",
+     "Mein Lieblingsstreamer spielt jeden Freitag."
+    ],
+    [
+     "If you lose all your health, you have to start again.",
+     "Wenn du deine ganze Energie verlierst, musst du neu anfangen.",
+     "Wenn du deine ganze Energie verlierst, musst du neu anfangen."
+    ],
+    [
+     "We built a huge castle together.",
+     "Wir haben zusammen eine riesige Burg gebaut.",
+     "Wir haben zusammen eine riesige Burg gebaut."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Online-Spiel mit einem Spieler aus Manchester. Ihr seid im selben Team.",
+     "Online-Spiel mit einem Spieler aus Manchester. Ihr seid im selben Team."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hey! Are you new here?",
+       "Hey! Bist du neu hier?",
+       "Hey! Bist du neu hier?"
+      ],
+      "opts": [
+       [
+        "Yes, it's my first game.",
+        "Ja, es ist mein erstes Spiel.",
+        "Ja, es ist mein erstes Spiel.",
+        1
+       ],
+       [
+        "Yes, I am first game.",
+        "Ja, ich bin erstes Spiel.",
+        "Ja, ich bin erstes Spiel.",
+        0
+       ]
+      ],
+      "hint": [
+       "„It’s my first …“",
+       "„It’s my first …“"
+      ]
+     },
+     {
+      "npc": [
+       "OK, you have to collect the keys. I'll fight the enemies.",
+       "OK, du musst die Schlüssel sammeln. Ich kämpfe gegen die Gegner.",
+       "OK, du musst die Schlüssel sammeln. Ich kämpfe gegen die Gegner."
+      ],
+      "opts": [
+       [
+        "Got it! Where are the keys?",
+        "Verstanden! Wo sind die Schlüssel?",
+        "Verstanden! Wo sind die Schlüssel?",
+        1
+       ],
+       [
+        "Got it! Where is the keys?",
+        "Verstanden! Wo ist die Schlüssel?",
+        "Verstanden! Wo ist die Schlüssel?",
+        0
+       ]
+      ],
+      "hint": [
+       "Mehrzahl: Where are …?",
+       "Mehrzahl: Where are …?"
+      ]
+     },
+     {
+      "npc": [
+       "We won! Good game!",
+       "Gewonnen! Gutes Spiel!",
+       "Gewonnen! Gutes Spiel!"
+      ],
+      "opts": [
+       [
+        "Good game! That was fun.",
+        "Gutes Spiel! Das hat Spaß gemacht.",
+        "Gutes Spiel! Das hat Spaß gemacht.",
+        1
+       ],
+       [
+        "Good game! That is fun yesterday.",
+        "Gutes Spiel! Das ist Spaß gestern.",
+        "Gutes Spiel! Das ist Spaß gestern.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vergangenheit: That was fun.",
+       "Vergangenheit: That was fun."
+      ]
+     }
+    ],
+    "outro": [
+     "„GG!“ – ihr verabredet euch für morgen. Ganz auf Englisch.",
+     "„GG!“ – ihr verabredet euch für morgen. Ganz auf Englisch."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "🎮"
+  },
+  {
+   "id": "i_foot",
+   "city": "Football and sport",
+   "cityDe": "Fußball und Sport",
+   "cityEn": "Football and sport",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Fußball und Sport",
+    "Fußball und Sport"
+   ],
+   "can": [
+    "Ich kann über Fußball und Sport sprechen, Spiele kommentieren und Ergebnisse vergleichen.",
+    "Ich kann über Fußball und Sport sprechen, Spiele kommentieren und Ergebnisse vergleichen."
+   ],
+   "tip": [
+    "Steigerung passt perfekt zum Sport: faster, stronger, the best team. Ergebnis: „We won 3–1“ (three–one), „It was a draw“ (Unentschieden).",
+    "Steigerung passt perfekt zum Sport: faster, stronger, the best team. Ergebnis: „We won 3–1“ (three–one), „It was a draw“ (Unentschieden)."
+   ],
+   "fact": [
+    "In England heißt es „football“, in den USA „soccer“. Die Premier League ist die meistgesehene Fußballliga der Welt.",
+    "In England heißt es „football“, in den USA „soccer“. Die Premier League ist die meistgesehene Fußballliga der Welt."
+   ],
+   "words": [
+    [
+     "pitch",
+     "Spielfeld",
+     "Spielfeld"
+    ],
+    [
+     "goal",
+     "Tor",
+     "Tor"
+    ],
+    [
+     "goalkeeper",
+     "Torwart",
+     "Torwart"
+    ],
+    [
+     "to score",
+     "ein Tor schießen",
+     "ein Tor schießen"
+    ],
+    [
+     "to kick",
+     "treten / schießen",
+     "treten / schießen"
+    ],
+    [
+     "referee",
+     "Schiedsrichter",
+     "Schiedsrichter"
+    ],
+    [
+     "penalty",
+     "Elfmeter",
+     "Elfmeter"
+    ],
+    [
+     "draw",
+     "Unentschieden",
+     "Unentschieden"
+    ],
+    [
+     "match",
+     "Spiel",
+     "Spiel"
+    ],
+    [
+     "league",
+     "Liga",
+     "Liga"
+    ],
+    [
+     "fans",
+     "Fans",
+     "Fans"
+    ],
+    [
+     "training",
+     "Training",
+     "Training"
+    ],
+    [
+     "coach",
+     "Trainer(in)",
+     "Trainer(in)"
+    ],
+    [
+     "fast",
+     "schnell",
+     "schnell"
+    ],
+    [
+     "strong",
+     "stark",
+     "stark"
+    ],
+    [
+     "champion",
+     "Meister / Sieger",
+     "Meister / Sieger"
+    ]
+   ],
+   "sentences": [
+    [
+     "He scored the best goal of the season.",
+     "Er hat das beste Tor der Saison geschossen.",
+     "Er hat das beste Tor der Saison geschossen."
+    ],
+    [
+     "The match ended in a draw.",
+     "Das Spiel endete unentschieden.",
+     "Das Spiel endete unentschieden."
+    ],
+    [
+     "Our goalkeeper is faster than theirs.",
+     "Unser Torwart ist schneller als ihrer.",
+     "Unser Torwart ist schneller als ihrer."
+    ],
+    [
+     "The referee gave a penalty.",
+     "Der Schiedsrichter gab einen Elfmeter.",
+     "Der Schiedsrichter gab einen Elfmeter."
+    ],
+    [
+     "We have training on Tuesdays and Thursdays.",
+     "Wir haben dienstags und donnerstags Training.",
+     "Wir haben dienstags und donnerstags Training."
+    ],
+    [
+     "If we win on Saturday, we will be champions.",
+     "Wenn wir am Samstag gewinnen, werden wir Meister.",
+     "Wenn wir am Samstag gewinnen, werden wir Meister."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Im Stadion in Liverpool. Ein Fan neben dir will wissen, für wen du bist.",
+     "Im Stadion in Liverpool. Ein Fan neben dir will wissen, für wen du bist."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Who do you support?",
+       "Für wen bist du?",
+       "Für wen bist du?"
+      ],
+      "opts": [
+       [
+        "I support Liverpool, of course!",
+        "Für Liverpool natürlich!",
+        "Für Liverpool natürlich!",
+        1
+       ],
+       [
+        "I am support Liverpool.",
+        "Ich bin unterstützen Liverpool.",
+        "Ich bin unterstützen Liverpool.",
+        0
+       ]
+      ],
+      "hint": [
+       "support = Fan sein von.",
+       "support = Fan sein von."
+      ]
+     },
+     {
+      "npc": [
+       "Goal! What a shot!",
+       "Tor! Was für ein Schuss!",
+       "Tor! Was für ein Schuss!"
+      ],
+      "opts": [
+       [
+        "That's the best goal I've ever seen!",
+        "Das ist das beste Tor, das ich je gesehen habe!",
+        "Das ist das beste Tor, das ich je gesehen habe!",
+        1
+       ],
+       [
+        "That's the goodest goal!",
+        "Das ist das guteste Tor!",
+        "Das ist das guteste Tor!",
+        0
+       ]
+      ],
+      "hint": [
+       "good – better – best.",
+       "good – better – best."
+      ]
+     },
+     {
+      "npc": [
+       "If we score again, we win the league!",
+       "Wenn wir noch eins schießen, gewinnen wir die Liga!",
+       "Wenn wir noch eins schießen, gewinnen wir die Liga!"
+      ],
+      "opts": [
+       [
+        "Come on, Liverpool!",
+        "Los, Liverpool!",
+        "Los, Liverpool!",
+        1
+       ],
+       [
+        "Come in, Liverpool!",
+        "Komm rein, Liverpool!",
+        "Komm rein, Liverpool!",
+        0
+       ]
+      ],
+      "hint": [
+       "Anfeuern: „Come on!“",
+       "Anfeuern: „Come on!“"
+      ]
+     }
+    ],
+    "outro": [
+     "3:1 – das ganze Stadion singt. Du singst einfach mit.",
+     "3:1 – das ganze Stadion singt. Du singst einfach mit."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "⚽"
+  },
+  {
+   "id": "i_anim",
+   "city": "Animals and horses",
+   "cityDe": "Tiere und Pferde",
+   "cityEn": "Animals and horses",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Tiere und Pferde",
+    "Tiere und Pferde"
+   ],
+   "can": [
+    "Ich kann Tiere beschreiben, über Haustiere und Pferde sprechen und sagen, wie man sie pflegt.",
+    "Ich kann Tiere beschreiben, über Haustiere und Pferde sprechen und sagen, wie man sie pflegt."
+   ],
+   "tip": [
+    "Wie oft? Häufigkeitsadverbien vor dem Verb: „I always feed my rabbit in the morning.“ – „She never rides without a helmet.“",
+    "Wie oft? Häufigkeitsadverbien vor dem Verb: „I always feed my rabbit in the morning.“ – „She never rides without a helmet.“"
+   ],
+   "fact": [
+    "In Großbritannien gibt es über 50 Millionen Haustiere. Hunde und Katzen sind am beliebtesten.",
+    "In Großbritannien gibt es über 50 Millionen Haustiere. Hunde und Katzen sind am beliebtesten."
+   ],
+   "words": [
+    [
+     "horse",
+     "Pferd",
+     "Pferd"
+    ],
+    [
+     "pony",
+     "Pony",
+     "Pony"
+    ],
+    [
+     "to ride",
+     "reiten",
+     "reiten"
+    ],
+    [
+     "saddle",
+     "Sattel",
+     "Sattel"
+    ],
+    [
+     "stable",
+     "Stall",
+     "Stall"
+    ],
+    [
+     "to feed",
+     "füttern",
+     "füttern"
+    ],
+    [
+     "to brush",
+     "bürsten / striegeln",
+     "bürsten / striegeln"
+    ],
+    [
+     "hay",
+     "Heu",
+     "Heu"
+    ],
+    [
+     "rabbit",
+     "Kaninchen",
+     "Kaninchen"
+    ],
+    [
+     "hamster",
+     "Hamster",
+     "Hamster"
+    ],
+    [
+     "puppy",
+     "Welpe",
+     "Welpe"
+    ],
+    [
+     "kitten",
+     "Kätzchen",
+     "Kätzchen"
+    ],
+    [
+     "cute",
+     "süß",
+     "süß"
+    ],
+    [
+     "wild",
+     "wild",
+     "wild"
+    ],
+    [
+     "vet",
+     "Tierarzt / Tierärztin",
+     "Tierarzt / Tierärztin"
+    ],
+    [
+     "to look after",
+     "sich kümmern um",
+     "sich kümmern um"
+    ]
+   ],
+   "sentences": [
+    [
+     "I ride my pony every Saturday.",
+     "Ich reite jeden Samstag mein Pony.",
+     "Ich reite jeden Samstag mein Pony."
+    ],
+    [
+     "You have to brush the horse before you ride.",
+     "Du musst das Pferd vor dem Reiten striegeln.",
+     "Du musst das Pferd vor dem Reiten striegeln."
+    ],
+    [
+     "My rabbit always eats hay in the morning.",
+     "Mein Kaninchen frisst morgens immer Heu.",
+     "Mein Kaninchen frisst morgens immer Heu."
+    ],
+    [
+     "The puppy is sleeping in its basket.",
+     "Der Welpe schläft in seinem Korb.",
+     "Der Welpe schläft in seinem Korb."
+    ],
+    [
+     "We took the cat to the vet yesterday.",
+     "Wir haben die Katze gestern zum Tierarzt gebracht.",
+     "Wir haben die Katze gestern zum Tierarzt gebracht."
+    ],
+    [
+     "Who looks after your pets when you are on holiday?",
+     "Wer kümmert sich um deine Haustiere, wenn du im Urlaub bist?",
+     "Wer kümmert sich um deine Haustiere, wenn du im Urlaub bist?"
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Auf einem Reiterhof in Wales. Die Stallbesitzerin begrüßt dich.",
+     "Auf einem Reiterhof in Wales. Die Stallbesitzerin begrüßt dich."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hello! Have you ever ridden a horse?",
+       "Hallo! Bist du schon einmal geritten?",
+       "Hallo! Bist du schon einmal geritten?"
+      ],
+      "opts": [
+       [
+        "Yes, I have. I ride every week.",
+        "Ja. Ich reite jede Woche.",
+        "Ja. Ich reite jede Woche.",
+        1
+       ],
+       [
+        "Yes, I rode ever.",
+        "Ja, ich ritt je.",
+        "Ja, ich ritt je.",
+        0
+       ]
+      ],
+      "hint": [
+       "Have you ever …? → Yes, I have.",
+       "Have you ever …? → Yes, I have."
+      ]
+     },
+     {
+      "npc": [
+       "Great. First, can you brush Bella?",
+       "Super. Kannst du zuerst Bella striegeln?",
+       "Super. Kannst du zuerst Bella striegeln?"
+      ],
+      "opts": [
+       [
+        "Of course! Where is the brush?",
+        "Klar! Wo ist die Bürste?",
+        "Klar! Wo ist die Bürste?",
+        1
+       ],
+       [
+        "Of course! Where the brush is?",
+        "Klar! Wo die Bürste ist?",
+        "Klar! Wo die Bürste ist?",
+        0
+       ]
+      ],
+      "hint": [
+       "Frage mit be: Where is …?",
+       "Frage mit be: Where is …?"
+      ]
+     },
+     {
+      "npc": [
+       "She loves apples. Do you want to feed her?",
+       "Sie liebt Äpfel. Willst du sie füttern?",
+       "Sie liebt Äpfel. Willst du sie füttern?"
+      ],
+      "opts": [
+       [
+        "Yes, please! She's so cute.",
+        "Ja, gerne! Sie ist so süß.",
+        "Ja, gerne! Sie ist so süß.",
+        1
+       ],
+       [
+        "Yes, please! He's so cute.",
+        "Ja, gerne! Er ist so süß.",
+        "Ja, gerne! Er ist so süß.",
+        0
+       ]
+      ],
+      "hint": [
+       "Bella ist eine Stute → she.",
+       "Bella ist eine Stute → she."
+      ]
+     }
+    ],
+    "outro": [
+     "Bella frisst dir den Apfel aus der Hand – und schnaubt zufrieden.",
+     "Bella frisst dir den Apfel aus der Hand – und schnaubt zufrieden."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "🐴"
+  },
+  {
+   "id": "i_music",
+   "city": "Music and stars",
+   "cityDe": "Musik und Stars",
+   "cityEn": "Music and stars",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Musik und Stars",
+    "Musik und Stars"
+   ],
+   "can": [
+    "Ich kann über Musik, Lieblingssongs und Stars sprechen und meine Meinung begründen.",
+    "Ich kann über Musik, Lieblingssongs und Stars sprechen und meine Meinung begründen."
+   ],
+   "tip": [
+    "Meinung begründen: „I like her songs because they are catchy.“ – mit „because“. Vergleiche: „Her new album is better than the last one.“",
+    "Meinung begründen: „I like her songs because they are catchy.“ – mit „because“. Vergleiche: „Her new album is better than the last one.“"
+   ],
+   "fact": [
+    "Viele Superstars wie Taylor Swift, Ed Sheeran oder Adele singen auf Englisch – Liedtexte sind ein beliebter Weg, neue Wörter zu lernen.",
+    "Viele Superstars wie Taylor Swift, Ed Sheeran oder Adele singen auf Englisch – Liedtexte sind ein beliebter Weg, neue Wörter zu lernen."
+   ],
+   "words": [
+    [
+     "song",
+     "Lied",
+     "Lied"
+    ],
+    [
+     "singer",
+     "Sänger(in)",
+     "Sänger(in)"
+    ],
+    [
+     "band",
+     "Band",
+     "Band"
+    ],
+    [
+     "album",
+     "Album",
+     "Album"
+    ],
+    [
+     "lyrics",
+     "Liedtext",
+     "Liedtext"
+    ],
+    [
+     "concert",
+     "Konzert",
+     "Konzert"
+    ],
+    [
+     "stage",
+     "Bühne",
+     "Bühne"
+    ],
+    [
+     "tour",
+     "Tournee",
+     "Tournee"
+    ],
+    [
+     "fan",
+     "Fan",
+     "Fan"
+    ],
+    [
+     "to dance",
+     "tanzen",
+     "tanzen"
+    ],
+    [
+     "catchy",
+     "eingängig",
+     "eingängig"
+    ],
+    [
+     "loud",
+     "laut",
+     "laut"
+    ],
+    [
+     "to listen to",
+     "anhören",
+     "anhören"
+    ],
+    [
+     "playlist",
+     "Playlist",
+     "Playlist"
+    ],
+    [
+     "famous",
+     "berühmt",
+     "berühmt"
+    ],
+    [
+     "favourite",
+     "Lieblings-",
+     "Lieblings-"
+    ]
+   ],
+   "sentences": [
+    [
+     "My favourite singer is going on tour next year.",
+     "Meine Lieblingssängerin geht nächstes Jahr auf Tournee.",
+     "Meine Lieblingssängerin geht nächstes Jahr auf Tournee."
+    ],
+    [
+     "I like this song because it is so catchy.",
+     "Ich mag dieses Lied, weil es so eingängig ist.",
+     "Ich mag dieses Lied, weil es so eingängig ist."
+    ],
+    [
+     "Her new album is better than the last one.",
+     "Ihr neues Album ist besser als das letzte.",
+     "Ihr neues Album ist besser als das letzte."
+    ],
+    [
+     "We danced all night at the concert.",
+     "Wir haben beim Konzert die ganze Nacht getanzt.",
+     "Wir haben beim Konzert die ganze Nacht getanzt."
+    ],
+    [
+     "Can you send me your playlist?",
+     "Kannst du mir deine Playlist schicken?",
+     "Kannst du mir deine Playlist schicken?"
+    ],
+    [
+     "She has been famous since she was sixteen.",
+     "Sie ist berühmt, seit sie sechzehn ist.",
+     "Sie ist berühmt, seit sie sechzehn ist."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Vor einem Konzert in London. Ein Mädchen mit Glitzer-Shirt steht neben dir in der Schlange.",
+     "Vor einem Konzert in London. Ein Mädchen mit Glitzer-Shirt steht neben dir in der Schlange."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hi! Is this your first concert?",
+       "Hi! Ist das dein erstes Konzert?",
+       "Hi! Ist das dein erstes Konzert?"
+      ],
+      "opts": [
+       [
+        "Yes, and I'm so excited!",
+        "Ja, und ich bin so aufgeregt!",
+        "Ja, und ich bin so aufgeregt!",
+        1
+       ],
+       [
+        "Yes, and I'm so exciting!",
+        "Ja, und ich bin so aufregend!",
+        "Ja, und ich bin so aufregend!",
+        0
+       ]
+      ],
+      "hint": [
+       "excited = aufgeregt (Gefühl), exciting = aufregend (Sache).",
+       "excited = aufgeregt (Gefühl), exciting = aufregend (Sache)."
+      ]
+     },
+     {
+      "npc": [
+       "What's your favourite song?",
+       "Was ist dein Lieblingssong?",
+       "Was ist dein Lieblingssong?"
+      ],
+      "opts": [
+       [
+        "I love the new one because it's so catchy.",
+        "Ich liebe den neuen, weil er so eingängig ist.",
+        "Ich liebe den neuen, weil er so eingängig ist.",
+        1
+       ],
+       [
+        "I love the new one why it is catchy.",
+        "Ich liebe den neuen warum er eingängig ist.",
+        "Ich liebe den neuen warum er eingängig ist.",
+        0
+       ]
+      ],
+      "hint": [
+       "Begründen mit „because“.",
+       "Begründen mit „because“."
+      ]
+     },
+     {
+      "npc": [
+       "Look, the doors are opening!",
+       "Schau, die Türen gehen auf!",
+       "Schau, die Türen gehen auf!"
+      ],
+      "opts": [
+       [
+        "Let's go! Let's get close to the stage.",
+        "Los! Lass uns nah an die Bühne gehen.",
+        "Los! Lass uns nah an die Bühne gehen.",
+        1
+       ],
+       [
+        "Let's going to the stage.",
+        "Lass uns gehend zur Bühne.",
+        "Lass uns gehend zur Bühne.",
+        0
+       ]
+      ],
+      "hint": [
+       "Let’s + Grundform.",
+       "Let’s + Grundform."
+      ]
+     }
+    ],
+    "outro": [
+     "Ihr singt jedes Lied mit – und tauscht danach eure Playlists.",
+     "Ihr singt jedes Lied mit – und tauscht danach eure Playlists."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "🎤"
+  },
+  {
+   "id": "i_social",
+   "city": "Social media and creators",
+   "cityDe": "Social Media und Creator",
+   "cityEn": "Social media and creators",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Social Media und Creator",
+    "Social Media und Creator"
+   ],
+   "can": [
+    "Ich kann über Videos, Posts und Creator sprechen und Tipps für sicheres Posten geben.",
+    "Ich kann über Videos, Posts und Creator sprechen und Tipps für sicheres Posten geben."
+   ],
+   "tip": [
+    "Tipps und Regeln mit „should“ und „shouldn’t“: „You should check your settings.“ „You shouldn’t share your address.“",
+    "Tipps und Regeln mit „should“ und „shouldn’t“: „You should check your settings.“ „You shouldn’t share your address.“"
+   ],
+   "fact": [
+    "Viele Creator machen Videos auf Englisch. Englische Untertitel einzuschalten ist ein einfacher Trick, um nebenbei zu lernen.",
+    "Viele Creator machen Videos auf Englisch. Englische Untertitel einzuschalten ist ein einfacher Trick, um nebenbei zu lernen."
+   ],
+   "words": [
+    [
+     "video",
+     "Video",
+     "Video"
+    ],
+    [
+     "creator",
+     "Creator / Ersteller(in)",
+     "Creator / Ersteller(in)"
+    ],
+    [
+     "to upload",
+     "hochladen",
+     "hochladen"
+    ],
+    [
+     "to post",
+     "posten",
+     "posten"
+    ],
+    [
+     "comment",
+     "Kommentar",
+     "Kommentar"
+    ],
+    [
+     "like",
+     "Like / gefällt mir",
+     "Like / gefällt mir"
+    ],
+    [
+     "to follow",
+     "folgen",
+     "folgen"
+    ],
+    [
+     "channel",
+     "Kanal",
+     "Kanal"
+    ],
+    [
+     "filter",
+     "Filter",
+     "Filter"
+    ],
+    [
+     "trend",
+     "Trend",
+     "Trend"
+    ],
+    [
+     "viral",
+     "viral",
+     "viral"
+    ],
+    [
+     "tutorial",
+     "Anleitung (Video)",
+     "Anleitung (Video)"
+    ],
+    [
+     "to edit",
+     "bearbeiten / schneiden",
+     "bearbeiten / schneiden"
+    ],
+    [
+     "settings",
+     "Einstellungen",
+     "Einstellungen"
+    ],
+    [
+     "private",
+     "privat",
+     "privat"
+    ],
+    [
+     "to share",
+     "teilen",
+     "teilen"
+    ]
+   ],
+   "sentences": [
+    [
+     "She uploads a new tutorial every week.",
+     "Sie lädt jede Woche ein neues Tutorial hoch.",
+     "Sie lädt jede Woche ein neues Tutorial hoch."
+    ],
+    [
+     "The video went viral in one day.",
+     "Das Video ging an einem Tag viral.",
+     "Das Video ging an einem Tag viral."
+    ],
+    [
+     "You should make your account private.",
+     "Du solltest dein Konto auf privat stellen.",
+     "Du solltest dein Konto auf privat stellen."
+    ],
+    [
+     "You shouldn't share your address online.",
+     "Du solltest deine Adresse nicht online teilen.",
+     "Du solltest deine Adresse nicht online teilen."
+    ],
+    [
+     "How long does it take to edit a video?",
+     "Wie lange dauert es, ein Video zu schneiden?",
+     "Wie lange dauert es, ein Video zu schneiden?"
+    ],
+    [
+     "I follow a creator who explains science.",
+     "Ich folge einem Creator, der Naturwissenschaft erklärt.",
+     "Ich folge einem Creator, der Naturwissenschaft erklärt."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Deine Austauschpartnerin Zoe dreht ein Video für ihren Kanal und fragt dich um Hilfe.",
+     "Deine Austauschpartnerin Zoe dreht ein Video für ihren Kanal und fragt dich um Hilfe."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Can you film me? I want to post a dance video.",
+       "Kannst du mich filmen? Ich will ein Tanzvideo posten.",
+       "Kannst du mich filmen? Ich will ein Tanzvideo posten."
+      ],
+      "opts": [
+       [
+        "Sure! Tell me when to start.",
+        "Klar! Sag mir, wann ich anfangen soll.",
+        "Klar! Sag mir, wann ich anfangen soll.",
+        1
+       ],
+       [
+        "Sure! Say me when starting.",
+        "Klar! Sag mir wann anfangend.",
+        "Klar! Sag mir wann anfangend.",
+        0
+       ]
+      ],
+      "hint": [
+       "tell me = sag mir.",
+       "tell me = sag mir."
+      ]
+     },
+     {
+      "npc": [
+       "Should I add a filter?",
+       "Soll ich einen Filter drauflegen?",
+       "Soll ich einen Filter drauflegen?"
+      ],
+      "opts": [
+       [
+        "You don't need one. You look great!",
+        "Brauchst du nicht. Du siehst toll aus!",
+        "Brauchst du nicht. Du siehst toll aus!",
+        1
+       ],
+       [
+        "You don't need. You look greatly.",
+        "Brauchst nicht. Du siehst großartiglich aus.",
+        "Brauchst nicht. Du siehst großartiglich aus.",
+        0
+       ]
+      ],
+      "hint": [
+       "look + Adjektiv (great), nicht Adverb.",
+       "look + Adjektiv (great), nicht Adverb."
+      ]
+     },
+     {
+      "npc": [
+       "Is my account private, by the way?",
+       "Ist mein Konto eigentlich privat?",
+       "Ist mein Konto eigentlich privat?"
+      ],
+      "opts": [
+       [
+        "Check your settings – it should be private.",
+        "Schau in die Einstellungen – es sollte privat sein.",
+        "Schau in die Einstellungen – es sollte privat sein.",
+        1
+       ],
+       [
+        "Check your settings – it should being private.",
+        "Schau – es sollte seiend privat.",
+        "Schau – es sollte seiend privat.",
+        0
+       ]
+      ],
+      "hint": [
+       "should + Grundform.",
+       "should + Grundform."
+      ]
+     }
+    ],
+    "outro": [
+     "Das Video bekommt 50 Likes – von Freunden, denn das Konto ist privat. Gut so.",
+     "Das Video bekommt 50 Likes – von Freunden, denn das Konto ist privat. Gut so."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "📸"
+  },
+  {
+   "id": "i_fant",
+   "city": "Fantasy, books and films",
+   "cityDe": "Fantasy, Bücher und Filme",
+   "cityEn": "Fantasy, books and films",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Fantasy, Bücher und Filme",
+    "Fantasy, Bücher und Filme"
+   ],
+   "can": [
+    "Ich kann über Bücher und Filme sprechen, eine Geschichte nacherzählen und Figuren beschreiben.",
+    "Ich kann über Bücher und Filme sprechen, eine Geschichte nacherzählen und Figuren beschreiben."
+   ],
+   "tip": [
+    "Geschichten erzählt man im simple past: „The dragon flew over the castle.“ Hintergrund mit past progressive: „While the hero was sleeping, …“",
+    "Geschichten erzählt man im simple past: „The dragon flew over the castle.“ Hintergrund mit past progressive: „While the hero was sleeping, …“"
+   ],
+   "fact": [
+    "Viele berühmte Fantasy-Geschichten kommen aus Großbritannien: Harry Potter, Der Herr der Ringe und Die Chroniken von Narnia.",
+    "Viele berühmte Fantasy-Geschichten kommen aus Großbritannien: Harry Potter, Der Herr der Ringe und Die Chroniken von Narnia."
+   ],
+   "words": [
+    [
+     "story",
+     "Geschichte",
+     "Geschichte"
+    ],
+    [
+     "hero",
+     "Held(in)",
+     "Held(in)"
+    ],
+    [
+     "villain",
+     "Bösewicht",
+     "Bösewicht"
+    ],
+    [
+     "dragon",
+     "Drache",
+     "Drache"
+    ],
+    [
+     "wizard",
+     "Zauberer",
+     "Zauberer"
+    ],
+    [
+     "witch",
+     "Hexe",
+     "Hexe"
+    ],
+    [
+     "magic",
+     "Magie / magisch",
+     "Magie / magisch"
+    ],
+    [
+     "spell",
+     "Zauberspruch",
+     "Zauberspruch"
+    ],
+    [
+     "castle",
+     "Burg / Schloss",
+     "Burg / Schloss"
+    ],
+    [
+     "sword",
+     "Schwert",
+     "Schwert"
+    ],
+    [
+     "secret",
+     "Geheimnis / geheim",
+     "Geheimnis / geheim"
+    ],
+    [
+     "brave",
+     "mutig",
+     "mutig"
+    ],
+    [
+     "scary",
+     "gruselig",
+     "gruselig"
+    ],
+    [
+     "to escape",
+     "entkommen",
+     "entkommen"
+    ],
+    [
+     "chapter",
+     "Kapitel",
+     "Kapitel"
+    ],
+    [
+     "ending",
+     "Ende (Geschichte)",
+     "Ende (Geschichte)"
+    ]
+   ],
+   "sentences": [
+    [
+     "The dragon flew over the castle.",
+     "Der Drache flog über die Burg.",
+     "Der Drache flog über die Burg."
+    ],
+    [
+     "While the hero was sleeping, the villain stole the sword.",
+     "Während der Held schlief, stahl der Bösewicht das Schwert.",
+     "Während der Held schlief, stahl der Bösewicht das Schwert."
+    ],
+    [
+     "The wizard knew a secret spell.",
+     "Der Zauberer kannte einen geheimen Zauberspruch.",
+     "Der Zauberer kannte einen geheimen Zauberspruch."
+    ],
+    [
+     "I read the last chapter in one night.",
+     "Ich habe das letzte Kapitel in einer Nacht gelesen.",
+     "Ich habe das letzte Kapitel in einer Nacht gelesen."
+    ],
+    [
+     "The film was scarier than the book.",
+     "Der Film war gruseliger als das Buch.",
+     "Der Film war gruseliger als das Buch."
+    ],
+    [
+     "She was brave enough to escape from the tower.",
+     "Sie war mutig genug, aus dem Turm zu entkommen.",
+     "Sie war mutig genug, aus dem Turm zu entkommen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "In einer Buchhandlung in Edinburgh, nicht weit von dem Café, in dem Harry Potter entstand.",
+     "In einer Buchhandlung in Edinburgh, nicht weit von dem Café, in dem Harry Potter entstand."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Can I help you find a book?",
+       "Kann ich dir helfen, ein Buch zu finden?",
+       "Kann ich dir helfen, ein Buch zu finden?"
+      ],
+      "opts": [
+       [
+        "Yes, I'm looking for a fantasy story with dragons.",
+        "Ja, ich suche eine Fantasy-Geschichte mit Drachen.",
+        "Ja, ich suche eine Fantasy-Geschichte mit Drachen.",
+        1
+       ],
+       [
+        "Yes, I look for a fantasy with dragon.",
+        "Ja, ich suche Fantasy mit Drache.",
+        "Ja, ich suche Fantasy mit Drache.",
+        0
+       ]
+      ],
+      "hint": [
+       "I’m looking for … = ich suche …",
+       "I’m looking for … = ich suche …"
+      ]
+     },
+     {
+      "npc": [
+       "This one is brilliant. Have you seen the film?",
+       "Das hier ist großartig. Hast du den Film gesehen?",
+       "Das hier ist großartig. Hast du den Film gesehen?"
+      ],
+      "opts": [
+       [
+        "Yes, but the book is usually better.",
+        "Ja, aber das Buch ist meistens besser.",
+        "Ja, aber das Buch ist meistens besser.",
+        1
+       ],
+       [
+        "Yes, but the book is usually more good.",
+        "Ja, aber das Buch ist meistens mehr gut.",
+        "Ja, aber das Buch ist meistens mehr gut.",
+        0
+       ]
+      ],
+      "hint": [
+       "good – better – best.",
+       "good – better – best."
+      ]
+     },
+     {
+      "npc": [
+       "Don't tell me the ending!",
+       "Verrat mir nicht das Ende!",
+       "Verrat mir nicht das Ende!"
+      ],
+      "opts": [
+       [
+        "Don't worry, I won't!",
+        "Keine Sorge, mach ich nicht!",
+        "Keine Sorge, mach ich nicht!",
+        1
+       ],
+       [
+        "Don't worry, I don't will!",
+        "Keine Sorge, ich nicht werde!",
+        "Keine Sorge, ich nicht werde!",
+        0
+       ]
+      ],
+      "hint": [
+       "Verneinung von will: won’t.",
+       "Verneinung von will: won’t."
+      ]
+     }
+    ],
+    "outro": [
+     "Du kaufst das Buch und liest das erste Kapitel noch im Zug.",
+     "Du kaufst das Buch und liest das erste Kapitel noch im Zug."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "🐉"
+  },
+  {
+   "id": "i_tech",
+   "city": "Science and technology",
+   "cityDe": "Technik und Naturwissenschaft",
+   "cityEn": "Science and technology",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Technik und Naturwissenschaft",
+    "Technik und Naturwissenschaft"
+   ],
+   "can": [
+    "Ich kann einfache Experimente und Erfindungen beschreiben und erklären, wie etwas funktioniert.",
+    "Ich kann einfache Experimente und Erfindungen beschreiben und erklären, wie etwas funktioniert."
+   ],
+   "tip": [
+    "Wie etwas funktioniert, erklärt man oft im Passiv: „The robot is controlled by an app.“ – „Electricity is made by the wind.“",
+    "Wie etwas funktioniert, erklärt man oft im Passiv: „The robot is controlled by an app.“ – „Electricity is made by the wind.“"
+   ],
+   "fact": [
+    "Großbritannien hat viele Erfinder hervorgebracht: Das World Wide Web, das Telefon (Alexander Graham Bell, Schotte) und die Dampflok.",
+    "Großbritannien hat viele Erfinder hervorgebracht: Das World Wide Web, das Telefon (Alexander Graham Bell, Schotte) und die Dampflok."
+   ],
+   "words": [
+    [
+     "science",
+     "Naturwissenschaft",
+     "Naturwissenschaft"
+    ],
+    [
+     "experiment",
+     "Experiment",
+     "Experiment"
+    ],
+    [
+     "to invent",
+     "erfinden",
+     "erfinden"
+    ],
+    [
+     "invention",
+     "Erfindung",
+     "Erfindung"
+    ],
+    [
+     "robot",
+     "Roboter",
+     "Roboter"
+    ],
+    [
+     "battery",
+     "Batterie / Akku",
+     "Batterie / Akku"
+    ],
+    [
+     "electricity",
+     "Strom",
+     "Strom"
+    ],
+    [
+     "engine",
+     "Motor",
+     "Motor"
+    ],
+    [
+     "space",
+     "Weltraum",
+     "Weltraum"
+    ],
+    [
+     "planet",
+     "Planet",
+     "Planet"
+    ],
+    [
+     "rocket",
+     "Rakete",
+     "Rakete"
+    ],
+    [
+     "to measure",
+     "messen",
+     "messen"
+    ],
+    [
+     "result",
+     "Ergebnis",
+     "Ergebnis"
+    ],
+    [
+     "to control",
+     "steuern",
+     "steuern"
+    ],
+    [
+     "code",
+     "Code",
+     "Code"
+    ],
+    [
+     "lab",
+     "Labor",
+     "Labor"
+    ]
+   ],
+   "sentences": [
+    [
+     "The robot is controlled by an app.",
+     "Der Roboter wird über eine App gesteuert.",
+     "Der Roboter wird über eine App gesteuert."
+    ],
+    [
+     "We did an experiment with batteries in science.",
+     "Wir haben in Naturwissenschaften ein Experiment mit Batterien gemacht.",
+     "Wir haben in Naturwissenschaften ein Experiment mit Batterien gemacht."
+    ],
+    [
+     "Who invented the telephone?",
+     "Wer hat das Telefon erfunden?",
+     "Wer hat das Telefon erfunden?"
+    ],
+    [
+     "The rocket was launched in 2024.",
+     "Die Rakete wurde 2024 gestartet.",
+     "Die Rakete wurde 2024 gestartet."
+    ],
+    [
+     "First we measure the water, then we heat it.",
+     "Zuerst messen wir das Wasser, dann erhitzen wir es.",
+     "Zuerst messen wir das Wasser, dann erhitzen wir es."
+    ],
+    [
+     "If I could invent something, I would build a homework robot.",
+     "Wenn ich etwas erfinden könnte, würde ich einen Hausaufgaben-Roboter bauen.",
+     "Wenn ich etwas erfinden könnte, würde ich einen Hausaufgaben-Roboter bauen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Im Science Museum in London. An einer Station kannst du einen Roboter steuern.",
+     "Im Science Museum in London. An einer Station kannst du einen Roboter steuern."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Do you want to try? The robot is controlled by this tablet.",
+       "Willst du es versuchen? Der Roboter wird mit diesem Tablet gesteuert.",
+       "Willst du es versuchen? Der Roboter wird mit diesem Tablet gesteuert."
+      ],
+      "opts": [
+       [
+        "Yes! How does it work?",
+        "Ja! Wie funktioniert das?",
+        "Ja! Wie funktioniert das?",
+        1
+       ],
+       [
+        "Yes! How it works?",
+        "Ja! Wie es funktioniert?",
+        "Ja! Wie es funktioniert?",
+        0
+       ]
+      ],
+      "hint": [
+       "Frage mit does: How does it work?",
+       "Frage mit does: How does it work?"
+      ]
+     },
+     {
+      "npc": [
+       "Write a short code and press start.",
+       "Schreib einen kurzen Code und drück Start.",
+       "Schreib einen kurzen Code und drück Start."
+      ],
+      "opts": [
+       [
+        "Done! Look, it's moving!",
+        "Fertig! Schau, er bewegt sich!",
+        "Fertig! Schau, er bewegt sich!",
+        1
+       ],
+       [
+        "Done! Look, it moves now at the moment!",
+        "Fertig! Schau, er bewegt jetzt gerade!",
+        "Fertig! Schau, er bewegt jetzt gerade!",
+        0
+       ]
+      ],
+      "hint": [
+       "Gerade jetzt → present progressive (it’s moving).",
+       "Gerade jetzt → present progressive (it’s moving)."
+      ]
+     },
+     {
+      "npc": [
+       "Great! What would you invent if you could?",
+       "Super! Was würdest du erfinden, wenn du könntest?",
+       "Super! Was würdest du erfinden, wenn du könntest?"
+      ],
+      "opts": [
+       [
+        "I would invent a robot that tidies my room.",
+        "Ich würde einen Roboter erfinden, der mein Zimmer aufräumt.",
+        "Ich würde einen Roboter erfinden, der mein Zimmer aufräumt.",
+        1
+       ],
+       [
+        "I will invent a robot who tidy my room.",
+        "Ich werde einen Roboter erfinden, wer aufräum mein Zimmer.",
+        "Ich werde einen Roboter erfinden, wer aufräum mein Zimmer.",
+        0
+       ]
+      ],
+      "hint": [
+       "If-Satz Typ II → would + Grundform.",
+       "If-Satz Typ II → would + Grundform."
+      ]
+     }
+    ],
+    "outro": [
+     "Am Ende bekommst du ein „Junior Engineer“-Abzeichen.",
+     "Am Ende bekommst du ein „Junior Engineer“-Abzeichen."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "🤖"
+  },
+  {
+   "id": "i_fash",
+   "city": "Fashion and style",
+   "cityDe": "Mode und Style",
+   "cityEn": "Fashion and style",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "green",
+   "title": [
+    "Mode und Style",
+    "Mode und Style"
+   ],
+   "can": [
+    "Ich kann Kleidung und Style beschreiben, Outfits vergleichen und beim Shoppen nach Größen fragen.",
+    "Ich kann Kleidung und Style beschreiben, Outfits vergleichen und beim Shoppen nach Größen fragen."
+   ],
+   "tip": [
+    "Adjektive stehen vor dem Nomen und haben keine Endung: „a black hoodie“, „comfortable trainers“. Reihenfolge: Meinung – Größe – Farbe: „a cool big blue jacket“.",
+    "Adjektive stehen vor dem Nomen und haben keine Endung: „a black hoodie“, „comfortable trainers“. Reihenfolge: Meinung – Größe – Farbe: „a cool big blue jacket“."
+   ],
+   "fact": [
+    "In Großbritannien heißen Turnschuhe „trainers“, in den USA „sneakers“. Viele Modetrends starten in London.",
+    "In Großbritannien heißen Turnschuhe „trainers“, in den USA „sneakers“. Viele Modetrends starten in London."
+   ],
+   "words": [
+    [
+     "clothes",
+     "Kleidung",
+     "Kleidung"
+    ],
+    [
+     "outfit",
+     "Outfit",
+     "Outfit"
+    ],
+    [
+     "hoodie",
+     "Kapuzenpulli",
+     "Kapuzenpulli"
+    ],
+    [
+     "trainers",
+     "Turnschuhe",
+     "Turnschuhe"
+    ],
+    [
+     "jeans",
+     "Jeans",
+     "Jeans"
+    ],
+    [
+     "jacket",
+     "Jacke",
+     "Jacke"
+    ],
+    [
+     "dress",
+     "Kleid",
+     "Kleid"
+    ],
+    [
+     "skirt",
+     "Rock",
+     "Rock"
+    ],
+    [
+     "cap",
+     "Kappe",
+     "Kappe"
+    ],
+    [
+     "earrings",
+     "Ohrringe",
+     "Ohrringe"
+    ],
+    [
+     "comfortable",
+     "bequem",
+     "bequem"
+    ],
+    [
+     "fashionable",
+     "modisch",
+     "modisch"
+    ],
+    [
+     "to wear",
+     "tragen (Kleidung)",
+     "tragen (Kleidung)"
+    ],
+    [
+     "to try on",
+     "anprobieren",
+     "anprobieren"
+    ],
+    [
+     "style",
+     "Stil",
+     "Stil"
+    ],
+    [
+     "second-hand",
+     "gebraucht",
+     "gebraucht"
+    ]
+   ],
+   "sentences": [
+    [
+     "I'm wearing my new trainers today.",
+     "Ich trage heute meine neuen Turnschuhe.",
+     "Ich trage heute meine neuen Turnschuhe."
+    ],
+    [
+     "This hoodie is more comfortable than that jacket.",
+     "Dieser Hoodie ist bequemer als die Jacke.",
+     "Dieser Hoodie ist bequemer als die Jacke."
+    ],
+    [
+     "Can I try on this dress in a small?",
+     "Kann ich dieses Kleid in S anprobieren?",
+     "Kann ich dieses Kleid in S anprobieren?"
+    ],
+    [
+     "She buys a lot of second-hand clothes.",
+     "Sie kauft viel gebrauchte Kleidung.",
+     "Sie kauft viel gebrauchte Kleidung."
+    ],
+    [
+     "What are you going to wear to the party?",
+     "Was wirst du auf der Party tragen?",
+     "Was wirst du auf der Party tragen?"
+    ],
+    [
+     "Your earrings look really cool.",
+     "Deine Ohrringe sehen echt cool aus.",
+     "Deine Ohrringe sehen echt cool aus."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "In einem Second-Hand-Laden in Brighton. Eine Verkäuferin hilft dir.",
+     "In einem Second-Hand-Laden in Brighton. Eine Verkäuferin hilft dir."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hi! Are you looking for anything special?",
+       "Hi! Suchst du etwas Bestimmtes?",
+       "Hi! Suchst du etwas Bestimmtes?"
+      ],
+      "opts": [
+       [
+        "Yes, an outfit for a party on Saturday.",
+        "Ja, ein Outfit für eine Party am Samstag.",
+        "Ja, ein Outfit für eine Party am Samstag.",
+        1
+       ],
+       [
+        "Yes, a outfit for party in Saturday.",
+        "Ja, ein Outfit für Party in Samstag.",
+        "Ja, ein Outfit für Party in Samstag.",
+        0
+       ]
+      ],
+      "hint": [
+       "an outfit (Vokal!) und on Saturday.",
+       "an outfit (Vokal!) und on Saturday."
+      ]
+     },
+     {
+      "npc": [
+       "What about this black jacket?",
+       "Wie wäre es mit dieser schwarzen Jacke?",
+       "Wie wäre es mit dieser schwarzen Jacke?"
+      ],
+      "opts": [
+       [
+        "It's nice. Can I try it on?",
+        "Schön. Kann ich sie anprobieren?",
+        "Schön. Kann ich sie anprobieren?",
+        1
+       ],
+       [
+        "It's nice. Can I try on it?",
+        "Schön. Kann ich anprobieren sie?",
+        "Schön. Kann ich anprobieren sie?",
+        0
+       ]
+      ],
+      "hint": [
+       "try it on – das Pronomen steht in der Mitte.",
+       "try it on – das Pronomen steht in der Mitte."
+      ]
+     },
+     {
+      "npc": [
+       "It looks great on you!",
+       "Sie steht dir super!",
+       "Sie steht dir super!"
+      ],
+      "opts": [
+       [
+        "Thanks! I'll take it.",
+        "Danke! Ich nehme sie.",
+        "Danke! Ich nehme sie.",
+        1
+       ],
+       [
+        "Thanks! I take her.",
+        "Danke! Ich nehme sie (Person).",
+        "Danke! Ich nehme sie (Person).",
+        0
+       ]
+      ],
+      "hint": [
+       "Dinge sind „it“, nicht „her“.",
+       "Dinge sind „it“, nicht „her“."
+      ]
+     }
+    ],
+    "outro": [
+     "Für sieben Pfund hast du das beste Outfit der Party.",
+     "Für sieben Pfund hast du das beste Outfit der Party."
+    ]
+   },
+   "pack": 1,
+   "int": 1,
+   "ico": "👗"
   }
  ],
  "cases": [
@@ -14700,6 +16532,24 @@
    ]
   },
   {
+   "id": "hobby",
+   "ico": "⭐",
+   "t": [
+    "Interessen: Gaming, Sport, Tiere, Musik …",
+    "Interessen: Gaming, Sport, Tiere, Musik …"
+   ],
+   "u": [
+    "i_game",
+    "i_foot",
+    "i_anim",
+    "i_music",
+    "i_social",
+    "i_fant",
+    "i_tech",
+    "i_fash"
+   ]
+  },
+  {
    "id": "schule",
    "ico": "🎒",
    "t": [
@@ -14729,6 +16579,20 @@
   }
  ],
  "news": [
+  {
+   "v": "0.4",
+   "date": "2026-11-01",
+   "de": [
+    "Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.",
+    "Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.",
+    "Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode."
+   ],
+   "en": [
+    "Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.",
+    "Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.",
+    "Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode."
+   ]
+  },
   {
    "v": "0.3",
    "date": "2026-11-01",

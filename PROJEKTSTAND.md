@@ -139,6 +139,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - 01.11.2026 – **Recherche Schule/Motivation** (Elternforen, r/duolingo, ANTON-Test, Stiftung Warentest, Schul-Merkblätter): `docs/SCHULE_RECHERCHE_MOTIVATION.md` mit Lückenliste A–H.
 - 01.11.2026 – **Version 0.3:** (A) Probe-Klassenarbeit mit Hörverstehen, Leseverstehen, Sprachmittlung; Schreibauftrag je Paket mit Checkliste (Länge, Pflichtwörter, Verbindungswörter, Großschreibung, „I“). (B) Vokabelliste einfügen (`word = Wort`, `-`, Tab, `;`) mit Unit. Tests: 50 Logik, Browser 106 OK.
 
+- 01.11.2026 – **Version 0.4:** Wochen-Challenge der Klasse (Code `WEEK-nnn-2-K<Klasse>`, Mo–So gleich), Duell-Code mit Schulstoff (`…-K7`), Gegenüber mit Quelle Trail/Klasse/Buch-Unit, Kurzwege im Bereich Schule, 8 Interessen-Pakete (frei wählbar), Duell-Wörter englisch (FOX, CASTLE …). GeoQuest geprüft (Live-1vs1 per Supabase-Broadcast, anonyme Anmeldung, Liga) → Plan Live-Duell siehe docs/SCHULE_RECHERCHE_MOTIVATION.md. Tests: 51 Logik, Browser 113 OK.
+- **Lernstände bleiben erhalten (Regel ab 0.1 live):** localStorage-Schlüssel `english_trail_v1` nie ändern; Einheiten/Wörter nur anhängen, nie umsortieren/löschen (`checks/progress_lock.py` bricht sonst ab); neue Felder nur mit Standardwert; automatische Sicherung vor jedem Update (aus Polski Szlak 3.2) bleibt aktiv.
+
 ## Ablauf „automatisch online“ (ab 01.11.2026)
 1. Claude ändert, baut, testet (alles grün) → schreibt die Dateien in den Ordner auf dem PC und **zuletzt** `RELEASE.txt` mit neuer Versionsnummer.
 2. Die Windows-Aufgabe „English Trail Auto-Upload“ merkt die neue RELEASE.txt (spätestens nach 10 Minuten) → `git commit` + `git push` nach github.com/andre69190-del/english-trail.
@@ -148,7 +151,7 @@ Datenmodell (geplant, `src/data.json` → `school`):
 ## 8. Nächster Schritt
 
 1. ✅ Live-Gang erledigt (01.11.).
-1b. **Schulmodus fertig bauen (Andre, 01.11.: zuerst!):** C Mein Rabe (gestalten, Federn), D Klassen-Challenge per Code, E Hausaufgaben-Code für Lehrkräfte, F Interessen-Pakete (Gaming, Football, Animals, Music), G Eltern-Bericht + Datenschutz U16, H Emojis Kl. 5/6. Danach erst Phase 6.
+1b. **Schulmodus fertig bauen (Andre, 01.11.: zuerst!):** ✅ D Klassen-Challenge, ✅ F Interessen. Offen: **Live-Duell 2 Handys (GeoQuest-Art, ohne Konto)**, C Mein Rabe (gestalten, Federn), E Hausaufgaben-Code für Lehrkräfte, G Eltern-Bericht + Datenschutz U16, H Emojis Kl. 5/6. Danach erst Phase 6.
 2. Optional Phase 5: Foto-Erkennung für Buch-Vokabeln (Texterkennung im Browser) prüfen.
 3. Phase 6: Trail 2 (A2) + Trail 3 (B1) auf Englisch, Themenpakete, Profi-Bereich, Tagebuch/Buch, B1-Probeprüfung (englisch), Prüfmodus-Texte (?review) auf Englisch.
 4. Phase 8: Optik (Farben/Logo, Rabe statt Zwerg-Grafik).

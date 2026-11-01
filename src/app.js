@@ -51,6 +51,9 @@
   /* ---------- Texte (UI-Sprache = Basissprache) ---------- */
   var TX = {
     de: {
+      sch_likes: 'Was magst du?', sch_likes_d: 'Wähl so viele Themen, wie du willst. Dazu bekommst du Englisch-Pakete mit Wörtern, Sätzen und Szenen – passend zur Schulgrammatik.', sch_likes_mine: 'Deine Lieblingsthemen',
+      sch_week: 'Wochen-Challenge deiner Klasse', sch_week_d: 'Diese Woche bekommen alle in deiner Klassenstufe genau dieselben 20 Fragen. Vergleicht im Klassenchat, wer am meisten richtig hat – bei Gleichstand gewinnt die schnellere Zeit. Jeden Montag gibt es eine neue Challenge.', sch_week_go: 'Challenge spielen', sch_duel: 'Duell auf 2 Handys',
+      d2_src: 'Fragen aus', d2_src_trail: 'Trail (Reise)',
       sch_q_listen: 'Hör zu: Was wurde gesagt?', sch_q_read: 'Lies: Was bedeutet der Satz?', sch_q_mediate: 'Sprachmittlung: Wie sagst du das auf Englisch?', sch_write: 'Schreibauftrag', sch_write_d: 'Wie in der Klassenarbeit: ein kurzer Text zum Thema – die App prüft Länge, Pflichtwörter und Satzbau.', sch_write_task: 'Schreib einen kurzen Text (5–8 Sätze) auf Englisch zum Thema „{t}“.', sch_write_use: 'Benutze mindestens 3 dieser Wörter', sch_write_check: 'Text prüfen', sch_write_good: 'Stark! So kannst du das in der Arbeit schreiben.', sch_write_more: 'Guter Anfang – schau dir die offenen Punkte an.', wc_len: 'Mindestens 5 Sätze ({n} geschrieben)', wc_words: 'Mindestens 3 Pflichtwörter benutzt ({n})', wc_link: 'Verbindungswörter (and, but, because, so, when …) ({n})', wc_caps: 'Sätze beginnen groß und enden mit . ! ?', wc_i: '„I“ immer großgeschrieben', mw_bulk: 'Mehrere Vokabeln auf einmal', mw_bulk_d: 'Eine Vokabel pro Zeile: englisch = deutsch (auch mit - oder Tab). Die Unit von oben wird übernommen.', mw_bulk_go: 'Alle hinzufügen', mw_bulk_ok: '{n} Vokabeln hinzugefügt',
       sch_unit: 'Unit (aus deinem Buch, freiwillig)', sch_unit_go: 'üben', sch_unit_few: 'Trag erst mindestens 2 Wörter für diese Unit ein.', sch_own_add: 'Vokabeln eintragen', sch_mine: 'meine Vokabeln',
       sch: 'Schule', sch_d: 'Englisch passend zu Bundesland, Klasse und Lehrwerk', sch_grade: 'Klasse {g}', sch_setup: 'Deine Schule', sch_setup_d: 'Wähle Bundesland, Schulform und Klasse. Dann zeigt dir die App den Stoff, der laut Bildungsplan dran ist. Weitere Länder und Schulformen folgen.', sch_state: 'Bundesland', sch_type: 'Schulform', sch_class: 'Klasse', sch_book: 'Lehrwerk', sch_book_none: '– kein Lehrwerk angeben –', sch_book_d: 'Die App nutzt nur Themen und Grammatik passend zum Bildungsplan, keine Texte aus dem Schulbuch. Vokabeln aus deinem Buch kannst du unter „Meine Wörter“ selbst eintragen.', sch_save: 'Speichern', sch_soon: 'bald', sch_band: 'Band', sch_change: 'Ändern', sch_words: 'Wortschatz deiner Klasse', sch_words_d: 'Themen aus dem Bildungsplan – mit Szene, Quiz, Hören, Schreiben und Prüfung wie auf dem Trail.', sch_gram: 'Grammatik', sch_gram_d: 'Neu in Klasse {a}/{b}. Tippe ein Thema an und übe mit Sätzen.', sch_gram_all: 'Alle Themen gemischt', sch_repeat: 'Wiederholen aus früheren Klassen', sch_from: 'ab Klasse', sch_exam: 'Probe-Klassenarbeit', sch_exam_d: 'Wie in der echten Arbeit: Grammatik, Wortschatz, Hörverstehen, Leseverstehen und Sprachmittlung. Wähle, was drankommt. 20 Fragen, 15 Minuten.', sch_exam_pick: 'Was kommt dran?', sch_exam_go: 'Probe-Arbeit starten', sch_exam_none: 'Wähle mindestens ein Thema.', sch_own: 'Vokabeln aus deinem Buch', sch_own_d: 'Trag die Vokabeln aus deinem Buch mit der Unit ein (z. B. „Unit 3“). Dann kannst du jede Unit gezielt üben, und sie kommen in Wiederholung und Probe-Arbeit.', sch_chat_d: 'Schreib mit der KI auf Englisch – sie benutzt nur Wörter und Grammatik bis Klasse {g}.', why_school: 'Schule',
@@ -174,6 +177,9 @@
       vc_diag: 'Ton-Test mit Diagnose'
     },
     en: {
+      sch_likes: 'What do you like?', sch_likes_d: 'Pick as many topics as you like.', sch_likes_mine: 'Your favourite topics',
+      sch_week: 'Weekly class challenge', sch_week_d: 'Everyone in your year gets the same 20 questions this week.', sch_week_go: 'Play challenge', sch_duel: 'Duel on 2 phones',
+      d2_src: 'Questions from', d2_src_trail: 'Trail',
       sch_q_listen: 'Listen: what was said?', sch_q_read: 'Read: what does it mean?', sch_q_mediate: 'Mediation: how do you say it in English?', sch_write: 'Writing task', sch_write_d: 'A short text on the topic.', sch_write_task: 'Write a short text (5–8 sentences) about “{t}”.', sch_write_use: 'Use at least 3 of these words', sch_write_check: 'Check text', sch_write_good: 'Great!', sch_write_more: 'Good start – check the open points.', wc_len: 'At least 5 sentences ({n})', wc_words: 'At least 3 key words ({n})', wc_link: 'Linking words ({n})', wc_caps: 'Capital letters and full stops', wc_i: 'Capital I', mw_bulk: 'Add several words', mw_bulk_d: 'One word per line: english = german.', mw_bulk_go: 'Add all', mw_bulk_ok: '{n} words added',
       sch_unit: 'Unit (from your textbook, optional)', sch_unit_go: 'practise', sch_unit_few: 'Add at least 2 words for this unit first.', sch_own_add: 'Add words', sch_mine: 'my words',
       sch: 'School', sch_d: 'English for your state, year and textbook', sch_grade: 'Year {g}', sch_setup: 'Your school', sch_setup_d: 'Choose state, school type and year.', sch_state: 'State', sch_type: 'School type', sch_class: 'Year', sch_book: 'Textbook', sch_book_none: '– no textbook –', sch_book_d: 'Only topics and grammar from the curriculum, no textbook texts.', sch_save: 'Save', sch_soon: 'soon', sch_band: 'Volume', sch_change: 'Change', sch_words: 'Vocabulary for your year', sch_words_d: 'Curriculum topics.', sch_gram: 'Grammar', sch_gram_d: 'New in years {a}/{b}.', sch_gram_all: 'All topics mixed', sch_repeat: 'Revise earlier years', sch_from: 'from year', sch_exam: 'Practice test', sch_exam_d: '20 questions, 15 minutes.', sch_exam_pick: 'What is in the test?', sch_exam_go: 'Start practice test', sch_exam_none: 'Choose at least one topic.', sch_own: 'Words from your textbook', sch_own_d: 'Add your unit words under My words.', sch_chat_d: 'Chat in English up to year {g} level.', why_school: 'School',
@@ -802,7 +808,7 @@
           '<div class="grow"><div class="pl-word">' + esc(x.w[0]) + '</div><div class="small muted">' + esc(meaning(x.w)) + '</div></div><span class="box-dots" aria-hidden="true">' + dots + '</span></div>';
       }).join('') + '</div></section>';
     shell(html);
-    document.getElementById('back').onclick = function () { if (u.sch) go('school'); else if (cityBack) { var th = cityBack; cityBack = null; go('themes', th); } else go('home'); };
+    document.getElementById('back').onclick = function () { if (u.sch || (u.int && S.school && S.school.grade && !cityBack)) go('school'); else if (cityBack) { var th = cityBack; cityBack = null; go('themes', th); } else go('home'); };
     var oc = document.getElementById('open-city'); if (oc) oc.onclick = function () { S.opened = S.opened || {}; S.opened[u.id] = today(); save(); renderCity(ui); };
     document.querySelectorAll('[data-say]').forEach(function (b) { b.onclick = function () { speak(b.getAttribute('data-say')); }; });
     bindTiles(ui);
@@ -1127,7 +1133,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.3', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.4', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<textarea maxlength="1000" rows="3" aria-label="' + esc(t('rep')) + '" placeholder="' + esc(t('rep_ph')) + '"></textarea>' +
@@ -1720,6 +1726,23 @@
       .filter(function (k) { return D.cases.some(function (c) { return c.g === k; }); });
   }
   function schUnits() { var o = {}; S.custom.forEach(function (w, i) { if (w[3]) (o[w[3]] = o[w[3]] || []).push({ id: 'my:' + i, w: w, u: -1 }); }); return o; }
+  /* Interessen: frei wählbar (nie nach Geschlecht vorgegeben). Gewählte Pakete stehen im Bereich Schule oben. */
+  function intPacks() { var a = []; for (var i = 0; i < U.length; i++) if (U[i].int) a.push(i); return a; }
+  function schLikesBox() {
+    var all = intPacks(), likes = (S.likes || []).filter(function (id) { return all.some(function (i) { return U[i].id === id; }); });
+    if (!likes.length || SCH.likeEdit) return '<section class="card stack"><h2>⭐ ' + esc(t('sch_likes')) + '</h2><p class="small">' + esc(t('sch_likes_d')) + '</p><div class="row" style="flex-wrap:wrap" id="likes">' +
+      all.map(function (i) { var on = likes.indexOf(U[i].id) >= 0; return '<button type="button" class="btn' + (on ? ' primary' : '') + '" data-like="' + esc(U[i].id) + '" aria-pressed="' + on + '">' + esc(U[i].ico + ' ' + L(U[i].title)) + '</button>'; }).join('') +
+      '</div><button class="btn primary" id="likes-ok" style="justify-self:start"' + (likes.length ? '' : ' disabled') + '>' + esc(t('sch_save')) + '</button></section>';
+    return '<section class="card stack"><h2>⭐ ' + esc(t('sch_likes_mine')) + '</h2><div class="list">' + all.filter(function (i) { return likes.indexOf(U[i].id) >= 0; }).map(function (i) {
+      var u = U[i], l = wordsOf(i), m = masteredCount(l);
+      return '<button class="li linkish" data-sp="' + i + '" style="width:100%"><span aria-hidden="true">' + esc(u.ico) + '</span><span class="grow" style="text-align:left"><b>' + esc(L(u.title)) + '</b><br><span class="small muted" lang="en">' + esc(u.city) + '</span></span><span class="small num muted">' + m + '/' + l.length + '</span></button>';
+    }).join('') + '</div><button class="btn ghost" id="likes-edit" style="justify-self:start">' + esc(t('sch_change')) + '</button></section>';
+  }
+  function bindLikes() {
+    document.querySelectorAll('[data-like]').forEach(function (b) { b.onclick = function () { var id = b.getAttribute('data-like'), l = S.likes = (S.likes || []).slice(), k = l.indexOf(id); if (k >= 0) l.splice(k, 1); else l.push(id); SCH.likeEdit = true; save(); renderSchool(); }; });
+    var ok = document.getElementById('likes-ok'); if (ok) ok.onclick = function () { SCH.likeEdit = false; save(); renderSchool(); };
+    var ed = document.getElementById('likes-edit'); if (ed) ed.onclick = function () { SCH.likeEdit = true; renderSchool(); };
+  }
   function schCount(g) { return D.cases.filter(function (c) { return c.g === g; }).length; }
   function schSetup() {
     var sc = S.school || {}, SD = D.school;
@@ -1749,6 +1772,7 @@
     html += '<section class="card stack"><span class="eyebrow">' + esc(nm(SD.states, sc.state)) + ' · ' + esc(nm(SD.types, sc.type)) + '</span><div class="big">' + esc(t('sch_grade').replace('{g}', g)) + '</div>' +
       (sc.book ? '<p class="small">' + esc(t('sch_book')) + ': ' + esc(nm(SD.books, sc.book)) + (sc.book !== 'other' ? ' · ' + esc(t('sch_band')) + ' ' + (g - 4) : '') + '</p>' : '') +
       '<button class="btn ghost" id="sc-edit" style="justify-self:start">' + esc(t('sch_change')) + '</button></section>' +
+      schLikesBox() +
       '<section class="card stack"><h2>' + esc(t('sch_words')) + '</h2><p class="small muted">' + esc(t('sch_words_d')) + '</p><div class="list">' + packs.map(function (i) {
         var u = U[i], l = wordsOf(i), m = masteredCount(l);
         return '<button class="li linkish" data-sp="' + i + '" style="width:100%"><span aria-hidden="true">' + esc(u.ico) + '</span><span class="grow" style="text-align:left"><b>' + esc(u.city) + '</b><br><span class="small muted">' + esc(L(u.title)) + '</span></span><span class="small num muted">' + m + '/' + l.length + '</span></button>';
@@ -1756,6 +1780,7 @@
       '<section class="card stack"><h2>' + esc(t('sch_gram')) + '</h2><p class="small muted">' + esc(t('sch_gram_d').replace('{a}', schLo(g)).replace('{b}', schLo(g) + 1)) + '</p><div class="list">' + tNew.map(topicBtn).join('') + '</div>' +
       (tNew.length ? '<button class="btn" id="sc-gall" style="justify-self:start">' + esc(t('sch_gram_all')) + '</button>' : '') +
       (tOld.length ? '<details><summary class="small"><b>' + esc(t('sch_repeat')) + '</b> (' + tOld.length + ')</summary><div class="list">' + tOld.map(topicBtn).join('') + '</div></details>' : '') + '</section>' +
+      '<section class="card stack"><h2>🏆 ' + esc(t('sch_week')) + '</h2><p class="small">' + esc(t('sch_week_d')) + '</p><p class="small muted">Code: <b class="num">' + esc(C.weekChallengeCode(today(), g)) + '</b></p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-week">' + esc(t('sch_week_go')) + '</button><button class="btn" id="sc-face">' + esc(t('face')) + '</button><button class="btn" id="sc-duel">' + esc(t('sch_duel')) + '</button></div></section>' +
       '<section class="card stack"><h2>📝 ' + esc(t('sch_exam')) + '</h2><p class="small muted">' + esc(t('sch_exam_d')) + '</p>' +
       '<fieldset class="stack" style="border:0;padding:0;margin:0"><legend class="small"><b>' + esc(t('sch_exam_pick')) + '</b></legend>' +
       tNew.concat(tOld).map(function (k) { return '<label class="row small"><input type="checkbox" data-xt="' + esc(k) + '"' + (tNew.indexOf(k) >= 0 ? ' checked' : '') + '> ' + esc(T[k].t) + '</label>'; }).join('') +
@@ -1770,6 +1795,7 @@
     shell(html);
     document.getElementById('back').onclick = function () { go('practice'); };
     document.getElementById('sc-edit').onclick = function () { SCH.edit = true; renderSchool(); };
+    bindLikes();
     document.querySelectorAll('[data-sp]').forEach(function (b) { b.onclick = function () { go('city', +b.getAttribute('data-sp')); }; });
     document.querySelectorAll('[data-sg]').forEach(function (b) { b.onclick = function () { SCH.topics = [b.getAttribute('data-sg')]; startMode('sgram'); }; });
     var ga = document.getElementById('sc-gall'); if (ga) ga.onclick = function () { SCH.topics = tNew.slice(); startMode('sgram'); };
@@ -1782,6 +1808,9 @@
       startMode('sexam');
     };
     document.getElementById('sc-own').onclick = function () { go('mywords'); };
+    document.getElementById('sc-week').onclick = function () { var pl = C.duelPlan(RAW, C.weekChallengeCode(today(), g)); if (!pl) return toast(t('d2_bad')); duelCodeDraft = pl.code; duelGrade = g; tab = 'duel'; renderDuelReady(pl); };
+    document.getElementById('sc-face').onclick = function () { faceSrc = 'school'; go('face'); };
+    document.getElementById('sc-duel').onclick = function () { duelGrade = g; duelCodeDraft = C.duelNewCode(Math.random, '1', g); go('duel'); };
     document.querySelectorAll('[data-sw]').forEach(function (b) { b.onclick = function () { SCH.wr = null; go('writing', +b.getAttribute('data-sw')); }; });
     document.querySelectorAll('[data-su]').forEach(function (b) { b.onclick = function () { SCH.unit = b.getAttribute('data-su'); startMode('sunit'); }; });
     var ch = document.getElementById('sc-chat'); if (ch) ch.onclick = function () { startMode('chat', packs[0]); };
@@ -2557,6 +2586,7 @@
   }
 
   /* ---------- Duell-Code: 2 Handys, gleiche Fragen (Plan aus C.duelPlan) ---------- */
+  var duelGrade = 0;
   var duelLevel = null, duelCodeDraft = '';
   var DUEL_LVS = ['1', '2', '3', 'P1', 'P2', 'P3'];
   function duelLvLabel(lv) { return lv.charAt(0) === 'P' ? 'P' + lv.charAt(1) + ' · ' + PLX_LV[+lv.charAt(1) - 1] : t('diff_' + ['easy', 'medium', 'hard'][+lv - 1]); }
@@ -2660,10 +2690,10 @@
       '<label class="small" for="d2name"><b>' + esc(t('d2_name')) + '</b></label><input type="text" id="d2name" maxlength="20" autocomplete="off" value="' + esc(S.name || '') + '">' +
       '<b class="small">' + esc(t('d2_level')) + '</b><span class="small muted">' + esc(t('d2_rec')) + ': ' + esc(duelLvLabel(duelRecLv())) + '</span>' +
       '<span class="small muted">' + esc(t('d2_learn')) + '</span><div class="seg" id="d2lv">' + DUEL_LVS.slice(0, 3).map(function (lv) { return segBtn(lv, duelLvLabel(lv), duelLevel === lv); }).join('') + '</div>' +
-      '<span class="small muted" lang="en">' + esc(t('d2_pol')) + '</span><div class="seg" id="d2lvp" lang="en">' + DUEL_LVS.slice(3).map(function (lv) { return segBtn(lv, duelLvLabel(lv), duelLevel === lv); }).join('') + '</div>' +
+      (S.school && S.school.grade ? '<b class="small">' + esc(t('d2_src')) + '</b><div class="seg" id="d2src">' + segBtn('0', t('d2_src_trail'), !duelGrade) + segBtn(String(S.school.grade), t('sch_grade').replace('{g}', S.school.grade), !!duelGrade) + '</div>' : '') +
       '<p class="small muted">' + esc(t('d2_mix')) + '</p>' +
       '<button class="btn" id="d2new">' + esc(t('d2_new')) + '</button>' +
-      '<label class="small" for="d2code">' + esc(t('d2_code')) + '</label><input type="text" id="d2code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="KOT-472-1" value="' + esc(duelCodeDraft) + '" style="text-transform:uppercase;letter-spacing:.08em">' +
+      '<label class="small" for="d2code">' + esc(t('d2_code')) + '</label><input type="text" id="d2code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="FOX-472-1" value="' + esc(duelCodeDraft) + '" style="text-transform:uppercase;letter-spacing:.08em">' +
       '<p class="small" id="d2err" role="alert" hidden></p>' +
       '<button class="btn primary" id="d2go">' + esc(t('start')) + '</button></section>' + rankBox() +
       '<h2>' + esc(t('duel_d')) + '</h2>' +
@@ -2674,11 +2704,12 @@
     shell(html);
     document.getElementById('back').onclick = function () { go('practice'); };
     function markLv() { document.querySelectorAll('#d2lv button, #d2lvp button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === duelLevel)); }); }
-    function pickLv(v) { duelLevel = v; markLv(); var c0 = C.duelParse(document.getElementById('d2code').value); if (c0) { document.getElementById('d2code').value = c0.base + '-' + v; duelCodeDraft = document.getElementById('d2code').value; } }
-    bindSeg('d2lv', pickLv); bindSeg('d2lvp', pickLv);
+    function pickLv(v) { duelLevel = v; markLv(); var c0 = C.duelParse(document.getElementById('d2code').value); if (c0) { document.getElementById('d2code').value = c0.base + '-' + v + (duelGrade ? '-K' + duelGrade : ''); duelCodeDraft = document.getElementById('d2code').value; } }
+    bindSeg('d2lv', pickLv);
+    bindSeg('d2src', function (v) { duelGrade = +v; document.querySelectorAll('#d2src button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === v)); }); pickLv(duelLevel); });
     document.getElementById('d2name').onchange = function () { S.name = C.duelName(this.value); this.value = S.name; save(); };
-    document.getElementById('d2new').onclick = function () { duelCodeDraft = C.duelNewCode(Math.random, duelLevel); document.getElementById('d2code').value = duelCodeDraft; document.getElementById('d2err').hidden = true; };
-    document.getElementById('d2code').oninput = function () { duelCodeDraft = this.value; var c1 = C.duelParse(this.value); if (c1 && c1.lv !== duelLevel) { duelLevel = c1.lv; markLv(); } };
+    document.getElementById('d2new').onclick = function () { duelCodeDraft = C.duelNewCode(Math.random, duelLevel, duelGrade); document.getElementById('d2code').value = duelCodeDraft; document.getElementById('d2err').hidden = true; };
+    document.getElementById('d2code').oninput = function () { duelCodeDraft = this.value; var c1 = C.duelParse(this.value); if (c1 && c1.lv !== duelLevel) { duelLevel = c1.lv; markLv(); } if (c1) duelGrade = c1.grade || 0; };
     var rc = document.getElementById('rankclr');
     if (rc) rc.onclick = function () { if (!window.confirm(t('rank_clear_q'))) return; S.rank = {}; S.rankSeen = []; save(); renderDuelSetup(); };
     document.getElementById('d2go').onclick = function () {
@@ -2747,19 +2778,40 @@
     shell('<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('face')) + '</h1>' +
       '<section class="card stack"><p class="small">' + esc(t('face_rules')) + '</p>' +
       '<b>' + esc(t('players')) + '</b>' + [0, 1].map(function (i) { return '<input type="text" id="f' + i + '" value="' + esc(faceNames[i]) + '" aria-label="' + esc(t('players')) + ' ' + (i + 1) + '">'; }).join('') +
+      faceSrcSeg() +
       '<b>' + esc(t('face_n')) + '</b><div class="seg" id="fn">' + [5, 10, 15].map(function (n) { return segBtn(String(n), String(n), faceN === n); }).join('') + '</div>' +
       '<button class="btn primary" id="fgo">' + esc(t('start')) + '</button></section>');
     document.getElementById('back').onclick = function () { go('practice'); };
+    bindSeg('fsrc', function (v) { faceSrc = v; renderFaceSetup(); });
     bindSeg('fn', function (v) { faceN = +v; document.querySelectorAll('#fn button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === v)); }); });
     document.getElementById('fgo').onclick = function () {
       faceNames = [0, 1].map(function (i) { return document.getElementById('f' + i).value.trim() || ['Ola', 'Tomek'][i]; });
       startFace();
     };
   }
+  /* English Trail: Gegenüber auch mit Schulstoff (Klasse) oder eigenen Buch-Vokabeln einer Unit – wer zuerst richtig tippt, bekommt den Punkt */
+  var faceSrc = 'trail';
+  function faceSrcSeg() {
+    if (!(S.school && S.school.grade)) return '';
+    var g = S.school.grade, un = Object.keys(schUnits()).filter(function (k) { return schUnits()[k].length >= 4; }).sort();
+    if (faceSrc !== 'trail' && faceSrc !== 'school' && un.indexOf(faceSrc.slice(2)) < 0) faceSrc = 'trail';
+    return '<b>' + esc(t('d2_src')) + '</b><div class="seg" id="fsrc">' + segBtn('trail', t('d2_src_trail'), faceSrc === 'trail') + segBtn('school', t('sch_grade').replace('{g}', g), faceSrc === 'school') +
+      un.map(function (k) { return segBtn('u:' + k, '📘 ' + k, faceSrc === 'u:' + k); }).join('') + '</div>';
+  }
+  function facePool() {
+    if (S.school && S.school.grade && faceSrc !== 'trail') {
+      var g = S.school.grade, packW = []; schPacks(g).forEach(function (i) { packW = packW.concat(wordsOf(i)); });
+      var cs0 = D.cases.filter(function (c) { return (c.k || 5) <= g; });
+      if (faceSrc === 'school') return { words: packW, cases: cs0 };
+      var own = schUnits()[faceSrc.slice(2)] || [];
+      return { words: own.length >= 4 ? own : own.concat(packW), cases: cs0, own: own.length >= 4 };
+    }
+    return { words: poolOpen(), cases: D.cases };
+  }
   function faceQs(n) {
-    var pool = poolOpen(), words = C.shuffle(pool, R), cs = C.shuffle(D.cases, R), tf = C.shuffle(D.culture.tf, R), qs = [];
+    var fp = facePool(), pool = fp.words, words = C.shuffle(pool, R), cs = C.shuffle(fp.cases, R), tf = C.shuffle(D.culture.tf, R), qs = [];
     for (var i = 0; i < n; i++) {
-      var k = i % 4, q;
+      var k = fp.own ? (i % 3 === 2 ? 2 : i % 3) : i % 4, q;
       if (k === 0) q = qMC(words[i % words.length], pool, 'pl2x');
       else if (k === 1) q = qMC(words[i % words.length], pool, 'x2pl');
       else if (k === 2) { var c = cs[i % cs.length]; q = { ask: t('case_q') + ' (' + c.base + ')', big: c.s, sub: L(c.tr), a: c.a, opts: C.shuffle(c.opts.slice(), R), plOpts: true, small: true, sayAfter: c.s.replace('___', c.a) }; }

@@ -235,22 +235,23 @@
      Format WORT-123-S (S = Stufe 1 leicht, 2 mittel, 3 schwer, P1–P3 = Dla Polaków). Die Stufe steckt im Code,
      damit nicht die Einstellung des Handys über die Fragen entscheidet.
      Gemischtes Duell: gleicher Stamm WORT-123, jeder seine eigene Stufe → andere Fragen, Punkte gewichtet. */
-  var DUEL_WORDS = ['KOT', 'PIES', 'LAS', 'DOM', 'RYBA', 'SOWA', 'MOST', 'ZUPA', 'KAWA', 'LIS', 'ZAMEK', 'MAK', 'SER', 'OKO', 'LATO', 'ZIMA', 'KINO', 'RZEKA', 'GORA', 'MORZE'];
+  var DUEL_WORDS = ['CAT', 'DOG', 'FOX', 'OWL', 'BEAR', 'LION', 'TIGER', 'RAVEN', 'TRAIN', 'CASTLE', 'BRIDGE', 'TEA', 'RAIN', 'STAR', 'MOON', 'APPLE', 'PIZZA', 'ROBOT', 'DRAGON', 'SHARK'];
   var DUEL_DIFFS = ['easy', 'medium', 'hard'];
   var DUEL_WEIGHT = { '1': 1, '2': 1.5, '3': 2, 'P1': 2, 'P2': 2.5, 'P3': 3 };
-  function duelNewCode(r, level) {
+  /* English Trail: optional „-K7“ = nur Schulstoff der Klasse 7 (Gymnasium BW) – gleiche Fragen für alle mit diesem Code */
+  function duelNewCode(r, level, grade) {
     r = r || Math.random;
     var w = DUEL_WORDS[Math.floor(r() * DUEL_WORDS.length)], n = 100 + Math.floor(r() * 900);
     var lv = DUEL_WEIGHT[String(level).toUpperCase()] ? String(level).toUpperCase() : '1';
-    return w + '-' + n + '-' + lv;
+    return w + '-' + n + '-' + lv + (grade >= 5 && grade <= 10 ? '-K' + grade : '');
   }
   function duelWeight(lv) { return DUEL_WEIGHT[String(lv)] || 1; }
   function duelParse(str) {
     var c = String(str || '').toUpperCase().replace(/[\s_.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])$/);
+    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?K(5|6|7|8|9|10))?$/);
     if (!m) return null;
-    var n = +m[4], lv = m[3] + n;
-    return { code: m[1] + '-' + m[2] + '-' + lv, base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv) };
+    var n = +m[4], lv = m[3] + n, k = m[5] ? +m[5] : 0;
+    return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-K' + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k };
   }
   /* Prüfzeichen über die sprachunabhängige Fragen-Signatur: beide Handys müssen dasselbe zeigen */
   function duelCheck(sig) { return ('0000' + hash(String(sig)).toString(36).toUpperCase()).slice(-4); }
@@ -288,13 +289,14 @@
       shuffle(pq, r).slice(0, 20).forEach(function (x) { var q = data.polacy[x[0]][x[1]]; plan.push({ k: 'q', c: x[0], i: x[1], opts: shuffle([q.a].concat(q.o), r) }); });
       return { code: pc.code, base: pc.base, lv: pc.lv, level: pc.level, pol: true, diff: pc.diff, plan: plan, check: duelCheck(JSON.stringify(plan)) };
     }
-    var words = [];
-    /* nur Szlak 1 (ohne Szlak 2 und Pakete): neue Inhalte ändern die Duell-Fragen nicht */
-    data.units.forEach(function (u, ui) { if (u.r || u.pack) return; u.words.forEach(function (w, wi) { words.push([ui, wi]); }); });
+    var words = [], K = pc.grade, KLO = K ? K - ((K - 5) % 2) : 0;
+    /* nur Trail 1 (ohne Pakete) bzw. mit „-K“ nur die Schulpakete des Doppeljahrgangs: neue Inhalte ändern die Duell-Fragen nicht */
+    data.units.forEach(function (u, ui) { if (K ? !(u.sch >= KLO && u.sch <= K) : (u.r || u.pack)) return; u.words.forEach(function (w, wi) { words.push([ui, wi]); }); });
     var W = function (x) { return data.units[x[0]].words[x[1]]; };
     var keys = function (w) { return ['p' + norm(w[0]), 'd' + norm(w[1]), 'e' + norm(w[2])]; };
     var idx = function (n) { var a = []; for (var k = 0; k < n; k++) a.push(k); return a; };
-    shuffle(words, r).slice(0, DUEL_MIX.w).forEach(function (x, n) {
+    var MIX = K ? { w: 14, c: 6, t: 0, p: 0, h: 0 } : DUEL_MIX;
+    shuffle(words, r).slice(0, MIX.w).forEach(function (x, n) {
       var seen = {}, outs = [];
       keys(W(x)).forEach(function (k) { seen[k] = 1; });
       shuffle(words, r).forEach(function (y) {
@@ -305,21 +307,23 @@
       });
       plan.push({ k: 'w', dir: n % 2 ? 'x2pl' : 'pl2x', item: x, opts: shuffle([x].concat(outs), r) });
     });
-    shuffle(idx(data.cases.length), r).slice(0, DUEL_MIX.c).forEach(function (ci) {
+    var cIdx = idx(data.cases.length).filter(function (ci) { return !K || (data.cases[ci].k || 5) <= K; });
+    shuffle(cIdx, r).slice(0, MIX.c).forEach(function (ci) {
       plan.push({ k: 'c', i: ci, type: cfg.clozeType, opts: shuffle(data.cases[ci].opts, r) });
     });
-    shuffle(idx(data.culture.tf.length), r).slice(0, DUEL_MIX.t).forEach(function (ti) { plan.push({ k: 't', i: ti }); });
+    shuffle(idx(data.culture.tf.length), r).slice(0, MIX.t).forEach(function (ti) { plan.push({ k: 't', i: ti }); });
     var people = data.culture.people;
-    shuffle(idx(people.length), r).slice(0, DUEL_MIX.p).forEach(function (pi) {
+    shuffle(idx(people.length), r).slice(0, MIX.p).forEach(function (pi) {
       var others = people.map(function (x) { return x.name; }).filter(function (nm) { return nm !== people[pi].name; });
       plan.push({ k: 'p', i: pi, opts: shuffle([people[pi].name].concat(shuffle(others, r).slice(0, Math.max(3, cfg.opts - 1))), r) });
     });
-    for (i = 0; i < DUEL_MIX.h; i++) {
+    for (i = 0; i < MIX.h; i++) {
       var hs = Math.floor(r() * data.culture.hl.length), pr = hlPair(data.culture.hl[hs].items, r);
       if (pr) plan.push({ k: 'h', i: hs, pair: [pr[0][0], pr[1][0]] });
     }
     plan = shuffle(plan, r);
-    return { code: pc.code, base: pc.base, lv: pc.lv, level: pc.level, pol: false, diff: pc.diff, plan: plan, check: duelCheck(JSON.stringify(plan)) };
+    if (!plan.length) return null;
+    return { code: pc.code, base: pc.base, lv: pc.lv, level: pc.level, pol: false, diff: pc.diff, grade: K, plan: plan, check: duelCheck(JSON.stringify(plan)) };
   }
 
   /* 1 = ich gewinne, -1 = Gegner, 0 = Gleichstand. Mehr richtig gewinnt, bei Gleichstand die schnellere Zeit. */
@@ -474,6 +478,11 @@
   }
 
   /* PATCH003: Karte, Entfernung, Höher/Tiefer, Zeitstrahl, Buchstabensalat */
+  /* English Trail: Wochen-Challenge der Klasse – die ganze Woche (Mo–So) derselbe Code für alle in dieser Klasse */
+  function weekChallengeCode(todayKey, grade) {
+    var mon = parseDay(weekKey(todayKey)), base = new Date(2026, 0, 5), idx = Math.round((mon - base) / 864e5 / 7);
+    return 'WEEK-' + (100 + ((idx % 900) + 900) % 900) + '-2-K' + grade;
+  }
   /* English Trail: Vokabelliste einfügen – „word = Wort“, „word - Wort“, „word<TAB>Wort“ oder „word; Wort“, eine pro Zeile */
   function parseWordList(txt) {
     return String(txt || '').split(/\r?\n/).map(function (l) {
@@ -595,7 +604,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

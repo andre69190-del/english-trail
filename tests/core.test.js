@@ -466,3 +466,24 @@ test('Schule: Schreibauftrag-Check', () => {
   const bad = C.writingCheck('i like dogs', ['school']);
   assert.ok(bad.score < 50);
 });
+
+test('Duell-Code mit Schulklasse: -K7 nur Schulstoff, deterministisch', () => {
+  const p = C.duelParse('fox 123 1 k7');
+  assert.equal(p.code, 'FOX-123-1-K7'); assert.equal(p.grade, 7);
+  assert.equal(C.duelParse('FOX-123-1-K4'), null);
+  const a = C.duelPlan(DATA, 'FOX-123-1-K7'), b = C.duelPlan(DATA, 'FOX-123-1-K7');
+  assert.ok(a && a.plan.length >= 15); assert.equal(a.check, b.check);
+  for (const it of a.plan) {
+    if (it.k === 'w') assert.ok([7, 8].includes(DATA.units[it.item[0]].sch) || DATA.units[it.item[0]].sch === 7, 'nur Pakete Kl. 7');
+    if (it.k === 'c') assert.ok((DATA.cases[it.i].k || 5) <= 7, 'Grammatik bis Kl. 7');
+  }
+  assert.notEqual(C.duelPlan(DATA, 'FOX-123-1').check, a.check);
+  assert.ok(/-K8$/.test(C.duelNewCode(() => 0.5, '2', 8)));
+});
+
+test('Wochen-Challenge: ganze Woche gleicher Code je Klasse, nächste Woche neu', () => {
+  const a = C.weekChallengeCode('2026-11-02', 7), b = C.weekChallengeCode('2026-11-08', 7), c = C.weekChallengeCode('2026-11-09', 7);
+  assert.equal(a, b); assert.notEqual(a, c); assert.ok(/^WEEK-\d{3}-2-K7$/.test(a));
+  assert.ok(C.duelPlan(DATA, a));
+  assert.notEqual(C.weekChallengeCode('2026-11-02', 8), a);
+});

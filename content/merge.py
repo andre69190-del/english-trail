@@ -15,6 +15,7 @@ import trail1  # noqa: E402
 import grammar  # noqa: E402
 import extras  # noqa: E402
 import school  # noqa: E402
+import interests  # noqa: E402
 
 DATA = os.path.join(ROOT, 'src', 'data.json')
 D = json.load(open(DATA, encoding='utf-8'))
@@ -104,6 +105,13 @@ D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.ST
                'grades': school.GRADES, 'books': [{'id': i, 'name': n} for i, n in school.BOOKS],
                'topics': {g: {'t': n, 'k': kk} for g, (n, kk) in grammar.TOPICS.items()}}
 
+# Schule: Interessen-Pakete (frei wählbar) – Einheiten mit "pack": 1 und "int": 1
+D['units'] = [u for u in D['units'] if not u.get('int')]
+for k in interests.PACKS:
+    u = unit(dict(k, city=k['name'], cityDe=k['title'], lon=-0.13, lat=51.51, trail='green', mission=None, radio=None, letter=None))
+    u['pack'] = 1; u['int'] = 1; u['ico'] = k['ico']
+    D['units'].append(u)
+
 # Vor der Veröffentlichung (01.11.2026): alle noch polnischen Vorlage-Teile entfernen.
 # Trail 2/3, Themenpakete, Profi-Bereich, Tagebuch, Buch und B1-Prüfung kommen in Phase 6 neu auf Englisch dazu.
 D['units'] = [u for u in D['units'] if not u.get('legacy')]
@@ -115,6 +123,8 @@ D['listen']['radio'] = {k: v for k, v in D['listen']['radio'].items() if k in UI
 D['listen']['learn'] = [list(x) for x in extras.LEARN]
 D['themes'] = [dict(th, u=[x for x in th['u'] if x in UID]) for th in D.get('themes') or []]
 D['themes'] = [th for th in D['themes'] if th['u'] and th['id'] != 'schule']
+D['themes'] = [th for th in D['themes'] if th['id'] != 'hobby']
+D['themes'].append({'id': 'hobby', 'ico': '⭐', 't': P('Interessen: Gaming, Sport, Tiere, Musik …'), 'u': [u['id'] for u in D['units'] if u.get('int')]})
 D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW, Klassen 5–10'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
 D['news'] = [{'v': v, 'date': d, 'de': n, 'en': n} for v, d, n in extras.NEWS_ALL]
 D['audio'] = {}

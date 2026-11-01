@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.4', '2026-11-01', ['Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.', 'Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.', 'Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode.']),
   ('0.3', '2026-11-01', ['Probe-Klassenarbeit wie in BW: jetzt mit Hörverstehen, Leseverstehen und Sprachmittlung.', 'Neu: Schreibauftrag zu jedem Schulthema – die App prüft Länge, Pflichtwörter, Verbindungswörter und Großschreibung.', 'Vokabeln aus dem Buch als Liste einfügen (eine pro Zeile) – mit Unit.']),
   ('0.2', '2026-11-01', ['Schule: Vokabeln aus deinem Englischbuch mit der Unit eintragen (z. B. „Unit 3“) und jede Unit gezielt üben – auch in der Probe-Klassenarbeit.']),
   ('0.1', '2026-11-01', NEWS),

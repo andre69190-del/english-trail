@@ -40,3 +40,14 @@ E. Hausaufgaben-Code für Lehrkräfte (Themen + Pakete → ein Code)
 F. Interessen-Pakete: Gaming, Football, Animals, Music & YouTube  
 G. Eltern-Bericht teilen + Datenschutz-Hinweis U16  
 H. Emojis für Wörter in Klasse 5/6
+
+## Ergänzung 01.11.2026: Mädchen und Jungen, GeoQuest
+
+**Mädchen/Jungen:** Studien und Elternberichte zeigen im Schnitt unterschiedliche Zugänge (z. B. spielen Jungen deutlich häufiger Computerspiele – in einer Frontiers-Studie 89 % vs. 30 %; Mädchen nennen häufiger Kommunikation, Musik, Geschichten und Gemeinsames), aber die Unterschiede innerhalb der Gruppen sind größer als zwischen ihnen. Deshalb **wählt jedes Kind seine Themen selbst** (nie nach Geschlecht vorgegeben), und die App bietet beide Antriebe gleichwertig an:
+- **Wettkampf:** Duell-Code, Gegenüber (wer zuerst richtig tippt), Wochen-Challenge, Bestzeiten.
+- **Gemeinsam/Gestalten:** Szenen und Geschichten, KI-Gespräch, Sammeln (Raben), Schreibaufträge, Mein Rabe (geplant).
+
+**GeoQuest (geprüft):**
+- **Live-1vs1 online:** Supabase-Realtime „Broadcast“ in einem Raum `room_<Code>` (nichts wird gespeichert), Host würfelt Seed + Modus, Countdown, Ereignisse ANSWER_LOCKED / NEXT_QUESTION / GAMEOVER_SYNC. Viele Sync-Fehler in der Historie (Phasen 280–319: Filter/Schwierigkeit nicht synchron, hängende Runden). → Für English Trail übernehmen, aber einfacher und robuster: Fragen kommen deterministisch aus dem Duell-Code (wie heute), über den Kanal laufen nur Antworten + Zeitstempel.
+- **Anmeldung:** anonym beim Start (`signInAnonymously`, 3-s-Timeout), optional E-Mail. → English Trail: Live-Duell **ohne Konto** (nur Spitzname, nur Broadcast, keine Speicherung) – passt zu Kindern unter 16.
+- **Wochen-Liga, Daily Challenge, Münzen/Joker, Sticker, Kinder-Modus mit Klassenstufen und Eltern-PIN.** → Wochen-Challenge ✅ (ohne Server), Sammeln ✅, Eltern-Bereich + Mein Rabe als Nächstes.
