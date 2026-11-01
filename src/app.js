@@ -51,6 +51,7 @@
   /* ---------- Texte (UI-Sprache = Basissprache) ---------- */
   var TX = {
     de: {
+      live: 'Live-Duell', live_tile_d: '2 Handys, gleichzeitig – wer zuerst richtig antwortet, bekommt den Punkt', live_d: 'Du und ein Freund oder eine Freundin spielt gleichzeitig auf zwei Handys dieselben 20 Fragen. Wer zuerst richtig antwortet, bekommt den Punkt. Falsch getippt? Dann ist die Frage für dich gesperrt.', live_name: 'Dein Spitzname', live_new: 'Neues Duell erstellen', live_join: 'Oder einem Duell beitreten', live_join_btn: 'Beitreten', live_privacy: 'Kein Konto nötig, nichts wird gespeichert: Nur dein Spitzname und deine Antworten gehen live an das andere Handy.', live_offline: 'Für das Live-Duell brauchst du Internet.', live_connect: 'Verbinde …', live_err: 'Verbindung nicht möglich. Prüf dein Internet und versuch es noch einmal.', live_code: 'Euer Duell-Code', live_wait: 'Schick den Code an deinen Gegner. Sobald er beitritt, geht es los.', live_found: '{n} ist da!', live_ver: 'Achtung: Ihr habt verschiedene App-Versionen – bitte beide die Seite neu laden.', live_ready: 'Ich bin bereit', live_wait_ready: 'Warte auf {n} …', live_opp_ready: '{n} ist bereit!', live_pt_me: 'Punkt für dich! ⚡', live_pt_opp: 'Punkt für {n}', live_pt_none: 'Kein Punkt – keiner hatte es richtig', live_ok_wait: 'Richtig! Mal sehen, wer schneller war …', live_wrong: 'Leider falsch – diese Frage ist für dich gesperrt.', live_opp_done: '{n} hat schon geantwortet!', live_win: 'Du hast gewonnen! 🏆', live_lose: '{n} hat gewonnen', live_draw: 'Unentschieden!', live_left: 'Dein Gegner hat das Duell verlassen.', live_right: '{n} von {t} richtig', live_again: 'Revanche (neuer Code)', live_me: 'Ich', live_opp: 'Gegner',
       sch_likes: 'Was magst du?', sch_likes_d: 'Wähl so viele Themen, wie du willst. Dazu bekommst du Englisch-Pakete mit Wörtern, Sätzen und Szenen – passend zur Schulgrammatik.', sch_likes_mine: 'Deine Lieblingsthemen',
       sch_week: 'Wochen-Challenge deiner Klasse', sch_week_d: 'Diese Woche bekommen alle in deiner Klassenstufe genau dieselben 20 Fragen. Vergleicht im Klassenchat, wer am meisten richtig hat – bei Gleichstand gewinnt die schnellere Zeit. Jeden Montag gibt es eine neue Challenge.', sch_week_go: 'Challenge spielen', sch_duel: 'Duell auf 2 Handys',
       d2_src: 'Fragen aus', d2_src_trail: 'Trail (Reise)',
@@ -161,6 +162,7 @@
       vc: 'Stimme', vc_pick: 'Englische Stimme', vc_test: 'Stimme testen', vc_d: 'Natürliche oder „verbesserte“ Stimmen klingen deutlich besser. Mehr Stimmen bekommst du in den Einstellungen deines Geräts.', vc_none: 'Auf diesem Gerät ist keine englische Stimme installiert.', vc_none_toast: 'Keine englische Stimme gefunden – Tipp unter Ich → Stimme.', vc_ios: 'iPhone/iPad: Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch → z. B. „Daniel (verbessert)“ laden. Danach die App neu öffnen.', vc_and: 'Android: Einstellungen → Bedienungshilfen bzw. System → Sprache → Sprachausgabe → Google-Sprachausgabe → Sprachdaten installieren → Englisch (UK). Danach die App neu öffnen.', vc_pc: 'Windows: Einstellungen → Zeit und Sprache → Sprache → Englisch (Vereinigtes Königreich) hinzufügen (mit Sprachausgabe). Chrome und Edge bringen oft eigene Online-Stimmen mit.',
       chat: 'KI-Gespräch', chat_d: 'Frei auf Englisch schreiben oder sprechen – mit Korrektur', chat_city_d: 'Die Szene dieser Stadt frei weiterspielen', chat_free: 'Freies Gespräch (Café-Smalltalk)', chat_free_sc: 'ein lockeres Gespräch in einem Café in London', chat_sc: 'Situation', chat_lv: 'Niveau', chat_ph: 'Auf Englisch antworten … (Enter = senden)', chat_send: 'Senden', chat_talk: 'Antworten vorlesen', chat_used: 'heute {n} von {l}', chat_new: 'Neu anfangen', chat_better: 'Besser', chat_note: 'Deine Nachrichten gehen über unseren Server an einen KI-Dienst (derzeit Groq, USA) und werden nicht gespeichert. Bitte keine persönlichen Daten eingeben. Die KI kann Fehler machen.', chat_login: 'Das KI-Gespräch gibt es mit Konto (kostenlos, Ich → Geräte-Abgleich) – so bleibt es für alle kostenlos und fair begrenzt.', chat_offline: 'Für das KI-Gespräch brauchst du Internet.', chat_soon: 'Das KI-Gespräch wird gerade eingerichtet und ist bald verfügbar.', chat_limit: 'Für heute sind alle KI-Nachrichten verbraucht. Morgen geht es weiter!', chat_err: 'Die KI antwortet gerade nicht. Bitte gleich noch einmal versuchen.',
       vc_auto: 'Automatisch (empfohlen)', vc_apple: 'Auf iPhone/iPad/Mac: Wähl nur Stimmen, die unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch geladen sind – sonst bleibt es stumm.',
+      gd_title: 'Was kann English Trail?', gd_kids: 'Für Kinder', gd_adults: 'Für Eltern & Lehrkräfte', gd_open: 'Alles ansehen', gd_try: 'Ausprobieren', gd_sch_d: 'Alle Spiele, Duelle und Hilfen auf einen Blick.', rep_pick: 'Was ist los? Tippe an (Text ist freiwillig):', rep_c1: 'Übersetzung falsch', rep_c2: 'Tippfehler', rep_c3: 'Aussprache klingt komisch', rep_c4: 'Viel zu schwer', rep_c5: 'Etwas funktioniert nicht', rep_oops: 'Ups, da hat etwas nicht geklappt. Unter „Fehler melden“ kannst du es uns sagen.',
       news: 'Was ist neu', news_new: 'Neu in dieser Version', news_all: 'Alle Neuerungen ansehen', news_ver: 'Version',
       boss_locked: 'Die Prüfung öffnet, wenn alle Wörter gefestigt sind ({r} von {n}).',
       learn_first: 'Lerne zuerst ein paar neue Wörter dieser Stadt kennen.',
@@ -177,6 +179,7 @@
       vc_diag: 'Ton-Test mit Diagnose'
     },
     en: {
+      live: 'Live duel', live_tile_d: '2 phones at the same time', live_d: 'Play the same 20 questions at the same time.', live_name: 'Your nickname', live_new: 'Create new duel', live_join: 'Or join a duel', live_join_btn: 'Join', live_privacy: 'No account needed, nothing is stored.', live_offline: 'You need internet for the live duel.', live_connect: 'Connecting …', live_err: 'Could not connect.', live_code: 'Your duel code', live_wait: 'Send the code to your opponent.', live_found: '{n} is here!', live_ver: 'Different app versions – please both reload.', live_ready: "I'm ready", live_wait_ready: 'Waiting for {n} …', live_opp_ready: '{n} is ready!', live_pt_me: 'Point for you!', live_pt_opp: 'Point for {n}', live_pt_none: 'No point', live_ok_wait: 'Correct! Who was faster …', live_wrong: 'Wrong – locked for you.', live_opp_done: '{n} has answered!', live_win: 'You won!', live_lose: '{n} won', live_draw: 'Draw!', live_left: 'Your opponent left.', live_right: '{n} of {t} correct', live_again: 'Rematch (new code)', live_me: 'Me', live_opp: 'Opponent',
       sch_likes: 'What do you like?', sch_likes_d: 'Pick as many topics as you like.', sch_likes_mine: 'Your favourite topics',
       sch_week: 'Weekly class challenge', sch_week_d: 'Everyone in your year gets the same 20 questions this week.', sch_week_go: 'Play challenge', sch_duel: 'Duel on 2 phones',
       d2_src: 'Questions from', d2_src_trail: 'Trail',
@@ -287,6 +290,7 @@
       vc: 'Voice', vc_pick: 'Polish voice', vc_test: 'Test voice', vc_d: 'Natural or “enhanced” voices sound much better. You can add more voices in your device settings.', vc_none: 'No Polish voice is installed on this device.', vc_none_toast: 'No Polish voice found – see Me → Voice for a tip.', vc_ios: 'iPhone/iPad: Settings → Accessibility → Spoken Content → Voices → Polish → download “Zosia (Enhanced)”. Then reopen the app.', vc_and: 'Android: Settings → Accessibility or System → Language → Text-to-speech → Google Speech Services → Install voice data → Polish. Then reopen the app.', vc_pc: 'Windows: Settings → Time & language → Language → add Polish (with text-to-speech). Chrome and Edge often include their own online voices.',
       chat: 'AI conversation', chat_d: 'Write or speak freely in Polish – with corrections', chat_city_d: 'Continue this city’s scene freely', chat_free: 'Free conversation (café small talk)', chat_free_sc: 'a relaxed conversation in a café in Poland', chat_sc: 'Situation', chat_lv: 'Level', chat_ph: 'Answer in Polish … (Enter = send)', chat_send: 'Send', chat_talk: 'Read replies aloud', chat_used: 'today {n} of {l}', chat_new: 'Start over', chat_better: 'Better', chat_note: 'Your messages go via our server to an AI service (currently Groq, USA) and are not stored. Please don’t enter personal data. The AI can make mistakes.', chat_login: 'The AI conversation needs an account (free, Me → Device sync) – that keeps it free and fairly limited for everyone.', chat_offline: 'You need internet for the AI conversation.', chat_soon: 'The AI conversation is being set up and will be available soon.', chat_limit: 'You’ve used all AI messages for today. See you tomorrow!', chat_err: 'The AI isn’t answering right now. Please try again in a moment.',
       vc_auto: 'Automatic (recommended)', vc_apple: 'On iPhone/iPad/Mac: only pick voices downloaded under Settings → Accessibility → Spoken Content → Voices → Polish – otherwise there is no sound.',
+      gd_title: 'What can English Trail do?', gd_kids: 'For kids', gd_adults: 'For parents & teachers', gd_open: 'See everything', gd_try: 'Try it', gd_sch_d: 'All games, duels and helpers at a glance.', rep_pick: 'What is wrong? Tap one (text is optional):', rep_c1: 'Wrong translation', rep_c2: 'Typo', rep_c3: 'Pronunciation sounds odd', rep_c4: 'Far too hard', rep_c5: 'Something does not work', rep_oops: 'Oops, something went wrong. Use “Report a mistake” to tell us.',
       news: 'What’s new', news_new: 'New in this version', news_all: 'See all updates', news_ver: 'Version',
       boss_locked: 'The test opens once all words are consolidated ({r} of {n}).',
       learn_first: 'First get to know a few new words of this city.',
@@ -533,7 +537,7 @@
 
   /* ---------- Routing ---------- */
   var tab = 'home', view = null;
-  function go(name, arg) { var tb = document.getElementById('tour'); if (tb) { tb.remove(); document.querySelectorAll('.tour-hl').forEach(function (e) { e.classList.remove('tour-hl'); }); } view = null; tab = name; polUI = name === 'polacy'; render(arg); window.scrollTo(0, 0); }
+  function go(name, arg) { if (name !== 'live' && typeof ldLeave === 'function' && LD) ldLeave(); var tb = document.getElementById('tour'); if (tb) { tb.remove(); document.querySelectorAll('.tour-hl').forEach(function (e) { e.classList.remove('tour-hl'); }); } view = null; tab = name; polUI = name === 'polacy'; render(arg); window.scrollTo(0, 0); }
 
   function shell(inner, showNav) {
     /* Spielbildschirm: eine noch offene Einführungs-Tour darf nicht über den Antworten liegen bleiben */
@@ -587,8 +591,10 @@
     if (tab === 'themes') return renderThemes(arg);
     if (tab === 'chat') return renderChat(arg);
     if (tab === 'news') return renderNews();
+    if (tab === 'guide') return renderGuide(arg);
     if (tab === 'conj') return renderConj();
     if (tab === 'school') return renderSchool();
+    if (tab === 'live') return LD ? ldRender() : renderLiveSetup();
     if (tab === 'writing') return renderWriting(arg);
   }
 
@@ -755,6 +761,17 @@
       (hard.length ? '<p class="small"><b>' + esc(t('wr_hard')) + ':</b> ' + hard.map(function (x) { return '<span lang="en">' + esc(x.w[0]) + '</span>'; }).join(' · ') + '</p><button class="btn primary" id="wr-go" style="justify-self:start">' + esc(t('wr_go')) + '</button>' : '') + '</section>';
   }
   /* Was ist neu (3.1.1): nach einem Update einmal auf der Startseite, alle Versionen unter Ich → Was ist neu */
+  /* ---------- Was kann English Trail? Übersicht für Kinder und für Eltern & Lehrkräfte ---------- */
+  function renderGuide(who) {
+    who = who === 'adults' ? 'adults' : 'kids';
+    var G = D.guide || {}, list = G[who] || [];
+    shell('<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>❓ ' + esc(t('gd_title')) + '</h1>' +
+      '<div class="seg" role="tablist"><button class="chip" role="tab" data-gw="kids" aria-pressed="' + (who === 'kids') + '">🧒 ' + esc(t('gd_kids')) + '</button><button class="chip" role="tab" data-gw="adults" aria-pressed="' + (who === 'adults') + '">👪 ' + esc(t('gd_adults')) + '</button></div>' +
+      list.map(function (sec) { return '<section class="card stack"><h2>' + esc(sec.ico + ' ' + sec.t) + '</h2><ul class="news-ul">' + sec.items.map(function (it) { return '<li class="small"><b>' + esc(it[0]) + '</b> – ' + esc(it[1]) + '</li>'; }).join('') + '</ul>' + (sec.go ? '<button class="btn" data-gg="' + esc(sec.go) + '" style="justify-self:start">' + esc(t('gd_try')) + ' →</button>' : '') + '</section>'; }).join(''));
+    document.getElementById('back').onclick = function () { go('me'); };
+    document.querySelectorAll('[data-gw]').forEach(function (b) { b.onclick = function () { renderGuide(b.getAttribute('data-gw')); }; });
+    document.querySelectorAll('[data-gg]').forEach(function (b) { b.onclick = function () { go(b.getAttribute('data-gg')); }; });
+  }
   function newsItems(n) { return (D.news || []).slice(0, n || 99); }
   function newsHtml(x) { return '<div class="stack" style="gap:4px"><b class="num">' + esc(t('news_ver')) + ' ' + esc(x.v) + ' <span class="small muted">· ' + esc(new Date(x.date + 'T12:00').toLocaleDateString(S.base === 'en' ? 'en-GB' : 'de-DE', { day: 'numeric', month: 'long', year: 'numeric' })) + '</span></b><ul class="news-ul">' + (S.base === 'en' ? x.en : x.de).map(function (l) { return '<li class="small">' + esc(l) + '</li>'; }).join('') + '</ul></div>'; }
   function newsBox() {
@@ -763,7 +780,8 @@
       '<button class="btn ghost" id="nw-all" style="justify-self:start;padding-left:0">' + esc(t('news_all')) + ' →</button></section>';
   }
   function renderNews() {
-    shell('<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('news')) + '</h1><section class="card stack">' + newsItems().map(newsHtml).join('<hr class="news-hr">') + '</section>');
+    shell('<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('news')) + '</h1><section class="card stack">' + newsItems().map(newsHtml).join('<hr class="news-hr">') + '</section><button class="btn" id="nw-guide" style="justify-self:start">❓ ' + esc(t('gd_title')) + ' →</button>');
+    document.getElementById('nw-guide').onclick = function () { go('guide', 'kids'); };
     document.getElementById('back').onclick = function () { go('me'); };
     if (S.seenVer !== APP_VER) { S.seenVer = APP_VER; save(); }
   }
@@ -844,6 +862,7 @@
   function renderPractice() {
     var due = dueList().length;
     var html = '<h1>' + esc(t('nav_practice')) + '</h1><section class="tiles">' +
+      tileBtn('live', '⚡ ' + t('live'), t('live_tile_d')) +
       tileBtn('school', '🎒 ' + t('sch'), S.school && S.school.grade ? t('sch_grade').replace('{g}', S.school.grade) : t('sch_d')) +
       tileBtn('review', t('review'), t('review_d'), due ? '<span class="badge num">' + due + ' ' + esc(t('due')) + '</span>' : '') +
       tileBtn('lex', t('lex'), t('lex_d'), '<span class="badge num">' + allWords().filter(function (x) { return S.cards[x.id]; }).length + '</span>') +
@@ -1133,26 +1152,42 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.4', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.5', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
+      '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
       '<textarea maxlength="1000" rows="3" aria-label="' + esc(t('rep')) + '" placeholder="' + esc(t('rep_ph')) + '"></textarea>' +
       '<button type="button" class="btn" style="justify-self:start">' + esc(t('rep_send')) + '</button><p class="small muted" role="status"></p></div></details>';
   }
   function bindReport(id, ctx) {
     var el = document.getElementById(id); if (!el) return;
-    var ta = el.querySelector('textarea'), b = el.querySelector('button'), st = el.querySelector('[role=status]');
+    var ta = el.querySelector('textarea'), b = el.querySelector('button.btn'), st = el.querySelector('[role=status]');
     ta.onkeydown = function (e) { e.stopPropagation(); };
+    var cat = '';
+    el.querySelectorAll('[data-rc]').forEach(function (c) { c.onclick = function () {
+      el.querySelectorAll('[data-rc]').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      c.setAttribute('aria-pressed', 'true'); cat = c.getAttribute('data-rc'); st.textContent = ''; }; });
     b.onclick = function () {
-      var msg = ta.value.trim(); if (!msg) { st.textContent = t('rep_empty'); return; }
+      var txt = ta.value.trim(), msg = (cat ? '[' + T_DE(cat) + '] ' : '') + txt; if (!txt && !cat) { st.textContent = t('rep_empty'); return; }
+      var cx = String(ctx) + (LAST_ERR ? ' | JS: ' + LAST_ERR : '');
       b.disabled = true; st.textContent = t('sync_busy');
-      sbFetch('/rest/v1/et_feedback', { method: 'POST', prefer: 'return=minimal', body: { msg: msg.slice(0, 1000), ctx: String(ctx).slice(0, 500), lang: S.base, ver: APP_VER } })
-        .then(function () { st.textContent = t('rep_thanks'); ta.value = ''; b.disabled = false; },
-          function () { b.disabled = false; copy(msg + '\n\n[' + ctx + ' · ' + APP_VER + ']'); st.innerHTML = esc(t('rep_fail')) + ' <a href="mailto:' + FB_MAIL + '?subject=English%20Trail%20Feedback">' + FB_MAIL + '</a>'; });
+      sbFetch('/rest/v1/et_feedback', { method: 'POST', prefer: 'return=minimal', body: { msg: msg.slice(0, 1000), ctx: cx.slice(0, 500), lang: S.base, ver: APP_VER } })
+        .then(function () { st.textContent = t('rep_thanks'); ta.value = ''; b.disabled = false; cat = ''; el.querySelectorAll('[data-rc]').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); },
+          function () { b.disabled = false; copy(msg + '\n\n[' + cx + ' · ' + APP_VER + ']'); st.innerHTML = esc(t('rep_fail')) + ' <a href="mailto:' + FB_MAIL + '?subject=English%20Trail%20Feedback">' + FB_MAIL + '</a>'; });
     };
   }
 
   /* ---------- Teilen (Vorschlag K): Teilen-Menü des Geräts, sonst kopieren ---------- */
+  /* Technische Fehler merken (nur Text der Fehlermeldung, nichts wird automatisch gesendet) und einmal freundlich auf „Fehler melden“ hinweisen */
+  var LAST_ERR = '', errHinted = false;
+  function T_DE(k) { return (TX.de && TX.de[k]) || k; }
+  function noteErr(m) {
+    LAST_ERR = String(m || '').slice(0, 200); if (errHinted) return; errHinted = true;
+    try { toast(t('rep_oops')); } catch (e) {}
+  }
+  window.addEventListener('error', function (e) { noteErr((e && e.message) + (e && e.lineno ? ' @' + e.lineno : '')); });
+  window.addEventListener('unhandledrejection', function (e) { var r = e && e.reason; if (r && r.name === 'AbortError') return; if (r && /fetch|network|Load failed/i.test(String(r.message || r))) return; noteErr('promise: ' + (r && (r.message || r))); });
+
   function shareOut(text) {
     if (navigator.share) { navigator.share({ text: text }).catch(function (e) { if (!e || e.name !== 'AbortError') copy(text); }); return; }
     copy(text);
@@ -1283,7 +1318,7 @@
       safeBox() +
       '<section class="card"><details><summary class="small" style="cursor:pointer;font-weight:700">' + esc(t('bk_more')) + '</summary><div class="stack" style="margin-top:10px"><p class="small muted">' + esc(t('backup_d')) + '</p><textarea id="bk" aria-label="' + esc(t('backup')) + '">' + esc(JSON.stringify(S)) + '</textarea>' +
       '<div class="row"><button class="btn" id="bk-copy">' + esc(t('bk_copy')) + '</button><button class="btn" id="bk-restore">' + esc(t('restore')) + '</button></div></div></details></section>' +
-      '<section class="card stack"><h2>' + esc(t('news')) + '</h2><p class="small muted">' + esc(t('news_ver')) + ' ' + esc(APP_VER) + '</p><button class="btn" id="news-open" style="justify-self:start">' + esc(t('news_all')) + ' →</button></section>' +
+      '<section class="card stack"><h2>' + esc(t('news')) + '</h2><p class="small muted">' + esc(t('news_ver')) + ' ' + esc(APP_VER) + '</p><div class="row" style="flex-wrap:wrap"><button class="btn" id="news-open">' + esc(t('news_all')) + ' →</button><button class="btn" id="guide-open">❓ ' + esc(t('gd_title')) + '</button></div></section>' +
       '<section class="card stack"><h2>' + esc(t('rv_me')) + '</h2><p class="small">' + esc(t('rv_me_d')) + '</p><button class="btn" id="rv-link" style="justify-self:start">' + esc(t('rv_me_btn')) + '</button></section>' +
       '<section class="card stack"><h2>' + esc(t('about')) + '</h2><p class="small">' + esc(t('about_d')) + '</p><p class="small"><a href="impressum.html">' + esc(t('legal')) + '</a> · <a href="datenschutz.html">' + esc(t('privacy')) + '</a></p><button class="btn ghost" id="tour-again" style="justify-self:start;padding-left:0">' + esc(t('tour_again')) + '</button><p class="small muted">' + esc(t('rep_d')) + '</p>' + reportHtml('rep-me') + '<button class="btn" id="reset" style="justify-self:start;color:var(--bad)">' + esc(resetArmed ? t('reset_q') : t('reset')) + '</button></section>';
     shell(html);
@@ -1306,6 +1341,7 @@
     bindSafe();
     bindReport('rep-me', 'Ich / allgemein');
     document.getElementById('news-open').onclick = function () { go('news'); };
+    document.getElementById('guide-open').onclick = function () { go('guide', 'kids'); };
     document.getElementById('rv-link').onclick = function () { shareOut(t('rv_me_share') + ' ' + SITE + '?review'); };
     document.getElementById('tour-again').onclick = function () { S.tour = false; save(); go('home'); };
     document.getElementById('reset').onclick = function () { if (!resetArmed) { resetArmed = true; renderMe(); return; } resetArmed = false; backup('reset'); S = fresh(); S.onboarded = false; loadData(); save(); render(); };
@@ -1780,7 +1816,7 @@
       '<section class="card stack"><h2>' + esc(t('sch_gram')) + '</h2><p class="small muted">' + esc(t('sch_gram_d').replace('{a}', schLo(g)).replace('{b}', schLo(g) + 1)) + '</p><div class="list">' + tNew.map(topicBtn).join('') + '</div>' +
       (tNew.length ? '<button class="btn" id="sc-gall" style="justify-self:start">' + esc(t('sch_gram_all')) + '</button>' : '') +
       (tOld.length ? '<details><summary class="small"><b>' + esc(t('sch_repeat')) + '</b> (' + tOld.length + ')</summary><div class="list">' + tOld.map(topicBtn).join('') + '</div></details>' : '') + '</section>' +
-      '<section class="card stack"><h2>🏆 ' + esc(t('sch_week')) + '</h2><p class="small">' + esc(t('sch_week_d')) + '</p><p class="small muted">Code: <b class="num">' + esc(C.weekChallengeCode(today(), g)) + '</b></p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-week">' + esc(t('sch_week_go')) + '</button><button class="btn" id="sc-face">' + esc(t('face')) + '</button><button class="btn" id="sc-duel">' + esc(t('sch_duel')) + '</button></div></section>' +
+      '<section class="card stack"><h2>🏆 ' + esc(t('sch_week')) + '</h2><p class="small">' + esc(t('sch_week_d')) + '</p><p class="small muted">Code: <b class="num">' + esc(C.weekChallengeCode(today(), g)) + '</b></p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-week">' + esc(t('sch_week_go')) + '</button><button class="btn" id="sc-face">' + esc(t('face')) + '</button><button class="btn" id="sc-duel">' + esc(t('sch_duel')) + '</button><button class="btn" id="sc-live">⚡ ' + esc(t('live')) + '</button></div></section>' +
       '<section class="card stack"><h2>📝 ' + esc(t('sch_exam')) + '</h2><p class="small muted">' + esc(t('sch_exam_d')) + '</p>' +
       '<fieldset class="stack" style="border:0;padding:0;margin:0"><legend class="small"><b>' + esc(t('sch_exam_pick')) + '</b></legend>' +
       tNew.concat(tOld).map(function (k) { return '<label class="row small"><input type="checkbox" data-xt="' + esc(k) + '"' + (tNew.indexOf(k) >= 0 ? ' checked' : '') + '> ' + esc(T[k].t) + '</label>'; }).join('') +
@@ -1791,8 +1827,11 @@
       '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p>' +
       (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button>'; }).join('') + '</div>' : '') +
       '<button class="btn" id="sc-own" style="justify-self:start">' + esc(t('sch_own_add')) + '</button></section>' +
-      (packs.length ? '<section class="card stack"><h2>' + esc(t('chat')) + '</h2><p class="small">' + esc(t('sch_chat_d').replace('{g}', g)) + '</p><button class="btn" id="sc-chat" style="justify-self:start">' + esc(t('chat')) + '</button></section>' : '');
+      (packs.length ? '<section class="card stack"><h2>' + esc(t('chat')) + '</h2><p class="small">' + esc(t('sch_chat_d').replace('{g}', g)) + '</p><button class="btn" id="sc-chat" style="justify-self:start">' + esc(t('chat')) + '</button></section>' : '') +
+      '<section class="card stack"><h2>❓ ' + esc(t('gd_title')) + '</h2><p class="small">' + esc(t('gd_sch_d')) + '</p><button class="btn" id="sc-guide" style="justify-self:start">' + esc(t('gd_open')) + ' →</button><p class="small muted">' + esc(t('rep_d')) + '</p>' + reportHtml('rep-sch') + '</section>';
     shell(html);
+    document.getElementById('sc-guide').onclick = function () { go('guide', 'kids'); };
+    bindReport('rep-sch', 'school K' + g);
     document.getElementById('back').onclick = function () { go('practice'); };
     document.getElementById('sc-edit').onclick = function () { SCH.edit = true; renderSchool(); };
     bindLikes();
@@ -1810,6 +1849,7 @@
     document.getElementById('sc-own').onclick = function () { go('mywords'); };
     document.getElementById('sc-week').onclick = function () { var pl = C.duelPlan(RAW, C.weekChallengeCode(today(), g)); if (!pl) return toast(t('d2_bad')); duelCodeDraft = pl.code; duelGrade = g; tab = 'duel'; renderDuelReady(pl); };
     document.getElementById('sc-face').onclick = function () { faceSrc = 'school'; go('face'); };
+    document.getElementById('sc-live').onclick = function () { S.liveSrc = 'school'; go('live'); };
     document.getElementById('sc-duel').onclick = function () { duelGrade = g; duelCodeDraft = C.duelNewCode(Math.random, '1', g); go('duel'); };
     document.querySelectorAll('[data-sw]').forEach(function (b) { b.onclick = function () { SCH.wr = null; go('writing', +b.getAttribute('data-sw')); }; });
     document.querySelectorAll('[data-su]').forEach(function (b) { b.onclick = function () { SCH.unit = b.getAttribute('data-su'); startMode('sunit'); }; });
@@ -1854,6 +1894,150 @@
       if (r.score >= 80 && !W.done) { W.done = true; addXp(30); markActive(); save(); }
     };
     document.getElementById('wr-check').onclick = res;
+  }
+
+  /* ---------- Live-Duell: 2 Handys in Echtzeit, wer zuerst richtig antwortet, bekommt den Punkt ----------
+     Idee aus GeoQuest (Supabase-Realtime „Broadcast“ in einem Raum), aber robuster: Die Fragen kommen deterministisch
+     aus dem Duell-Code (C.duelPlan) – über den Kanal laufen nur „hi“, „ready“, „go“, „ans“ (Frage, richtig?, Zeit) und „bye“.
+     Kein Konto, nichts wird gespeichert: nur Spitzname und Antworten gehen live ans andere Handy (Kinder unter 16). */
+  var LD = null, LD_Q_MS = 20000, LD_WAIT_MS = 25000;
+  function ldRT(code, onMsg, onState) {
+    var url = SB_URL.replace(/^http/, 'ws') + '/realtime/v1/websocket?' + new URLSearchParams({ apikey: SB_KEY, vsn: '1.0.0' }).toString();
+    var topic = 'realtime:et_live_' + code, ref = 0, hb = null, ws = new WebSocket(url), joined = false;
+    var rt = {
+      send: function (ev, payload) { if (ws.readyState === 1 && joined) ws.send(JSON.stringify({ topic: topic, event: 'broadcast', payload: { type: 'broadcast', event: ev, payload: payload }, ref: String(++ref), join_ref: '1' })); },
+      close: function () { clearInterval(hb); try { ws.close(); } catch (e) {} }
+    };
+    ws.onopen = function () {
+      ws.send(JSON.stringify({ topic: topic, event: 'phx_join', payload: { config: { broadcast: { self: false, ack: false }, presence: { key: '' }, postgres_changes: [], private: false }, access_token: SB_KEY }, ref: String(++ref), join_ref: '1' }));
+      hb = setInterval(function () { if (ws.readyState === 1) ws.send(JSON.stringify({ topic: 'phoenix', event: 'heartbeat', payload: {}, ref: String(++ref) })); }, 25000);
+    };
+    ws.onmessage = function (e) {
+      var m; try { m = JSON.parse(e.data); } catch (er) { return; }
+      if (m.event === 'phx_reply' && m.topic === topic && !joined) { joined = m.payload && m.payload.status === 'ok'; onState(joined ? 'joined' : 'error'); return; }
+      if (m.event === 'broadcast' && m.payload) onMsg(m.payload.event, m.payload.payload || {});
+    };
+    ws.onerror = function () { onState('error'); };
+    ws.onclose = function () { clearInterval(hb); onState('closed'); };
+    return rt;
+  }
+  function ldLeave() { if (LD) { clearTimeout(LD.tq); clearTimeout(LD.tw); clearInterval(LD.tc); if (LD.rt) { LD.rt.send('bye', { id: LD.me.id }); LD.rt.close(); } } LD = null; }
+  function renderLiveSetup() {
+    ldLeave();
+    var g = S.school && S.school.grade, src = S.liveSrc === 'trail' || !g ? 'trail' : 'school';
+    shell('<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>⚡ ' + esc(t('live')) + '</h1>' +
+      '<section class="card stack"><p class="small">' + esc(t('live_d')) + '</p>' +
+      '<label class="small" for="ld-name"><b>' + esc(t('live_name')) + '</b></label><input type="text" id="ld-name" maxlength="20" autocomplete="off" value="' + esc(S.name || '') + '">' +
+      (g ? '<b class="small">' + esc(t('d2_src')) + '</b><div class="seg" id="ld-src">' + segBtn('trail', t('d2_src_trail'), src === 'trail') + segBtn('school', t('sch_grade').replace('{g}', g), src === 'school') + '</div>' : '') +
+      '<button class="btn primary" id="ld-new">' + esc(t('live_new')) + '</button></section>' +
+      '<section class="card stack"><b>' + esc(t('live_join')) + '</b><input type="text" id="ld-code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="FOX-472-1" style="text-transform:uppercase;letter-spacing:.08em">' +
+      '<p class="small" id="ld-err" role="alert" hidden></p><button class="btn" id="ld-go">' + esc(t('live_join_btn')) + '</button></section>' +
+      '<p class="small muted">' + esc(t('live_privacy')) + '</p>');
+    document.getElementById('back').onclick = function () { go(S.school && S.school.grade ? 'school' : 'practice'); };
+    bindSeg('ld-src', function (v) { S.liveSrc = v; save(); renderLiveSetup(); });
+    var nm = function () { S.name = C.duelName(document.getElementById('ld-name').value) || S.name || ''; save(); return S.name || t('live_me'); };
+    document.getElementById('ld-new').onclick = function () { ldStart(C.duelNewCode(Math.random, '1', src === 'school' ? g : 0), nm()); };
+    document.getElementById('ld-go').onclick = function () {
+      var pc = C.duelParse(document.getElementById('ld-code').value), er = document.getElementById('ld-err');
+      if (!pc || !C.duelPlan(RAW, pc.code)) { er.textContent = t('d2_bad'); er.hidden = false; return; }
+      ldStart(pc.code, nm());
+    };
+  }
+  function ldStart(code, name) {
+    if (!navigator.onLine) return toast(t('live_offline'));
+    var pl = C.duelPlan(RAW, code); if (!pl) return toast(t('d2_bad'));
+    tab = 'live';
+    LD = { code: pl.code, check: pl.check, plan: pl.plan, me: { id: Math.random().toString(36).slice(2, 10), name: name, ready: false }, opp: null, phase: 'connect', i: -1, ans: {}, score: [0, 0], right: 0 };
+    var me = LD;
+    LD.rt = ldRT(pl.code, function (ev, p) { if (LD === me) ldOnMsg(ev, p); }, function (st) {
+      if (LD !== me) return;
+      if (st === 'joined') { LD.phase = 'wait'; LD.rt.send('hi', { id: LD.me.id, name: LD.me.name, check: LD.check }); }
+      else if (st === 'error' || (st === 'closed' && LD.phase !== 'done')) { LD.phase = 'error'; }
+      ldRender();
+    });
+    ldRender();
+  }
+  function ldOnMsg(ev, p) {
+    if (ev === 'hi') {
+      if (p.id === LD.me.id || (LD.opp && LD.opp.id !== p.id)) return;
+      var first = !LD.opp; LD.opp = { id: p.id, name: C.duelName(p.name) || t('live_opp'), ready: false, bad: p.check && p.check !== LD.check };
+      if (first) LD.rt.send('hi', { id: LD.me.id, name: LD.me.name, check: LD.check });
+      if (LD.phase === 'wait') LD.phase = 'lobby';
+      return ldRender();
+    }
+    if (!LD.opp || p.id && p.id !== LD.opp.id && ev !== 'go') return;
+    if (ev === 'ready') { LD.opp.ready = true; ldMaybeGo(); return ldRender(); }
+    if (ev === 'go' && LD.phase === 'lobby') return ldCountdown();
+    if (ev === 'ans') { (LD.ans[p.i] = LD.ans[p.i] || {}).opp = { ok: !!p.ok, ms: +p.ms || LD_Q_MS }; return ldResolve(p.i); }
+    if (ev === 'bye' && LD.phase !== 'done') { LD.left = true; if (LD.phase === 'play') ldFinish(); else { LD.phase = 'wait'; LD.opp = null; ldRender(); } }
+  }
+  function ldMaybeGo() { if (LD.me.ready && LD.opp && LD.opp.ready && LD.phase === 'lobby' && LD.me.id < LD.opp.id) { LD.rt.send('go', { id: LD.me.id }); ldCountdown(); } }
+  function ldCountdown() {
+    LD.phase = 'count'; LD.count = 3; ldRender();
+    LD.tc = setInterval(function () { if (!LD) return; LD.count--; if (LD.count <= 0) { clearInterval(LD.tc); LD.phase = 'play'; ldShowQ(0); } else ldRender(); }, 1000);
+  }
+  function ldShowQ(i) {
+    if (i >= LD.plan.length) return ldFinish();
+    var it = LD.plan[i], q = duelQ(it);
+    if (q.type !== 'mc') { q.type = 'mc'; q.opts = (it.opts || []).slice(); }
+    LD.i = i; LD.q = q; LD.t0 = Date.now(); LD.locked = false; LD.reveal = null; ldRender();
+    clearTimeout(LD.tq); clearTimeout(LD.tw);
+    LD.tq = setTimeout(function () { if (LD && LD.i === i && !LD.locked) ldAnswer(null); }, LD_Q_MS);
+    LD.tw = setTimeout(function () { if (LD && LD.i === i) { var a = LD.ans[i] = LD.ans[i] || {}; if (!a.opp) a.opp = { ok: false, ms: LD_Q_MS }; ldResolve(i); } }, LD_WAIT_MS);
+  }
+  function ldAnswer(opt) {
+    if (!LD || LD.locked || LD.phase !== 'play') return;
+    var i = LD.i, ok = opt != null && C.norm(opt) === C.norm(LD.q.a), ms = opt == null ? LD_Q_MS : Date.now() - LD.t0;
+    LD.locked = true; LD.picked = opt; (LD.ans[i] = LD.ans[i] || {}).me = { ok: ok, ms: ms };
+    if (ok) LD.right++;
+    LD.rt.send('ans', { id: LD.me.id, i: i, ok: ok, ms: ms });
+    if (LD.q.sayAfter || LD.q.say) try { speak(LD.q.sayAfter || LD.q.say); } catch (e) {}
+    ldResolve(i); ldRender();
+  }
+  function ldResolve(i) {
+    var a = LD && LD.ans[i]; if (!a || !a.me || !a.opp || i !== LD.i || LD.reveal) return;
+    var w = C.liveWinner(a.me, a.opp, LD.me.id, LD.opp ? LD.opp.id : '');
+    if (w === 1) LD.score[0]++; else if (w === -1) LD.score[1]++;
+    LD.reveal = { w: w }; clearTimeout(LD.tq); clearTimeout(LD.tw); ldRender();
+    setTimeout(function () { if (LD && LD.i === i && LD.phase === 'play') ldShowQ(i + 1); }, 1800);
+  }
+  function ldFinish() {
+    LD.phase = 'done'; clearTimeout(LD.tq); clearTimeout(LD.tw);
+    addXp(LD.right * 10); if (LD.i >= 2) markActive(); save(); ldRender();
+  }
+  function ldRender() {
+    if (!LD || tab !== 'live') return;
+    var on = LD.opp ? esc(LD.opp.name) : '…', me = esc(LD.me.name), html = '';
+    var head = '<section class="card row" style="justify-content:space-between"><span><b>' + me + '</b> <span class="num">' + LD.score[0] + '</span></span><span class="small muted num">' + (LD.phase === 'play' ? (LD.i + 1) + '/' + LD.plan.length : '') + '</span><span><span class="num">' + LD.score[1] + '</span> <b>' + on + '</b></span></section>';
+    if (LD.phase === 'connect') html = '<section class="card"><p>' + esc(t('live_connect')) + '</p></section>';
+    else if (LD.phase === 'error') html = '<section class="card stack"><p>' + esc(t('live_err')) + '</p><button class="btn" id="ld-back">' + esc(t('back')) + '</button></section>';
+    else if (LD.phase === 'wait') html = '<section class="card stack" style="text-align:center"><span class="eyebrow">' + esc(t('live_code')) + '</span><div class="score num" lang="en" style="letter-spacing:.06em">' + esc(LD.code) + '</div><p class="small">' + esc(t('live_wait')) + '</p><button class="btn" id="ld-copy">' + esc(t('d2_send_code')) + '</button><button class="btn ghost" id="ld-back">' + esc(t('back')) + '</button></section>';
+    else if (LD.phase === 'lobby') html = '<section class="card stack" style="text-align:center"><p>' + esc(t('live_found').replace('{n}', LD.opp.name)) + '</p>' + (LD.opp.bad ? '<p class="small" role="alert">' + esc(t('live_ver')) + '</p>' : '') +
+      '<p class="small muted">' + esc(LD.me.ready ? (LD.opp.ready ? '' : t('live_wait_ready').replace('{n}', LD.opp.name)) : (LD.opp.ready ? t('live_opp_ready').replace('{n}', LD.opp.name) : '')) + '</p>' +
+      (LD.me.ready ? '' : '<button class="btn primary" id="ld-ready">' + esc(t('live_ready')) + '</button>') + '<button class="btn ghost" id="ld-back">' + esc(t('back')) + '</button></section>';
+    else if (LD.phase === 'count') html = '<section class="card" style="text-align:center"><div class="score num">' + LD.count + '</div></section>';
+    else if (LD.phase === 'play') {
+      var q = LD.q, a = LD.ans[LD.i] || {}, rv = LD.reveal;
+      html = head + '<section class="card stack"><span class="small muted">' + esc(q.ask || '') + '</span>' +
+        (q.big ? '<div class="' + (q.small ? 'sentence' : 'big') + '" lang="' + (q.bigPl ? 'en' : 'de') + '">' + esc(q.big) + '</div>' : '') +
+        (q.sentence ? '<div class="sentence" lang="en">' + esc(q.sentence).replace('___', '<span class="blank">&nbsp;</span>') + '</div>' : '') +
+        '<div class="opts">' + q.opts.map(function (o) {
+          var cls = rv || LD.locked ? (C.norm(o) === C.norm(q.a) ? ' good' : (o === LD.picked ? ' bad' : '')) : '';
+          return '<button class="opt' + cls + '" data-lo="' + esc(o) + '"' + (LD.locked ? ' disabled' : '') + (q.plOpts ? ' lang="en"' : '') + '>' + esc(o) + '</button>';
+        }).join('') + '</div>' +
+        '<p class="small" role="status">' + (rv ? esc(rv.w === 1 ? t('live_pt_me') : rv.w === -1 ? t('live_pt_opp').replace('{n}', LD.opp.name) : t('live_pt_none')) : LD.locked ? esc(a.me && a.me.ok ? t('live_ok_wait') : t('live_wrong')) : (a.opp ? esc(t('live_opp_done').replace('{n}', LD.opp ? LD.opp.name : '')) : '')) + '</p></section>';
+    } else if (LD.phase === 'done') {
+      var res = LD.score[0] > LD.score[1] ? t('live_win') : LD.score[0] < LD.score[1] ? t('live_lose').replace('{n}', LD.opp ? LD.opp.name : t('live_opp')) : t('live_draw');
+      html = head + '<section class="card stack" style="text-align:center"><div class="big">' + esc(res) + '</div>' + (LD.left ? '<p class="small muted">' + esc(t('live_left')) + '</p>' : '') +
+        '<p class="small">' + esc(t('live_right').replace('{n}', LD.right).replace('{t}', LD.plan.length)) + '</p><button class="btn primary" id="ld-again">' + esc(t('live_again')) + '</button><button class="btn ghost" id="ld-back">' + esc(t('back')) + '</button></section>';
+    }
+    shell('<h1>⚡ ' + esc(t('live')) + '</h1>' + html);
+    var b;
+    if ((b = document.getElementById('ld-back'))) b.onclick = function () { ldLeave(); renderLiveSetup(); };
+    if ((b = document.getElementById('ld-copy'))) b.onclick = function () { copy('English Trail ⚡ ' + t('live') + ': ' + LD.code + ' – ' + SITE); };
+    if ((b = document.getElementById('ld-ready'))) b.onclick = function () { LD.me.ready = true; LD.rt.send('ready', { id: LD.me.id }); ldMaybeGo(); ldRender(); };
+    if ((b = document.getElementById('ld-again'))) b.onclick = function () { var nm = LD.me.name, g = C.duelParse(LD.code).grade; ldLeave(); ldStart(C.duelNewCode(Math.random, '1', g), nm); };
+    document.querySelectorAll('[data-lo]').forEach(function (x) { x.onclick = function () { ldAnswer(x.getAttribute('data-lo')); }; });
   }
 
   var lastMode = null;
@@ -1915,6 +2099,7 @@
     }
     if (mode === 'conj') { tab = 'conj'; return renderConj(); }
     if (mode === 'school') return go('school');
+    if (mode === 'live') return go('live');
     if (mode === 'sgram') { var gl = D.cases.filter(function (c) { return SCH.topics.indexOf(c.g) >= 0; }); return runGame({ title: t('sch_gram'), qs: C.shuffle(gl, R).slice(0, Math.min(n, gl.length)).map(qCase), back: 'school' }); }
     if (mode === 'sexam') return startSchoolExam();
     if (mode === 'sunit') { var uw = schUnits()[SCH.unit] || []; if (uw.length < 2) return toast(t('sch_unit_few')); return runGame({ title: SCH.unit, qs: mixedFor(uw, uw.length >= 4 ? uw : uw.concat(pool), Math.min(n, Math.max(uw.length * 2, 4))), back: 'school' }); }
@@ -2129,7 +2314,7 @@
     if (!cfg.players) cfg.mode = cfg.mode || lastMode;
     G = { cfg: cfg, i: 0, qs: cfg.qs, combo: 0, best: 0, right: 0, wrong: 0, xp: 0, results: [], lives: cfg.lives || 0, learned: [], start: Date.now(), ended: false, timerId: null, players: cfg.players || null, pi: 0, pscore: cfg.players ? cfg.players.map(function () { return 0; }) : null };
     view = 'game';
-    if (cfg.timer) { G.left = cfg.timer; G.timerId = setInterval(function () { G.left--; var el = document.getElementById('timer'); if (el) el.textContent = G.left; if (G.left <= 0) { clearInterval(G.timerId); endGame(); } }, 1000); }
+    if (cfg.timer) { G.left = cfg.timer; var g0 = G; G.timerId = setInterval(function () { if (G !== g0) { clearInterval(g0.timerId); return; } G.left--; var el = document.getElementById('timer'); if (el) el.textContent = G.left; if (G.left <= 0) { clearInterval(G.timerId); endGame(); } }, 1000); }
     drawQ();
   }
   function gameTop() {
@@ -3091,5 +3276,5 @@
   /* Service Worker nur im eigenen Hosting (nicht in Vorschauen/iframes) */
   try { if ('serviceWorker' in navigator && location.protocol === 'https:' && window.top === window.self && document.documentElement.getAttribute('data-pwa') === '1') navigator.serviceWorker.register('sw.js'); } catch (e) {}
 
-  window.PSApp = { state: function () { return S; }, startMode: startMode, go: go, game: function () { return G; }, data: function () { return D; } };
+  window.PSApp = { state: function () { return S; }, startMode: startMode, go: go, game: function () { return G; }, data: function () { return D; }, live: function () { return LD; } };
 })();

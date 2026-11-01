@@ -16580,6 +16580,20 @@
  ],
  "news": [
   {
+   "v": "0.5",
+   "date": "2026-11-01",
+   "de": [
+    "Live-Duell: Zwei Handys, gleiche Vokabeln in Echtzeit – wer zuerst richtig antwortet, bekommt den Punkt. Ohne Konto, nur mit Spitznamen.",
+    "Fehler melden geht jetzt mit einem Tipp: „Übersetzung falsch“, „Tippfehler“, „zu schwer“ … – auch direkt im Schulbereich.",
+    "Neu: „Was kann English Trail?“ – alle Funktionen auf einen Blick, für Kinder und für Eltern & Lehrkräfte (unter „Ich“)."
+   ],
+   "en": [
+    "Live-Duell: Zwei Handys, gleiche Vokabeln in Echtzeit – wer zuerst richtig antwortet, bekommt den Punkt. Ohne Konto, nur mit Spitznamen.",
+    "Fehler melden geht jetzt mit einem Tipp: „Übersetzung falsch“, „Tippfehler“, „zu schwer“ … – auch direkt im Schulbereich.",
+    "Neu: „Was kann English Trail?“ – alle Funktionen auf einen Blick, für Kinder und für Eltern & Lehrkräfte (unter „Ich“)."
+   ]
+  },
+  {
    "v": "0.4",
    "date": "2026-11-01",
    "de": [
@@ -16861,5 +16875,234 @@
     "k": 10
    }
   }
+ },
+ "guide": {
+  "kids": [
+   {
+    "ico": "🗺️",
+    "t": "Die Reise",
+    "go": "home",
+    "items": [
+     [
+      "12 Orte",
+      "Von London bis Dublin – jeder Ort hat ein Thema, Wörter, Sätze und eine kleine Szene."
+     ],
+     [
+      "Brief von Emma",
+      "Nach jedem Ort kannst du einen Satz mehr lesen. Rabe Rufus bringt ihn dir."
+     ],
+     [
+      "Orts-Prüfung",
+      "Wenn die Wörter sitzen, schaltest du den nächsten Ort frei."
+     ]
+    ]
+   },
+   {
+    "ico": "🎒",
+    "t": "Schule (Gymnasium BW, Klasse 5–10)",
+    "go": "school",
+    "items": [
+     [
+      "Stoff deiner Klasse",
+      "Wortschatz-Pakete und Grammatik passend zum Bildungsplan."
+     ],
+     [
+      "Deine Buch-Vokabeln",
+      "Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste."
+     ],
+     [
+      "Probe-Klassenarbeit",
+      "Grammatik, Vokabeln, Hören, Lesen, Sprachmittlung – mit Note."
+     ],
+     [
+      "Schreibauftrag",
+      "Die App prüft Länge, Pflichtwörter und Verbindungswörter."
+     ],
+     [
+      "Lieblingsthemen",
+      "Gaming, Fußball, Tiere, Musik, Social Media, Fantasy, Technik, Mode – du wählst."
+     ]
+    ]
+   },
+   {
+    "ico": "⚔️",
+    "t": "Gegen andere spielen",
+    "go": "practice",
+    "items": [
+     [
+      "Live-Duell",
+      "Zwei Handys, gleiche Fragen in Echtzeit. Wer zuerst richtig antwortet, bekommt den Punkt."
+     ],
+     [
+      "Gegenüber",
+      "Ein Handy, zwei Spieler – wer zuerst richtig tippt."
+     ],
+     [
+      "Duell-Code",
+      "Gleiche Fragen für alle, die den Code haben – vergleicht danach die Punkte."
+     ],
+     [
+      "Wochen-Challenge",
+      "Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen."
+     ]
+    ]
+   },
+   {
+    "ico": "🎮",
+    "t": "Üben & Spiele",
+    "go": "practice",
+    "items": [
+     [
+      "Wiederholen",
+      "Die App merkt sich, welche Wörter du bald vergisst, und fragt sie rechtzeitig."
+     ],
+     [
+      "Zeiten-Werkstatt & unregelmäßige Verben",
+      "Simple Past, Present Perfect, go – went – gone …"
+     ],
+     [
+      "Blitz, Memory, Stadt-Land-Fluss, Zungenbrecher",
+      "Schnelle Spiele für zwischendurch."
+     ],
+     [
+      "KI-Gespräch",
+      "Unterhalte dich auf Englisch – passend zu deiner Klasse."
+     ]
+    ]
+   },
+   {
+    "ico": "🏅",
+    "t": "Sammeln & Belohnungen",
+    "go": "album",
+    "items": [
+     [
+      "Raben-Album",
+      "Sammle 24 Raben auf deiner Reise."
+     ],
+     [
+      "Wochenziel statt Tages-Druck",
+      "Ein Tag Pause ist kein Problem – es zählt die Woche."
+     ],
+     [
+      "Joker",
+      "50:50, Tipp und Pause-Joker für schwere Fragen."
+     ]
+    ]
+   },
+   {
+    "ico": "🛟",
+    "t": "Hilfe",
+    "go": "me",
+    "items": [
+     [
+      "Fehler melden",
+      "Etwas falsch? Unter jeder Frage und unter „Ich“ auf „Fehler melden“ tippen. Ein Tipp auf „Übersetzung falsch“ reicht."
+     ],
+     [
+      "Was ist neu",
+      "Alle Neuerungen findest du unter „Ich“."
+     ],
+     [
+      "Dein Fortschritt bleibt",
+      "Bei Updates geht nichts verloren. Vorher wird automatisch gesichert."
+     ]
+    ]
+   }
+  ],
+  "adults": [
+   {
+    "ico": "📚",
+    "t": "Was das Kind lernt",
+    "go": "school",
+    "items": [
+     [
+      "Bildungsplan BW (Gymnasium, Kl. 5–10)",
+      "Wortschatz- und Grammatikthemen je Klassenstufe."
+     ],
+     [
+      "Lehrwerk",
+      "Green Line, Access oder andere Bücher auswählen; eigene Unit-Vokabeln eintragen."
+     ],
+     [
+      "Klassenarbeits-Training",
+      "Probe-Arbeit mit Hörverstehen, Leseverstehen, Sprachmittlung und Note."
+     ]
+    ]
+   },
+   {
+    "ico": "🧠",
+    "t": "Wie gelernt wird",
+    "items": [
+     [
+      "Verteilte Wiederholung",
+      "Wörter kommen in wachsenden Abständen wieder (Leitner-System)."
+     ],
+     [
+      "Kurze Einheiten",
+      "5–10 Minuten reichen. Sprechen, Hören und beide Richtungen werden geübt."
+     ],
+     [
+      "Kein Streak-Druck, keine Werbung, keine Käufe",
+      "Wochenziel statt Tages-Serie, keine Push-Nachrichten."
+     ]
+    ]
+   },
+   {
+    "ico": "👩‍🏫",
+    "t": "Für Lehrkräfte",
+    "go": "school",
+    "items": [
+     [
+      "Wochen-Challenge",
+      "Alle Kinder einer Klassenstufe bekommen dieselben Fragen – ohne Anmeldung."
+     ],
+     [
+      "Duell-Code mit Klassenstufe",
+      "Codes mit „-K7“ nutzen nur Stoff bis Klasse 7."
+     ],
+     [
+      "Live-Duell",
+      "Zwei Kinder treten in Echtzeit an – ohne Konto, nur Spitzname."
+     ]
+    ]
+   },
+   {
+    "ico": "🔒",
+    "t": "Datenschutz",
+    "items": [
+     [
+      "Ohne Konto nutzbar",
+      "Fortschritt bleibt auf dem Gerät. Geräte-Sync ist freiwillig."
+     ],
+     [
+      "Live-Duell",
+      "Läuft über einen kurzlebigen Kanal; es wird nichts gespeichert, nur der Spitzname wird übertragen."
+     ],
+     [
+      "Fehler melden",
+      "Gesendet werden nur Text, Übung und App-Version – keine Namen, keine Konto-ID."
+     ],
+     [
+      "Unter 16",
+      "Für Geräte-Sync und KI-Gespräch bitte gemeinsam mit den Eltern entscheiden."
+     ]
+    ]
+   },
+   {
+    "ico": "💾",
+    "t": "Sicherheit des Fortschritts",
+    "go": "me",
+    "items": [
+     [
+      "Automatische Sicherung",
+      "Vor jedem Update wird der Stand gesichert."
+     ],
+     [
+      "Sicherung kopieren",
+      "Unter „Ich“ kann der ganze Stand kopiert und wiederhergestellt werden."
+     ]
+    ]
+   }
+  ]
  }
 }

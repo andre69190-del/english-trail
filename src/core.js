@@ -478,6 +478,14 @@
   }
 
   /* PATCH003: Karte, Entfernung, Höher/Tiefer, Zeitstrahl, Buchstabensalat */
+  /* Live-Duell: Wer bekommt den Punkt? 1 = ich, -1 = Gegner, 0 = keiner. Nur richtige Antworten zählen, dann die schnellere;
+     bei exakt gleicher Zeit entscheidet die kleinere Spieler-ID – so rechnen beide Handys dasselbe Ergebnis aus. */
+  function liveWinner(me, opp, myId, oppId) {
+    var a = me && me.ok, b = opp && opp.ok;
+    if (!a && !b) return 0; if (a && !b) return 1; if (b && !a) return -1;
+    if (me.ms !== opp.ms) return me.ms < opp.ms ? 1 : -1;
+    return String(myId) < String(oppId) ? 1 : -1;
+  }
   /* English Trail: Wochen-Challenge der Klasse – die ganze Woche (Mo–So) derselbe Code für alle in dieser Klasse */
   function weekChallengeCode(todayKey, grade) {
     var mon = parseDay(weekKey(todayKey)), base = new Date(2026, 0, 5), idx = Math.round((mon - base) / 864e5 / 7);
@@ -604,7 +612,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

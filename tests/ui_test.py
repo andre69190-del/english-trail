@@ -238,6 +238,24 @@ with sync_playwright() as p:
     (ok if page.locator('.news-ul').count() >= 1 else bad)('Seite „Was ist neu“')
     page.evaluate("() => window.PSApp.go('home')"); (ok if not page.locator('#nw').count() else bad)('Update-Hinweis nur einmal')
 
+    # Übersicht „Was kann English Trail?“ + kinderleichtes Fehler melden (0.5)
+    page.evaluate("() => window.PSApp.go('news')"); page.wait_for_selector('#nw-guide'); page.click('#nw-guide'); page.wait_for_selector('[data-gw]')
+    n_k = page.locator('main section.card').count(); page.click('[data-gw="adults"]'); page.wait_for_timeout(100)
+    (ok if n_k >= 5 and page.locator('main section.card').count() >= 4 and 'Datenschutz' in page.inner_text('main') else bad)('Übersicht für Kinder (%d) und Eltern & Lehrkräfte' % n_k)
+    page.click('[data-gg="school"]'); page.wait_for_timeout(150)
+    (ok if page.evaluate("() => window.PSApp.state() && document.querySelector('h1').textContent.indexOf('🎒') >= 0") else bad)('Übersicht: Ausprobieren öffnet die Ansicht')
+    page.evaluate("() => window.PSApp.go('me')"); (ok if page.locator('#guide-open').count() else bad)('Übersicht unter „Ich“ verlinkt')
+    sent = []
+    _cors = {'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'POST, OPTIONS'}
+    page.route('**/rest/v1/et_feedback', lambda r: (sent.append(r.request.post_data) if r.request.method == 'POST' else None, r.fulfill(status=201 if r.request.method == 'POST' else 204, headers=_cors, body='')))
+    page.locator('#rep-me summary').click(); page.click('#rep-me [data-rc="rep_c1"]'); page.click('#rep-me button.btn'); page.wait_for_timeout(300)
+    (ok if sent and 'Übersetzung falsch' in sent[0] and 'Danke' in page.inner_text('#rep-me') else bad)('Fehler melden mit einem Tipp (ohne Text)')
+    page.evaluate("() => setTimeout(function(){ throw new Error('testfehler'); }, 0)"); page.wait_for_timeout(200)
+    page.click('#rep-me [data-rc="rep_c5"]'); page.click('#rep-me button.btn'); page.wait_for_timeout(300)
+    (ok if len(sent) > 1 and 'testfehler' in sent[1] else bad)('Fehler melden hängt die letzte technische Fehlermeldung an')
+    page.unroute('**/rest/v1/et_feedback')
+    errors[:] = [e for e in errors if 'testfehler' not in e]
+
     # ---------- 3.1 KI-Gespräch (Server nachgebaut) ----------
     import json as _json
     def _sb(route):
@@ -412,6 +430,41 @@ with sync_playwright() as p:
     sp.evaluate("() => window.PSApp.startMode('scene', window.PSApp.data().units.findIndex(u => u.id === 'i_game'))")
     (ok if play_through(sp) else bad)('Interessen-Paket Gaming: Szene spielbar')
     sx.close()
+
+    # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------
+    MOCK = """(() => { window.WebSocket = function (url) { const self = this; this.readyState = 0; this.url = url; const bc = new BroadcastChannel('mockrt'); let topic = null;
+      setTimeout(() => { self.readyState = 1; self.onopen && self.onopen(); }, 30);
+      bc.onmessage = (e) => { const m = e.data; if (m.topic === topic && self.onmessage) self.onmessage({ data: JSON.stringify({ topic, event: 'broadcast', payload: m.payload }) }); };
+      this.send = (txt) => { const m = JSON.parse(txt); if (m.event === 'phx_join') { topic = m.topic; setTimeout(() => self.onmessage && self.onmessage({ data: JSON.stringify({ topic, event: 'phx_reply', ref: m.ref, payload: { status: 'ok', response: {} } }) }), 20); } else if (m.event === 'broadcast') bc.postMessage({ topic: m.topic, payload: m.payload }); };
+      this.close = () => { bc.close(); self.readyState = 3; }; }; })();"""
+    lx = b.new_context(viewport={'width': 375, 'height': 812}); lx.add_init_script(MOCK)
+    p1 = lx.new_page(); p2 = lx.new_page()
+    for pg in (p1, p2):
+        pg.on('pageerror', lambda e: errors.append(str(e)))
+        pg.goto(URL); pg.wait_for_selector('#app'); pg.wait_for_timeout(300)
+        if pg.locator('#ob-go').count(): pg.click('#ob-go'); pg.wait_for_timeout(200)
+        pg.evaluate("() => window.PSApp.go('live')"); pg.wait_for_selector('#ld-new')
+    p1.fill('#ld-name', 'Mia'); p1.click('#ld-new'); p1.wait_for_selector('#ld-copy')
+    code = p1.evaluate("() => window.PSApp.live().code")
+    p2.fill('#ld-name', 'Ben'); p2.fill('#ld-code', code); p2.click('#ld-go'); p2.wait_for_selector('#ld-ready'); p1.wait_for_selector('#ld-ready')
+    (ok if 'Ben' in p1.inner_text('main') and 'Mia' in p2.inner_text('main') else bad)('Live-Duell: beide sehen sich (Code %s)' % code)
+    p1.click('#ld-ready'); p2.click('#ld-ready'); p1.wait_for_selector('[data-lo]', timeout=8000); p2.wait_for_selector('[data-lo]', timeout=8000)
+    same = p1.evaluate("() => window.PSApp.live().q.a") == p2.evaluate("() => window.PSApp.live().q.a")
+    (ok if same else bad)('Live-Duell: beide haben dieselbe Frage')
+    a1 = p1.evaluate("() => window.PSApp.live().q.a"); wrong = [o for o in p2.evaluate("() => window.PSApp.live().q.opts") if o != a1][0]
+    p2.click('[data-lo="%s"]' % wrong.replace('"', '\\"')); p1.wait_for_timeout(150); p1.click('[data-lo="%s"]' % a1.replace('"', '\\"')); p1.wait_for_timeout(500)
+    s1 = p1.evaluate("() => window.PSApp.live().score"); s2 = p2.evaluate("() => window.PSApp.live().score")
+    (ok if s1 == [1, 0] and s2 == [0, 1] else bad)('Live-Duell: Punkt für die richtige Antwort, beide Handys gleich (%s / %s)' % (s1, s2))
+    p1.wait_for_timeout(2200)
+    (ok if p1.evaluate("() => window.PSApp.live().i") == 1 and p2.evaluate("() => window.PSApp.live().i") == 1 else bad)('Live-Duell: beide gehen gemeinsam zur nächsten Frage')
+    a2 = p1.evaluate("() => window.PSApp.live().q.a")
+    p1.click('[data-lo="%s"]' % a2.replace('"', '\\"')); p1.wait_for_timeout(100); p2.click('[data-lo="%s"]' % a2.replace('"', '\\"')); p1.wait_for_timeout(500)
+    (ok if p1.evaluate("() => window.PSApp.live().score") == [2, 0] and p2.evaluate("() => window.PSApp.live().score") == [0, 2] else bad)('Live-Duell: der Schnellere bekommt den Punkt')
+    p2.click('#brand'); p1.wait_for_timeout(500)
+    (ok if p1.evaluate("() => window.PSApp.live().phase") == 'done' and p1.evaluate("() => window.PSApp.live().left") else bad)('Live-Duell: Gegner verlässt → Ergebnis')
+    sw = p1.evaluate("() => document.documentElement.scrollWidth")
+    (ok if sw <= 375 else bad)('Live-Duell ohne horizontales Scrollen')
+    lx.close()
 
     (ok if not OPTQ else bad)('Antwortoptionen eindeutig in allen Modi' + ('' if not OPTQ else ': ' + ' | '.join(OPTQ[:3])))
     real = [e for e in errors if 'speechSynthesis' not in e and 'supabase' not in e and 'Failed to load resource' not in e and 'CORS' not in e]

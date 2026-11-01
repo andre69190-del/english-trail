@@ -128,6 +128,7 @@ D['themes'].append({'id': 'hobby', 'ico': '⭐', 't': P('Interessen: Gaming, Spo
 D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW, Klassen 5–10'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
 D['news'] = [{'v': v, 'date': d, 'de': n, 'en': n} for v, d, n in extras.NEWS_ALL]
 D['audio'] = {}
+D['guide'] = extras.GUIDE
 
 json.dump(D, open(DATA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f'OK  Trail 1: {len(new_r1)} Orte · Einheiten gesamt {len(D["units"])} (davon Schule {sum(1 for u in D["units"] if u.get("sch"))})')

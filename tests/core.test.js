@@ -487,3 +487,10 @@ test('Wochen-Challenge: ganze Woche gleicher Code je Klasse, nächste Woche neu'
   assert.ok(C.duelPlan(DATA, a));
   assert.notEqual(C.weekChallengeCode('2026-11-02', 8), a);
 });
+
+test('Live-Duell: Punktvergabe identisch auf beiden Handys', () => {
+  const A = { ok: true, ms: 1200 }, B = { ok: true, ms: 1500 }, X = { ok: false, ms: 900 };
+  assert.equal(C.liveWinner(A, B, 'a', 'b'), 1); assert.equal(C.liveWinner(B, A, 'b', 'a'), -1);
+  assert.equal(C.liveWinner(X, B, 'a', 'b'), -1); assert.equal(C.liveWinner(X, X, 'a', 'b'), 0);
+  assert.equal(C.liveWinner(A, A, 'a', 'b'), 1); assert.equal(C.liveWinner(A, A, 'b', 'a'), -1);
+});

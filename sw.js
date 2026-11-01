@@ -1,6 +1,6 @@
 /* English Trail – Service Worker (übernommen aus GeoQuest sw.js, Phase 589-Muster):
    Seitenaufrufe network-first (immer aktuell), offline aus dem Cache. Version bei jedem Release erhöhen. */
-var CACHE_NAME = 'english-trail-v0-5';
+var CACHE_NAME = 'english-trail-v0-6';
 var ASSETS = ['./', './index.html', './impressum.html', './datenschutz.html', './manifest.json', './icon.svg', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png',
   './fonts/atkinson-hyperlegible-latin-400-normal.woff2', './fonts/atkinson-hyperlegible-latin-700-normal.woff2', './fonts/atkinson-hyperlegible-latin-ext-400-normal.woff2', './fonts/atkinson-hyperlegible-latin-ext-700-normal.woff2',
   './fonts/bricolage-grotesque-latin-opsz-normal.woff2', './fonts/bricolage-grotesque-latin-ext-opsz-normal.woff2'];

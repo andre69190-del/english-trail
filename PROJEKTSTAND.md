@@ -161,3 +161,13 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Name „English Trail“ bestätigen oder anderen nennen.
 - Optional später: englische Gratis-Stimmen (Piper) als Tondateien wie bei Polski Szlak – vorerst spricht die Gerätestimme.
 - Später: Supabase-SQL ausführen, Coolify-Ressource anlegen (wie bei Polski Szlak).
+
+## Release 0.5 (01.11.2026)
+- ✅ Live-Duell fertig (app.js/core.js, Tests grün).
+- ✅ Geprüft: Tabellen `et_feedback` und `et_progress` gibt es auf supabase.arndt-software.de noch NICHT (404 PGRST205) → Fehlermeldungen landen derzeit nur per Mail/Kopie. Andre muss `deploy/supabase_et_feedback.sql` (+ progress, chat) im Studio ausführen. Supabase-MCP hat keinen Token (Unauthorized).
+- ✅ Fehler melden kinderleicht: 5 Tipp-Kategorien (`rep_c1..5`), Text freiwillig; letzte JS-Fehlermeldung wird an ctx angehängt; einmaliger Hinweis-Toast `rep_oops`; Melde-Box auch im Schulbereich (`rep-sch`).
+- ✅ Übersicht „Was kann English Trail?“ (`renderGuide`, Tab `guide`, Daten `extras.GUIDE` → `D.guide`), verlinkt unter Ich, auf „Was ist neu“ und im Schulbereich.
+- ✅ APP_VER 0.5, sw v0-6, NEWS 0.5, datenschutz.html (Live-Duell, Kinder U16, Polnisch-Reste Gosia/Darek entfernt).
+- ✅ Fehler behoben: Senden-Knopf war an den ersten Chip gebunden (`querySelector('button')` → `button.btn`). Alle Checks, 52 Core-Tests, UI-Test 125 OK / 0 Fehler.
+- ✅ Release 0.5 auf PC synchronisiert (RELEASE.txt zuletzt) → Auto-Upload veröffentlicht.
+- Nächste Schritte: Andre führt et_*-SQL aus; dann C Mein Rabe, E Hausaufgaben-Code, G Eltern-Bericht, H Emojis Kl. 5/6; danach Phase 6.

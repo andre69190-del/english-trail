@@ -15,7 +15,11 @@ for pat, msg in [(r'\beval\s*\(', 'eval()'), (r'new\s+Function\s*\(', 'new Funct
                  (r'(api[_-]?key|secret|password|token)\s*[:=]\s*["\'][^"\']{8,}', 'möglicher Schlüssel im Code'),
                  (r'sk-[A-Za-z0-9]{20,}', 'API-Key-Muster')]:
     if re.search(pat, js, re.I): fail.append(msg)
-if re.search(r'XMLHttpRequest|WebSocket\(', js): fail.append('XMLHttpRequest/WebSocket im App-Code')
+if re.search(r'XMLHttpRequest', js): fail.append('XMLHttpRequest im App-Code')
+# English Trail: WebSocket nur für das Live-Duell zum eigenen Supabase-Server (SB_URL), sonst verboten
+for m in re.finditer(r'WebSocket\(([^)]*)\)', js):
+    if 'url' != m.group(1).strip(): fail.append('WebSocket an unbekanntes Ziel: %s' % m.group(1)[:40])
+if 'new WebSocket(' in js and "SB_URL.replace(/^http/, 'ws') + '/realtime/v1/websocket" not in js: fail.append('Live-Duell-WebSocket nicht an SB_URL gebunden')
 # Netzwerk nur zum eigenen Supabase (freiwilliger Geräte-Abgleich) – und dort nur mit dem öffentlichen anon-Schlüssel
 for m in re.finditer(r'\bfetch\s*\(([^,)]*)', js):
     a = m.group(1).strip()
