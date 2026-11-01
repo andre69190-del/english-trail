@@ -1,0 +1,13 @@
+tests/shots/
+__pycache__/
+*.pyc
+dist/
+backup_v1.0/
+content_neu/
+*.zip
+.claude/
+deploy/functions/ps-chat/stuecke/
+_transfer/
+auto_hochladen.log
+data-polacy.json
+data-szlak.json
