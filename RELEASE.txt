@@ -1,1 +1,1 @@
-0.1.1 (01.11.2026) Test automatisches Hochladen + Karte auf arndt-software.de
+0.2 (01.11.2026) Buch-Vokabeln nach Unit ueben

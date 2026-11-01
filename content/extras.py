@@ -280,3 +280,8 @@ NEWS = [
   'Schulmodus für das Gymnasium in Baden-Württemberg (Klassen 5–10): Wortschatz, Grammatik und Probe-Klassenarbeit passend zum Bildungsplan.',
   'Zeiten-Werkstatt, unregelmäßige Verben, Simple oder Progressive, Aussprache britisch oder amerikanisch.',
 ]
+
+NEWS_ALL = [
+  ('0.2', '2026-11-01', ['Schule: Vokabeln aus deinem Englischbuch mit der Unit eintragen (z. B. „Unit 3“) und jede Unit gezielt üben – auch in der Probe-Klassenarbeit.']),
+  ('0.1', '2026-11-01', NEWS),
+]

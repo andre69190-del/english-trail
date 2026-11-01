@@ -376,6 +376,15 @@ with sync_playwright() as p:
     (ok if sp.evaluate("() => (window.PSApp.state().schoolBest || {})[7] != null") else bad)('Probe-Klassenarbeit: Bestwert gespeichert')
     sw = sp.evaluate("() => document.documentElement.scrollWidth")
     (ok if sw <= 375 else bad)('Schule ohne horizontales Scrollen (%s px)' % sw)
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#sc-own'); sp.click('#sc-own'); sp.wait_for_selector('#mw-u')
+    for en, de in [('scarf', 'Schal'), ('library', 'Bibliothek'), ('to borrow', 'ausleihen')]:
+        sp.fill('#mw-pl', en); sp.fill('#mw-m', de); sp.fill('#mw-u', 'Unit 3'); sp.click('#mw-add')
+    (ok if sp.locator('.badge', has_text='Unit 3').count() == 3 else bad)('Meine Wörter: Vokabeln mit Unit markiert')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('[data-su]')
+    sp.click('[data-su="Unit 3"]'); sp.wait_for_timeout(300)
+    (ok if sp.evaluate("() => !!window.PSApp.game()") and play_through(sp) else bad)('Schule: eigene Buch-Vokabeln einer Unit üben')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('[data-xu]')
+    (ok if sp.locator('[data-xu="Unit 3"]').count() == 1 else bad)('Probe-Arbeit: eigene Unit auswählbar')
     sx.close()
 
     (ok if not OPTQ else bad)('Antwortoptionen eindeutig in allen Modi' + ('' if not OPTQ else ': ' + ' | '.join(OPTQ[:3])))

@@ -132,6 +132,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - 01.11.2026 – **Vor der Veröffentlichung bereinigt:** Alle noch polnischen Vorlage-Teile entfernt (Trail 2/3, Pakete, Profi-Bereich, Tagebuch, Buch, B1-Prüfung, polnische Rechtschreib-Kachel). Neu: Preise hören in Pfund (£3.50 = three pounds fifty), Thema „Schule“, englische Hör-Links (BBC, British Council). Version 0.1. Alle Checks grün, 47 Logik-Tests, Browser 100 OK / 0 Fehler, Scan: keine polnischen Texte mehr sichtbar.
 - 01.11.2026 – **Veröffentlichung vorbereitet:** `einrichten_github.bat` (einmalig: Repo + erster Upload + Windows-Aufgabe), `auto_hochladen.bat/.vbs` (alle 10 Min., lädt nur hoch, wenn `RELEASE.txt` geändert wurde = geprüfte Version), `auto_hochladen_aus.bat`. Startseiten-Karte English Trail vorbereitet (`homepage/index.html`, wird erst nach dem Live-Gang geschrieben).
 
+- 01.11.2026 08:24 – **LIVE:** https://english.arndt-software.de (GitHub `andre69190-del/english-trail`, Coolify Dockerfile, Webhook). Andre hat `einrichten_github.bat` ausgeführt; der automatische Upload hat um 08:25 englisch-trail **und** homepage gepusht (auto_hochladen.log). Polski Szlak geprüft: unverändert online.
+- 01.11.2026 – Startseiten-Karte English Trail ins homepage-Repo gepusht – auf arndt-software.de aber noch nicht sichtbar → homepage in Coolify neu deployen / Auto-Deploy prüfen (Andre).
+- 01.11.2026 – **Version 0.2 (Phase 5 Teil 2):** Eigene Buch-Vokabeln mit Unit markieren („Meine Wörter“ zeigt im Schulmodus ein Feld „Unit“), Bereich Schule listet die Units → gezielt üben; Units in der Probe-Klassenarbeit wählbar. Verlags-Unit-Listen bewusst nicht übernommen (Urheberrecht, nicht frei verfügbar) – die Unit-Namen gibt der Schüler selbst ein. Browser-Test 103 OK / 0 Fehler.
+
 ## Ablauf „automatisch online“ (ab 01.11.2026)
 1. Claude ändert, baut, testet (alles grün) → schreibt die Dateien in den Ordner auf dem PC und **zuletzt** `RELEASE.txt` mit neuer Versionsnummer.
 2. Die Windows-Aufgabe „English Trail Auto-Upload“ merkt die neue RELEASE.txt (spätestens nach 10 Minuten) → `git commit` + `git push` nach github.com/andre69190-del/english-trail.
@@ -140,8 +144,8 @@ Datenmodell (geplant, `src/data.json` → `school`):
 
 ## 8. Nächster Schritt
 
-1. Live-Gang: GitHub-Repo `english-trail` anlegen, Andre startet `einrichten_github.bat`, Coolify-Ressource + Webhook, dann Startseiten-Karte.
-2. Phase 5 Rest: Unit-Liste je Lehrwerk → „Meine Wörter“ mit Unit-Markierung.
+1. ✅ Live-Gang erledigt (01.11.).
+2. Optional Phase 5: Foto-Erkennung für Buch-Vokabeln (Texterkennung im Browser) prüfen.
 3. Phase 6: Trail 2 (A2) + Trail 3 (B1) auf Englisch, Themenpakete, Profi-Bereich, Tagebuch/Buch, B1-Probeprüfung (englisch), Prüfmodus-Texte (?review) auf Englisch.
 4. Phase 8: Optik (Farben/Logo, Rabe statt Zwerg-Grafik).
 

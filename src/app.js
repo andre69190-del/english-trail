@@ -51,7 +51,8 @@
   /* ---------- Texte (UI-Sprache = Basissprache) ---------- */
   var TX = {
     de: {
-      sch: 'Schule', sch_d: 'Englisch passend zu Bundesland, Klasse und Lehrwerk', sch_grade: 'Klasse {g}', sch_setup: 'Deine Schule', sch_setup_d: 'Wähle Bundesland, Schulform und Klasse. Dann zeigt dir die App den Stoff, der laut Bildungsplan dran ist. Weitere Länder und Schulformen folgen.', sch_state: 'Bundesland', sch_type: 'Schulform', sch_class: 'Klasse', sch_book: 'Lehrwerk', sch_book_none: '– kein Lehrwerk angeben –', sch_book_d: 'Die App nutzt nur Themen und Grammatik passend zum Bildungsplan, keine Texte aus dem Schulbuch. Vokabeln aus deinem Buch kannst du unter „Meine Wörter“ selbst eintragen.', sch_save: 'Speichern', sch_soon: 'bald', sch_band: 'Band', sch_change: 'Ändern', sch_words: 'Wortschatz deiner Klasse', sch_words_d: 'Themen aus dem Bildungsplan – mit Szene, Quiz, Hören, Schreiben und Prüfung wie auf dem Trail.', sch_gram: 'Grammatik', sch_gram_d: 'Neu in Klasse {a}/{b}. Tippe ein Thema an und übe mit Sätzen.', sch_gram_all: 'Alle Themen gemischt', sch_repeat: 'Wiederholen aus früheren Klassen', sch_from: 'ab Klasse', sch_exam: 'Probe-Klassenarbeit', sch_exam_d: 'Wähle, was in deiner nächsten Arbeit drankommt. 20 Fragen, 15 Minuten.', sch_exam_pick: 'Was kommt dran?', sch_exam_go: 'Probe-Arbeit starten', sch_exam_none: 'Wähle mindestens ein Thema.', sch_own: 'Vokabeln aus deinem Buch', sch_own_d: 'Trag die Vokabeln der aktuellen Unit unter „Meine Wörter“ ein – sie kommen dann in Wiederholung, Quiz und Probe-Arbeit.', sch_chat_d: 'Schreib mit der KI auf Englisch – sie benutzt nur Wörter und Grammatik bis Klasse {g}.', why_school: 'Schule',
+      sch_unit: 'Unit (aus deinem Buch, freiwillig)', sch_unit_go: 'üben', sch_unit_few: 'Trag erst mindestens 2 Wörter für diese Unit ein.', sch_own_add: 'Vokabeln eintragen', sch_mine: 'meine Vokabeln',
+      sch: 'Schule', sch_d: 'Englisch passend zu Bundesland, Klasse und Lehrwerk', sch_grade: 'Klasse {g}', sch_setup: 'Deine Schule', sch_setup_d: 'Wähle Bundesland, Schulform und Klasse. Dann zeigt dir die App den Stoff, der laut Bildungsplan dran ist. Weitere Länder und Schulformen folgen.', sch_state: 'Bundesland', sch_type: 'Schulform', sch_class: 'Klasse', sch_book: 'Lehrwerk', sch_book_none: '– kein Lehrwerk angeben –', sch_book_d: 'Die App nutzt nur Themen und Grammatik passend zum Bildungsplan, keine Texte aus dem Schulbuch. Vokabeln aus deinem Buch kannst du unter „Meine Wörter“ selbst eintragen.', sch_save: 'Speichern', sch_soon: 'bald', sch_band: 'Band', sch_change: 'Ändern', sch_words: 'Wortschatz deiner Klasse', sch_words_d: 'Themen aus dem Bildungsplan – mit Szene, Quiz, Hören, Schreiben und Prüfung wie auf dem Trail.', sch_gram: 'Grammatik', sch_gram_d: 'Neu in Klasse {a}/{b}. Tippe ein Thema an und übe mit Sätzen.', sch_gram_all: 'Alle Themen gemischt', sch_repeat: 'Wiederholen aus früheren Klassen', sch_from: 'ab Klasse', sch_exam: 'Probe-Klassenarbeit', sch_exam_d: 'Wähle, was in deiner nächsten Arbeit drankommt. 20 Fragen, 15 Minuten.', sch_exam_pick: 'Was kommt dran?', sch_exam_go: 'Probe-Arbeit starten', sch_exam_none: 'Wähle mindestens ein Thema.', sch_own: 'Vokabeln aus deinem Buch', sch_own_d: 'Trag die Vokabeln aus deinem Buch mit der Unit ein (z. B. „Unit 3“). Dann kannst du jede Unit gezielt üben, und sie kommen in Wiederholung und Probe-Arbeit.', sch_chat_d: 'Schreib mit der KI auf Englisch – sie benutzt nur Wörter und Grammatik bis Klasse {g}.', why_school: 'Schule',
       conj_inf: 'Grundform', conj_q_past: 'Wie heißt die 2. Form (simple past)?', conj_q_pp: 'Wie heißt die 3. Form (past participle)?', clsn_aaa: 'alle gleich', clsn_aba: '1. = 3.', clsn_abb: '2. = 3.', clsn_abc: 'alle verschieden', cls_aaa: 'Alle drei Formen sind gleich: cut – cut – cut.', cls_aba: 'Grundform und 3. Form sind gleich: come – came – come.', cls_abb: '2. und 3. Form sind gleich: buy – bought – bought.', cls_abc: 'Alle drei Formen sind verschieden: go – went – gone.',
       nav_home: 'Start', nav_practice: 'Üben', nav_album: 'Album', nav_me: 'Ich',
       level: 'Stufe', week: 'Diese Woche', of: 'von', days: 'Tagen', wk_streak: 'Wochen in Folge',
@@ -172,6 +173,7 @@
       vc_diag: 'Ton-Test mit Diagnose'
     },
     en: {
+      sch_unit: 'Unit (from your textbook, optional)', sch_unit_go: 'practise', sch_unit_few: 'Add at least 2 words for this unit first.', sch_own_add: 'Add words', sch_mine: 'my words',
       sch: 'School', sch_d: 'English for your state, year and textbook', sch_grade: 'Year {g}', sch_setup: 'Your school', sch_setup_d: 'Choose state, school type and year.', sch_state: 'State', sch_type: 'School type', sch_class: 'Year', sch_book: 'Textbook', sch_book_none: '– no textbook –', sch_book_d: 'Only topics and grammar from the curriculum, no textbook texts.', sch_save: 'Save', sch_soon: 'soon', sch_band: 'Volume', sch_change: 'Change', sch_words: 'Vocabulary for your year', sch_words_d: 'Curriculum topics.', sch_gram: 'Grammar', sch_gram_d: 'New in years {a}/{b}.', sch_gram_all: 'All topics mixed', sch_repeat: 'Revise earlier years', sch_from: 'from year', sch_exam: 'Practice test', sch_exam_d: '20 questions, 15 minutes.', sch_exam_pick: 'What is in the test?', sch_exam_go: 'Start practice test', sch_exam_none: 'Choose at least one topic.', sch_own: 'Words from your textbook', sch_own_d: 'Add your unit words under My words.', sch_chat_d: 'Chat in English up to year {g} level.', why_school: 'School',
       conj_inf: 'Base form', conj_q_past: 'What is the simple past?', conj_q_pp: 'What is the past participle?', clsn_aaa: 'all the same', clsn_aba: '1st = 3rd', clsn_abb: '2nd = 3rd', clsn_abc: 'all different', cls_aaa: 'All three forms are the same: cut – cut – cut.', cls_aba: 'Base form and 3rd form are the same: come – came – come.', cls_abb: '2nd and 3rd form are the same: buy – bought – bought.', cls_abc: 'All three forms are different: go – went – gone.',
       nav_home: 'Home', nav_practice: 'Practice', nav_album: 'Album', nav_me: 'Me',
@@ -1122,7 +1124,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.1', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.2', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<textarea maxlength="1000" rows="3" aria-label="' + esc(t('rep')) + '" placeholder="' + esc(t('rep_ph')) + '"></textarea>' +
@@ -1518,16 +1520,16 @@
   function renderMyWords() {
     var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('mywords')) + '</h1>' +
       '<section class="card stack"><label class="fld">' + esc(t('pl')) + '<input type="text" id="mw-pl" autocomplete="off" lang="en"></label>' +
-      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label><button class="btn primary" id="mw-add">' + esc(t('add')) + '</button></section>' +
+      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button></section>' +
       '<section class="card">' + (S.custom.length ? '<div class="list">' + S.custom.map(function (w, i) {
-        return '<div class="li"><button class="icon-btn" data-say="' + esc(w[0]) + '" aria-label="' + esc(t('listen_again')) + '">' + I.spk + '</button><div class="grow"><div class="pl-word">' + esc(w[0]) + '</div><div class="small muted">' + esc(meaning(w)) + '</div></div><button class="icon-btn" data-del="' + i + '" aria-label="' + esc(t('delete')) + '">' + I.x + '</button></div>';
+        return '<div class="li"><button class="icon-btn" data-say="' + esc(w[0]) + '" aria-label="' + esc(t('listen_again')) + '">' + I.spk + '</button><div class="grow"><div class="pl-word">' + esc(w[0]) + '</div><div class="small muted">' + esc(meaning(w)) + (w[3] ? ' · <span class="badge">' + esc(w[3]) + '</span>' : '') + '</div></div><button class="icon-btn" data-del="' + i + '" aria-label="' + esc(t('delete')) + '">' + I.x + '</button></div>';
       }).join('') + '</div>' : '<p class="muted">' + esc(t('mywords_empty')) + '</p>') + '</section>' +
       (S.custom.length >= 4 ? '<button class="btn primary block" id="mw-practice">' + esc(t('practice_mine')) + '</button>' : '');
     shell(html);
     document.getElementById('back').onclick = function () { go('practice'); };
     document.getElementById('mw-add').onclick = function () {
       var p = document.getElementById('mw-pl').value.trim(), m = document.getElementById('mw-m').value.trim();
-      if (!p || !m) return; S.custom.push([p, m, m]); save(); renderMyWords();
+      if (!p || !m) return; var ue = document.getElementById('mw-u'), un = ue ? ue.value.trim() : ''; if (un) S.lastUnit = un; S.custom.push(un ? [p, m, m, un] : [p, m, m]); save(); renderMyWords(); var f = document.getElementById('mw-pl'); if (f) f.focus();
     };
     document.querySelectorAll('[data-say]').forEach(function (b) { b.onclick = function () { speak(b.getAttribute('data-say')); }; });
     document.querySelectorAll('[data-del]').forEach(function (b) { b.onclick = function () { var i = +b.getAttribute('data-del'), n = S.custom.length; S.custom.splice(i, 1); delete S.cards['my:' + i];
@@ -1707,6 +1709,7 @@
     return Object.keys(T).filter(function (k) { var kk = T[k].k; return mode === 'new' ? kk >= lo && kk <= g : kk < lo; })
       .filter(function (k) { return D.cases.some(function (c) { return c.g === k; }); });
   }
+  function schUnits() { var o = {}; S.custom.forEach(function (w, i) { if (w[3]) (o[w[3]] = o[w[3]] || []).push({ id: 'my:' + i, w: w, u: -1 }); }); return o; }
   function schCount(g) { return D.cases.filter(function (c) { return c.g === g; }).length; }
   function schSetup() {
     var sc = S.school || {}, SD = D.school;
@@ -1731,7 +1734,7 @@
       return;
     }
     var g = sc.grade, SD = D.school, nm = function (list, id) { var x = list.filter(function (y) { return y.id === id; })[0]; return x ? x.name : ''; };
-    var packs = schPacks(g), tNew = schTopics(g, 'new'), tOld = schTopics(g, 'old'), T = SD.topics;
+    var packs = schPacks(g), tNew = schTopics(g, 'new'), tOld = schTopics(g, 'old'), T = SD.topics, UN = schUnits();
     var topicBtn = function (k) { return '<button class="li linkish" data-sg="' + esc(k) + '" style="width:100%;justify-content:space-between"><span><b>' + esc(T[k].t) + '</b> <span class="small muted">· ' + esc(t('sch_from')) + ' ' + T[k].k + '</span></span><span class="badge num">' + schCount(k) + '</span></button>'; };
     html += '<section class="card stack"><span class="eyebrow">' + esc(nm(SD.states, sc.state)) + ' · ' + esc(nm(SD.types, sc.type)) + '</span><div class="big">' + esc(t('sch_grade').replace('{g}', g)) + '</div>' +
       (sc.book ? '<p class="small">' + esc(t('sch_book')) + ': ' + esc(nm(SD.books, sc.book)) + (sc.book !== 'other' ? ' · ' + esc(t('sch_band')) + ' ' + (g - 4) : '') + '</p>' : '') +
@@ -1746,9 +1749,12 @@
       '<section class="card stack"><h2>📝 ' + esc(t('sch_exam')) + '</h2><p class="small muted">' + esc(t('sch_exam_d')) + '</p>' +
       '<fieldset class="stack" style="border:0;padding:0;margin:0"><legend class="small"><b>' + esc(t('sch_exam_pick')) + '</b></legend>' +
       tNew.concat(tOld).map(function (k) { return '<label class="row small"><input type="checkbox" data-xt="' + esc(k) + '"' + (tNew.indexOf(k) >= 0 ? ' checked' : '') + '> ' + esc(T[k].t) + '</label>'; }).join('') +
-      packs.map(function (i) { return '<label class="row small"><input type="checkbox" data-xp="' + i + '" checked> ' + esc(U[i].ico + ' ' + U[i].city) + '</label>'; }).join('') + '</fieldset>' +
+      packs.map(function (i) { return '<label class="row small"><input type="checkbox" data-xp="' + i + '" checked> ' + esc(U[i].ico + ' ' + U[i].city) + '</label>'; }).join('') +
+      Object.keys(UN).sort().map(function (k) { return '<label class="row small"><input type="checkbox" data-xu="' + esc(k) + '" checked> 📘 ' + esc(k) + ' (' + esc(t('sch_mine')) + ')</label>'; }).join('') + '</fieldset>' +
       '<button class="btn primary" id="sc-exam" style="justify-self:start">' + esc(t('sch_exam_go')) + '</button>' + (S.schoolBest && S.schoolBest[g] != null ? '<p class="small muted">' + esc(t('best')) + ': ' + S.schoolBest[g] + '%</p>' : '') + '</section>' +
-      '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p><button class="btn" id="sc-own" style="justify-self:start">' + esc(t('mywords')) + '</button></section>' +
+      '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p>' +
+      (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button>'; }).join('') + '</div>' : '') +
+      '<button class="btn" id="sc-own" style="justify-self:start">' + esc(t('sch_own_add')) + '</button></section>' +
       (packs.length ? '<section class="card stack"><h2>' + esc(t('chat')) + '</h2><p class="small">' + esc(t('sch_chat_d').replace('{g}', g)) + '</p><button class="btn" id="sc-chat" style="justify-self:start">' + esc(t('chat')) + '</button></section>' : '');
     shell(html);
     document.getElementById('back').onclick = function () { go('practice'); };
@@ -1757,19 +1763,23 @@
     document.querySelectorAll('[data-sg]').forEach(function (b) { b.onclick = function () { SCH.topics = [b.getAttribute('data-sg')]; startMode('sgram'); }; });
     var ga = document.getElementById('sc-gall'); if (ga) ga.onclick = function () { SCH.topics = tNew.slice(); startMode('sgram'); };
     document.getElementById('sc-exam').onclick = function () {
-      SCH.exam = { g: g, topics: [], packs: [] };
+      SCH.exam = { g: g, topics: [], packs: [], units: [] };
+      document.querySelectorAll('[data-xu]').forEach(function (c) { if (c.checked) SCH.exam.units.push(c.getAttribute('data-xu')); });
       document.querySelectorAll('[data-xt]').forEach(function (c) { if (c.checked) SCH.exam.topics.push(c.getAttribute('data-xt')); });
       document.querySelectorAll('[data-xp]').forEach(function (c) { if (c.checked) SCH.exam.packs.push(+c.getAttribute('data-xp')); });
-      if (!SCH.exam.topics.length && !SCH.exam.packs.length) return toast(t('sch_exam_none'));
+      if (!SCH.exam.topics.length && !SCH.exam.packs.length && !SCH.exam.units.length) return toast(t('sch_exam_none'));
       startMode('sexam');
     };
     document.getElementById('sc-own').onclick = function () { go('mywords'); };
+    document.querySelectorAll('[data-su]').forEach(function (b) { b.onclick = function () { SCH.unit = b.getAttribute('data-su'); startMode('sunit'); }; });
     var ch = document.getElementById('sc-chat'); if (ch) ch.onclick = function () { startMode('chat', packs[0]); };
   }
   /* Probe-Klassenarbeit: bis zu 12 Grammatik- und 8 Wortschatzfragen, 15 Minuten, Ergebnis als Bestwert je Klasse */
   function startSchoolExam() {
     var X = SCH.exam, gl = D.cases.filter(function (c) { return X.topics.indexOf(c.g) >= 0; }), wl = [];
     X.packs.forEach(function (i) { wl = wl.concat(wordsOf(i)); });
+    var UN = schUnits(), own = []; (X.units || []).forEach(function (k) { own = own.concat(UN[k] || []); });
+    if (own.length) wl = C.shuffle(own, R).slice(0, 8).concat(C.shuffle(wl, R));
     var nG = wl.length ? Math.min(12, gl.length) : Math.min(20, gl.length), nW = Math.min(20 - nG, wl.length);
     var qs = C.shuffle(gl, R).slice(0, nG).map(qCase).concat(C.shuffle(wl, R).slice(0, nW).map(function (x, k) { return qMC(x, wl, k % 2 ? 'x2pl' : 'pl2x'); }));
     return runGame({ title: t('sch_exam'), qs: C.shuffle(qs, R), timer: 900, back: 'school', schoolExam: X.g });
@@ -1836,6 +1846,7 @@
     if (mode === 'school') return go('school');
     if (mode === 'sgram') { var gl = D.cases.filter(function (c) { return SCH.topics.indexOf(c.g) >= 0; }); return runGame({ title: t('sch_gram'), qs: C.shuffle(gl, R).slice(0, Math.min(n, gl.length)).map(qCase), back: 'school' }); }
     if (mode === 'sexam') return startSchoolExam();
+    if (mode === 'sunit') { var uw = schUnits()[SCH.unit] || []; if (uw.length < 2) return toast(t('sch_unit_few')); return runGame({ title: SCH.unit, qs: mixedFor(uw, uw.length >= 4 ? uw : uw.concat(pool), Math.min(n, Math.max(uw.length * 2, 4))), back: 'school' }); }
     if (mode === 'conjgo') return runGame({ title: t('conj'), qs: conjQs(n), rerun: function () { startMode('conjgo'); }, back: 'conj' });
     if (mode === 'wr3') { var w3 = S.mistakes.map(byId).filter(Boolean).slice(0, 3); if (!w3.length) return go('home'); return runGame({ title: t('wr_title'), qs: mixedFor(w3, pool.concat(w3), 6) }); }
     if (mode === 'welcome') {

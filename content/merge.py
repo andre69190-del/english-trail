@@ -116,7 +116,7 @@ D['listen']['learn'] = [list(x) for x in extras.LEARN]
 D['themes'] = [dict(th, u=[x for x in th['u'] if x in UID]) for th in D.get('themes') or []]
 D['themes'] = [th for th in D['themes'] if th['u'] and th['id'] != 'schule']
 D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW, Klassen 5–10'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
-D['news'] = [{'v': '0.1', 'date': '2026-11-01', 'de': extras.NEWS, 'en': extras.NEWS}]
+D['news'] = [{'v': v, 'date': d, 'de': n, 'en': n} for v, d, n in extras.NEWS_ALL]
 D['audio'] = {}
 
 json.dump(D, open(DATA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
