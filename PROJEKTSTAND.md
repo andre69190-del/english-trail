@@ -179,3 +179,13 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Tests: 53 Core, UI 131 OK / 0 Fehler.
 - ⚠️ **Live-Seite steht noch auf 0.1!** GitHub hat alle Commits (0.2–0.6), aber Coolify baut nicht neu (Webhook fehlt/greift nicht). Andre informiert: Coolify → App → Webhooks (GitHub-Secret) + GitHub → Settings → Webhooks, dann Redeploy. Danach prüfen: sw.js enthält `english-trail-v0-7`.
 - Offen Schule: C Mein Rabe. Danach Phase 6.
+
+## 0.6.1 (01.11.2026) – Polnisch-Reste nach Andres Hinweis („Los nach Warszawa“)
+- ob_go → „Los nach London“; polnische Sonderzeichen-Leiste (`plKeys`) aus; Akzentfarbe `--red` jetzt Blau (#1d4f91 / dunkel #8fb6ff); Marke + Icons blau (aus icon.svg per Chromium neu gerendert); Trail-1-Markierungen rot↔blau getauscht (sah aus wie Polen-Flagge). IDs unverändert → Fortschritt bleibt.
+- Noch polnische Texte nur in ausgeblendeten Teilen (B1-Prüfung, Tagebuch, en-Texte der Basis „en“ – Basis ist immer Deutsch). Bei Phase 6 bereinigen.
+
+## Live-Prüfung 01.11.2026 12:30
+- ✅ english.arndt-software.de liefert 0.6.1 (sw `english-trail-v0-8`) → Coolify baut wieder automatisch.
+- ✅ Live-Duell echt über supabase.arndt-software.de getestet (2 Tabs, Code RAVEN-551-1): Verbinden, Bereit, gleiche Frage, Punkt an den Richtigen (1:0 / 0:1), nächste Frage, Verlassen → Ergebnis.
+- ⏳ `et_feedback` fehlt weiterhin (404) → Andre: `deploy/supabase_et_feedback.sql` im Studio ausführen.
+- Nächster Schritt: C „Mein Rabe“, danach Phase 6.

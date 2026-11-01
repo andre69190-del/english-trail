@@ -1,1 +1,1 @@
-0.6.1 (01.11.2026) Start in London statt Warszawa, blaues Design und Icons, keine polnische Buchstabenleiste
+0.7 (01.11.2026) Mein Rabe - eigenen Raben gestalten, Federn durchs Ueben
