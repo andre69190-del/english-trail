@@ -10,7 +10,7 @@ def U(**k):
     UNITS.append(k)
 
 
-U(id='lon', city='London', cityDe='London', lon=-0.13, lat=51.51, trail='red',
+U(id='lon', city='London', cityDe='London', lon=-0.13, lat=51.51, trail='blue',
   title='Erste Worte',
   can='Ich kann grüßen, mich bedanken, mich entschuldigen und sagen, dass ich etwas nicht verstehe.',
   tip='„Sorry“ sagt man in England ständig: als Entschuldigung, aber auch, wenn man etwas nicht verstanden hat („Sorry?“ = Wie bitte?).',
@@ -73,7 +73,7 @@ I don't understand | ich verstehe nicht''',
               bridge='Rufus klopft mit dem Schnabel auf den Umschlag: „Die erste Zeile kannst du schon lesen! Wer da schreibt, erfährst du in Brighton.“'),
 )
 
-U(id='brg', city='Brighton', cityDe='Brighton', lon=-0.14, lat=50.82, trail='red',
+U(id='brg', city='Brighton', cityDe='Brighton', lon=-0.14, lat=50.82, trail='blue',
   title='Das bin ich',
   can='Ich kann sagen, wie ich heiße, woher ich komme, wo ich wohne und wie alt ich bin.',
   tip='„I am“ wird fast immer zu „I’m“ verkürzt. Das Alter sagt man mit „be“: „I’m twelve (years old).“ – nicht „I have twelve years“.',
@@ -136,7 +136,7 @@ surname | Nachname''',
               bridge='Rufus nickt: „Emma! Sie ist Lehrerin in Dublin. Was sie sonst noch schreibt, liest du in Bath.“'),
 )
 
-U(id='bat', city='Bath', cityDe='Bath', lon=-2.36, lat=51.38, trail='red',
+U(id='bat', city='Bath', cityDe='Bath', lon=-2.36, lat=51.38, trail='blue',
   title='Zahlen und Preise',
   can='Ich kann bis 100 zählen, nach Preisen fragen und Preise in Pfund und Pence verstehen.',
   tip='Preise: £3.50 sagt man „three pounds fifty“ (oder „three fifty“). Bei Dezimalzahlen steht ein Punkt, kein Komma.',
@@ -199,7 +199,7 @@ expensive | teuer''',
               bridge='Rufus grinst: „Zwei Katzen! Ich halte Abstand. Weiter geht’s in Cardiff – da trinken wir erst mal etwas.“'),
 )
 
-U(id='crd', city='Cardiff', cityDe='Cardiff', lon=-3.18, lat=51.48, trail='red',
+U(id='crd', city='Cardiff', cityDe='Cardiff', lon=-3.18, lat=51.48, trail='blue',
   title='Im Café',
   can='Ich kann im Café bestellen, um etwas bitten und bezahlen.',
   tip='Höflich bestellen: „Can I have …, please?“ oder „I’d like …“. „Give me …“ klingt im Englischen unhöflich.',
@@ -261,7 +261,7 @@ delicious | lecker''',
               bridge='Rufus schlürft aus deiner Tasse: „Typisch! In Liverpool erzählt Emma von ihrer Familie.“'),
 )
 
-U(id='lvp', city='Liverpool', cityDe='Liverpool', lon=-2.98, lat=53.41, trail='red',
+U(id='lvp', city='Liverpool', cityDe='Liverpool', lon=-2.98, lat=53.41, trail='blue',
   title='Familie',
   can='Ich kann meine Familie vorstellen und einfache Fragen zu Geschwistern und Eltern beantworten.',
   tip='Besitz mit ’s: „my mum’s car“ = das Auto meiner Mutter. Bei mehreren Personen nur ein Apostroph: „my parents’ house“.',
@@ -324,7 +324,7 @@ younger | jünger''',
               bridge='Rufus flattert los: „In Manchester verrät Emma, wann sie Zeit hat.“'),
 )
 
-U(id='mcr', city='Manchester', cityDe='Manchester', lon=-2.24, lat=53.48, trail='red',
+U(id='mcr', city='Manchester', cityDe='Manchester', lon=-2.24, lat=53.48, trail='blue',
   title='Zeit und Tage',
   can='Ich kann die Uhrzeit sagen, Wochentage und Monate nennen und Termine vereinbaren.',
   tip='Wochentage und Monate schreibt man im Englischen groß: Monday, July. Uhrzeit: „half past three“ = halb vier (nicht halb drei!).',
@@ -445,7 +445,7 @@ winter | Winter''',
               bridge='Rufus schüttelt sich trocken: „In York geht Emma einkaufen. Komm mit!“'),
 )
 
-U(id='yrk', city='York', cityDe='York', lon=-1.08, lat=53.96, trail='red',
+U(id='yrk', city='York', cityDe='York', lon=-1.08, lat=53.96, trail='blue',
   title='Einkaufen und Farben',
   can='Ich kann in Geschäften nach Dingen fragen, Farben und Größen nennen und etwas kaufen.',
   tip='Farbe steht vor dem Nomen und bleibt immer gleich: a red T-shirt, two red T-shirts. Nach Größen fragt man: „Have you got it in medium?“',
@@ -506,7 +506,7 @@ present | Geschenk''',
               bridge='Rufus zupft an deinem neuen Schal: „Emmas Geschenk passt! In Edinburgh brauchst du den Weg.“'),
 )
 
-U(id='edi', city='Edinburgh', cityDe='Edinburgh', lon=-3.19, lat=55.95, trail='blue',
+U(id='edi', city='Edinburgh', cityDe='Edinburgh', lon=-3.19, lat=55.95, trail='red',
   title='In der Stadt',
   can='Ich kann nach dem Weg fragen, einfache Wegbeschreibungen verstehen und Orte in der Stadt benennen.',
   tip='Weg erfragen: „How do I get to …?“ oder „Where is …?“. Antwort: „Go straight on, then turn left.“ – „on the left“ = auf der linken Seite.',
@@ -566,7 +566,7 @@ how do I get to …? | wie komme ich zu …?''',
               bridge='Rufus zeigt nach Norden: „Ab in die Highlands! In Inverness geht’s um Zug und Hotel.“'),
 )
 
-U(id='inv', city='Inverness', cityDe='Inverness (Highlands)', lon=-4.22, lat=57.48, trail='blue',
+U(id='inv', city='Inverness', cityDe='Inverness (Highlands)', lon=-4.22, lat=57.48, trail='red',
   title='Unterwegs',
   can='Ich kann Fahrkarten kaufen, nach Abfahrtszeiten fragen und ein Hotelzimmer buchen.',
   tip='Hin- und Rückfahrt heißt in Großbritannien „return ticket“, nur hin „single“. In den USA sagt man „round-trip“ und „one-way“.',

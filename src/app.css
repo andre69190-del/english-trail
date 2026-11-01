@@ -6,10 +6,10 @@
 @font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-hyperlegible-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext-opsz-normal.woff2) format('woff2-variations'),url(fonts/bricolage-grotesque-latin-ext-opsz-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 /* Layout: App-Shell, eine Spalte (max 720px), Kopfzeile sticky, Navigation unten fixiert.
-   Motiv: polnische Wandermarkierung (PTTK-Szlak) = weiß-farbig-weiß Streifen. */
+   Motiv: Wandermarkierung = weiß-farbig-weiß Streifen; Akzentfarbe Blau (English Trail). */
 :root {
   --bg: #eef1f3; --surface: #ffffff; --surface-2: #f6f8f9; --ink: #14212b; --muted: #546572; --line: #d3dce2;
-  --red: #c4122f; --on-red: #ffffff; --amber: #9a5b00; --amber-soft: #fbeacb;
+  --red: #1d4f91; --on-red: #ffffff; --amber: #9a5b00; --amber-soft: #fbeacb;
   --good: #1b7343; --good-soft: #dcf1e4; --bad: #a8231c; --bad-soft: #f9e0dd;
   --map-land: #dfe7ec; --map-edge: #98abb8; --route: #7b8d99;
   --t-red: #d02a2a; --t-blue: #1f5fbf; --t-green: #1f8a4c; --t-yellow: #d9a800; --t-black: #22272b; --blaze-white: #ffffff;
@@ -19,14 +19,14 @@
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0f151a; --surface: #18222a; --surface-2: #1d2932; --ink: #e7eef3; --muted: #9fb0bc; --line: #2b3a46;
-  --red: #ff6274; --on-red: #1a0b0e; --amber: #f2ad45; --amber-soft: #3a2b12;
+  --red: #8fb6ff; --on-red: #0b1424; --amber: #f2ad45; --amber-soft: #3a2b12;
   --good: #57c98a; --good-soft: #163426; --bad: #ff8a7f; --bad-soft: #3e1e1b;
   --map-land: #1f2b34; --map-edge: #3d515f; --route: #6c8291;
   --t-red: #ff6b6b; --t-blue: #6a9dff; --t-green: #4fc283; --t-yellow: #f1c53a; --t-black: #dfe6eb; --blaze-white: #2a3843;
   color-scheme: dark; } }
 :root[data-theme="dark"] {
   --bg: #0f151a; --surface: #18222a; --surface-2: #1d2932; --ink: #e7eef3; --muted: #9fb0bc; --line: #2b3a46;
-  --red: #ff6274; --on-red: #1a0b0e; --amber: #f2ad45; --amber-soft: #3a2b12;
+  --red: #8fb6ff; --on-red: #0b1424; --amber: #f2ad45; --amber-soft: #3a2b12;
   --good: #57c98a; --good-soft: #163426; --bad: #ff8a7f; --bad-soft: #3e1e1b;
   --map-land: #1f2b34; --map-edge: #3d515f; --route: #6c8291;
   --t-red: #ff6b6b; --t-blue: #6a9dff; --t-green: #4fc283; --t-yellow: #f1c53a; --t-black: #dfe6eb; --blaze-white: #2a3843;

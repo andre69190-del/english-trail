@@ -430,7 +430,7 @@
    "cityEn": "London",
    "lon": -0.13,
    "lat": 51.51,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Erste Worte",
     "Erste Worte"
@@ -717,7 +717,7 @@
    "cityEn": "Brighton",
    "lon": -0.14,
    "lat": 50.82,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Das bin ich",
     "Das bin ich"
@@ -1004,7 +1004,7 @@
    "cityEn": "Bath",
    "lon": -2.36,
    "lat": 51.38,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Zahlen und Preise",
     "Zahlen und Preise"
@@ -1296,7 +1296,7 @@
    "cityEn": "Cardiff",
    "lon": -3.18,
    "lat": 51.48,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Im Café",
     "Im Café"
@@ -1583,7 +1583,7 @@
    "cityEn": "Liverpool",
    "lon": -2.98,
    "lat": 53.41,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Familie",
     "Familie"
@@ -1870,7 +1870,7 @@
    "cityEn": "Manchester",
    "lon": -2.24,
    "lat": 53.48,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Zeit und Tage",
     "Zeit und Tage"
@@ -2444,7 +2444,7 @@
    "cityEn": "York",
    "lon": -1.08,
    "lat": 53.96,
-   "trail": "red",
+   "trail": "blue",
    "title": [
     "Einkaufen und Farben",
     "Einkaufen und Farben"
@@ -2731,7 +2731,7 @@
    "cityEn": "Edinburgh",
    "lon": -3.19,
    "lat": 55.95,
-   "trail": "blue",
+   "trail": "red",
    "title": [
     "In der Stadt",
     "In der Stadt"
@@ -3018,7 +3018,7 @@
    "cityEn": "Inverness",
    "lon": -4.22,
    "lat": 57.48,
-   "trail": "blue",
+   "trail": "red",
    "title": [
     "Unterwegs",
     "Unterwegs"
@@ -16694,13 +16694,15 @@
     "Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.",
     "Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).",
     "Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.",
-    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden."
+    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden.",
+    "English Trail ist jetzt blau, und die Reise startet in London."
    ],
    "en": [
     "Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.",
     "Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).",
     "Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.",
-    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden."
+    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden.",
+    "English Trail ist jetzt blau, und die Reise startet in London."
    ]
   },
   {

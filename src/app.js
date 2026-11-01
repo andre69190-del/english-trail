@@ -123,7 +123,7 @@
       tts_missing: 'Dein Gerät hat keine englische Stimme. Der Text bleibt sichtbar.',
       ob_title: 'Englisch lernen, Ort für Ort.', ob_sub: 'Eine Reise über den Trail: 12 Orte, echte Gespräche, kurze Runden. Ohne Druck, ohne schlechtes Gewissen.',
       ob_why: 'Wofür lernst du?', why_travel: 'Reisen', why_family: 'Familie & Freunde', why_work: 'Arbeit', why_curious: 'Neugier',
-      ob_goal: 'An wie vielen Tagen pro Woche willst du üben?', ob_go: 'Los nach Warszawa',
+      ob_goal: 'An wie vielen Tagen pro Woche willst du üben?', ob_go: 'Los nach London',
       hear: 'Was hörst du?', choose_meaning: 'Was bedeutet das?', choose_pl: 'Wie sagt man das auf Englisch?', type_pl: 'Schreib es auf Englisch', build_pl: 'Bau den Satz', fill: 'Welches Wort fehlt?',
       price_q: 'Welcher Betrag?', sound_q: 'Wie klingt der markierte Teil?', hear_word: 'Welches Wort hörst du?', case_q: 'Welche Form passt?',
       learned_today: 'Das kannst du jetzt sagen', pairs_left: 'Paare übrig', time_left: 'Sekunden',
@@ -253,7 +253,7 @@
       tts_missing: 'Your device has no Polish voice. The text stays visible.',
       ob_title: 'Learn Polish, city by city.', ob_sub: 'A journey along the Szlak: 12 cities, real conversations, short rounds. No pressure, no guilt.',
       ob_why: 'Why are you learning?', why_travel: 'Travel', why_family: 'Family & friends', why_work: 'Work', why_curious: 'Curiosity',
-      ob_goal: 'How many days a week do you want to practise?', ob_go: 'Off to Warszawa',
+      ob_goal: 'How many days a week do you want to practise?', ob_go: 'Off to London',
       hear: 'What do you hear?', choose_meaning: 'What does it mean?', choose_pl: 'How do you say it in Polish?', type_pl: 'Write it in Polish', build_pl: 'Build the sentence', fill: 'Which word is missing?',
       price_q: 'Which amount?', sound_q: 'How does the marked part sound?', hear_word: 'Which word do you hear?', case_q: 'Which form fits?',
       learned_today: 'You can now say', pairs_left: 'pairs left', time_left: 'seconds',
@@ -555,7 +555,7 @@
     /* Spielbildschirm: eine noch offene Einführungs-Tour darf nicht über den Antworten liegen bleiben */
     if (showNav === false) { var tb = document.getElementById('tour'); if (tb) { tb.remove(); document.querySelectorAll('.tour-hl').forEach(function (e) { e.classList.remove('tour-hl'); }); } }
     var lv = C.levelFromXp(S.xp);
-    var html = '<header class="top"><div class="top-in"><button type="button" class="brand" id="brand" title="' + esc(t('to_start')) + '" aria-label="English Trail – ' + esc(t('to_start')) + '">' + blaze('red') + 'English Trail</button>' +
+    var html = '<header class="top"><div class="top-in"><button type="button" class="brand" id="brand" title="' + esc(t('to_start')) + '" aria-label="English Trail – ' + esc(t('to_start')) + '">' + blaze('blue') + 'English Trail</button>' +
       '<span class="chip num" title="' + t('level') + '">' + t('level') + ' ' + lv.level + '</span>' +
       '<span class="chip amber num">' + S.xp + ' ' + t('xp') + '</span>' + netChip() + '</div></header><main id="main">' + inner +
       '<footer class="legal-foot small"><a href="impressum.html">' + esc(t('legal')) + '</a> · <a href="datenschutz.html">' + esc(t('privacy')) + '</a></footer></main>';
@@ -2461,7 +2461,8 @@
     });
   }
   function looksPl(o, q) { if (q.plOpts || q.clues) return true; if (q.fixed) return false; return q.ask === t('choose_pl') || q.ask === t('fill') || q.ask === t('hear_word') || (q.ask || '').indexOf(t('case_q')) === 0; }
-  function plKeys() { return '<div class="pl-keys" aria-label="Polish letters">' + ['ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż'].map(function (c) { return '<button type="button" data-k="' + c + '">' + c + '</button>'; }).join('') + '</div>'; }
+  function plKeys() { return ''; }  /* Englisch braucht keine Sonderzeichen-Leiste (Polnisch: ą ć ę …) */
+  function plKeysPl() { return '<div class="pl-keys" aria-label="Polish letters">' + ['ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż'].map(function (c) { return '<button type="button" data-k="' + c + '">' + c + '</button>'; }).join('') + '</div>'; }
   /* Antwortart (Einstellung S.input): Schreib-Fragen auch per Sprechen oder Antippen beantworten.
      Antippen-Optionen sind fest aus der Antwort abgeleitet (eigener Zufall) – im Duell-Code auf beiden Handys gleich. */
   function drawInput(q, area) {
