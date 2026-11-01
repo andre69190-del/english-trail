@@ -494,3 +494,13 @@ test('Live-Duell: Punktvergabe identisch auf beiden Handys', () => {
   assert.equal(C.liveWinner(X, B, 'a', 'b'), -1); assert.equal(C.liveWinner(X, X, 'a', 'b'), 0);
   assert.equal(C.liveWinner(A, A, 'a', 'b'), 1); assert.equal(C.liveWinner(A, A, 'b', 'a'), -1);
 });
+
+test('Hausaufgaben-Code: kodieren und lesen', () => {
+  const L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ah'];
+  const pm = C.maskOf([10, 11, 12], [10, 12]), tm = C.maskOf(L, ['b', 'ah']);
+  const code = C.hwCode(7, pm, tm); assert.ok(/^HA7-P[0-9A-Z]+-T[0-9A-Z]+$/.test(code));
+  const h = C.hwParse(code.toLowerCase().replace(/-/g, ' - '));
+  assert.equal(h.grade, 7); assert.equal(JSON.stringify(C.fromMask([10, 11, 12], h.pm)), '[10,12]');
+  assert.equal(JSON.stringify(C.fromMask(L, h.tm)), '["b","ah"]');
+  assert.equal(C.hwParse('HA4-P1-T1'), null); assert.equal(C.hwParse('HA7-P0-T0'), null); assert.equal(C.hwCode(7, 0, 0), null);
+});

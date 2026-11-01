@@ -4099,7 +4099,25 @@
    },
    "pack": 1,
    "sch": 5,
-   "ico": "🏫"
+   "ico": "🏫",
+   "em": [
+    "🏫",
+    "🧑‍🏫",
+    "📚",
+    "➗",
+    "🏰",
+    "🎨",
+    "🤸",
+    "🗓️",
+    "⏰",
+    "🍎",
+    "📝",
+    "🖍️",
+    "📒",
+    "✏️",
+    "👔",
+    "🧽"
+   ]
   },
   {
    "id": "s5hom",
@@ -4328,7 +4346,25 @@
    },
    "pack": 1,
    "sch": 5,
-   "ico": "🏠"
+   "ico": "🏠",
+   "em": [
+    "🏠",
+    "🏢",
+    "🛏️",
+    "🍳",
+    "🛋️",
+    "🛁",
+    "🌳",
+    "⬆️",
+    "⬇️",
+    "👉",
+    "👉",
+    "⤵️",
+    "🔙",
+    "🐶",
+    "🐹",
+    "🦜"
+   ]
   },
   {
    "id": "s5hob",
@@ -4557,7 +4593,25 @@
    },
    "pack": 1,
    "sch": 5,
-   "ico": "⚽"
+   "ico": "⚽",
+   "em": [
+    "⭐",
+    "🕹️",
+    "⚽",
+    "🚲",
+    "📖",
+    "🏊",
+    "💃",
+    "✏️",
+    "🎹",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "🏅",
+    "👥"
+   ]
   },
   {
    "id": "s6fes",
@@ -4786,7 +4840,25 @@
    },
    "pack": 1,
    "sch": 6,
-   "ico": "🎃"
+   "ico": "🎃",
+   "em": [
+    "🎪",
+    "🎂",
+    "🎄",
+    "🐣",
+    "🎃",
+    "🔥",
+    "🎆",
+    "🦸",
+    "🎁",
+    "🥳",
+    "🎉",
+    "🕯️",
+    "🎃",
+    "🎊",
+    "💌",
+    ""
+   ]
   },
   {
    "id": "s6sho",
@@ -5015,7 +5087,25 @@
    },
    "pack": 1,
    "sch": 6,
-   "ico": "🛒"
+   "ico": "🛒",
+   "em": [
+    "🍾",
+    "📦",
+    "🍞",
+    "🍰",
+    "⚖️",
+    "",
+    "",
+    "❓",
+    "❓",
+    "",
+    "🫘",
+    "🥔",
+    "🍟",
+    "🛒",
+    "📝",
+    "🐟"
+   ]
   },
   {
    "id": "s6lon",
@@ -5244,7 +5334,25 @@
    },
    "pack": 1,
    "sch": 6,
-   "ico": "🎡"
+   "ico": "🎡",
+   "em": [
+    "📸",
+    "🗼",
+    "🏰",
+    "🌉",
+    "🚇",
+    "🚌",
+    "🏖️",
+    "🏝️",
+    "🪨",
+    "🏘️",
+    "🎣",
+    "🏄",
+    "",
+    "",
+    "",
+    "✈️"
+   ]
   },
   {
    "id": "s7fri",
@@ -16580,6 +16688,22 @@
  ],
  "news": [
   {
+   "v": "0.6",
+   "date": "2026-11-01",
+   "de": [
+    "Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.",
+    "Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).",
+    "Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.",
+    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden."
+   ],
+   "en": [
+    "Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.",
+    "Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).",
+    "Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.",
+    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden."
+   ]
+  },
+  {
    "v": "0.5",
    "date": "2026-11-01",
    "de": [
@@ -16944,6 +17068,10 @@
      [
       "Wochen-Challenge",
       "Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen."
+     ],
+     [
+      "Hausaufgabe per Code",
+      "Code eingeben (z. B. HA7-P3-T5) – alle aus der Klasse bekommen dieselben Fragen."
      ]
     ]
    },
@@ -17024,6 +17152,10 @@
       "Green Line, Access oder andere Bücher auswählen; eigene Unit-Vokabeln eintragen."
      ],
      [
+      "Bericht für Eltern",
+      "Im Schulbereich: Wochenüberblick (Übungstage, neue Wörter, Probe-Note, knifflige Wörter) zum Teilen."
+     ],
+     [
       "Klassenarbeits-Training",
       "Probe-Arbeit mit Hörverstehen, Leseverstehen, Sprachmittlung und Note."
      ]
@@ -17063,6 +17195,10 @@
      [
       "Live-Duell",
       "Zwei Kinder treten in Echtzeit an – ohne Konto, nur Spitzname."
+     ],
+     [
+      "Hausaufgaben-Code",
+      "Unter Schule → Probe-Klassenarbeit Themen und Pakete ankreuzen, „Als Hausaufgaben-Code teilen“ – fertig. Ohne Anmeldung, ohne Schülerdaten."
      ]
     ]
    },

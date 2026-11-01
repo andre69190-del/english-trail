@@ -245,6 +245,9 @@ with sync_playwright() as p:
     page.click('[data-gg="school"]'); page.wait_for_timeout(150)
     (ok if page.evaluate("() => window.PSApp.state() && document.querySelector('h1').textContent.indexOf('🎒') >= 0") else bad)('Übersicht: Ausprobieren öffnet die Ansicht')
     page.evaluate("() => window.PSApp.go('me')"); (ok if page.locator('#guide-open').count() else bad)('Übersicht unter „Ich“ verlinkt')
+    if page.locator('#sy-up').count():
+        page.fill('#sy-mail', 'kind@example.org'); page.fill('#sy-pw', 'geheim1234'); page.click('#sy-up'); page.wait_for_timeout(150)
+        (ok if '16' in page.inner_text('#sync') and page.locator('#sy-u16').count() else bad)('Konto anlegen fragt nach 16+ / Einverständnis der Eltern')
     sent = []
     _cors = {'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'POST, OPTIONS'}
     page.route('**/rest/v1/et_feedback', lambda r: (sent.append(r.request.post_data) if r.request.method == 'POST' else None, r.fulfill(status=201 if r.request.method == 'POST' else 204, headers=_cors, body='')))
@@ -392,6 +395,25 @@ with sync_playwright() as p:
     (ok if sp.evaluate("() => { const g = window.PSApp.game(); return g && g.qs.length; }") == 20 else bad)('Probe-Klassenarbeit: 20 Fragen')
     (ok if play_through(sp, 400) else bad)('Probe-Klassenarbeit durchspielbar')
     (ok if sp.evaluate("() => (window.PSApp.state().schoolBest || {})[7] != null") else bad)('Probe-Klassenarbeit: Bestwert gespeichert')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#par-txt')
+    sp.evaluate("() => { window._sh = []; navigator.share = undefined; }")
+    sp.click('#hw-make'); sp.wait_for_timeout(150); hcode = sp.inner_text('#hw-out').split()[-1]
+    (ok if hcode.startswith('HA7-P') else bad)('Hausaufgaben-Code erstellen (%s)' % hcode)
+    sp.fill('#hw-in', hcode); sp.click('#hw-go'); sp.wait_for_selector('.game'); qa = sp.evaluate("() => window.PSApp.game().qs.map(q => q.a).join('|')")
+    sp.evaluate("() => window.PSApp.go('school')"); sp.fill('#hw-in', hcode.lower()); sp.click('#hw-go'); sp.wait_for_selector('.game')
+    (ok if qa and qa == sp.evaluate("() => window.PSApp.game().qs.map(q => q.a).join('|')") else bad)('Hausaufgabe: gleicher Code → gleiche Fragen')
+    play_through(sp, 400); sp.wait_for_timeout(200)
+    (ok if sp.locator('#hw-res').count() and hcode in str(sp.evaluate("() => window.PSApp.state().hwDone")) else bad)('Hausaufgabe: Ergebnis gespeichert und teilbar')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#par-txt')
+    rep_txt = sp.inner_text('#par-txt')
+    (ok if 'Klasse 7' in rep_txt and 'Note' in rep_txt and 'english.arndt-software.de' in rep_txt else bad)('Eltern-Bericht im Schulbereich (mit Probe-Note)')
+    ix5 = sp.evaluate("() => window.PSApp.data().units.findIndex(u => u.id === 's5sch')") if sp.evaluate("() => !!(window.PSApp.data)") else -1
+    if ix5 >= 0:
+        sp.evaluate("(i) => window.PSApp.go('city', i)", ix5); sp.locator('.tiles [data-mode="learn"]').click(); sp.wait_for_timeout(300)
+        (ok if sp.locator('.q-em').count() else bad)('Emojis bei Lernkarten Klasse 5')
+        sp.evaluate("() => window.PSApp.go('school')")
+    else:
+        bad('PSApp.data fehlt für Emoji-Test')
     sw = sp.evaluate("() => document.documentElement.scrollWidth")
     (ok if sw <= 375 else bad)('Schule ohne horizontales Scrollen (%s px)' % sw)
     sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#sc-own'); sp.click('#sc-own'); sp.wait_for_selector('#mw-u')

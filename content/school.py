@@ -709,3 +709,14 @@ minority language | Minderheitensprache''',
                          opts=[('Language, history and shared traditions.', 'Sprache, Geschichte und gemeinsame Traditionen.', 1), ('The language, the history and the traditions shared.', 'Die Sprache, die Geschichte und die Traditionen geteilt.', 0)],
                          hint='Allgemein und abstrakt → ohne „the“ (zero article).')],
              outro='Zum Abschied bringt sie dir einen Satz bei: „Diolch!“ – Danke auf Walisisch.'))
+
+
+# Emojis für Klasse 5/6 (gleiche Reihenfolge wie die Wörter; leer = kein passendes Bild)
+EMOJI = {
+  's5sch': ['🏫', '🧑‍🏫', '📚', '➗', '🏰', '🎨', '🤸', '🗓️', '⏰', '🍎', '📝', '🖍️', '📒', '✏️', '👔', '🧽'],
+  's5hom': ['🏠', '🏢', '🛏️', '🍳', '🛋️', '🛁', '🌳', '⬆️', '⬇️', '👉', '👉', '⤵️', '🔙', '🐶', '🐹', '🦜'],
+  's5hob': ['⭐', '🕹️', '⚽', '🚲', '📖', '🏊', '💃', '✏️', '🎹', '', '', '', '', '', '🏅', '👥'],
+  's6fes': ['🎪', '🎂', '🎄', '🐣', '🎃', '🔥', '🎆', '🦸', '🎁', '🥳', '🎉', '🕯️', '🎃', '🎊', '💌', ''],
+  's6sho': ['🍾', '📦', '🍞', '🍰', '⚖️', '', '', '❓', '❓', '', '🫘', '🥔', '🍟', '🛒', '📝', '🐟'],
+  's6lon': ['📸', '🗼', '🏰', '🌉', '🚇', '🚌', '🏖️', '🏝️', '🪨', '🏘️', '🎣', '🏄', '', '', '', '✈️'],
+}

@@ -162,6 +162,8 @@
       vc: 'Stimme', vc_pick: 'Englische Stimme', vc_test: 'Stimme testen', vc_d: 'Natürliche oder „verbesserte“ Stimmen klingen deutlich besser. Mehr Stimmen bekommst du in den Einstellungen deines Geräts.', vc_none: 'Auf diesem Gerät ist keine englische Stimme installiert.', vc_none_toast: 'Keine englische Stimme gefunden – Tipp unter Ich → Stimme.', vc_ios: 'iPhone/iPad: Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch → z. B. „Daniel (verbessert)“ laden. Danach die App neu öffnen.', vc_and: 'Android: Einstellungen → Bedienungshilfen bzw. System → Sprache → Sprachausgabe → Google-Sprachausgabe → Sprachdaten installieren → Englisch (UK). Danach die App neu öffnen.', vc_pc: 'Windows: Einstellungen → Zeit und Sprache → Sprache → Englisch (Vereinigtes Königreich) hinzufügen (mit Sprachausgabe). Chrome und Edge bringen oft eigene Online-Stimmen mit.',
       chat: 'KI-Gespräch', chat_d: 'Frei auf Englisch schreiben oder sprechen – mit Korrektur', chat_city_d: 'Die Szene dieser Stadt frei weiterspielen', chat_free: 'Freies Gespräch (Café-Smalltalk)', chat_free_sc: 'ein lockeres Gespräch in einem Café in London', chat_sc: 'Situation', chat_lv: 'Niveau', chat_ph: 'Auf Englisch antworten … (Enter = senden)', chat_send: 'Senden', chat_talk: 'Antworten vorlesen', chat_used: 'heute {n} von {l}', chat_new: 'Neu anfangen', chat_better: 'Besser', chat_note: 'Deine Nachrichten gehen über unseren Server an einen KI-Dienst (derzeit Groq, USA) und werden nicht gespeichert. Bitte keine persönlichen Daten eingeben. Die KI kann Fehler machen.', chat_login: 'Das KI-Gespräch gibt es mit Konto (kostenlos, Ich → Geräte-Abgleich) – so bleibt es für alle kostenlos und fair begrenzt.', chat_offline: 'Für das KI-Gespräch brauchst du Internet.', chat_soon: 'Das KI-Gespräch wird gerade eingerichtet und ist bald verfügbar.', chat_limit: 'Für heute sind alle KI-Nachrichten verbraucht. Morgen geht es weiter!', chat_err: 'Die KI antwortet gerade nicht. Bitte gleich noch einmal versuchen.',
       vc_auto: 'Automatisch (empfohlen)', vc_apple: 'Auf iPhone/iPad/Mac: Wähl nur Stimmen, die unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch geladen sind – sonst bleibt es stumm.',
+      par_title: 'Bericht für Eltern', par_d: 'Ein kurzer Überblick zum Teilen, z. B. per Messenger. Nur Zahlen von diesem Gerät, kein Name.', par_share: 'Bericht teilen', par_h: 'English Trail – Wochenbericht (Klasse {g})', par_week: 'Diese Woche: an {d} von {goal} Tagen geübt · {n} neue Wörter · {r} richtig, {w} falsch', par_words: 'Sicher gelernte Wörter insgesamt: {m}', par_mine: 'Eigene Buch-Vokabeln: {n} in {u} Units', par_exam: 'Beste Probe-Klassenarbeit: {p} % (Note {m})', par_noexam: 'Probe-Klassenarbeit: noch nicht geschrieben', par_hard: 'Knifflige Wörter:', sync_u16: 'Ich bin 16 oder älter – oder meine Eltern sind einverstanden.', sync_u16_need: 'Bitte bestätige zuerst: 16 oder älter oder Einverständnis der Eltern.',
+      hw: 'Hausaufgabe per Code', hw_d: 'Deine Lehrkraft oder jemand aus der Klasse hat einen Code geschickt? Eingeben – alle bekommen dieselben Fragen.', hw_go: 'Los', hw_bad: 'Diesen Code kenne ich nicht. Er sieht so aus: HA7-P3-T5', hw_make: 'Als Hausaufgaben-Code teilen', hw_made: 'Code:', hw_share: 'Englisch-Hausaufgabe (Klasse {g}): Code {c} in English Trail unter Schule → Hausaufgabe eingeben.', hw_done: 'Erledigt:', hw_res: 'Ergebnis teilen', hw_res_t: 'Hausaufgabe {c} erledigt: {p} %',
       gd_title: 'Was kann English Trail?', gd_kids: 'Für Kinder', gd_adults: 'Für Eltern & Lehrkräfte', gd_open: 'Alles ansehen', gd_try: 'Ausprobieren', gd_sch_d: 'Alle Spiele, Duelle und Hilfen auf einen Blick.', rep_pick: 'Was ist los? Tippe an (Text ist freiwillig):', rep_c1: 'Übersetzung falsch', rep_c2: 'Tippfehler', rep_c3: 'Aussprache klingt komisch', rep_c4: 'Viel zu schwer', rep_c5: 'Etwas funktioniert nicht', rep_oops: 'Ups, da hat etwas nicht geklappt. Unter „Fehler melden“ kannst du es uns sagen.',
       news: 'Was ist neu', news_new: 'Neu in dieser Version', news_all: 'Alle Neuerungen ansehen', news_ver: 'Version',
       boss_locked: 'Die Prüfung öffnet, wenn alle Wörter gefestigt sind ({r} von {n}).',
@@ -290,6 +292,8 @@
       vc: 'Voice', vc_pick: 'Polish voice', vc_test: 'Test voice', vc_d: 'Natural or “enhanced” voices sound much better. You can add more voices in your device settings.', vc_none: 'No Polish voice is installed on this device.', vc_none_toast: 'No Polish voice found – see Me → Voice for a tip.', vc_ios: 'iPhone/iPad: Settings → Accessibility → Spoken Content → Voices → Polish → download “Zosia (Enhanced)”. Then reopen the app.', vc_and: 'Android: Settings → Accessibility or System → Language → Text-to-speech → Google Speech Services → Install voice data → Polish. Then reopen the app.', vc_pc: 'Windows: Settings → Time & language → Language → add Polish (with text-to-speech). Chrome and Edge often include their own online voices.',
       chat: 'AI conversation', chat_d: 'Write or speak freely in Polish – with corrections', chat_city_d: 'Continue this city’s scene freely', chat_free: 'Free conversation (café small talk)', chat_free_sc: 'a relaxed conversation in a café in Poland', chat_sc: 'Situation', chat_lv: 'Level', chat_ph: 'Answer in Polish … (Enter = send)', chat_send: 'Send', chat_talk: 'Read replies aloud', chat_used: 'today {n} of {l}', chat_new: 'Start over', chat_better: 'Better', chat_note: 'Your messages go via our server to an AI service (currently Groq, USA) and are not stored. Please don’t enter personal data. The AI can make mistakes.', chat_login: 'The AI conversation needs an account (free, Me → Device sync) – that keeps it free and fairly limited for everyone.', chat_offline: 'You need internet for the AI conversation.', chat_soon: 'The AI conversation is being set up and will be available soon.', chat_limit: 'You’ve used all AI messages for today. See you tomorrow!', chat_err: 'The AI isn’t answering right now. Please try again in a moment.',
       vc_auto: 'Automatic (recommended)', vc_apple: 'On iPhone/iPad/Mac: only pick voices downloaded under Settings → Accessibility → Spoken Content → Voices → Polish – otherwise there is no sound.',
+      par_title: 'Report for parents', par_d: 'A short overview to share, e.g. by messenger. Only numbers from this device, no name.', par_share: 'Share report', par_h: 'English Trail – weekly report (year {g})', par_week: 'This week: practised on {d} of {goal} days · {n} new words · {r} right, {w} wrong', par_words: 'Words learned for sure in total: {m}', par_mine: 'Own textbook words: {n} in {u} units', par_exam: 'Best practice test: {p} % (mark {m})', par_noexam: 'Practice test: not taken yet', par_hard: 'Tricky words:', sync_u16: 'I am 16 or older – or my parents agree.', sync_u16_need: 'Please confirm first: 16 or older, or your parents agree.',
+      hw: 'Homework by code', hw_d: 'Got a code from your teacher or a classmate? Enter it – everyone gets the same questions.', hw_go: 'Go', hw_bad: 'I do not know this code. It looks like this: HA7-P3-T5', hw_make: 'Share as homework code', hw_made: 'Code:', hw_share: 'English homework (year {g}): enter code {c} in English Trail under School → Homework.', hw_done: 'Done:', hw_res: 'Share result', hw_res_t: 'Homework {c} done: {p} %',
       gd_title: 'What can English Trail do?', gd_kids: 'For kids', gd_adults: 'For parents & teachers', gd_open: 'See everything', gd_try: 'Try it', gd_sch_d: 'All games, duels and helpers at a glance.', rep_pick: 'What is wrong? Tap one (text is optional):', rep_c1: 'Wrong translation', rep_c2: 'Typo', rep_c3: 'Pronunciation sounds odd', rep_c4: 'Far too hard', rep_c5: 'Something does not work', rep_oops: 'Oops, something went wrong. Use “Report a mistake” to tell us.',
       news: 'What’s new', news_new: 'New in this version', news_all: 'See all updates', news_ver: 'Version',
       boss_locked: 'The test opens once all words are consolidated ({r} of {n}).',
@@ -372,6 +376,14 @@
   var polUI = false, PLX = { again: 'Jeszcze raz', back: 'Wróć', best: 'Rekord', combo: 'Seria', done: 'Koniec', failed: 'Tym razem się nie udało.', home: 'Wróć', next: 'Dalej', passed: 'Zaliczone', right: 'Dobrze', score: 'Wynik', skip: 'Pomiń', skip_q: 'Pomiń pytanie', solution: 'Odpowiedź', wrong: 'Niestety nie', check: 'Sprawdź', share: 'Kopiuj wynik', copied: 'Skopiowano', start: 'Start', j_hint: 'Podpowiedź', jokers_d: 'Co poniedziałek znowu po 3 sztuki. 50:50 usuwa dwie złe odpowiedzi, +10 s zatrzymuje zegar.' };
   function t(k) { if (polUI && PLX[k] != null) return PLX[k]; var v = TX[S.base][k]; return v == null ? k : v; }
   function L(pair) { return S.base === 'en' ? pair[1] : pair[0]; }
+  /* Emojis für Klasse 5/6 (H): als Bildhilfe bei Lernkarten und wenn das deutsche Wort gezeigt wird – nie, wenn das Bild die Lösung verraten würde */
+  function emOf(q) {
+    if (!q || !q.id || q.hideText || typeof q.id !== 'string') return '';
+    var p = q.id.split(':'), ui = -1; for (var i = 0; i < U.length; i++) if (U[i].id === p[0]) { ui = i; break; }
+    var u = U[ui]; if (!u || !u.em) return '';
+    var e = u.em[+p[1]] || '', w = u.words[+p[1]]; if (!e || !w) return '';
+    return q.type === 'card' || q.big !== w[0] ? e : '';
+  }
   function meaning(w) { return S.base === 'en' ? w[2] : w[1]; }
   function cityName(u) { return S.base === 'en' ? u.cityEn : u.cityDe; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -761,6 +773,19 @@
       (hard.length ? '<p class="small"><b>' + esc(t('wr_hard')) + ':</b> ' + hard.map(function (x) { return '<span lang="en">' + esc(x.w[0]) + '</span>'; }).join(' · ') + '</p><button class="btn primary" id="wr-go" style="justify-self:start">' + esc(t('wr_go')) + '</button>' : '') + '</section>';
   }
   /* Was ist neu (3.1.1): nach einem Update einmal auf der Startseite, alle Versionen unter Ich → Was ist neu */
+  /* Eltern-Bericht (G): kurzer Text zum Teilen – nur Zahlen aus dem Gerät, keine Namen */
+  function parentReport(g) {
+    var wk = C.weekKey(today()), L0 = (S.wlog || {})[wk] || {}, days = C.daysInWeek(S.active, wk);
+    var mine = schUnits(), mw = 0; Object.keys(mine).forEach(function (k) { mw += mine[k].length; });
+    var lines = [t('par_h').replace('{g}', g),
+      t('par_week').replace('{d}', days).replace('{goal}', S.goal).replace('{n}', L0.n || 0).replace('{r}', L0.r || 0).replace('{w}', L0.w || 0),
+      t('par_words').replace('{m}', masteredCount()).replace('{k}', g),
+      t('par_mine').replace('{n}', mw).replace('{u}', Object.keys(mine).length),
+      S.schoolBest && S.schoolBest[g] != null ? t('par_exam').replace('{p}', S.schoolBest[g]).replace('{m}', C.schoolMark(S.schoolBest[g])) : t('par_noexam'),
+      (S.mistakes || []).length ? t('par_hard') + ' ' + S.mistakes.map(byId).filter(Boolean).slice(0, 5).map(function (x) { return x.w[0]; }).join(', ') : '',
+      SITE];
+    return lines.filter(Boolean).join('\n');
+  }
   /* ---------- Was kann English Trail? Übersicht für Kinder und für Eltern & Lehrkräfte ---------- */
   function renderGuide(who) {
     who = who === 'adults' ? 'adults' : 'kids';
@@ -1152,7 +1177,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.5', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.6', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1475,6 +1500,7 @@
       h += '<p class="small muted">' + esc(t('sync_d')) + '</p>' +
         '<label class="fld">' + esc(t('sync_email')) + '<input type="email" id="sy-mail" autocomplete="email" inputmode="email"></label>' +
         '<label class="fld">' + esc(t('sync_pw')) + '<input type="password" id="sy-pw" autocomplete="current-password" minlength="8"></label>' +
+        '<label class="row small"><input type="checkbox" id="sy-u16"' + (S.u16ok ? ' checked' : '') + '> ' + esc(t('sync_u16')) + '</label>' +
         '<div class="row"><button class="btn primary" id="sy-in"' + (syncBusy ? ' disabled' : '') + '>' + esc(t('sync_login')) + '</button><button class="btn" id="sy-up"' + (syncBusy ? ' disabled' : '') + '>' + esc(t('sync_signup')) + '</button></div>' +
         '<button class="btn ghost" id="sy-forgot" style="justify-self:start;padding-left:0">' + esc(t('sync_forgot')) + '</button>' +
         (syncErr || syncMsg ? '<p class="small" role="status">' + esc(syncErr || syncMsg) + '</p>' : '') +
@@ -1486,6 +1512,7 @@
     updateNet();
     var el = document.getElementById('sync'); if (!el) return;
     var keep = {}; ['sy-mail', 'sy-pw', 'sy-npw'].forEach(function (id) { var i = document.getElementById(id); if (i) keep[id] = i.value; });
+    var u16 = document.getElementById('sy-u16'); if (u16 && u16.checked) S.u16ok = 1;
     var tmp = document.createElement('div'); tmp.innerHTML = syncBox(); el.replaceWith(tmp.firstChild);
     Object.keys(keep).forEach(function (id) { var i = document.getElementById(id); if (i) i.value = keep[id]; });
     bindSync();
@@ -1502,6 +1529,8 @@
     };
     if ($('sy-up')) $('sy-up').onclick = function () {
       var c = creds(); if (!c.email) return; if (c.password.length < 8) { syncErr = t('sync_err_pw'); refreshSyncBox(); return; }
+      if (!$('sy-u16') || !$('sy-u16').checked) { syncErr = t('sync_u16_need'); refreshSyncBox(); return; }
+      S.u16ok = 1; save();
       busy(); sbFetch('/auth/v1/signup?redirect_to=' + redirect, { method: 'POST', body: c }).then(function (j) {
         syncBusy = false;
         if (j && j.access_token) return afterLogin(j);
@@ -1817,20 +1846,23 @@
       (tNew.length ? '<button class="btn" id="sc-gall" style="justify-self:start">' + esc(t('sch_gram_all')) + '</button>' : '') +
       (tOld.length ? '<details><summary class="small"><b>' + esc(t('sch_repeat')) + '</b> (' + tOld.length + ')</summary><div class="list">' + tOld.map(topicBtn).join('') + '</div></details>' : '') + '</section>' +
       '<section class="card stack"><h2>🏆 ' + esc(t('sch_week')) + '</h2><p class="small">' + esc(t('sch_week_d')) + '</p><p class="small muted">Code: <b class="num">' + esc(C.weekChallengeCode(today(), g)) + '</b></p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-week">' + esc(t('sch_week_go')) + '</button><button class="btn" id="sc-face">' + esc(t('face')) + '</button><button class="btn" id="sc-duel">' + esc(t('sch_duel')) + '</button><button class="btn" id="sc-live">⚡ ' + esc(t('live')) + '</button></div></section>' +
+      '<section class="card stack"><h2>📮 ' + esc(t('hw')) + '</h2><p class="small">' + esc(t('hw_d')) + '</p><div class="row" style="flex-wrap:nowrap"><input id="hw-in" class="num" autocapitalize="characters" autocomplete="off" placeholder="HA7-P3-T5" aria-label="' + esc(t('hw')) + '" style="flex:1;min-width:0"><button class="btn primary" id="hw-go">' + esc(t('hw_go')) + '</button></div>' + (S.hwDone && Object.keys(S.hwDone).length ? '<p class="small muted">' + esc(t('hw_done')) + ' ' + Object.keys(S.hwDone).slice(-3).map(function (k) { return k + ' (' + S.hwDone[k] + ' %)'; }).join(' · ') + '</p>' : '') + '</section>' +
       '<section class="card stack"><h2>📝 ' + esc(t('sch_exam')) + '</h2><p class="small muted">' + esc(t('sch_exam_d')) + '</p>' +
       '<fieldset class="stack" style="border:0;padding:0;margin:0"><legend class="small"><b>' + esc(t('sch_exam_pick')) + '</b></legend>' +
       tNew.concat(tOld).map(function (k) { return '<label class="row small"><input type="checkbox" data-xt="' + esc(k) + '"' + (tNew.indexOf(k) >= 0 ? ' checked' : '') + '> ' + esc(T[k].t) + '</label>'; }).join('') +
       packs.map(function (i) { return '<label class="row small"><input type="checkbox" data-xp="' + i + '" checked> ' + esc(U[i].ico + ' ' + U[i].city) + '</label>'; }).join('') +
       Object.keys(UN).sort().map(function (k) { return '<label class="row small"><input type="checkbox" data-xu="' + esc(k) + '" checked> 📘 ' + esc(k) + ' (' + esc(t('sch_mine')) + ')</label>'; }).join('') + '</fieldset>' +
-      '<button class="btn primary" id="sc-exam" style="justify-self:start">' + esc(t('sch_exam_go')) + '</button>' + (S.schoolBest && S.schoolBest[g] != null ? '<p class="small muted">' + esc(t('best')) + ': ' + S.schoolBest[g] + '%</p>' : '') + '</section>' +
+      '<div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-exam">' + esc(t('sch_exam_go')) + '</button><button class="btn" id="hw-make">📮 ' + esc(t('hw_make')) + '</button></div><p class="small muted" id="hw-out" role="status"></p>' + (S.schoolBest && S.schoolBest[g] != null ? '<p class="small muted">' + esc(t('best')) + ': ' + S.schoolBest[g] + '%</p>' : '') + '</section>' +
       (packs.length ? '<section class="card stack"><h2>✍️ ' + esc(t('sch_write')) + '</h2><p class="small muted">' + esc(t('sch_write_d')) + '</p><div class="row" style="flex-wrap:wrap">' + packs.map(function (i) { return '<button class="btn" data-sw="' + i + '">' + esc(U[i].ico + ' ' + U[i].city) + '</button>'; }).join('') + '</div></section>' : '') +
       '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p>' +
       (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button>'; }).join('') + '</div>' : '') +
       '<button class="btn" id="sc-own" style="justify-self:start">' + esc(t('sch_own_add')) + '</button></section>' +
       (packs.length ? '<section class="card stack"><h2>' + esc(t('chat')) + '</h2><p class="small">' + esc(t('sch_chat_d').replace('{g}', g)) + '</p><button class="btn" id="sc-chat" style="justify-self:start">' + esc(t('chat')) + '</button></section>' : '') +
+      '<section class="card stack"><h2>👪 ' + esc(t('par_title')) + '</h2><p class="small">' + esc(t('par_d')) + '</p><pre class="small par-rep" id="par-txt">' + esc(parentReport(g)) + '</pre><button class="btn" id="par-share" style="justify-self:start">' + esc(t('par_share')) + '</button></section>' +
       '<section class="card stack"><h2>❓ ' + esc(t('gd_title')) + '</h2><p class="small">' + esc(t('gd_sch_d')) + '</p><button class="btn" id="sc-guide" style="justify-self:start">' + esc(t('gd_open')) + ' →</button><p class="small muted">' + esc(t('rep_d')) + '</p>' + reportHtml('rep-sch') + '</section>';
     shell(html);
     document.getElementById('sc-guide').onclick = function () { go('guide', 'kids'); };
+    document.getElementById('par-share').onclick = function () { shareOut(parentReport(g)); };
     bindReport('rep-sch', 'school K' + g);
     document.getElementById('back').onclick = function () { go('practice'); };
     document.getElementById('sc-edit').onclick = function () { SCH.edit = true; renderSchool(); };
@@ -1847,6 +1879,19 @@
       startMode('sexam');
     };
     document.getElementById('sc-own').onclick = function () { go('mywords'); };
+    document.getElementById('hw-make').onclick = function () {
+      var tp = [], pk = []; document.querySelectorAll('[data-xt]').forEach(function (c) { if (c.checked) tp.push(c.getAttribute('data-xt')); });
+      document.querySelectorAll('[data-xp]').forEach(function (c) { if (c.checked) pk.push(+c.getAttribute('data-xp')); });
+      var code = C.hwCode(g, C.maskOf(schPacks(g), pk), C.maskOf(hwTopicList(), tp)), out = document.getElementById('hw-out');
+      if (!code) { out.textContent = t('sch_exam_none'); return; }
+      out.innerHTML = esc(t('hw_made')) + ' <b class="num">' + esc(code) + '</b>';
+      shareOut(t('hw_share').replace('{c}', code).replace('{g}', g) + ' ' + SITE);
+    };
+    document.getElementById('hw-go').onclick = function () {
+      var h = C.hwParse(document.getElementById('hw-in').value);
+      if (!h) return toast(t('hw_bad'));
+      SCH.hw = h; startMode('shw');
+    };
     document.getElementById('sc-week').onclick = function () { var pl = C.duelPlan(RAW, C.weekChallengeCode(today(), g)); if (!pl) return toast(t('d2_bad')); duelCodeDraft = pl.code; duelGrade = g; tab = 'duel'; renderDuelReady(pl); };
     document.getElementById('sc-face').onclick = function () { faceSrc = 'school'; go('face'); };
     document.getElementById('sc-live').onclick = function () { S.liveSrc = 'school'; go('live'); };
@@ -1863,7 +1908,17 @@
     if (kind === 'read') return { type: 'mc', id: null, ask: '📖 ' + t('sch_q_read'), big: sv[0], small: true, bigPl: true, a: sv[1], opts: C.shuffle([sv[1]].concat(others.map(function (x) { return x[1]; })), R), sayAfter: sv[0] };
     return { type: 'mc', id: null, ask: '🔁 ' + t('sch_q_mediate'), big: sv[1], small: true, a: sv[0], opts: C.shuffle([sv[0]].concat(others.map(function (x) { return x[0]; })), R), sayAfter: sv[0], plOpts: true };
   }
-  function startSchoolExam() {
+  /* Hausaufgabe per Code: gleiche 20 Fragen für alle mit demselben Code (Zufall aus dem Code) */
+  function hwTopicList() { return Object.keys((D.school && D.school.topics) || {}); }
+  function startHomework() {
+    var h = SCH.hw; if (!h) return go('school');
+    var packs = C.fromMask(schPacks(h.grade), h.pm), topics = C.fromMask(hwTopicList(), h.tm);
+    if (!packs.length && !topics.length) { toast(t('hw_bad')); return go('school'); }
+    var saved = R; R = C.rng('hw|' + h.code);
+    SCH.exam = { g: h.grade, topics: topics, packs: packs, units: [] };
+    try { startSchoolExam(h); } finally { R = saved; }
+  }
+  function startSchoolExam(hw) {
     var X = SCH.exam, gl = D.cases.filter(function (c) { return X.topics.indexOf(c.g) >= 0; }), wl = [], sl = sentencesOf(X.packs);
     X.packs.forEach(function (i) { wl = wl.concat(wordsOf(i)); });
     var UN = schUnits(), own = []; (X.units || []).forEach(function (k) { own = own.concat(UN[k] || []); });
@@ -1873,6 +1928,7 @@
     var qs = C.shuffle(gl, R).slice(0, nG).map(qCase)
       .concat(C.shuffle(wl, R).slice(0, nW).map(function (x, k) { return qMC(x, wl, k % 2 ? 'x2pl' : 'pl2x'); }))
       .concat(ss.map(function (sv, k) { return schSentQ(sv, sl, kinds[k]); }));
+    if (hw) return runGame({ title: '📮 ' + t('hw') + ' ' + hw.code, qs: C.shuffle(qs, R), back: 'school', homework: hw.code });
     return runGame({ title: t('sch_exam'), qs: C.shuffle(qs, R), timer: 900, back: 'school', schoolExam: X.g });
   }
   /* Schreibauftrag (Writing) wie in der Klassenarbeit: Thema eines Pakets, 5 Pflichtwörter, Selbstkontrolle mit Checkliste */
@@ -2102,6 +2158,7 @@
     if (mode === 'live') return go('live');
     if (mode === 'sgram') { var gl = D.cases.filter(function (c) { return SCH.topics.indexOf(c.g) >= 0; }); return runGame({ title: t('sch_gram'), qs: C.shuffle(gl, R).slice(0, Math.min(n, gl.length)).map(qCase), back: 'school' }); }
     if (mode === 'sexam') return startSchoolExam();
+    if (mode === 'shw') return startHomework();
     if (mode === 'sunit') { var uw = schUnits()[SCH.unit] || []; if (uw.length < 2) return toast(t('sch_unit_few')); return runGame({ title: SCH.unit, qs: mixedFor(uw, uw.length >= 4 ? uw : uw.concat(pool), Math.min(n, Math.max(uw.length * 2, 4))), back: 'school' }); }
     if (mode === 'conjgo') return runGame({ title: t('conj'), qs: conjQs(n), rerun: function () { startMode('conjgo'); }, back: 'conj' });
     if (mode === 'wr3') { var w3 = S.mistakes.map(byId).filter(Boolean).slice(0, 3); if (!w3.length) return go('home'); return runGame({ title: t('wr_title'), qs: mixedFor(w3, pool.concat(w3), 6) }); }
@@ -2328,7 +2385,8 @@
     if (!G || G.ended) return;
     if (G.i >= G.qs.length) return endGame();
     var q = G.qs[G.i], html = '<section class="game">' + gameTop() + '<div class="prompt"><span class="eyebrow">' + esc(G.cfg.title) + (q.ask ? ' · ' + esc(q.ask) : '') + '</span>';
-    if (q.big && !q.hideText) html += '<div class="' + (q.small ? 'sentence' : 'big') + '" lang="' + (q.bigPl ? 'en' : (q.type === 'type' || q.small || q.type === 'pin' || q.ask === t('choose_pl') ? S.base : 'pl')) + '">' + esc(q.big) + '</div>';
+    var em = emOf(q); if (em) html += '<div class="q-em" aria-hidden="true">' + em + '</div>';
+    if (q.big && !q.hideText) html += '<div class="' + (q.small ? 'sentence' : 'big') + '" lang="' + (q.bigPl ? 'en' : (q.type === 'type' || q.small || q.type === 'pin' || q.ask === t('choose_pl') ? S.base : 'en')) + '">' + esc(q.big) + '</div>';
     if (q.clues) html += '<ol class="clues">' + q.clues.slice(0, q.shown).map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ol>' + (q.shown < q.clues.length ? '<button class="btn ghost" id="more" style="justify-self:start;padding-left:0">+ ' + esc(t('more_clue')) + '</button>' : '');
     if (q.sentence) html += '<div class="sentence" lang="en">' + esc(q.sentence).replace('___', '<span class="blank" aria-label="gap">&nbsp;</span>') + '</div>';
     if (q.sub) html += '<div class="muted">' + esc(q.sub) + '</div>';
@@ -2595,6 +2653,7 @@
     var total = g.right + g.wrong, pct = total ? Math.round(g.right / total * 100) : 0, extras = '', shareTxt = '', party = false;
     if (!g.players) { addXp(g.xp); if (total >= 3 || g.cfg.timer) markActive(); }
     if (g.cfg.daily) { S.daily[g.cfg.daily] = { score: g.right, results: g.results }; }
+    if (g.cfg.homework) { var hp = Math.round(g.right / g.qs.length * 100); S.hwDone = S.hwDone || {}; if (hp >= (S.hwDone[g.cfg.homework] || 0)) S.hwDone[g.cfg.homework] = hp; extras += '<div class="banner pop"><strong>📮 ' + esc(t('hw')) + ' ' + esc(g.cfg.homework) + ': ' + hp + ' %</strong><button class="btn" id="hw-res" style="margin-top:8px">' + esc(t('hw_res')) + '</button></div>'; }
     if (g.cfg.schoolExam) { var xp = Math.round(g.right / g.qs.length * 100); S.schoolBest = S.schoolBest || {}; if (xp > (S.schoolBest[g.cfg.schoolExam] || 0)) S.schoolBest[g.cfg.schoolExam] = xp; extras += '<div class="banner pop"><strong>' + esc(t('sch_exam')) + ': ' + xp + ' %</strong> · ' + esc(C.schoolMark(xp)) + '</div>'; }
     if (g.cfg.survival) { S.best = S.best || {}; if (g.right > (S.best.survival || 0)) { S.best.survival = g.right; extras += '<div class="banner pop"><strong>' + esc(t('best')) + ': ' + g.right + '</strong></div>'; } }
     if (g.cfg.boss) {
@@ -2650,6 +2709,7 @@
     document.getElementById('home').onclick = function () { G = null; if (cfg.back === 'themes' && cfg.unit == null) return go('themes', curTheme); go(cfg.unit != null ? 'city' : (cfg.back || 'home'), cfg.unit); };
     document.getElementById('again').onclick = function () { G = null; if (cfg.duel) { tab = 'duel'; return renderDuelSetup(); } if (cfg.players) return startDuel(cfg.players); if (cfg.rerun) return cfg.rerun(); var c2 = Object.assign({}, cfg); restart(c2); };
     var sh = document.getElementById('share'); if (sh) sh.onclick = function () { shareOut(shareTxt); };
+    var hr = document.getElementById('hw-res'); if (hr) hr.onclick = function () { shareOut(t('hw_res_t').replace('{c}', cfg.homework).replace('{p}', S.hwDone[cfg.homework])); };
     if (party) confetti();
     var nxb = document.getElementById('next-step'); if (nxb) nxb.onclick = function () { G = null; var nui = +nxb.getAttribute('data-ui'); if (isOpen(nui)) startMode(nxb.getAttribute('data-step'), nui); else go('city', nui); };
     var lr = document.getElementById('letter-res'); if (lr) lr.onclick = function () { G = null; go('letter', lr.getAttribute('data-story')); };

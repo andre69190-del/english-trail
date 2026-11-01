@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.6', '2026-11-01', ['Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.', 'Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).', 'Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.', 'Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden.']),
   ('0.5', '2026-11-01', ['Live-Duell: Zwei Handys, gleiche Vokabeln in Echtzeit – wer zuerst richtig antwortet, bekommt den Punkt. Ohne Konto, nur mit Spitznamen.', 'Fehler melden geht jetzt mit einem Tipp: „Übersetzung falsch“, „Tippfehler“, „zu schwer“ … – auch direkt im Schulbereich.', 'Neu: „Was kann English Trail?“ – alle Funktionen auf einen Blick, für Kinder und für Eltern & Lehrkräfte (unter „Ich“).']),
   ('0.4', '2026-11-01', ['Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.', 'Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.', 'Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode.']),
   ('0.3', '2026-11-01', ['Probe-Klassenarbeit wie in BW: jetzt mit Hörverstehen, Leseverstehen und Sprachmittlung.', 'Neu: Schreibauftrag zu jedem Schulthema – die App prüft Länge, Pflichtwörter, Verbindungswörter und Großschreibung.', 'Vokabeln aus dem Buch als Liste einfügen (eine pro Zeile) – mit Unit.']),
@@ -307,7 +308,8 @@ GUIDE = {
     ['Live-Duell', 'Zwei Handys, gleiche Fragen in Echtzeit. Wer zuerst richtig antwortet, bekommt den Punkt.'],
     ['Gegenüber', 'Ein Handy, zwei Spieler – wer zuerst richtig tippt.'],
     ['Duell-Code', 'Gleiche Fragen für alle, die den Code haben – vergleicht danach die Punkte.'],
-    ['Wochen-Challenge', 'Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen.']]},
+    ['Wochen-Challenge', 'Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen.'],
+    ['Hausaufgabe per Code', 'Code eingeben (z. B. HA7-P3-T5) – alle aus der Klasse bekommen dieselben Fragen.']]},
   {'ico': '🎮', 't': 'Üben & Spiele', 'go': 'practice', 'items': [
     ['Wiederholen', 'Die App merkt sich, welche Wörter du bald vergisst, und fragt sie rechtzeitig.'],
     ['Zeiten-Werkstatt & unregelmäßige Verben', 'Simple Past, Present Perfect, go – went – gone …'],
@@ -326,6 +328,7 @@ GUIDE = {
   {'ico': '📚', 't': 'Was das Kind lernt', 'go': 'school', 'items': [
     ['Bildungsplan BW (Gymnasium, Kl. 5–10)', 'Wortschatz- und Grammatikthemen je Klassenstufe.'],
     ['Lehrwerk', 'Green Line, Access oder andere Bücher auswählen; eigene Unit-Vokabeln eintragen.'],
+    ['Bericht für Eltern', 'Im Schulbereich: Wochenüberblick (Übungstage, neue Wörter, Probe-Note, knifflige Wörter) zum Teilen.'],
     ['Klassenarbeits-Training', 'Probe-Arbeit mit Hörverstehen, Leseverstehen, Sprachmittlung und Note.']]},
   {'ico': '🧠', 't': 'Wie gelernt wird', 'items': [
     ['Verteilte Wiederholung', 'Wörter kommen in wachsenden Abständen wieder (Leitner-System).'],
@@ -334,7 +337,8 @@ GUIDE = {
   {'ico': '👩‍🏫', 't': 'Für Lehrkräfte', 'go': 'school', 'items': [
     ['Wochen-Challenge', 'Alle Kinder einer Klassenstufe bekommen dieselben Fragen – ohne Anmeldung.'],
     ['Duell-Code mit Klassenstufe', 'Codes mit „-K7“ nutzen nur Stoff bis Klasse 7.'],
-    ['Live-Duell', 'Zwei Kinder treten in Echtzeit an – ohne Konto, nur Spitzname.']]},
+    ['Live-Duell', 'Zwei Kinder treten in Echtzeit an – ohne Konto, nur Spitzname.'],
+    ['Hausaufgaben-Code', 'Unter Schule → Probe-Klassenarbeit Themen und Pakete ankreuzen, „Als Hausaufgaben-Code teilen“ – fertig. Ohne Anmeldung, ohne Schülerdaten.']]},
   {'ico': '🔒', 't': 'Datenschutz', 'items': [
     ['Ohne Konto nutzbar', 'Fortschritt bleibt auf dem Gerät. Geräte-Sync ist freiwillig.'],
     ['Live-Duell', 'Läuft über einen kurzlebigen Kanal; es wird nichts gespeichert, nur der Spitzname wird übertragen.'],

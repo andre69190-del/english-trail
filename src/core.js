@@ -480,6 +480,20 @@
   /* PATCH003: Karte, Entfernung, Höher/Tiefer, Zeitstrahl, Buchstabensalat */
   /* Live-Duell: Wer bekommt den Punkt? 1 = ich, -1 = Gegner, 0 = keiner. Nur richtige Antworten zählen, dann die schnellere;
      bei exakt gleicher Zeit entscheidet die kleinere Spieler-ID – so rechnen beide Handys dasselbe Ergebnis aus. */
+  /* Hausaufgaben-Code (E): Klasse + Pakete + Grammatikthemen als Bitmasken (Reihenfolge der Daten ist nur anhängend) */
+  function hwCode(grade, packMask, topicMask) {
+    if (!packMask && !topicMask) return null;
+    return 'HA' + grade + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
+  }
+  function hwParse(code) {
+    var m = /^HA(5|6|7|8|9|10)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
+    if (!m) return null;
+    var g = +m[1], pm = parseInt(m[2], 36), tm = parseInt(m[3], 36);
+    if (!(pm || tm) || isNaN(pm) || isNaN(tm)) return null;
+    return { grade: g, pm: pm, tm: tm, code: hwCode(g, pm, tm) };
+  }
+  function maskOf(list, picked) { var m = 0; list.forEach(function (x, i) { if (picked.indexOf(x) >= 0) m += Math.pow(2, i); }); return m; }
+  function fromMask(list, m) { return list.filter(function (x, i) { return Math.floor(m / Math.pow(2, i)) % 2 === 1; }); }
   function liveWinner(me, opp, myId, oppId) {
     var a = me && me.ok, b = opp && opp.ok;
     if (!a && !b) return 0; if (a && !b) return 1; if (b && !a) return -1;
@@ -612,7 +626,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

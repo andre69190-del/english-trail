@@ -171,3 +171,11 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - ✅ Fehler behoben: Senden-Knopf war an den ersten Chip gebunden (`querySelector('button')` → `button.btn`). Alle Checks, 52 Core-Tests, UI-Test 125 OK / 0 Fehler.
 - ✅ Release 0.5 auf PC synchronisiert (RELEASE.txt zuletzt) → Auto-Upload veröffentlicht.
 - Nächste Schritte: Andre führt et_*-SQL aus; dann C Mein Rabe, E Hausaufgaben-Code, G Eltern-Bericht, H Emojis Kl. 5/6; danach Phase 6.
+
+## Release 0.6 (01.11.2026)
+- ✅ E Hausaufgaben-Code: `C.hwCode/hwParse/maskOf/fromMask`, Format `HA<Kl>-P<Pakete36>-T<Themen36>`; Bitmasken über `schPacks(g)` und `Object.keys(D.school.topics)` → **beide Listen nur anhängen, nie umsortieren** (sonst ändern alte Codes ihre Bedeutung). Fragen deterministisch über `C.rng('hw|'+code)`. Ergebnis in `S.hwDone`.
+- ✅ G Eltern-Bericht (`parentReport`, Schulbereich, teilen) + U16-Bestätigung beim Konto anlegen (`sy-u16`, `S.u16ok`).
+- ✅ H Emojis Klasse 5/6 (`school.EMOJI` → `u.em`, `emOf(q)`; nicht wenn das Bild die Lösung verrät). lang-Attribut der Frage 'pl' → 'en' korrigiert.
+- Tests: 53 Core, UI 131 OK / 0 Fehler.
+- ⚠️ **Live-Seite steht noch auf 0.1!** GitHub hat alle Commits (0.2–0.6), aber Coolify baut nicht neu (Webhook fehlt/greift nicht). Andre informiert: Coolify → App → Webhooks (GitHub-Secret) + GitHub → Settings → Webhooks, dann Redeploy. Danach prüfen: sw.js enthält `english-trail-v0-7`.
+- Offen Schule: C Mein Rabe. Danach Phase 6.

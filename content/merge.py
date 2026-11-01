@@ -99,6 +99,9 @@ for k in school.PACKS:
     u = unit(dict(k, city=k['name'], cityDe='Klasse %d: %s' % (k['grade'], k['title']), lon=-0.13, lat=51.51, trail='blue',
                   mission=None, radio=None, letter=None))
     u['pack'] = 1; u['sch'] = k['grade']; u['ico'] = k['ico']
+    if k['id'] in school.EMOJI:
+        em = school.EMOJI[k['id']]; assert len(em) == len(u['words']), k['id']
+        u['em'] = em
     D['units'].append(u)
 D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.STATES],
                'types': [{'id': i, 'name': n, 'on': a} for i, n, a in school.TYPES],
