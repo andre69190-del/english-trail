@@ -474,6 +474,24 @@
   }
 
   /* PATCH003: Karte, Entfernung, Höher/Tiefer, Zeitstrahl, Buchstabensalat */
+  /* English Trail: Vokabelliste einfügen – „word = Wort“, „word - Wort“, „word<TAB>Wort“ oder „word; Wort“, eine pro Zeile */
+  function parseWordList(txt) {
+    return String(txt || '').split(/\r?\n/).map(function (l) {
+      var m = l.match(/^\s*(.+?)\s*(?:\t|\s=\s?|=|\s[-–]\s|;)\s*(.+?)\s*$/);
+      return m && m[1] && m[2] ? [m[1].slice(0, 80), m[2].slice(0, 80)] : null;
+    }).filter(Boolean);
+  }
+  /* Schreibauftrag: einfache, transparente Kriterien wie im Unterricht (keine KI) */
+  function writingCheck(txt, words) {
+    var t = String(txt || ''), low = ' ' + t.toLowerCase().replace(/[^a-z' ]+/g, ' ') + ' ';
+    var sents = t.split(/[.!?]+/).filter(function (x) { return x.trim().split(/\s+/).length >= 3; });
+    var used = (words || []).filter(function (w) { return low.indexOf(' ' + String(w).toLowerCase().replace(/^to /, '') ) >= 0; }).length;
+    var links = (low.match(/ (and|but|because|so|when|then|after|before|however|although|if|or) /g) || []).length;
+    var capsOk = sents.length > 0 && !/(^|[.!?]["”’]?\s+)[a-z]/.test(t.trim()) && /[.!?]["”’]?\s*$/.test(t.trim());
+    var iOk = !/(^|[\s,])i([\s,'’]|$)/.test(t);
+    var items = [['wc_len', sents.length >= 5, sents.length], ['wc_words', used >= 3, used], ['wc_link', links >= 2, links], ['wc_caps', capsOk, 0], ['wc_i', iOk, 0]];
+    return { items: items, score: Math.round(items.filter(function (x) { return x[1]; }).length / items.length * 100) };
+  }
   /* English Trail: Probe-Klassenarbeit – grobe Notentendenz (übliche Schlüssel in BW schwanken je Schule) */
   function schoolMark(pct) {
     var m = pct >= 92 ? 'Note 1' : pct >= 81 ? 'Note 2' : pct >= 67 ? 'Note 3' : pct >= 50 ? 'Note 4' : pct >= 30 ? 'Note 5' : 'Note 6';
@@ -577,7 +595,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

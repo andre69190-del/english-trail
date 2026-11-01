@@ -455,3 +455,14 @@ test('Preise auf Englisch: Zahlwörter und Pfund', () => {
   assert.equal(C.priceEn(1, 0), 'one pound');
   assert.equal(C.priceTag(4, 5), '£4.05');
 });
+
+test('Schule: Vokabelliste einfügen in verschiedenen Formaten', () => {
+  const l = C.parseWordList('library = Bibliothek\nto borrow - ausleihen\nscarf\tSchal\n\nkaputt\nhappy; glücklich');
+  assert.equal(JSON.stringify(l), JSON.stringify([['library', 'Bibliothek'], ['to borrow', 'ausleihen'], ['scarf', 'Schal'], ['happy', 'glücklich']]));
+});
+test('Schule: Schreibauftrag-Check', () => {
+  const good = C.writingCheck('I live in a small town. I go to school by bus. My best friend is Tom and he is funny. We play football because it is fun. After school I do my homework.', ['school', 'friend', 'football', 'homework', 'bus']);
+  assert.equal(good.score, 100);
+  const bad = C.writingCheck('i like dogs', ['school']);
+  assert.ok(bad.score < 50);
+});

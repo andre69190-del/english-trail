@@ -51,8 +51,9 @@
   /* ---------- Texte (UI-Sprache = Basissprache) ---------- */
   var TX = {
     de: {
+      sch_q_listen: 'Hör zu: Was wurde gesagt?', sch_q_read: 'Lies: Was bedeutet der Satz?', sch_q_mediate: 'Sprachmittlung: Wie sagst du das auf Englisch?', sch_write: 'Schreibauftrag', sch_write_d: 'Wie in der Klassenarbeit: ein kurzer Text zum Thema – die App prüft Länge, Pflichtwörter und Satzbau.', sch_write_task: 'Schreib einen kurzen Text (5–8 Sätze) auf Englisch zum Thema „{t}“.', sch_write_use: 'Benutze mindestens 3 dieser Wörter', sch_write_check: 'Text prüfen', sch_write_good: 'Stark! So kannst du das in der Arbeit schreiben.', sch_write_more: 'Guter Anfang – schau dir die offenen Punkte an.', wc_len: 'Mindestens 5 Sätze ({n} geschrieben)', wc_words: 'Mindestens 3 Pflichtwörter benutzt ({n})', wc_link: 'Verbindungswörter (and, but, because, so, when …) ({n})', wc_caps: 'Sätze beginnen groß und enden mit . ! ?', wc_i: '„I“ immer großgeschrieben', mw_bulk: 'Mehrere Vokabeln auf einmal', mw_bulk_d: 'Eine Vokabel pro Zeile: englisch = deutsch (auch mit - oder Tab). Die Unit von oben wird übernommen.', mw_bulk_go: 'Alle hinzufügen', mw_bulk_ok: '{n} Vokabeln hinzugefügt',
       sch_unit: 'Unit (aus deinem Buch, freiwillig)', sch_unit_go: 'üben', sch_unit_few: 'Trag erst mindestens 2 Wörter für diese Unit ein.', sch_own_add: 'Vokabeln eintragen', sch_mine: 'meine Vokabeln',
-      sch: 'Schule', sch_d: 'Englisch passend zu Bundesland, Klasse und Lehrwerk', sch_grade: 'Klasse {g}', sch_setup: 'Deine Schule', sch_setup_d: 'Wähle Bundesland, Schulform und Klasse. Dann zeigt dir die App den Stoff, der laut Bildungsplan dran ist. Weitere Länder und Schulformen folgen.', sch_state: 'Bundesland', sch_type: 'Schulform', sch_class: 'Klasse', sch_book: 'Lehrwerk', sch_book_none: '– kein Lehrwerk angeben –', sch_book_d: 'Die App nutzt nur Themen und Grammatik passend zum Bildungsplan, keine Texte aus dem Schulbuch. Vokabeln aus deinem Buch kannst du unter „Meine Wörter“ selbst eintragen.', sch_save: 'Speichern', sch_soon: 'bald', sch_band: 'Band', sch_change: 'Ändern', sch_words: 'Wortschatz deiner Klasse', sch_words_d: 'Themen aus dem Bildungsplan – mit Szene, Quiz, Hören, Schreiben und Prüfung wie auf dem Trail.', sch_gram: 'Grammatik', sch_gram_d: 'Neu in Klasse {a}/{b}. Tippe ein Thema an und übe mit Sätzen.', sch_gram_all: 'Alle Themen gemischt', sch_repeat: 'Wiederholen aus früheren Klassen', sch_from: 'ab Klasse', sch_exam: 'Probe-Klassenarbeit', sch_exam_d: 'Wähle, was in deiner nächsten Arbeit drankommt. 20 Fragen, 15 Minuten.', sch_exam_pick: 'Was kommt dran?', sch_exam_go: 'Probe-Arbeit starten', sch_exam_none: 'Wähle mindestens ein Thema.', sch_own: 'Vokabeln aus deinem Buch', sch_own_d: 'Trag die Vokabeln aus deinem Buch mit der Unit ein (z. B. „Unit 3“). Dann kannst du jede Unit gezielt üben, und sie kommen in Wiederholung und Probe-Arbeit.', sch_chat_d: 'Schreib mit der KI auf Englisch – sie benutzt nur Wörter und Grammatik bis Klasse {g}.', why_school: 'Schule',
+      sch: 'Schule', sch_d: 'Englisch passend zu Bundesland, Klasse und Lehrwerk', sch_grade: 'Klasse {g}', sch_setup: 'Deine Schule', sch_setup_d: 'Wähle Bundesland, Schulform und Klasse. Dann zeigt dir die App den Stoff, der laut Bildungsplan dran ist. Weitere Länder und Schulformen folgen.', sch_state: 'Bundesland', sch_type: 'Schulform', sch_class: 'Klasse', sch_book: 'Lehrwerk', sch_book_none: '– kein Lehrwerk angeben –', sch_book_d: 'Die App nutzt nur Themen und Grammatik passend zum Bildungsplan, keine Texte aus dem Schulbuch. Vokabeln aus deinem Buch kannst du unter „Meine Wörter“ selbst eintragen.', sch_save: 'Speichern', sch_soon: 'bald', sch_band: 'Band', sch_change: 'Ändern', sch_words: 'Wortschatz deiner Klasse', sch_words_d: 'Themen aus dem Bildungsplan – mit Szene, Quiz, Hören, Schreiben und Prüfung wie auf dem Trail.', sch_gram: 'Grammatik', sch_gram_d: 'Neu in Klasse {a}/{b}. Tippe ein Thema an und übe mit Sätzen.', sch_gram_all: 'Alle Themen gemischt', sch_repeat: 'Wiederholen aus früheren Klassen', sch_from: 'ab Klasse', sch_exam: 'Probe-Klassenarbeit', sch_exam_d: 'Wie in der echten Arbeit: Grammatik, Wortschatz, Hörverstehen, Leseverstehen und Sprachmittlung. Wähle, was drankommt. 20 Fragen, 15 Minuten.', sch_exam_pick: 'Was kommt dran?', sch_exam_go: 'Probe-Arbeit starten', sch_exam_none: 'Wähle mindestens ein Thema.', sch_own: 'Vokabeln aus deinem Buch', sch_own_d: 'Trag die Vokabeln aus deinem Buch mit der Unit ein (z. B. „Unit 3“). Dann kannst du jede Unit gezielt üben, und sie kommen in Wiederholung und Probe-Arbeit.', sch_chat_d: 'Schreib mit der KI auf Englisch – sie benutzt nur Wörter und Grammatik bis Klasse {g}.', why_school: 'Schule',
       conj_inf: 'Grundform', conj_q_past: 'Wie heißt die 2. Form (simple past)?', conj_q_pp: 'Wie heißt die 3. Form (past participle)?', clsn_aaa: 'alle gleich', clsn_aba: '1. = 3.', clsn_abb: '2. = 3.', clsn_abc: 'alle verschieden', cls_aaa: 'Alle drei Formen sind gleich: cut – cut – cut.', cls_aba: 'Grundform und 3. Form sind gleich: come – came – come.', cls_abb: '2. und 3. Form sind gleich: buy – bought – bought.', cls_abc: 'Alle drei Formen sind verschieden: go – went – gone.',
       nav_home: 'Start', nav_practice: 'Üben', nav_album: 'Album', nav_me: 'Ich',
       level: 'Stufe', week: 'Diese Woche', of: 'von', days: 'Tagen', wk_streak: 'Wochen in Folge',
@@ -173,6 +174,7 @@
       vc_diag: 'Ton-Test mit Diagnose'
     },
     en: {
+      sch_q_listen: 'Listen: what was said?', sch_q_read: 'Read: what does it mean?', sch_q_mediate: 'Mediation: how do you say it in English?', sch_write: 'Writing task', sch_write_d: 'A short text on the topic.', sch_write_task: 'Write a short text (5–8 sentences) about “{t}”.', sch_write_use: 'Use at least 3 of these words', sch_write_check: 'Check text', sch_write_good: 'Great!', sch_write_more: 'Good start – check the open points.', wc_len: 'At least 5 sentences ({n})', wc_words: 'At least 3 key words ({n})', wc_link: 'Linking words ({n})', wc_caps: 'Capital letters and full stops', wc_i: 'Capital I', mw_bulk: 'Add several words', mw_bulk_d: 'One word per line: english = german.', mw_bulk_go: 'Add all', mw_bulk_ok: '{n} words added',
       sch_unit: 'Unit (from your textbook, optional)', sch_unit_go: 'practise', sch_unit_few: 'Add at least 2 words for this unit first.', sch_own_add: 'Add words', sch_mine: 'my words',
       sch: 'School', sch_d: 'English for your state, year and textbook', sch_grade: 'Year {g}', sch_setup: 'Your school', sch_setup_d: 'Choose state, school type and year.', sch_state: 'State', sch_type: 'School type', sch_class: 'Year', sch_book: 'Textbook', sch_book_none: '– no textbook –', sch_book_d: 'Only topics and grammar from the curriculum, no textbook texts.', sch_save: 'Save', sch_soon: 'soon', sch_band: 'Volume', sch_change: 'Change', sch_words: 'Vocabulary for your year', sch_words_d: 'Curriculum topics.', sch_gram: 'Grammar', sch_gram_d: 'New in years {a}/{b}.', sch_gram_all: 'All topics mixed', sch_repeat: 'Revise earlier years', sch_from: 'from year', sch_exam: 'Practice test', sch_exam_d: '20 questions, 15 minutes.', sch_exam_pick: 'What is in the test?', sch_exam_go: 'Start practice test', sch_exam_none: 'Choose at least one topic.', sch_own: 'Words from your textbook', sch_own_d: 'Add your unit words under My words.', sch_chat_d: 'Chat in English up to year {g} level.', why_school: 'School',
       conj_inf: 'Base form', conj_q_past: 'What is the simple past?', conj_q_pp: 'What is the past participle?', clsn_aaa: 'all the same', clsn_aba: '1st = 3rd', clsn_abb: '2nd = 3rd', clsn_abc: 'all different', cls_aaa: 'All three forms are the same: cut – cut – cut.', cls_aba: 'Base form and 3rd form are the same: come – came – come.', cls_abb: '2nd and 3rd form are the same: buy – bought – bought.', cls_abc: 'All three forms are different: go – went – gone.',
@@ -581,6 +583,7 @@
     if (tab === 'news') return renderNews();
     if (tab === 'conj') return renderConj();
     if (tab === 'school') return renderSchool();
+    if (tab === 'writing') return renderWriting(arg);
   }
 
   /* ---------- Onboarding ---------- */
@@ -1124,7 +1127,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.2', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.3', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<textarea maxlength="1000" rows="3" aria-label="' + esc(t('rep')) + '" placeholder="' + esc(t('rep_ph')) + '"></textarea>' +
@@ -1520,7 +1523,8 @@
   function renderMyWords() {
     var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('mywords')) + '</h1>' +
       '<section class="card stack"><label class="fld">' + esc(t('pl')) + '<input type="text" id="mw-pl" autocomplete="off" lang="en"></label>' +
-      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button></section>' +
+      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button>' +
+      '<details><summary class="small"><b>' + esc(t('mw_bulk')) + '</b></summary><p class="small muted">' + esc(t('mw_bulk_d')) + '</p><textarea id="mw-bulk" rows="6" lang="en" placeholder="library = Bibliothek&#10;to borrow = ausleihen"></textarea><button class="btn" id="mw-bulk-go" style="justify-self:start">' + esc(t('mw_bulk_go')) + '</button></details></section>' +
       '<section class="card">' + (S.custom.length ? '<div class="list">' + S.custom.map(function (w, i) {
         return '<div class="li"><button class="icon-btn" data-say="' + esc(w[0]) + '" aria-label="' + esc(t('listen_again')) + '">' + I.spk + '</button><div class="grow"><div class="pl-word">' + esc(w[0]) + '</div><div class="small muted">' + esc(meaning(w)) + (w[3] ? ' · <span class="badge">' + esc(w[3]) + '</span>' : '') + '</div></div><button class="icon-btn" data-del="' + i + '" aria-label="' + esc(t('delete')) + '">' + I.x + '</button></div>';
       }).join('') + '</div>' : '<p class="muted">' + esc(t('mywords_empty')) + '</p>') + '</section>' +
@@ -1535,6 +1539,12 @@
     document.querySelectorAll('[data-del]').forEach(function (b) { b.onclick = function () { var i = +b.getAttribute('data-del'), n = S.custom.length; S.custom.splice(i, 1); delete S.cards['my:' + i];
       for (var j = i + 1; j < n; j++) { if (S.cards['my:' + j]) S.cards['my:' + (j - 1)] = S.cards['my:' + j]; else delete S.cards['my:' + (j - 1)]; delete S.cards['my:' + j]; } save(); renderMyWords(); }; });
     var pr = document.getElementById('mw-practice'); if (pr) pr.onclick = function () { startMode('mine'); };
+    document.getElementById('mw-bulk-go').onclick = function () {
+      var ue = document.getElementById('mw-u'), un = ue ? ue.value.trim() : '', list = C.parseWordList(document.getElementById('mw-bulk').value), have = {};
+      S.custom.forEach(function (w) { have[(w[0] + '|' + w[1]).toLowerCase()] = 1; });
+      var n = 0; list.forEach(function (p) { if (have[(p[0] + '|' + p[1]).toLowerCase()]) return; S.custom.push(un ? [p[0], p[1], p[1], un] : [p[0], p[1], p[1]]); n++; });
+      if (un) S.lastUnit = un; save(); renderMyWords(); toast(t('mw_bulk_ok').replace('{n}', n));
+    };
   }
 
   /* ---------- Wortschatz: alle Wörter aus den Lektionen nachschlagen (Suche tippen oder sprechen) ---------- */
@@ -1752,6 +1762,7 @@
       packs.map(function (i) { return '<label class="row small"><input type="checkbox" data-xp="' + i + '" checked> ' + esc(U[i].ico + ' ' + U[i].city) + '</label>'; }).join('') +
       Object.keys(UN).sort().map(function (k) { return '<label class="row small"><input type="checkbox" data-xu="' + esc(k) + '" checked> 📘 ' + esc(k) + ' (' + esc(t('sch_mine')) + ')</label>'; }).join('') + '</fieldset>' +
       '<button class="btn primary" id="sc-exam" style="justify-self:start">' + esc(t('sch_exam_go')) + '</button>' + (S.schoolBest && S.schoolBest[g] != null ? '<p class="small muted">' + esc(t('best')) + ': ' + S.schoolBest[g] + '%</p>' : '') + '</section>' +
+      (packs.length ? '<section class="card stack"><h2>✍️ ' + esc(t('sch_write')) + '</h2><p class="small muted">' + esc(t('sch_write_d')) + '</p><div class="row" style="flex-wrap:wrap">' + packs.map(function (i) { return '<button class="btn" data-sw="' + i + '">' + esc(U[i].ico + ' ' + U[i].city) + '</button>'; }).join('') + '</div></section>' : '') +
       '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p>' +
       (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button>'; }).join('') + '</div>' : '') +
       '<button class="btn" id="sc-own" style="justify-self:start">' + esc(t('sch_own_add')) + '</button></section>' +
@@ -1771,18 +1782,49 @@
       startMode('sexam');
     };
     document.getElementById('sc-own').onclick = function () { go('mywords'); };
+    document.querySelectorAll('[data-sw]').forEach(function (b) { b.onclick = function () { SCH.wr = null; go('writing', +b.getAttribute('data-sw')); }; });
     document.querySelectorAll('[data-su]').forEach(function (b) { b.onclick = function () { SCH.unit = b.getAttribute('data-su'); startMode('sunit'); }; });
     var ch = document.getElementById('sc-chat'); if (ch) ch.onclick = function () { startMode('chat', packs[0]); };
   }
-  /* Probe-Klassenarbeit: bis zu 12 Grammatik- und 8 Wortschatzfragen, 15 Minuten, Ergebnis als Bestwert je Klasse */
+  /* Probe-Klassenarbeit wie in BW: Grammatik, Wortschatz, Hörverstehen (Listening), Leseverstehen (Reading) und
+     Sprachmittlung (Mediation). 20 Fragen, 15 Minuten, Ergebnis als Bestwert je Klasse + Notentendenz. */
+  function schSentQ(sv, all, kind) {
+    var others = C.shuffle(all.filter(function (x) { return x[0] !== sv[0]; }), R).slice(0, 3);
+    if (kind === 'listen') return { type: 'mc', id: null, ask: '🎧 ' + t('sch_q_listen'), big: '', say: sv[0], hideText: true, reveal: sv[0] + ' = ' + sv[1], a: sv[1], opts: C.shuffle([sv[1]].concat(others.map(function (x) { return x[1]; })), R) };
+    if (kind === 'read') return { type: 'mc', id: null, ask: '📖 ' + t('sch_q_read'), big: sv[0], small: true, bigPl: true, a: sv[1], opts: C.shuffle([sv[1]].concat(others.map(function (x) { return x[1]; })), R), sayAfter: sv[0] };
+    return { type: 'mc', id: null, ask: '🔁 ' + t('sch_q_mediate'), big: sv[1], small: true, a: sv[0], opts: C.shuffle([sv[0]].concat(others.map(function (x) { return x[0]; })), R), sayAfter: sv[0], plOpts: true };
+  }
   function startSchoolExam() {
-    var X = SCH.exam, gl = D.cases.filter(function (c) { return X.topics.indexOf(c.g) >= 0; }), wl = [];
+    var X = SCH.exam, gl = D.cases.filter(function (c) { return X.topics.indexOf(c.g) >= 0; }), wl = [], sl = sentencesOf(X.packs);
     X.packs.forEach(function (i) { wl = wl.concat(wordsOf(i)); });
     var UN = schUnits(), own = []; (X.units || []).forEach(function (k) { own = own.concat(UN[k] || []); });
     if (own.length) wl = C.shuffle(own, R).slice(0, 8).concat(C.shuffle(wl, R));
-    var nG = wl.length ? Math.min(12, gl.length) : Math.min(20, gl.length), nW = Math.min(20 - nG, wl.length);
-    var qs = C.shuffle(gl, R).slice(0, nG).map(qCase).concat(C.shuffle(wl, R).slice(0, nW).map(function (x, k) { return qMC(x, wl, k % 2 ? 'x2pl' : 'pl2x'); }));
+    var nS = sl.length >= 4 ? 7 : 0, nG = Math.min(gl.length, wl.length ? (nS ? 8 : 12) : 20 - nS), nW = Math.min(20 - nG - nS, wl.length);
+    var ss = C.shuffle(sl, R).slice(0, nS), kinds = ['listen', 'listen', 'listen', 'read', 'read', 'mediate', 'mediate'];
+    var qs = C.shuffle(gl, R).slice(0, nG).map(qCase)
+      .concat(C.shuffle(wl, R).slice(0, nW).map(function (x, k) { return qMC(x, wl, k % 2 ? 'x2pl' : 'pl2x'); }))
+      .concat(ss.map(function (sv, k) { return schSentQ(sv, sl, kinds[k]); }));
     return runGame({ title: t('sch_exam'), qs: C.shuffle(qs, R), timer: 900, back: 'school', schoolExam: X.g });
+  }
+  /* Schreibauftrag (Writing) wie in der Klassenarbeit: Thema eines Pakets, 5 Pflichtwörter, Selbstkontrolle mit Checkliste */
+  function renderWriting(i) {
+    var u = U[i], W = SCH.wr && SCH.wr.i === i ? SCH.wr : (SCH.wr = { i: i, words: C.shuffle(wordsOf(i).map(function (x) { return x.w[0]; }), R).slice(0, 5), txt: '', done: false });
+    var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>✍️ ' + esc(t('sch_write')) + '</h1>' +
+      '<section class="card stack"><span class="eyebrow">' + esc(u.ico + ' ' + u.city) + '</span><p>' + esc(t('sch_write_task').replace('{t}', L(u.title))) + '</p>' +
+      '<p class="small"><b>' + esc(t('sch_write_use')) + ':</b> ' + W.words.map(function (w) { return '<span class="badge" lang="en">' + esc(w) + '</span>'; }).join(' ') + '</p>' +
+      '<p class="small muted">' + esc(L(u.tip)) + '</p>' +
+      '<textarea id="wr-txt" rows="8" lang="en" maxlength="2000" aria-label="' + esc(t('sch_write')) + '">' + esc(W.txt) + '</textarea>' +
+      '<button class="btn primary" id="wr-check" style="justify-self:start">' + esc(t('sch_write_check')) + '</button><div id="wr-res"></div></section>';
+    shell(html);
+    document.getElementById('back').onclick = function () { go('school'); };
+    var res = function () {
+      var txt = document.getElementById('wr-txt').value; W.txt = txt;
+      var r = C.writingCheck(txt, W.words);
+      document.getElementById('wr-res').innerHTML = '<ul class="news-ul">' + r.items.map(function (it) { return '<li class="small">' + (it[1] ? '✅ ' : '⬜ ') + esc(t(it[0]).replace('{n}', it[2])) + '</li>'; }).join('') + '</ul>' +
+        '<p><b>' + r.score + ' %</b> · ' + esc(r.score >= 80 ? t('sch_write_good') : t('sch_write_more')) + '</p>';
+      if (r.score >= 80 && !W.done) { W.done = true; addXp(30); markActive(); save(); }
+    };
+    document.getElementById('wr-check').onclick = res;
   }
 
   var lastMode = null;
