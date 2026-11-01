@@ -504,3 +504,42 @@ test('Hausaufgaben-Code: kodieren und lesen', () => {
   assert.equal(JSON.stringify(C.fromMask(L, h.tm)), '["b","ah"]');
   assert.equal(C.hwParse('HA4-P1-T1'), null); assert.equal(C.hwParse('HA7-P0-T0'), null); assert.equal(C.hwCode(7, 0, 0), null);
 });
+
+test('Vokabeln per Foto: Spalten, Lautschrift, Überschriften', () => {
+  const W = (t, x0, x1) => ({ t, x0, x1, y0: 0, y1: 20 });
+  const L = [
+    { words: [W('Unit', 0, 40), W('3', 45, 55)] },
+    { words: [W('library', 0, 60), W('[ˈlaɪbrəri]', 120, 220), W('Bibliothek', 300, 390)] },
+    { words: [W('to', 0, 15), W('borrow', 20, 80), W('(sich)', 300, 340), W('ausleihen', 345, 420)] },
+    { words: [W('library', 0, 60), W('Bücherei', 300, 380)] },
+    { words: [W('house', 0, 40), W('Haus', 50, 80)] },
+    { words: [W('a', 0, 8), W('piece', 12, 50), W('of', 55, 70), W('ein', 75, 95), W('Stück', 100, 140)] },
+    { words: [W('12', 0, 20)] },
+  ];
+  assert.equal(JSON.stringify(C.ocrToList(L)), JSON.stringify([['library', 'Bibliothek'], ['to borrow', '(sich) ausleihen'], ['house', 'Haus'], ['a piece of', 'ein Stück']]));
+  assert.equal(JSON.stringify(C.ocrSplitText('weather = Wetter')), JSON.stringify(['weather', 'Wetter']));
+  assert.equal(JSON.stringify(C.ocrSplitText('I like it Ich mag es')), JSON.stringify(['I like it', 'Ich mag es']));
+});
+
+test('Vokabeln per Foto: falsch gelesene Lautschrift in Klammern wird übersprungen', () => {
+  const W = (t, x0, x1) => ({ t, x0, x1, y0: 0, y1: 20 });
+  const L = [
+    { words: [W('exercise', 0, 70), W('book', 75, 110), W("['cksasaiz", 150, 230), W('bk]', 235, 260), W('Schulheft', 320, 400)] },
+    { words: [W('headteacher', 0, 100), W('[', 150, 155), W('hed', 158, 190), W('ti:tfa]', 195, 250), W('Schulleiter/in', 320, 420)] },
+  ];
+  assert.equal(JSON.stringify(C.ocrToList(L)), JSON.stringify([['exercise book', 'Schulheft'], ['headteacher', 'Schulleiter/in']]));
+});
+
+test('Vokabeln per Foto: Spalten aus getrennten Blöcken werden zu Zeilen', () => {
+  const W = (t, x0, x1, y) => ({ t, x0, x1, y0: y, y1: y + 20 });
+  const rows = C.ocrRows([W('Haus', 300, 350, 2), W('house', 0, 50, 0), W('Schule', 300, 360, 41), W('school', 0, 60, 40)]);
+  assert.equal(JSON.stringify(C.ocrToList(rows)), JSON.stringify([['house', 'Haus'], ['school', 'Schule']]));
+});
+
+test('Vokabeln per Foto: schräges Foto wird ausgeglichen', () => {
+  const W = (t, x0, x1, y) => ({ t, x0, x1, y0: y, y1: y + 20 });
+  const k = 0.05, R = (t, x0, x1, row) => W(t, x0, x1, row * 40 + k * x0);
+  const words = [R('house', 0, 50, 0), R('Haus', 400, 450, 0), R('school', 0, 60, 1), R('Schule', 400, 460, 1), R('garden', 0, 70, 2), R('Garten', 400, 470, 2)];
+  const lines = [[words[0], words[1]], [words[2], words[3]], [words[4], words[5]]];
+  assert.equal(JSON.stringify(C.ocrToList(C.ocrRows(words, lines))), JSON.stringify([['house', 'Haus'], ['school', 'Schule'], ['garden', 'Garten']]));
+});

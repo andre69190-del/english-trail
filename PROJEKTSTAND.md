@@ -209,3 +209,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Google: statische Seiten `englisch-gymnasium-bw.html`, `englisch-klasse-5…10.html` (tools/seo_pages.py, nach Inhaltsänderungen neu erzeugen), sitemap.xml mit allen Seiten, JSON-LD, Footer-Link in der App. Seite war bei Google noch nicht gefunden (neu). Andre: Google Search Console → Domain-Property arndt-software.de, Sitemap einreichen.
 - Impressum: Polnisch-Rest „Stimmen Gosia/Darek“ entfernt. perf-Budget 820 KB.
 - Tests: UI 134 OK, Core 53.
+
+## Release 0.10 (01.11.2026) – Vokabeln per Foto
+- „Meine Wörter“ (+ Knopf im Schulbereich): Foto der Vokabelseite → tesseract.js (selbst gehostet in `ocr/`, eng+deu best_int, ~8 MB, erst bei Nutzung geladen) → `C.ocrRows` (Schräglage ausgleichen, Zeilen bilden) → `C.ocrToList` (Spalten über Lücken, Lautschrift [..] /../ raus, Überschriften raus) → Textfeld „Liste einfügen“ zum Prüfen → mit Unit speichern. Foto verlässt das Gerät nicht.
+- Dockerfile `COPY ocr`, nginx-Cache für /ocr/, Datenschutz ergänzt, Testbild `tests/fixtures/vokabelseite.jpg` (eigene Wörter, schräg+unscharf).
+- Tests: Core 57, UI 136 OK.
+- Grund ohne Verlagslisten: Unit-Vokabellisten sind urheberrechtlich geschützt (Sammelwerk/Datenbank); privat abfotografieren/abtippen ist ok. Andre fragt ggf. Klett/Cornelsen nach Lizenz.

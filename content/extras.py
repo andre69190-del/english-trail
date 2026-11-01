@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.10', '2026-11-01', ['Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy.']),
   ('0.9', '2026-11-01', ['Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.', 'Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben.']),
   ('0.8', '2026-11-01', ['Trail 2 (A2) ist da: 12 neue Orte von Oxford bis Newcastle – mit going to, simple past, Vergleichen, must, present perfect und will. Passt zu Klasse 6–8.', 'Emmas Postkarten: Nach jedem Ort von Trail 2 kannst du eine neue Karte lesen.']),
   ('0.7', '2026-11-01', ['Mein Rabe: Gestalte deinen eigenen Raben – Gefieder, Krone, Zauberhut, Schal, Brille, Kopfhörer, Fußball … Federn dafür verdienst du nur durchs Üben. Keine Käufe.', 'Unter „Album“ und im Schulbereich.']),
@@ -304,6 +305,7 @@ GUIDE = {
   {'ico': '🎒', 't': 'Schule (Gymnasium BW, Klasse 5–10)', 'go': 'school', 'items': [
     ['Stoff deiner Klasse', 'Wortschatz-Pakete und Grammatik passend zum Bildungsplan.'],
     ['Deine Buch-Vokabeln', 'Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste.'],
+    ['Vokabeln per Foto', 'Vokabelseite fotografieren, Wörter prüfen, fertig – kein Abtippen mehr.'],
     ['Probe-Klassenarbeit', 'Grammatik, Vokabeln, Hören, Lesen, Sprachmittlung – mit Note.'],
     ['Schreibauftrag', 'Die App prüft Länge, Pflichtwörter und Verbindungswörter.'],
     ['Lieblingsthemen', 'Gaming, Fußball, Tiere, Musik, Social Media, Fantasy, Technik, Mode – du wählst.']]},

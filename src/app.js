@@ -166,6 +166,7 @@
       hw: 'Hausaufgabe per Code', hw_d: 'Deine Lehrkraft oder jemand aus der Klasse hat einen Code geschickt? Eingeben – alle bekommen dieselben Fragen.', hw_go: 'Los', hw_bad: 'Diesen Code kenne ich nicht. Er sieht so aus: HA7-P3-T5', hw_make: 'Als Hausaufgaben-Code teilen', hw_made: 'Code:', hw_share: 'Englisch-Hausaufgabe (Klasse {g}): Code {c} in English Trail unter Schule → Hausaufgabe eingeben.', hw_done: 'Erledigt:', hw_res: 'Ergebnis teilen', hw_res_t: 'Hausaufgabe {c} erledigt: {p} %',
       rv_title: 'Mein Rabe', rv_open: 'Gestalten', rv_feathers: 'Federn', rv_how: 'Federn verdienst du nur durchs Üben: 1 Feder pro 50 XP und 2 für jeden gefundenen Raben.', rv_fair: 'Keine Käufe, kein Geld, keine Werbung. Alles, was du freischaltest, bleibt deins.', rv_need: 'Dir fehlen noch {n} Federn – weiter üben!', rv_got: 'Freigeschaltet!', rv_name_ph: 'Name deines Raben', rv_c_col: 'Gefieder', rv_c_hat: 'Kopf', rv_c_neck: 'Hals', rv_c_eyes: 'Augen', rv_c_extra: 'Dabei', rv_c_bg: 'Hintergrund', rv_col_black: 'Schwarz', rv_col_night: 'Nachtblau', rv_col_grey: 'Grau', rv_col_purple: 'Lila', rv_col_green: 'Grün', rv_col_white: 'Weiß', rv_col_gold: 'Gold', rv_hat_none: 'Nichts', rv_hat_cap: 'Cap', rv_hat_beanie: 'Mütze', rv_hat_crown: 'Krone', rv_hat_wizard: 'Zauberhut', rv_hat_tophat: 'Zylinder', rv_hat_cowboy: 'Cowboyhut', rv_neck_none: 'Nichts', rv_neck_scarf: 'Schal rot', rv_neck_scarfb: 'Schal blau', rv_neck_bow: 'Fliege', rv_neck_medal: 'Medaille', rv_eyes_none: 'Normal', rv_eyes_round: 'Brille', rv_eyes_sun: 'Sonnenbrille', rv_eyes_star: 'Glitzerstern', rv_extra_none: 'Nichts', rv_extra_phones: 'Kopfhörer', rv_extra_ball: 'Fußball', rv_extra_book: 'Buch', rv_extra_guitar: 'Gitarre', rv_extra_pad: 'Controller', rv_bg_sky: 'Himmel', rv_bg_grass: 'Wiese', rv_bg_sunset: 'Abendrot', rv_bg_night: 'Nacht', rv_bg_london: 'London',
       seo_link: 'Englisch Klasse 5–10',
+      ph_title: 'Vokabeln per Foto', ph_d: 'Fotografiere die Vokabelseite aus deinem Englischbuch. Die App liest die Wörter – du prüfst sie kurz und übernimmst sie mit deiner Unit.', ph_take: 'Foto aufnehmen oder auswählen', ph_tips: 'Tipps: Buch flach hinlegen, gutes Licht, nur die Vokabelseite, Handy gerade halten. Das Foto bleibt auf deinem Gerät. Beim ersten Mal lädt die App einmalig ca. 8 MB (am besten im WLAN).', ph_load: 'Texterkennung wird geladen …', ph_read: 'Lese die Wörter …', ph_found: '{n} Wörter erkannt – bitte unten prüfen, verbessern und dann übernehmen.', ph_none: 'Ich konnte keine Wörter erkennen. Versuch es mit mehr Licht und das Buch ganz gerade fotografieren.', ph_fail: 'Das hat nicht geklappt. Bitte noch einmal versuchen.', ph_offline: 'Für das erste Foto braucht die App einmal Internet.',
       gd_title: 'Was kann English Trail?', gd_kids: 'Für Kinder', gd_adults: 'Für Eltern & Lehrkräfte', gd_open: 'Alles ansehen', gd_try: 'Ausprobieren', gd_sch_d: 'Alle Spiele, Duelle und Hilfen auf einen Blick.', rep_pick: 'Was ist los? Tippe an (Text ist freiwillig):', rep_c1: 'Übersetzung falsch', rep_c2: 'Tippfehler', rep_c3: 'Aussprache klingt komisch', rep_c4: 'Viel zu schwer', rep_c5: 'Etwas funktioniert nicht', rep_oops: 'Ups, da hat etwas nicht geklappt. Unter „Fehler melden“ kannst du es uns sagen.',
       news: 'Was ist neu', news_new: 'Neu in dieser Version', news_all: 'Alle Neuerungen ansehen', news_ver: 'Version',
       boss_locked: 'Die Prüfung öffnet, wenn alle Wörter gefestigt sind ({r} von {n}).',
@@ -298,6 +299,7 @@
       hw: 'Homework by code', hw_d: 'Got a code from your teacher or a classmate? Enter it – everyone gets the same questions.', hw_go: 'Go', hw_bad: 'I do not know this code. It looks like this: HA7-P3-T5', hw_make: 'Share as homework code', hw_made: 'Code:', hw_share: 'English homework (year {g}): enter code {c} in English Trail under School → Homework.', hw_done: 'Done:', hw_res: 'Share result', hw_res_t: 'Homework {c} done: {p} %',
       rv_title: 'My raven', rv_open: 'Customise', rv_feathers: 'feathers', rv_how: 'You only earn feathers by practising: 1 feather per 50 XP and 2 for every raven you find.', rv_fair: 'No purchases, no money, no ads. Everything you unlock stays yours.', rv_need: 'You need {n} more feathers – keep practising!', rv_got: 'Unlocked!', rv_name_ph: 'Your raven’s name', rv_c_col: 'Feathers', rv_c_hat: 'Head', rv_c_neck: 'Neck', rv_c_eyes: 'Eyes', rv_c_extra: 'Extra', rv_c_bg: 'Background', rv_col_black: 'Black', rv_col_night: 'Night blue', rv_col_grey: 'Grey', rv_col_purple: 'Purple', rv_col_green: 'Green', rv_col_white: 'White', rv_col_gold: 'Gold', rv_hat_none: 'None', rv_hat_cap: 'Cap', rv_hat_beanie: 'Beanie', rv_hat_crown: 'Crown', rv_hat_wizard: 'Wizard hat', rv_hat_tophat: 'Top hat', rv_hat_cowboy: 'Cowboy hat', rv_neck_none: 'None', rv_neck_scarf: 'Red scarf', rv_neck_scarfb: 'Blue scarf', rv_neck_bow: 'Bow tie', rv_neck_medal: 'Medal', rv_eyes_none: 'Normal', rv_eyes_round: 'Glasses', rv_eyes_sun: 'Sunglasses', rv_eyes_star: 'Glitter star', rv_extra_none: 'None', rv_extra_phones: 'Headphones', rv_extra_ball: 'Football', rv_extra_book: 'Book', rv_extra_guitar: 'Guitar', rv_extra_pad: 'Controller', rv_bg_sky: 'Sky', rv_bg_grass: 'Meadow', rv_bg_sunset: 'Sunset', rv_bg_night: 'Night', rv_bg_london: 'London',
       seo_link: 'English years 5–10',
+      ph_title: 'Words from a photo', ph_d: 'Take a photo of the vocabulary page in your English book. The app reads the words – you check them quickly and save them with your unit.', ph_take: 'Take or choose a photo', ph_tips: 'Tips: lay the book flat, good light, only the vocabulary page, hold the phone straight. The photo stays on your device. The first time, the app downloads about 8 MB once (best on Wi-Fi).', ph_load: 'Loading text recognition …', ph_read: 'Reading the words …', ph_found: '{n} words found – please check and correct them below, then save.', ph_none: 'I could not find any words. Try more light and hold the book straight.', ph_fail: 'That did not work. Please try again.', ph_offline: 'The first photo needs an internet connection once.',
       gd_title: 'What can English Trail do?', gd_kids: 'For kids', gd_adults: 'For parents & teachers', gd_open: 'See everything', gd_try: 'Try it', gd_sch_d: 'All games, duels and helpers at a glance.', rep_pick: 'What is wrong? Tap one (text is optional):', rep_c1: 'Wrong translation', rep_c2: 'Typo', rep_c3: 'Pronunciation sounds odd', rep_c4: 'Far too hard', rep_c5: 'Something does not work', rep_oops: 'Oops, something went wrong. Use “Report a mistake” to tell us.',
       news: 'What’s new', news_new: 'New in this version', news_all: 'See all updates', news_ver: 'Version',
       boss_locked: 'The test opens once all words are consolidated ({r} of {n}).',
@@ -1264,7 +1266,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.9', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.10', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1682,7 +1684,10 @@
     var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('mywords')) + '</h1>' +
       '<section class="card stack"><label class="fld">' + esc(t('pl')) + '<input type="text" id="mw-pl" autocomplete="off" lang="en"></label>' +
       '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button>' +
-      '<details><summary class="small"><b>' + esc(t('mw_bulk')) + '</b></summary><p class="small muted">' + esc(t('mw_bulk_d')) + '</p><textarea id="mw-bulk" rows="6" lang="en" placeholder="library = Bibliothek&#10;to borrow = ausleihen"></textarea><button class="btn" id="mw-bulk-go" style="justify-self:start">' + esc(t('mw_bulk_go')) + '</button></details></section>' +
+      '<section class="card stack" id="ph"><h2>📷 ' + esc(t('ph_title')) + '</h2><p class="small">' + esc(t('ph_d')) + '</p>' +
+      '<label class="btn primary" style="justify-self:start;cursor:pointer">' + esc(t('ph_take')) + '<input type="file" id="ph-in" accept="image/*" capture="environment" hidden></label>' +
+      '<p class="small muted">' + esc(t('ph_tips')) + '</p><p class="small" id="ph-st" role="status"></p></section>' +
+      '<details' + (PH.txt ? ' open' : '') + '><summary class="small"><b>' + esc(t('mw_bulk')) + '</b></summary><p class="small muted">' + esc(t('mw_bulk_d')) + '</p><textarea id="mw-bulk" rows="6" lang="en" placeholder="library = Bibliothek&#10;to borrow = ausleihen">' + esc(PH.txt) + '</textarea><button class="btn" id="mw-bulk-go" style="justify-self:start">' + esc(t('mw_bulk_go')) + '</button></details></section>' +
       '<section class="card">' + (S.custom.length ? '<div class="list">' + S.custom.map(function (w, i) {
         return '<div class="li"><button class="icon-btn" data-say="' + esc(w[0]) + '" aria-label="' + esc(t('listen_again')) + '">' + I.spk + '</button><div class="grow"><div class="pl-word">' + esc(w[0]) + '</div><div class="small muted">' + esc(meaning(w)) + (w[3] ? ' · <span class="badge">' + esc(w[3]) + '</span>' : '') + '</div></div><button class="icon-btn" data-del="' + i + '" aria-label="' + esc(t('delete')) + '">' + I.x + '</button></div>';
       }).join('') + '</div>' : '<p class="muted">' + esc(t('mywords_empty')) + '</p>') + '</section>' +
@@ -1701,8 +1706,70 @@
       var ue = document.getElementById('mw-u'), un = ue ? ue.value.trim() : '', list = C.parseWordList(document.getElementById('mw-bulk').value), have = {};
       S.custom.forEach(function (w) { have[(w[0] + '|' + w[1]).toLowerCase()] = 1; });
       var n = 0; list.forEach(function (p) { if (have[(p[0] + '|' + p[1]).toLowerCase()]) return; S.custom.push(un ? [p[0], p[1], p[1], un] : [p[0], p[1], p[1]]); n++; });
-      if (un) S.lastUnit = un; save(); renderMyWords(); toast(t('mw_bulk_ok').replace('{n}', n));
+      if (un) S.lastUnit = un; PH.txt = ''; save(); renderMyWords(); toast(t('mw_bulk_ok').replace('{n}', n));
     };
+    var pin = document.getElementById('ph-in'); if (pin) pin.onchange = function () { if (pin.files && pin.files[0]) photoVocab(pin.files[0]); };
+  }
+  /* Vokabeln per Foto: Texterkennung (tesseract.js, liegt auf unserem Server) läuft komplett auf dem Gerät – das Foto wird nirgends hochgeladen.
+     Die Bibliothek (~8 MB inkl. Sprachdaten Englisch + Deutsch) wird erst beim ersten Foto geladen. Ergebnis landet zum Prüfen in „Liste einfügen“. */
+  var PH = { txt: '', busy: false, lib: null, worker: null };
+  function phStatus(m) { var el = document.getElementById('ph-st'); if (el) el.textContent = m; }
+  function phLoadLib() {
+    if (window.Tesseract) return Promise.resolve(window.Tesseract);
+    if (PH.lib) return PH.lib;
+    PH.lib = new Promise(function (ok, no) {
+      var sc = document.createElement('script'); sc.src = 'ocr/tesseract.min.js'; sc.async = true;
+      sc.onload = function () { window.Tesseract ? ok(window.Tesseract) : no(new Error('no Tesseract')); };
+      sc.onerror = function () { PH.lib = null; no(new Error('load')); }; document.head.appendChild(sc);
+    });
+    return PH.lib;
+  }
+  function phImage(file) {
+    return new Promise(function (ok, no) {
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function () {
+        var max = 2200, sc = Math.min(1, max / Math.max(img.width, img.height)), c = document.createElement('canvas');
+        c.width = Math.round(img.width * sc); c.height = Math.round(img.height * sc);
+        var x = c.getContext('2d'); x.filter = 'grayscale(1) contrast(1.25)'; x.drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url); ok(c);
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); no(new Error('img')); };
+      img.src = url;
+    });
+  }
+  function phLines(data) {
+    var lines = [];
+    (data && data.blocks || []).forEach(function (b) { (b.paragraphs || []).forEach(function (p) { (p.lines || []).forEach(function (l) { lines.push(l); }); }); });
+    if (!lines.length && data && data.lines) lines = data.lines;
+    var words = [], ls = [];
+    lines.forEach(function (l) { var lw = []; (l.words || []).forEach(function (w) { var o = { t: w.text, x0: w.bbox.x0, x1: w.bbox.x1, y0: w.bbox.y0, y1: w.bbox.y1 }; lw.push(o); if (w.confidence == null || w.confidence > 25) words.push(o); }); ls.push(lw); });
+    return C.ocrRows(words, ls);
+  }
+  function photoVocab(file) {
+    if (PH.busy) return; PH.busy = true; phStatus(t('ph_load'));
+    var T0;
+    phLoadLib().then(function (T) {
+      T0 = T;
+      if (PH.worker) return PH.worker;
+      var base = location.href.replace(/[#?].*$/, '').replace(/[^/]*$/, '');
+      PH.worker = T.createWorker(['eng', 'deu'], 1, {
+        workerPath: base + 'ocr/worker.min.js', corePath: base + 'ocr/', langPath: base + 'ocr/lang', gzip: true, cacheMethod: 'write',
+        logger: function (m) { if (m && m.status === 'recognizing text') phStatus(t('ph_read') + ' ' + Math.round((m.progress || 0) * 100) + ' %'); else if (m && /load|initializ/.test(m.status || '')) phStatus(t('ph_load') + (m.progress ? ' ' + Math.round(m.progress * 100) + ' %' : '')); }
+      });
+      PH.worker.catch(function () { PH.worker = null; });
+      return PH.worker;
+    }).then(function (w) {
+      return phImage(file).then(function (c) { phStatus(t('ph_read')); return w.recognize(c, {}, { blocks: true }); });
+    }).then(function (r) {
+      var list = C.ocrToList(phLines(r && r.data));
+      PH.busy = false;
+      if (!list.length) { phStatus(t('ph_none')); return; }
+      var add = list.map(function (p) { return p[0] + ' = ' + p[1]; }).join('\n');
+      PH.txt = (PH.txt ? PH.txt + '\n' : '') + add;
+      var ta = document.getElementById('mw-bulk');
+      if (ta) { ta.value = PH.txt; var d = ta.closest('details'); if (d) d.open = true; ta.scrollIntoView({ block: 'center' }); }
+      phStatus(t('ph_found').replace('{n}', list.length));
+      toast(t('ph_found').replace('{n}', list.length));
+    }).catch(function () { PH.busy = false; phStatus(navigator.onLine ? t('ph_fail') : t('ph_offline')); });
   }
 
   /* ---------- Wortschatz: alle Wörter aus den Lektionen nachschlagen (Suche tippen oder sprechen) ---------- */
@@ -1943,7 +2010,7 @@
       (packs.length ? '<section class="card stack"><h2>✍️ ' + esc(t('sch_write')) + '</h2><p class="small muted">' + esc(t('sch_write_d')) + '</p><div class="row" style="flex-wrap:wrap">' + packs.map(function (i) { return '<button class="btn" data-sw="' + i + '">' + esc(U[i].ico + ' ' + U[i].city) + '</button>'; }).join('') + '</div></section>' : '') +
       '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p>' +
       (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button>'; }).join('') + '</div>' : '') +
-      '<button class="btn" id="sc-own" style="justify-self:start">' + esc(t('sch_own_add')) + '</button></section>' +
+      '<div class="row" style="flex-wrap:wrap"><button class="btn" id="sc-own">' + esc(t('sch_own_add')) + '</button><button class="btn" id="sc-photo">📷 ' + esc(t('ph_title')) + '</button></div></section>' +
       (packs.length ? '<section class="card stack"><h2>' + esc(t('chat')) + '</h2><p class="small">' + esc(t('sch_chat_d').replace('{g}', g)) + '</p><button class="btn" id="sc-chat" style="justify-self:start">' + esc(t('chat')) + '</button></section>' : '') +
       '<section class="card stack"><h2>👪 ' + esc(t('par_title')) + '</h2><p class="small">' + esc(t('par_d')) + '</p><pre class="small par-rep" id="par-txt">' + esc(parentReport(g)) + '</pre><button class="btn" id="par-share" style="justify-self:start">' + esc(t('par_share')) + '</button></section>' +
       '<section class="card stack"><h2>❓ ' + esc(t('gd_title')) + '</h2><p class="small">' + esc(t('gd_sch_d')) + '</p><button class="btn" id="sc-guide" style="justify-self:start">' + esc(t('gd_open')) + ' →</button><p class="small muted">' + esc(t('rep_d')) + '</p>' + reportHtml('rep-sch') + '</section>';
@@ -1967,6 +2034,7 @@
       startMode('sexam');
     };
     document.getElementById('sc-own').onclick = function () { go('mywords'); };
+    document.getElementById('sc-photo').onclick = function () { go('mywords'); setTimeout(function () { var el = document.getElementById('ph'); if (el) el.scrollIntoView({ block: 'start' }); }, 60); };
     document.getElementById('hw-make').onclick = function () {
       var tp = [], pk = []; document.querySelectorAll('[data-xt]').forEach(function (c) { if (c.checked) tp.push(c.getAttribute('data-xt')); });
       document.querySelectorAll('[data-xp]').forEach(function (c) { if (c.checked) pk.push(+c.getAttribute('data-xp')); });

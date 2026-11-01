@@ -90,7 +90,7 @@ def main():
         b.append('<h2>Was die App für Klasse %d bietet</h2><ul>' % g +
                  '<li><b>Probe-Klassenarbeit</b> mit Grammatik, Vokabeln, Hörverstehen, Leseverstehen und Sprachmittlung – mit Note.</li>'
                  '<li><b>Schreibauftrag</b> mit Checkliste (Länge, Pflichtwörter, Verbindungswörter).</li>'
-                 '<li><b>Buch-Vokabeln</b> nach Unit eintragen – auch als ganze Liste einfügen.</li>'
+                 '<li><b>Buch-Vokabeln</b> nach Unit eintragen – als Liste oder einfach <b>per Foto</b> der Vokabelseite (Texterkennung direkt auf dem Handy).</li>'
                  '<li><b>Wochen-Challenge, Live-Duell und Hausaufgaben-Code</b> für die ganze Klasse – ohne Anmeldung.</li>'
                  '<li><b>Wiederholung mit Karteikasten-Prinzip</b>, Aussprache britisch oder amerikanisch.</li></ul>')
         b.append('<a class="cta" href="./">English Trail öffnen →</a>')

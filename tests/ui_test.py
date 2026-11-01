@@ -408,6 +408,17 @@ with sync_playwright() as p:
     (ok if play_through(sp, 400) else bad)('Probe-Klassenarbeit durchspielbar')
     (ok if sp.evaluate("() => (window.PSApp.state().schoolBest || {})[7] != null") else bad)('Probe-Klassenarbeit: Bestwert gespeichert')
     sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#par-txt')
+    # Vokabeln per Foto (echte Texterkennung auf dem Gerät, Testbild schräg und unscharf)
+    sp.click('#sc-photo'); sp.wait_for_selector('#ph-in', state='attached')
+    sp.set_input_files('#ph-in', os.path.join(ROOT, 'tests', 'fixtures', 'vokabelseite.jpg'))
+    for _ in range(90):
+        if 'erkannt' in sp.inner_text('#ph-st') or 'konnte' in sp.inner_text('#ph-st') or 'geklappt' in sp.inner_text('#ph-st'): break
+        sp.wait_for_timeout(1000)
+    got = sp.input_value('#mw-bulk')
+    (ok if 'library = Bibliothek' in got and 'timetable = Stundenplan' in got and got.count('\n') >= 4 else bad)('Vokabeln per Foto erkannt (%d Zeilen)' % (got.count('\n') + 1))
+    n0 = sp.evaluate("() => window.PSApp.state().custom.length"); sp.fill('#mw-u', 'Unit 9'); sp.click('#mw-bulk-go'); sp.wait_for_timeout(200)
+    (ok if sp.evaluate("() => window.PSApp.state().custom.filter(w => w[3] === 'Unit 9').length") >= 5 else bad)('Foto-Vokabeln mit Unit gespeichert')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#par-txt')
     sp.evaluate("() => { window._sh = []; navigator.share = undefined; }")
     sp.click('#hw-make'); sp.wait_for_timeout(150); hcode = sp.inner_text('#hw-out').split()[-1]
     (ok if hcode.startswith('HA7-P') else bad)('Hausaufgaben-Code erstellen (%s)' % hcode)

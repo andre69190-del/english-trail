@@ -512,6 +512,59 @@
       return m && m[1] && m[2] ? [m[1].slice(0, 80), m[2].slice(0, 80)] : null;
     }).filter(Boolean);
   }
+  /* Vokabeln per Foto: Texterkennung liefert Zeilen mit Wörtern und Positionen. Spalten erkennt man an großen Lücken;
+     Lautschrift ([ˈhaʊs], /haʊs/) wird übersprungen. Ohne Spalten: Trennzeichen oder erstes deutsches Wort (groß, Umlaut, Artikel). */
+  var OCR_IPA = /[ʃʒθðŋəɪʊæɑɒɔʌɜːˈˌ]|^[\[\/].*[\]\/]$/, OCR_DE = /^(der|die|das|den|dem|des|ein|eine|einen|einem|sich|zu|jdn|jdm|etw|etwas|jemanden|jemandem|nicht|kein|keine)$/i;
+  var OCR_SKIP = /^(unit|vocabulary|vocab|words?|page|seite|station|check|across cultures|wortschatz|lernwörter|englisch|deutsch|english|german)\b/i;
+  function ocrClean(x) { return String(x || '').replace(/[|_•·►▶◆■□~«»]+/g, ' ').replace(/\s+/g, ' ').replace(/^[\s,.;:\-–)0-9]+|[\s,;:\-–(]+$/g, '').trim(); }
+  function ocrSplitText(t) {
+    var m = t.match(/^(.+?)\s*(?:\t|\s=\s?|=|\s[-–]\s|;|\s{2,})\s*(.+)$/); if (m) return [m[1], m[2]];
+    var w = t.split(' ');
+    for (var i = 1; i < w.length; i++) {
+      var x = w[i];
+      if (OCR_DE.test(x) || /[äöüßÄÖÜ]/.test(x) || (/^[A-ZÄÖÜ][a-zäöüß]/.test(x) && !/^(I|I'm|I'll|I've|I'd|Mr|Mrs|Ms|Dr|English|British|London|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|January|February|March|April|May|June|July|August|September|October|November|December)$/.test(x)))
+        return [w.slice(0, i).join(' '), w.slice(i).join(' ')];
+    }
+    return null;
+  }
+  /* Wörter aus allen erkannten Zeilen nach Höhe zu Tabellenzeilen zusammenfassen (Texterkennung trennt Spalten manchmal in eigene Blöcke) */
+  function ocrRows(words, lines) {
+    /* Schräglage schätzen: Steigung langer Zeilen (Median), dann Höhe jedes Worts entlang dieser Steigung korrigieren */
+    var sl = [];
+    (lines || []).forEach(function (l) { var w = (l || []).filter(function (x) { return x && x.x1 > x.x0; }); if (w.length < 2) return; var a = w[0], b = w[w.length - 1], dx = ((b.x0 + b.x1) - (a.x0 + a.x1)) / 2; if (dx > 80) sl.push((((b.y0 + b.y1) - (a.y0 + a.y1)) / 2) / dx); });
+    sl.sort(function (a, b) { return a - b; }); var k = sl.length ? sl[Math.floor(sl.length / 2)] : 0; if (Math.abs(k) > 0.2) k = 0;
+    var ws = (words || []).filter(function (w) { return w && String(w.t || '').trim(); }).map(function (w) { return { t: w.t, x0: w.x0, x1: w.x1, y0: w.y0, y1: w.y1, c: (w.y0 + w.y1) / 2 - k * (w.x0 + w.x1) / 2, h: Math.max(1, w.y1 - w.y0) }; });
+    ws.sort(function (a, b) { return a.c - b.c; });
+    var rows = [];
+    ws.forEach(function (w) { var r = rows[rows.length - 1]; if (r && Math.abs(w.c - r.c) <= 0.55 * Math.max(w.h, r.h)) { r.words.push(w); r.c = (r.c * (r.words.length - 1) + w.c) / r.words.length; r.h = Math.max(r.h, w.h); } else rows.push({ c: w.c, h: w.h, words: [w] }); });
+    return rows.map(function (r) { return { words: r.words.sort(function (a, b) { return a.x0 - b.x0; }) }; });
+  }
+  function ocrToList(lines) {
+    var out = [], seen = {};
+    (lines || []).forEach(function (ln) {
+      var inBr = false, ws = (ln.words || []).filter(function (w) {
+        var x = String(w && w.t || '').trim(); if (!x) return false;
+        if (inBr) { if (/[\]\/]$/.test(x) || x.indexOf(']') >= 0) inBr = false; return false; }
+        if (/^['‘’]?[\[\/]/.test(x)) { if (!/[\]\/].?$/.test(x.slice(1))) inBr = true; return false; }   /* Lautschrift [ … ] oder / … / */
+        return !OCR_IPA.test(x) && !/^[^A-Za-zÄÖÜäöüß(]*$/.test(x) && !/\w:\w/.test(x);
+      });
+      if (!ws.length) return;
+      var hs = ws.map(function (w) { return Math.max(1, (w.y1 || 0) - (w.y0 || 0)); }).sort(function (a, b) { return a - b; }), h = hs[Math.floor(hs.length / 2)];
+      var segs = [[ws[0]]];
+      for (var i = 1; i < ws.length; i++) { if ((ws[i].x0 - ws[i - 1].x1) > Math.max(1.6 * h, 14)) segs.push([]); segs[segs.length - 1].push(ws[i]); }
+      var txt = segs.map(function (sg) { var x = sg.map(function (w) { return w.t; }).join(' '); if (/\]/.test(x) && !/\[/.test(x.split(']')[0])) x = x.slice(x.indexOf(']') + 1); return ocrClean(x.replace(/\[[^\]]*\]?/g, ' ')); }).filter(function (x) { return /[A-Za-zÄÖÜäöüß]{2}/.test(x); });
+      if (!txt.length) return;
+      txt = txt.filter(function (x) { return !/^[^(]*\)$/.test(x); });   /* Reste von Lautschrift wie „bretk)“ */
+      if (!txt.length) return;
+      var pair = txt.length >= 3 ? [txt[0], txt[txt.length - 1]] : txt.length === 2 ? [txt[0], txt[1]] : ocrSplitText(txt[0]);
+      if (!pair) return;
+      var en = ocrClean(pair[0]), de = ocrClean(pair[1]);
+      if (!/[a-z]{2}/i.test(en) || !/[a-zäöüß]{2}/i.test(de) || OCR_SKIP.test(en) || en.length > 60 || de.length > 80) return;
+      var k = en.toLowerCase(); if (seen[k]) return; seen[k] = 1;
+      out.push([en, de]);
+    });
+    return out;
+  }
   /* Schreibauftrag: einfache, transparente Kriterien wie im Unterricht (keine KI) */
   function writingCheck(txt, words) {
     var t = String(txt || ''), low = ' ' + t.toLowerCase().replace(/[^a-z' ]+/g, ' ') + ' ';
@@ -626,7 +679,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

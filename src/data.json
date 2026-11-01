@@ -23016,6 +23016,16 @@
  ],
  "news": [
   {
+   "v": "0.10",
+   "date": "2026-11-01",
+   "de": [
+    "Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy."
+   ],
+   "en": [
+    "Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy."
+   ]
+  },
+  {
    "v": "0.9",
    "date": "2026-11-01",
    "de": [
@@ -23439,6 +23449,10 @@
      [
       "Deine Buch-Vokabeln",
       "Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste."
+     ],
+     [
+      "Vokabeln per Foto",
+      "Vokabelseite fotografieren, Wörter prüfen, fertig – kein Abtippen mehr."
      ],
      [
       "Probe-Klassenarbeit",
