@@ -215,3 +215,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Dockerfile `COPY ocr`, nginx-Cache für /ocr/, Datenschutz ergänzt, Testbild `tests/fixtures/vokabelseite.jpg` (eigene Wörter, schräg+unscharf).
 - Tests: Core 57, UI 136 OK.
 - Grund ohne Verlagslisten: Unit-Vokabellisten sind urheberrechtlich geschützt (Sammelwerk/Datenbank); privat abfotografieren/abtippen ist ok. Andre fragt ggf. Klett/Cornelsen nach Lizenz.
+- 0.10 live geprüft 01.11. 14:06: OCR-Dateien und SEO-Seiten werden echt ausgeliefert; Foto-Test auf der Live-Seite 6/6 Wörter in ~2 s. 0.10.1: Lesefehler ü→„ii“ im Deutschen wird korrigiert.
+
+## Release 0.11 (02.11.2026) – Selbst schreiben
+- Kachel „✍️ Selbst schreiben“ (Üben, Modus `selfwrite`): alle Wörter mit Karteikarte (auch eigene/Foto-Wörter), Fehlerwörter und niedrige Boxen zuerst, nur Eintippen (`q.forceWrite = 1`), Hilfe „Anfangsbuchstabe“, Bestwert `S.swBest`.
+- „Schreib-Momente“ im Antipp-Modus: Wörter mit Box ≥ 2 werden mit 30 % Chance zur Schreibfrage (`q.forceWrite = 2`), max. 2 pro Runde, nie in Duellen/Live/Zeit/Probe-Arbeit. Abschaltbar unter Ich (`S.writeMix`, Standard an).
+- perf-Budget 880 KB. Tests: UI 138 OK.

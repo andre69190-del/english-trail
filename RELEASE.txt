@@ -1,1 +1,1 @@
-0.10.1 (01.11.2026) Foto-Erkennung: ue-Lesefehler korrigiert
+0.11 (02.11.2026) Selbst schreiben und Schreib-Momente

@@ -23016,6 +23016,18 @@
  ],
  "news": [
   {
+   "v": "0.11",
+   "date": "2026-11-02",
+   "de": [
+    "Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).",
+    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“."
+   ],
+   "en": [
+    "Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).",
+    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“."
+   ]
+  },
+  {
    "v": "0.10",
    "date": "2026-11-01",
    "de": [
@@ -23503,6 +23515,10 @@
      [
       "Wiederholen",
       "Die App merkt sich, welche Wörter du bald vergisst, und fragt sie rechtzeitig."
+     ],
+     [
+      "Selbst schreiben",
+      "Alle bekannten Wörter ohne Auswahl selbst eintippen – so merkt man sie sich am besten."
      ],
      [
       "Zeiten-Werkstatt & unregelmäßige Verben",

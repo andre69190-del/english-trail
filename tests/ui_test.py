@@ -238,6 +238,14 @@ with sync_playwright() as p:
     (ok if page.locator('.news-ul').count() >= 1 else bad)('Seite „Was ist neu“')
     page.evaluate("() => window.PSApp.go('home')"); (ok if not page.locator('#nw').count() else bad)('Update-Hinweis nur einmal')
 
+    # Selbst schreiben (nur Eintippen) + Schreib-Momente im Antipp-Modus
+    page.evaluate("() => { const s = window.PSApp.state(); s._inp = s.input; s.input = 'tap'; window.PSApp.startMode('selfwrite'); }"); page.wait_for_timeout(200)
+    (ok if page.locator('.game #ans').count() and not page.locator('.game .opt').count() and page.locator('#sw-first').count() else bad)('Selbst schreiben: Eingabefeld statt Auswahl, auch im Antipp-Modus')
+    qa = page.evaluate("() => window.PSApp.game().qs[0].a"); page.fill('#ans', qa); page.press('#ans', 'Enter'); page.wait_for_timeout(200)
+    (ok if page.evaluate("() => window.PSApp.game().right") == 1 else bad)('Selbst schreiben: richtige Antwort zählt')
+    page.evaluate("() => { window.PSApp.go('practice'); }")
+    page.evaluate("() => { const s = window.PSApp.state(); s.input = s._inp; delete s._inp; }")
+
     # Mein Rabe (C): Federn nur aus XP/Raben, freischalten, bleibt gespeichert
     page.evaluate("() => { const s = window.PSApp.state(); s._xp = s.xp; s.xp = 150; s._kr = s.krasnale; s.krasnale = []; window.PSApp.go('album'); }")
     page.click('[data-rvopen]'); page.wait_for_selector('[data-rv]')

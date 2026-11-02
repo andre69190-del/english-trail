@@ -167,6 +167,7 @@
       rv_title: 'Mein Rabe', rv_open: 'Gestalten', rv_feathers: 'Federn', rv_how: 'Federn verdienst du nur durchs Üben: 1 Feder pro 50 XP und 2 für jeden gefundenen Raben.', rv_fair: 'Keine Käufe, kein Geld, keine Werbung. Alles, was du freischaltest, bleibt deins.', rv_need: 'Dir fehlen noch {n} Federn – weiter üben!', rv_got: 'Freigeschaltet!', rv_name_ph: 'Name deines Raben', rv_c_col: 'Gefieder', rv_c_hat: 'Kopf', rv_c_neck: 'Hals', rv_c_eyes: 'Augen', rv_c_extra: 'Dabei', rv_c_bg: 'Hintergrund', rv_col_black: 'Schwarz', rv_col_night: 'Nachtblau', rv_col_grey: 'Grau', rv_col_purple: 'Lila', rv_col_green: 'Grün', rv_col_white: 'Weiß', rv_col_gold: 'Gold', rv_hat_none: 'Nichts', rv_hat_cap: 'Cap', rv_hat_beanie: 'Mütze', rv_hat_crown: 'Krone', rv_hat_wizard: 'Zauberhut', rv_hat_tophat: 'Zylinder', rv_hat_cowboy: 'Cowboyhut', rv_neck_none: 'Nichts', rv_neck_scarf: 'Schal rot', rv_neck_scarfb: 'Schal blau', rv_neck_bow: 'Fliege', rv_neck_medal: 'Medaille', rv_eyes_none: 'Normal', rv_eyes_round: 'Brille', rv_eyes_sun: 'Sonnenbrille', rv_eyes_star: 'Glitzerstern', rv_extra_none: 'Nichts', rv_extra_phones: 'Kopfhörer', rv_extra_ball: 'Fußball', rv_extra_book: 'Buch', rv_extra_guitar: 'Gitarre', rv_extra_pad: 'Controller', rv_bg_sky: 'Himmel', rv_bg_grass: 'Wiese', rv_bg_sunset: 'Abendrot', rv_bg_night: 'Nacht', rv_bg_london: 'London',
       seo_link: 'Englisch Klasse 5–10',
       ph_title: 'Vokabeln per Foto', ph_d: 'Fotografiere die Vokabelseite aus deinem Englischbuch. Die App liest die Wörter – du prüfst sie kurz und übernimmst sie mit deiner Unit.', ph_take: 'Foto aufnehmen oder auswählen', ph_tips: 'Tipps: Buch flach hinlegen, gutes Licht, nur die Vokabelseite, Handy gerade halten. Das Foto bleibt auf deinem Gerät. Beim ersten Mal lädt die App einmalig ca. 8 MB (am besten im WLAN).', ph_load: 'Texterkennung wird geladen …', ph_read: 'Lese die Wörter …', ph_found: '{n} Wörter erkannt – bitte unten prüfen, verbessern und dann übernehmen.', ph_none: 'Ich konnte keine Wörter erkennen. Versuch es mit mehr Licht und das Buch ganz gerade fotografieren.', ph_fail: 'Das hat nicht geklappt. Bitte noch einmal versuchen.', ph_offline: 'Für das erste Foto braucht die App einmal Internet.',
+      sw_title: 'Selbst schreiben', sw_d: 'Alle Wörter, die du schon kennst – ohne Auswahl, nur selbst eintippen', sw_few: 'Lerne erst ein paar Wörter – dann kannst du sie hier selbst schreiben.', sw_first: 'Anfangsbuchstabe', sw_end: 'Selbst geschrieben: {p} % richtig. Schreiben merkt man sich am besten!', wm_title: 'Schreib-Moment!', wm_d: 'Dieses Wort kennst du schon – schreib es diesmal selbst.', wm_set: 'Ab und zu ein bekanntes Wort selbst schreiben (empfohlen)',
       gd_title: 'Was kann English Trail?', gd_kids: 'Für Kinder', gd_adults: 'Für Eltern & Lehrkräfte', gd_open: 'Alles ansehen', gd_try: 'Ausprobieren', gd_sch_d: 'Alle Spiele, Duelle und Hilfen auf einen Blick.', rep_pick: 'Was ist los? Tippe an (Text ist freiwillig):', rep_c1: 'Übersetzung falsch', rep_c2: 'Tippfehler', rep_c3: 'Aussprache klingt komisch', rep_c4: 'Viel zu schwer', rep_c5: 'Etwas funktioniert nicht', rep_oops: 'Ups, da hat etwas nicht geklappt. Unter „Fehler melden“ kannst du es uns sagen.',
       news: 'Was ist neu', news_new: 'Neu in dieser Version', news_all: 'Alle Neuerungen ansehen', news_ver: 'Version',
       boss_locked: 'Die Prüfung öffnet, wenn alle Wörter gefestigt sind ({r} von {n}).',
@@ -300,6 +301,7 @@
       rv_title: 'My raven', rv_open: 'Customise', rv_feathers: 'feathers', rv_how: 'You only earn feathers by practising: 1 feather per 50 XP and 2 for every raven you find.', rv_fair: 'No purchases, no money, no ads. Everything you unlock stays yours.', rv_need: 'You need {n} more feathers – keep practising!', rv_got: 'Unlocked!', rv_name_ph: 'Your raven’s name', rv_c_col: 'Feathers', rv_c_hat: 'Head', rv_c_neck: 'Neck', rv_c_eyes: 'Eyes', rv_c_extra: 'Extra', rv_c_bg: 'Background', rv_col_black: 'Black', rv_col_night: 'Night blue', rv_col_grey: 'Grey', rv_col_purple: 'Purple', rv_col_green: 'Green', rv_col_white: 'White', rv_col_gold: 'Gold', rv_hat_none: 'None', rv_hat_cap: 'Cap', rv_hat_beanie: 'Beanie', rv_hat_crown: 'Crown', rv_hat_wizard: 'Wizard hat', rv_hat_tophat: 'Top hat', rv_hat_cowboy: 'Cowboy hat', rv_neck_none: 'None', rv_neck_scarf: 'Red scarf', rv_neck_scarfb: 'Blue scarf', rv_neck_bow: 'Bow tie', rv_neck_medal: 'Medal', rv_eyes_none: 'Normal', rv_eyes_round: 'Glasses', rv_eyes_sun: 'Sunglasses', rv_eyes_star: 'Glitter star', rv_extra_none: 'None', rv_extra_phones: 'Headphones', rv_extra_ball: 'Football', rv_extra_book: 'Book', rv_extra_guitar: 'Guitar', rv_extra_pad: 'Controller', rv_bg_sky: 'Sky', rv_bg_grass: 'Meadow', rv_bg_sunset: 'Sunset', rv_bg_night: 'Night', rv_bg_london: 'London',
       seo_link: 'English years 5–10',
       ph_title: 'Words from a photo', ph_d: 'Take a photo of the vocabulary page in your English book. The app reads the words – you check them quickly and save them with your unit.', ph_take: 'Take or choose a photo', ph_tips: 'Tips: lay the book flat, good light, only the vocabulary page, hold the phone straight. The photo stays on your device. The first time, the app downloads about 8 MB once (best on Wi-Fi).', ph_load: 'Loading text recognition …', ph_read: 'Reading the words …', ph_found: '{n} words found – please check and correct them below, then save.', ph_none: 'I could not find any words. Try more light and hold the book straight.', ph_fail: 'That did not work. Please try again.', ph_offline: 'The first photo needs an internet connection once.',
+      sw_title: 'Write it yourself', sw_d: 'All the words you already know – no choices, just type them', sw_few: 'Learn a few words first – then you can write them here yourself.', sw_first: 'First letter', sw_end: 'Written yourself: {p} % right. Writing helps you remember best!', wm_title: 'Writing moment!', wm_d: 'You already know this word – write it yourself this time.', wm_set: 'Now and then write a known word yourself (recommended)',
       gd_title: 'What can English Trail do?', gd_kids: 'For kids', gd_adults: 'For parents & teachers', gd_open: 'See everything', gd_try: 'Try it', gd_sch_d: 'All games, duels and helpers at a glance.', rep_pick: 'What is wrong? Tap one (text is optional):', rep_c1: 'Wrong translation', rep_c2: 'Typo', rep_c3: 'Pronunciation sounds odd', rep_c4: 'Far too hard', rep_c5: 'Something does not work', rep_oops: 'Oops, something went wrong. Use “Report a mistake” to tell us.',
       news: 'What’s new', news_new: 'New in this version', news_all: 'See all updates', news_ver: 'Version',
       boss_locked: 'The test opens once all words are consolidated ({r} of {n}).',
@@ -897,6 +899,7 @@
       tileBtn('live', '⚡ ' + t('live'), t('live_tile_d')) +
       tileBtn('school', '🎒 ' + t('sch'), S.school && S.school.grade ? t('sch_grade').replace('{g}', S.school.grade) : t('sch_d')) +
       tileBtn('review', t('review'), t('review_d'), due ? '<span class="badge num">' + due + ' ' + esc(t('due')) + '</span>' : '') +
+      tileBtn('selfwrite', '✍️ ' + t('sw_title'), t('sw_d'), (S.swBest ? '<span class="badge num">' + esc(t('best')) + ' ' + S.swBest + '%</span>' : '')) +
       tileBtn('lex', t('lex'), t('lex_d'), '<span class="badge num">' + allWords().filter(function (x) { return S.cards[x.id]; }).length + '</span>') +
       (szlakUnits(3).length ? tileBtn('exam', '🎓 ' + t('ex_title'), t('ex_tile_d'), S.exam && S.exam.best ? '<span class="badge ' + (S.exam.passed ? 'good' : '') + ' num">' + S.exam.best + '%</span>' : '') : '') +
       tileBtn('themes', t('themes'), t('themes_d')) + tileBtn('daily', t('daily'), t('daily_d')) + tileBtn('blitz', t('blitz'), t('blitz_d')) + tileBtn('survival', t('survival'), t('survival_d'), S.best.survival ? '<span class="badge num">' + esc(t('best')) + ' ' + S.best.survival + '</span>' : '') + tileBtn('cases', t('cases'), t('cases_d')) + tileBtn('chat', t('chat'), t('chat_d'), '<span class="badge">Beta</span>') + tileBtn('conj', t('conj'), t('conj_d')) + tileBtn('aspect', t('aspect'), t('aspect_d')) + 
@@ -1266,7 +1269,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.10', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.11', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1420,7 +1423,7 @@
       '<div class="stack"><b>' + esc(t('accent')) + '</b><div class="seg" id="s-acc">' + segBtn('gb', t('accent_gb'), S.accent !== 'us') + segBtn('us', t('accent_us'), S.accent === 'us') + '</div><p class="small muted">' + esc(t('accent_d')) + '</p></div>' +
       '<div class="stack"><b>' + esc(t('goal')) + '</b><div class="seg" id="s-goal">' + [2, 3, 4, 5, 7].map(function (n) { return segBtn(String(n), String(n), S.goal === n); }).join('') + '</div></div>' +
       '<div class="stack"><b>' + esc(t('diff')) + '</b><div class="seg" id="s-diff">' + ['easy', 'medium', 'hard'].map(function (k) { return segBtn(k, t('diff_' + k), S.diff === k); }).join('') + '</div><p class="small muted">' + esc(t('diff_' + S.diff + '_d')) + '</p></div>' +
-      '<div class="stack"><b>' + esc(t('inp')) + '</b><div class="seg" id="s-inp">' + ['write', 'speak', 'tap'].map(function (k) { return segBtn(k, t('inp_' + k), S.input === k); }).join('') + '</div><p class="small muted">' + esc(t('inp_' + S.input + '_d')) + '</p></div>' +
+      '<div class="stack"><b>' + esc(t('inp')) + '</b><div class="seg" id="s-inp">' + ['write', 'speak', 'tap'].map(function (k) { return segBtn(k, t('inp_' + k), S.input === k); }).join('') + '</div><p class="small muted">' + esc(t('inp_' + S.input + '_d')) + '</p>' + ((S.input || 'write') === 'tap' ? '<label class="row small"><input type="checkbox" id="s-wm"' + (S.writeMix !== false ? ' checked' : '') + '> ' + esc(t('wm_set')) + '</label>' : '') + '</div>' +
       '<label class="row"><input type="checkbox" id="s-free"' + (S.free ? ' checked' : '') + '> ' + esc(t('free_roam')) + '</label>' +
       '<button class="btn" id="s-place" style="justify-self:start">' + esc(t('placement')) + '</button><p class="small muted">' + esc(t('placement_d')) + '</p>' +
       '<div class="stack"><b>' + esc(t('len')) + '</b><div class="seg" id="s-len">' + segBtn('6', t('short'), S.len === 6) + segBtn('10', t('medium'), S.len === 10) + segBtn('15', t('long'), S.len === 15) + '</div></div>' +
@@ -1446,6 +1449,7 @@
     document.getElementById('s-slow').onchange = function (e) { S.slow = e.target.checked; save(); };
     bindSeg('s-diff', function (v) { S.diff = v; save(); renderMe(); });
     bindSeg('s-inp', function (v) { S.input = v; save(); renderMe(); });
+    var wmx = document.getElementById('s-wm'); if (wmx) wmx.onchange = function () { S.writeMix = wmx.checked; save(); };
     document.getElementById('s-free').onchange = function (e) { S.free = e.target.checked; save(); };
     document.getElementById('s-place').onclick = function () { startMode('placement'); };
     document.getElementById('bk-copy').onclick = function () { copy(JSON.stringify(S)); };
@@ -2323,6 +2327,14 @@
       if (wsrc.length < 2) wsrc = pool.slice(0, 5);
       return runGame({ title: t('wb_title'), qs: mixedFor(wsrc, pool.concat(wsrc), 5) });
     }
+    if (mode === 'selfwrite') {
+      /* Selbst schreiben: alle bisher gelernten Wörter (auch eigene), schwächste zuerst – nur Eintippen, keine Auswahl */
+      var sw = allWords().filter(function (x) { return S.cards[x.id]; });
+      if (sw.length < 4) { toast(t('sw_few')); return; }
+      var mis = {}; S.mistakes.forEach(function (id) { mis[id] = 1; });
+      sw = C.shuffle(sw, R).sort(function (a, b) { return (mis[b.id] ? 1 : 0) - (mis[a.id] ? 1 : 0) || S.cards[a.id].box - S.cards[b.id].box; }).slice(0, Math.max(n, 10));
+      return runGame({ title: '✍️ ' + t('sw_title'), qs: C.shuffle(sw, R).map(function (x) { var q = qType(x); q.forceWrite = 1; return q; }), selfWrite: 1 });
+    }
     if (mode === 'review' || mode === 'mistakes' || mode === 'mine') {
       var src;
       if (mode === 'review') { src = dueList(); if (!src.length) { toast(t('no_due')); src = allWords().filter(function (x) { return S.cards[x.id]; }).sort(function (a, b) { return S.cards[a.id].box - S.cards[b.id].box; }); if (!src.length) src = pool; } }
@@ -2622,6 +2634,18 @@
   /* Antwortart (Einstellung S.input): Schreib-Fragen auch per Sprechen oder Antippen beantworten.
      Antippen-Optionen sind fest aus der Antwort abgeleitet (eigener Zufall) – im Duell-Code auf beiden Handys gleich. */
   function drawInput(q, area) {
+    /* Schreib-Moment: Wer sonst antippt, schreibt ab und zu ein schon bekanntes Wort selbst (höchstens 2 pro Runde, nie in Duellen/auf Zeit) */
+    if (!q.forceWrite && !q.wmChecked && G && (S.input || 'write') === 'tap' && S.writeMix !== false && q.id && S.cards[q.id] && S.cards[q.id].box >= 2 &&
+        !G.cfg.duel && !G.cfg.players && !G.cfg.timer && !G.cfg.schoolExam && (G.wm || 0) < 2) {
+      q.wmChecked = 1; if (Math.random() < 0.3) { q.forceWrite = 2; G.wm = (G.wm || 0) + 1; }
+    }
+    if (q.forceWrite) {
+      if (q.forceWrite === 2) area.insertAdjacentHTML('beforeend', '<p class="small wm-note">✍️ <b>' + esc(t('wm_title')) + '</b> ' + esc(t('wm_d')) + '</p>');
+      var box = document.createElement('div'); area.appendChild(box); drawType(q, box);
+      box.insertAdjacentHTML('beforeend', '<div class="row small muted"><button type="button" class="btn ghost" id="sw-first">💡 ' + esc(t('sw_first')) + '</button></div>');
+      var fb = document.getElementById('sw-first'); if (fb) fb.onclick = function () { var inp = box.querySelector('input'); if (inp && !inp.value) { inp.value = q.a.charAt(0); inp.focus(); } fb.disabled = true; q.firstHint = 1; };
+      return;
+    }
     var m = S.input || 'write';
     if (m === 'tap') drawTapType(q, area); else if (m === 'speak') drawSayType(q, area); else drawType(q, area);
     var other = ['write', 'speak', 'tap'].filter(function (k) { return k !== m; });
@@ -2810,6 +2834,7 @@
     var total = g.right + g.wrong, pct = total ? Math.round(g.right / total * 100) : 0, extras = '', shareTxt = '', party = false;
     if (!g.players) { addXp(g.xp); if (total >= 3 || g.cfg.timer) markActive(); }
     if (g.cfg.daily) { S.daily[g.cfg.daily] = { score: g.right, results: g.results }; }
+    if (g.cfg.selfWrite) { var swp = Math.round(g.right / g.qs.length * 100); if (swp > (S.swBest || 0)) S.swBest = swp; extras += '<div class="banner pop"><strong>✍️ ' + esc(t('sw_end').replace('{p}', swp)) + '</strong></div>'; }
     if (g.cfg.homework) { var hp = Math.round(g.right / g.qs.length * 100); S.hwDone = S.hwDone || {}; if (hp >= (S.hwDone[g.cfg.homework] || 0)) S.hwDone[g.cfg.homework] = hp; extras += '<div class="banner pop"><strong>📮 ' + esc(t('hw')) + ' ' + esc(g.cfg.homework) + ': ' + hp + ' %</strong><button class="btn" id="hw-res" style="margin-top:8px">' + esc(t('hw_res')) + '</button></div>'; }
     if (g.cfg.schoolExam) { var xp = Math.round(g.right / g.qs.length * 100); S.schoolBest = S.schoolBest || {}; if (xp > (S.schoolBest[g.cfg.schoolExam] || 0)) S.schoolBest[g.cfg.schoolExam] = xp; extras += '<div class="banner pop"><strong>' + esc(t('sch_exam')) + ': ' + xp + ' %</strong> · ' + esc(C.schoolMark(xp)) + '</div>'; }
     if (g.cfg.survival) { S.best = S.best || {}; if (g.right > (S.best.survival || 0)) { S.best.survival = g.right; extras += '<div class="banner pop"><strong>' + esc(t('best')) + ': ' + g.right + '</strong></div>'; } }

@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.11', '2026-11-02', ['Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).', 'Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.']),
   ('0.10', '2026-11-01', ['Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy.']),
   ('0.9', '2026-11-01', ['Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.', 'Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben.']),
   ('0.8', '2026-11-01', ['Trail 2 (A2) ist da: 12 neue Orte von Oxford bis Newcastle – mit going to, simple past, Vergleichen, must, present perfect und will. Passt zu Klasse 6–8.', 'Emmas Postkarten: Nach jedem Ort von Trail 2 kannst du eine neue Karte lesen.']),
@@ -317,6 +318,7 @@ GUIDE = {
     ['Hausaufgabe per Code', 'Code eingeben (z. B. HA7-P3-T5) – alle aus der Klasse bekommen dieselben Fragen.']]},
   {'ico': '🎮', 't': 'Üben & Spiele', 'go': 'practice', 'items': [
     ['Wiederholen', 'Die App merkt sich, welche Wörter du bald vergisst, und fragt sie rechtzeitig.'],
+    ['Selbst schreiben', 'Alle bekannten Wörter ohne Auswahl selbst eintippen – so merkt man sie sich am besten.'],
     ['Zeiten-Werkstatt & unregelmäßige Verben', 'Simple Past, Present Perfect, go – went – gone …'],
     ['Blitz, Memory, Stadt-Land-Fluss, Zungenbrecher', 'Schnelle Spiele für zwischendurch.'],
     ['KI-Gespräch', 'Unterhalte dich auf Englisch – passend zu deiner Klasse.']]},
