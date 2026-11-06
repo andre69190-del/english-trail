@@ -164,10 +164,12 @@
       vc_auto: 'Automatisch (empfohlen)', vc_apple: 'Auf iPhone/iPad/Mac: Wähl nur Stimmen, die unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch geladen sind – sonst bleibt es stumm.',
       par_title: 'Bericht für Eltern', par_d: 'Ein kurzer Überblick zum Teilen, z. B. per Messenger. Nur Zahlen von diesem Gerät, kein Name.', par_share: 'Bericht teilen', par_h: 'English Trail – Wochenbericht (Klasse {g})', par_week: 'Diese Woche: an {d} von {goal} Tagen geübt · {n} neue Wörter · {r} richtig, {w} falsch', par_words: 'Sicher gelernte Wörter insgesamt: {m}', par_mine: 'Eigene Buch-Vokabeln: {n} in {u} Units', par_exam: 'Beste Probe-Klassenarbeit: {p} % (Note {m})', par_noexam: 'Probe-Klassenarbeit: noch nicht geschrieben', par_hard: 'Knifflige Wörter:', sync_u16: 'Ich bin 16 oder älter – oder meine Eltern sind einverstanden.', sync_u16_need: 'Bitte bestätige zuerst: 16 oder älter oder Einverständnis der Eltern.',
       hw: 'Hausaufgabe per Code', hw_d: 'Deine Lehrkraft oder jemand aus der Klasse hat einen Code geschickt? Eingeben – alle bekommen dieselben Fragen.', hw_go: 'Los', hw_bad: 'Diesen Code kenne ich nicht. Er sieht so aus: HA7-P3-T5', hw_make: 'Als Hausaufgaben-Code teilen', hw_made: 'Code:', hw_share: 'Englisch-Hausaufgabe (Klasse {g}): Code {c} in English Trail unter Schule → Hausaufgabe eingeben.', hw_done: 'Erledigt:', hw_res: 'Ergebnis teilen', hw_res_t: 'Hausaufgabe {c} erledigt: {p} %',
-      rv_title: 'Mein Rabe', rv_open: 'Gestalten', rv_feathers: 'Federn', rv_how: 'Federn verdienst du nur durchs Üben: 1 Feder pro 50 XP und 2 für jeden gefundenen Raben.', rv_fair: 'Keine Käufe, kein Geld, keine Werbung. Alles, was du freischaltest, bleibt deins.', rv_need: 'Dir fehlen noch {n} Federn – weiter üben!', rv_got: 'Freigeschaltet!', rv_name_ph: 'Name deines Raben', rv_c_col: 'Gefieder', rv_c_hat: 'Kopf', rv_c_neck: 'Hals', rv_c_eyes: 'Augen', rv_c_extra: 'Dabei', rv_c_bg: 'Hintergrund', rv_col_black: 'Schwarz', rv_col_night: 'Nachtblau', rv_col_grey: 'Grau', rv_col_purple: 'Lila', rv_col_green: 'Grün', rv_col_white: 'Weiß', rv_col_gold: 'Gold', rv_hat_none: 'Nichts', rv_hat_cap: 'Cap', rv_hat_beanie: 'Mütze', rv_hat_crown: 'Krone', rv_hat_wizard: 'Zauberhut', rv_hat_tophat: 'Zylinder', rv_hat_cowboy: 'Cowboyhut', rv_neck_none: 'Nichts', rv_neck_scarf: 'Schal rot', rv_neck_scarfb: 'Schal blau', rv_neck_bow: 'Fliege', rv_neck_medal: 'Medaille', rv_eyes_none: 'Normal', rv_eyes_round: 'Brille', rv_eyes_sun: 'Sonnenbrille', rv_eyes_star: 'Glitzerstern', rv_extra_none: 'Nichts', rv_extra_phones: 'Kopfhörer', rv_extra_ball: 'Fußball', rv_extra_book: 'Buch', rv_extra_guitar: 'Gitarre', rv_extra_pad: 'Controller', rv_bg_sky: 'Himmel', rv_bg_grass: 'Wiese', rv_bg_sunset: 'Abendrot', rv_bg_night: 'Nacht', rv_bg_london: 'London',
+      rv_title: 'Mein Rabe', rv_open: 'Gestalten', rv_feathers: 'Federn', rv_how: 'Federn verdienst du nur durchs Üben: 1 Feder pro 50 XP, 2 für jeden gefundenen Raben und 1 Extra-Feder für je 5 selbst geschriebene Wörter.', rv_wfeather: '🪶 +1 Feder fürs Selbstschreiben!', rv_fair: 'Keine Käufe, kein Geld, keine Werbung. Alles, was du freischaltest, bleibt deins.', rv_need: 'Dir fehlen noch {n} Federn – weiter üben!', rv_got: 'Freigeschaltet!', rv_name_ph: 'Name deines Raben', rv_c_col: 'Gefieder', rv_c_hat: 'Kopf', rv_c_neck: 'Hals', rv_c_eyes: 'Augen', rv_c_extra: 'Dabei', rv_c_bg: 'Hintergrund', rv_col_black: 'Schwarz', rv_col_night: 'Nachtblau', rv_col_grey: 'Grau', rv_col_purple: 'Lila', rv_col_green: 'Grün', rv_col_white: 'Weiß', rv_col_gold: 'Gold', rv_hat_none: 'Nichts', rv_hat_cap: 'Cap', rv_hat_beanie: 'Mütze', rv_hat_crown: 'Krone', rv_hat_wizard: 'Zauberhut', rv_hat_tophat: 'Zylinder', rv_hat_cowboy: 'Cowboyhut', rv_neck_none: 'Nichts', rv_neck_scarf: 'Schal rot', rv_neck_scarfb: 'Schal blau', rv_neck_bow: 'Fliege', rv_neck_medal: 'Medaille', rv_eyes_none: 'Normal', rv_eyes_round: 'Brille', rv_eyes_sun: 'Sonnenbrille', rv_eyes_star: 'Glitzerstern', rv_extra_none: 'Nichts', rv_extra_phones: 'Kopfhörer', rv_extra_ball: 'Fußball', rv_extra_book: 'Buch', rv_extra_guitar: 'Gitarre', rv_extra_pad: 'Controller', rv_bg_sky: 'Himmel', rv_bg_grass: 'Wiese', rv_bg_sunset: 'Abendrot', rv_bg_night: 'Nacht', rv_bg_london: 'London',
       seo_link: 'Englisch Klasse 5–10',
       ph_title: 'Vokabeln per Foto', ph_d: 'Fotografiere die Vokabelseite aus deinem Englischbuch. Die App liest die Wörter – du prüfst sie kurz und übernimmst sie mit deiner Unit.', ph_take: 'Foto aufnehmen oder auswählen', ph_tips: 'Tipps: Buch flach hinlegen, gutes Licht, nur die Vokabelseite, Handy gerade halten. Das Foto bleibt auf deinem Gerät. Beim ersten Mal lädt die App einmalig ca. 8 MB (am besten im WLAN).', ph_load: 'Texterkennung wird geladen …', ph_read: 'Lese die Wörter …', ph_found: '{n} Wörter erkannt – bitte unten prüfen, verbessern und dann übernehmen.', ph_none: 'Ich konnte keine Wörter erkennen. Versuch es mit mehr Licht und das Buch ganz gerade fotografieren.', ph_fail: 'Das hat nicht geklappt. Bitte noch einmal versuchen.', ph_offline: 'Für das erste Foto braucht die App einmal Internet.',
-      sw_title: 'Selbst schreiben', sw_d: 'Alle Wörter, die du schon kennst – ohne Auswahl, nur selbst eintippen', sw_few: 'Lerne erst ein paar Wörter – dann kannst du sie hier selbst schreiben.', sw_first: 'Anfangsbuchstabe', sw_end: 'Selbst geschrieben: {p} % richtig. Schreiben merkt man sich am besten!', wm_title: 'Schreib-Moment!', wm_d: 'Dieses Wort kennst du schon – schreib es diesmal selbst.', wm_set: 'Ab und zu ein bekanntes Wort selbst schreiben (empfohlen)',
+      sw_title: 'Selbst schreiben', sw_d: 'Alle Wörter, die du schon kennst – selbst eintippen. Bringt Extra-Federn für deinen Raben!', sw_few: 'Lerne erst ein paar Wörter – dann kannst du sie hier selbst schreiben.', sw_first: 'Anfangsbuchstabe', sw_end: 'Selbst geschrieben: {p} % richtig. Schreiben merkt man sich am besten!', wm_title: 'Schreib-Moment!', wm_d: 'Dieses Wort kennst du schon – schreib es diesmal selbst.', wm_set: 'Ab und zu ein bekanntes Wort selbst schreiben (empfohlen)',
+      sch_where: 'Schule:', sch_where_chg: 'weitere Bundesländer und Schularten folgen', sch_conf_t: 'Wirklich wechseln?', sch_conf_d: 'Von {a} zu {b}. Danach siehst du die Pakete, Grammatik und Probe-Arbeiten der neuen Auswahl.', sch_conf_keep: 'Keine Sorge: Deine Wörter, Buch-Vokabeln, Ergebnisse und Federn bleiben erhalten. Du kannst jederzeit zurückwechseln.', sch_conf_yes: 'Ja, wechseln', sch_conf_no: 'Abbrechen',
+      chk_title: 'Startcheck', chk_d: 'Wie fit bist du für Klasse {g}? 20 kurze Aufgaben aus allem bis jetzt – danach weißt du, was sich zu wiederholen lohnt. Keine Note.', chk_new: 'Willkommen in Klasse {g}! Mach den kurzen Startcheck – dann zeigt dir die App, was du wiederholen solltest. Dauert ca. 5 Minuten, keine Note.', chk_go: 'Startcheck machen', chk_later: 'Später', chk_weak: 'Das lohnt sich zu wiederholen:', chk_practice: 'üben', chk_all_ok: 'Super – in allen Grammatik-Themen warst du sicher!', chk_again: 'Startcheck wiederholen', chk_res: 'Startcheck: {p} % richtig · {n} Themen zum Wiederholen (siehe Schulbereich)',
       gd_title: 'Was kann English Trail?', gd_kids: 'Für Kinder', gd_adults: 'Für Eltern & Lehrkräfte', gd_open: 'Alles ansehen', gd_try: 'Ausprobieren', gd_sch_d: 'Alle Spiele, Duelle und Hilfen auf einen Blick.', rep_pick: 'Was ist los? Tippe an (Text ist freiwillig):', rep_c1: 'Übersetzung falsch', rep_c2: 'Tippfehler', rep_c3: 'Aussprache klingt komisch', rep_c4: 'Viel zu schwer', rep_c5: 'Etwas funktioniert nicht', rep_oops: 'Ups, da hat etwas nicht geklappt. Unter „Fehler melden“ kannst du es uns sagen.',
       news: 'Was ist neu', news_new: 'Neu in dieser Version', news_all: 'Alle Neuerungen ansehen', news_ver: 'Version',
       boss_locked: 'Die Prüfung öffnet, wenn alle Wörter gefestigt sind ({r} von {n}).',
@@ -298,10 +300,12 @@
       vc_auto: 'Automatic (recommended)', vc_apple: 'On iPhone/iPad/Mac: only pick voices downloaded under Settings → Accessibility → Spoken Content → Voices → Polish – otherwise there is no sound.',
       par_title: 'Report for parents', par_d: 'A short overview to share, e.g. by messenger. Only numbers from this device, no name.', par_share: 'Share report', par_h: 'English Trail – weekly report (year {g})', par_week: 'This week: practised on {d} of {goal} days · {n} new words · {r} right, {w} wrong', par_words: 'Words learned for sure in total: {m}', par_mine: 'Own textbook words: {n} in {u} units', par_exam: 'Best practice test: {p} % (mark {m})', par_noexam: 'Practice test: not taken yet', par_hard: 'Tricky words:', sync_u16: 'I am 16 or older – or my parents agree.', sync_u16_need: 'Please confirm first: 16 or older, or your parents agree.',
       hw: 'Homework by code', hw_d: 'Got a code from your teacher or a classmate? Enter it – everyone gets the same questions.', hw_go: 'Go', hw_bad: 'I do not know this code. It looks like this: HA7-P3-T5', hw_make: 'Share as homework code', hw_made: 'Code:', hw_share: 'English homework (year {g}): enter code {c} in English Trail under School → Homework.', hw_done: 'Done:', hw_res: 'Share result', hw_res_t: 'Homework {c} done: {p} %',
-      rv_title: 'My raven', rv_open: 'Customise', rv_feathers: 'feathers', rv_how: 'You only earn feathers by practising: 1 feather per 50 XP and 2 for every raven you find.', rv_fair: 'No purchases, no money, no ads. Everything you unlock stays yours.', rv_need: 'You need {n} more feathers – keep practising!', rv_got: 'Unlocked!', rv_name_ph: 'Your raven’s name', rv_c_col: 'Feathers', rv_c_hat: 'Head', rv_c_neck: 'Neck', rv_c_eyes: 'Eyes', rv_c_extra: 'Extra', rv_c_bg: 'Background', rv_col_black: 'Black', rv_col_night: 'Night blue', rv_col_grey: 'Grey', rv_col_purple: 'Purple', rv_col_green: 'Green', rv_col_white: 'White', rv_col_gold: 'Gold', rv_hat_none: 'None', rv_hat_cap: 'Cap', rv_hat_beanie: 'Beanie', rv_hat_crown: 'Crown', rv_hat_wizard: 'Wizard hat', rv_hat_tophat: 'Top hat', rv_hat_cowboy: 'Cowboy hat', rv_neck_none: 'None', rv_neck_scarf: 'Red scarf', rv_neck_scarfb: 'Blue scarf', rv_neck_bow: 'Bow tie', rv_neck_medal: 'Medal', rv_eyes_none: 'Normal', rv_eyes_round: 'Glasses', rv_eyes_sun: 'Sunglasses', rv_eyes_star: 'Glitter star', rv_extra_none: 'None', rv_extra_phones: 'Headphones', rv_extra_ball: 'Football', rv_extra_book: 'Book', rv_extra_guitar: 'Guitar', rv_extra_pad: 'Controller', rv_bg_sky: 'Sky', rv_bg_grass: 'Meadow', rv_bg_sunset: 'Sunset', rv_bg_night: 'Night', rv_bg_london: 'London',
+      rv_title: 'My raven', rv_open: 'Customise', rv_feathers: 'feathers', rv_how: 'You only earn feathers by practising: 1 feather per 50 XP, 2 for every raven you find and 1 bonus feather for every 5 words you write yourself.', rv_wfeather: '🪶 +1 feather for writing it yourself!', rv_fair: 'No purchases, no money, no ads. Everything you unlock stays yours.', rv_need: 'You need {n} more feathers – keep practising!', rv_got: 'Unlocked!', rv_name_ph: 'Your raven’s name', rv_c_col: 'Feathers', rv_c_hat: 'Head', rv_c_neck: 'Neck', rv_c_eyes: 'Eyes', rv_c_extra: 'Extra', rv_c_bg: 'Background', rv_col_black: 'Black', rv_col_night: 'Night blue', rv_col_grey: 'Grey', rv_col_purple: 'Purple', rv_col_green: 'Green', rv_col_white: 'White', rv_col_gold: 'Gold', rv_hat_none: 'None', rv_hat_cap: 'Cap', rv_hat_beanie: 'Beanie', rv_hat_crown: 'Crown', rv_hat_wizard: 'Wizard hat', rv_hat_tophat: 'Top hat', rv_hat_cowboy: 'Cowboy hat', rv_neck_none: 'None', rv_neck_scarf: 'Red scarf', rv_neck_scarfb: 'Blue scarf', rv_neck_bow: 'Bow tie', rv_neck_medal: 'Medal', rv_eyes_none: 'Normal', rv_eyes_round: 'Glasses', rv_eyes_sun: 'Sunglasses', rv_eyes_star: 'Glitter star', rv_extra_none: 'None', rv_extra_phones: 'Headphones', rv_extra_ball: 'Football', rv_extra_book: 'Book', rv_extra_guitar: 'Guitar', rv_extra_pad: 'Controller', rv_bg_sky: 'Sky', rv_bg_grass: 'Meadow', rv_bg_sunset: 'Sunset', rv_bg_night: 'Night', rv_bg_london: 'London',
       seo_link: 'English years 5–10',
       ph_title: 'Words from a photo', ph_d: 'Take a photo of the vocabulary page in your English book. The app reads the words – you check them quickly and save them with your unit.', ph_take: 'Take or choose a photo', ph_tips: 'Tips: lay the book flat, good light, only the vocabulary page, hold the phone straight. The photo stays on your device. The first time, the app downloads about 8 MB once (best on Wi-Fi).', ph_load: 'Loading text recognition …', ph_read: 'Reading the words …', ph_found: '{n} words found – please check and correct them below, then save.', ph_none: 'I could not find any words. Try more light and hold the book straight.', ph_fail: 'That did not work. Please try again.', ph_offline: 'The first photo needs an internet connection once.',
       sw_title: 'Write it yourself', sw_d: 'All the words you already know – no choices, just type them', sw_few: 'Learn a few words first – then you can write them here yourself.', sw_first: 'First letter', sw_end: 'Written yourself: {p} % right. Writing helps you remember best!', wm_title: 'Writing moment!', wm_d: 'You already know this word – write it yourself this time.', wm_set: 'Now and then write a known word yourself (recommended)',
+      sch_where: 'School:', sch_where_chg: 'more states and school types will follow', sch_conf_t: 'Really change?', sch_conf_d: 'From {a} to {b}. Afterwards you will see the packs, grammar and practice tests of the new choice.', sch_conf_keep: 'Don’t worry: your words, textbook vocabulary, results and feathers are kept. You can switch back any time.', sch_conf_yes: 'Yes, change', sch_conf_no: 'Cancel',
+      chk_title: 'Start check', chk_d: 'How fit are you for year {g}? 20 short tasks from everything so far – afterwards you know what is worth revising. No mark.', chk_new: 'Welcome to year {g}! Take the short start check – then the app shows you what to revise. Takes about 5 minutes, no mark.', chk_go: 'Take the start check', chk_later: 'Later', chk_weak: 'Worth revising:', chk_practice: 'practise', chk_all_ok: 'Great – you were sure in all grammar topics!', chk_again: 'Repeat start check', chk_res: 'Start check: {p} % right · {n} topics to revise (see school area)',
       gd_title: 'What can English Trail do?', gd_kids: 'For kids', gd_adults: 'For parents & teachers', gd_open: 'See everything', gd_try: 'Try it', gd_sch_d: 'All games, duels and helpers at a glance.', rep_pick: 'What is wrong? Tap one (text is optional):', rep_c1: 'Wrong translation', rep_c2: 'Typo', rep_c3: 'Pronunciation sounds odd', rep_c4: 'Far too hard', rep_c5: 'Something does not work', rep_oops: 'Oops, something went wrong. Use “Report a mistake” to tell us.',
       news: 'What’s new', news_new: 'New in this version', news_all: 'See all updates', news_ver: 'Version',
       boss_locked: 'The test opens once all words are consolidated ({r} of {n}).',
@@ -940,7 +944,7 @@
   };
   function rvState() { var r = S.raven = S.raven || {}; r.on = r.on || { col: 'black', hat: 'none', neck: 'none', eyes: 'none', extra: 'none', bg: 'sky' }; r.own = r.own || []; return r; }
   function rvPart(k, id) { var a = RV_PARTS[k]; for (var i = 0; i < a.length; i++) if (a[i][0] === id) return a[i]; return a[0]; }
-  function rvEarned() { return Math.floor((S.xp || 0) / 50) + 2 * (S.krasnale || []).length; }
+  function rvEarned() { return Math.floor((S.xp || 0) / 50) + 2 * (S.krasnale || []).length + Math.floor((S.wrOk || 0) / 5); }
   function rvSpent() { var r = rvState(), n = 0; r.own.forEach(function (key) { var p = key.split(':'); n += rvPart(p[0], p[1])[2]; }); return n; }
   function rvOwns(k, id) { return rvPart(k, id)[2] === 0 || rvState().own.indexOf(k + ':' + id) >= 0; }
   function ravenSvg(on, size) {
@@ -1269,7 +1273,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.11', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.12', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1501,7 +1505,7 @@
     /* Zweiter Tab/zweites Fenster: dessen Fortschritt übernehmen statt ihn beim nächsten Speichern zu überschreiben */
     window.addEventListener('storage', function (e) {
       if (e.key !== KEY || !e.newValue) return;
-      try { var o = JSON.parse(e.newValue); if (C.validateSave(o)) { S = Object.assign(fresh(), C.mergeSave(S, o)); loadData(); fixUnlock(); if (!G && !view) render(); } } catch (er) {}
+      try { var o = JSON.parse(e.newValue); if (C.validateSave(o)) { S = Object.assign(fresh(), C.mergeSave(S, o)); loadData(); fixUnlock(); var ae = document.activeElement, typing = ae && /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName); if (!G && !view && !LD && tab !== 'live' && !typing) render(); } } catch (er) {}   /* nicht neu zeichnen, während getippt wird oder ein Live-Duell läuft */
     });
     if (RESCUE) { if (RESCUE !== 'lost') saveLocal(); setTimeout(function () { toast(t('rescue_' + RESCUE)); }, 600); }
   }
@@ -1687,7 +1691,7 @@
   function renderMyWords() {
     var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('mywords')) + '</h1>' +
       '<section class="card stack"><label class="fld">' + esc(t('pl')) + '<input type="text" id="mw-pl" autocomplete="off" lang="en"></label>' +
-      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button>' +
+      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label><div class="seg" id="mw-uc" aria-label="' + esc(t('sch_unit')) + '">' + ['Welcome', 'Unit 1', 'Unit 2', 'Unit 3', 'Unit 4', 'Unit 5', 'Unit 6', 'Extra'].map(function (u) { return '<button type="button" class="chip" data-uc="' + u + '" aria-pressed="' + (S.lastUnit === u) + '">' + u + '</button>'; }).join('') + '</div>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button>' +
       '<section class="card stack" id="ph"><h2>📷 ' + esc(t('ph_title')) + '</h2><p class="small">' + esc(t('ph_d')) + '</p>' +
       '<label class="btn primary" style="justify-self:start;cursor:pointer">' + esc(t('ph_take')) + '<input type="file" id="ph-in" accept="image/*" capture="environment" hidden></label>' +
       '<p class="small muted">' + esc(t('ph_tips')) + '</p><p class="small" id="ph-st" role="status"></p></section>' +
@@ -1712,6 +1716,7 @@
       var n = 0; list.forEach(function (p) { if (have[(p[0] + '|' + p[1]).toLowerCase()]) return; S.custom.push(un ? [p[0], p[1], p[1], un] : [p[0], p[1], p[1]]); n++; });
       if (un) S.lastUnit = un; PH.txt = ''; save(); renderMyWords(); toast(t('mw_bulk_ok').replace('{n}', n));
     };
+    document.querySelectorAll('[data-uc]').forEach(function (b) { b.onclick = function () { var ue = document.getElementById('mw-u'); if (ue) ue.value = b.getAttribute('data-uc'); S.lastUnit = b.getAttribute('data-uc'); document.querySelectorAll('[data-uc]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); }; });
     var pin = document.getElementById('ph-in'); if (pin) pin.onchange = function () { if (pin.files && pin.files[0]) photoVocab(pin.files[0]); };
   }
   /* Vokabeln per Foto: Texterkennung (tesseract.js, liegt auf unserem Server) läuft komplett auf dem Gerät – das Foto wird nirgends hochgeladen.
@@ -1971,22 +1976,39 @@
     var sc = S.school || {}, SD = D.school;
     var opt = function (list, cur) { return list.map(function (x) { return '<option value="' + esc(x.id) + '"' + (x.on ? '' : ' disabled') + (cur === x.id ? ' selected' : '') + '>' + esc(x.name) + (x.on ? '' : ' (' + t('sch_soon') + ')') + '</option>'; }).join(''); };
     return '<section class="card stack"><h2>' + esc(t('sch_setup')) + '</h2><p class="small muted">' + esc(t('sch_setup_d')) + '</p>' +
+      '<details class="small"><summary>' + esc(t('sch_where')) + ' <b>Baden-Württemberg · Gymnasium</b> <span class="muted">(' + esc(t('sch_where_chg')) + ')</span></summary><div class="stack" style="margin-top:8px">' +
       '<label class="fld">' + esc(t('sch_state')) + '<select id="sc-st">' + opt(SD.states, sc.state || 'bw') + '</select></label>' +
-      '<label class="fld">' + esc(t('sch_type')) + '<select id="sc-ty">' + opt(SD.types, sc.type || 'gym') + '</select></label>' +
+      '<label class="fld">' + esc(t('sch_type')) + '<select id="sc-ty">' + opt(SD.types, sc.type || 'gym') + '</select></label></div></details>' +
       '<div class="stack"><b>' + esc(t('sch_class')) + '</b><div class="seg" id="sc-g">' + SD.grades.map(function (g) { return segBtn(String(g), String(g), sc.grade === g); }).join('') + '</div></div>' +
       '<label class="fld">' + esc(t('sch_book')) + '<select id="sc-bk"><option value="">' + esc(t('sch_book_none')) + '</option>' + SD.books.map(function (b) { return '<option value="' + esc(b.id) + '"' + (sc.book === b.id ? ' selected' : '') + '>' + esc(b.name) + '</option>'; }).join('') + '</select></label>' +
       '<p class="small muted">' + esc(t('sch_book_d')) + '</p>' +
-      '<button class="btn primary" id="sc-save"' + (sc.grade ? '' : ' disabled') + '>' + esc(t('sch_save')) + '</button></section>';
+      '<button class="btn primary" id="sc-save"' + (sc.grade ? '' : ' disabled') + '>' + esc(t('sch_save')) + '</button>' + (SCH.prev ? '<button class="btn ghost" id="sc-cancel" style="justify-self:start">' + esc(t('sch_conf_no')) + '</button>' : '') + '</section>';
   }
   function renderSchool() {
     var sc = S.school, html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>🎒 ' + esc(t('sch')) + '</h1>';
     if (!sc || !sc.grade || SCH.edit) {
       S.school = S.school || { state: 'bw', type: 'gym', grade: 0, book: '' };
       shell(html + schSetup());
-      document.getElementById('back').onclick = function () { SCH.edit = false; go('practice'); };
       var st = function () { S.school.state = document.getElementById('sc-st').value; S.school.type = document.getElementById('sc-ty').value; S.school.book = document.getElementById('sc-bk').value; };
       bindSeg('sc-g', function (v) { st(); S.school.grade = +v; SCH.edit = true; renderSchool(); });
-      document.getElementById('sc-save').onclick = function () { st(); SCH.edit = false; save(); renderSchool(); };
+      var fin = function () { var first = !SCH.prev; SCH.edit = false; SCH.prev = null; SCH.confirm = false; if (first) SCH.offerCheck = true; save(); renderSchool(); };
+      document.getElementById('sc-save').onclick = function () {
+        st(); var pv = SCH.prev, bkName = function (id) { var b = D.school.books.filter(function (x) { return x.id === id; })[0]; return b ? b.name : t('sch_book_none'); };
+        if (pv && (pv.grade !== S.school.grade || pv.book !== (S.school.book || ''))) {
+          var box = document.getElementById('sc-conf');
+          if (!box) {
+            document.getElementById('sc-save').insertAdjacentHTML('afterend', '<div class="card stack" id="sc-conf" role="alertdialog" style="border-color:var(--amber)"><b>⚠️ ' + esc(t('sch_conf_t')) + '</b>' +
+              '<p class="small">' + esc(t('sch_conf_d').replace('{a}', t('sch_grade').replace('{g}', pv.grade) + ' · ' + bkName(pv.book)).replace('{b}', t('sch_grade').replace('{g}', S.school.grade) + ' · ' + bkName(S.school.book))) + '</p>' +
+              '<p class="small muted">' + esc(t('sch_conf_keep')) + '</p><div class="row"><button class="btn primary" id="sc-conf-yes">' + esc(t('sch_conf_yes')) + '</button><button class="btn" id="sc-conf-no">' + esc(t('sch_conf_no')) + '</button></div></div>');
+            document.getElementById('sc-conf-yes').onclick = fin;
+            document.getElementById('sc-conf-no').onclick = function () { S.school.grade = pv.grade; S.school.book = pv.book; SCH.edit = false; SCH.prev = null; save(); renderSchool(); };
+          }
+          return;
+        }
+        fin();
+      };
+      document.getElementById('back').onclick = function () { var pv = SCH.prev; if (pv) { S.school.grade = pv.grade; S.school.book = pv.book; save(); } SCH.edit = false; SCH.prev = null; go('practice'); };
+      var cx = document.getElementById('sc-cancel'); if (cx) cx.onclick = function () { var pv = SCH.prev; if (pv) { S.school.grade = pv.grade; S.school.book = pv.book; } SCH.edit = false; SCH.prev = null; save(); renderSchool(); };
       return;
     }
     var g = sc.grade, SD = D.school, nm = function (list, id) { var x = list.filter(function (y) { return y.id === id; })[0]; return x ? x.name : ''; };
@@ -1995,7 +2017,7 @@
     html += '<section class="card stack"><span class="eyebrow">' + esc(nm(SD.states, sc.state)) + ' · ' + esc(nm(SD.types, sc.type)) + '</span><div class="big">' + esc(t('sch_grade').replace('{g}', g)) + '</div>' +
       (sc.book ? '<p class="small">' + esc(t('sch_book')) + ': ' + esc(nm(SD.books, sc.book)) + (sc.book !== 'other' ? ' · ' + esc(t('sch_band')) + ' ' + (g - 4) : '') + '</p>' : '') +
       '<button class="btn ghost" id="sc-edit" style="justify-self:start">' + esc(t('sch_change')) + '</button></section>' +
-      ravenCard('school') + schLikesBox() +
+      schCheckBox(g) + ravenCard('school') + schLikesBox() +
       '<section class="card stack"><h2>' + esc(t('sch_words')) + '</h2><p class="small muted">' + esc(t('sch_words_d')) + '</p><div class="list">' + packs.map(function (i) {
         var u = U[i], l = wordsOf(i), m = masteredCount(l);
         return '<button class="li linkish" data-sp="' + i + '" style="width:100%"><span aria-hidden="true">' + esc(u.ico) + '</span><span class="grow" style="text-align:left"><b>' + esc(u.city) + '</b><br><span class="small muted">' + esc(L(u.title)) + '</span></span><span class="small num muted">' + m + '/' + l.length + '</span></button>';
@@ -2020,11 +2042,13 @@
       '<section class="card stack"><h2>❓ ' + esc(t('gd_title')) + '</h2><p class="small">' + esc(t('gd_sch_d')) + '</p><button class="btn" id="sc-guide" style="justify-self:start">' + esc(t('gd_open')) + ' →</button><p class="small muted">' + esc(t('rep_d')) + '</p>' + reportHtml('rep-sch') + '</section>';
     shell(html);
     document.getElementById('sc-guide').onclick = function () { go('guide', 'kids'); };
+    var ck = document.getElementById('sc-check'); if (ck) ck.onclick = function () { SCH.offerCheck = false; startMode('scheck'); };
+    var ckx = document.getElementById('sc-check-x'); if (ckx) ckx.onclick = function () { SCH.offerCheck = false; renderSchool(); };
     bindRavenCard();
     document.getElementById('par-share').onclick = function () { shareOut(parentReport(g)); };
     bindReport('rep-sch', 'school K' + g);
     document.getElementById('back').onclick = function () { go('practice'); };
-    document.getElementById('sc-edit').onclick = function () { SCH.edit = true; renderSchool(); };
+    document.getElementById('sc-edit').onclick = function () { SCH.edit = true; SCH.prev = { grade: sc.grade, book: sc.book || '' }; renderSchool(); };
     bindLikes();
     document.querySelectorAll('[data-sp]').forEach(function (b) { b.onclick = function () { go('city', +b.getAttribute('data-sp')); }; });
     document.querySelectorAll('[data-sg]').forEach(function (b) { b.onclick = function () { SCH.topics = [b.getAttribute('data-sg')]; startMode('sgram'); }; });
@@ -2077,6 +2101,24 @@
     var saved = R; R = C.rng('hw|' + h.code);
     SCH.exam = { g: h.grade, topics: topics, packs: packs, units: [] };
     try { startSchoolExam(h); } finally { R = saved; }
+  }
+  /* Startcheck (Wie fit bin ich für Klasse g?): je 1 Aufgabe aus jedem Grammatikthema bis Klasse g (zuletzt behandelte zuerst) + 4 Wörter der Vorjahre.
+     Kein Bestehen/Durchfallen – das Ergebnis zeigt nur, was sich zu wiederholen lohnt. */
+  function schCheckBox(g) {
+    var r = S.schCheck && S.schCheck[g], T = D.school.topics;
+    if (!r && !SCH.offerCheck) return '<section class="card stack"><h2>🧭 ' + esc(t('chk_title')) + '</h2><p class="small">' + esc(t('chk_d').replace('{g}', g)) + '</p><button class="btn" id="sc-check" style="justify-self:start">' + esc(t('chk_go')) + '</button></section>';
+    if (!r) return '<section class="card stack pop" style="border-color:var(--red)"><h2>🧭 ' + esc(t('chk_title')) + '</h2><p>' + esc(t('chk_new').replace('{g}', g)) + '</p><div class="row"><button class="btn primary" id="sc-check">' + esc(t('chk_go')) + '</button><button class="btn ghost" id="sc-check-x">' + esc(t('chk_later')) + '</button></div></section>';
+    return '<section class="card stack"><h2>🧭 ' + esc(t('chk_title')) + ' <span class="badge num">' + r.pct + '%</span></h2>' +
+      (r.weak.length ? '<p class="small">' + esc(t('chk_weak')) + '</p><div class="list">' + r.weak.slice(0, 6).map(function (k) { return T[k] ? '<button class="li linkish" data-sg="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>' + esc(T[k].t) + '</b><span class="small muted">' + esc(t('chk_practice')) + ' →</span></button>' : ''; }).join('') + '</div>' : '<p class="small">' + esc(t('chk_all_ok')) + '</p>') +
+      '<button class="btn ghost" id="sc-check" style="justify-self:start">' + esc(t('chk_again')) + '</button></section>';
+  }
+  function startSchoolCheck() {
+    var g = (S.school && S.school.grade) || 5, T = D.school.topics;
+    var keys = Object.keys(T).filter(function (k) { return T[k].k <= g && D.cases.some(function (c) { return c.g === k; }); }).sort(function (a, b) { return T[b].k - T[a].k; }).slice(0, 16);
+    var qs = keys.map(function (k) { var c = C.sample(D.cases.filter(function (x) { return x.g === k; }), 1, R)[0], q = qCase(c); q.topic = k; return q; });
+    var wl = []; U.forEach(function (u, i) { if (u.sch && u.sch < g) wl = wl.concat(wordsOf(i)); });
+    if (wl.length) C.sample(wl, 4, R).forEach(function (x, j) { var q = qMC(x, wl, j % 2 ? 'x2pl' : 'pl2x'); q.topic = 'vocab'; qs.push(q); });
+    return runGame({ title: '🧭 ' + t('chk_title'), qs: C.shuffle(qs, R), back: 'school', schCheck: g });
   }
   function startSchoolExam(hw) {
     var X = SCH.exam, gl = D.cases.filter(function (c) { return X.topics.indexOf(c.g) >= 0; }), wl = [], sl = sentencesOf(X.packs);
@@ -2319,6 +2361,7 @@
     if (mode === 'sgram') { var gl = D.cases.filter(function (c) { return SCH.topics.indexOf(c.g) >= 0; }); return runGame({ title: t('sch_gram'), qs: C.shuffle(gl, R).slice(0, Math.min(n, gl.length)).map(qCase), back: 'school' }); }
     if (mode === 'sexam') return startSchoolExam();
     if (mode === 'shw') return startHomework();
+    if (mode === 'scheck') return startSchoolCheck();
     if (mode === 'sunit') { var uw = schUnits()[SCH.unit] || []; if (uw.length < 2) return toast(t('sch_unit_few')); return runGame({ title: SCH.unit, qs: mixedFor(uw, uw.length >= 4 ? uw : uw.concat(pool), Math.min(n, Math.max(uw.length * 2, 4))), back: 'school' }); }
     if (mode === 'conjgo') return runGame({ title: t('conj'), qs: conjQs(n), rerun: function () { startMode('conjgo'); }, back: 'conj' });
     if (mode === 'wr3') { var w3 = S.mistakes.map(byId).filter(Boolean).slice(0, 3); if (!w3.length) return go('home'); return runGame({ title: t('wr_title'), qs: mixedFor(w3, pool.concat(w3), 6) }); }
@@ -2806,6 +2849,10 @@
     if (ok) { g.combo++; g.best = Math.max(g.best, g.combo); g.right++; } else { g.combo = 0; g.wrong++; if (g.cfg.lives) g.lives--; }
     var xp = Math.round(C.xpFor(ok, g.combo, S.hardcore && !diff().strict && q.type === 'type') * factor * diff().xp);
     g.xp += xp; g.results.push(ok);
+    if (ok && q.forceWrite) {   /* Selbst geschrieben: alle 5 richtigen Wörter eine Feder für „Mein Rabe“ (mit Anfangsbuchstaben-Hilfe halb) */
+      var f0 = Math.floor((S.wrOk || 0) / 5); S.wrOk = (S.wrOk || 0) + (q.firstHint ? 0.5 : 1);
+      if (Math.floor(S.wrOk / 5) > f0) setTimeout(function () { toast(t('rv_wfeather')); }, 400);
+    }
     if (g.players) { if (ok) g.pscore[g.pi] += 1; }
     if (q.id && !g.players) grade(q.id, ok);
     if (ok && q.id && g.learned.length < 3) { var x = byId(q.id); if (x) g.learned.push(x.w); }
@@ -2834,6 +2881,11 @@
     var total = g.right + g.wrong, pct = total ? Math.round(g.right / total * 100) : 0, extras = '', shareTxt = '', party = false;
     if (!g.players) { addXp(g.xp); if (total >= 3 || g.cfg.timer) markActive(); }
     if (g.cfg.daily) { S.daily[g.cfg.daily] = { score: g.right, results: g.results }; }
+    if (g.cfg.schCheck) {
+      var wk2 = {}; g.qs.forEach(function (q, i) { if (g.results[i] === false && q.topic && q.topic !== 'vocab') wk2[q.topic] = 1; });
+      var cp = Math.round(g.right / g.qs.length * 100); S.schCheck = S.schCheck || {}; S.schCheck[g.cfg.schCheck] = { pct: cp, d: today(), weak: Object.keys(wk2) };
+      extras += '<div class="banner pop"><strong>🧭 ' + esc(t('chk_res').replace('{p}', cp).replace('{n}', Object.keys(wk2).length)) + '</strong></div>';
+    }
     if (g.cfg.selfWrite) { var swp = Math.round(g.right / g.qs.length * 100); if (swp > (S.swBest || 0)) S.swBest = swp; extras += '<div class="banner pop"><strong>✍️ ' + esc(t('sw_end').replace('{p}', swp)) + '</strong></div>'; }
     if (g.cfg.homework) { var hp = Math.round(g.right / g.qs.length * 100); S.hwDone = S.hwDone || {}; if (hp >= (S.hwDone[g.cfg.homework] || 0)) S.hwDone[g.cfg.homework] = hp; extras += '<div class="banner pop"><strong>📮 ' + esc(t('hw')) + ' ' + esc(g.cfg.homework) + ': ' + hp + ' %</strong><button class="btn" id="hw-res" style="margin-top:8px">' + esc(t('hw_res')) + '</button></div>'; }
     if (g.cfg.schoolExam) { var xp = Math.round(g.right / g.qs.length * 100); S.schoolBest = S.schoolBest || {}; if (xp > (S.schoolBest[g.cfg.schoolExam] || 0)) S.schoolBest[g.cfg.schoolExam] = xp; extras += '<div class="banner pop"><strong>' + esc(t('sch_exam')) + ': ' + xp + ' %</strong> · ' + esc(C.schoolMark(xp)) + '</div>'; }

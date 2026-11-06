@@ -23016,15 +23016,33 @@
  ],
  "news": [
   {
+   "v": "0.12",
+   "date": "2026-11-06",
+   "de": [
+    "Schule einrichten geht schneller: nur noch Klasse und Buch wählen.",
+    "Neu: Startcheck „Wie fit bin ich?“ – 20 kurze Aufgaben, danach zeigt dir die App, was du wiederholen solltest. Keine Note!",
+    "Klasse oder Buch vertan? Unter „Ändern“ wechseln – mit Sicherheitsfrage, deine Wörter und Ergebnisse bleiben erhalten.",
+    "Buch-Vokabeln: Unit jetzt per Knopf wählen (Welcome, Unit 1–6, Extra)."
+   ],
+   "en": [
+    "Schule einrichten geht schneller: nur noch Klasse und Buch wählen.",
+    "Neu: Startcheck „Wie fit bin ich?“ – 20 kurze Aufgaben, danach zeigt dir die App, was du wiederholen solltest. Keine Note!",
+    "Klasse oder Buch vertan? Unter „Ändern“ wechseln – mit Sicherheitsfrage, deine Wörter und Ergebnisse bleiben erhalten.",
+    "Buch-Vokabeln: Unit jetzt per Knopf wählen (Welcome, Unit 1–6, Extra)."
+   ]
+  },
+  {
    "v": "0.11",
    "date": "2026-11-02",
    "de": [
     "Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).",
-    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“."
+    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.",
+    "Selbst schreiben lohnt sich: Für je 5 selbst geschriebene Wörter gibt es eine Extra-Feder für „Mein Rabe“."
    ],
    "en": [
     "Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).",
-    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“."
+    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.",
+    "Selbst schreiben lohnt sich: Für je 5 selbst geschriebene Wörter gibt es eine Extra-Feder für „Mein Rabe“."
    ]
   },
   {
@@ -23459,6 +23477,10 @@
       "Wortschatz-Pakete und Grammatik passend zum Bildungsplan."
      ],
      [
+      "Startcheck",
+      "Wie fit bist du für deine Klasse? Danach weißt du, was du wiederholen solltest."
+     ],
+     [
       "Deine Buch-Vokabeln",
       "Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste."
      ],
@@ -23541,7 +23563,7 @@
     "items": [
      [
       "Mein Rabe",
-      "Gestalte deinen eigenen Raben. Federn bekommst du fürs Üben (1 pro 50 XP, 2 pro gefundenem Raben)."
+      "Gestalte deinen eigenen Raben. Federn bekommst du fürs Üben (1 pro 50 XP, 2 pro gefundenem Raben, 1 Extra-Feder pro 5 selbst geschriebenen Wörtern)."
      ],
      [
       "Raben-Album",

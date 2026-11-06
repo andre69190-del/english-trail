@@ -221,3 +221,4 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Kachel „✍️ Selbst schreiben“ (Üben, Modus `selfwrite`): alle Wörter mit Karteikarte (auch eigene/Foto-Wörter), Fehlerwörter und niedrige Boxen zuerst, nur Eintippen (`q.forceWrite = 1`), Hilfe „Anfangsbuchstabe“, Bestwert `S.swBest`.
 - „Schreib-Momente“ im Antipp-Modus: Wörter mit Box ≥ 2 werden mit 30 % Chance zur Schreibfrage (`q.forceWrite = 2`), max. 2 pro Runde, nie in Duellen/Live/Zeit/Probe-Arbeit. Abschaltbar unter Ich (`S.writeMix`, Standard an).
 - perf-Budget 880 KB. Tests: UI 138 OK.
+- 0.11.1: Extra-Federn fürs Selbstschreiben – `S.wrOk` (+1 je richtig geschriebenem Wort mit `forceWrite`, +0,5 mit Anfangsbuchstaben-Hilfe), `rvEarned` + floor(wrOk/5). Toast bei neuer Feder. UI 139 OK.

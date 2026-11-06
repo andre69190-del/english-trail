@@ -1,1 +1,1 @@
-0.11.1 (02.11.2026) Extra-Federn fuer selbst geschriebene Woerter
+0.12 (06.11.2026) Startcheck, einfachere Schul-Einrichtung, Wechsel mit Bestaetigung

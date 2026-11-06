@@ -243,6 +243,7 @@ with sync_playwright() as p:
     (ok if page.locator('.game #ans').count() and not page.locator('.game .opt').count() and page.locator('#sw-first').count() else bad)('Selbst schreiben: Eingabefeld statt Auswahl, auch im Antipp-Modus')
     qa = page.evaluate("() => window.PSApp.game().qs[0].a"); page.fill('#ans', qa); page.press('#ans', 'Enter'); page.wait_for_timeout(200)
     (ok if page.evaluate("() => window.PSApp.game().right") == 1 else bad)('Selbst schreiben: richtige Antwort zählt')
+    (ok if page.evaluate("() => window.PSApp.state().wrOk") >= 1 else bad)('Selbst schreiben zählt für Extra-Federn')
     page.evaluate("() => { window.PSApp.go('practice'); }")
     page.evaluate("() => { const s = window.PSApp.state(); s.input = s._inp; delete s._inp; }")
 
@@ -398,9 +399,23 @@ with sync_playwright() as p:
     # ---------- English Trail: Schulmodus (BW Gymnasium) ----------
     sx = b.new_context(viewport={'width': 375, 'height': 812}); sp = sx.new_page(); sp.on('pageerror', lambda e: errors.append(str(e)))
     sp.goto(URL); sp.wait_for_selector('#ob-go')
-    sp.click('#ob-why [data-v="school"]'); sp.click('#ob-go'); sp.wait_for_selector('#sc-st')
+    sp.click('#ob-why [data-v="school"]'); sp.click('#ob-go'); sp.wait_for_selector('#sc-st', state='attached')
     (ok if sp.locator('#sc-st option[value="by"][disabled]').count() == 1 else bad)('Schule: andere Bundesländer noch gesperrt (bald)')
     sp.click('#sc-g [data-v="7"]'); sp.select_option('#sc-bk', 'gl25'); sp.click('#sc-save'); sp.wait_for_selector('#sc-exam')
+    (ok if sp.locator('#sc-check').count() and 'Willkommen in Klasse 7' in sp.inner_text('main') else bad)('Nach der Einrichtung: Startcheck wird angeboten')
+    sp.click('#sc-check'); sp.wait_for_selector('.game'); nq = sp.evaluate("() => window.PSApp.game().qs.length")
+    play_through(sp, 300); sp.wait_for_timeout(200)
+    chk = sp.evaluate("() => window.PSApp.state().schCheck && window.PSApp.state().schCheck[7]")
+    (ok if chk and 'pct' in chk and nq >= 15 else bad)('Startcheck: %d Aufgaben, Ergebnis gespeichert (%s)' % (nq, chk and chk.get('pct')))
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#sc-edit')
+    (ok if sp.locator('[data-sg]').count() else bad)('Startcheck: Themen zum Wiederholen verlinkt')
+    # Wechsel mit Warnung und Bestätigung
+    sp.click('#sc-edit'); sp.click('#sc-g [data-v="8"]'); sp.click('#sc-save'); sp.wait_for_selector('#sc-conf')
+    sp.click('#sc-conf-no'); sp.wait_for_timeout(150)
+    (ok if sp.evaluate("() => window.PSApp.state().school.grade") == 7 else bad)('Wechsel abbrechen: Klasse bleibt 7')
+    sp.click('#sc-edit'); sp.click('#sc-g [data-v="8"]'); sp.click('#sc-save'); sp.wait_for_selector('#sc-conf'); sp.click('#sc-conf-yes'); sp.wait_for_timeout(150)
+    (ok if sp.evaluate("() => window.PSApp.state().school.grade") == 8 and sp.evaluate("() => !!window.PSApp.state().schCheck[7]") else bad)('Wechsel bestätigt: Klasse 8, alte Ergebnisse bleiben')
+    sp.click('#sc-edit'); sp.click('#sc-g [data-v="7"]'); sp.click('#sc-save'); sp.click('#sc-conf-yes'); sp.wait_for_selector('#sc-exam')
     txt = sp.inner_text('main')
     (ok if all(x in txt.lower() for x in ('klasse 7', 'gymnasium', 'band 3')) else bad)('Schule: Klasse 7, Gymnasium, Lehrwerk Band 3')
     (ok if sp.locator('[data-sp]').count() == 4 else bad)('Schule: 4 Wortschatz-Pakete für Klasse 7')
@@ -499,7 +514,11 @@ with sync_playwright() as p:
         pg.evaluate("() => window.PSApp.go('live')"); pg.wait_for_selector('#ld-new')
     p1.fill('#ld-name', 'Mia'); p1.click('#ld-new'); p1.wait_for_selector('#ld-copy')
     code = p1.evaluate("() => window.PSApp.live().code")
-    p2.fill('#ld-name', 'Ben'); p2.fill('#ld-code', code); p2.click('#ld-go'); p2.wait_for_selector('#ld-ready'); p1.wait_for_selector('#ld-ready')
+    p2.fill('#ld-name', 'Ben'); p2.fill('#ld-code', code); p2.click('#ld-go')
+    try:
+        p2.wait_for_selector('#ld-ready', timeout=8000); p1.wait_for_selector('#ld-ready', timeout=8000)
+    except Exception:
+        print('DEBUGLIVE', code, [pg.evaluate("() => { const L = window.PSApp.live(); return L && [L.phase, L.err, L.opp && L.opp.name, L.code]; }") for pg in (p1, p2)], p2.inner_text('main')[:300]); raise
     (ok if 'Ben' in p1.inner_text('main') and 'Mia' in p2.inner_text('main') else bad)('Live-Duell: beide sehen sich (Code %s)' % code)
     p1.click('#ld-ready'); p2.click('#ld-ready'); p1.wait_for_selector('[data-lo]', timeout=8000); p2.wait_for_selector('[data-lo]', timeout=8000)
     same = p1.evaluate("() => window.PSApp.live().q.a") == p2.evaluate("() => window.PSApp.live().q.a")
