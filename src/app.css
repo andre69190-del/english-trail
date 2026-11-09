@@ -341,3 +341,13 @@ a.ext { font-weight: 700; color: var(--ink); }
 .par-rep { white-space: pre-wrap; background: var(--surface-2); border-radius: 10px; padding: 10px; margin: 0; font-family: inherit; }
 .q-em { font-size: 2.6rem; line-height: 1; text-align: center; }
 .wm-note { background: var(--amber-soft); border-radius: 10px; padding: 8px 10px; margin: 0 0 8px; }
+
+/* Sichtbare Projektbeschreibung unter der App (für Besucher und Suchmaschinen).
+   Im Spiel und in der installierten App ausgeblendet. */
+.seo-about { max-width: 720px; margin: -72px auto 0; padding: 8px max(16px, env(safe-area-inset-left, 0px)) calc(110px + env(safe-area-inset-bottom, 0px));
+  color: var(--muted); font-size: .9rem; line-height: 1.55; border-top: 1px solid var(--line); }
+.seo-about h2 { font-size: 1.05rem; color: var(--ink); margin: 18px 0 8px; }
+.seo-about p { margin: 0 0 10px; }
+.seo-about a { color: inherit; }
+body.in-play .seo-about { display: none; }
+@media (display-mode: standalone) { .seo-about { display: none; } }

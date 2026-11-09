@@ -566,6 +566,8 @@
   function shell(inner, showNav) {
     /* Spielbildschirm: eine noch offene Einführungs-Tour darf nicht über den Antworten liegen bleiben */
     if (showNav === false) { var tb = document.getElementById('tour'); if (tb) { tb.remove(); document.querySelectorAll('.tour-hl').forEach(function (e) { e.classList.remove('tour-hl'); }); } }
+    /* Projektbeschreibung unter der App: auf Start- und Übersichtsseiten sichtbar, im Spiel ausgeblendet */
+    document.body.classList.toggle('in-play', showNav === false && String(inner).indexOf('<section class="ob">') !== 0);
     var lv = C.levelFromXp(S.xp);
     var html = '<header class="top"><div class="top-in"><button type="button" class="brand" id="brand" title="' + esc(t('to_start')) + '" aria-label="English Trail – ' + esc(t('to_start')) + '">' + blaze('blue') + 'English Trail</button>' +
       '<span class="chip num" title="' + t('level') + '">' + t('level') + ' ' + lv.level + '</span>' +
