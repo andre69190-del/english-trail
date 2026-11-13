@@ -318,3 +318,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Sachsen: if I/II in 5/6; Passiv, indirekte Rede, if III, Gerundium, Partizipien in 7/8.
 - index.html 809 KB (Budget 820) – nächster Ausbau: Schuldaten (plans/books) in die nachgeladene Schuldatei verschieben.
 - Tests: Core 69, UI 199 OK (2×). Offen: Oberschule Sachsen; Berlin/Brandenburg (gemeinsamer Rahmenlehrplan 1–10).
+
+## Release 0.25 (13.11.2026) – Berlin und Brandenburg
+- Gemeinsamer Rahmenlehrplan 1–10 (Teil C Moderne Fremdsprachen), Notiz `content/schule/RECHERCHE_BE_BB.md`. COMBOS be-gs, be-gym, be-iss, bb-gs, bb-gym, bb-obs, bb-ge.
+- Grundschule (5/6) und Gymnasium → Grundzuordnung (wie Gymnasium BW). ISS/Oberschule/Gesamtschule → Plan sek1 mit Niveau/Kurs: be-iss er/gr, bb-obs for/ebr, bb-ge ek/gk (grundlegend → sek1g). **Annahme:** Rahmenlehrplan beschreibt Grammatik nur funktional, Zuordnung daher nach Lehrwerk-Progression.
+- Lehrwerke: Green Line, Access, Camden Town (Gym/GS), Red Line, Lighthouse, Highlight, Camden Market (ISS/Oberschule/Gesamtschule).
+- NEWS ohne Duplikat 'en' (spart ~8 KB). SEO `englisch-berlin-brandenburg.html`.
+- index.html 812 KB (Budget 820). Tests: Core 70, UI 201 OK (2×).

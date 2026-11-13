@@ -196,7 +196,7 @@ if 'notfall' in _alt and not any(th['id'] == 'notfall' for th in D['themes']):
     D['themes'].append({'id': 'notfall', 'ico': '🚨', 't': P('Notfall und Telefon'), 'u': list(_alt['notfall'])})
 D['themes'].append({'id': 'hobby', 'ico': '⭐', 't': P('Interessen: Gaming, Sport, Tiere, Musik …'), 'u': [u['id'] for u in D['units'] if u.get('int')]})
 D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW, Klassen 5–10'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
-D['news'] = [{'v': v, 'date': d, 'de': n, 'en': n} for v, d, n in extras.NEWS_ALL]
+D['news'] = [{'v': v, 'date': d, 'de': n} for v, d, n in extras.NEWS_ALL]   # 13.11.2026: 'en' entfällt (identisch) – spart ~8 KB
 D['audio'] = {}
 D['guide'] = extras.GUIDE
 # 13.11.2026: Abschluss-Training Sek I BW (Kommunikationsprüfung + schriftliche Prüfung)

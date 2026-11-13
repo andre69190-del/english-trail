@@ -646,3 +646,9 @@ test('Sachsen Gymnasium: Plan sn, Codes mit X', () => {
   assert.equal(C.duelParse('FOX-123-1-X7').plan, 'sn');
   DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'sn') >= 5, 'SN fehlt: ' + x.id));
 });
+
+test('Berlin/Brandenburg: Schularten mit Niveau/Kurs', () => {
+  const S = DATA.school; ['be-gs', 'be-gym', 'be-iss', 'bb-gs', 'bb-gym', 'bb-obs', 'bb-ge'].forEach(k => assert.ok(S.combos.includes(k), k));
+  assert.equal(S.nivPlan['be-iss'].gr, 'sek1g'); assert.equal(S.planOf['bb-obs'], 'sek1');
+  ['be-gym', 'be-iss', 'bb-obs', 'bb-ge'].forEach(k => assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k));
+});

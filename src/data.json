@@ -30100,12 +30100,16 @@
  ],
  "news": [
   {
+   "v": "0.25",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Berlin und Brandenburg: Grundschule (Klasse 5/6), Gymnasium, Integrierte Sekundarschule, Oberschule und Gesamtschule – mit Niveau bzw. Kurs."
+   ]
+  },
+  {
    "v": "0.24",
    "date": "2026-11-13",
    "de": [
-    "Jetzt auch für Sachsen: Gymnasium nach dem sächsischen Lehrplan Englisch."
-   ],
-   "en": [
     "Jetzt auch für Sachsen: Gymnasium nach dem sächsischen Lehrplan Englisch."
    ]
   },
@@ -30115,19 +30119,12 @@
    "de": [
     "Jetzt auch für Rheinland-Pfalz: Gymnasium, Realschule plus und Integrierte Gesamtschule (Standard- oder erhöhtes Niveau).",
     "Lehrwerke: Green Line Rheinland-Pfalz, Access, Red Line, Lighthouse, Camden Market."
-   ],
-   "en": [
-    "Jetzt auch für Rheinland-Pfalz: Gymnasium, Realschule plus und Integrierte Gesamtschule (Standard- oder erhöhtes Niveau).",
-    "Lehrwerke: Green Line Rheinland-Pfalz, Access, Red Line, Lighthouse, Camden Market."
    ]
   },
   {
    "v": "0.22",
    "date": "2026-11-13",
    "de": [
-    "NRW, Klasse 9 und 10: Training für die Zentrale Prüfung 10 (ZP10) Englisch – Hörverstehen, Leseverstehen, Wortschatz und Schreiben, mit der Gewichtung wie in der echten Prüfung."
-   ],
-   "en": [
     "NRW, Klasse 9 und 10: Training für die Zentrale Prüfung 10 (ZP10) Englisch – Hörverstehen, Leseverstehen, Wortschatz und Schreiben, mit der Gewichtung wie in der echten Prüfung."
    ]
   },
@@ -30137,10 +30134,6 @@
    "de": [
     "NRW komplett: Jetzt auch Realschule, Gesamtschule, Sekundarschule und Hauptschule – an Gesamt- und Sekundarschule mit Grund- oder Erweiterungskurs.",
     "Lehrwerke: Red Line, Orange Line, Lighthouse, Highlight, Camden Market."
-   ],
-   "en": [
-    "NRW komplett: Jetzt auch Realschule, Gesamtschule, Sekundarschule und Hauptschule – an Gesamt- und Sekundarschule mit Grund- oder Erweiterungskurs.",
-    "Lehrwerke: Red Line, Orange Line, Lighthouse, Highlight, Camden Market."
    ]
   },
   {
@@ -30148,19 +30141,12 @@
    "date": "2026-11-13",
    "de": [
     "Jetzt auch für Hessen: Wähle im Schulbereich Hessen und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem hessischen Lehrplan."
-   ],
-   "en": [
-    "Jetzt auch für Hessen: Wähle im Schulbereich Hessen und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem hessischen Lehrplan."
    ]
   },
   {
    "v": "0.19",
    "date": "2026-11-13",
    "de": [
-    "Jetzt auch für Niedersachsen: Wähle im Schulbereich Niedersachsen und Gymnasium.",
-    "Lehrwerke: English G Access, Green Line und Camden Town."
-   ],
-   "en": [
     "Jetzt auch für Niedersachsen: Wähle im Schulbereich Niedersachsen und Gymnasium.",
     "Lehrwerke: English G Access, Green Line und Camden Town."
    ]
@@ -30171,20 +30157,12 @@
    "de": [
     "Jetzt auch für Bayern: Wähle im Schulbereich Bayern und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem LehrplanPLUS.",
     "Lehrwerke für Bayern: Green Line und English G Access."
-   ],
-   "en": [
-    "Jetzt auch für Bayern: Wähle im Schulbereich Bayern und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem LehrplanPLUS.",
-    "Lehrwerke für Bayern: Green Line und English G Access."
    ]
   },
   {
    "v": "0.17",
    "date": "2026-11-13",
    "de": [
-    "Neu für Klasse 9 und 10 an Realschule, Gemeinschaftsschule und Werkrealschule: Abschluss-Training! Übe die Kommunikationsprüfung – Präsentation mit Stichworten, Timer und Nachfragen, Gespräch in Alltagssituationen und Sprachmittlung – und sieh deine ungefähre Note.",
-    "Schriftliche Prüfung üben: Listening, Reading, Use of Language und Interpreting – dazu Schreibaufgaben mit Checkliste."
-   ],
-   "en": [
     "Neu für Klasse 9 und 10 an Realschule, Gemeinschaftsschule und Werkrealschule: Abschluss-Training! Übe die Kommunikationsprüfung – Präsentation mit Stichworten, Timer und Nachfragen, Gespräch in Alltagssituationen und Sprachmittlung – und sieh deine ungefähre Note.",
     "Schriftliche Prüfung üben: Listening, Reading, Use of Language und Interpreting – dazu Schreibaufgaben mit Checkliste."
    ]
@@ -30196,11 +30174,6 @@
     "Gemeinschaftsschule und Realschule: Wähle dein Niveau – G, M oder E. Wörter und Grammatik kommen dann im passenden Tempo.",
     "Neu: Werkrealschule / Hauptschule in Baden-Württemberg.",
     "Gymnasium Klasse 5/6: an den neuen G9-Bildungsplan angepasst."
-   ],
-   "en": [
-    "Gemeinschaftsschule und Realschule: Wähle dein Niveau – G, M oder E. Wörter und Grammatik kommen dann im passenden Tempo.",
-    "Neu: Werkrealschule / Hauptschule in Baden-Württemberg.",
-    "Gymnasium Klasse 5/6: an den neuen G9-Bildungsplan angepasst."
    ]
   },
   {
@@ -30209,22 +30182,12 @@
    "de": [
     "Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.",
     "Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9."
-   ],
-   "en": [
-    "Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.",
-    "Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9."
    ]
   },
   {
    "v": "0.14",
    "date": "2026-11-13",
    "de": [
-    "Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.",
-    "Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).",
-    "Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.",
-    "Vokabeln per Foto noch schneller: Der Kamera-Knopf im Schulbereich öffnet direkt die Kamera, und unter „Meine Wörter“ steht das Foto jetzt ganz oben."
-   ],
-   "en": [
     "Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.",
     "Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).",
     "Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.",
@@ -30244,29 +30207,12 @@
     "Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.",
     "English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.",
     "Vorbereitung für weitere Bundesländer und Schularten."
-   ],
-   "en": [
-    "Trail 3 (B1) ist da: 12 neue Orte vom Giant’s Causeway bis zum Ben Nevis – mit if-Sätzen, Passiv, indirekter Rede, Relativsätzen und mehr. Passt zu Klasse 8–10.",
-    "Schule: Gib an, bei welcher Unit ihr im Buch gerade seid – der Schulbereich startet dann mit dieser Unit. Wähle die Grammatik der Unit aus und übe sie zusammen mit deinen Wörtern.",
-    "Nach Thema: 6 neue Alltags-Pakete – Bahn und Flugzeug, Beim Arzt, Im Restaurant, Im Hotel, Hilfe und Notfälle, Am Telefon.",
-    "Vokabellisten teilen: Deine eingetragene Unit-Liste als Link an die Klasse schicken – die anderen übernehmen sie mit einem Tipp.",
-    "Neu unter Üben: Prüfungstraining Cambridge – A2 Key oder B1 Preliminary mit Hören, Grammatik, Lesen, Schreiben und Sprechen.",
-    "Neues Buch: „The Raven’s Key“ – an jedem Ort von Trail 3 liest du ein Kapitel auf Englisch und löst Fragen dazu.",
-    "Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.",
-    "English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.",
-    "Vorbereitung für weitere Bundesländer und Schularten."
    ]
   },
   {
    "v": "0.12",
    "date": "2026-11-06",
    "de": [
-    "Schule einrichten geht schneller: nur noch Klasse und Buch wählen.",
-    "Neu: Startcheck „Wie fit bin ich?“ – 20 kurze Aufgaben, danach zeigt dir die App, was du wiederholen solltest. Keine Note!",
-    "Klasse oder Buch vertan? Unter „Ändern“ wechseln – mit Sicherheitsfrage, deine Wörter und Ergebnisse bleiben erhalten.",
-    "Buch-Vokabeln: Unit jetzt per Knopf wählen (Welcome, Unit 1–6, Extra)."
-   ],
-   "en": [
     "Schule einrichten geht schneller: nur noch Klasse und Buch wählen.",
     "Neu: Startcheck „Wie fit bin ich?“ – 20 kurze Aufgaben, danach zeigt dir die App, was du wiederholen solltest. Keine Note!",
     "Klasse oder Buch vertan? Unter „Ändern“ wechseln – mit Sicherheitsfrage, deine Wörter und Ergebnisse bleiben erhalten.",
@@ -30280,11 +30226,6 @@
     "Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).",
     "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.",
     "Selbst schreiben lohnt sich: Für je 5 selbst geschriebene Wörter gibt es eine Extra-Feder für „Mein Rabe“."
-   ],
-   "en": [
-    "Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).",
-    "Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.",
-    "Selbst schreiben lohnt sich: Für je 5 selbst geschriebene Wörter gibt es eine Extra-Feder für „Mein Rabe“."
    ]
   },
   {
@@ -30292,19 +30233,12 @@
    "date": "2026-11-01",
    "de": [
     "Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy."
-   ],
-   "en": [
-    "Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy."
    ]
   },
   {
    "v": "0.9",
    "date": "2026-11-01",
    "de": [
-    "Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.",
-    "Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben."
-   ],
-   "en": [
     "Schule: 7 neue Themenpakete – Familie und Freunde, Mein Tag und die Uhrzeit, Wetter und Kleidung, Vorbilder, Britische Geschichte, Australien und Neuseeland, Nachhaltigkeit.",
     "Grammatik: 10 neue Themen nach dem Bildungsplan BW – z. B. Possessivbegleiter, s-Genitiv, Fragewörter, have to/needn’t, Question tags, Verbindungswörter, Zustandsverben."
    ]
@@ -30315,10 +30249,6 @@
    "de": [
     "Trail 2 (A2) ist da: 12 neue Orte von Oxford bis Newcastle – mit going to, simple past, Vergleichen, must, present perfect und will. Passt zu Klasse 6–8.",
     "Emmas Postkarten: Nach jedem Ort von Trail 2 kannst du eine neue Karte lesen."
-   ],
-   "en": [
-    "Trail 2 (A2) ist da: 12 neue Orte von Oxford bis Newcastle – mit going to, simple past, Vergleichen, must, present perfect und will. Passt zu Klasse 6–8.",
-    "Emmas Postkarten: Nach jedem Ort von Trail 2 kannst du eine neue Karte lesen."
    ]
   },
   {
@@ -30327,23 +30257,12 @@
    "de": [
     "Mein Rabe: Gestalte deinen eigenen Raben – Gefieder, Krone, Zauberhut, Schal, Brille, Kopfhörer, Fußball … Federn dafür verdienst du nur durchs Üben. Keine Käufe.",
     "Unter „Album“ und im Schulbereich."
-   ],
-   "en": [
-    "Mein Rabe: Gestalte deinen eigenen Raben – Gefieder, Krone, Zauberhut, Schal, Brille, Kopfhörer, Fußball … Federn dafür verdienst du nur durchs Üben. Keine Käufe.",
-    "Unter „Album“ und im Schulbereich."
    ]
   },
   {
    "v": "0.6",
    "date": "2026-11-01",
    "de": [
-    "Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.",
-    "Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).",
-    "Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.",
-    "Konto anlegen nur mit Bestätigung: 16 oder älter oder Eltern einverstanden.",
-    "English Trail ist jetzt blau, und die Reise startet in London."
-   ],
-   "en": [
     "Hausaufgabe per Code: Lehrkräfte (oder du) wählen Themen aus und teilen einen Code wie HA7-P3-T5 – alle bekommen dieselben 20 Fragen.",
     "Bericht für Eltern: Wochenüberblick mit einem Tipp teilen (nur Zahlen, kein Name).",
     "Klasse 5 und 6: Bilder (Emojis) helfen beim Merken der Wörter.",
@@ -30358,22 +30277,12 @@
     "Live-Duell: Zwei Handys, gleiche Vokabeln in Echtzeit – wer zuerst richtig antwortet, bekommt den Punkt. Ohne Konto, nur mit Spitznamen.",
     "Fehler melden geht jetzt mit einem Tipp: „Übersetzung falsch“, „Tippfehler“, „zu schwer“ … – auch direkt im Schulbereich.",
     "Neu: „Was kann English Trail?“ – alle Funktionen auf einen Blick, für Kinder und für Eltern & Lehrkräfte (unter „Ich“)."
-   ],
-   "en": [
-    "Live-Duell: Zwei Handys, gleiche Vokabeln in Echtzeit – wer zuerst richtig antwortet, bekommt den Punkt. Ohne Konto, nur mit Spitznamen.",
-    "Fehler melden geht jetzt mit einem Tipp: „Übersetzung falsch“, „Tippfehler“, „zu schwer“ … – auch direkt im Schulbereich.",
-    "Neu: „Was kann English Trail?“ – alle Funktionen auf einen Blick, für Kinder und für Eltern & Lehrkräfte (unter „Ich“)."
    ]
   },
   {
    "v": "0.4",
    "date": "2026-11-01",
    "de": [
-    "Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.",
-    "Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.",
-    "Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode."
-   ],
-   "en": [
     "Wochen-Challenge: Die ganze Klassenstufe bekommt eine Woche lang dieselben 20 Fragen – vergleicht euch im Klassenchat.",
     "Duelle mit Schulstoff: „Gegenüber“ (ein Handy, wer zuerst richtig tippt, bekommt den Punkt) und Duell-Code (zwei Handys, gleiche Fragen) jetzt auch mit dem Stoff deiner Klasse oder deinen Buch-Vokabeln.",
     "Neu: 8 Lieblingsthemen zum Auswählen – Gaming, Fußball, Tiere & Pferde, Musik, Social Media, Fantasy, Technik, Mode."
@@ -30386,11 +30295,6 @@
     "Probe-Klassenarbeit wie in BW: jetzt mit Hörverstehen, Leseverstehen und Sprachmittlung.",
     "Neu: Schreibauftrag zu jedem Schulthema – die App prüft Länge, Pflichtwörter, Verbindungswörter und Großschreibung.",
     "Vokabeln aus dem Buch als Liste einfügen (eine pro Zeile) – mit Unit."
-   ],
-   "en": [
-    "Probe-Klassenarbeit wie in BW: jetzt mit Hörverstehen, Leseverstehen und Sprachmittlung.",
-    "Neu: Schreibauftrag zu jedem Schulthema – die App prüft Länge, Pflichtwörter, Verbindungswörter und Großschreibung.",
-    "Vokabeln aus dem Buch als Liste einfügen (eine pro Zeile) – mit Unit."
    ]
   },
   {
@@ -30398,20 +30302,12 @@
    "date": "2026-11-01",
    "de": [
     "Schule: Vokabeln aus deinem Englischbuch mit der Unit eintragen (z. B. „Unit 3“) und jede Unit gezielt üben – auch in der Probe-Klassenarbeit."
-   ],
-   "en": [
-    "Schule: Vokabeln aus deinem Englischbuch mit der Unit eintragen (z. B. „Unit 3“) und jede Unit gezielt üben – auch in der Probe-Klassenarbeit."
    ]
   },
   {
    "v": "0.1",
    "date": "2026-11-01",
    "de": [
-    "English Trail ist da: Englisch lernen Ort für Ort – von London bis Dublin.",
-    "Schulmodus für das Gymnasium in Baden-Württemberg (Klassen 5–10): Wortschatz, Grammatik und Probe-Klassenarbeit passend zum Bildungsplan.",
-    "Zeiten-Werkstatt, unregelmäßige Verben, Simple oder Progressive, Aussprache britisch oder amerikanisch."
-   ],
-   "en": [
     "English Trail ist da: Englisch lernen Ort für Ort – von London bis Dublin.",
     "Schulmodus für das Gymnasium in Baden-Württemberg (Klassen 5–10): Wortschatz, Grammatik und Probe-Klassenarbeit passend zum Bildungsplan.",
     "Zeiten-Werkstatt, unregelmäßige Verben, Simple oder Progressive, Aussprache britisch oder amerikanisch."
@@ -30433,12 +30329,12 @@
    {
     "id": "be",
     "name": "Berlin",
-    "on": 0
+    "on": 1
    },
    {
     "id": "bb",
     "name": "Brandenburg",
-    "on": 0
+    "on": 1
    },
    {
     "id": "hb",
@@ -30546,6 +30442,21 @@
     "id": "igs",
     "name": "Integrierte Gesamtschule",
     "on": 1
+   },
+   {
+    "id": "iss",
+    "name": "Integrierte Sekundarschule",
+    "on": 1
+   },
+   {
+    "id": "obs",
+    "name": "Oberschule",
+    "on": 1
+   },
+   {
+    "id": "gs",
+    "name": "Grundschule (Klasse 5/6)",
+    "on": 1
    }
   ],
   "combos": [
@@ -30564,7 +30475,14 @@
    "rp-gym",
    "rp-rsp",
    "rp-igs",
-   "sn-gym"
+   "sn-gym",
+   "be-gs",
+   "be-gym",
+   "be-iss",
+   "bb-gs",
+   "bb-gym",
+   "bb-obs",
+   "bb-ge"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30580,7 +30498,10 @@
    "rp-gym": "rp",
    "rp-rsp": "sek1",
    "rp-igs": "sek1",
-   "sn-gym": "sn"
+   "sn-gym": "sn",
+   "be-iss": "sek1",
+   "bb-obs": "sek1",
+   "bb-ge": "sek1"
   },
   "grades": [
    5,
@@ -30673,21 +30594,36 @@
     "id": "acni",
     "name": "English G Access (Cornelsen)",
     "k": [
-     "ni-gym"
+     "ni-gym",
+     "be-gs",
+     "be-gym",
+     "bb-gs",
+     "bb-gym",
+     "bb-ge"
     ]
    },
    {
     "id": "glni",
     "name": "Green Line (Klett)",
     "k": [
-     "ni-gym"
+     "ni-gym",
+     "be-gs",
+     "be-gym",
+     "bb-gs",
+     "bb-gym",
+     "bb-ge"
     ]
    },
    {
     "id": "ctni",
     "name": "Camden Town (Westermann)",
     "k": [
-     "ni-gym"
+     "ni-gym",
+     "be-gs",
+     "be-gym",
+     "bb-gs",
+     "bb-gym",
+     "bb-ge"
     ]
    },
    {
@@ -30718,7 +30654,10 @@
      "nw-rs",
      "nw-ge",
      "nw-sek",
-     "nw-hs"
+     "nw-hs",
+     "be-iss",
+     "bb-obs",
+     "bb-ge"
     ]
    },
    {
@@ -30735,7 +30674,10 @@
     "k": [
      "nw-rs",
      "nw-ge",
-     "nw-sek"
+     "nw-sek",
+     "be-iss",
+     "bb-obs",
+     "bb-ge"
     ]
    },
    {
@@ -30744,7 +30686,10 @@
     "k": [
      "nw-hs",
      "nw-ge",
-     "nw-sek"
+     "nw-sek",
+     "be-iss",
+     "bb-obs",
+     "bb-ge"
     ]
    },
    {
@@ -30754,7 +30699,10 @@
      "nw-rs",
      "nw-ge",
      "nw-sek",
-     "nw-hs"
+     "nw-hs",
+     "be-iss",
+     "bb-obs",
+     "bb-ge"
     ]
    },
    {
@@ -31696,6 +31644,18 @@
    "rp-igs": [
     "st",
     "eh"
+   ],
+   "be-iss": [
+    "er",
+    "gr"
+   ],
+   "bb-obs": [
+    "for",
+    "ebr"
+   ],
+   "bb-ge": [
+    "ek",
+    "gk"
    ]
   },
   "nivPlan": {
@@ -31720,6 +31680,15 @@
    },
    "rp-igs": {
     "eh": "rp"
+   },
+   "be-iss": {
+    "gr": "sek1g"
+   },
+   "bb-obs": {
+    "ebr": "sek1g"
+   },
+   "bb-ge": {
+    "gk": "sek1g"
    }
   }
  },
@@ -31746,7 +31715,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Rheinland-Pfalz: alle Schularten · Bayern, Niedersachsen, Hessen, Sachsen: Gymnasium – Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Rheinland-Pfalz, Berlin, Brandenburg: alle Schularten · Bayern, Niedersachsen, Hessen, Sachsen: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [
