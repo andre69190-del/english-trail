@@ -437,7 +437,7 @@ with sync_playwright() as p:
     (ok if not sp.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['bw-gym']); }") else bad)('Ohne Schule: Schulpakete werden nicht geladen')
     sp.click('#ob-why [data-v="school"]'); sp.click('#ob-go'); sp.wait_for_selector('#sc-st', state='attached')
     (ok if sp.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['bw-gym']); }") else bad)('Schule gewählt: Pakete für BW-Gymnasium nachgeladen')
-    (ok if sp.locator('#sc-st option[value="by"][disabled]').count() == 1 else bad)('Schule: andere Bundesländer noch gesperrt (bald)')
+    (ok if sp.locator('#sc-st option[value="be"][disabled]').count() == 1 else bad)('Schule: andere Bundesländer noch gesperrt (bald)')
     sp.click('#sc-g [data-v="7"]'); sp.select_option('#sc-bk', 'gl25'); sp.click('#sc-cu [data-v="Unit 2"]'); sp.click('#sc-save'); sp.wait_for_selector('#sc-exam')
     (ok if 'aktuell im buch' in sp.inner_text('main').lower() and sp.evaluate("() => window.PSApp.state().school.unit") == 'Unit 2' else bad)('Schule: aktuelle Unit im Buch wählbar (Unit 2)')
     (ok if sp.locator('#cu-photo.primary #cu-ph-in[capture]').count() == 1 else bad)('Schule: Kamera-Knopf groß (primär) und öffnet direkt die Kamera, solange die Unit leer ist')
@@ -615,6 +615,13 @@ with sync_playwright() as p:
     (ok if np_.locator('[data-sg="rel"]').count() and np_.locator('[data-sg="if1"]').count() and np_.locator('[data-sg="passive"]').count() == 0 else bad)('NRW Kl. 6: Relativsätze und if I schon dran, Passiv (Kl. 7) noch nicht')
     (ok if '-N6' in txt else bad)('NRW: Wochen-Challenge-Code mit N')
     (ok if np_.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['nw-gym']); }") else bad)('NRW: Schulpakete geladen')
+    # 0.18: Bayern
+    np_.click('#sc-edit'); np_.select_option('#sc-st', 'by'); np_.wait_for_timeout(150)
+    bks = np_.evaluate("() => [...document.querySelectorAll('#sc-bk option')].map(o => o.value)")
+    (ok if 'glby' in bks and 'acnw' not in bks else bad)('Bayern: Lehrwerke Green Line/Access Bayern')
+    np_.click('#sc-g [data-v="7"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    tb = np_.inner_text('main')
+    (ok if 'bayern' in tb.lower() and '-B7' in tb and np_.locator('[data-sg="if3"]').count() and np_.locator('details [data-sg="if1"]').count() == 1 and 'Neu in Klasse 7.' in tb else bad)('Bayern Kl. 7: if III neu, if I nur noch unter Wiederholen, Code mit B')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

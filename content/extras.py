@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.18', '2026-11-13', ['Jetzt auch für Bayern: Wähle im Schulbereich Bayern und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem LehrplanPLUS.', 'Lehrwerke für Bayern: Green Line und English G Access.']),
   ('0.17', '2026-11-13', ['Neu für Klasse 9 und 10 an Realschule, Gemeinschaftsschule und Werkrealschule: Abschluss-Training! Übe die Kommunikationsprüfung – Präsentation mit Stichworten, Timer und Nachfragen, Gespräch in Alltagssituationen und Sprachmittlung – und sieh deine ungefähre Note.', 'Schriftliche Prüfung üben: Listening, Reading, Use of Language und Interpreting – dazu Schreibaufgaben mit Checkliste.']),
   ('0.16', '2026-11-13', ['Gemeinschaftsschule und Realschule: Wähle dein Niveau – G, M oder E. Wörter und Grammatik kommen dann im passenden Tempo.', 'Neu: Werkrealschule / Hauptschule in Baden-Württemberg.', 'Gymnasium Klasse 5/6: an den neuen G9-Bildungsplan angepasst.']),
   ('0.15', '2026-11-13', ['Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.', 'Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9.']),
@@ -309,7 +310,7 @@ GUIDE = {
     ['12 Orte', 'Von London bis Dublin – jeder Ort hat ein Thema, Wörter, Sätze und eine kleine Szene.'],
     ['Brief von Emma', 'Nach jedem Ort kannst du einen Satz mehr lesen. Rabe Rufus bringt ihn dir.'],
     ['Orts-Prüfung', 'Wenn die Wörter sitzen, schaltest du den nächsten Ort frei.']]},
-  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
+  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW und Bayern: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
     ['Stoff deiner Klasse', 'Wortschatz-Pakete und Grammatik passend zum Bildungsplan.'],
     ['Startcheck', 'Wie fit bist du für deine Klasse? Danach weißt du, was du wiederholen solltest.'],
     ['Deine Buch-Vokabeln', 'Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste.'],

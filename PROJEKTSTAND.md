@@ -278,3 +278,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Tab `grad` (`renderGrad`, `GR`, `gradCard` im Schulbereich für Sek-I-Pläne ab Kl. 9): Teil a mit Themenwahl (Pakete Kl. 7 bis eigene Klasse oder eigenes Thema), Stichworte (`S.grad.notes`), 5-Minuten-Timer, Nachfragen per Sprachausgabe, Selbsteinschätzung; Teil b startet eine zufällige Szene; Teil c Sprachmittlung mit Lösungsvorschlag. `S.grad.sc` → Summe + ungefähre Note. Schriftlich: `startGradQuiz` (6 A, 6 B, 8 C, 4 E) + Teil D mit `writingCheck`. Prüfungsname: Realschulabschluss / Werkrealschulabschluss (WRS Kl. 10) / Hauptschulabschluss (WRS Kl. 9).
 - perf-Budget 820 KB (index.html ~792 KB). Tests: Core 63, UI 184 OK (2×).
 - Ideen: Präsentation mit Spracherkennung/Aufnahme, Teil B mit echten Lesetexten (Buchkapitel), KI-Gesprächspartner als Prüfer (et-chat).
+
+## Release 0.18 (13.11.2026) – Bayern, Gymnasium (LehrplanPLUS)
+- Plan **by**: `BY_PACKS`, `BY_TOPICS` (Recherche `content/schule/RECHERCHE_BY.md`, Jgst. 10 noch nicht abrufbar gewesen → nachprüfen). Fenster = eine Jahrgangsstufe (`schLoOf/schHiOf` → g). Codes mit **B**. Lehrwerke Green Line Bayern, English G Access Bayern. SEO `englisch-gymnasium-bayern.html`.
+- Bayern ist früher dran (simple past Kl. 5; present perfect, if I, Relativsätze, tags Kl. 6; if II/III Kl. 7).
+- Tests: Core 64, UI 186 OK (2×).
+- Nächste Länder laut AUTOPLAN: Niedersachsen, Hessen, Rheinland-Pfalz.

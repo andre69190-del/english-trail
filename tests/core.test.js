@@ -607,3 +607,10 @@ test('Kommunikationsprüfung: Note aus Punkten wie Tabelle des KM', () => {
   assert.ok(DATA.grad.med.length >= 10 && DATA.grad.fq.length >= 10 && DATA.grad.phr.length >= 12 && DATA.grad.wr.length >= 4);
   DATA.grad.med.forEach(m => assert.ok(['de-en', 'en-de'].includes(m.r) && m.keys.length >= 2 && m.model && m.src, 'Sprachmittlung unvollständig'));
 });
+
+test('Bayern Gymnasium: Jahrgangsstufen statt Doppeljahrgänge, Codes mit B', () => {
+  assert.equal(C.schLoOf(7, 'by'), 7); assert.equal(C.schHiOf(7, 'by'), 7);
+  assert.equal(DATA.school.plans.by.t.past, 5); assert.equal(DATA.school.plans.by.t.if3, 7);
+  assert.equal(C.duelParse('FOX-123-1-B7').plan, 'by'); assert.equal(C.hwParse('HA7B-P1-T1').plan, 'by');
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'by') >= 5, 'BY-Klasse fehlt: ' + x.id));
+});

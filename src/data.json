@@ -30100,6 +30100,18 @@
  ],
  "news": [
   {
+   "v": "0.18",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Bayern: Wähle im Schulbereich Bayern und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem LehrplanPLUS.",
+    "Lehrwerke für Bayern: Green Line und English G Access."
+   ],
+   "en": [
+    "Jetzt auch für Bayern: Wähle im Schulbereich Bayern und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem LehrplanPLUS.",
+    "Lehrwerke für Bayern: Green Line und English G Access."
+   ]
+  },
+  {
    "v": "0.17",
    "date": "2026-11-13",
    "de": [
@@ -30350,7 +30362,7 @@
    {
     "id": "by",
     "name": "Bayern",
-    "on": 0
+    "on": 1
    },
    {
     "id": "be",
@@ -30450,13 +30462,15 @@
    "bw-rs",
    "bw-gms",
    "nw-gym",
-   "bw-wrs"
+   "bw-wrs",
+   "by-gym"
   ],
   "planOf": {
    "bw-rs": "sek1",
    "bw-gms": "sek1",
    "bw-wrs": "sek1",
-   "nw-gym": "nw"
+   "nw-gym": "nw",
+   "by-gym": "by"
   },
   "grades": [
    5,
@@ -30529,6 +30543,20 @@
     "name": "Camden Town G9 – Nordrhein-Westfalen (Westermann)",
     "k": [
      "nw-gym"
+    ]
+   },
+   {
+    "id": "glby",
+    "name": "Green Line – Ausgabe Bayern (Klett)",
+    "k": [
+     "by-gym"
+    ]
+   },
+   {
+    "id": "acby",
+    "name": "English G Access – Ausgabe Bayern (Cornelsen)",
+    "k": [
+     "by-gym"
     ]
    }
   ],
@@ -30826,6 +30854,78 @@
      "advorder": 10
     }
    },
+   "by": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6fes": 5,
+     "s6sho": 5,
+     "s6wea": 6,
+     "s6lon": 6,
+     "s7spo": 6,
+     "s8tow": 6,
+     "s8usa": 7,
+     "s7med": 7,
+     "s8his": 7,
+     "s7fri": 7,
+     "s10can": 8,
+     "s7rol": 8,
+     "s8env": 8,
+     "s10ide": 8,
+     "s9aus": 9,
+     "s9job": 9,
+     "s10sus": 9,
+     "s9gap": 9,
+     "s10med": 9,
+     "s9vol": 10,
+     "s9tec": 10,
+     "s9ind": 10,
+     "s10gen": 10,
+     "s10saf": 10
+    },
+    "t": {
+     "pres": 5,
+     "prog": 5,
+     "can": 5,
+     "haveto": 5,
+     "quant": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "past": 5,
+     "advorder": 5,
+     "comp": 6,
+     "rel": 6,
+     "link": 6,
+     "perf": 6,
+     "pastprog": 6,
+     "goingto": 6,
+     "will": 6,
+     "if1": 6,
+     "tags": 6,
+     "adv": 7,
+     "perfprog": 7,
+     "perfpast": 7,
+     "pastperf": 7,
+     "if2": 7,
+     "if3": 7,
+     "artic": 8,
+     "gerund": 8,
+     "passive": 8,
+     "passive2": 8,
+     "passive3": 8,
+     "part": 9,
+     "future": 9,
+     "reported": 9,
+     "repsimple": 9,
+     "state": 9,
+     "pastperfprog": 9
+    }
+   },
    "sek1e": {
     "p": {
      "s5sch": 5,
@@ -31002,7 +31102,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW: Gymnasium – Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW und Bayern: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [
