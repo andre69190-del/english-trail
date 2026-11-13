@@ -30100,6 +30100,18 @@
  ],
  "news": [
   {
+   "v": "0.21",
+   "date": "2026-11-13",
+   "de": [
+    "NRW komplett: Jetzt auch Realschule, Gesamtschule, Sekundarschule und Hauptschule – an Gesamt- und Sekundarschule mit Grund- oder Erweiterungskurs.",
+    "Lehrwerke: Red Line, Orange Line, Lighthouse, Highlight, Camden Market."
+   ],
+   "en": [
+    "NRW komplett: Jetzt auch Realschule, Gesamtschule, Sekundarschule und Hauptschule – an Gesamt- und Sekundarschule mit Grund- oder Erweiterungskurs.",
+    "Lehrwerke: Red Line, Orange Line, Lighthouse, Highlight, Camden Market."
+   ]
+  },
+  {
    "v": "0.20",
    "date": "2026-11-13",
    "de": [
@@ -30477,6 +30489,21 @@
     "id": "wrs",
     "name": "Werkrealschule / Hauptschule",
     "on": 1
+   },
+   {
+    "id": "ge",
+    "name": "Gesamtschule",
+    "on": 1
+   },
+   {
+    "id": "sek",
+    "name": "Sekundarschule",
+    "on": 1
+   },
+   {
+    "id": "hs",
+    "name": "Hauptschule",
+    "on": 1
    }
   ],
   "combos": [
@@ -30487,7 +30514,11 @@
    "bw-wrs",
    "by-gym",
    "ni-gym",
-   "he-gym"
+   "he-gym",
+   "nw-rs",
+   "nw-ge",
+   "nw-sek",
+   "nw-hs"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30495,7 +30526,11 @@
    "bw-wrs": "sek1",
    "nw-gym": "nw",
    "by-gym": "by",
-   "he-gym": "he"
+   "he-gym": "he",
+   "nw-rs": "nwrs",
+   "nw-ge": "nwrs",
+   "nw-sek": "nwrs",
+   "nw-hs": "nwg"
   },
   "grades": [
    5,
@@ -30624,6 +30659,52 @@
     "name": "Camden Town (Westermann)",
     "k": [
      "he-gym"
+    ]
+   },
+   {
+    "id": "rlnw",
+    "name": "Red Line (Klett)",
+    "k": [
+     "nw-rs",
+     "nw-ge",
+     "nw-sek",
+     "nw-hs"
+    ]
+   },
+   {
+    "id": "olnw",
+    "name": "Orange Line (Klett)",
+    "k": [
+     "nw-ge",
+     "nw-sek"
+    ]
+   },
+   {
+    "id": "lhnw",
+    "name": "English G Lighthouse (Cornelsen)",
+    "k": [
+     "nw-rs",
+     "nw-ge",
+     "nw-sek"
+    ]
+   },
+   {
+    "id": "hlnw",
+    "name": "English G Highlight (Cornelsen)",
+    "k": [
+     "nw-hs",
+     "nw-ge",
+     "nw-sek"
+    ]
+   },
+   {
+    "id": "cmnw",
+    "name": "Camden Market (Westermann)",
+    "k": [
+     "nw-rs",
+     "nw-ge",
+     "nw-sek",
+     "nw-hs"
     ]
    }
   ],
@@ -30921,6 +31002,135 @@
      "advorder": 10
     }
    },
+   "nwrs": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6fes": 6,
+     "s6sho": 6,
+     "s6lon": 6,
+     "s6wea": 6,
+     "s7fri": 7,
+     "s7spo": 7,
+     "s7med": 7,
+     "s8tow": 7,
+     "s8his": 7,
+     "s8usa": 8,
+     "s8env": 8,
+     "s7rol": 8,
+     "s10can": 8,
+     "s9aus": 9,
+     "s9job": 9,
+     "s10sus": 9,
+     "s9ind": 9,
+     "s10ide": 9,
+     "s9vol": 10,
+     "s9gap": 10,
+     "s10gen": 10,
+     "s10med": 10,
+     "s9tec": 10,
+     "s10saf": 10
+    },
+    "t": {
+     "pres": 5,
+     "can": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "past": 5,
+     "quant": 5,
+     "prog": 6,
+     "perf": 6,
+     "will": 6,
+     "comp": 6,
+     "goingto": 6,
+     "haveto": 6,
+     "if1": 6,
+     "link": 6,
+     "pastprog": 7,
+     "rel": 7,
+     "adv": 7,
+     "perfpast": 7,
+     "tags": 7,
+     "if2": 7,
+     "passive": 8,
+     "pastperf": 8,
+     "perfprog": 8,
+     "repsimple": 8,
+     "reported": 9,
+     "gerund": 9,
+     "if3": 9,
+     "artic": 9,
+     "state": 9,
+     "part": 10,
+     "passive2": 10,
+     "passive3": 10,
+     "future": 10,
+     "advorder": 10
+    }
+   },
+   "nwg": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6fes": 6,
+     "s6sho": 6,
+     "s6lon": 6,
+     "s6wea": 6,
+     "s7fri": 7,
+     "s7spo": 7,
+     "s7med": 7,
+     "s8tow": 7,
+     "s8usa": 8,
+     "s8env": 8,
+     "s7rol": 8,
+     "s10can": 8,
+     "s9aus": 9,
+     "s9job": 9,
+     "s10sus": 9,
+     "s9ind": 9,
+     "s9vol": 10,
+     "s9gap": 10,
+     "s10gen": 10,
+     "s10med": 10,
+     "s9tec": 10,
+     "s10saf": 10
+    },
+    "t": {
+     "pres": 5,
+     "can": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "past": 5,
+     "quant": 5,
+     "prog": 6,
+     "perf": 7,
+     "will": 6,
+     "comp": 6,
+     "goingto": 7,
+     "haveto": 6,
+     "if1": 8,
+     "link": 6,
+     "pastprog": 7,
+     "rel": 8,
+     "adv": 7,
+     "if2": 10,
+     "passive": 10,
+     "pastperf": 10,
+     "repsimple": 9,
+     "reported": 10,
+     "gerund": 10
+    }
+   },
    "he": {
     "p": {
      "s5sch": 5,
@@ -31215,7 +31425,33 @@
    "bw-wrs": [
     "g",
     "m"
+   ],
+   "nw-ge": [
+    "ek",
+    "gk"
+   ],
+   "nw-sek": [
+    "ek",
+    "gk"
    ]
+  },
+  "nivPlan": {
+   "bw-rs": {
+    "g": "sek1g"
+   },
+   "bw-gms": {
+    "g": "sek1g",
+    "e": "sek1e"
+   },
+   "bw-wrs": {
+    "g": "sek1g"
+   },
+   "nw-ge": {
+    "gk": "nwg"
+   },
+   "nw-sek": {
+    "gk": "nwg"
+   }
   }
  },
  "guide": {
@@ -31241,7 +31477,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW: alle Schularten · Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [

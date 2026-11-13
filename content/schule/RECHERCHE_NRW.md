@@ -18,3 +18,9 @@ Quellen:
 - https://www.schulentwicklung.nrw.de/lehrplaene/lehrplan/199/g9_e_klp_%203417_2019_06_23.pdf
 - https://schule.erzbistum-koeln.de/export/sites/schule/irmgardis-gymnasium-koeln/.content/.galleries/Fachbereiche/Englisch/Englisch_Homepageversion_G9_2_9_22.pdf
 - https://www.gymnasiumaspel.de/wp-content/uploads/2026/03/Englisch-G9_-5-10.pdf
+
+## Ergänzung 13.11.2026: Realschule, Gesamtschule, Sekundarschule, Hauptschule
+- Realschule: Kernlehrplan Englisch Realschule NRW (Heft 3303, 2022; Kompetenzerwartungen Ende Erprobungsstufe, Ende 8, Ende 10). Original nicht direkt abrufbar (Weiterleitung) → Progression 5/6 aus dem Klett-Abgleich Red Line 1/2 mit dem KLP: simple past in Red Line 1 (Kl. 5); present progressive, present perfect, will-future, Steigerung in Red Line 2 (Kl. 6); KLP 5/6: Bedingungen ausdrücken, Ereignisse in Gegenwart/Vergangenheit/Zukunft. https://assets.klett.de/assets/4b2866a6/NRW_Abgleich_RedLine_1_2_Realschule_NEU.pdf
+- Gesamtschule (KLP 2004, Ende 6/8/10; G- und E-Kurs): Ende 6 u. a. simple past, present perfect, will, going to; Ende 8 G-Kurs: present/past, Modalverben, Aktiv, Relativsätze, Vergleich, if I – E-Kurs zusätzlich past perfect, Passiv, if I und II; Ende 10 G-Kurs (teils rezeptiv): past perfect, if II, indirekte Rede, Passiv, Gerundium – E-Kurs: weitere Zukunftsformen, Modal-Ersatzformen, indirekte Rede, if II und III. https://lehrplannavigator.nrw.de/system/files/media/document/file/gs_englisch.pdf
+- Sekundarschule: wie Gesamtschule (G-/E-Kurs). Hauptschule (KLP 2022): Grundkurs-Zuordnung.
+- Umsetzung: Plan „nwrs“ (Realschule, E-Kurs; Codes R) und „nwg“ (G-Kurs, Hauptschule; Codes U), `NIV_PLAN` für nw-ge/nw-sek (ek/gk). Abschluss-Training (BW) gilt nicht für NRW (ZP 10 hat anderes Format) – später.

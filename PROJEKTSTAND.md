@@ -294,3 +294,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Plan **he** (`HE_PACKS`, `HE_TOPICS`), Quelle: Lehrplan Englisch Gymnasium G9 Hessen, je Jahrgangsstufe (`content/schule/RECHERCHE_HE.md`). Fenster = eine Jahrgangsstufe, Codes mit **H**. Lehrwerke Access, Green Line, Camden Town. SEO `englisch-gymnasium-hessen.html`.
 - Hessen: going to schon Kl. 5; simple past, present perfect, will, if I Kl. 6; Passiv, if II Kl. 7; USA-Schwerpunkt Kl. 8.
 - Tests: Core 66, UI 189 OK (2×). Nächstes Land: Rheinland-Pfalz.
+
+## Release 0.21 (13.11.2026) – NRW alle Schularten
+- Neue Schularten (TYPES angehängt): ge Gesamtschule, sek Sekundarschule, hs Hauptschule. COMBOS: nw-rs, nw-ge, nw-sek, nw-hs.
+- Pläne **nwrs** (Realschule + E-Kurs; Codes R) und **nwg** (G-Kurs + Hauptschule; Codes U). `NIV_PLAN` (verallgemeinert, ersetzt die feste sek1-Regel): Niveau → Plan je Kombination; NRW-Kurse `ek`/`gk`.
+- Lehrwerke: Red Line, Orange Line, English G Lighthouse, English G Highlight, Camden Market (je nach Schulart). Recherche-Ergänzung in `content/schule/RECHERCHE_NRW.md` (Realschul-KLP 2022 nicht direkt abrufbar; Gesamtschul-KLP 2004).
+- Abschluss-Training bleibt BW-spezifisch (NRW: ZP 10 → später).
+- Tests: Core 67, UI 192 OK (2×).

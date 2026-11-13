@@ -625,3 +625,11 @@ test('Hessen Gymnasium: Plan he, Codes mit H, Jahrgangsstufen', () => {
   assert.equal(C.schLoOf(8, 'he'), 8); assert.equal(C.duelParse('FOX-123-1-H8').plan, 'he'); assert.equal(C.hwParse('HA8H-P1-T1').plan, 'he');
   DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'he') >= 5, 'HE-Klasse fehlt: ' + x.id));
 });
+
+test('NRW alle Schularten: Realschule/E-Kurs (R), G-Kurs/Hauptschule (U)', () => {
+  const S = DATA.school; ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'].forEach(k => assert.ok(S.combos.includes(k), k));
+  assert.equal(S.planOf['nw-hs'], 'nwg'); assert.equal(S.nivPlan['nw-ge'].gk, 'nwg');
+  assert.equal(S.plans.nwrs.t.past, 5); assert.equal(S.plans.nwg.t.perf, 7); assert.equal(S.plans.nwg.t.if3, undefined);
+  assert.equal(C.duelParse('FOX-123-1-R8').plan, 'nwrs'); assert.equal(C.hwParse('HA8U-P1-T1').plan, 'nwg');
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'nwrs') >= 5, 'NWRS fehlt: ' + x.id));
+});

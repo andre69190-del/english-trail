@@ -9,16 +9,19 @@ STATES = [
   ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
-TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 1)]
+TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 1),
+         ('ge', 'Gesamtschule', 1), ('sek', 'Sekundarschule', 1), ('hs', 'Hauptschule', 1)]   # ge/sek/hs: 13.11.2026 für NRW (IDs nur anhängen)
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym']
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs']
 # ni-gym: kein eigener Plan → Grundzuordnung (wie Gymnasium BW). Das KC Englisch Gymnasium NI (2015) beschreibt Grammatik nur funktional
 # (Ende 6/8/10: z. B. Passiv und indirekte Rede bis Ende 8, Arbeitswelt in 9/10) – das passt zur BW-Progression. Siehe content/schule/RECHERCHE_NI.md
-PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he'}
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg'}
 # Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
-NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm']}
+NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk']}
+# Niveau → Lehrplan (überschreibt PLAN_OF). BW: M = sek1, G = sek1g, E = sek1e. NRW Gesamt-/Sekundarschule: E-Kurs = nwrs, G-Kurs = nwg
+NIV_PLAN = {'bw-rs': {'g': 'sek1g'}, 'bw-gms': {'g': 'sek1g', 'e': 'sek1e'}, 'bw-wrs': {'g': 'sek1g'}, 'nw-ge': {'gk': 'nwg'}, 'nw-sek': {'gk': 'nwg'}}
 GRADES = [5, 6, 7, 8, 9, 10]
 # Lehrwerke für BW-Gymnasium (nur Name/Band – Unit-Struktur folgt in Phase 5)
 BOOKS = [
@@ -44,10 +47,16 @@ BOOKS = [
   ('ache', 'English G Access (Cornelsen)'),
   ('glhe', 'Green Line (Klett)'),
   ('cthe', 'Camden Town (Westermann)'),
+  # 13.11.2026: NRW Realschule, Gesamtschule, Sekundarschule, Hauptschule (nur Namen)
+  ('rlnw', 'Red Line (Klett)'),
+  ('olnw', 'Orange Line (Klett)'),
+  ('lhnw', 'English G Lighthouse (Cornelsen)'),
+  ('hlnw', 'English G Highlight (Cornelsen)'),
+  ('cmnw', 'Camden Market (Westermann)'),
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
-              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym']}
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'olnw': ['nw-ge', 'nw-sek'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
 # Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)
@@ -139,6 +148,24 @@ HE_TOPICS = {
   'part': 9, 'state': 9, 'pastperfprog': 9, 'artic': 9, 'passive2': 9,
   'passive3': 10,
 }
+
+# NRW Realschule (KLP 2022, Erprobungsstufe 5/6, Ende 8, Ende 10) – auch E-Kurs an Gesamt-/Sekundarschule (KLP Gesamtschule 2004: E-Kurs Ende 8 u. a.
+# Passiv, past perfect, if I/II; Ende 10 indirekte Rede, if III). Progression orientiert an Red Line (Klett-Abgleich NRW Realschule 5/6):
+# simple past schon Kl. 5, present progressive/perfect und will in Kl. 6. Quelle: content/schule/RECHERCHE_NRW.md
+NWRS_PACKS = dict(NW_PACKS)
+NWRS_TOPICS = {
+  'pres': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5, 'past': 5, 'quant': 5,
+  'prog': 6, 'perf': 6, 'will': 6, 'comp': 6, 'goingto': 6, 'haveto': 6, 'if1': 6, 'link': 6,
+  'pastprog': 7, 'rel': 7, 'adv': 7, 'perfpast': 7, 'tags': 7, 'if2': 7,
+  'passive': 8, 'pastperf': 8, 'perfprog': 8, 'repsimple': 8,
+  'reported': 9, 'gerund': 9, 'if3': 9, 'artic': 9, 'state': 9,
+  'part': 10, 'passive2': 10, 'passive3': 10, 'future': 10, 'advorder': 10, 'pastperfprog': None,
+}
+# NRW Grundkurs (Gesamt-/Sekundarschule) und Hauptschule: Ende 8 present/past, Modalverben, Aktiv, Relativsätze, Vergleich, if I;
+# Ende 10 (z. T. nur rezeptiv) past perfect, if II, indirekte Rede, Passiv, Gerundium (KLP Gesamtschule 2004, G-Kurs).
+NWG_PACKS = dict(NW_PACKS, s8his=None, s10ide=None)
+NWG_TOPICS = dict(NWRS_TOPICS, perf=7, goingto=7, if1=8, rel=8, perfpast=None, tags=None, if2=10, passive=10, pastperf=10, perfprog=None,
+                  repsimple=9, reported=10, gerund=10, if3=None, artic=None, state=None, part=None, passive2=None, passive3=None, future=None, advorder=None)
 
 PACKS = []
 

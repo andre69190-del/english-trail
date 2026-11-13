@@ -608,7 +608,7 @@ with sync_playwright() as p:
     np_.select_option('#sc-st', 'nw'); np_.wait_for_timeout(150)
     tys = np_.evaluate("() => [...document.querySelectorAll('#sc-ty [data-v]')].map(b => b.getAttribute('data-v'))")
     bks = np_.evaluate("() => [...document.querySelectorAll('#sc-bk option')].map(o => o.value)")
-    (ok if tys == ['gym'] and 'acnw' in bks and 'glnw' in bks and 'gl25' not in bks and 'rl14' not in bks else bad)('NRW: nur Gymnasium, NRW-Lehrwerke (%s)' % ','.join(bks))
+    (ok if 'gym' in tys and 'acnw' in bks and 'glnw' in bks and 'gl25' not in bks and 'rl14' not in bks else bad)('NRW Gymnasium: NRW-Lehrwerke (%s)' % ','.join(bks))
     np_.click('#sc-g [data-v="6"]'); np_.select_option('#sc-bk', 'acnw'); np_.click('#sc-save'); np_.wait_for_selector('#sc-exam')
     txt = np_.inner_text('main')
     (ok if 'Nordrhein-Westfalen' in txt.upper().title() or 'NORDRHEIN-WESTFALEN' in txt.upper() else bad)('NRW Klasse 6 eingerichtet')
@@ -632,6 +632,15 @@ with sync_playwright() as p:
     np_.click('#sc-edit'); np_.select_option('#sc-st', 'he'); np_.wait_for_timeout(150); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
     th = np_.inner_text('main')
     (ok if 'hessen' in th.lower() and '-H7' in th and np_.locator('[data-sg="passive"]').count() and 'Neu in Klasse 7.' in th else bad)('Hessen Kl. 7: Passiv neu, Code mit H')
+    # 0.21: NRW Gesamtschule mit Kursen, Hauptschule
+    np_.click('#sc-edit'); np_.select_option('#sc-st', 'nw'); np_.wait_for_timeout(150)
+    tys = np_.evaluate("() => [...document.querySelectorAll('#sc-ty [data-v]')].map(b => b.getAttribute('data-v'))")
+    (ok if set(['gym', 'rs', 'ge', 'sek', 'hs']) <= set(tys) and 'wrs' not in tys and 'gms' not in tys else bad)('NRW: alle Schularten (%s)' % ','.join(tys))
+    np_.click('#sc-ty [data-v="ge"]'); np_.wait_for_selector('#sc-nv [data-v="gk"]'); np_.click('#sc-nv [data-v="gk"]'); np_.click('#sc-g [data-v="8"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    tg = np_.inner_text('main')
+    (ok if 'gesamtschule' in tg.lower() and '-U8' in tg and np_.locator('[data-sg="if1"]').count() and np_.locator('[data-sg="passive"]').count() == 0 else bad)('NRW Gesamtschule G-Kurs Kl. 8: if I ja, Passiv noch nicht, Code mit U')
+    np_.click('#sc-edit'); np_.click('#sc-nv [data-v="ek"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    (ok if '-R8' in np_.inner_text('main') and np_.locator('[data-sg="passive"]').count() else bad)('NRW Gesamtschule E-Kurs Kl. 8: Passiv dran, Code mit R')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

@@ -132,7 +132,8 @@ def main():
     b = ['<h1>Englisch üben für das Gymnasium in Nordrhein-Westfalen (G9, Klasse 5–10)</h1>',
          '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Nordrhein-Westfalen</b>, deine Klasse und dein Lehrwerk '
          '(z. B. <b>English G Access G9</b> von Cornelsen, <b>Green Line G9</b> von Klett oder <b>Camden Town G9</b> von Westermann). '
-         'Wortschatz und Grammatik sind nach dem Kernlehrplan Englisch für das Gymnasium (Erprobungsstufe, erste und zweite Stufe) den Klassen zugeordnet.</p>'
+         'Wortschatz und Grammatik sind nach dem Kernlehrplan Englisch für das Gymnasium (Erprobungsstufe, erste und zweite Stufe) den Klassen zugeordnet. '
+         'Auch für <b>Realschule</b>, <b>Gesamtschule</b>, <b>Sekundarschule</b> (Grund- und Erweiterungskurs) und <b>Hauptschule</b> in NRW gibt es eine eigene Zuordnung (Lehrwerke z. B. Red Line, Orange Line, Lighthouse, Highlight, Camden Market).</p>'
          '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
     for g in range(5, 11):
         pk = [PK[i] for i, kk in school.NW_PACKS.items() if kk == g]
