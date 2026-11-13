@@ -6,22 +6,23 @@
 STATES = [
   ('bw', 'Baden-Württemberg', 1), ('by', 'Bayern', 1), ('be', 'Berlin', 0), ('bb', 'Brandenburg', 0), ('hb', 'Bremen', 0),
   ('hh', 'Hamburg', 0), ('he', 'Hessen', 1), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
-  ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
+  ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 1), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
 TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 1),
-         ('ge', 'Gesamtschule', 1), ('sek', 'Sekundarschule', 1), ('hs', 'Hauptschule', 1)]   # ge/sek/hs: 13.11.2026 für NRW (IDs nur anhängen)
+         ('ge', 'Gesamtschule', 1), ('sek', 'Sekundarschule', 1), ('hs', 'Hauptschule', 1),
+         ('rsp', 'Realschule plus', 1), ('igs', 'Integrierte Gesamtschule', 1)]   # ge/sek/hs: 13.11.2026 für NRW (IDs nur anhängen)
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs']
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'rp-gym', 'rp-rsp', 'rp-igs']
 # ni-gym: kein eigener Plan → Grundzuordnung (wie Gymnasium BW). Das KC Englisch Gymnasium NI (2015) beschreibt Grammatik nur funktional
 # (Ende 6/8/10: z. B. Passiv und indirekte Rede bis Ende 8, Arbeitswelt in 9/10) – das passt zur BW-Progression. Siehe content/schule/RECHERCHE_NI.md
-PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg'}
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg', 'rp-gym': 'rp', 'rp-rsp': 'sek1', 'rp-igs': 'sek1'}
 # Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
-NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk']}
+NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk'], 'rp-rsp': ['st', 'eh'], 'rp-igs': ['st', 'eh']}
 # Niveau → Lehrplan (überschreibt PLAN_OF). BW: M = sek1, G = sek1g, E = sek1e. NRW Gesamt-/Sekundarschule: E-Kurs = nwrs, G-Kurs = nwg
-NIV_PLAN = {'bw-rs': {'g': 'sek1g'}, 'bw-gms': {'g': 'sek1g', 'e': 'sek1e'}, 'bw-wrs': {'g': 'sek1g'}, 'nw-ge': {'gk': 'nwg'}, 'nw-sek': {'gk': 'nwg'}}
+NIV_PLAN = {'bw-rs': {'g': 'sek1g'}, 'bw-gms': {'g': 'sek1g', 'e': 'sek1e'}, 'bw-wrs': {'g': 'sek1g'}, 'nw-ge': {'gk': 'nwg'}, 'nw-sek': {'gk': 'nwg'}, 'rp-rsp': {'eh': 'rp'}, 'rp-igs': {'eh': 'rp'}}
 GRADES = [5, 6, 7, 8, 9, 10]
 # Lehrwerke für BW-Gymnasium (nur Name/Band – Unit-Struktur folgt in Phase 5)
 BOOKS = [
@@ -53,10 +54,16 @@ BOOKS = [
   ('lhnw', 'English G Lighthouse (Cornelsen)'),
   ('hlnw', 'English G Highlight (Cornelsen)'),
   ('cmnw', 'Camden Market (Westermann)'),
+  # 13.11.2026: Rheinland-Pfalz
+  ('glrp', 'Green Line – Ausgabe Rheinland-Pfalz (Klett)'),
+  ('acrp', 'English G Access (Cornelsen)'),
+  ('rlrp', 'Red Line (Klett)'),
+  ('lhrp', 'English G Lighthouse (Cornelsen)'),
+  ('cmrp', 'Camden Market (Westermann)'),
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
-              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'olnw': ['nw-ge', 'nw-sek'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs']}
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'olnw': ['nw-ge', 'nw-sek'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'glrp': ['rp-gym', 'rp-igs'], 'acrp': ['rp-gym', 'rp-igs'], 'rlrp': ['rp-rsp', 'rp-igs'], 'lhrp': ['rp-rsp', 'rp-igs'], 'cmrp': ['rp-rsp', 'rp-igs']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
 # Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)
@@ -166,6 +173,19 @@ NWRS_TOPICS = {
 NWG_PACKS = dict(NW_PACKS, s8his=None, s10ide=None)
 NWG_TOPICS = dict(NWRS_TOPICS, perf=7, goingto=7, if1=8, rel=8, perfpast=None, tags=None, if2=10, passive=10, pastperf=10, perfprog=None,
                   repsimple=9, reported=10, gerund=10, if3=None, artic=None, state=None, part=None, passive2=None, passive3=None, future=None, advorder=None)
+
+# Rheinland-Pfalz (Lehrplan Englisch Sek I, Klassen 5–10, 2022 – für alle Schularten, Standard- und erhöhtes Niveau; Orientierungsstufe 5/6 gemeinsam).
+# Gymnasium (= erhöhtes Niveau): Klassen-Zuordnung nach der Progression von Green Line Rheinland-Pfalz (Klett-Synopse Band 4 = Klasse 8:
+# indirekte Rede, question tags, present perfect progressive, Relativsätze, if-Sätze, past perfect, gerund, Infinitiv, Adverbialsätze).
+# Realschule plus / IGS: Standardniveau ≈ Zuordnung Sek I BW (sek1), erhöhtes Niveau = rp. Quelle: content/schule/RECHERCHE_RP.md
+RP_TOPICS = {
+  'pres': 5, 'prog': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5, 'quant': 5,
+  'past': 6, 'goingto': 6, 'will': 6, 'perf': 6, 'comp': 6, 'haveto': 6,
+  'pastprog': 7, 'perfpast': 7, 'if1': 7, 'adv': 7, 'rel': 7, 'repsimple': 7,
+  'reported': 8, 'tags': 8, 'perfprog': 8, 'if2': 8, 'pastperf': 8, 'gerund': 8, 'link': 8,
+  'passive': 9, 'passive2': 9, 'if3': 9, 'part': 9, 'artic': 9, 'future': 9, 'state': 9,
+  'passive3': 10, 'advorder': 10, 'pastperfprog': 10,
+}
 
 PACKS = []
 
@@ -1282,6 +1302,9 @@ customer | Kunde/Kundin""",
                          opts=[("Of course – here you are. Can I help you with anything else?", 'Natürlich – bitte sehr. Kann ich Ihnen sonst noch helfen?', 1), ('Map is there. Go.', 'Karte ist da. Geh.', 0)],
                          hint='Höflich: „Here you are“ und Hilfe anbieten.')],
              outro='Die Managerin lächelt: „Well done – you are a natural!“ Dein erster Tag läuft super.'))
+
+# Rheinland-Pfalz: Themen-Zuordnung wie Grundzuordnung (Gymnasium)
+RP_PACKS = {k['id']: k['grade'] for k in PACKS}
 
 EMOJI = {
   's5sch': ['🏫', '🧑‍🏫', '📚', '➗', '🏰', '🎨', '🤸', '🗓️', '⏰', '🍎', '📝', '🖍️', '📒', '✏️', '👔', '🧽'],

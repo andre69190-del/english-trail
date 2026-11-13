@@ -650,6 +650,13 @@ with sync_playwright() as p:
     np_.click('#zp-quiz'); np_.wait_for_selector('.game')
     (ok if np_.evaluate("() => window.PSApp.game().qs.length") == 24 and play_through(np_, 300) else bad)('ZP10: 24 Fragen durchspielbar')
     (ok if np_.evaluate("() => window.PSApp.state().grad.zp") is not None else bad)('ZP10: Bestwert gespeichert')
+    # 0.23: Rheinland-Pfalz
+    np_.evaluate("() => window.PSApp.go('school')"); np_.wait_for_selector('#sc-edit'); np_.click('#sc-edit'); np_.select_option('#sc-st', 'rp'); np_.wait_for_timeout(150)
+    tys = np_.evaluate("() => [...document.querySelectorAll('#sc-ty [data-v]')].map(b => b.getAttribute('data-v'))")
+    (ok if tys == ['gym', 'rsp', 'igs'] else bad)('Rheinland-Pfalz: Gymnasium, Realschule plus, IGS (%s)' % ','.join(tys))
+    np_.click('#sc-ty [data-v="rsp"]'); np_.wait_for_selector('#sc-nv [data-v="eh"]'); np_.click('#sc-nv [data-v="eh"]'); np_.click('#sc-g [data-v="8"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    tr = np_.inner_text('main')
+    (ok if 'realschule plus' in tr.lower() and '-P8' in tr and np_.locator('[data-sg="reported"]').count() else bad)('RLP Realschule plus erhöhtes Niveau Kl. 8: indirekte Rede, Code mit P')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

@@ -201,6 +201,24 @@ def main():
     page('englisch-gymnasium-hessen.html', 'Englisch üben Gymnasium Hessen Klasse 5–10 – kostenlose App',
          'Kostenlose Englisch-App für das Gymnasium in Hessen: Wortschatz und Grammatik nach Lehrplan, Klasse 5 bis 10, Vokabeln per Foto (Access, Green Line, Camden Town), Probe-Klassenarbeit. Ohne Werbung.',
          '\n'.join(b)); files.insert(5, 'englisch-gymnasium-hessen.html')
+    # 13.11.2026: Rheinland-Pfalz
+    b = ['<h1>Englisch üben für das Gymnasium, Realschule plus und IGS in Rheinland-Pfalz (Klasse 5–10)</h1>',
+         '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Rheinland-Pfalz</b>, deine Klasse und dein Lehrwerk '
+         '(z. B. <b>Green Line Rheinland-Pfalz</b>, <b>Access</b>, <b>Red Line</b>, <b>Lighthouse</b> oder <b>Camden Market</b>). '
+         'Wortschatz und Grammatik orientieren sich am Lehrplan Englisch Sekundarstufe I (2022). An Realschule plus und IGS wählst du Standard- oder erhöhtes Niveau. Die Übersicht zeigt das Gymnasium.</p>'
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
+    for g in range(5, 11):
+        pk = [PK[i] for i, kk in school.RP_PACKS.items() if kk == g]
+        gr = [grammar.TOPICS[t][0] for t, kk in school.RP_TOPICS.items() if kk == g]
+        b.append(f'<div class="box"><b>Klasse {g}</b><br>' + E(', '.join(k['title'] for k in pk)) +
+                 (f'<br><span class="muted">Grammatik: {E(", ".join(gr))}</span>' if gr else '') + '</div>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Buch-Vokabeln per Foto</b>: Vokabelseite fotografieren, die App liest die Wörter direkt auf dem Handy.</li>'
+             '<li><b>Probe-Klassenarbeit</b> mit Grammatik, Vokabeln, Hör- und Leseverstehen und Sprachmittlung.</li>'
+             '<li><b>Wochen-Challenge, Live-Duell und Hausaufgaben-Code</b> für die ganze Klasse – ohne Anmeldung.</li>'
+             '<li>Keine Käufe, keine Werbung, kein Streak-Druck.</li></ul><a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-rheinland-pfalz.html', 'Englisch üben Rheinland-Pfalz Gymnasium, Realschule plus, IGS Klasse 5–10 – kostenlose App',
+         'Kostenlose Englisch-App für Rheinland-Pfalz: Gymnasium, Realschule plus und IGS, Klasse 5 bis 10, Vokabeln per Foto (Green Line, Access, Red Line), Probe-Klassenarbeit. Ohne Werbung.',
+         '\n'.join(b)); files.insert(6, 'englisch-rheinland-pfalz.html')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
           f'  <url><loc>{SITE}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     sm += [f'  <url><loc>{SITE}{f}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' for f in files]

@@ -241,7 +241,7 @@
   /* English Trail: optional „-K7“ = nur Schulstoff der Klasse 7 (Gymnasium BW) – gleiche Fragen für alle mit diesem Code */
   /* 13.11.2026: „-S7“ = Schulstoff Klasse 7 nach Bildungsplan Sekundarstufe I (Realschule, Gemeinschaftsschule) */
   /* 13.11.2026: Lehrplan im Code: K = Gymnasium BW, S = Sekundarstufe I BW (Realschule/GMS), N = Gymnasium NRW */
-  var PLAN_L = { sek1: 'S', nw: 'N', sek1g: 'G', sek1e: 'E', by: 'B', he: 'H', nwrs: 'R', nwg: 'U' }, L_PLAN = { S: 'sek1', N: 'nw', G: 'sek1g', E: 'sek1e', B: 'by', H: 'he', R: 'nwrs', U: 'nwg' };
+  var PLAN_L = { sek1: 'S', nw: 'N', sek1g: 'G', sek1e: 'E', by: 'B', he: 'H', nwrs: 'R', nwg: 'U', rp: 'P' }, L_PLAN = { S: 'sek1', N: 'nw', G: 'sek1g', E: 'sek1e', B: 'by', H: 'he', R: 'nwrs', U: 'nwg', P: 'rp' };
   function planLetter(plan) { return PLAN_L[plan] || 'K'; }
   function duelNewCode(r, level, grade, plan) {
     r = r || Math.random;
@@ -262,7 +262,7 @@
   function duelWeight(lv) { return DUEL_WEIGHT[String(lv)] || 1; }
   function duelParse(str) {
     var c = String(str || '').toUpperCase().replace(/[\s_.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGEBHRU])(5|6|7|8|9|10))?$/);
+    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGEBHRUP])(5|6|7|8|9|10))?$/);
     if (!m) return null;
     var n = +m[4], lv = m[3] + n, k = m[6] ? +m[6] : 0, pl = k ? (L_PLAN[m[5]] || '') : '';
     return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-' + planLetter(pl) + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k, plan: pl };
@@ -501,7 +501,7 @@
     return 'HA' + grade + (PLAN_L[plan] || '') + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
   }
   function hwParse(code) {
-    var m = /^HA(5|6|7|8|9|10)([SNGEBHRU]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
+    var m = /^HA(5|6|7|8|9|10)([SNGEBHRUP]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
     if (!m) return null;
     var g = +m[1], pl = L_PLAN[m[2]] || '', pm = parseInt(m[3], 36), tm = parseInt(m[4], 36);
     if (!(pm || tm) || isNaN(pm) || isNaN(tm)) return null;

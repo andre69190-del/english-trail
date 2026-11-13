@@ -30100,6 +30100,18 @@
  ],
  "news": [
   {
+   "v": "0.23",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Rheinland-Pfalz: Gymnasium, Realschule plus und Integrierte Gesamtschule (Standard- oder erhöhtes Niveau).",
+    "Lehrwerke: Green Line Rheinland-Pfalz, Access, Red Line, Lighthouse, Camden Market."
+   ],
+   "en": [
+    "Jetzt auch für Rheinland-Pfalz: Gymnasium, Realschule plus und Integrierte Gesamtschule (Standard- oder erhöhtes Niveau).",
+    "Lehrwerke: Green Line Rheinland-Pfalz, Access, Red Line, Lighthouse, Camden Market."
+   ]
+  },
+  {
    "v": "0.22",
    "date": "2026-11-13",
    "de": [
@@ -30451,7 +30463,7 @@
    {
     "id": "rp",
     "name": "Rheinland-Pfalz",
-    "on": 0
+    "on": 1
    },
    {
     "id": "sl",
@@ -30514,6 +30526,16 @@
     "id": "hs",
     "name": "Hauptschule",
     "on": 1
+   },
+   {
+    "id": "rsp",
+    "name": "Realschule plus",
+    "on": 1
+   },
+   {
+    "id": "igs",
+    "name": "Integrierte Gesamtschule",
+    "on": 1
    }
   ],
   "combos": [
@@ -30528,7 +30550,10 @@
    "nw-rs",
    "nw-ge",
    "nw-sek",
-   "nw-hs"
+   "nw-hs",
+   "rp-gym",
+   "rp-rsp",
+   "rp-igs"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30540,7 +30565,10 @@
    "nw-rs": "nwrs",
    "nw-ge": "nwrs",
    "nw-sek": "nwrs",
-   "nw-hs": "nwg"
+   "nw-hs": "nwg",
+   "rp-gym": "rp",
+   "rp-rsp": "sek1",
+   "rp-igs": "sek1"
   },
   "grades": [
    5,
@@ -30715,6 +30743,46 @@
      "nw-ge",
      "nw-sek",
      "nw-hs"
+    ]
+   },
+   {
+    "id": "glrp",
+    "name": "Green Line – Ausgabe Rheinland-Pfalz (Klett)",
+    "k": [
+     "rp-gym",
+     "rp-igs"
+    ]
+   },
+   {
+    "id": "acrp",
+    "name": "English G Access (Cornelsen)",
+    "k": [
+     "rp-gym",
+     "rp-igs"
+    ]
+   },
+   {
+    "id": "rlrp",
+    "name": "Red Line (Klett)",
+    "k": [
+     "rp-rsp",
+     "rp-igs"
+    ]
+   },
+   {
+    "id": "lhrp",
+    "name": "English G Lighthouse (Cornelsen)",
+    "k": [
+     "rp-rsp",
+     "rp-igs"
+    ]
+   },
+   {
+    "id": "cmrp",
+    "name": "Camden Market (Westermann)",
+    "k": [
+     "rp-rsp",
+     "rp-igs"
     ]
    }
   ],
@@ -31141,6 +31209,78 @@
      "gerund": 10
     }
    },
+   "rp": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s6fes": 6,
+     "s6sho": 6,
+     "s6lon": 6,
+     "s7fri": 7,
+     "s7med": 7,
+     "s7spo": 7,
+     "s8tow": 8,
+     "s8env": 8,
+     "s8usa": 8,
+     "s9vol": 9,
+     "s9tec": 9,
+     "s9gap": 9,
+     "s10gen": 10,
+     "s10med": 10,
+     "s10ide": 10,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6wea": 6,
+     "s7rol": 7,
+     "s8his": 8,
+     "s9aus": 9,
+     "s10sus": 10,
+     "s9ind": 9,
+     "s10can": 10,
+     "s10saf": 10,
+     "s9job": 9
+    },
+    "t": {
+     "pres": 5,
+     "prog": 5,
+     "can": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "quant": 5,
+     "past": 6,
+     "goingto": 6,
+     "will": 6,
+     "perf": 6,
+     "comp": 6,
+     "haveto": 6,
+     "pastprog": 7,
+     "perfpast": 7,
+     "if1": 7,
+     "adv": 7,
+     "rel": 7,
+     "repsimple": 7,
+     "reported": 8,
+     "tags": 8,
+     "perfprog": 8,
+     "if2": 8,
+     "pastperf": 8,
+     "gerund": 8,
+     "link": 8,
+     "passive": 9,
+     "passive2": 9,
+     "if3": 9,
+     "part": 9,
+     "artic": 9,
+     "future": 9,
+     "state": 9,
+     "passive3": 10,
+     "advorder": 10,
+     "pastperfprog": 10
+    }
+   },
    "he": {
     "p": {
      "s5sch": 5,
@@ -31443,6 +31583,14 @@
    "nw-sek": [
     "ek",
     "gk"
+   ],
+   "rp-rsp": [
+    "st",
+    "eh"
+   ],
+   "rp-igs": [
+    "st",
+    "eh"
    ]
   },
   "nivPlan": {
@@ -31461,6 +31609,12 @@
    },
    "nw-sek": {
     "gk": "nwg"
+   },
+   "rp-rsp": {
+    "eh": "rp"
+   },
+   "rp-igs": {
+    "eh": "rp"
    }
   }
  },
@@ -31487,7 +31641,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW: alle Schularten · Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Rheinland-Pfalz: alle Schularten · Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [

@@ -633,3 +633,10 @@ test('NRW alle Schularten: Realschule/E-Kurs (R), G-Kurs/Hauptschule (U)', () =>
   assert.equal(C.duelParse('FOX-123-1-R8').plan, 'nwrs'); assert.equal(C.hwParse('HA8U-P1-T1').plan, 'nwg');
   DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'nwrs') >= 5, 'NWRS fehlt: ' + x.id));
 });
+
+test('Rheinland-Pfalz: Gymnasium (P), Realschule plus/IGS mit Standard/erhöhtem Niveau', () => {
+  const S = DATA.school; ['rp-gym', 'rp-rsp', 'rp-igs'].forEach(k => assert.ok(S.combos.includes(k), k));
+  assert.equal(S.planOf['rp-gym'], 'rp'); assert.equal(S.nivPlan['rp-rsp'].eh, 'rp'); assert.equal(S.plans.rp.t.reported, 8);
+  assert.equal(C.duelParse('FOX-123-1-P8').plan, 'rp');
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'rp') >= 5, 'RP fehlt: ' + x.id));
+});

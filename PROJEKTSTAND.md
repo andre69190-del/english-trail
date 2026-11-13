@@ -306,3 +306,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Quelle: QUA-LiS „Zentrale Prüfungen 10 Englisch – Informationen zur Prüfung 2026“ (Teil 1 Hörverstehen, 2 Hörtexte, ca. 20 Min.; Teil 2 Leseverstehen, themengebundener Wortschatz, Schreiben; Gewichtung EESA 20/20/15/45, MSA/GYM 15/15/10/60). Bezugskulturen 2026: Großbritannien und Neuseeland.
 - `gradOn` jetzt auch für NRW (alle Schularten, ab Kl. 9); `gradNrw`, `zpLevel` (nwg → EESA, Gymnasium → GYM, sonst MSA), `startZpQuiz` (8 Hören, 8 Lesen, 8 Wortschatz), Bestwert `S.grad.zp`, Schreiben über vorhandene Schreibaufgaben, Link zum Paket Australien/Neuseeland.
 - Tests: UI 196 OK (2×), Core 67.
+
+## Release 0.23 (13.11.2026) – Rheinland-Pfalz
+- Schularten angehängt: rsp Realschule plus, igs Integrierte Gesamtschule. COMBOS rp-gym, rp-rsp, rp-igs.
+- Plan **rp** (Gymnasium/erhöhtes Niveau; Codes P): `RP_TOPICS` nach Green-Line-RP-Progression (Klett-Synopse Band 4 = Kl. 8), `RP_PACKS` = Grundzuordnung. Realschule plus/IGS: Niveau `st` (Standard → sek1, Codes S) / `eh` (erhöht → rp). **Annahmen**, siehe `content/schule/RECHERCHE_RP.md` – Lehrplan-PDF 2022 nicht abrufbar.
+- Abschluss-Training BW nur noch für Bundesland BW (vorher hätte RP-Standardniveau es wegen Plan sek1 angezeigt); Sek-I-BW-Hinweis ebenso.
+- SEO `englisch-rheinland-pfalz.html`. Tests: Core 68, UI 198 OK (2×).
