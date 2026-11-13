@@ -9,6 +9,7 @@ const ctx = {}; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'src', 'core.js'), 'utf8'), ctx);
 const C = ctx.PSCore;
 const DATA = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'src', 'data.json'), 'utf8'));
+const PLANS_RAW = JSON.parse(JSON.stringify(DATA.school.plans)); Object.keys(DATA.school.plans).forEach(function (k) { C.schPlanObj(DATA, k); });   /* 14.11.2026: Pläne kompakt, hier entpackt */
 
 test('norm: Kleinschreibung, Satzzeichen, Leerraum', () => {
   assert.equal(C.norm('  Dzień   dobry!  '), 'dzień dobry');
@@ -651,4 +652,22 @@ test('Berlin/Brandenburg: Schularten mit Niveau/Kurs', () => {
   const S = DATA.school; ['be-gs', 'be-gym', 'be-iss', 'bb-gs', 'bb-gym', 'bb-obs', 'bb-ge'].forEach(k => assert.ok(S.combos.includes(k), k));
   assert.equal(S.nivPlan['be-iss'].gr, 'sek1g'); assert.equal(S.planOf['bb-obs'], 'sek1');
   ['be-gym', 'be-iss', 'bb-obs', 'bb-ge'].forEach(k => assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k));
+});
+
+test('14.11.2026: Pläne kompakt gespeichert und verlustfrei entpackt', () => {
+  Object.keys(PLANS_RAW).forEach(function (k) { assert.equal(typeof PLANS_RAW[k], 'string'); assert.match(PLANS_RAW[k], /^[05-9a]+\|[05-9a]+$/); });
+  assert.equal(PLANS_RAW.sek1.split('|')[0].length, DATA.school.pOrd.length);
+  assert.equal(PLANS_RAW.sek1.split('|')[1].length, Object.keys(DATA.school.topics).length);
+  assert.equal(DATA.school.plans.sek1.p.s9vol, 10); assert.equal(DATA.school.plans.sek1.t.pres, 5);
+  const d2 = { school: { pOrd: ['a', 'b'], topics: { x: {}, y: {} }, plans: { q: 'a0|7a' } } };
+  assert.equal(JSON.stringify(C.schPlanObj(d2, 'q')), JSON.stringify({ p: { a: 10 }, t: { x: 7, y: 10 } }));
+  assert.equal(C.schPlanObj(d2, 'zz'), null); assert.equal(C.schPlanObj(d2, ''), null);
+});
+
+test('Schleswig-Holstein/Hamburg: Gymnasium, Gemeinschaftsschule, Stadtteilschule', () => {
+  const S = DATA.school; ['sh-gym', 'sh-gms', 'hh-gym', 'hh-sts'].forEach(k => assert.ok(S.combos.includes(k), k));
+  assert.deepEqual([...S.niveaus['sh-gms']], ['msa', 'esa', 'ob']); assert.equal(S.nivPlan['sh-gms'].esa, 'sek1g'); assert.equal(S.nivPlan['sh-gms'].ob, 'sek1e');
+  assert.equal(S.planOf['hh-sts'], 'sek1'); assert.equal(S.nivPlan['hh-sts'].gr, 'sek1g'); assert.equal(S.planOf['hh-gym'], undefined);
+  assert.ok(S.states.find(x => x.id === 'sh').on && S.states.find(x => x.id === 'hh').on);
+  ['sh-gym', 'sh-gms', 'hh-gym', 'hh-sts'].forEach(k => assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k));
 });

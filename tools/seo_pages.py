@@ -255,6 +255,24 @@ def main():
     page('englisch-berlin-brandenburg.html', 'Englisch üben Berlin und Brandenburg Klasse 5–10 – kostenlose App',
          'Kostenlose Englisch-App für Berlin und Brandenburg: Grundschule, Gymnasium, ISS, Oberschule, Gesamtschule, Klasse 5 bis 10, Vokabeln per Foto, Probe-Klassenarbeit. Ohne Werbung.',
          '\n'.join(b)); files.insert(8, 'englisch-berlin-brandenburg.html')
+    # 14.11.2026: Schleswig-Holstein und Hamburg
+    b = ['<h1>Englisch üben in Schleswig-Holstein und Hamburg (Klasse 5–10)</h1>',
+         '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Schleswig-Holstein</b> oder <b>Hamburg</b>, deine Schulart (Gymnasium, Gemeinschaftsschule mit ESA-, MSA- oder Oberstufen-Niveau, Stadtteilschule mit grundlegendem oder erhöhtem Niveau), deine Klasse und dein Lehrwerk '
+         '(z. B. <b>Green Line</b>, <b>Access</b>, <b>Camden Town</b>, <b>Orange Line</b> oder <b>Lighthouse</b>). Grundlage sind die Fachanforderungen Englisch Schleswig-Holstein und die Hamburger Bildungspläne Englisch mit Themen wie '
+         'Persönliche Lebensgestaltung, Schule und Beruf, Teilhabe am gesellschaftlichen Leben sowie Kultur und Geschichte. Die Übersicht zeigt das Gymnasium.</p>'
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
+    for g in range(5, 11):
+        pk = [k for k in school.PACKS if k['grade'] == g]
+        gr = [v[0] for t, v in grammar.TOPICS.items() if v[1] == g]
+        b.append(f'<div class="box"><b>Klasse {g}</b><br>' + E(', '.join(k['title'] for k in pk)) +
+                 (f'<br><span class="muted">Grammatik: {E(", ".join(gr))}</span>' if gr else '') + '</div>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Buch-Vokabeln per Foto</b>: Vokabelseite fotografieren, die App liest die Wörter direkt auf dem Handy.</li>'
+             '<li><b>Probe-Klassenarbeit</b> mit Grammatik, Vokabeln, Hör- und Leseverstehen und Sprachmittlung.</li>'
+             '<li><b>Wochen-Challenge, Live-Duell und Hausaufgaben-Code</b> für die ganze Klasse – ohne Anmeldung.</li>'
+             '<li>Keine Käufe, keine Werbung, kein Streak-Druck.</li></ul><a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-schleswig-holstein-hamburg.html', 'Englisch üben Schleswig-Holstein und Hamburg Klasse 5–10 – kostenlose App',
+         'Kostenlose Englisch-App für Schleswig-Holstein und Hamburg: Gymnasium, Gemeinschaftsschule, Stadtteilschule, Klasse 5 bis 10, Vokabeln per Foto, Probe-Klassenarbeit. Ohne Werbung.',
+         '\n'.join(b)); files.insert(9, 'englisch-schleswig-holstein-hamburg.html')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
           f'  <url><loc>{SITE}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     sm += [f'  <url><loc>{SITE}{f}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' for f in files]

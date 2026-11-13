@@ -5,25 +5,27 @@
 
 STATES = [
   ('bw', 'Baden-Württemberg', 1), ('by', 'Bayern', 1), ('be', 'Berlin', 1), ('bb', 'Brandenburg', 1), ('hb', 'Bremen', 0),
-  ('hh', 'Hamburg', 0), ('he', 'Hessen', 1), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
+  ('hh', 'Hamburg', 1), ('he', 'Hessen', 1), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
   ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 1), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 1),
-  ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
+  ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 1), ('th', 'Thüringen', 0),
 ]
 TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 1),
          ('ge', 'Gesamtschule', 1), ('sek', 'Sekundarschule', 1), ('hs', 'Hauptschule', 1),
          ('rsp', 'Realschule plus', 1), ('igs', 'Integrierte Gesamtschule', 1),
-         ('iss', 'Integrierte Sekundarschule', 1), ('obs', 'Oberschule', 1), ('gs', 'Grundschule (Klasse 5/6)', 1)]   # ge/sek/hs: 13.11.2026 für NRW (IDs nur anhängen)
+         ('iss', 'Integrierte Sekundarschule', 1), ('obs', 'Oberschule', 1), ('gs', 'Grundschule (Klasse 5/6)', 1), ('sts', 'Stadtteilschule', 1)]   # ge/sek/hs: 13.11.2026 für NRW (IDs nur anhängen)
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'rp-gym', 'rp-rsp', 'rp-igs', 'sn-gym', 'be-gs', 'be-gym', 'be-iss', 'bb-gs', 'bb-gym', 'bb-obs', 'bb-ge']
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'rp-gym', 'rp-rsp', 'rp-igs', 'sn-gym', 'be-gs', 'be-gym', 'be-iss', 'bb-gs', 'bb-gym', 'bb-obs', 'bb-ge', 'sh-gym', 'sh-gms', 'hh-gym', 'hh-sts']
+# 14.11.2026: Schleswig-Holstein (Fachanforderungen Englisch 2014, Anforderungsebenen ESA/MSA/Übergang Oberstufe) und Hamburg
+# (Bildungsplan Gymnasium Sek I / Stadtteilschule 5–11, 2022). Gymnasium → Grundzuordnung; siehe content/schule/RECHERCHE_SH_HH.md
 # ni-gym: kein eigener Plan → Grundzuordnung (wie Gymnasium BW). Das KC Englisch Gymnasium NI (2015) beschreibt Grammatik nur funktional
 # (Ende 6/8/10: z. B. Passiv und indirekte Rede bis Ende 8, Arbeitswelt in 9/10) – das passt zur BW-Progression. Siehe content/schule/RECHERCHE_NI.md
-PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg', 'rp-gym': 'rp', 'rp-rsp': 'sek1', 'rp-igs': 'sek1', 'sn-gym': 'sn', 'be-iss': 'sek1', 'bb-obs': 'sek1', 'bb-ge': 'sek1'}
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg', 'rp-gym': 'rp', 'rp-rsp': 'sek1', 'rp-igs': 'sek1', 'sn-gym': 'sn', 'be-iss': 'sek1', 'bb-obs': 'sek1', 'bb-ge': 'sek1', 'sh-gms': 'sek1', 'hh-sts': 'sek1'}
 # Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
-NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk'], 'rp-rsp': ['st', 'eh'], 'rp-igs': ['st', 'eh'], 'be-iss': ['er', 'gr'], 'bb-obs': ['for', 'ebr'], 'bb-ge': ['ek', 'gk']}
+NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk'], 'rp-rsp': ['st', 'eh'], 'rp-igs': ['st', 'eh'], 'be-iss': ['er', 'gr'], 'bb-obs': ['for', 'ebr'], 'bb-ge': ['ek', 'gk'], 'sh-gms': ['msa', 'esa', 'ob'], 'hh-sts': ['eh', 'gr']}
 # Niveau → Lehrplan (überschreibt PLAN_OF). BW: M = sek1, G = sek1g, E = sek1e. NRW Gesamt-/Sekundarschule: E-Kurs = nwrs, G-Kurs = nwg
-NIV_PLAN = {'bw-rs': {'g': 'sek1g'}, 'bw-gms': {'g': 'sek1g', 'e': 'sek1e'}, 'bw-wrs': {'g': 'sek1g'}, 'nw-ge': {'gk': 'nwg'}, 'nw-sek': {'gk': 'nwg'}, 'rp-rsp': {'eh': 'rp'}, 'rp-igs': {'eh': 'rp'}, 'be-iss': {'gr': 'sek1g'}, 'bb-obs': {'ebr': 'sek1g'}, 'bb-ge': {'gk': 'sek1g'}}
+NIV_PLAN = {'bw-rs': {'g': 'sek1g'}, 'bw-gms': {'g': 'sek1g', 'e': 'sek1e'}, 'bw-wrs': {'g': 'sek1g'}, 'nw-ge': {'gk': 'nwg'}, 'nw-sek': {'gk': 'nwg'}, 'rp-rsp': {'eh': 'rp'}, 'rp-igs': {'eh': 'rp'}, 'be-iss': {'gr': 'sek1g'}, 'bb-obs': {'ebr': 'sek1g'}, 'bb-ge': {'gk': 'sek1g'}, 'sh-gms': {'esa': 'sek1g', 'ob': 'sek1e'}, 'hh-sts': {'gr': 'sek1g'}}
 GRADES = [5, 6, 7, 8, 9, 10]
 # Lehrwerke für BW-Gymnasium (nur Name/Band – Unit-Struktur folgt in Phase 5)
 BOOKS = [
@@ -68,7 +70,7 @@ BOOKS = [
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
-              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge'], 'glni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge'], 'ctni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'be-iss', 'bb-obs', 'bb-ge'], 'olnw': ['nw-ge', 'nw-sek'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek', 'be-iss', 'bb-obs', 'bb-ge'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek', 'be-iss', 'bb-obs', 'bb-ge'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'be-iss', 'bb-obs', 'bb-ge'], 'glrp': ['rp-gym', 'rp-igs'], 'acrp': ['rp-gym', 'rp-igs'], 'rlrp': ['rp-rsp', 'rp-igs'], 'lhrp': ['rp-rsp', 'rp-igs'], 'cmrp': ['rp-rsp', 'rp-igs'], 'glsn': ['sn-gym'], 'acsn': ['sn-gym'], 'ctsn': ['sn-gym']}
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge', 'sh-gym', 'hh-gym'], 'glni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge', 'sh-gym', 'hh-gym'], 'ctni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge', 'sh-gym', 'hh-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts'], 'olnw': ['nw-ge', 'nw-sek', 'sh-gms', 'hh-sts'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts'], 'glrp': ['rp-gym', 'rp-igs'], 'acrp': ['rp-gym', 'rp-igs'], 'rlrp': ['rp-rsp', 'rp-igs'], 'lhrp': ['rp-rsp', 'rp-igs'], 'cmrp': ['rp-rsp', 'rp-igs'], 'glsn': ['sn-gym'], 'acsn': ['sn-gym'], 'ctsn': ['sn-gym']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
 # Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)

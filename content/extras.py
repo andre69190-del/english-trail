@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.26', '2026-11-14', ['Jetzt auch für Schleswig-Holstein (Gymnasium, Gemeinschaftsschule mit ESA-, MSA- oder Oberstufen-Niveau) und Hamburg (Gymnasium, Stadtteilschule).']),
   ('0.25', '2026-11-13', ['Jetzt auch für Berlin und Brandenburg: Grundschule (Klasse 5/6), Gymnasium, Integrierte Sekundarschule, Oberschule und Gesamtschule – mit Niveau bzw. Kurs.']),
   ('0.24', '2026-11-13', ['Jetzt auch für Sachsen: Gymnasium nach dem sächsischen Lehrplan Englisch.']),
   ('0.23', '2026-11-13', ['Jetzt auch für Rheinland-Pfalz: Gymnasium, Realschule plus und Integrierte Gesamtschule (Standard- oder erhöhtes Niveau).', 'Lehrwerke: Green Line Rheinland-Pfalz, Access, Red Line, Lighthouse, Camden Market.']),

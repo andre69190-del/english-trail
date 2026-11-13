@@ -325,3 +325,11 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Lehrwerke: Green Line, Access, Camden Town (Gym/GS), Red Line, Lighthouse, Highlight, Camden Market (ISS/Oberschule/Gesamtschule).
 - NEWS ohne Duplikat 'en' (spart ~8 KB). SEO `englisch-berlin-brandenburg.html`.
 - index.html 812 KB (Budget 820). Tests: Core 70, UI 201 OK (2×).
+
+## Release 0.26 (14.11.2026) – Schleswig-Holstein und Hamburg
+- Pläne kompakt: `D.school.plans[x]` ist jetzt ein String "<Pakete>|<Themen>" (ein Zeichen je Eintrag, 0/5–9/a=10, Reihenfolge `D.school.pOrd` bzw. Schlüssel von `D.school.topics`). Entpacken nur über `PSCore.schPlanObj(data, plan)` (zwischengespeichert). Spart ~5 KB; neue Pläne kosten ~70 Byte.
+- Schleswig-Holstein (Fachanforderungen Englisch 2014): sh-gym → Grundzuordnung; sh-gms Gemeinschaftsschule mit Niveau MSA (sek1), ESA (sek1g), Oberstufen-Niveau (sek1e).
+- Hamburg (Bildungspläne 2022, in Kraft 1.8.2024): hh-gym → Grundzuordnung; hh-sts Stadtteilschule (neue Schulart `sts`) erhöht (sek1) / grundlegend (sek1g).
+- **Annahme:** Beide Länder beschreiben Grammatik nur funktional (HH: Mindestanforderungen Ende 6/8/10) → Zuordnung über vorhandene Pläne. Notiz `content/schule/RECHERCHE_SH_HH.md`.
+- SEO `englisch-schleswig-holstein-hamburg.html`. index.html 809 KB (Budget 820). Tests: Core 72, UI 205 OK (2×).
+- Offen: ESA/MSA-Training SH/HH; Thüringen, Sachsen-Anhalt, MV, Saarland, Bremen.

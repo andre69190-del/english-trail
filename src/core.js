@@ -250,10 +250,20 @@
     return w + '-' + n + '-' + lv + (grade >= 5 && grade <= 10 ? '-' + planLetter(plan) + grade : '');
   }
   /* Klasse eines Schulpakets je Bildungsplan (ohne Plan = Gymnasium = u.sch); 0 = in diesem Plan nicht vorgesehen */
+  /* 14.11.2026: Plan entpacken ("<Pakete>|<Themen>", 0 = nicht vorgesehen, a = 10) → {p: {id: Klasse}, t: {thema: Klasse}}; wird zwischengespeichert */
+  function schPlanObj(data, plan) {
+    var S = data && data.school, P = S && S.plans && plan ? S.plans[plan] : null;
+    if (typeof P !== 'string') return P || null;
+    var parts = P.split('|'), o = { p: {}, t: {} }, tk = Object.keys(S.topics || {}), ord = S.pOrd || [];
+    function g(ch) { return ch === 'a' ? 10 : +ch; }
+    ord.forEach(function (id, i) { var v = g(parts[0].charAt(i)); if (v) o.p[id] = v; });
+    tk.forEach(function (k, i) { var v = g((parts[1] || '').charAt(i)); if (v) o.t[k] = v; });
+    S.plans[plan] = o; return o;
+  }
   function schGradeOf(data, u, plan) {
     if (!u || !u.sch) return 0;
     if (!plan) return u.sch;
-    var P = data && data.school && data.school.plans && data.school.plans[plan];
+    var P = schPlanObj(data, plan);
     return P && P.p && P.p[u.id] ? P.p[u.id] : 0;
   }
   /* Erste Klasse der Standardstufe: Gymnasium 5/6, 7/8, 9/10 – Sekundarstufe I 5/6, 7/8/9, 10 */
@@ -321,7 +331,7 @@
       });
       plan.push({ k: 'w', dir: n % 2 ? 'x2pl' : 'pl2x', item: x, opts: shuffle([x].concat(outs), r) });
     });
-    var PT = pc.plan && data.school && data.school.plans && data.school.plans[pc.plan] ? data.school.plans[pc.plan].t : null;   /* Grammatik nach Lehrplan des Codes */
+    var PT = pc.plan && schPlanObj(data, pc.plan) ? schPlanObj(data, pc.plan).t : null;   /* Grammatik nach Lehrplan des Codes */
     var cIdx = idx(data.cases.length).filter(function (ci) { var c = data.cases[ci], ck = PT && c.g ? (PT[c.g] || 99) : (c.k || 5); return !K || ck <= K; });
     shuffle(cIdx, r).slice(0, MIX.c).forEach(function (ci) {
       plan.push({ k: 'c', i: ci, type: cfg.clozeType, opts: shuffle(data.cases[ci].opts, r) });
@@ -724,7 +734,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, kpGrade: kpGrade, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, kpGrade: kpGrade, schPlanObj: schPlanObj, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

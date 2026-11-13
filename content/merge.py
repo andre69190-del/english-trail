@@ -136,6 +136,16 @@ assert set(school.HE_PACKS) == _ids and set(school.HE_TOPICS) == set(grammar.TOP
 assert set(school.BY_PACKS) == _ids and set(school.BY_TOPICS) == set(grammar.TOPICS), 'BY_* unvollständig'
 assert set(school.NW_TOPICS) == set(grammar.TOPICS), ('NW_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.NW_TOPICS))
 
+# 14.11.2026: Pläne kompakt – je Plan ein String "<Pakete>|<Themen>", ein Zeichen je Eintrag (0 = nicht vorgesehen, 5–9, a = 10),
+# Reihenfolge D.school.pOrd bzw. Schlüssel von D.school.topics. Entpackt in PSCore.schPlanObj.
+def _pc(v):
+    assert v in (0, 5, 6, 7, 8, 9, 10), v
+    return 'a' if v == 10 else str(v)
+_pord = [k['id'] for k in school.PACKS]
+D['school']['pOrd'] = _pord
+D['school']['plans'] = {n: ''.join(_pc(P['p'].get(i, 0)) for i in _pord) + '|' + ''.join(_pc(P['t'].get(g, 0)) for g in D['school']['topics'])
+                        for n, P in D['school']['plans'].items()}
+
 # Schule: Interessen-Pakete (frei wählbar) – Einheiten mit "pack": 1 und "int": 1
 D['units'] = [u for u in D['units'] if not u.get('int')]
 for k in interests.PACKS:
