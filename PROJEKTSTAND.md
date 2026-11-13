@@ -312,3 +312,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Plan **rp** (Gymnasium/erhöhtes Niveau; Codes P): `RP_TOPICS` nach Green-Line-RP-Progression (Klett-Synopse Band 4 = Kl. 8), `RP_PACKS` = Grundzuordnung. Realschule plus/IGS: Niveau `st` (Standard → sek1, Codes S) / `eh` (erhöht → rp). **Annahmen**, siehe `content/schule/RECHERCHE_RP.md` – Lehrplan-PDF 2022 nicht abrufbar.
 - Abschluss-Training BW nur noch für Bundesland BW (vorher hätte RP-Standardniveau es wegen Plan sek1 angezeigt); Sek-I-BW-Hinweis ebenso.
 - SEO `englisch-rheinland-pfalz.html`. Tests: Core 68, UI 198 OK (2×).
+
+## Release 0.24 (13.11.2026) – Sachsen, Gymnasium
+- Plan **sn** (`SN_PACKS`, `SN_TOPICS`, Doppeljahrgänge), Quelle Lehrplan Gymnasium Englisch Sachsen 2019 (`content/schule/RECHERCHE_SN.md`). Codes mit **X**. Lehrwerke Green Line, Access, Camden Town. SEO `englisch-gymnasium-sachsen.html`.
+- Sachsen: if I/II in 5/6; Passiv, indirekte Rede, if III, Gerundium, Partizipien in 7/8.
+- index.html 809 KB (Budget 820) – nächster Ausbau: Schuldaten (plans/books) in die nachgeladene Schuldatei verschieben.
+- Tests: Core 69, UI 199 OK (2×). Offen: Oberschule Sachsen; Berlin/Brandenburg (gemeinsamer Rahmenlehrplan 1–10).

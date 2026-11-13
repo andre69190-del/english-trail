@@ -657,6 +657,10 @@ with sync_playwright() as p:
     np_.click('#sc-ty [data-v="rsp"]'); np_.wait_for_selector('#sc-nv [data-v="eh"]'); np_.click('#sc-nv [data-v="eh"]'); np_.click('#sc-g [data-v="8"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
     tr = np_.inner_text('main')
     (ok if 'realschule plus' in tr.lower() and '-P8' in tr and np_.locator('[data-sg="reported"]').count() else bad)('RLP Realschule plus erhöhtes Niveau Kl. 8: indirekte Rede, Code mit P')
+    # 0.24: Sachsen
+    np_.click('#sc-edit'); np_.select_option('#sc-st', 'sn'); np_.wait_for_timeout(150); np_.click('#sc-g [data-v="6"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    tsn = np_.inner_text('main')
+    (ok if 'sachsen' in tsn.lower() and '-X6' in tsn and np_.locator('[data-sg="if2"]').count() else bad)('Sachsen Kl. 6: if II schon dran, Code mit X')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

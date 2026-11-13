@@ -6,7 +6,7 @@
 STATES = [
   ('bw', 'Baden-Württemberg', 1), ('by', 'Bayern', 1), ('be', 'Berlin', 0), ('bb', 'Brandenburg', 0), ('hb', 'Bremen', 0),
   ('hh', 'Hamburg', 0), ('he', 'Hessen', 1), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
-  ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 1), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
+  ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 1), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 1),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
 TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 1),
@@ -15,10 +15,10 @@ TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaft
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'rp-gym', 'rp-rsp', 'rp-igs']
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym', 'nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'rp-gym', 'rp-rsp', 'rp-igs', 'sn-gym']
 # ni-gym: kein eigener Plan → Grundzuordnung (wie Gymnasium BW). Das KC Englisch Gymnasium NI (2015) beschreibt Grammatik nur funktional
 # (Ende 6/8/10: z. B. Passiv und indirekte Rede bis Ende 8, Arbeitswelt in 9/10) – das passt zur BW-Progression. Siehe content/schule/RECHERCHE_NI.md
-PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg', 'rp-gym': 'rp', 'rp-rsp': 'sek1', 'rp-igs': 'sek1'}
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he', 'nw-rs': 'nwrs', 'nw-ge': 'nwrs', 'nw-sek': 'nwrs', 'nw-hs': 'nwg', 'rp-gym': 'rp', 'rp-rsp': 'sek1', 'rp-igs': 'sek1', 'sn-gym': 'sn'}
 # Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
 NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk'], 'rp-rsp': ['st', 'eh'], 'rp-igs': ['st', 'eh']}
 # Niveau → Lehrplan (überschreibt PLAN_OF). BW: M = sek1, G = sek1g, E = sek1e. NRW Gesamt-/Sekundarschule: E-Kurs = nwrs, G-Kurs = nwg
@@ -60,10 +60,14 @@ BOOKS = [
   ('rlrp', 'Red Line (Klett)'),
   ('lhrp', 'English G Lighthouse (Cornelsen)'),
   ('cmrp', 'Camden Market (Westermann)'),
+  # 13.11.2026: Sachsen, Gymnasium
+  ('glsn', 'Green Line (Klett)'),
+  ('acsn', 'English G Access (Cornelsen)'),
+  ('ctsn', 'Camden Town (Westermann)'),
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
-              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'olnw': ['nw-ge', 'nw-sek'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'glrp': ['rp-gym', 'rp-igs'], 'acrp': ['rp-gym', 'rp-igs'], 'rlrp': ['rp-rsp', 'rp-igs'], 'lhrp': ['rp-rsp', 'rp-igs'], 'cmrp': ['rp-rsp', 'rp-igs']}
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'olnw': ['nw-ge', 'nw-sek'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs'], 'glrp': ['rp-gym', 'rp-igs'], 'acrp': ['rp-gym', 'rp-igs'], 'rlrp': ['rp-rsp', 'rp-igs'], 'lhrp': ['rp-rsp', 'rp-igs'], 'cmrp': ['rp-rsp', 'rp-igs'], 'glsn': ['sn-gym'], 'acsn': ['sn-gym'], 'ctsn': ['sn-gym']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
 # Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)
@@ -185,6 +189,24 @@ RP_TOPICS = {
   'reported': 8, 'tags': 8, 'perfprog': 8, 'if2': 8, 'pastperf': 8, 'gerund': 8, 'link': 8,
   'passive': 9, 'passive2': 9, 'if3': 9, 'part': 9, 'artic': 9, 'future': 9, 'state': 9,
   'passive3': 10, 'advorder': 10, 'pastperfprog': 10,
+}
+
+# Sachsen, Gymnasium (Lehrplan Englisch 2019, Klassenstufen 5/6, 7/8, 9/10). Quelle: content/schule/RECHERCHE_SN.md
+# Sachsen ist früh: if I und II schon in 5/6; Passiv, if III, indirekte Rede, Gerundium, Partizipien in 7/8.
+SN_PACKS = {
+  's5sch': 5, 's5hom': 5, 's5hob': 5, 's5fam': 5, 's5day': 5, 's6sho': 5,
+  's6fes': 6, 's6lon': 6, 's6wea': 6,
+  's7fri': 7, 's7rol': 7, 's8usa': 7, 's8env': 7, 's8his': 7,
+  's7med': 8, 's8tow': 8, 's10can': 8, 's7spo': 8, 's9ind': 8,
+  's9job': 9, 's9gap': 9, 's9vol': 9, 's9aus': 9, 's10ide': 9,
+  's10med': 10, 's10saf': 10, 's10gen': 10, 's9tec': 10, 's10sus': 10,
+}
+SN_TOPICS = {
+  'pres': 5, 'prog': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5, 'quant': 5, 'haveto': 5,
+  'past': 6, 'perf': 6, 'pastprog': 6, 'goingto': 6, 'will': 6, 'comp': 6, 'adv': 6, 'link': 6, 'if1': 6, 'if2': 6,
+  'perfprog': 7, 'pastperf': 7, 'passive': 7, 'rel': 7, 'perfpast': 7, 'repsimple': 7, 'tags': 7, 'artic': 7,
+  'reported': 8, 'if3': 8, 'gerund': 8, 'part': 8, 'pastperfprog': 8, 'passive2': 8, 'passive3': 8, 'future': 8, 'state': 8,
+  'advorder': 9,
 }
 
 PACKS = []

@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.24', '2026-11-13', ['Jetzt auch für Sachsen: Gymnasium nach dem sächsischen Lehrplan Englisch.']),
   ('0.23', '2026-11-13', ['Jetzt auch für Rheinland-Pfalz: Gymnasium, Realschule plus und Integrierte Gesamtschule (Standard- oder erhöhtes Niveau).', 'Lehrwerke: Green Line Rheinland-Pfalz, Access, Red Line, Lighthouse, Camden Market.']),
   ('0.22', '2026-11-13', ['NRW, Klasse 9 und 10: Training für die Zentrale Prüfung 10 (ZP10) Englisch – Hörverstehen, Leseverstehen, Wortschatz und Schreiben, mit der Gewichtung wie in der echten Prüfung.']),
   ('0.21', '2026-11-13', ['NRW komplett: Jetzt auch Realschule, Gesamtschule, Sekundarschule und Hauptschule – an Gesamt- und Sekundarschule mit Grund- oder Erweiterungskurs.', 'Lehrwerke: Red Line, Orange Line, Lighthouse, Highlight, Camden Market.']),
@@ -315,7 +316,7 @@ GUIDE = {
     ['12 Orte', 'Von London bis Dublin – jeder Ort hat ein Thema, Wörter, Sätze und eine kleine Szene.'],
     ['Brief von Emma', 'Nach jedem Ort kannst du einen Satz mehr lesen. Rabe Rufus bringt ihn dir.'],
     ['Orts-Prüfung', 'Wenn die Wörter sitzen, schaltest du den nächsten Ort frei.']]},
-  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Rheinland-Pfalz: alle Schularten · Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
+  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Rheinland-Pfalz: alle Schularten · Bayern, Niedersachsen, Hessen, Sachsen: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
     ['Stoff deiner Klasse', 'Wortschatz-Pakete und Grammatik passend zum Bildungsplan.'],
     ['Startcheck', 'Wie fit bist du für deine Klasse? Danach weißt du, was du wiederholen solltest.'],
     ['Deine Buch-Vokabeln', 'Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste.'],

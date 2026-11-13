@@ -640,3 +640,9 @@ test('Rheinland-Pfalz: Gymnasium (P), Realschule plus/IGS mit Standard/erhöhtem
   assert.equal(C.duelParse('FOX-123-1-P8').plan, 'rp');
   DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'rp') >= 5, 'RP fehlt: ' + x.id));
 });
+
+test('Sachsen Gymnasium: Plan sn, Codes mit X', () => {
+  assert.equal(DATA.school.planOf['sn-gym'], 'sn'); assert.equal(DATA.school.plans.sn.t.if2, 6); assert.equal(DATA.school.plans.sn.t.passive, 7);
+  assert.equal(C.duelParse('FOX-123-1-X7').plan, 'sn');
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'sn') >= 5, 'SN fehlt: ' + x.id));
+});
