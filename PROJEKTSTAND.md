@@ -284,3 +284,8 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Bayern ist früher dran (simple past Kl. 5; present perfect, if I, Relativsätze, tags Kl. 6; if II/III Kl. 7).
 - Tests: Core 64, UI 186 OK (2×).
 - Nächste Länder laut AUTOPLAN: Niedersachsen, Hessen, Rheinland-Pfalz.
+
+## Release 0.19 (13.11.2026) – Niedersachsen, Gymnasium
+- `ni-gym` freigeschaltet, **ohne eigenen Plan** (Grundzuordnung wie BW-Gymnasium, Codes mit K): Das KC Englisch Gymnasium NI 2015 beschreibt Grammatik nur funktional (Passiv, indirekte Rede bis Ende 8; Arbeitswelt 9/10) – passt zur BW-Progression. Recherche `content/schule/RECHERCHE_NI.md`.
+- Lehrwerke: English G Access, Green Line, Camden Town (ohne Ausgabe-Angabe). SEO `englisch-gymnasium-niedersachsen.html`.
+- Tests: Core 65, UI 188 OK (2×). Nächste Länder: Hessen, Rheinland-Pfalz; offen: Oberschule NI.

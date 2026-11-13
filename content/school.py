@@ -5,7 +5,7 @@
 
 STATES = [
   ('bw', 'Baden-Württemberg', 1), ('by', 'Bayern', 1), ('be', 'Berlin', 0), ('bb', 'Brandenburg', 0), ('hb', 'Bremen', 0),
-  ('hh', 'Hamburg', 0), ('he', 'Hessen', 0), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 0),
+  ('hh', 'Hamburg', 0), ('he', 'Hessen', 0), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
   ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
@@ -13,7 +13,9 @@ TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaft
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym']
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym']
+# ni-gym: kein eigener Plan → Grundzuordnung (wie Gymnasium BW). Das KC Englisch Gymnasium NI (2015) beschreibt Grammatik nur funktional
+# (Ende 6/8/10: z. B. Passiv und indirekte Rede bis Ende 8, Arbeitswelt in 9/10) – das passt zur BW-Progression. Siehe content/schule/RECHERCHE_NI.md
 PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by'}
 # Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
 NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm']}
@@ -34,10 +36,14 @@ BOOKS = [
   # 13.11.2026: Gymnasium Bayern (LehrplanPLUS)
   ('glby', 'Green Line – Ausgabe Bayern (Klett)'),
   ('acby', 'English G Access – Ausgabe Bayern (Cornelsen)'),
+  # 13.11.2026: Gymnasium Niedersachsen (ohne Ausgabe-Angabe, da je Schule verschieden)
+  ('acni', 'English G Access (Cornelsen)'),
+  ('glni', 'Green Line (Klett)'),
+  ('ctni', 'Camden Town (Westermann)'),
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
-              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym']}
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
 # Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)

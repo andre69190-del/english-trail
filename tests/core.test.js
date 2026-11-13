@@ -614,3 +614,8 @@ test('Bayern Gymnasium: Jahrgangsstufen statt Doppeljahrgänge, Codes mit B', ()
   assert.equal(C.duelParse('FOX-123-1-B7').plan, 'by'); assert.equal(C.hwParse('HA7B-P1-T1').plan, 'by');
   DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'by') >= 5, 'BY-Klasse fehlt: ' + x.id));
 });
+
+test('Niedersachsen Gymnasium: freigeschaltet, Grundzuordnung, eigene Lehrwerke', () => {
+  assert.ok(DATA.school.combos.includes('ni-gym')); assert.equal(DATA.school.planOf['ni-gym'], undefined);
+  assert.ok(DATA.school.books.filter(b => (b.k || []).includes('ni-gym')).length >= 3);
+});

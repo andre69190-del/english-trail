@@ -30100,6 +30100,18 @@
  ],
  "news": [
   {
+   "v": "0.19",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Niedersachsen: Wähle im Schulbereich Niedersachsen und Gymnasium.",
+    "Lehrwerke: English G Access, Green Line und Camden Town."
+   ],
+   "en": [
+    "Jetzt auch für Niedersachsen: Wähle im Schulbereich Niedersachsen und Gymnasium.",
+    "Lehrwerke: English G Access, Green Line und Camden Town."
+   ]
+  },
+  {
    "v": "0.18",
    "date": "2026-11-13",
    "de": [
@@ -30397,7 +30409,7 @@
    {
     "id": "ni",
     "name": "Niedersachsen",
-    "on": 0
+    "on": 1
    },
    {
     "id": "nw",
@@ -30463,7 +30475,8 @@
    "bw-gms",
    "nw-gym",
    "bw-wrs",
-   "by-gym"
+   "by-gym",
+   "ni-gym"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30557,6 +30570,27 @@
     "name": "English G Access – Ausgabe Bayern (Cornelsen)",
     "k": [
      "by-gym"
+    ]
+   },
+   {
+    "id": "acni",
+    "name": "English G Access (Cornelsen)",
+    "k": [
+     "ni-gym"
+    ]
+   },
+   {
+    "id": "glni",
+    "name": "Green Line (Klett)",
+    "k": [
+     "ni-gym"
+    ]
+   },
+   {
+    "id": "ctni",
+    "name": "Camden Town (Westermann)",
+    "k": [
+     "ni-gym"
     ]
    }
   ],
@@ -31102,7 +31136,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW und Bayern: Gymnasium – Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Bayern, Niedersachsen: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [

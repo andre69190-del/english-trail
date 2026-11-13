@@ -164,6 +164,24 @@ def main():
     page('englisch-gymnasium-bayern.html', 'Englisch üben Gymnasium Bayern Klasse 5–10 – kostenlose App',
          'Kostenlose Englisch-App für das Gymnasium in Bayern: Wortschatz und Grammatik nach LehrplanPLUS, Klasse 5 bis 10, Vokabeln per Foto (Green Line, Access), Probe-Klassenarbeit. Ohne Werbung.',
          '\n'.join(b)); files.insert(3, 'englisch-gymnasium-bayern.html')
+    # 13.11.2026: Gymnasium Niedersachsen (Zuordnung wie Gymnasium BW, passend zum KC Englisch Gymnasium NI)
+    b = ['<h1>Englisch üben für das Gymnasium in Niedersachsen (Klasse 5–10)</h1>',
+         '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Niedersachsen</b>, deine Klasse und dein Lehrwerk '
+         '(z. B. <b>English G Access</b>, <b>Green Line</b> oder <b>Camden Town</b>). Die Themen folgen dem Kerncurriculum Englisch: '
+         'Familie, Schule und Hobbys in 5/6, Freizeit, Reisen, Medien und Sport in 7/8, Arbeitswelt und aktuelle Themen in 9/10.</p>'
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
+    for g in range(5, 11):
+        pk = [k for k in school.PACKS if k['grade'] == g]
+        gr = [v[0] for t, v in grammar.TOPICS.items() if v[1] == g]
+        b.append(f'<div class="box"><b>Klasse {g}</b><br>' + E(', '.join(k['title'] for k in pk)) +
+                 (f'<br><span class="muted">Grammatik: {E(", ".join(gr))}</span>' if gr else '') + '</div>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Buch-Vokabeln per Foto</b>: Vokabelseite fotografieren, die App liest die Wörter direkt auf dem Handy.</li>'
+             '<li><b>Probe-Klassenarbeit</b> mit Grammatik, Vokabeln, Hör- und Leseverstehen und Sprachmittlung.</li>'
+             '<li><b>Wochen-Challenge, Live-Duell und Hausaufgaben-Code</b> für die ganze Klasse – ohne Anmeldung.</li>'
+             '<li>Keine Käufe, keine Werbung, kein Streak-Druck.</li></ul><a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-gymnasium-niedersachsen.html', 'Englisch üben Gymnasium Niedersachsen Klasse 5–10 – kostenlose App',
+         'Kostenlose Englisch-App für das Gymnasium in Niedersachsen: Wortschatz und Grammatik passend zum Kerncurriculum, Klasse 5 bis 10, Vokabeln per Foto (Access, Green Line, Camden Town), Probe-Klassenarbeit. Ohne Werbung.',
+         '\n'.join(b)); files.insert(4, 'englisch-gymnasium-niedersachsen.html')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
           f'  <url><loc>{SITE}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     sm += [f'  <url><loc>{SITE}{f}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' for f in files]
