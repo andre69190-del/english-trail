@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.17', '2026-11-13', ['Neu für Klasse 9 und 10 an Realschule, Gemeinschaftsschule und Werkrealschule: Abschluss-Training! Übe die Kommunikationsprüfung – Präsentation mit Stichworten, Timer und Nachfragen, Gespräch in Alltagssituationen und Sprachmittlung – und sieh deine ungefähre Note.', 'Schriftliche Prüfung üben: Listening, Reading, Use of Language und Interpreting – dazu Schreibaufgaben mit Checkliste.']),
   ('0.16', '2026-11-13', ['Gemeinschaftsschule und Realschule: Wähle dein Niveau – G, M oder E. Wörter und Grammatik kommen dann im passenden Tempo.', 'Neu: Werkrealschule / Hauptschule in Baden-Württemberg.', 'Gymnasium Klasse 5/6: an den neuen G9-Bildungsplan angepasst.']),
   ('0.15', '2026-11-13', ['Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.', 'Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9.']),
   ('0.14', '2026-11-13', ['Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.', 'Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).', 'Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.', 'Vokabeln per Foto noch schneller: Der Kamera-Knopf im Schulbereich öffnet direkt die Kamera, und unter „Meine Wörter“ steht das Foto jetzt ganz oben.']),

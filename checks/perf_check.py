@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Größe/Performance (Idee aus GeoQuest/BIOGLOW perf_check.py). Budget: index.html < 780 KB (0.14: Realschule/GMS-Zuordnung; 0.13: Schulpakete je Land/Schulart nachgeladen; 0.11: Selbst schreiben; 0.8: +Grammatik-Lücken BW; English Trail 0.5: Schule + Interessen + Live-Duell; gzip ca. 200 KB) (3.0: Szlak 2 + Pakete inline, +100 KB; Dla Polaków wird als data-polacy.json nachgeladen; per gzip übertragen ~170 KB)."""
+"""Größe/Performance (Idee aus GeoQuest/BIOGLOW perf_check.py). Budget: index.html < 820 KB (0.17: Abschluss-Training Sek I; 0.14: Realschule/GMS-Zuordnung; 0.13: Schulpakete je Land/Schulart nachgeladen; 0.11: Selbst schreiben; 0.8: +Grammatik-Lücken BW; English Trail 0.5: Schule + Interessen + Live-Duell; gzip ca. 200 KB) (3.0: Szlak 2 + Pakete inline, +100 KB; Dla Polaków wird als data-polacy.json nachgeladen; per gzip übertragen ~170 KB)."""
 import os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 size = os.path.getsize(os.path.join(ROOT, 'index.html'))
-budget = 780 * 1024
+budget = 820 * 1024
 print(f'  index.html: {size / 1024:.0f} KB (Budget {budget // 1024} KB)')
 print('PASS' if size <= budget else 'FAIL')
 sys.exit(0 if size <= budget else 1)

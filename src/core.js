@@ -609,6 +609,8 @@
     return out;
   }
   /* Schreibauftrag: einfache, transparente Kriterien wie im Unterricht (keine KI) */
+  /* Kommunikationsprüfung BW: Note aus Punkten (0–30). Tabelle des KM: 30 = 1,0 · 15 = 3,5 · 6 = 5,0 · 0 = 6,0 → linear (1/6 Note je Punkt), auf 0,1 gerundet */
+  function kpGrade(p) { p = Math.max(0, Math.min(30, +p || 0)); return Math.round((6 - p / 6) * 10) / 10; }
   function writingCheck(txt, words) {
     var t = String(txt || ''), low = ' ' + t.toLowerCase().replace(/[^a-z' ]+/g, ' ') + ' ';
     var sents = t.split(/[.!?]+/).filter(function (x) { return x.trim().split(/\s+/).length >= 3; });
@@ -722,7 +724,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, kpGrade: kpGrade, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

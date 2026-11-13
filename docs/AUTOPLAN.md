@@ -38,7 +38,7 @@ Neue Ideen kommen unten in „Ideen-Speicher“, nicht mitten in die Liste.
 
 ## Ideen-Speicher (noch nicht eingeplant)
 - ✅ 0.16: Niveau G/M/E, Werkrealschule.
-- Prüfungstraining Realschulabschluss BW (schriftlich + Kommunikationsprüfung) – in Arbeit (0.17).
+- ✅ 0.17: Abschluss-Training Sek I BW (Kommunikationsprüfung a/b/c mit Note, schriftlich A–E). Nächste Ausbaustufe: Aufnahme/Spracherkennung bei der Präsentation, echte Lesetexte für Teil B.
 - Englisch als 2. Fremdsprache (Gymnasium, z. B. Rheinschiene). Oberstufe / berufliche Schulen.
 - Sommer 2026: G9-Bildungsplan Englisch (gedehnt, bis Kl. 11) prüfen; Sek I V2 (Kl. 5–7) prüfen.
 - Eltern-Ansicht mit PIN (wie GeoQuest), Klassen-Rangliste über Codes, Sprechprüfung (Kommunikationsprüfung Kl. 10) mit Aufnahme + Checkliste, weitere Bundesländer/Schularten.

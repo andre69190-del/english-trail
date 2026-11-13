@@ -190,6 +190,15 @@
       seo_link_rs: 'Realschule und GMS BW', seo_link_nw: 'Gymnasium NRW', seo_link: 'Englisch Klasse 5–10',
       ph_title: 'Vokabeln per Foto', ph_d: 'Fotografiere die Vokabelseite aus deinem Englischbuch. Die App liest die Wörter – du prüfst sie kurz und übernimmst sie mit deiner Unit.', ph_or: 'Oder Wort für Wort eintippen:', ph_take: 'Foto aufnehmen oder auswählen', ph_tips: 'Tipps: Buch flach hinlegen, gutes Licht, nur die Vokabelseite, Handy gerade halten. Das Foto bleibt auf deinem Gerät. Beim ersten Mal lädt die App einmalig ca. 8 MB (am besten im WLAN).', ph_load: 'Texterkennung wird geladen …', ph_read: 'Lese die Wörter …', ph_found: '{n} Wörter erkannt – bitte unten prüfen, verbessern und dann übernehmen.', ph_none: 'Ich konnte keine Wörter erkennen. Versuch es mit mehr Licht und das Buch ganz gerade fotografieren.', ph_fail: 'Das hat nicht geklappt. Bitte noch einmal versuchen.', ph_offline: 'Für das erste Foto braucht die App einmal Internet.',
       sw_title: 'Selbst schreiben', sw_d: 'Alle Wörter, die du schon kennst – selbst eintippen. Bringt Extra-Federn für deinen Raben!', sw_few: 'Lerne erst ein paar Wörter – dann kannst du sie hier selbst schreiben.', sw_first: 'Anfangsbuchstabe', sw_end: 'Selbst geschrieben: {p} % richtig. Schreiben merkt man sich am besten!', wm_title: 'Schreib-Moment!', wm_d: 'Dieses Wort kennst du schon – schreib es diesmal selbst.', wm_set: 'Ab und zu ein bekanntes Wort selbst schreiben (empfohlen)',
+      grad: 'Abschlussprüfung', grad_d: 'Training für die Kommunikationsprüfung und die schriftliche Englisch-Prüfung – wie in Baden-Württemberg.', grad_go: 'Zum Prüfungstraining', grad_rs: 'Realschulabschluss', grad_hs: 'Hauptschulabschluss', grad_wrs: 'Werkrealschulabschluss',
+      grad_kp: 'Kommunikationsprüfung', grad_kp_d: 'Drei Teile ohne Vorbereitungszeit, zusammen ca. 15 Minuten, je Teil 10 Punkte.', grad_a: 'a) Präsentation deines Schwerpunktthemas', grad_b: 'b) Gespräch in einer Alltagssituation', grad_c: 'c) Sprachmittlung',
+      grad_sum: 'Deine Selbsteinschätzung: {p} von 30 Punkten · ungefähr Note {n}', grad_sum_none: 'Übe die drei Teile und schätze dich jeweils selbst ein – dann siehst du deine ungefähre Note.', grad_note: 'Note nach der Punktetabelle des Kultusministeriums, Zwischenwerte gerundet. Echte Bewertung durch zwei Lehrkräfte.',
+      grad_topic: 'Dein Thema', grad_topic_own: 'eigenes Thema …', grad_topic_ph: 'z. B. Life in Scotland', grad_notes: 'Deine Stichworte (nur Stichworte sind in der Prüfung erlaubt)', grad_phr: 'Redemittel – antippen zum Anhören',
+      grad_phr_start: 'Einstieg', grad_phr_main: 'Hauptteil', grad_phr_end: 'Schluss', grad_phr_help: 'Wenn du hängst', grad_timer: 'Vortrag starten (5 Minuten)', grad_stop: 'Stopp', grad_fq: 'Nachfragen üben', grad_fq_d: 'Die Prüfer stellen nach dem Vortrag kurze Fragen. Antworte laut auf Englisch.',
+      grad_rate: 'Wie lief es? (ehrlich einschätzen)', grad_r_content: 'Inhalt und Darstellung', grad_r_lang: 'Sprache', grad_r_sit: 'Situation erfasst, passend reagiert', grad_r_med: 'Sprachmittlung (alles Wichtige verständlich weitergegeben?)', grad_save: 'Einschätzung speichern', grad_saved: 'Gespeichert.',
+      grad_b_d: 'Du bekommst eine Situation und reagierst spontan. Tipp: Antworte in ganzen Sätzen, frag nach, wenn du etwas nicht verstehst.', grad_b_go: 'Situation ziehen', grad_c_d: 'Du hörst oder liest etwas und gibst das Wichtigste in der anderen Sprache weiter – nicht Wort für Wort übersetzen!', grad_c_go: 'Neue Situation', grad_c_show: 'Lösungsvorschlag zeigen', grad_c_keys: 'Das sollte drin sein:', grad_c_say: 'Sprich deine Antwort laut, dann vergleiche.', grad_c_dir_de: 'Deutsch → Englisch', grad_c_dir_en: 'Englisch → Deutsch',
+      grad_wr: 'Schriftliche Prüfung', grad_wr_d: 'Aufbau: A Listening · B Text-based Tasks · C Use of Language · D Writing · E Interpreting. In Teil A kein Wörterbuch, in B–E ein zweisprachiges Wörterbuch.', grad_wr_quiz: 'Teile A, B, C, E üben (24 Fragen)', grad_wr_write: 'Teil D: Writing üben', grad_wr_task: 'Schreibaufgabe', grad_wr_other: 'Andere Aufgabe',
+      grad_q_a: 'A Listening', grad_q_b: 'B Reading', grad_q_c: 'C Use of Language', grad_q_e: 'E Interpreting',
       sch_where: 'Bundesland:', sch_where_chg: 'Bisher: Baden-Württemberg (Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule) und Nordrhein-Westfalen (Gymnasium). Weitere Bundesländer folgen.', sch_sek1_d: 'Realschule, Gemeinschaftsschule und Werkrealschule lernen nach dem gemeinsamen Bildungsplan der Sekundarstufe I. Pakete und Grammatik sind den Klassen nach deinem Niveau zugeordnet.', sch_niv: 'Niveau', sch_niv_g: 'G (grundlegend)', sch_niv_m: 'M (mittel)', sch_niv_e: 'E (erweitert)', sch_niv_d: 'Steht im Zeugnis oder fragt eure Lehrkraft. Unsicher? Dann M (bzw. G an der Werkrealschule).', sch_conf_t: 'Wirklich wechseln?', sch_conf_d: 'Von {a} zu {b}. Danach siehst du die Pakete, Grammatik und Probe-Arbeiten der neuen Auswahl.', sch_conf_keep: 'Keine Sorge: Deine Wörter, Buch-Vokabeln, Ergebnisse und Federn bleiben erhalten. Du kannst jederzeit zurückwechseln.', sch_conf_yes: 'Ja, wechseln', sch_conf_no: 'Abbrechen',
       chk_title: 'Startcheck', chk_d: 'Wie fit bist du für Klasse {g}? 20 kurze Aufgaben aus allem bis jetzt – danach weißt du, was sich zu wiederholen lohnt. Keine Note.', chk_new: 'Willkommen in Klasse {g}! Mach den kurzen Startcheck – dann zeigt dir die App, was du wiederholen solltest. Dauert ca. 5 Minuten, keine Note.', chk_go: 'Startcheck machen', chk_later: 'Später', chk_weak: 'Das lohnt sich zu wiederholen:', chk_practice: 'üben', chk_all_ok: 'Super – in allen Grammatik-Themen warst du sicher!', chk_again: 'Startcheck wiederholen', chk_res: 'Startcheck: {p} % richtig · {n} Themen zum Wiederholen (siehe Schulbereich)',
       ex_lv_a2: 'A2 Key: passt zu Klasse 7–8 und Trail 2.', ex_lv_b1: 'B1 Preliminary: passt zu Klasse 9–10 und Trail 3.', ex_a2_cards: 'Emmas Postkarten', ex_w_len_a2: 'mindestens 25 Wörter', ex_w_len_b1: 'etwa 100 Wörter (mindestens 80)',
@@ -330,6 +339,15 @@
       seo_link_rs: 'Realschule/GMS BW', seo_link_nw: 'Gymnasium NRW', seo_link: 'English years 5–10',
       ph_or: 'Or type word by word:', ph_title: 'Words from a photo', ph_d: 'Take a photo of the vocabulary page in your English book. The app reads the words – you check them quickly and save them with your unit.', ph_take: 'Take or choose a photo', ph_tips: 'Tips: lay the book flat, good light, only the vocabulary page, hold the phone straight. The photo stays on your device. The first time, the app downloads about 8 MB once (best on Wi-Fi).', ph_load: 'Loading text recognition …', ph_read: 'Reading the words …', ph_found: '{n} words found – please check and correct them below, then save.', ph_none: 'I could not find any words. Try more light and hold the book straight.', ph_fail: 'That did not work. Please try again.', ph_offline: 'The first photo needs an internet connection once.',
       sw_title: 'Write it yourself', sw_d: 'All the words you already know – no choices, just type them', sw_few: 'Learn a few words first – then you can write them here yourself.', sw_first: 'First letter', sw_end: 'Written yourself: {p} % right. Writing helps you remember best!', wm_title: 'Writing moment!', wm_d: 'You already know this word – write it yourself this time.', wm_set: 'Now and then write a known word yourself (recommended)',
+      grad: 'Final exam', grad_d: 'Practice for the speaking exam and the written English exam.', grad_go: 'Exam practice', grad_rs: 'Realschulabschluss', grad_hs: 'Hauptschulabschluss', grad_wrs: 'Werkrealschulabschluss',
+      grad_kp: 'Speaking exam', grad_kp_d: 'Three parts, about 15 minutes, 10 points each.', grad_a: 'a) Presentation of your topic', grad_b: 'b) Conversation in an everyday situation', grad_c: 'c) Mediation',
+      grad_sum: 'Your self-assessment: {p} of 30 points · about grade {n}', grad_sum_none: 'Practise the three parts and rate yourself.', grad_note: 'Grade from the official points table, rounded.',
+      grad_topic: 'Your topic', grad_topic_own: 'own topic …', grad_topic_ph: 'e.g. Life in Scotland', grad_notes: 'Your keywords', grad_phr: 'Useful phrases – tap to listen',
+      grad_phr_start: 'Start', grad_phr_main: 'Main part', grad_phr_end: 'End', grad_phr_help: 'If you get stuck', grad_timer: 'Start talk (5 minutes)', grad_stop: 'Stop', grad_fq: 'Practise follow-up questions', grad_fq_d: 'Answer aloud in English.',
+      grad_rate: 'How did it go?', grad_r_content: 'Content and delivery', grad_r_lang: 'Language', grad_r_sit: 'Understood the situation, reacted well', grad_r_med: 'Mediation', grad_save: 'Save rating', grad_saved: 'Saved.',
+      grad_b_d: 'React spontaneously to a situation.', grad_b_go: 'Draw a situation', grad_c_d: 'Pass on the main points in the other language.', grad_c_go: 'New situation', grad_c_show: 'Show model answer', grad_c_keys: 'Key points:', grad_c_say: 'Say your answer aloud, then compare.', grad_c_dir_de: 'German → English', grad_c_dir_en: 'English → German',
+      grad_wr: 'Written exam', grad_wr_d: 'A Listening · B Text-based Tasks · C Use of Language · D Writing · E Interpreting.', grad_wr_quiz: 'Practise A, B, C, E (24 questions)', grad_wr_write: 'Practise D: Writing', grad_wr_task: 'Writing task', grad_wr_other: 'Other task',
+      grad_q_a: 'A Listening', grad_q_b: 'B Reading', grad_q_c: 'C Use of Language', grad_q_e: 'E Interpreting',
       sch_where: 'State:', sch_where_chg: 'So far: Baden-Württemberg and North Rhine-Westphalia. More states will follow.', sch_sek1_d: 'Lower secondary schools follow the common curriculum, by level.', sch_niv: 'Level', sch_niv_g: 'G (basic)', sch_niv_m: 'M (middle)', sch_niv_e: 'E (advanced)', sch_niv_d: 'Ask your teacher if unsure.', sch_conf_t: 'Really change?', sch_conf_d: 'From {a} to {b}. Afterwards you will see the packs, grammar and practice tests of the new choice.', sch_conf_keep: 'Don’t worry: your words, textbook vocabulary, results and feathers are kept. You can switch back any time.', sch_conf_yes: 'Yes, change', sch_conf_no: 'Cancel',
       chk_title: 'Start check', chk_d: 'How fit are you for year {g}? 20 short tasks from everything so far – afterwards you know what is worth revising. No mark.', chk_new: 'Welcome to year {g}! Take the short start check – then the app shows you what to revise. Takes about 5 minutes, no mark.', chk_go: 'Take the start check', chk_later: 'Later', chk_weak: 'Worth revising:', chk_practice: 'practise', chk_all_ok: 'Great – you were sure in all grammar topics!', chk_again: 'Repeat start check', chk_res: 'Start check: {p} % right · {n} topics to revise (see school area)',
       ex_lv_a2: 'A2 Key: fits years 7–8 and Trail 2.', ex_lv_b1: 'B1 Preliminary: fits years 9–10 and Trail 3.', ex_a2_cards: 'Emma’s postcards', ex_w_len_a2: 'at least 25 words', ex_w_len_b1: 'about 100 words (at least 80)',
@@ -635,6 +653,7 @@
     if (tab === 'practice') return renderPractice();
     if (tab === 'album') return renderAlbum();
     if (tab === 'raven') return renderRaven();
+    if (tab === 'grad') return renderGrad();
     if (tab === 'me') return renderMe();
     if (tab === 'land') return renderLand();
     if (tab === 'mywords') return renderMyWords();
@@ -1339,7 +1358,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.16', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.17', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -2139,7 +2158,7 @@
     html += '<section class="card stack"><span class="eyebrow">' + esc(nm(SD.states, sc.state)) + ' · ' + esc(nm(SD.types, sc.type)) + (schNiv() ? ' · ' + esc(t('sch_niv_' + schNiv())) : '') + '</span><div class="big">' + esc(t('sch_grade').replace('{g}', g)) + '</div>' +
       (sc.book ? '<p class="small">' + esc(t('sch_book')) + ': ' + esc(nm(SD.books, sc.book)) + (sc.book !== 'other' ? ' · ' + esc(t('sch_band')) + ' ' + (g - 4) : '') + '</p>' : '') +
       '<button class="btn ghost" id="sc-edit" style="justify-self:start">' + esc(t('sch_change')) + '</button></section>' +
-      schCurBox() + schCheckBox(g) + ravenCard('school') + schLikesBox() +
+      schCurBox() + schCheckBox(g) + gradCard(g) + ravenCard('school') + schLikesBox() +
       '<section class="card stack"><h2>' + esc(t('sch_words')) + '</h2><p class="small muted">' + esc(t('sch_words_d')) + '</p><div class="list">' + packs.map(function (i) {
         var u = U[i], l = wordsOf(i), m = masteredCount(l);
         return '<button class="li linkish" data-sp="' + i + '" style="width:100%"><span aria-hidden="true">' + esc(u.ico) + '</span><span class="grow" style="text-align:left"><b>' + esc(u.city) + '</b><br><span class="small muted">' + esc(L(u.title)) + '</span></span><span class="small num muted">' + m + '/' + l.length + '</span></button>';
@@ -2180,6 +2199,7 @@
     document.getElementById('par-share').onclick = function () { shareOut(parentReport(g)); };
     bindReport('rep-sch', 'school K' + g);
     document.getElementById('back').onclick = function () { go('practice'); };
+    var gop = document.getElementById('grad-open'); if (gop) gop.onclick = function () { GR.part = ''; go('grad'); };
     document.getElementById('sc-edit').onclick = function () { SCH.edit = true; SCH.prev = { grade: sc.grade, book: sc.book || '', type: sc.type || 'gym', state: sc.state || 'bw', niv: schNiv() }; renderSchool(); };
     bindLikes();
     document.querySelectorAll('[data-sp]').forEach(function (b) { b.onclick = function () { go('city', +b.getAttribute('data-sp')); }; });
@@ -2271,6 +2291,118 @@
     return runGame({ title: t('sch_exam'), qs: C.shuffle(qs, R), timer: 900, back: 'school', schoolExam: X.g });
   }
   /* Schreibauftrag (Writing) wie in der Klassenarbeit: Thema eines Pakets, 5 Pflichtwörter, Selbstkontrolle mit Checkliste */
+  /* ---------- 13.11.2026: Abschluss-Training Sek I BW (Realschul-, Werkrealschul-, Hauptschulabschluss) ----------
+     Kommunikationsprüfung: a) Präsentation Schwerpunktthema, b) dialogisches Sprechen, c) Sprachmittlung – je 10 Punkte (KM BW).
+     Selbsteinschätzung in S.grad.sc = {a, b, c}; Stichworte je Thema in S.grad.notes. Schriftlich: A–E (Quiz) + D (Schreiben). */
+  var GR = { part: '', topic: '', med: -1, show: false, fq: [], wr: -1, tm: null };
+  function gradExam(g) { var ty = (S.school && S.school.type) || 'gym'; if (ty === 'wrs') return g >= 10 ? 'grad_wrs' : 'grad_hs'; return 'grad_rs'; }
+  function gradOn(g) { return !!(D.grad && /^sek1/.test(schPlan()) && g >= 9); }
+  function gradCard(g) {
+    if (!gradOn(g)) return '';
+    return '<section class="card stack" style="border-color:var(--amber)"><span class="eyebrow">🎓 ' + esc(t(gradExam(g))) + '</span><h2>' + esc(t('grad')) + '</h2><p class="small">' + esc(t('grad_d')) + '</p>' +
+      '<button class="btn primary" id="grad-open" style="justify-self:start">' + esc(t('grad_go')) + ' →</button></section>';
+  }
+  function gradSt() { S.grad = S.grad || {}; S.grad.sc = S.grad.sc || {}; S.grad.notes = S.grad.notes || {}; return S.grad; }
+  function gradTopics(g) { var a = []; for (var i = 0; i < U.length; i++) { var k = U[i].sch ? schGrade(U[i]) : 0; if (k >= 7 && k <= g) a.push(i); } return a; }
+  function rateSeg(id, max, cur) { var h = ''; for (var v = 0; v <= max; v++) h += segBtn(String(v), String(v), cur === v); return '<div class="seg" id="' + id + '">' + h + '</div>'; }
+  function renderGrad() {
+    var sc0 = S.school || {}, g = sc0.grade || 10, st = gradSt(), GD = D.grad, html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>🎓 ' + esc(t('grad')) + '</h1>';
+    if (GR.tm && GR.part !== 'a') { clearInterval(GR.tm); GR.tm = null; }
+    if (!GR.part) {
+      var sc = st.sc, n = ['a', 'b', 'c'].filter(function (k) { return sc[k] != null; }).length, pts = (sc.a || 0) + (sc.b || 0) + (sc.c || 0);
+      html += '<p class="small muted">' + esc(t(gradExam(g))) + ' · ' + esc(t('sch_grade').replace('{g}', g)) + '</p>' +
+        '<section class="card stack"><h2>🎤 ' + esc(t('grad_kp')) + '</h2><p class="small">' + esc(t('grad_kp_d')) + '</p><div class="list">' +
+        ['a', 'b', 'c'].map(function (k) { return '<button class="li linkish" data-gp="' + k + '" style="width:100%;justify-content:space-between"><b>' + esc(t('grad_' + k)) + '</b><span class="badge num">' + (sc[k] != null ? sc[k] + '/10' : '–') + '</span></button>'; }).join('') + '</div>' +
+        '<p class="small"><b>' + esc(n === 3 ? t('grad_sum').replace('{p}', pts).replace('{n}', C.kpGrade(pts).toFixed(1).replace('.', ',')) : t('grad_sum_none')) + '</b></p><p class="small muted">' + esc(t('grad_note')) + '</p></section>' +
+        '<section class="card stack"><h2>📝 ' + esc(t('grad_wr')) + '</h2><p class="small">' + esc(t('grad_wr_d')) + '</p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="gw-quiz">' + esc(t('grad_wr_quiz')) + '</button><button class="btn" id="gw-write">✍️ ' + esc(t('grad_wr_write')) + '</button></div></section>';
+    } else if (GR.part === 'a') {
+      var tps = gradTopics(g); if (!GR.topic && tps.length) GR.topic = U[tps[0]].id;
+      var tu = U.filter(function (u) { return u.id === GR.topic; })[0], tname = tu ? tu.city : (GR.topic || '').slice(4);
+      var grp = function (k) { return '<p class="small"><b>' + esc(t('grad_phr_' + k)) + '</b></p><div class="list">' + GD.phr.filter(function (p) { return p[0] === k; }).map(function (p) { return '<button class="li linkish" data-say="' + esc(p[1]) + '" style="width:100%;text-align:left"><span class="grow"><span lang="en">' + esc(p[1]) + '</span><br><span class="small muted">' + esc(p[2]) + '</span></span></button>'; }).join('') + '</div>'; };
+      html += '<section class="card stack"><h2>' + esc(t('grad_a')) + '</h2><label class="fld">' + esc(t('grad_topic')) + '<select id="ga-topic">' + tps.map(function (i) { return '<option value="' + esc(U[i].id) + '"' + (GR.topic === U[i].id ? ' selected' : '') + '>' + esc(U[i].ico + ' ' + U[i].city + ' – ' + L(U[i].title)) + '</option>'; }).join('') +
+        '<option value="own:"' + (/^own:/.test(GR.topic) ? ' selected' : '') + '>' + esc(t('grad_topic_own')) + '</option></select></label>' +
+        (/^own:/.test(GR.topic) ? '<input type="text" id="ga-own" maxlength="60" lang="en" placeholder="' + esc(t('grad_topic_ph')) + '" value="' + esc(GR.topic.slice(4)) + '">' : '') +
+        '<label class="fld">' + esc(t('grad_notes')) + '<textarea id="ga-notes" rows="5" lang="en" maxlength="1200">' + esc(st.notes[GR.topic] || '') + '</textarea></label>' +
+        '<div class="row" style="flex-wrap:wrap;align-items:center"><button class="btn primary" id="ga-timer">⏱ ' + esc(GR.tm ? t('grad_stop') : t('grad_timer')) + '</button><b class="num big" id="ga-clock" aria-live="polite">' + (GR.left != null ? C.fmtTime(GR.left * 1000) : '5:00') + '</b></div></section>' +
+        '<section class="card stack"><h2>' + esc(t('grad_fq')) + '</h2><p class="small">' + esc(t('grad_fq_d')) + '</p>' + (GR.fq.length ? '<div class="list">' + GR.fq.map(function (q) { return '<button class="li linkish" data-say="' + esc(q) + '" style="width:100%;text-align:left" lang="en">🔊 ' + esc(q) + '</button>'; }).join('') + '</div>' : '') +
+        '<button class="btn" id="ga-fq" style="justify-self:start">❓ ' + esc(t('grad_fq')) + '</button></section>' +
+        '<section class="card stack"><h2>' + esc(t('grad_phr')) + '</h2>' + ['start', 'main', 'end', 'help'].map(grp).join('') + '</section>' +
+        '<section class="card stack"><h2>' + esc(t('grad_rate')) + '</h2><p class="small">' + esc(t('grad_r_content')) + '</p>' + rateSeg('gr-1', 5, GR.r1) + '<p class="small">' + esc(t('grad_r_lang')) + '</p>' + rateSeg('gr-2', 5, GR.r2) +
+        '<button class="btn primary" id="gr-save" style="justify-self:start"' + (GR.r1 == null || GR.r2 == null ? ' disabled' : '') + '>' + esc(t('grad_save')) + '</button></section>';
+      GR.tname = tname;
+    } else if (GR.part === 'b') {
+      html += '<section class="card stack"><h2>' + esc(t('grad_b')) + '</h2><p class="small">' + esc(t('grad_b_d')) + '</p><button class="btn primary" id="gb-go" style="justify-self:start">🎲 ' + esc(t('grad_b_go')) + '</button></section>' +
+        '<section class="card stack"><h2>' + esc(t('grad_rate')) + '</h2><p class="small">' + esc(t('grad_r_sit')) + '</p>' + rateSeg('gr-1', 5, GR.r1) + '<p class="small">' + esc(t('grad_r_lang')) + '</p>' + rateSeg('gr-2', 5, GR.r2) +
+        '<button class="btn primary" id="gr-save" style="justify-self:start"' + (GR.r1 == null || GR.r2 == null ? ' disabled' : '') + '>' + esc(t('grad_save')) + '</button></section>';
+    } else if (GR.part === 'c') {
+      if (GR.med < 0) GR.med = Math.floor(R() * GD.med.length);
+      var m = GD.med[GR.med];
+      html += '<section class="card stack"><h2>' + esc(t('grad_c')) + '</h2><p class="small muted">' + esc(t('grad_c_d')) + '</p><span class="eyebrow">' + esc(t(m.r === 'de-en' ? 'grad_c_dir_de' : 'grad_c_dir_en')) + '</span>' +
+        '<p>' + esc(m.sit) + '</p><blockquote class="card"' + (m.r === 'en-de' ? ' lang="en"' : '') + '>' + esc(m.src) + '</blockquote>' + (m.r === 'en-de' ? '<button class="btn" id="gc-say" style="justify-self:start">' + I.spk + esc(t('listen_again')) + '</button>' : '') +
+        '<p><b>' + esc(m.task) + '</b></p><p class="small muted">' + esc(t('grad_c_say')) + '</p>' +
+        (GR.show ? '<section class="card stack"><p' + (m.r === 'de-en' ? ' lang="en"' : '') + '>' + esc(m.model) + '</p><p class="small"><b>' + esc(t('grad_c_keys')) + '</b></p><ul class="news-ul">' + m.keys.map(function (k) { return '<li class="small">' + esc(k) + '</li>'; }).join('') + '</ul>' + (m.r === 'de-en' ? '<button class="btn" id="gc-model" style="justify-self:start">' + I.spk + esc(t('listen_again')) + '</button>' : '') + '</section>'
+          : '<button class="btn primary" id="gc-show" style="justify-self:start">' + esc(t('grad_c_show')) + '</button>') +
+        '<button class="btn ghost" id="gc-next" style="justify-self:start">🎲 ' + esc(t('grad_c_go')) + '</button></section>' +
+        '<section class="card stack"><h2>' + esc(t('grad_rate')) + '</h2><p class="small">' + esc(t('grad_r_med')) + '</p>' + rateSeg('gr-1', 10, GR.r1) +
+        '<button class="btn primary" id="gr-save" style="justify-self:start"' + (GR.r1 == null ? ' disabled' : '') + '>' + esc(t('grad_save')) + '</button></section>';
+    } else if (GR.part === 'write') {
+      if (GR.wr < 0) GR.wr = Math.floor(R() * GD.wr.length);
+      var w = GD.wr[GR.wr];
+      html += '<section class="card stack"><span class="eyebrow">D Writing · ' + esc(t('grad_wr_task')) + '</span><h2 lang="en">' + esc(w.t) + '</h2><p>' + esc(w.d) + '</p><p class="small"><b>' + esc(t('sch_write_use')) + ':</b> ' + w.words.map(function (x) { return '<span class="badge" lang="en">' + esc(x) + '</span>'; }).join(' ') + '</p>' +
+        '<textarea id="gw-txt" rows="10" lang="en" maxlength="3000" aria-label="' + esc(t('grad_wr_task')) + '">' + esc(GR.wtxt || '') + '</textarea><p class="small muted num" id="gw-wc"></p>' +
+        '<div class="row" style="flex-wrap:wrap"><button class="btn primary" id="gw-check">' + esc(t('sch_write_check')) + '</button><button class="btn ghost" id="gw-other">' + esc(t('grad_wr_other')) + '</button></div><div id="gw-res"></div></section>';
+    }
+    shell(html);
+    document.getElementById('back').onclick = function () { if (GR.part) { if (GR.tm) { clearInterval(GR.tm); GR.tm = null; } GR.part = ''; renderGrad(); } else go('school'); };
+    document.querySelectorAll('[data-gp]').forEach(function (b) { b.onclick = function () { GR.part = b.getAttribute('data-gp'); GR.r1 = GR.r2 = null; GR.show = false; GR.fq = []; renderGrad(); window.scrollTo(0, 0); }; });
+    document.querySelectorAll('[data-say]').forEach(function (b) { b.onclick = function () { speak(b.getAttribute('data-say')); }; });
+    var b;
+    if ((b = document.getElementById('gw-quiz'))) b.onclick = function () { startGradQuiz(g); };
+    if ((b = document.getElementById('gw-write'))) b.onclick = function () { GR.part = 'write'; GR.wr = -1; GR.wtxt = ''; renderGrad(); };
+    bindSeg('gr-1', function (v) { GR.r1 = +v; renderGrad(); });
+    bindSeg('gr-2', function (v) { GR.r2 = +v; renderGrad(); });
+    if ((b = document.getElementById('gr-save'))) b.onclick = function () { gradSt().sc[GR.part] = GR.part === 'c' ? GR.r1 : GR.r1 + GR.r2; markActive(); save(); toast(t('grad_saved')); GR.part = ''; renderGrad(); };
+    var sel = document.getElementById('ga-topic');
+    if (sel) {
+      sel.onchange = function () { GR.topic = sel.value === 'own:' ? 'own:' : sel.value; renderGrad(); };
+      var own = document.getElementById('ga-own'); if (own) own.onchange = function () { GR.topic = 'own:' + own.value.trim(); renderGrad(); };
+      var nt = document.getElementById('ga-notes'); nt.oninput = function () { gradSt().notes[GR.topic] = nt.value.slice(0, 1200); save(); };
+      document.getElementById('ga-timer').onclick = function () {
+        if (GR.tm) { clearInterval(GR.tm); GR.tm = null; GR.left = null; return renderGrad(); }
+        GR.left = 300; GR.tm = setInterval(function () { GR.left--; var c = document.getElementById('ga-clock'); if (c) c.textContent = C.fmtTime(GR.left * 1000); if (GR.left <= 0 || tab !== 'grad') { clearInterval(GR.tm); GR.tm = null; if (tab === 'grad') { toast('⏱ 5:00'); renderGrad(); } } }, 1000);
+        renderGrad();
+      };
+      document.getElementById('ga-fq').onclick = function () { GR.fq = C.sample(GD.fq, 3, R).map(function (q) { return q.replace(/\{t\}/g, GR.tname || 'your topic'); }); renderGrad(); speak(GR.fq[0]); };
+    }
+    if ((b = document.getElementById('gb-go'))) b.onclick = function () { var pool = []; for (var i = 0; i < U.length; i++) if (U[i].scene && (U[i].sch ? schGrade(U[i]) && schGrade(U[i]) <= g : U[i].alt)) pool.push(i); if (pool.length) runScene(pool[Math.floor(R() * pool.length)]); };
+    if ((b = document.getElementById('gc-show'))) b.onclick = function () { GR.show = true; renderGrad(); };
+    if ((b = document.getElementById('gc-next'))) b.onclick = function () { GR.med = Math.floor(R() * GD.med.length); GR.show = false; renderGrad(); };
+    if ((b = document.getElementById('gc-say'))) b.onclick = function () { speak(GD.med[GR.med].src.replace(/^["“]|["”]$/g, '')); };
+    if ((b = document.getElementById('gc-model'))) b.onclick = function () { speak(GD.med[GR.med].model); };
+    var ta = document.getElementById('gw-txt');
+    if (ta) {
+      var wc = function () { document.getElementById('gw-wc').textContent = (ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0) + ' ' + t('ex_words'); };
+      ta.oninput = function () { GR.wtxt = ta.value; wc(); }; wc();
+      document.getElementById('gw-other').onclick = function () { GR.wr = (GR.wr + 1) % GD.wr.length; GR.wtxt = ''; renderGrad(); };
+      document.getElementById('gw-check').onclick = function () {
+        var r = C.writingCheck(ta.value, GD.wr[GR.wr].words);
+        document.getElementById('gw-res').innerHTML = '<ul class="news-ul">' + r.items.map(function (it) { return '<li class="small">' + (it[1] ? '✅ ' : '⬜ ') + esc(t(it[0]).replace('{n}', it[2])) + '</li>'; }).join('') + '</ul><p><b>' + r.score + ' %</b> · ' + esc(r.score >= 80 ? t('sch_write_good') : t('sch_write_more')) + '</p>';
+        if (r.score >= 80) { addXp(20); markActive(); save(); }
+      };
+    }
+  }
+  /* Schriftliche Prüfung Teile A, B, C, E: Sätze aus den Schulpaketen bis zur eigenen Klasse, Grammatik nach Lehrplan */
+  function startGradQuiz(g) {
+    var packs = []; for (var i = 0; i < U.length; i++) { var k = U[i].sch ? schGrade(U[i]) : 0; if (k && k <= g) packs.push(i); }
+    var sl = sentencesOf(packs), gl = D.cases.filter(function (c) { var kk = c.g ? topK(c.g) : 0; return kk && kk <= g; });
+    if (sl.length < 8) return toast(t('sch_exam_none'));
+    var ss = C.shuffle(sl, R), qs = [], tag = function (q, k) { q.ask = t('grad_q_' + k) + ' · ' + q.ask; return q; };
+    ss.slice(0, 6).forEach(function (s) { qs.push(tag(schSentQ(s, sl, 'listen'), 'a')); });
+    ss.slice(6, 12).forEach(function (s) { qs.push(tag(schSentQ(s, sl, 'read'), 'b')); });
+    C.shuffle(gl, R).slice(0, 8).forEach(function (c) { qs.push(tag(qCase(c), 'c')); });
+    ss.slice(12, 16).forEach(function (s) { qs.push(tag(schSentQ(s, sl, 'mediate'), 'e')); });
+    return runGame({ title: '🎓 ' + t('grad_wr'), qs: qs, back: 'grad', rerun: function () { startGradQuiz(g); } });
+  }
   function renderWriting(i) {
     var u = U[i], W = SCH.wr && SCH.wr.i === i ? SCH.wr : (SCH.wr = { i: i, words: C.shuffle(wordsOf(i).map(function (x) { return x.w[0]; }), R).slice(0, 5), txt: '', done: false });
     var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>✍️ ' + esc(t('sch_write')) + '</h1>' +

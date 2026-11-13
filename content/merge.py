@@ -19,6 +19,7 @@ import interests  # noqa: E402
 import trail2  # noqa: E402
 import trail3  # noqa: E402
 import alltag  # noqa: E402
+import abschluss  # noqa: E402
 
 DATA = os.path.join(ROOT, 'src', 'data.json')
 D = json.load(open(DATA, encoding='utf-8'))
@@ -187,6 +188,8 @@ D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW,
 D['news'] = [{'v': v, 'date': d, 'de': n, 'en': n} for v, d, n in extras.NEWS_ALL]
 D['audio'] = {}
 D['guide'] = extras.GUIDE
+# 13.11.2026: Abschluss-Training Sek I BW (Kommunikationsprüfung + schriftliche Prüfung)
+D['grad'] = {'phr': [list(x) for x in abschluss.PHRASES], 'fq': abschluss.FOLLOWUP, 'med': abschluss.MEDIATION, 'wr': abschluss.WRITING}
 
 json.dump(D, open(DATA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f'OK  Trail 1: {len(new_r1)} Orte · Einheiten gesamt {len(D["units"])} (davon Schule {sum(1 for u in D["units"] if u.get("sch"))})')

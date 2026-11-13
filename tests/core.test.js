@@ -600,3 +600,10 @@ test('Sek I Niveaus G/E: eigene Zuordnung, Codes mit G/E, Grammatik im Duell nac
   pl.plan.filter(q => q.k === 'c').forEach(q => { const c = DATA.cases[q.i]; assert.ok(P.sek1g.t[c.g] && P.sek1g.t[c.g] <= 6, 'Grammatik zu früh für G6: ' + c.g); });
   assert.equal(DATA.school.topics.repsimple.k, 7);
 });
+
+test('Kommunikationsprüfung: Note aus Punkten wie Tabelle des KM', () => {
+  assert.equal(C.kpGrade(30), 1); assert.equal(C.kpGrade(15), 3.5); assert.equal(C.kpGrade(6), 5); assert.equal(C.kpGrade(0), 6);
+  assert.equal(C.kpGrade(99), 1); assert.equal(C.kpGrade(-3), 6);
+  assert.ok(DATA.grad.med.length >= 10 && DATA.grad.fq.length >= 10 && DATA.grad.phr.length >= 12 && DATA.grad.wr.length >= 4);
+  DATA.grad.med.forEach(m => assert.ok(['de-en', 'en-de'].includes(m.r) && m.keys.length >= 2 && m.model && m.src, 'Sprachmittlung unvollständig'));
+});

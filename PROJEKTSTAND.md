@@ -271,3 +271,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - **Werkrealschule/Hauptschule** freigeschaltet (bw-wrs, Standard Niveau G).
 - core.js: Duell-Grammatik (`cases`) jetzt nach Lehrplan des Codes (vorher immer Gymnasium-Klasse).
 - Tests: Core 62, UI 177 OK.
+
+## Release 0.17 (13.11.2026) – Abschluss-Training Sek I BW
+- Grundlage: Zentrale Prüfungsmaßstäbe Kommunikationsprüfung Pflichtfremdsprache RSAP 2025/26 (KM BW): a) Präsentation Schwerpunktthema, b) dialogisches Sprechen, c) Sprachmittlung; ca. 15 Min. je Schüler, je Teil 10 Punkte; Notentabelle 30 = 1,0 · 15 = 3,5 · 6 = 5,0 · 0 = 6,0 (→ `C.kpGrade` = 6 − Punkte/6). Schriftlich: A Listening, B Text-based Tasks, C Use of Language, D Writing, E Interpreting (150 Min.).
+- `content/abschluss.py` (eigene Texte): 16 Redemittel, 12 Nachfragen, 12 Sprachmittlungs-Situationen (DE↔EN, Muster + Kernpunkte), 4 Schreibaufgaben → `D.grad`.
+- Tab `grad` (`renderGrad`, `GR`, `gradCard` im Schulbereich für Sek-I-Pläne ab Kl. 9): Teil a mit Themenwahl (Pakete Kl. 7 bis eigene Klasse oder eigenes Thema), Stichworte (`S.grad.notes`), 5-Minuten-Timer, Nachfragen per Sprachausgabe, Selbsteinschätzung; Teil b startet eine zufällige Szene; Teil c Sprachmittlung mit Lösungsvorschlag. `S.grad.sc` → Summe + ungefähre Note. Schriftlich: `startGradQuiz` (6 A, 6 B, 8 C, 4 E) + Teil D mit `writingCheck`. Prüfungsname: Realschulabschluss / Werkrealschulabschluss (WRS Kl. 10) / Hauptschulabschluss (WRS Kl. 9).
+- perf-Budget 820 KB (index.html ~792 KB). Tests: Core 63, UI 184 OK (2×).
+- Ideen: Präsentation mit Spracherkennung/Aufnahme, Teil B mit echten Lesetexten (Buchkapitel), KI-Gesprächspartner als Prüfer (et-chat).
