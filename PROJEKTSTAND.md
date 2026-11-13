@@ -243,3 +243,24 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - **Alltags-Pakete** (content/alltag.py, 6 Pakete) für „Nach Thema“, nachgeladen über data-szlak.json.
 - Tests: UI 158 OK, Core 59. progress_lock 78 Einheiten, 1381 Wörter. progress_lock: 72 Orte/Pakete, 1285 Wörter.
 - Hinweis: Samstagsläufe 07.11. haben nichts veröffentlicht (PC nicht verbunden). Am 13.11. war der PC ebenfalls nicht verbunden → Dateien liegen fertig in /mnt/user-data/outputs/EnglishTrail und müssen auf den PC.
+
+## Release 0.14 (13.11.2026) – Realschule + Gemeinschaftsschule BW, Kamera-Knopf
+- **Schularten Realschule und Gemeinschaftsschule** aktiv (`TYPES` on, `TYPE_PLAN` → Plan `sek1`). Grundlage: gemeinsamer Bildungsplan Sekundarstufe I BW 2016, Englisch, **Niveau M** (Standards Ende Kl. 6, 9, 10). Recherche: `content/schule/RECHERCHE_BW_SEK1.md`.
+- **Gleiche Pakete und Aufgaben wie am Gymnasium** (gleiche IDs → Lernstand bleibt beim Schulart-Wechsel), nur andere Klassen-Zuordnung: `school.SEK1_PACKS` (Paket → Klasse) und `school.SEK1_TOPICS` (Thema → Klasse, `None` = nur E-Niveau, z. B. past perfect progressive). merge.py prüft, dass beide vollständig sind. Daten: `D.school.plans.sek1 = {p, t}`, `types[].plan`.
+- build.py: `bw-rs`/`bw-gms` zeigen auf **dieselbe Datei** `data-school-bw-gym.json`.
+- core.js: `schGradeOf`, `schLoOf`/`schHiOf` (Sek I: 5/6, 7/8/9, 10). Codes mit **S** statt K für Sek I: Duell `FOX-123-1-S8`, Woche `WEEK-…-2-S8`, Hausaufgabe `HA8S-P…-T…`. Gymnasium-Codes unverändert.
+- app.js: `schPlan`, `schGrade`, `topK`, `schPacks(g, plan)`, Startcheck/Gegenüber/KI-Level nach Plan. Einrichtung: **Schulform als Knöpfe sichtbar** (Bundesland weiter eingeklappt), Lehrwerke je Schulart (`books[].ty`): Realschule/GMS → Red Line (Klett, 2014), Highlight (Cornelsen BW); Wechsel der Schulart mit Sicherheitsfrage.
+- Neues Paket **s9job „Berufe, Praktikum und Bewerbung“** (Gym Kl. 9, Sek I Kl. 8; hinten angehängt).
+- **Kamera-Knopf** (Andres Frage 13.11.): Startkarte „Aktuell im Buch“ → „📷 Vokabelseite fotografieren“ öffnet direkt die Kamera (primär/blau, solange die Unit leer ist), danach Prüfen unter „Meine Wörter“. In „Meine Wörter“ steht das Foto jetzt **vor** dem Eintippen (großer Knopf).
+- SEO: `englisch-realschule-bw.html` (Dockerfile, sitemap, Links in shell.html + Footer).
+- perf-Budget 780 KB (index.html 756 KB). Tests: Core 60, UI 168 OK (2× hintereinander).
+- Offen/Idee: GMS mit Niveauwahl G/M/E (E ≈ Gymnasium-Zuordnung), Werkrealschule (Niveau G) – siehe AUTOPLAN.
+
+## Release 0.15 (13.11.2026) – Nordrhein-Westfalen, Gymnasium (G9)
+- Datenmodell verallgemeinert: `school.COMBOS` (freigeschaltete Bundesland-Schulart-Paare: bw-gym, bw-rs, bw-gms, nw-gym), `PLAN_OF` (Kombination → Plan), `BOOK_WHERE` (Lehrwerk → Kombinationen; `books[].k`). `TYPE_PLAN`/`BOOK_TYPES` aus 0.14 ersetzt. `D.school.planOf`, `D.school.combos`.
+- Plan **nw**: `NW_PACKS`, `NW_TOPICS` (alle Pakete/Themen zugeordnet, merge.py prüft). Stufen wie BW-Gymnasium (5/6, 7/8, 9/10). NRW ist schneller in der Grammatik (Relativsätze, perfect vs. past, if I in Kl. 6; Passiv, if II in Kl. 7). Recherche: `content/schule/RECHERCHE_NRW.md` (Kernlehrplan-Original noch gegenprüfen).
+- Codes mit **N** (`OWL-555-2-N7`, `WEEK-…-2-N6`, `HA6N-…`). build.py: Lazy-Dateien nur für COMBOS; nw-gym nutzt `data-school-bw-gym.json`.
+- Einrichtung: Bundesland jetzt sichtbar (nur freigeschaltete wählbar), Schulformen je Land, Lehrwerke je Land+Schulart („anderes Lehrwerk“ immer zuletzt); Wechsel des Bundeslands mit Sicherheitsfrage.
+- Lehrwerke NRW: English G Access G9, Green Line G9, Camden Town G9. SEO: `englisch-gymnasium-nrw.html`; Texte in shell.html (Beschreibung) um RS/GMS/NRW ergänzt.
+- Tests: Core 61, UI 174+.
+- Offen: Startseite arndt-software.de (homepage-Repo) Text „weitere Länder folgen“ anpassen; Bayern als nächstes Land.

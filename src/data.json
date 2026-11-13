@@ -17797,6 +17797,235 @@
    "ico": "🇿🇦"
   },
   {
+   "id": "s9job",
+   "city": "Jobs and work experience",
+   "cityDe": "Klasse 9: Berufe, Praktikum und Bewerbung",
+   "cityEn": "Jobs and work experience",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Berufe, Praktikum und Bewerbung",
+    "Berufe, Praktikum und Bewerbung"
+   ],
+   "can": [
+    "Ich kann über Berufswünsche und mein Praktikum sprechen und mich kurz auf Englisch vorstellen.",
+    "Ich kann über Berufswünsche und mein Praktikum sprechen und mich kurz auf Englisch vorstellen."
+   ],
+   "tip": [
+    "Bewerbungssätze höflich formulieren: „I would like to …“, „I am interested in …“ – und nach „interested in“ / „good at“ folgt die -ing-Form: „I am good at working in a team.“",
+    "Bewerbungssätze höflich formulieren: „I would like to …“, „I am interested in …“ – und nach „interested in“ / „good at“ folgt die -ing-Form: „I am good at working in a team.“"
+   ],
+   "fact": [
+    "In Großbritannien machen viele Jugendliche mit 15 oder 16 ein ein- bis zweiwöchiges „work experience“-Praktikum. Nebenjobs wie Zeitungen austragen sind ab 13 Jahren in kleinem Umfang erlaubt.",
+    "In Großbritannien machen viele Jugendliche mit 15 oder 16 ein ein- bis zweiwöchiges „work experience“-Praktikum. Nebenjobs wie Zeitungen austragen sind ab 13 Jahren in kleinem Umfang erlaubt."
+   ],
+   "words": [
+    [
+     "job",
+     "Job, Arbeitsstelle",
+     "Job, Arbeitsstelle"
+    ],
+    [
+     "career",
+     "Laufbahn, Karriere",
+     "Laufbahn, Karriere"
+    ],
+    [
+     "work experience",
+     "Praktikum",
+     "Praktikum"
+    ],
+    [
+     "employer",
+     "Arbeitgeber/in",
+     "Arbeitgeber/in"
+    ],
+    [
+     "employee",
+     "Angestellte/r",
+     "Angestellte/r"
+    ],
+    [
+     "application",
+     "Bewerbung",
+     "Bewerbung"
+    ],
+    [
+     "to apply for",
+     "sich bewerben um",
+     "sich bewerben um"
+    ],
+    [
+     "interview",
+     "Vorstellungsgespräch",
+     "Vorstellungsgespräch"
+    ],
+    [
+     "CV",
+     "Lebenslauf",
+     "Lebenslauf"
+    ],
+    [
+     "skills",
+     "Fähigkeiten",
+     "Fähigkeiten"
+    ],
+    [
+     "reliable",
+     "zuverlässig",
+     "zuverlässig"
+    ],
+    [
+     "to earn",
+     "verdienen",
+     "verdienen"
+    ],
+    [
+     "wage",
+     "Lohn",
+     "Lohn"
+    ],
+    [
+     "part-time",
+     "Teilzeit",
+     "Teilzeit"
+    ],
+    [
+     "apprenticeship",
+     "Ausbildung, Lehre",
+     "Ausbildung, Lehre"
+    ],
+    [
+     "customer",
+     "Kunde/Kundin",
+     "Kunde/Kundin"
+    ]
+   ],
+   "sentences": [
+    [
+     "I would like to do my work experience at a hospital.",
+     "Ich würde mein Praktikum gern in einem Krankenhaus machen.",
+     "Ich würde mein Praktikum gern in einem Krankenhaus machen."
+    ],
+    [
+     "I am interested in working with children.",
+     "Ich interessiere mich dafür, mit Kindern zu arbeiten.",
+     "Ich interessiere mich dafür, mit Kindern zu arbeiten."
+    ],
+    [
+     "She has applied for an apprenticeship as a mechanic.",
+     "Sie hat sich um eine Ausbildung als Mechanikerin beworben.",
+     "Sie hat sich um eine Ausbildung als Mechanikerin beworben."
+    ],
+    [
+     "My strengths are that I am reliable and good at maths.",
+     "Meine Stärken sind, dass ich zuverlässig und gut in Mathe bin.",
+     "Meine Stärken sind, dass ich zuverlässig und gut in Mathe bin."
+    ],
+    [
+     "He earns ten pounds an hour in his part-time job.",
+     "Er verdient in seinem Teilzeitjob zehn Pfund pro Stunde.",
+     "Er verdient in seinem Teilzeitjob zehn Pfund pro Stunde."
+    ],
+    [
+     "The interview went well – they will call me next week.",
+     "Das Vorstellungsgespräch lief gut – sie rufen mich nächste Woche an.",
+     "Das Vorstellungsgespräch lief gut – sie rufen mich nächste Woche an."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Praktikum in einem Hotel in Edinburgh. Die Managerin führt mit dir ein kurzes Gespräch am ersten Tag.",
+     "Praktikum in einem Hotel in Edinburgh. Die Managerin führt mit dir ein kurzes Gespräch am ersten Tag."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Welcome! Why did you choose a hotel for your work experience?",
+       "Willkommen! Warum hast du für dein Praktikum ein Hotel gewählt?",
+       "Willkommen! Warum hast du für dein Praktikum ein Hotel gewählt?"
+      ],
+      "opts": [
+       [
+        "Because I enjoy meeting people from other countries.",
+        "Weil ich gern Menschen aus anderen Ländern treffe.",
+        "Weil ich gern Menschen aus anderen Ländern treffe.",
+        1
+       ],
+       [
+        "Because I enjoy to meet peoples.",
+        "Weil ich genieße, Leute zu treffen.",
+        "Weil ich genieße, Leute zu treffen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Nach „enjoy“ folgt die -ing-Form.",
+       "Nach „enjoy“ folgt die -ing-Form."
+      ]
+     },
+     {
+      "npc": [
+       "Great. What are you good at?",
+       "Super. Was kannst du gut?",
+       "Super. Was kannst du gut?"
+      ],
+      "opts": [
+       [
+        "I'm good at working in a team, and I'm reliable.",
+        "Ich kann gut im Team arbeiten, und ich bin zuverlässig.",
+        "Ich kann gut im Team arbeiten, und ich bin zuverlässig.",
+        1
+       ],
+       [
+        "I good at team and reliable.",
+        "Ich gut Team und zuverlässig.",
+        "Ich gut Team und zuverlässig.",
+        0
+       ]
+      ],
+      "hint": [
+       "„I’m good at …ing“ + eine Eigenschaft.",
+       "„I’m good at …ing“ + eine Eigenschaft."
+      ]
+     },
+     {
+      "npc": [
+       "You'll work at reception today. A customer is asking for a map. What do you say?",
+       "Du arbeitest heute am Empfang. Ein Gast fragt nach einem Stadtplan. Was sagst du?",
+       "Du arbeitest heute am Empfang. Ein Gast fragt nach einem Stadtplan. Was sagst du?"
+      ],
+      "opts": [
+       [
+        "Of course – here you are. Can I help you with anything else?",
+        "Natürlich – bitte sehr. Kann ich Ihnen sonst noch helfen?",
+        "Natürlich – bitte sehr. Kann ich Ihnen sonst noch helfen?",
+        1
+       ],
+       [
+        "Map is there. Go.",
+        "Karte ist da. Geh.",
+        "Karte ist da. Geh.",
+        0
+       ]
+      ],
+      "hint": [
+       "Höflich: „Here you are“ und Hilfe anbieten.",
+       "Höflich: „Here you are“ und Hilfe anbieten."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Managerin lächelt: „Well done – you are a natural!“ Dein erster Tag läuft super.",
+     "Die Managerin lächelt: „Well done – you are a natural!“ Dein erster Tag läuft super."
+    ]
+   },
+   "pack": 1,
+   "sch": 9,
+   "ico": "💼"
+  },
+  {
    "id": "i_game",
    "city": "Gaming and streaming",
    "cityDe": "Gaming und Streaming",
@@ -29864,11 +30093,40 @@
     "s10sus",
     "s9ind",
     "s10can",
-    "s10saf"
+    "s10saf",
+    "s9job"
    ]
   }
  ],
  "news": [
+  {
+   "v": "0.15",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.",
+    "Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9."
+   ],
+   "en": [
+    "Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.",
+    "Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9."
+   ]
+  },
+  {
+   "v": "0.14",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.",
+    "Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).",
+    "Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.",
+    "Vokabeln per Foto noch schneller: Der Kamera-Knopf im Schulbereich öffnet direkt die Kamera, und unter „Meine Wörter“ steht das Foto jetzt ganz oben."
+   ],
+   "en": [
+    "Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.",
+    "Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).",
+    "Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.",
+    "Vokabeln per Foto noch schneller: Der Kamera-Knopf im Schulbereich öffnet direkt die Kamera, und unter „Meine Wörter“ steht das Foto jetzt ganz oben."
+   ]
+  },
   {
    "v": "0.13",
    "date": "2026-11-13",
@@ -30106,7 +30364,7 @@
    {
     "id": "nw",
     "name": "Nordrhein-Westfalen",
-    "on": 0
+    "on": 1
    },
    {
     "id": "rp",
@@ -30148,12 +30406,12 @@
    {
     "id": "rs",
     "name": "Realschule",
-    "on": 0
+    "on": 1
    },
    {
     "id": "gms",
     "name": "Gemeinschaftsschule",
-    "on": 0
+    "on": 1
    },
    {
     "id": "wrs",
@@ -30161,6 +30419,17 @@
     "on": 0
    }
   ],
+  "combos": [
+   "bw-gym",
+   "bw-rs",
+   "bw-gms",
+   "nw-gym"
+  ],
+  "planOf": {
+   "bw-rs": "sek1",
+   "bw-gms": "sek1",
+   "nw-gym": "nw"
+  },
   "grades": [
    5,
    6,
@@ -30172,19 +30441,65 @@
   "books": [
    {
     "id": "gl25",
-    "name": "Green Line – Ausgabe Baden-Württemberg G9 (ab 2025, Klett)"
+    "name": "Green Line – Ausgabe Baden-Württemberg G9 (ab 2025, Klett)",
+    "k": [
+     "bw-gym"
+    ]
    },
    {
     "id": "gl16",
-    "name": "Green Line – Ausgabe Baden-Württemberg (ältere Ausgabe, Klett)"
+    "name": "Green Line – Ausgabe Baden-Württemberg (ältere Ausgabe, Klett)",
+    "k": [
+     "bw-gym"
+    ]
    },
    {
     "id": "ac25",
-    "name": "Access – Baden-Württemberg G9 (ab 2025, Cornelsen)"
+    "name": "Access – Baden-Württemberg G9 (ab 2025, Cornelsen)",
+    "k": [
+     "bw-gym"
+    ]
    },
    {
     "id": "other",
     "name": "anderes Lehrwerk / weiß ich nicht"
+   },
+   {
+    "id": "rl14",
+    "name": "Red Line (Klett, Ausgabe 2014)",
+    "k": [
+     "bw-rs",
+     "bw-gms"
+    ]
+   },
+   {
+    "id": "hlbw",
+    "name": "Highlight (Cornelsen), Ausgabe Baden-Württemberg",
+    "k": [
+     "bw-rs",
+     "bw-gms"
+    ]
+   },
+   {
+    "id": "acnw",
+    "name": "English G Access G9 – Nordrhein-Westfalen (Cornelsen)",
+    "k": [
+     "nw-gym"
+    ]
+   },
+   {
+    "id": "glnw",
+    "name": "Green Line G9 – Nordrhein-Westfalen (Klett)",
+    "k": [
+     "nw-gym"
+    ]
+   },
+   {
+    "id": "ctnw",
+    "name": "Camden Town G9 – Nordrhein-Westfalen (Westermann)",
+    "k": [
+     "nw-gym"
+    ]
    }
   ],
   "topics": {
@@ -30336,6 +30651,151 @@
     "t": "Passiv mit zwei Objekten und Präpositionen",
     "k": 10
    }
+  },
+  "plans": {
+   "sek1": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6fes": 6,
+     "s6sho": 6,
+     "s6lon": 6,
+     "s6wea": 6,
+     "s7fri": 7,
+     "s7spo": 7,
+     "s7med": 7,
+     "s7rol": 8,
+     "s8tow": 8,
+     "s8usa": 8,
+     "s8env": 8,
+     "s9job": 8,
+     "s8his": 9,
+     "s9aus": 9,
+     "s9tec": 9,
+     "s10sus": 9,
+     "s9ind": 9,
+     "s9vol": 10,
+     "s9gap": 10,
+     "s10gen": 10,
+     "s10ide": 10,
+     "s10med": 10,
+     "s10can": 10,
+     "s10saf": 10
+    },
+    "t": {
+     "pres": 5,
+     "prog": 5,
+     "can": 5,
+     "quant": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "past": 6,
+     "goingto": 6,
+     "will": 6,
+     "perf": 6,
+     "comp": 6,
+     "haveto": 6,
+     "repsimple": 7,
+     "pastprog": 7,
+     "rel": 7,
+     "adv": 7,
+     "if1": 7,
+     "perfpast": 8,
+     "if2": 8,
+     "pastperf": 8,
+     "passive": 8,
+     "link": 8,
+     "tags": 8,
+     "artic": 8,
+     "reported": 9,
+     "perfprog": 9,
+     "if3": 10,
+     "advorder": 10,
+     "passive3": 10,
+     "part": 10,
+     "future": 10,
+     "gerund": 10,
+     "state": 10,
+     "passive2": 10
+    }
+   },
+   "nw": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6fes": 6,
+     "s6sho": 6,
+     "s6lon": 6,
+     "s6wea": 6,
+     "s7fri": 7,
+     "s7spo": 7,
+     "s7med": 7,
+     "s8tow": 7,
+     "s8his": 7,
+     "s8usa": 8,
+     "s8env": 8,
+     "s7rol": 8,
+     "s10can": 8,
+     "s9aus": 9,
+     "s9job": 9,
+     "s10sus": 9,
+     "s9ind": 9,
+     "s10ide": 9,
+     "s9vol": 10,
+     "s9gap": 10,
+     "s10gen": 10,
+     "s10med": 10,
+     "s9tec": 10,
+     "s10saf": 10
+    },
+    "t": {
+     "pres": 5,
+     "prog": 5,
+     "can": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "past": 6,
+     "goingto": 6,
+     "will": 6,
+     "perf": 6,
+     "perfpast": 6,
+     "comp": 6,
+     "quant": 6,
+     "haveto": 6,
+     "rel": 6,
+     "adv": 6,
+     "if1": 6,
+     "pastprog": 7,
+     "tags": 7,
+     "if2": 7,
+     "perfprog": 7,
+     "link": 7,
+     "pastperf": 7,
+     "passive": 7,
+     "gerund": 8,
+     "if3": 8,
+     "future": 8,
+     "state": 8,
+     "repsimple": 8,
+     "reported": 8,
+     "artic": 8,
+     "part": 9,
+     "passive2": 9,
+     "passive3": 9,
+     "pastperfprog": 9,
+     "advorder": 10
+    }
+   }
   }
  },
  "guide": {
@@ -30361,7 +30821,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (Gymnasium BW, Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule · NRW: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [
@@ -30502,8 +30962,8 @@
     "go": "school",
     "items": [
      [
-      "Bildungsplan BW (Gymnasium, Kl. 5–10)",
-      "Wortschatz- und Grammatikthemen je Klassenstufe."
+      "Bildungsplan BW (Gymnasium; Realschule/GMS nach Sek I, Niveau M; Kl. 5–10)",
+      "Wortschatz- und Grammatikthemen je Klassenstufe und Schulart."
      ],
      [
       "Lehrwerk",

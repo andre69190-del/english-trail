@@ -49,15 +49,16 @@ def main():
     if sch:
         lazy['units'] = [u for u in lazy['units'] if not u.get('sch')]
         files = {}
-        for st in (data.get('school') or {}).get('states', []):
-            for ty in (data.get('school') or {}).get('types', []):
-                if st.get('on') and ty.get('on'):
-                    key = st['id'] + '-' + ty['id']
-                    part = [u for u in sch if (u.get('land') or 'bw') == st['id'] and (u.get('stype') or 'gym') == ty['id']]
-                    if part:
-                        files[key] = 'data-school-%s.json' % key
-                        with open(os.path.join(ROOT, files[key]), 'w', encoding='utf-8') as f:
-                            json.dump(part, f, ensure_ascii=False, separators=(',', ':'))
+        sd = data.get('school') or {}
+        for key in sd.get('combos', []):   # 13.11.2026: nur freigeschaltete Bundesland-Schulart-Kombinationen
+            st, ty = key.split('-')
+            part = [u for u in sch if (u.get('land') or 'bw') == st and (u.get('stype') or 'gym') == ty]
+            if part:
+                files[key] = 'data-school-%s.json' % key
+                with open(os.path.join(ROOT, files[key]), 'w', encoding='utf-8') as f:
+                    json.dump(part, f, ensure_ascii=False, separators=(',', ':'))
+        for key in sd.get('combos', []):   # Kombinationen mit eigenem Lehrplan nutzen dieselben Pakete (gleiche Datei, andere Klassen-Zuordnung)
+            if key not in files and 'bw-gym' in files: files[key] = files['bw-gym']
         lazy['schoolLazy'] = files
         lazy['schoolIds'] = [u['id'] for u in sch]
     data_txt = json.dumps(lazy, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')

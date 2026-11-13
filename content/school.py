@@ -6,10 +6,15 @@
 STATES = [
   ('bw', 'Baden-Württemberg', 1), ('by', 'Bayern', 0), ('be', 'Berlin', 0), ('bb', 'Brandenburg', 0), ('hb', 'Bremen', 0),
   ('hh', 'Hamburg', 0), ('he', 'Hessen', 0), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 0),
-  ('nw', 'Nordrhein-Westfalen', 0), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
+  ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
-TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 0), ('gms', 'Gemeinschaftsschule', 0), ('wrs', 'Werkrealschule / Hauptschule', 0)]
+TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 0)]
+# 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
+# Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
+# Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym']
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'nw-gym': 'nw'}
 GRADES = [5, 6, 7, 8, 9, 10]
 # Lehrwerke für BW-Gymnasium (nur Name/Band – Unit-Struktur folgt in Phase 5)
 BOOKS = [
@@ -17,7 +22,61 @@ BOOKS = [
   ('gl16', 'Green Line – Ausgabe Baden-Württemberg (ältere Ausgabe, Klett)'),
   ('ac25', 'Access – Baden-Württemberg G9 (ab 2025, Cornelsen)'),
   ('other', 'anderes Lehrwerk / weiß ich nicht'),
+  # 13.11.2026: Lehrwerke Realschule / Gemeinschaftsschule BW (nur Name, keine Inhalte)
+  ('rl14', 'Red Line (Klett, Ausgabe 2014)'),
+  ('hlbw', 'Highlight (Cornelsen), Ausgabe Baden-Württemberg'),
+  # 13.11.2026: Gymnasium Nordrhein-Westfalen (G9)
+  ('acnw', 'English G Access G9 – Nordrhein-Westfalen (Cornelsen)'),
+  ('glnw', 'Green Line G9 – Nordrhein-Westfalen (Klett)'),
+  ('ctnw', 'Camden Town G9 – Nordrhein-Westfalen (Westermann)'),
 ]
+# Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
+BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms'], 'hlbw': ['bw-rs', 'bw-gms'],
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym']}
+
+# Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
+# Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)
+# Paket → Klasse (Themen 5/6 wie Gymnasium; 7/8/9: Einzelner in der Gruppe, Lebenswelt mit Geschichte, Arbeitswelt;
+# 10: Gemeinschaft, Übergang in die Erwachsenenwelt, regionale Identität, aktuelle Themen)
+SEK1_PACKS = {
+  's5sch': 5, 's5hom': 5, 's5hob': 5, 's5fam': 5, 's5day': 5,
+  's6fes': 6, 's6sho': 6, 's6lon': 6, 's6wea': 6,
+  's7fri': 7, 's7spo': 7, 's7med': 7,
+  's7rol': 8, 's8tow': 8, 's8usa': 8, 's8env': 8, 's9job': 8,
+  's8his': 9, 's9aus': 9, 's9tec': 9, 's10sus': 9, 's9ind': 9,
+  's9vol': 10, 's9gap': 10, 's10gen': 10, 's10ide': 10, 's10med': 10, 's10can': 10, 's10saf': 10,
+}
+# Grammatik-Thema → Klasse (Niveau M). None = im M-Niveau nicht vorgesehen (nur E) → wird nicht angezeigt.
+SEK1_TOPICS = {
+  'pres': 5, 'prog': 5, 'can': 5, 'quant': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5,
+  'past': 6, 'goingto': 6, 'will': 6, 'perf': 6, 'comp': 6, 'haveto': 6,
+  'repsimple': 7, 'pastprog': 7, 'rel': 7, 'adv': 7, 'if1': 7,
+  'perfpast': 8, 'if2': 8, 'pastperf': 8, 'passive': 8, 'link': 8, 'tags': 8, 'artic': 8,
+  'reported': 9, 'perfprog': 9,
+  'if3': 10, 'advorder': 10, 'passive3': 10, 'part': 10, 'future': 10, 'gerund': 10, 'state': 10, 'passive2': 10,
+  'pastperfprog': None,
+}
+
+# Nordrhein-Westfalen, Gymnasium G9 (Kernlehrplan Englisch Sek I Gymnasium NRW 2019: Erprobungsstufe 5/6, erste Stufe, zweite Stufe;
+# übliche Verteilung erste Stufe = 7/8, zweite Stufe = 9/10). Klassen-Zuordnung nach der Progression der G9-Lehrwerke
+# (Beispiel: schulinterner Lehrplan mit English G Access G9). NRW ist in der Grammatik schneller als BW
+# (z. B. Relativsätze, present perfect vs. simple past und if I schon in Kl. 6, Passiv und if II in Kl. 7). Quellen: content/schule/RECHERCHE_NRW.md
+NW_PACKS = {
+  's5sch': 5, 's5hom': 5, 's5hob': 5, 's5fam': 5, 's5day': 5,
+  's6fes': 6, 's6sho': 6, 's6lon': 6, 's6wea': 6,
+  's7fri': 7, 's7spo': 7, 's7med': 7, 's8tow': 7, 's8his': 7,
+  's8usa': 8, 's8env': 8, 's7rol': 8, 's10can': 8,
+  's9aus': 9, 's9job': 9, 's10sus': 9, 's9ind': 9, 's10ide': 9,
+  's9vol': 10, 's9gap': 10, 's10gen': 10, 's10med': 10, 's9tec': 10, 's10saf': 10,
+}
+NW_TOPICS = {
+  'pres': 5, 'prog': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5,
+  'past': 6, 'goingto': 6, 'will': 6, 'perf': 6, 'perfpast': 6, 'comp': 6, 'quant': 6, 'haveto': 6, 'rel': 6, 'adv': 6, 'if1': 6,
+  'pastprog': 7, 'tags': 7, 'if2': 7, 'perfprog': 7, 'link': 7, 'pastperf': 7, 'passive': 7,
+  'gerund': 8, 'if3': 8, 'future': 8, 'state': 8, 'repsimple': 8, 'reported': 8, 'artic': 8,
+  'part': 9, 'passive2': 9, 'passive3': 9, 'pastperfprog': 9,
+  'advorder': 10,
+}
 
 PACKS = []
 
@@ -1096,6 +1155,45 @@ freedom | Freiheit""",
 
 
 # Emojis für Klasse 5/6 (gleiche Reihenfolge wie die Wörter; leer = kein passendes Bild)
+# 13.11.2026: Arbeitswelt (Sek I 7/8/9 „Orientierung des Einzelnen in der Arbeitswelt“; Gymnasium 9/10) – hinten angehängt
+K(id='s9job', grade=9, ico='💼', name='Jobs and work experience', title='Berufe, Praktikum und Bewerbung',
+  can='Ich kann über Berufswünsche und mein Praktikum sprechen und mich kurz auf Englisch vorstellen.',
+  tip='Bewerbungssätze höflich formulieren: „I would like to …“, „I am interested in …“ – und nach „interested in“ / „good at“ folgt die -ing-Form: „I am good at working in a team.“',
+  fact='In Großbritannien machen viele Jugendliche mit 15 oder 16 ein ein- bis zweiwöchiges „work experience“-Praktikum. Nebenjobs wie Zeitungen austragen sind ab 13 Jahren in kleinem Umfang erlaubt.',
+  words="""job | Job, Arbeitsstelle
+career | Laufbahn, Karriere
+work experience | Praktikum
+employer | Arbeitgeber/in
+employee | Angestellte/r
+application | Bewerbung
+to apply for | sich bewerben um
+interview | Vorstellungsgespräch
+CV | Lebenslauf
+skills | Fähigkeiten
+reliable | zuverlässig
+to earn | verdienen
+wage | Lohn
+part-time | Teilzeit
+apprenticeship | Ausbildung, Lehre
+customer | Kunde/Kundin""",
+  sentences=[('I would like to do my work experience at a hospital.', 'Ich würde mein Praktikum gern in einem Krankenhaus machen.'),
+             ('I am interested in working with children.', 'Ich interessiere mich dafür, mit Kindern zu arbeiten.'),
+             ('She has applied for an apprenticeship as a mechanic.', 'Sie hat sich um eine Ausbildung als Mechanikerin beworben.'),
+             ('My strengths are that I am reliable and good at maths.', 'Meine Stärken sind, dass ich zuverlässig und gut in Mathe bin.'),
+             ('He earns ten pounds an hour in his part-time job.', 'Er verdient in seinem Teilzeitjob zehn Pfund pro Stunde.'),
+             ('The interview went well – they will call me next week.', 'Das Vorstellungsgespräch lief gut – sie rufen mich nächste Woche an.')],
+  scene=dict(intro='Praktikum in einem Hotel in Edinburgh. Die Managerin führt mit dir ein kurzes Gespräch am ersten Tag.',
+             steps=[dict(npc=('Welcome! Why did you choose a hotel for your work experience?', 'Willkommen! Warum hast du für dein Praktikum ein Hotel gewählt?'),
+                         opts=[('Because I enjoy meeting people from other countries.', 'Weil ich gern Menschen aus anderen Ländern treffe.', 1), ('Because I enjoy to meet peoples.', 'Weil ich genieße, Leute zu treffen.', 0)],
+                         hint='Nach „enjoy“ folgt die -ing-Form.'),
+                    dict(npc=('Great. What are you good at?', 'Super. Was kannst du gut?'),
+                         opts=[("I'm good at working in a team, and I'm reliable.", 'Ich kann gut im Team arbeiten, und ich bin zuverlässig.', 1), ('I good at team and reliable.', 'Ich gut Team und zuverlässig.', 0)],
+                         hint='„I’m good at …ing“ + eine Eigenschaft.'),
+                    dict(npc=("You'll work at reception today. A customer is asking for a map. What do you say?", 'Du arbeitest heute am Empfang. Ein Gast fragt nach einem Stadtplan. Was sagst du?'),
+                         opts=[("Of course – here you are. Can I help you with anything else?", 'Natürlich – bitte sehr. Kann ich Ihnen sonst noch helfen?', 1), ('Map is there. Go.', 'Karte ist da. Geh.', 0)],
+                         hint='Höflich: „Here you are“ und Hilfe anbieten.')],
+             outro='Die Managerin lächelt: „Well done – you are a natural!“ Dein erster Tag läuft super.'))
+
 EMOJI = {
   's5sch': ['🏫', '🧑‍🏫', '📚', '➗', '🏰', '🎨', '🤸', '🗓️', '⏰', '🍎', '📝', '🖍️', '📒', '✏️', '👔', '🧽'],
   's5hom': ['🏠', '🏢', '🛏️', '🍳', '🛋️', '🛁', '🌳', '⬆️', '⬇️', '👉', '👉', '⤵️', '🔙', '🐶', '🐹', '🦜'],

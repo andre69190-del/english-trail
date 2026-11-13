@@ -108,6 +108,44 @@ def main():
     page('englisch-gymnasium-bw.html', 'Englisch üben Gymnasium Baden-Württemberg Klasse 5–10 – kostenlose App',
          'Kostenlose Englisch-App für das Gymnasium in Baden-Württemberg: Wortschatz und Grammatik für Klasse 5 bis 10, Probe-Klassenarbeit, Buch-Vokabeln (Green Line, Access), Duelle. Ohne Werbung.',
          '\n'.join(b)); files.insert(0, 'englisch-gymnasium-bw.html')
+    # 13.11.2026: Realschule / Gemeinschaftsschule (Bildungsplan Sekundarstufe I, Niveau M) – eine Übersichtsseite
+    PK = {k['id']: k for k in school.PACKS}
+    b = ['<h1>Englisch üben für Realschule und Gemeinschaftsschule in Baden-Württemberg (Klasse 5–10)</h1>',
+         '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Realschule</b> oder '
+         '<b>Gemeinschaftsschule</b>, deine Klasse und dein Lehrwerk (z. B. <b>Red Line</b> von Klett oder <b>Highlight</b> von Cornelsen). '
+         'Wortschatz und Grammatik sind nach dem gemeinsamen Bildungsplan der Sekundarstufe I (mittleres Niveau M) den Klassen zugeordnet.</p>'
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
+    for g in range(5, 11):
+        pk = [PK[i] for i, kk in school.SEK1_PACKS.items() if kk == g]
+        gr = [grammar.TOPICS[t][0] for t, kk in school.SEK1_TOPICS.items() if kk == g]
+        b.append(f'<div class="box"><b>Klasse {g}</b><br>' + E(', '.join(k['title'] for k in pk)) +
+                 (f'<br><span class="muted">Grammatik: {E(", ".join(gr))}</span>' if gr else '') + '</div>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Buch-Vokabeln per Foto</b>: Vokabelseite fotografieren, die App liest die Wörter direkt auf dem Handy.</li>'
+             '<li><b>Probe-Klassenarbeit</b> mit Grammatik, Vokabeln, Hör- und Leseverstehen und Sprachmittlung.</li>'
+             '<li><b>Thema Berufe und Praktikum</b> (Orientierung in der Arbeitswelt) mit Szene und Bewerbungssätzen.</li>'
+             '<li><b>Wochen-Challenge, Live-Duell und Hausaufgaben-Code</b> für die ganze Klasse – ohne Anmeldung.</li>'
+             '<li>Keine Käufe, keine Werbung, kein Streak-Druck.</li></ul><a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-realschule-bw.html', 'Englisch üben Realschule und Gemeinschaftsschule Baden-Württemberg Klasse 5–10 – kostenlose App',
+         'Kostenlose Englisch-App für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wortschatz und Grammatik nach Bildungsplan Sek I, Klasse 5 bis 10, Vokabeln per Foto (Red Line, Highlight), Probe-Klassenarbeit. Ohne Werbung.',
+         '\n'.join(b)); files.insert(1, 'englisch-realschule-bw.html')
+    # 13.11.2026: Gymnasium Nordrhein-Westfalen (G9)
+    b = ['<h1>Englisch üben für das Gymnasium in Nordrhein-Westfalen (G9, Klasse 5–10)</h1>',
+         '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Nordrhein-Westfalen</b>, deine Klasse und dein Lehrwerk '
+         '(z. B. <b>English G Access G9</b> von Cornelsen, <b>Green Line G9</b> von Klett oder <b>Camden Town G9</b> von Westermann). '
+         'Wortschatz und Grammatik sind nach dem Kernlehrplan Englisch für das Gymnasium (Erprobungsstufe, erste und zweite Stufe) den Klassen zugeordnet.</p>'
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
+    for g in range(5, 11):
+        pk = [PK[i] for i, kk in school.NW_PACKS.items() if kk == g]
+        gr = [grammar.TOPICS[t][0] for t, kk in school.NW_TOPICS.items() if kk == g]
+        b.append(f'<div class="box"><b>Klasse {g}</b><br>' + E(', '.join(k['title'] for k in pk)) +
+                 (f'<br><span class="muted">Grammatik: {E(", ".join(gr))}</span>' if gr else '') + '</div>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Buch-Vokabeln per Foto</b>: Vokabelseite fotografieren, die App liest die Wörter direkt auf dem Handy.</li>'
+             '<li><b>Probe-Klassenarbeit</b> mit Grammatik, Vokabeln, Hör- und Leseverstehen und Sprachmittlung.</li>'
+             '<li><b>Wochen-Challenge, Live-Duell und Hausaufgaben-Code</b> für die ganze Klasse – ohne Anmeldung.</li>'
+             '<li>Keine Käufe, keine Werbung, kein Streak-Druck.</li></ul><a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-gymnasium-nrw.html', 'Englisch üben Gymnasium NRW G9 Klasse 5–10 – kostenlose App',
+         'Kostenlose Englisch-App für das Gymnasium in Nordrhein-Westfalen (G9): Wortschatz und Grammatik nach Kernlehrplan, Klasse 5 bis 10, Vokabeln per Foto (Access, Green Line, Camden Town), Probe-Klassenarbeit. Ohne Werbung.',
+         '\n'.join(b)); files.insert(2, 'englisch-gymnasium-nrw.html')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
           f'  <url><loc>{SITE}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     sm += [f'  <url><loc>{SITE}{f}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' for f in files]

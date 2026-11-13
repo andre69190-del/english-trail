@@ -557,3 +557,34 @@ test('Wortliste teilen: Link kodieren und lesen (Umlaute, Sonderzeichen)', () =>
   assert.equal(JSON.stringify(d.words[2]), JSON.stringify(['bridge', 'Brücke']));
   assert.equal(C.wordShareDecode('kaputt'), null); assert.equal(C.wordShareDecode(''), null);
 });
+
+test('Realschule/GMS (Sek I): Codes mit S, eigene Klassen-Zuordnung, Gymnasium-Codes unverändert', () => {
+  assert.equal(C.schLoOf(8), 7); assert.equal(C.schLoOf(10), 9);
+  assert.equal(C.schLoOf(6, 'sek1'), 5); assert.equal(C.schLoOf(9, 'sek1'), 7); assert.equal(C.schLoOf(10, 'sek1'), 10);
+  assert.equal(C.schHiOf(8, 'sek1'), 9); assert.equal(C.schHiOf(8), 8);
+  const u = DATA.units.find(x => x.id === 's9job'); assert.ok(u, 'Arbeitswelt-Paket fehlt');
+  assert.equal(C.schGradeOf(DATA, u, ''), 9); assert.equal(C.schGradeOf(DATA, u, 'sek1'), 8);
+  assert.equal(C.schGradeOf(DATA, { id: 'x' }, 'sek1'), 0);
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'sek1') >= 5, 'Sek-I-Klasse fehlt: ' + x.id));
+  const d = C.duelParse('fox 123 1 s7'); assert.equal(d.code, 'FOX-123-1-S7'); assert.equal(d.plan, 'sek1'); assert.equal(d.grade, 7);
+  assert.equal(C.duelParse('FOX-123-1-K7').plan, '');
+  assert.ok(/-S8$/.test(C.duelNewCode(() => 0.5, '1', 8, 'sek1'))); assert.ok(/-K8$/.test(C.duelNewCode(() => 0.5, '1', 8)));
+  const g = C.duelPlan(DATA, 'FOX-123-1-K8'), s = C.duelPlan(DATA, 'FOX-123-1-S8');
+  assert.ok(g && s); assert.notEqual(g.check, s.check);
+  assert.ok(/-2-S9$/.test(C.weekChallengeCode('2026-11-13', 9, 'sek1'))); assert.ok(/-2-K9$/.test(C.weekChallengeCode('2026-11-13', 9)));
+  const h = C.hwParse(C.hwCode(7, 5, 3, 'sek1')); assert.equal(h.plan, 'sek1'); assert.equal(h.code, 'HA7S-P5-T3');
+  assert.equal(C.hwParse('HA7-P5-T3').plan, '');
+});
+
+test('NRW Gymnasium: eigene Klassen-Zuordnung, Codes mit N', () => {
+  const u = DATA.units.find(x => x.id === 's8usa'), v = DATA.units.find(x => x.id === 's8his');
+  assert.equal(C.schGradeOf(DATA, u, 'nw'), 8); assert.equal(C.schGradeOf(DATA, v, 'nw'), 7);
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'nw') >= 5, 'NRW-Klasse fehlt: ' + x.id));
+  assert.equal(C.schLoOf(8, 'nw'), 7); assert.equal(C.schLoOf(10, 'nw'), 9);
+  assert.equal(C.duelParse('owl-555-2-n7').code, 'OWL-555-2-N7'); assert.equal(C.duelParse('OWL-555-2-N7').plan, 'nw');
+  assert.notEqual(C.duelPlan(DATA, 'OWL-555-2-N7').check, C.duelPlan(DATA, 'OWL-555-2-K7').check);
+  assert.ok(/-2-N6$/.test(C.weekChallengeCode('2026-11-13', 6, 'nw')));
+  const h = C.hwParse(C.hwCode(6, 3, 9, 'nw')); assert.equal(h.plan, 'nw'); assert.equal(h.code, 'HA6N-P3-T9');
+  assert.ok(DATA.school.combos.includes('nw-gym')); assert.equal(DATA.school.planOf['nw-gym'], 'nw');
+  assert.ok(DATA.school.books.filter(b => (b.k || []).includes('nw-gym')).length >= 2);
+});

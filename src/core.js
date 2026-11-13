@@ -239,19 +239,33 @@
   var DUEL_DIFFS = ['easy', 'medium', 'hard'];
   var DUEL_WEIGHT = { '1': 1, '2': 1.5, '3': 2, 'P1': 2, 'P2': 2.5, 'P3': 3 };
   /* English Trail: optional „-K7“ = nur Schulstoff der Klasse 7 (Gymnasium BW) – gleiche Fragen für alle mit diesem Code */
-  function duelNewCode(r, level, grade) {
+  /* 13.11.2026: „-S7“ = Schulstoff Klasse 7 nach Bildungsplan Sekundarstufe I (Realschule, Gemeinschaftsschule) */
+  /* 13.11.2026: Lehrplan im Code: K = Gymnasium BW, S = Sekundarstufe I BW (Realschule/GMS), N = Gymnasium NRW */
+  var PLAN_L = { sek1: 'S', nw: 'N' }, L_PLAN = { S: 'sek1', N: 'nw' };
+  function planLetter(plan) { return PLAN_L[plan] || 'K'; }
+  function duelNewCode(r, level, grade, plan) {
     r = r || Math.random;
     var w = DUEL_WORDS[Math.floor(r() * DUEL_WORDS.length)], n = 100 + Math.floor(r() * 900);
     var lv = DUEL_WEIGHT[String(level).toUpperCase()] ? String(level).toUpperCase() : '1';
-    return w + '-' + n + '-' + lv + (grade >= 5 && grade <= 10 ? '-K' + grade : '');
+    return w + '-' + n + '-' + lv + (grade >= 5 && grade <= 10 ? '-' + planLetter(plan) + grade : '');
   }
+  /* Klasse eines Schulpakets je Bildungsplan (ohne Plan = Gymnasium = u.sch); 0 = in diesem Plan nicht vorgesehen */
+  function schGradeOf(data, u, plan) {
+    if (!u || !u.sch) return 0;
+    if (!plan) return u.sch;
+    var P = data && data.school && data.school.plans && data.school.plans[plan];
+    return P && P.p && P.p[u.id] ? P.p[u.id] : 0;
+  }
+  /* Erste Klasse der Standardstufe: Gymnasium 5/6, 7/8, 9/10 – Sekundarstufe I 5/6, 7/8/9, 10 */
+  function schLoOf(g, plan) { if (plan === 'sek1') return g <= 6 ? 5 : g <= 9 ? 7 : 10; return g - ((g - 5) % 2); }
+  function schHiOf(g, plan) { if (plan === 'sek1') return g <= 6 ? 6 : g <= 9 ? 9 : 10; return schLoOf(g) + 1; }
   function duelWeight(lv) { return DUEL_WEIGHT[String(lv)] || 1; }
   function duelParse(str) {
     var c = String(str || '').toUpperCase().replace(/[\s_.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?K(5|6|7|8|9|10))?$/);
+    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSN])(5|6|7|8|9|10))?$/);
     if (!m) return null;
-    var n = +m[4], lv = m[3] + n, k = m[5] ? +m[5] : 0;
-    return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-K' + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k };
+    var n = +m[4], lv = m[3] + n, k = m[6] ? +m[6] : 0, pl = k ? (L_PLAN[m[5]] || '') : '';
+    return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-' + planLetter(pl) + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k, plan: pl };
   }
   /* Prüfzeichen über die sprachunabhängige Fragen-Signatur: beide Handys müssen dasselbe zeigen */
   function duelCheck(sig) { return ('0000' + hash(String(sig)).toString(36).toUpperCase()).slice(-4); }
@@ -289,9 +303,9 @@
       shuffle(pq, r).slice(0, 20).forEach(function (x) { var q = data.polacy[x[0]][x[1]]; plan.push({ k: 'q', c: x[0], i: x[1], opts: shuffle([q.a].concat(q.o), r) }); });
       return { code: pc.code, base: pc.base, lv: pc.lv, level: pc.level, pol: true, diff: pc.diff, plan: plan, check: duelCheck(JSON.stringify(plan)) };
     }
-    var words = [], K = pc.grade, KLO = K ? K - ((K - 5) % 2) : 0;
+    var words = [], K = pc.grade, KLO = K ? schLoOf(K, pc.plan) : 0;
     /* nur Trail 1 (ohne Pakete) bzw. mit „-K“ nur die Schulpakete des Doppeljahrgangs: neue Inhalte ändern die Duell-Fragen nicht */
-    data.units.forEach(function (u, ui) { if (K ? !(u.sch >= KLO && u.sch <= K) : (u.r || u.pack)) return; u.words.forEach(function (w, wi) { words.push([ui, wi]); }); });
+    data.units.forEach(function (u, ui) { var ug = K ? schGradeOf(data, u, pc.plan) : 0; if (K ? !(ug >= KLO && ug <= K) : (u.r || u.pack)) return; u.words.forEach(function (w, wi) { words.push([ui, wi]); }); });
     var W = function (x) { return data.units[x[0]].words[x[1]]; };
     var keys = function (w) { return ['p' + norm(w[0]), 'd' + norm(w[1]), 'e' + norm(w[2])]; };
     var idx = function (n) { var a = []; for (var k = 0; k < n; k++) a.push(k); return a; };
@@ -481,16 +495,16 @@
   /* Live-Duell: Wer bekommt den Punkt? 1 = ich, -1 = Gegner, 0 = keiner. Nur richtige Antworten zählen, dann die schnellere;
      bei exakt gleicher Zeit entscheidet die kleinere Spieler-ID – so rechnen beide Handys dasselbe Ergebnis aus. */
   /* Hausaufgaben-Code (E): Klasse + Pakete + Grammatikthemen als Bitmasken (Reihenfolge der Daten ist nur anhängend) */
-  function hwCode(grade, packMask, topicMask) {
+  function hwCode(grade, packMask, topicMask, plan) {
     if (!packMask && !topicMask) return null;
-    return 'HA' + grade + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
+    return 'HA' + grade + (PLAN_L[plan] || '') + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
   }
   function hwParse(code) {
-    var m = /^HA(5|6|7|8|9|10)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
+    var m = /^HA(5|6|7|8|9|10)([SN]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
     if (!m) return null;
-    var g = +m[1], pm = parseInt(m[2], 36), tm = parseInt(m[3], 36);
+    var g = +m[1], pl = L_PLAN[m[2]] || '', pm = parseInt(m[3], 36), tm = parseInt(m[4], 36);
     if (!(pm || tm) || isNaN(pm) || isNaN(tm)) return null;
-    return { grade: g, pm: pm, tm: tm, code: hwCode(g, pm, tm) };
+    return { grade: g, plan: pl, pm: pm, tm: tm, code: hwCode(g, pm, tm, pl) };
   }
   function maskOf(list, picked) { var m = 0; list.forEach(function (x, i) { if (picked.indexOf(x) >= 0) m += Math.pow(2, i); }); return m; }
   function fromMask(list, m) { return list.filter(function (x, i) { return Math.floor(m / Math.pow(2, i)) % 2 === 1; }); }
@@ -529,9 +543,9 @@
     return String(myId) < String(oppId) ? 1 : -1;
   }
   /* English Trail: Wochen-Challenge der Klasse – die ganze Woche (Mo–So) derselbe Code für alle in dieser Klasse */
-  function weekChallengeCode(todayKey, grade) {
+  function weekChallengeCode(todayKey, grade, plan) {
     var mon = parseDay(weekKey(todayKey)), base = new Date(2026, 0, 5), idx = Math.round((mon - base) / 864e5 / 7);
-    return 'WEEK-' + (100 + ((idx % 900) + 900) % 900) + '-2-K' + grade;
+    return 'WEEK-' + (100 + ((idx % 900) + 900) % 900) + '-2-' + planLetter(plan) + grade;
   }
   /* English Trail: Vokabelliste einfügen – „word = Wort“, „word - Wort“, „word<TAB>Wort“ oder „word; Wort“, eine pro Zeile */
   function parseWordList(txt) {
@@ -707,7 +721,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

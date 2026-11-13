@@ -282,6 +282,8 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.15', '2026-11-13', ['Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.', 'Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9.']),
+  ('0.14', '2026-11-13', ['Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.', 'Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).', 'Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.', 'Vokabeln per Foto noch schneller: Der Kamera-Knopf im Schulbereich öffnet direkt die Kamera, und unter „Meine Wörter“ steht das Foto jetzt ganz oben.']),
   ('0.13', '2026-11-13', ['Trail 3 (B1) ist da: 12 neue Orte vom Giant’s Causeway bis zum Ben Nevis – mit if-Sätzen, Passiv, indirekter Rede, Relativsätzen und mehr. Passt zu Klasse 8–10.', 'Schule: Gib an, bei welcher Unit ihr im Buch gerade seid – der Schulbereich startet dann mit dieser Unit. Wähle die Grammatik der Unit aus und übe sie zusammen mit deinen Wörtern.', 'Nach Thema: 6 neue Alltags-Pakete – Bahn und Flugzeug, Beim Arzt, Im Restaurant, Im Hotel, Hilfe und Notfälle, Am Telefon.', 'Vokabellisten teilen: Deine eingetragene Unit-Liste als Link an die Klasse schicken – die anderen übernehmen sie mit einem Tipp.', 'Neu unter Üben: Prüfungstraining Cambridge – A2 Key oder B1 Preliminary mit Hören, Grammatik, Lesen, Schreiben und Sprechen.', 'Neues Buch: „The Raven’s Key“ – an jedem Ort von Trail 3 liest du ein Kapitel auf Englisch und löst Fragen dazu.', 'Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.', 'English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.', 'Vorbereitung für weitere Bundesländer und Schularten.']),
   ('0.12', '2026-11-06', ['Schule einrichten geht schneller: nur noch Klasse und Buch wählen.', 'Neu: Startcheck „Wie fit bin ich?“ – 20 kurze Aufgaben, danach zeigt dir die App, was du wiederholen solltest. Keine Note!', 'Klasse oder Buch vertan? Unter „Ändern“ wechseln – mit Sicherheitsfrage, deine Wörter und Ergebnisse bleiben erhalten.', 'Buch-Vokabeln: Unit jetzt per Knopf wählen (Welcome, Unit 1–6, Extra).']),
   ('0.11', '2026-11-02', ['Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).', 'Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.', 'Selbst schreiben lohnt sich: Für je 5 selbst geschriebene Wörter gibt es eine Extra-Feder für „Mein Rabe“.']),
@@ -305,7 +307,7 @@ GUIDE = {
     ['12 Orte', 'Von London bis Dublin – jeder Ort hat ein Thema, Wörter, Sätze und eine kleine Szene.'],
     ['Brief von Emma', 'Nach jedem Ort kannst du einen Satz mehr lesen. Rabe Rufus bringt ihn dir.'],
     ['Orts-Prüfung', 'Wenn die Wörter sitzen, schaltest du den nächsten Ort frei.']]},
-  {'ico': '🎒', 't': 'Schule (Gymnasium BW, Klasse 5–10)', 'go': 'school', 'items': [
+  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule · NRW: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
     ['Stoff deiner Klasse', 'Wortschatz-Pakete und Grammatik passend zum Bildungsplan.'],
     ['Startcheck', 'Wie fit bist du für deine Klasse? Danach weißt du, was du wiederholen solltest.'],
     ['Deine Buch-Vokabeln', 'Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste.'],
@@ -338,7 +340,7 @@ GUIDE = {
  ],
  'adults': [
   {'ico': '📚', 't': 'Was das Kind lernt', 'go': 'school', 'items': [
-    ['Bildungsplan BW (Gymnasium, Kl. 5–10)', 'Wortschatz- und Grammatikthemen je Klassenstufe.'],
+    ['Bildungsplan BW (Gymnasium; Realschule/GMS nach Sek I, Niveau M; Kl. 5–10)', 'Wortschatz- und Grammatikthemen je Klassenstufe und Schulart.'],
     ['Lehrwerk', 'Green Line, Access oder andere Bücher auswählen; eigene Unit-Vokabeln eintragen.'],
     ['Bericht für Eltern', 'Im Schulbereich: Wochenüberblick (Übungstage, neue Wörter, Probe-Note, knifflige Wörter) zum Teilen.'],
     ['Klassenarbeits-Training', 'Probe-Arbeit mit Hörverstehen, Leseverstehen, Sprachmittlung und Note.']]},

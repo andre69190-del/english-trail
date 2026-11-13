@@ -108,8 +108,18 @@ for k in school.PACKS:
     D['units'].append(u)
 D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.STATES],
                'types': [{'id': i, 'name': n, 'on': a} for i, n, a in school.TYPES],
-               'grades': school.GRADES, 'books': [{'id': i, 'name': n} for i, n in school.BOOKS],
-               'topics': {g: {'t': n, 'k': kk} for g, (n, kk) in grammar.TOPICS.items()}}
+               'combos': school.COMBOS, 'planOf': school.PLAN_OF,
+               'grades': school.GRADES,
+               'books': [dict({'id': i, 'name': n}, **({'k': school.BOOK_WHERE[i]} if i in school.BOOK_WHERE else {})) for i, n in school.BOOKS],
+               'topics': {g: {'t': n, 'k': kk} for g, (n, kk) in grammar.TOPICS.items()},
+               # 13.11.2026: Sekundarstufe I (Realschule, Gemeinschaftsschule) – andere Klassen-Zuordnung derselben Pakete/Themen
+               'plans': {'sek1': {'p': school.SEK1_PACKS, 't': {k: v for k, v in school.SEK1_TOPICS.items() if v}},
+                         'nw': {'p': school.NW_PACKS, 't': {k: v for k, v in school.NW_TOPICS.items() if v}}}}
+_ids = {k['id'] for k in school.PACKS}
+assert set(school.SEK1_PACKS) == _ids, ('SEK1_PACKS unvollständig', _ids ^ set(school.SEK1_PACKS))
+assert set(school.SEK1_TOPICS) == set(grammar.TOPICS), ('SEK1_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.SEK1_TOPICS))
+assert set(school.NW_PACKS) == _ids, ('NW_PACKS unvollständig', _ids ^ set(school.NW_PACKS))
+assert set(school.NW_TOPICS) == set(grammar.TOPICS), ('NW_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.NW_TOPICS))
 
 # Schule: Interessen-Pakete (frei wählbar) – Einheiten mit "pack": 1 und "int": 1
 D['units'] = [u for u in D['units'] if not u.get('int')]
