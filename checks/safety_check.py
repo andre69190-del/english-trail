@@ -28,6 +28,9 @@ for m in re.finditer(r'\bfetch\s*\(([^,)]*)', js):
         mp = re.search(a + r" = '([^']+)'", js)
         if mp and not re.match(r'^[a-z0-9_-]+(/[a-z0-9_-]+)?\.json$', mp.group(1)): fail.append('POL_URL ist kein relativer Pfad: %s' % mp.group(1))
         continue
+    if a == 'schUrl':   # 0.13: Schulpakete je Land/Schulart – nur relative Dateien data-school-<land>-<art>.json
+        if "/^data-school-[a-z]+-[a-z]+\\.json$/.test(schUrl)" not in js: fail.append('schUrl wird nicht auf data-school-*.json geprüft')
+        continue
     fail.append('Netzwerkaufruf an fremdes Ziel: fetch(%s)' % a[:40])
 mu = re.search(r"SB_URL = '([^']+)'", js)
 if mu and mu.group(1) != 'https://supabase.arndt-software.de': fail.append('SB_URL zeigt nicht auf den eigenen Server')

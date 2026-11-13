@@ -177,7 +177,7 @@ with sync_playwright() as p:
     page.click('[data-mode="themes"]'); page.wait_for_selector('[data-th]')
     (ok if page.locator('[data-th]').count() >= 5 else bad)('Nach Thema: Themenliste')
     page.click('[data-th="schule"]'); page.wait_for_selector('[data-tu]')
-    (ok if page.locator('[data-tu]').count() == 25 else bad)('Thema Schule: 25 Lernpakete (Klassen 5–10)')
+    (ok if page.locator('[data-tu]').count() == 28 else bad)('Thema Schule: 28 Lernpakete (Klassen 5–10)')
     page.click('[data-mode="themelearn"]'); (ok if play_through(page) else bad)('Thema: neue Wörter')
     page.click('#home'); page.wait_for_selector('[data-tu]'); (ok if page.locator('h1').inner_text().startswith('Schule') else bad)('Zurück landet im Thema')
     page.click('[data-mode="themeq"]'); (ok if play_through(page) else bad)('Thema üben')
@@ -246,6 +246,41 @@ with sync_playwright() as p:
     (ok if page.evaluate("() => window.PSApp.state().wrOk") >= 1 else bad)('Selbst schreiben zählt für Extra-Federn')
     page.evaluate("() => { window.PSApp.go('practice'); }")
     page.evaluate("() => { const s = window.PSApp.state(); s.input = s._inp; delete s._inp; }")
+
+    # Trail 3: Buchkapitel lesen
+    page.evaluate("() => { window.PSApp.go('read', window.PSApp.data().units.findIndex(u => u.id === 'gcw')); }"); page.wait_for_timeout(300)
+    (ok if 'Emma had always loved old books' in page.inner_text('main') else bad)('Trail 3: Kapitel 1 von „The Raven’s Key“ lesbar')
+    page.evaluate("() => window.PSApp.go('practice')")
+    (ok if page.locator('[data-mode="exam"]').count() else bad)('Prüfungstraining Cambridge als Kachel')
+    def exam_run(lv):
+        page.evaluate("() => window.PSApp.go('exam')"); page.wait_for_selector('#ex-lv')
+        page.click('#ex-lv [data-v="%s"]' % lv); page.click('#ex-go')
+        for _ in range(40):
+            if page.locator('#ex-rcheck').count():
+                for qi in range(page.locator('.rd-q').count()): page.locator('.rd-q').nth(qi).locator('.opt').first.click()
+                page.click('#ex-rcheck')
+            elif page.locator('#ex-txt').count() and page.locator('#ex-wcheck').count():
+                page.fill('#ex-txt', 'Hi Sam, last weekend I went to the cinema with my friends because it was raining. Next weekend I am visiting my grandma. Could you come with me? It would be fun. See you soon, best wishes, Lea')
+                page.click('#ex-wcheck')
+            elif page.locator('[data-r]').count():
+                page.locator('[data-r]').first.click(); break
+            elif page.locator('[data-o]:not([disabled])').count():
+                page.locator('[data-o]').first.click()
+            if page.locator('#ex-next').count(): page.click('#ex-next')
+            page.wait_for_timeout(40)
+        page.wait_for_timeout(150)
+        return page.evaluate("(lv) => window.PSApp.state().cam && window.PSApp.state().cam[lv]", lv), page.inner_text('main')
+    r, txt = exam_run('a2')
+    (ok if r and r.get('n') == 1 and 'Cambridge' in txt and 'Lesen' in txt else bad)('Prüfungstraining A2 Key komplett (%s)' % (r and r.get('best')))
+    r, txt = exam_run('b1')
+    (ok if r and r.get('n') == 1 else bad)('Prüfungstraining B1 Preliminary komplett (%s)' % (r and r.get('best')))
+    (ok if not any(w in txt for w in ['Zdane', 'certyfikat', 'Pozdrawiam']) else bad)('Prüfungstraining ohne polnische Reste')
+
+    # Alltags-Pakete in „Nach Thema“
+    page.evaluate("() => window.PSApp.go('themes', 'notfall')"); page.wait_for_timeout(300)
+    (ok if 'Notfälle' in page.inner_text('main') and 'Telefon' in page.inner_text('main') else bad)('Thema Notfall und Telefon mit Alltags-Paketen')
+    ix = page.evaluate("() => window.PSApp.data().units.findIndex(u => u.id === 'a_rest')")
+    page.evaluate("(i) => window.PSApp.startMode('scene', i)", ix); (ok if play_through(page) else bad)('Alltags-Paket Restaurant: Szene spielbar')
 
     # Mein Rabe (C): Federn nur aus XP/Raben, freischalten, bleibt gespeichert
     page.evaluate("() => { const s = window.PSApp.state(); s._xp = s.xp; s.xp = 150; s._kr = s.krasnale; s.krasnale = []; window.PSApp.go('album'); }")
@@ -399,9 +434,16 @@ with sync_playwright() as p:
     # ---------- English Trail: Schulmodus (BW Gymnasium) ----------
     sx = b.new_context(viewport={'width': 375, 'height': 812}); sp = sx.new_page(); sp.on('pageerror', lambda e: errors.append(str(e)))
     sp.goto(URL); sp.wait_for_selector('#ob-go')
+    (ok if not sp.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['bw-gym']); }") else bad)('Ohne Schule: Schulpakete werden nicht geladen')
     sp.click('#ob-why [data-v="school"]'); sp.click('#ob-go'); sp.wait_for_selector('#sc-st', state='attached')
+    (ok if sp.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['bw-gym']); }") else bad)('Schule gewählt: Pakete für BW-Gymnasium nachgeladen')
     (ok if sp.locator('#sc-st option[value="by"][disabled]').count() == 1 else bad)('Schule: andere Bundesländer noch gesperrt (bald)')
-    sp.click('#sc-g [data-v="7"]'); sp.select_option('#sc-bk', 'gl25'); sp.click('#sc-save'); sp.wait_for_selector('#sc-exam')
+    sp.click('#sc-g [data-v="7"]'); sp.select_option('#sc-bk', 'gl25'); sp.click('#sc-cu [data-v="Unit 2"]'); sp.click('#sc-save'); sp.wait_for_selector('#sc-exam')
+    (ok if 'aktuell im buch' in sp.inner_text('main').lower() and sp.evaluate("() => window.PSApp.state().school.unit") == 'Unit 2' else bad)('Schule: aktuelle Unit im Buch wählbar (Unit 2)')
+    sp.locator('[data-ug]').first.click(); sp.wait_for_timeout(150); sp.locator('[data-su="Unit 2"]').first.click(); sp.wait_for_selector('.game')
+    (ok if sp.evaluate("() => window.PSApp.game().qs.length") >= 3 else bad)('Unit 2 üben: startet mit der gewählten Grammatik (auch ohne eigene Wörter)')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#cu-next'); sp.click('#cu-next'); sp.wait_for_timeout(100)
+    (ok if sp.evaluate("() => window.PSApp.state().school.unit") == 'Unit 3' else bad)('Weiter zur nächsten Unit')
     (ok if sp.locator('#sc-check').count() and 'Willkommen in Klasse 7' in sp.inner_text('main') else bad)('Nach der Einrichtung: Startcheck wird angeboten')
     sp.click('#sc-check'); sp.wait_for_selector('.game'); nq = sp.evaluate("() => window.PSApp.game().qs.length")
     play_through(sp, 300); sp.wait_for_timeout(200)
@@ -441,6 +483,18 @@ with sync_playwright() as p:
     (ok if 'library = Bibliothek' in got and 'timetable = Stundenplan' in got and got.count('\n') >= 4 else bad)('Vokabeln per Foto erkannt (%d Zeilen)' % (got.count('\n') + 1))
     n0 = sp.evaluate("() => window.PSApp.state().custom.length"); sp.fill('#mw-u', 'Unit 9'); sp.click('#mw-bulk-go'); sp.wait_for_timeout(200)
     (ok if sp.evaluate("() => window.PSApp.state().custom.filter(w => w[3] === 'Unit 9').length") >= 5 else bad)('Foto-Vokabeln mit Unit gespeichert')
+    # Wortliste per Link teilen und in einem anderen Browser übernehmen
+    sp.evaluate("() => { window._sh = ''; navigator.share = undefined; navigator.clipboard.writeText = (x) => { window._sh = x; return Promise.resolve(); }; window.PSApp.go('school'); }")
+    sp.wait_for_selector('[data-wshare="Unit 9"]'); sp.click('[data-wshare="Unit 9"]'); sp.wait_for_timeout(200)
+    link = sp.evaluate("() => window._sh || ''")
+    m = __import__('re').search(r'#w=[A-Za-z0-9_-]+', link)
+    (ok if m else bad)('Wortliste teilen erzeugt Link')
+    if m:
+        wx = b.new_context(viewport={'width': 375, 'height': 812}); wp = wx.new_page(); wp.goto(URL + m.group(0)); wp.wait_for_selector('#ws-ok')
+        nprev = wp.locator('.list .li').count(); wp.click('#ws-ok'); wp.wait_for_timeout(200)
+        got = wp.evaluate("() => window.PSApp.state().custom.filter(w => w[3] === 'Unit 9').length")
+        (ok if nprev >= 5 and got == nprev else bad)('Geteilte Liste übernommen (%d Wörter, Unit 9)' % got)
+        wx.close()
     sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#par-txt')
     sp.evaluate("() => { window._sh = []; navigator.share = undefined; }")
     sp.click('#hw-make'); sp.wait_for_timeout(150); hcode = sp.inner_text('#hw-out').split()[-1]

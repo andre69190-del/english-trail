@@ -979,6 +979,122 @@ advantage | Vorteil""",
              outro='Die Jury nickt. Dein Team gewinnt die Runde!'))
 
 
+# 13.11.2026: weitere englischsprachige Länder für Klasse 9/10 (nur anhängen)
+K(id='s9ind', grade=9, ico='🇮🇳', name='India', title='Indien',
+  can='Ich kann über Indien sprechen – Sprachen, Geschichte, Alltag und Indiens Rolle in der Welt.',
+  tip='In Indien ist Englisch eine wichtige Verkehrssprache neben Hindi. Indisches Englisch hat eigene Wörter, z. B. „prepone“ (vorverlegen).',
+  fact='Indien hat über 1,4 Milliarden Einwohner und 22 offiziell anerkannte Sprachen. 1947 wurde es von Großbritannien unabhängig – auch dank Mahatma Gandhis gewaltfreiem Widerstand.',
+  words="""population | Bevölkerung
+independence | Unabhängigkeit
+colony | Kolonie
+non-violence | Gewaltlosigkeit
+religion | Religion
+festival of lights | Lichterfest (Diwali)
+cricket | Cricket
+spices | Gewürze
+crowded | überfüllt
+megacity | Megastadt
+call centre | Callcenter
+IT industry | IT-Branche
+poverty | Armut
+to develop | (sich) entwickeln
+official language | Amtssprache
+diverse | vielfältig""",
+  sentences=[('India became independent in 1947.', 'Indien wurde 1947 unabhängig.'),
+             ('Gandhi believed in non-violence.', 'Gandhi glaubte an Gewaltlosigkeit.'),
+             ('Mumbai is one of the most crowded cities in the world.', 'Mumbai ist eine der am dichtesten besiedelten Städte der Welt.'),
+             ('English is used as a common language in business.', 'Englisch wird im Geschäftsleben als gemeinsame Sprache verwendet.'),
+             ('Diwali is celebrated with lights and sweets.', 'Diwali wird mit Lichtern und Süßigkeiten gefeiert.'),
+             ("India's IT industry has grown very fast.", 'Indiens IT-Branche ist sehr schnell gewachsen.')],
+  scene=dict(intro='Videocall mit deiner Partnerklasse in Bengaluru. Priya zeigt dir ihr Klassenzimmer.',
+             steps=[dict(npc=('How many languages do you speak at home?', 'Wie viele Sprachen sprecht ihr zu Hause?'),
+                         opts=[('Only German – how about you?', 'Nur Deutsch – und ihr?', 1), ('I speaks two languages.', 'Ich spricht zwei Sprachen.', 0)],
+                         hint='Zurückfragen: How about you?'),
+                    dict(npc=('We speak Kannada, Hindi and English. English is used at school.', 'Wir sprechen Kannada, Hindi und Englisch. In der Schule wird Englisch benutzt.'),
+                         opts=[("That's amazing! India is really diverse.", 'Unglaublich! Indien ist wirklich vielfältig.', 1), ('That is diverse language one.', 'Das ist vielfältig Sprache eins.', 0)],
+                         hint='Reagieren mit einem Adjektiv aus der Lektion.'),
+                    dict(npc=('Next week we celebrate Diwali. Do you have a festival of lights?', 'Nächste Woche feiern wir Diwali. Habt ihr auch ein Lichterfest?'),
+                         opts=[('Kind of – at Christmas we put lights everywhere.', 'So ähnlich – an Weihnachten hängen wir überall Lichter auf.', 1), ('Yes, we celebrate cricket.', 'Ja, wir feiern Cricket.', 0)],
+                         hint='Vergleich mit einem eigenen Fest.')],
+             outro='Priya schickt dir ein Foto von bunten Öllampen: „Happy Diwali!“'))
+
+K(id='s10can', grade=10, ico='🇨🇦', name='Canada', title='Kanada',
+  can='Ich kann über Kanada sprechen – Zweisprachigkeit, Natur, First Nations und Einwanderung.',
+  tip='Kanadisches Englisch mischt britische Schreibweise („colour“) mit amerikanischen Wörtern („truck“). Und ja: „eh?“ hört man wirklich.',
+  fact='Kanada ist das zweitgrößte Land der Erde, hat aber nur rund 40 Millionen Einwohner. Englisch und Französisch sind Amtssprachen; die Ureinwohner nennen sich First Nations, Inuit und Métis.',
+  words="""bilingual | zweisprachig
+French-speaking | französischsprachig
+First Nations | First Nations (indigene Völker)
+residential school | Internatsschule (für indigene Kinder)
+reconciliation | Versöhnung
+immigration | Einwanderung
+multicultural | multikulturell
+wilderness | Wildnis
+maple syrup | Ahornsirup
+ice hockey | Eishockey
+province | Provinz
+vast | riesig / weit
+to apologize | sich entschuldigen
+to welcome | willkommen heißen
+refugee | Geflüchtete/r
+identity | Identität""",
+  sentences=[('Canada is a bilingual country.', 'Kanada ist ein zweisprachiges Land.'),
+             ('Quebec is the largest French-speaking province.', 'Quebec ist die größte französischsprachige Provinz.'),
+             ('The government apologized for the residential schools.', 'Die Regierung entschuldigte sich für die Internatsschulen.'),
+             ('Canada has welcomed many refugees.', 'Kanada hat viele Geflüchtete aufgenommen.'),
+             ('Toronto is one of the most multicultural cities in the world.', 'Toronto ist eine der multikulturellsten Städte der Welt.'),
+             ('Most Canadians live close to the US border.', 'Die meisten Kanadier leben nahe der Grenze zu den USA.')],
+  scene=dict(intro='Austauschjahr in Vancouver. Deine Gastschwester Maya erklärt dir den ersten Schultag.',
+             steps=[dict(npc=('Our school starts every morning with a land acknowledgement.', 'Unsere Schule beginnt jeden Morgen mit einer Anerkennung des Landes der Ureinwohner.'),
+                         opts=[('What does that mean exactly?', 'Was bedeutet das genau?', 1), ('I acknowledge land tomorrow.', 'Ich erkenne Land morgen an.', 0)],
+                         hint='Nachfragen, wenn man etwas nicht kennt.'),
+                    dict(npc=('We say that the school is on the land of the First Nations who lived here first.', 'Wir sagen, dass die Schule auf dem Land der First Nations steht, die zuerst hier lebten.'),
+                         opts=[("That's an important part of reconciliation, isn't it?", 'Das ist ein wichtiger Teil der Versöhnung, oder?', 1), ('That is a maple syrup.', 'Das ist Ahornsirup.', 0)],
+                         hint='question tag: isn’t it?'),
+                    dict(npc=('Exactly. And after school – ice hockey or French class?', 'Genau. Und nach der Schule – Eishockey oder Französischkurs?'),
+                         opts=[("Ice hockey! I've never played it before.", 'Eishockey! Das habe ich noch nie gespielt.', 1), ('French hockey class.', 'Französisch Hockey Klasse.', 0)],
+                         hint='present perfect: I’ve never …')],
+             outro='Am Abend gibt es Pancakes mit echtem Ahornsirup. Maya grinst: „Welcome to Canada, eh?“'))
+
+K(id='s10saf', grade=10, ico='🇿🇦', name='South Africa', title='Südafrika',
+  can='Ich kann über Südafrika sprechen – Apartheid, Nelson Mandela, die „Regenbogennation“ und heutige Herausforderungen.',
+  tip='Südafrika hat 12 Amtssprachen, darunter Englisch, Afrikaans, isiZulu und isiXhosa. „Ubuntu“ bedeutet etwa: Ich bin, weil wir sind.',
+  fact='Nelson Mandela saß 27 Jahre im Gefängnis, weil er gegen die Apartheid kämpfte. 1994 wurde er der erste schwarze Präsident Südafrikas.',
+  words="""apartheid | Apartheid (Rassentrennung)
+segregation | Trennung / Segregation
+equality | Gleichberechtigung
+human rights | Menschenrechte
+prison | Gefängnis
+to fight for | kämpfen für
+to vote | wählen
+election | Wahl
+rainbow nation | Regenbogennation
+township | Township (Wohnsiedlung)
+inequality | Ungleichheit
+unemployment | Arbeitslosigkeit
+wildlife | Tierwelt
+safari | Safari
+to forgive | vergeben
+freedom | Freiheit""",
+  sentences=[('Apartheid separated people because of their skin colour.', 'Die Apartheid trennte Menschen wegen ihrer Hautfarbe.'),
+             ('Nelson Mandela was in prison for 27 years.', 'Nelson Mandela war 27 Jahre im Gefängnis.'),
+             ('In 1994 everybody was allowed to vote for the first time.', '1994 durften zum ersten Mal alle wählen.'),
+             ('Mandela chose to forgive instead of taking revenge.', 'Mandela entschied sich zu vergeben, statt sich zu rächen.'),
+             ('Inequality is still a big problem today.', 'Ungleichheit ist bis heute ein großes Problem.'),
+             ('South Africa is called the rainbow nation.', 'Südafrika wird Regenbogennation genannt.')],
+  scene=dict(intro='Kapstadt, Robben Island. Ein ehemaliger Häftling führt Besucher durch das Gefängnis, in dem Nelson Mandela saß.',
+             steps=[dict(npc=('This was Mandela’s cell. How do you feel standing here?', 'Das war Mandelas Zelle. Wie fühlst du dich, wenn du hier stehst?'),
+                         opts=[("It's hard to imagine spending 18 years in such a small room.", 'Es ist schwer vorstellbar, 18 Jahre in so einem kleinen Raum zu verbringen.', 1), ('I feel prison.', 'Ich fühle Gefängnis.', 0)],
+                         hint='Gefühle mit „It’s hard to imagine …“ ausdrücken.'),
+                    dict(npc=('Why do you think he forgave the people who put him here?', 'Warum, glaubst du, hat er den Menschen vergeben, die ihn hier eingesperrt haben?'),
+                         opts=[('Maybe he knew that peace was only possible without revenge.', 'Vielleicht wusste er, dass Frieden nur ohne Rache möglich war.', 1), ('Because he forgave yesterday.', 'Weil er gestern vergab.', 0)],
+                         hint='Begründete Vermutung: Maybe he knew that …'),
+                    dict(npc=('And what problems does South Africa still have?', 'Und welche Probleme hat Südafrika noch?'),
+                         opts=[('There is still a lot of inequality and unemployment.', 'Es gibt immer noch viel Ungleichheit und Arbeitslosigkeit.', 1), ('It has a rainbow problem.', 'Es hat ein Regenbogenproblem.', 0)],
+                         hint='Wörter aus der Lektion: inequality, unemployment.')],
+             outro='Zum Abschied sagt er: „Ubuntu – I am because we are.“'))
+
+
 # Emojis für Klasse 5/6 (gleiche Reihenfolge wie die Wörter; leer = kein passendes Bild)
 EMOJI = {
   's5sch': ['🏫', '🧑‍🏫', '📚', '➗', '🏰', '🎨', '🤸', '🗓️', '⏰', '🍎', '📝', '🖍️', '📒', '✏️', '👔', '🧽'],

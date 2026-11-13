@@ -32,6 +32,28 @@
     if (!s3Wait) s3Wait = fetch(S3_URL).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(addUnits, function (e) { s3Wait = null; throw e; });
     s3Wait.then(function () { if (cb) cb(); }, function () {});
   }
+  /* 0.13: Schulpakete nur für das gewählte Bundesland + Schulart laden (data-school-bw-gym.json …), hinten anhängen */
+  var schWait = {};
+  function schoolKey() { var sc = S.school || {}; return (sc.state || 'bw') + '-' + (sc.type || 'gym'); }
+  function schoolReady(key) { key = key || schoolKey(); return !RAW.schoolLazy || !RAW.schoolLazy[key] || !!(RAW.schoolHave && RAW.schoolHave[key]); }
+  function needsSchoolData() {
+    if (!RAW.schoolLazy) return false;
+    if (S.school && S.school.grade) return true;
+    var ids = {}; (RAW.schoolIds || []).forEach(function (i) { ids[i] = 1; });
+    return Object.keys(S.cards || {}).some(function (k) { return ids[k.split(':')[0]]; }) || Object.keys(S.boss || {}).some(function (k) { return ids[k]; });
+  }
+  function needSchool(cb, quiet, key) {
+    key = key || schoolKey();
+    if (schoolReady(key)) { if (cb) cb(); return; }
+    var schUrl = RAW.schoolLazy[key];
+    if (!/^data-school-[a-z]+-[a-z]+\.json$/.test(schUrl)) { if (cb) cb(); return; }   /* nur eigene, relative Dateien */
+    if (!schWait[key]) schWait[key] = fetch(schUrl).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(function (arr) {
+      var have = {}; RAW.units.forEach(function (x) { have[x.id] = 1; });
+      RAW.units = RAW.units.concat(arr.filter(function (x) { return x && x.id && !have[x.id]; }));
+      RAW.schoolHave = RAW.schoolHave || {}; RAW.schoolHave[key] = 1; loadData(); fixUnlock();
+    }, function (e) { schWait[key] = null; throw e; });
+    schWait[key].then(function () { if (cb) cb(); }, function () { if (!quiet) toast(t('lazy_fail')); });
+  }
   function needPolacy(cb, quiet) {
     if (RAW.polacy) return cb();
     if (!polWait) polWait = fetch(POL_URL).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(function (j) { RAW.polacy = j; loadData(); }, function (e) { polWait = null; throw e; });
@@ -170,6 +192,10 @@
       sw_title: 'Selbst schreiben', sw_d: 'Alle Wörter, die du schon kennst – selbst eintippen. Bringt Extra-Federn für deinen Raben!', sw_few: 'Lerne erst ein paar Wörter – dann kannst du sie hier selbst schreiben.', sw_first: 'Anfangsbuchstabe', sw_end: 'Selbst geschrieben: {p} % richtig. Schreiben merkt man sich am besten!', wm_title: 'Schreib-Moment!', wm_d: 'Dieses Wort kennst du schon – schreib es diesmal selbst.', wm_set: 'Ab und zu ein bekanntes Wort selbst schreiben (empfohlen)',
       sch_where: 'Schule:', sch_where_chg: 'weitere Bundesländer und Schularten folgen', sch_conf_t: 'Wirklich wechseln?', sch_conf_d: 'Von {a} zu {b}. Danach siehst du die Pakete, Grammatik und Probe-Arbeiten der neuen Auswahl.', sch_conf_keep: 'Keine Sorge: Deine Wörter, Buch-Vokabeln, Ergebnisse und Federn bleiben erhalten. Du kannst jederzeit zurückwechseln.', sch_conf_yes: 'Ja, wechseln', sch_conf_no: 'Abbrechen',
       chk_title: 'Startcheck', chk_d: 'Wie fit bist du für Klasse {g}? 20 kurze Aufgaben aus allem bis jetzt – danach weißt du, was sich zu wiederholen lohnt. Keine Note.', chk_new: 'Willkommen in Klasse {g}! Mach den kurzen Startcheck – dann zeigt dir die App, was du wiederholen solltest. Dauert ca. 5 Minuten, keine Note.', chk_go: 'Startcheck machen', chk_later: 'Später', chk_weak: 'Das lohnt sich zu wiederholen:', chk_practice: 'üben', chk_all_ok: 'Super – in allen Grammatik-Themen warst du sicher!', chk_again: 'Startcheck wiederholen', chk_res: 'Startcheck: {p} % richtig · {n} Themen zum Wiederholen (siehe Schulbereich)',
+      ex_lv_a2: 'A2 Key: passt zu Klasse 7–8 und Trail 2.', ex_lv_b1: 'B1 Preliminary: passt zu Klasse 9–10 und Trail 3.', ex_a2_cards: 'Emmas Postkarten', ex_w_len_a2: 'mindestens 25 Wörter', ex_w_len_b1: 'etwa 100 Wörter (mindestens 80)',
+      sch_cu: 'Wo seid ihr gerade im Buch?', sch_cu_d: 'Freiwillig. Dann startet der Schulbereich mit deiner aktuellen Unit, und neue Wörter landen automatisch dort.', sch_cu_now: 'Aktuell im Buch', sch_cu_n: '{n} Wörter eingetragen', sch_cu_empty: 'Noch keine Wörter für diese Unit – fotografiere die Vokabelseite oder trag sie ein.', sch_cu_go: '{u} üben', sch_cu_photo: 'Vokabeln per Foto', sch_cu_next: 'Wir sind jetzt bei {u} →', sch_cu_set: 'Aktuelle Unit: {u}',
+      sch_cu_gram: 'Welche Grammatik kommt in dieser Unit vor?', sch_cu_gram_d: 'Schau im Buch auf die Grammatik-Seite der Unit und tippe die Themen an. „Unit üben“ mischt dann deine Wörter mit genau dieser Grammatik.',
+      ws_share: 'Liste teilen', ws_note: 'Teilen schickt deine selbst eingetragene Liste als Link (z. B. in den Klassenchat). Bitte nur privat teilen – keine Listen aus dem Internet weiterverbreiten.', ws_msg: 'Meine Englisch-Vokabeln {u} ({n} Wörter) für English Trail:', ws_in_t: 'Wortliste übernehmen', ws_in_d: 'Jemand hat dir {n} Wörter geschickt (Unit: {u}). Prüfe die Liste und übernimm sie in „Meine Wörter“.', ws_in_note: 'Die Liste kommt nur aus dem Link – nichts wird hochgeladen. Doppelte Wörter werden übersprungen.', ws_in_ok: 'Übernehmen',
       gd_title: 'Was kann English Trail?', gd_kids: 'Für Kinder', gd_adults: 'Für Eltern & Lehrkräfte', gd_open: 'Alles ansehen', gd_try: 'Ausprobieren', gd_sch_d: 'Alle Spiele, Duelle und Hilfen auf einen Blick.', rep_pick: 'Was ist los? Tippe an (Text ist freiwillig):', rep_c1: 'Übersetzung falsch', rep_c2: 'Tippfehler', rep_c3: 'Aussprache klingt komisch', rep_c4: 'Viel zu schwer', rep_c5: 'Etwas funktioniert nicht', rep_oops: 'Ups, da hat etwas nicht geklappt. Unter „Fehler melden“ kannst du es uns sagen.',
       news: 'Was ist neu', news_new: 'Neu in dieser Version', news_all: 'Alle Neuerungen ansehen', news_ver: 'Version',
       boss_locked: 'Die Prüfung öffnet, wenn alle Wörter gefestigt sind ({r} von {n}).',
@@ -177,9 +203,9 @@
       inst_mac: 'Mac mit Safari: Menü Ablage → „Zum Dock hinzufügen“. Mac mit Chrome oder Edge: Installieren-Symbol rechts in der Adressleiste. Danach startet English Trail wie ein eigenes Programm.', sync_err_mail: 'Das Konto konnte gerade nicht angelegt werden: Der Server kann keine Bestätigungs-Mail senden. Bitte später noch einmal versuchen – wir kümmern uns darum.',
       bk_title: 'Dein Fortschritt ist sicher', bk_d_local: 'Die App sichert deinen Stand automatisch auf diesem Gerät (die letzten 7 Tage und vor jedem Update). Zurückholen fügt nur hinzu – es geht nie etwas verloren.', bk_d_acc: 'Dein Stand liegt auf diesem Gerät, in automatischen Sicherungen (7 Tage, vor jedem Update) und zusätzlich auf dem Server. Zurückholen fügt nur hinzu – es geht nie etwas verloren.', bk_acc_tip: 'Tipp: Mit einem kostenlosen Konto ist dein Fortschritt auch sicher, wenn das Handy verloren geht.', bk_now: 'Jetzt', bk_words: 'Wörter', bk_cities: 'Städte geschafft', bk_list: 'Automatische Sicherungen', bk_get: 'Zurückholen', bk_get_d: 'Zurückholen führt die Sicherung mit deinem jetzigen Stand zusammen: Es kommt nur dazu, was fehlt.', bk_file: 'Als Datei speichern', bk_load: 'Datei laden', bk_w_auto: 'automatisch', bk_w_update: 'vor Update', bk_w_reset: 'vor Neustart', bk_w_restore: 'vor Zurückholen', bk_w_sync: 'vor erstem Abgleich', save_full: 'Der Speicher des Browsers ist voll. Bitte „Als Datei speichern“ nutzen oder ein Konto anlegen.', rescue_repaired: 'Dein Spielstand war beschädigt und wurde repariert.', rescue_backup: 'Dein Spielstand fehlte oder war beschädigt – die letzte Sicherung wurde geladen.', rescue_lost: 'Dein Spielstand war beschädigt. Das Original ist aufbewahrt – bitte melde dich über „Problem melden“.',
       beta_d: 'Neu – wird gerade von einer Muttersprachlerin geprüft.', rd_tile: 'Kapitel lesen', rd_tile_d: 'Ein Kapitel aus Emmas Buch, mit Fragen', rd_new: 'Neues Kapitel', rd_card_d: '{n} von {t} Kapiteln gelesen. Jede Stadt auf Trail 3 schaltet ein neues Kapitel frei.', rd_open: 'Kapitel {n} lesen', rd_chapter: 'Kapitel', rd_listen: 'Ganzes Kapitel vorlesen', rd_tr: 'Übersetzung zeigen', rd_hint: 'Tipp: Tippe auf einen Satz – er wird vorgelesen und übersetzt.', rd_q: 'Hast du alles verstanden?', rd_perfect: 'Alles verstanden – super!', rd_ok: 'Gut! Lies die Stelle noch einmal nach.', rd_talk: 'Über das Kapitel sprechen',
-      ex_title: 'B1-Probeprüfung', ex_tile_d: 'Fünf Teile wie die echte Prüfung – ohne Stress', ex_start_btn: 'Zur B1-Probeprüfung', ex_intro: 'Wie weit bist du auf dem Weg zu B1? Die Probeprüfung hat fünf Teile wie die staatliche Prüfung – nur kürzer, ohne Zeitdruck und mit Rückmeldung sofort. Jedes Mal kommen andere Aufgaben.', ex_p_listen: 'Hören', ex_p_gram: 'Grammatik', ex_p_read: 'Lesen', ex_p_write: 'Schreiben', ex_p_speak: 'Sprechen', ex_pd_listen: '5 Sätze hören und verstehen', ex_pd_gram: '6 Lücken mit der richtigen Form', ex_pd_read: 'ein kurzer Text mit Fragen', ex_pd_write: 'eine kurze Nachricht oder E-Mail', ex_pd_speak: 'eine Minute frei sprechen', ex_note: 'Bestanden: im Schnitt mindestens 60 % und jeder Teil mindestens 50 %. Dauer etwa 15 Minuten.', ex_passed_once: 'schon bestanden', ex_tries: 'Versuche', ex_go: 'Los geht’s', ex_l_ask: 'Hör zu: Was bedeutet der Satz?', ex_g_ask: 'Welche Form passt in die Lücke?', ex_words: 'Wörter',
-      ex_w_len: 'mindestens 30 Wörter', ex_w_hi: 'Anrede (z. B. Hello, Hi, Dear Sir or Madam)', ex_w_ask: 'eine Frage oder Bitte', ex_w_bye: 'Gruß am Ende (z. B. Pozdrawiam)', ex_w_gram: 'Vergangenheit oder Konditional und ein Verbindungswort (bo, ale, że …)', ex_ai_fix: 'Text von der KI korrigieren lassen', ex_ai_login: 'Mit Konto kann die KI deinen Text korrigieren.', ex_ai_sc: 'Bitte korrigiere meinen Text Satz für Satz und erkläre kurz die Fehler.', ex_ai_open: 'Wklej swój tekst, a ja go poprawię.', ex_s_how: 'Sprich laut etwa eine Minute (5–8 Sätze) – allein, mit jemandem oder im KI-Gespräch. Danach schätzt du dich ehrlich ein.', ex_s_ai: 'Mit der KI sprechen', ex_s_rate: 'Wie ist es gelaufen?', ex_s_r1: 'Ich habe eine Minute gesprochen, fast ohne Pausen', ex_s_r2: 'Es ging, mit ein paar Pausen und Lücken', ex_s_r3: 'Schwierig – nur einzelne Sätze',
-      ex_result: 'Ergebnis', ex_pass: 'Zdane! Bestanden!', ex_fail: 'Noch nicht ganz – aber du bist auf dem Weg!', ex_pass_d: 'Gratulacje! Das ist eine Probeprüfung der App, kein offizielles Zertifikat – aber ein richtig gutes Zeichen. Probier es ruhig noch einmal mit neuen Aufgaben.', ex_tip_listen: 'Tipp: Hören übst du am besten mit den Szenen und dem Radio-Link der Städte – und mit „Langsam sprechen“ aus.', ex_tip_gram: 'Tipp: Die Grammatik-Lücken kommen aus „Fälle“ und „Aspekt“. Ein paar Runden davon helfen sofort.', ex_tip_read: 'Tipp: Lies die Kapitel aus Emmas Buch zuerst ohne Übersetzung.', ex_tip_write: 'Tipp: Achte auf Anrede, Bitte oder Frage, Gruß – und schreib mindestens 30 Wörter.', ex_tip_speak: 'Tipp: Erledige die Sprech-Missionen der Städte – am besten mit echten Menschen.', ex_disclaimer: 'Hinweis: Die echte staatliche Prüfung (certyfikatpolski.pl) ist länger und anders bewertet.',
+      ex_title: 'Prüfungstraining Cambridge', ex_tile_d: 'A2 Key oder B1 Preliminary üben – fünf Teile, ohne Stress', ex_start_btn: 'Zum Prüfungstraining', ex_intro: 'Trainiere für die Cambridge-Prüfungen, die viele Schulen anbieten: Hören, Grammatik, Lesen, Schreiben, Sprechen – kürzer als echt, ohne Zeitdruck und mit Rückmeldung sofort. Jedes Mal andere Aufgaben.', ex_p_listen: 'Hören', ex_p_gram: 'Grammatik', ex_p_read: 'Lesen', ex_p_write: 'Schreiben', ex_p_speak: 'Sprechen', ex_pd_listen: '5 Sätze hören und verstehen', ex_pd_gram: '6 Lücken mit der richtigen Form', ex_pd_read: 'ein kurzer Text mit Fragen', ex_pd_write: 'eine kurze Nachricht oder E-Mail', ex_pd_speak: 'eine Minute frei sprechen', ex_note: 'Bestanden: im Schnitt mindestens 60 % und jeder Teil mindestens 50 %. Dauer etwa 15 Minuten.', ex_passed_once: 'schon bestanden', ex_tries: 'Versuche', ex_go: 'Los geht’s', ex_l_ask: 'Hör zu: Was bedeutet der Satz?', ex_g_ask: 'Welche Form passt in die Lücke?', ex_words: 'Wörter',
+      ex_w_len: 'mindestens 30 Wörter', ex_w_hi: 'Anrede oder Einstieg (z. B. Hi Sam, Dear …)', ex_w_ask: 'alle Punkte der Aufgabe: Frage, Vorschlag oder Meinung', ex_w_bye: 'Schluss (z. B. Best wishes, See you soon)', ex_w_gram: 'Verbindungswörter (because, but, so …) und Vergangenheit', ex_ai_fix: 'Text von der KI korrigieren lassen', ex_ai_login: 'Mit Konto kann die KI deinen Text korrigieren.', ex_ai_sc: 'Bitte korrigiere meinen Text Satz für Satz und erkläre kurz die Fehler.', ex_ai_open: 'Paste your text and I will correct it.', ex_s_how: 'Sprich laut etwa eine Minute (5–8 Sätze) – allein, mit jemandem oder im KI-Gespräch. Danach schätzt du dich ehrlich ein.', ex_s_ai: 'Mit der KI sprechen', ex_s_rate: 'Wie ist es gelaufen?', ex_s_r1: 'Ich habe eine Minute gesprochen, fast ohne Pausen', ex_s_r2: 'Es ging, mit ein paar Pausen und Lücken', ex_s_r3: 'Schwierig – nur einzelne Sätze',
+      ex_result: 'Ergebnis', ex_pass: 'Geschafft!', ex_fail: 'Noch nicht ganz – aber du bist auf dem Weg!', ex_pass_d: 'Super! Das ist ein Training der App, kein offizielles Ergebnis – aber ein richtig gutes Zeichen. Probier es ruhig noch einmal mit neuen Aufgaben.', ex_tip_listen: 'Tipp: Hören übst du am besten mit den Szenen und dem Radio-Link der Städte – und mit „Langsam sprechen“ aus.', ex_tip_gram: 'Tipp: Die Grammatik-Lücken kommen aus der Zeiten-Werkstatt und dem Schulbereich. Ein paar Runden helfen sofort.', ex_tip_read: 'Tipp: Lies Emmas Postkarten und die Kapitel aus „The Raven’s Key“ erst ohne Übersetzung.', ex_tip_write: 'Tipp: Beantworte alle Punkte der Aufgabe, nutze Verbindungswörter (because, but, so) und achte auf die Wortzahl.', ex_tip_speak: 'Tipp: Erledige die Sprech-Missionen der Orte – am besten mit echten Menschen.', ex_disclaimer: 'Hinweis: Die echten Cambridge-Prüfungen (cambridgeenglish.org) sind länger und werden anders bewertet. Alle Aufgaben hier sind eigene Übungen der App.',
       vs_src: 'Stimme der App', vs_dev: 'Gerät', vs_d: 'Die eingebauten Stimmen sind natürliche englische Stimmen (kostenlos, offen lizenziert). Sie sprechen alle Wörter, Sätze, Szenen und Buchkapitel. Ohne Netz oder bei freien Antworten spricht dein Gerät.', vs_on_d: 'Alle Wörter, Sätze, Szenen und Kapitel kommen jetzt von dieser Stimme. Was sie nicht kennt (z. B. KI-Antworten) oder offline noch nicht geladen ist, spricht die Gerätestimme.', vs_test: 'Probehören', vs_dev_more: 'Gerätestimme für alles andere:',
       due_city: 'Fällige Wörter wiederholen', due_none_city: 'In dieser Stadt ist heute kein Wort fällig – morgen wieder.', more_review: 'Fällige Wörter wiederholen', more_pre: 'Schon vorlernen: {c}', more_wait: '{c} ist für heute gefestigt – morgen geht es dort weiter. Bis dahin zählt alles hier auch.', more_title: 'Mehr für heute', more_d: 'Alles hier bringt dich weiter: Fällige Wörter machen Wörter „sicher“, neue Wörter der nächsten Stadt kannst du schon vorlernen – sie festigen sich dann parallel.',
       sure_title: 'Wie sicher sind die Wörter?', sure_ok: 'sicher', sure_build: 'im Aufbau', sure_new: 'neu', sure_tomorrow: 'morgen', sure_next: 'Nächste Wiederholung: {d}. Vorher kannst du gern üben – das hilft dem Gedächtnis, gibt aber noch keinen Punkt.', sure_d: 'Sicher (4 Punkte) wird ein Wort, wenn du es an mehreren Tagen mit wachsendem Abstand richtig weißt: nach 1, 2 und 4 Tagen. Einen Punkt gibt es nur, wenn das Wort dran ist – auch nach bestandener Prüfung. Fällige Wörter aus allen Städten findest du unter „Wiederholen“.',
@@ -306,6 +332,10 @@
       sw_title: 'Write it yourself', sw_d: 'All the words you already know – no choices, just type them', sw_few: 'Learn a few words first – then you can write them here yourself.', sw_first: 'First letter', sw_end: 'Written yourself: {p} % right. Writing helps you remember best!', wm_title: 'Writing moment!', wm_d: 'You already know this word – write it yourself this time.', wm_set: 'Now and then write a known word yourself (recommended)',
       sch_where: 'School:', sch_where_chg: 'more states and school types will follow', sch_conf_t: 'Really change?', sch_conf_d: 'From {a} to {b}. Afterwards you will see the packs, grammar and practice tests of the new choice.', sch_conf_keep: 'Don’t worry: your words, textbook vocabulary, results and feathers are kept. You can switch back any time.', sch_conf_yes: 'Yes, change', sch_conf_no: 'Cancel',
       chk_title: 'Start check', chk_d: 'How fit are you for year {g}? 20 short tasks from everything so far – afterwards you know what is worth revising. No mark.', chk_new: 'Welcome to year {g}! Take the short start check – then the app shows you what to revise. Takes about 5 minutes, no mark.', chk_go: 'Take the start check', chk_later: 'Later', chk_weak: 'Worth revising:', chk_practice: 'practise', chk_all_ok: 'Great – you were sure in all grammar topics!', chk_again: 'Repeat start check', chk_res: 'Start check: {p} % right · {n} topics to revise (see school area)',
+      ex_lv_a2: 'A2 Key: fits years 7–8 and Trail 2.', ex_lv_b1: 'B1 Preliminary: fits years 9–10 and Trail 3.', ex_a2_cards: 'Emma’s postcards', ex_w_len_a2: 'at least 25 words', ex_w_len_b1: 'about 100 words (at least 80)',
+      sch_cu: 'Where are you in your book right now?', sch_cu_d: 'Optional. The school area then starts with your current unit, and new words go there automatically.', sch_cu_now: 'Current unit', sch_cu_n: '{n} words added', sch_cu_empty: 'No words for this unit yet – take a photo of the vocabulary page or type them in.', sch_cu_go: 'Practise {u}', sch_cu_photo: 'Words from a photo', sch_cu_next: 'We are now at {u} →', sch_cu_set: 'Current unit: {u}',
+      sch_cu_gram: 'Which grammar is in this unit?', sch_cu_gram_d: 'Look at the grammar page of the unit in your book and tap the topics. “Practise unit” then mixes your words with exactly this grammar.',
+      ws_share: 'Share list', ws_note: 'Sharing sends your own list as a link (e.g. in the class chat). Please share privately only.', ws_msg: 'My English words {u} ({n} words) for English Trail:', ws_in_t: 'Add a word list', ws_in_d: 'Someone sent you {n} words (unit: {u}). Check the list and add it to “My words”.', ws_in_note: 'The list comes only from the link – nothing is uploaded. Duplicates are skipped.', ws_in_ok: 'Add',
       gd_title: 'What can English Trail do?', gd_kids: 'For kids', gd_adults: 'For parents & teachers', gd_open: 'See everything', gd_try: 'Try it', gd_sch_d: 'All games, duels and helpers at a glance.', rep_pick: 'What is wrong? Tap one (text is optional):', rep_c1: 'Wrong translation', rep_c2: 'Typo', rep_c3: 'Pronunciation sounds odd', rep_c4: 'Far too hard', rep_c5: 'Something does not work', rep_oops: 'Oops, something went wrong. Use “Report a mistake” to tell us.',
       news: 'What’s new', news_new: 'New in this version', news_all: 'See all updates', news_ver: 'Version',
       boss_locked: 'The test opens once all words are consolidated ({r} of {n}).',
@@ -599,7 +629,7 @@
   function render(arg) {
     applyTheme();
     var jw = C.weekKey(today()); if (S.jokerWeek !== jw) { S.jokers = { five0: 3, freeze: 3, hint: 3 }; S.jokerWeek = jw; save(); }
-    if (!S.onboarded) return renderOnboarding();
+    if (!S.onboarded && !(tab === 'wimport' && WS_IN)) return renderOnboarding();
     if (tab === 'home') return renderHome();
     if (tab === 'city') return renderCity(arg);
     if (tab === 'practice') return renderPractice();
@@ -614,13 +644,14 @@
     if (tab === 'polacy') return RAW.polacy ? renderPolacy() : needPolacy(function () { renderPolacy(); });
     if (tab === 'letter') return renderLetter(arg);
     if (tab === 'read') return renderRead(arg);
-    if (tab === 'exam') return renderExam();
+    if (tab === 'exam') { if (EX && EX.finished) EX = null; return renderExam(); }
     if (tab === 'themes') return renderThemes(arg);
     if (tab === 'chat') return renderChat(arg);
     if (tab === 'news') return renderNews();
+    if (tab === 'wimport') return renderWsImport();
     if (tab === 'guide') return renderGuide(arg);
     if (tab === 'conj') return renderConj();
-    if (tab === 'school') return renderSchool();
+    if (tab === 'school') return schoolReady() ? renderSchool() : needSchool(function () { if (tab === 'school') renderSchool(); });
     if (tab === 'live') return LD ? ldRender() : renderLiveSetup();
     if (tab === 'writing') return renderWriting(arg);
   }
@@ -907,7 +938,7 @@
       tileBtn('review', t('review'), t('review_d'), due ? '<span class="badge num">' + due + ' ' + esc(t('due')) + '</span>' : '') +
       tileBtn('selfwrite', '✍️ ' + t('sw_title'), t('sw_d'), (S.swBest ? '<span class="badge num">' + esc(t('best')) + ' ' + S.swBest + '%</span>' : '')) +
       tileBtn('lex', t('lex'), t('lex_d'), '<span class="badge num">' + allWords().filter(function (x) { return S.cards[x.id]; }).length + '</span>') +
-      (szlakUnits(3).length ? tileBtn('exam', '🎓 ' + t('ex_title'), t('ex_tile_d'), S.exam && S.exam.best ? '<span class="badge ' + (S.exam.passed ? 'good' : '') + ' num">' + S.exam.best + '%</span>' : '') : '') +
+      (EXAM_ON ? tileBtn('exam', '🎓 ' + t('ex_title'), t('ex_tile_d'), S.cam && S.cam[exLv()] && S.cam[exLv()].best ? '<span class="badge ' + (S.cam[exLv()].passed ? 'good' : '') + ' num">' + exLv().toUpperCase() + ' ' + S.cam[exLv()].best + '%</span>' : '') : '') +
       tileBtn('themes', t('themes'), t('themes_d')) + tileBtn('daily', t('daily'), t('daily_d')) + tileBtn('blitz', t('blitz'), t('blitz_d')) + tileBtn('survival', t('survival'), t('survival_d'), S.best.survival ? '<span class="badge num">' + esc(t('best')) + ' ' + S.best.survival + '</span>' : '') + tileBtn('cases', t('cases'), t('cases_d')) + tileBtn('chat', t('chat'), t('chat_d'), '<span class="badge">Beta</span>') + tileBtn('conj', t('conj'), t('conj_d')) + tileBtn('aspect', t('aspect'), t('aspect_d')) + 
       tileBtn('sounds', t('sounds'), t('sounds_d')) + tileBtn('prices', t('prices'), t('prices_d')) +
       tileBtn('twister', t('twister'), t('twister_d')) + tileBtn('memo_w', t('memo_w'), t('memo_w_d')) + tileBtn('duel', t('duel'), t('duel_d')) + tileBtn('face', t('face'), t('face_d')) +
@@ -1039,6 +1070,8 @@
   /* Startseite: der Brief (Szlak 1), ab Szlak 2 Anias Postkarten */
   function storyCard() { var r2 = szlakUnits(2), r3 = szlakUnits(3); if (D.book && r3.length && S.unlocked >= r3[0]) return bookCard(); return letterCard(D.diary && r2.length && S.unlocked >= r2[0] ? 'diary' : 'letter'); }
   /* 3.3 Szlak 3: Anias Buch „Klucz z Wieliczki“ – ein Kapitel pro Stadt (Lesetext + Verständnisfragen) */
+  /* Die B1-Prüfung stammt noch aus der Polnisch-Vorlage – ausgeblendet, bis das englische Prüfungstraining (Cambridge A2 Key / B1 Preliminary) fertig ist */
+  var EXAM_ON = true;
   function bookCard() {
     var r3 = szlakUnits(3), rd = S.read || {}, n = r3.filter(function (i) { return rd[U[i].id] != null; }).length;
     var nx = r3.filter(function (i) { return isOpen(i) && rd[U[i].id] == null; })[0];
@@ -1047,7 +1080,7 @@
       '<p class="small">' + esc(n ? t('rd_card_d').replace('{n}', n).replace('{t}', r3.length) : L(D.book.prolog)) + '</p>' +
       '<div class="bar"><i style="width:' + (n / r3.length * 100) + '%"></i></div>' +
       (nx != null ? '<button class="btn" id="book-open" data-ui="' + nx + '" style="justify-self:start">' + esc(t('rd_open').replace('{n}', r3.indexOf(nx) + 1)) + ' →</button>' : '') +
-      (n === r3.length ? '<p class="small">' + esc(L(D.book.finale)) + '</p><button class="btn primary" id="exam-open" style="justify-self:start">🎓 ' + esc(t('ex_start_btn')) + ' →</button>' : '') + '</section>';
+      (n === r3.length ? '<p class="small">' + esc(L(D.book.finale)) + '</p>' + (EXAM_ON ? '<button class="btn primary" id="exam-open" style="justify-self:start">🎓 ' + esc(t('ex_start_btn')) + ' →</button>' : '') : '') + '</section>';
   }
   var rdShow = false, rdAns = null;
   function renderRead(ui) {
@@ -1148,39 +1181,69 @@
   /* ---------- 3.3 B1-Probeprüfung: fünf Teile wie die staatliche Prüfung (Hören, Grammatik, Lesen, Schreiben, Sprechen) ----------
      Spielerisch: kein Zeitdruck, sofortige Rückmeldung, jedes Mal andere Aufgaben. Bestanden: im Schnitt ≥ 60 % und jeder Teil ≥ 50 %. */
   var EX = null;
-  var EX_WRITE = [
-    { pl: 'Napisz e-mail do właściciela mieszkania: od tygodnia nie działa ogrzewanie. Opisz problem i poproś o pomoc.', d: ['E-Mail an den Vermieter: Die Heizung geht seit einer Woche nicht. Problem beschreiben, um Hilfe bitten.', 'Email to your landlord: the heating hasn’t worked for a week. Describe the problem and ask for help.'] },
-    { pl: 'Napisz wiadomość do koleżanki: opowiedz, co robiłeś albo robiłaś w weekend, i zaproś ją na kawę.', d: ['Nachricht an eine Freundin: Erzähl vom Wochenende und lade sie auf einen Kaffee ein.', 'Message to a friend: tell her about your weekend and invite her for coffee.'] },
-    { pl: 'Napisz krótką opinię o filmie albo książce: o czym jest i czy ci się podobał. Dlaczego?', d: ['Kurze Meinung zu einem Film oder Buch: Worum geht es, hat es dir gefallen, warum?', 'A short opinion on a film or book: what it’s about, whether you liked it, why.'] },
-    { pl: 'Napisz e-mail do hotelu: chcesz zarezerwować pokój na dwie noce i masz dwa pytania.', d: ['E-Mail an ein Hotel: Du willst ein Zimmer für zwei Nächte buchen und hast zwei Fragen.', 'Email to a hotel: you want to book a room for two nights and have two questions.'] }];
-  var EX_SPEAK = [
-    { pl: 'Opowiedz o swojej ostatniej podróży: gdzie byłeś albo byłaś i co się wydarzyło?', d: ['Erzähl von deiner letzten Reise: Wo warst du, was ist passiert?', 'Talk about your last trip: where were you and what happened?'] },
-    { pl: 'Jakie jest twoje ulubione miejsce w Polsce albo w twoim kraju? Dlaczego?', d: ['Was ist dein Lieblingsort in Polen oder in deinem Land? Warum?', 'What is your favourite place in Poland or your country? Why?'] },
-    { pl: 'Co byś zrobił albo zrobiła, gdybyś miał albo miała rok wolnego?', d: ['Was würdest du tun, wenn du ein Jahr frei hättest?', 'What would you do if you had a year off?'] },
-    { pl: 'Czy lepiej mieszkać w mieście czy na wsi? Podaj argumenty.', d: ['Lebt man besser in der Stadt oder auf dem Land? Nenne Argumente.', 'Is it better to live in the city or the countryside? Give reasons.'] }];
+  /* Prüfungstraining nach dem Vorbild Cambridge A2 Key / B1 Preliminary (eigene Aufgaben, kein offizielles Material) */
+  var EX_WRITE = {
+    a2: [
+      { pl: 'Write an email to your English friend Sam. Say what you did last weekend, who you were with, and what you are doing next weekend.', d: ['E-Mail an Sam: Was hast du letztes Wochenende gemacht, mit wem, und was machst du nächstes Wochenende? (mindestens 25 Wörter)', ''] },
+      { pl: 'Your friend Alex has invited you to a birthday party, but you cannot come. Write an email to Alex. Say sorry, explain why, and suggest another day to meet.', d: ['Absage an Alex: Entschuldige dich, erkläre warum, schlag einen anderen Tag vor. (mindestens 25 Wörter)', ''] },
+      { pl: 'You have a new hobby. Write a message to your English teacher. Say what the hobby is, when you do it, and why you like it.', d: ['Nachricht an deine Englischlehrkraft über dein neues Hobby: was, wann, warum. (mindestens 25 Wörter)', ''] },
+      { pl: 'You lost your jacket at school. Write a note to the school office. Describe the jacket, say where you lost it, and ask them to contact you.', d: ['Zettel ans Sekretariat: Jacke beschreiben, wo verloren, um Rückmeldung bitten. (mindestens 25 Wörter)', ''] }],
+    b1: [
+      { pl: 'Your English-speaking friend Jo writes: "I want to visit your town next summer. What can we do there, and what should I bring?" Write an email to Jo (about 100 words).', d: ['E-Mail an Jo (ca. 100 Wörter): Was kann man in deiner Stadt machen, was soll Jo mitbringen?', ''] },
+      { pl: 'You see this notice in an English magazine: "Articles wanted: The best day of my life. Tell us what happened and why it was so special." Write your article (about 100 words).', d: ['Artikel (ca. 100 Wörter): Der beste Tag meines Lebens – was ist passiert, warum war er besonders?', ''] },
+      { pl: 'Write a story (about 100 words) that begins with this sentence: "When I opened the door, I couldn\'t believe my eyes."', d: ['Geschichte (ca. 100 Wörter), die mit diesem Satz beginnt.', ''] },
+      { pl: 'Your school wants to ban mobile phones in break times. Write an email to your head teacher (about 100 words) and give your opinion with reasons.', d: ['E-Mail an die Schulleitung (ca. 100 Wörter): Handyverbot in den Pausen – deine Meinung mit Gründen.', ''] }]
+  };
+  var EX_SPEAK = {
+    a2: [
+      { pl: 'Tell me about your family and your best friend.', d: ['Erzähl von deiner Familie und deinem besten Freund / deiner besten Freundin.', ''] },
+      { pl: 'What do you usually do at the weekend? What did you do last weekend?', d: ['Was machst du normalerweise am Wochenende? Was hast du letztes Wochenende gemacht?', ''] },
+      { pl: 'Describe your school. What is your favourite subject and why?', d: ['Beschreibe deine Schule. Was ist dein Lieblingsfach und warum?', ''] },
+      { pl: 'Where would you like to go on holiday? Why?', d: ['Wohin würdest du gern in den Urlaub fahren? Warum?', ''] }],
+    b1: [
+      { pl: 'Is it better to live in a big city or in the countryside? Give reasons.', d: ['Lebt man besser in der Großstadt oder auf dem Land? Begründe.', ''] },
+      { pl: 'Talk about a person who has influenced you. What did you learn from them?', d: ['Sprich über eine Person, die dich geprägt hat. Was hast du von ihr gelernt?', ''] },
+      { pl: 'What would you do if you had a year off after school?', d: ['Was würdest du tun, wenn du nach der Schule ein Jahr frei hättest?', ''] },
+      { pl: 'Should young people spend less time online? What do you think?', d: ['Sollten junge Leute weniger Zeit online verbringen? Was meinst du?', ''] }]
+  };
   var EX_PARTS = ['listen', 'gram', 'read', 'write', 'speak'];
+  function exLv() { var lv = S.exLv; if (lv === 'a2' || lv === 'b1') return lv; var g = S.school && S.school.grade; return (g && g >= 9) || (szlakUnits(3).length && S.unlocked >= szlakUnits(3)[0]) ? 'b1' : 'a2'; }
   function exNew() {
-    var pool = []; routeIdx().forEach(function (i) { if (szlakOf(i) >= 2) U[i].sentences.forEach(function (x) { pool.push(x); }); });
+    var lv = exLv(), pool = [];
+    routeIdx().forEach(function (i) { var r = szlakOf(i); if (lv === 'a2' ? r <= 2 : r >= 2) U[i].sentences.forEach(function (x) { pool.push(x); }); });
+    U.forEach(function (u) { if (u.sch && (lv === 'a2' ? u.sch <= 8 : u.sch >= 8)) u.sentences.forEach(function (x) { pool.push(x); }); });
     if (pool.length < 10) U.forEach(function (u) { u.sentences.forEach(function (x) { pool.push(x); }); });
     var ls = C.sample(pool, 5, R).map(function (x) {
       var wrong = C.sample(pool.filter(function (y) { return y !== x && L(y.slice(1)) !== L(x.slice(1)); }), 2, R);
       return { pl: x[0], a: L(x.slice(1)), o: C.shuffle([L(x.slice(1))].concat(wrong.map(function (y) { return L(y.slice(1)); })), R) };
     });
-    var gr = C.sample(D.cases || [], 4, R).concat(C.sample(D.aspects || [], 2, R)).map(function (c) { return { s: c.s, a: c.a, o: C.shuffle(c.opts.slice(), R), tr: L(c.tr), why: L(c.why) }; });
-    var rus = U.map(function (u, i) { return u.read ? i : -1; }).filter(function (i) { return i >= 0; }), ru = rus.length ? rus[Math.floor(R() * rus.length)] : null;
-    EX = { step: 0, i: 0, pick: null, sc: {}, ls: ls, gr: gr, ru: ru, rpick: {}, rorder: ru == null ? [] : U[ru].read.q.map(function (q) { return C.shuffle(q.o.map(function (o, k) { return k; }), R); }),
-      wt: EX_WRITE[Math.floor(R() * EX_WRITE.length)], st: EX_SPEAK[Math.floor(R() * EX_SPEAK.length)], txt: '', wres: null };
-    if (ru == null) EX.sc.read = null;
+    var cs = (D.cases || []).filter(function (c) { return lv === 'a2' ? c.k <= 8 : c.k >= 7; });
+    var gr = C.sample(cs, 6, R).map(function (c) { return { s: c.s, a: c.a, o: C.shuffle(c.opts.slice(), R), tr: L(c.tr), why: L(c.why) }; });
+    var rd = null;
+    if (lv === 'b1') {
+      var rus = U.map(function (u, i) { return u.read ? i : -1; }).filter(function (i) { return i >= 0; });
+      if (rus.length) rd = U[rus[Math.floor(R() * rus.length)]].read;
+    } else if (D.diary && D.diary.lines && D.diary.lines.length >= 3) {
+      /* A2: drei Postkarten von Emma – wo war sie? */
+      var cards = C.sample(D.diary.lines, 3, R), cityOf = function (id) { var u = U.filter(function (x) { return x.id === id; })[0]; return u ? u.city : id; };
+      var allC = D.diary.lines.map(function (l) { return cityOf(l.u); });
+      rd = { t: [t('ex_a2_cards'), t('ex_a2_cards')], lines: cards.map(function (l, k) { return { pl: 'Card ' + (k + 1) + ': ' + l.pl, tr: l.tr }; }),
+        q: cards.map(function (l, k) { var right = cityOf(l.u), o = [right].concat(C.sample(allC.filter(function (c) { return c !== right; }), 2, R)); return { q: 'Where was Emma when she wrote card ' + (k + 1) + '?', tr: ['', ''], o: o, a: 0 }; }) };
+    }
+    var W = EX_WRITE[lv], SP = EX_SPEAK[lv];
+    EX = { lv: lv, step: 0, i: 0, pick: null, sc: {}, ls: ls, gr: gr, rd: rd, rpick: {}, rorder: rd ? rd.q.map(function (q) { return C.shuffle(q.o.map(function (o, k) { return k; }), R); }) : [],
+      wt: W[Math.floor(R() * W.length)], st: SP[Math.floor(R() * SP.length)], txt: '', wres: null };
+    if (!rd) EX.sc.read = null;
   }
-  /* Schreiben: einfache, nachvollziehbare Kriterien (Länge, Anrede, Bitte/Frage, Gruß, Zeitformen) */
+  /* Schreiben: einfache, nachvollziehbare Kriterien wie in der Bewertung (Umfang, Anrede/Einstieg, Inhaltspunkte, Schluss, Verbindungswörter/Zeiten) */
   function exWriteScore(txt) {
-    var tx = String(txt || ''), w = tx.trim().split(/\s+/).filter(Boolean).length, low = tx.toLowerCase();
+    var tx = String(txt || ''), w = tx.trim().split(/\s+/).filter(Boolean).length, low = tx.toLowerCase(), lv = (EX && EX.lv) || 'a2';
     var crit = [
-      ['ex_w_len', w >= 30],
-      ['ex_w_hi', /\b(dzień dobry|szanown|cześć|witaj|hej|droga|drogi|kochana|kochany)/.test(low)],
-      ['ex_w_ask', /\?|proszę|czy mógłby|czy mogłaby|czy możesz|chciałbym|chciałabym|zapraszam/.test(low)],
-      ['ex_w_bye', /(pozdrawiam|pozdrowienia|z poważaniem|do zobaczenia|całuję|ściskam|trzymaj się|na razie)/.test(low)],
-      ['ex_w_gram', /\b\w+(łem|łam|łeś|łaś|ł|ła|ło|liśmy|łyśmy|bym|byś)\b/.test(low) && /\b(bo|ponieważ|ale|więc|dlatego|że|który|która|które|kiedy|jeśli)\b/.test(low)]];
+      [lv === 'a2' ? 'ex_w_len_a2' : 'ex_w_len_b1', w >= (lv === 'a2' ? 25 : 80)],
+      ['ex_w_hi', /\b(dear|hi|hello|hey)\b/.test(low) || /^\s*(when i|one day|last|it was)/.test(low)],
+      ['ex_w_ask', /\?|\b(could you|can you|would you|please|let me know|i suggest|why don't|let's|i think|in my opinion)\b/.test(low)],
+      ['ex_w_bye', /\b(best wishes|love|see you|bye|regards|yours|take care|write soon|cheers)\b/.test(low) || /\b(in the end|finally|that's why)\b/.test(low)],
+      ['ex_w_gram', /\b(because|but|so|however|although|then|when|after|before|if)\b/.test(low) && /\b(was|were|went|had|did|saw|made|got|\w+ed)\b/.test(low)]];
     return { w: w, crit: crit, score: Math.round(crit.filter(function (c) { return c[1]; }).length / crit.length * 100) };
   }
   function exTotal() { var v = EX_PARTS.map(function (k) { return EX.sc[k]; }).filter(function (x) { return x != null; }); return v.length ? Math.round(v.reduce(function (a, b) { return a + b; }, 0) / v.length) : 0; }
@@ -1192,8 +1255,8 @@
     var prog = '<div class="ex-steps" aria-hidden="true">' + EX_PARTS.map(function (k, i) { return '<span class="' + (i + 1 < EX.step ? 'done' : i + 1 === EX.step ? 'cur' : '') + '">' + esc(t('ex_p_' + k)) + '</span>'; }).join('') + '</div>';
     var step = EX.step, part = EX_PARTS[step - 1];
     if (step === 0) {
-      var ex = S.exam || {};
-      html += '<section class="card stack"><p>' + esc(t('ex_intro')) + '</p><ul class="small ex-list">' + EX_PARTS.map(function (k) { return '<li><b>' + esc(t('ex_p_' + k)) + '</b> – ' + esc(t('ex_pd_' + k)) + '</li>'; }).join('') + '</ul>' +
+      var ex = (S.cam || {})[EX.lv] || {};
+      html += '<section class="card stack"><div class="seg" id="ex-lv">' + segBtn('a2', 'A2 Key', EX.lv === 'a2') + segBtn('b1', 'B1 Preliminary', EX.lv === 'b1') + '</div><p class="small muted">' + esc(t('ex_lv_' + EX.lv)) + '</p><p>' + esc(t('ex_intro')) + '</p><ul class="small ex-list">' + EX_PARTS.map(function (k) { return '<li><b>' + esc(t('ex_p_' + k)) + '</b> – ' + esc(t('ex_pd_' + k)) + '</li>'; }).join('') + '</ul>' +
         '<p class="small muted">' + esc(t('ex_note')) + '</p>' + (ex.best ? '<p class="small num">' + esc(t('best')) + ': ' + ex.best + ' %' + (ex.passed ? ' · ✓ ' + esc(t('ex_passed_once')) : '') + ' · ' + esc(t('ex_tries')) + ': ' + (ex.n || 0) + '</p>' : '') +
         '<button class="btn primary" id="ex-go" style="justify-self:start">' + esc(t('ex_go')) + ' →</button></section>';
     } else if (part === 'listen' || part === 'gram') {
@@ -1207,7 +1270,7 @@
         }).join('') + '</div>' +
         (EX.pick != null ? (part === 'gram' ? '<p class="small muted">' + esc(q.tr) + (q.why ? ' · ' + esc(q.why) : '') + '</p>' : '') + '<button class="btn primary" id="ex-next" style="justify-self:start">' + esc(t('next')) + ' →</button>' : '') + '</section>';
     } else if (part === 'read') {
-      var u = U[EX.ru], rd = u.read, done = EX.rdone;
+      var rd = EX.rd, done = EX.rdone;
       html += prog + '<section class="card stack"><span class="eyebrow">' + esc(t('ex_p_read')) + ' · ' + esc(L(rd.t)) + '</span><article class="stack book" lang="en">' + rd.lines.map(function (l) { return '<p>' + esc(l.pl) + '</p>'; }).join('') + '</article></section>' +
         '<section class="card stack">' + rd.q.map(function (qq, qi) {
           var pk = EX.rpick[qi];
@@ -1232,7 +1295,7 @@
         '<p><b>' + esc(t('ex_s_rate')) + '</b></p><div class="stack">' + [['100', 'ex_s_r1'], ['70', 'ex_s_r2'], ['40', 'ex_s_r3']].map(function (r) { return '<button class="opt" data-r="' + r[0] + '">' + esc(t(r[1])) + '</button>'; }).join('') + '</div></section>';
     } else {
       var tot = exTotal(), ok = exPassed();
-      html += '<section class="card stack ex-result' + (ok ? ' pass' : '') + ' pop"><div class="row" style="align-items:center"><div class="krasnal" style="padding:0">' + krasnalSvg() + '</div><div class="stack grow" style="gap:4px"><span class="eyebrow">' + esc(t('ex_result')) + '</span><b class="num" style="font-size:2rem">' + tot + ' %</b><b>' + esc(ok ? t('ex_pass') : t('ex_fail')) + '</b></div></div>' +
+      html += '<section class="card stack ex-result' + (ok ? ' pass' : '') + ' pop"><div class="row" style="align-items:center"><div style="padding:0">' + ravenSvg(null, 84) + '</div><div class="stack grow" style="gap:4px"><span class="eyebrow">' + esc(t('ex_result')) + '</span><b class="num" style="font-size:2rem">' + tot + ' %</b><b>' + esc(ok ? t('ex_pass') : t('ex_fail')) + '</b></div></div>' +
         EX_PARTS.map(function (k) { var v = EX.sc[k]; return '<div class="stack" style="gap:2px"><div class="row small" style="justify-content:space-between"><span>' + esc(t('ex_p_' + k)) + '</span><span class="num">' + (v == null ? '–' : v + ' %') + '</span></div><div class="bar"><i style="width:' + (v || 0) + '%"></i></div></div>'; }).join('') +
         '<p class="small">' + esc(ok ? t('ex_pass_d') : t('ex_tip_' + EX_PARTS.filter(function (k) { return EX.sc[k] != null; }).sort(function (a, b) { return EX.sc[a] - EX.sc[b]; })[0])) + '</p>' +
         '<p class="small muted">' + esc(t('ex_disclaimer')) + '</p><div class="row"><button class="btn primary" id="ex-again">' + esc(t('again')) + '</button><button class="btn" id="ex-home">' + esc(t('home')) + '</button></div></section>';
@@ -1240,6 +1303,7 @@
     shell(html);
     document.getElementById('back').onclick = function () { go('practice'); };
     var b;
+    bindSeg('ex-lv', function (v) { S.exLv = v; save(); exNew(); renderExam(); });
     if ((b = document.getElementById('ex-go'))) b.onclick = function () { EX.step = 1; EX.i = 0; EX.pick = null; renderExam(); setTimeout(function () { if (EX.ls[0]) speak(EX.ls[0].pl); }, 300); };
     if ((b = document.getElementById('ex-say'))) b.onclick = function () { speak(EX.ls[EX.i].pl); };
     document.querySelectorAll('[data-o]').forEach(function (x) { x.onclick = function () {
@@ -1253,29 +1317,29 @@
         EX.sc[part] = Math.round((EX['n_' + part] || 0) / list.length * 100);
       }
       EX.step++; EX.i = 0; EX.pick = null;
-      if (EX_PARTS[EX.step - 1] === 'read' && EX.ru == null) EX.step++;
+      if (EX_PARTS[EX.step - 1] === 'read' && !EX.rd) EX.step++;
       if (EX.step > EX_PARTS.length) exFinish();
       renderExam(); window.scrollTo(0, 0);
     };
     document.querySelectorAll('.rd-q .opt').forEach(function (x) { x.onclick = function () { EX.rpick[+x.getAttribute('data-q')] = +x.getAttribute('data-k'); renderExam(); }; });
-    if ((b = document.getElementById('ex-rcheck'))) b.onclick = function () { var q = U[EX.ru].read.q; EX.rdone = true; EX.sc.read = Math.round(q.filter(function (qq, qi) { return EX.rpick[qi] === qq.a; }).length / q.length * 100); renderExam(); };
+    if ((b = document.getElementById('ex-rcheck'))) b.onclick = function () { var q = EX.rd.q; EX.rdone = true; EX.sc.read = Math.round(q.filter(function (qq, qi) { return EX.rpick[qi] === qq.a; }).length / q.length * 100); renderExam(); };
     var ta = document.getElementById('ex-txt');
     if (ta && !EX.wres) { ta.oninput = function () { EX.txt = ta.value; var wc = document.getElementById('ex-wc'); if (wc) wc.textContent = exWriteScore(ta.value).w + ' ' + t('ex_words'); }; document.querySelectorAll('.pl-keys [data-k]').forEach(function (k) { k.onclick = function () { var p0 = ta.selectionStart || ta.value.length; ta.value = ta.value.slice(0, p0) + k.getAttribute('data-k') + ta.value.slice(ta.selectionEnd || p0); ta.focus(); ta.selectionStart = ta.selectionEnd = p0 + 1; ta.oninput(); }; }); }
     if ((b = document.getElementById('ex-wcheck'))) b.onclick = function () { EX.txt = ta.value; EX.wres = exWriteScore(EX.txt); EX.sc.write = EX.wres.score; renderExam(); };
-    if ((b = document.getElementById('ex-ai'))) b.onclick = function () { startMode('chat', { txt: 'B1: ' + EX.wt.pl + ' – ' + t('ex_ai_sc'), open: t('ex_ai_open') }); setTimeout(function () { var i = document.getElementById('ch-in'); if (i) i.value = EX.txt.slice(0, 400); }, 60); };
-    if ((b = document.getElementById('ex-sai'))) b.onclick = function () { startMode('chat', { txt: 'B1: ' + EX.st.pl, open: EX.st.pl }); };
+    if ((b = document.getElementById('ex-ai'))) b.onclick = function () { startMode('chat', { txt: EX.lv.toUpperCase() + ': ' + EX.wt.pl + ' – ' + t('ex_ai_sc'), open: t('ex_ai_open') }); setTimeout(function () { var i = document.getElementById('ch-in'); if (i) i.value = EX.txt.slice(0, 400); }, 60); };
+    if ((b = document.getElementById('ex-sai'))) b.onclick = function () { startMode('chat', { txt: EX.lv.toUpperCase() + ': ' + EX.st.pl, open: EX.st.pl }); };
     document.querySelectorAll('[data-r]').forEach(function (x) { x.onclick = function () { EX.sc.speak = +x.getAttribute('data-r'); EX.step++; exFinish(); renderExam(); window.scrollTo(0, 0); }; });
     if ((b = document.getElementById('ex-again'))) b.onclick = function () { exNew(); renderExam(); window.scrollTo(0, 0); };
     if ((b = document.getElementById('ex-home'))) b.onclick = function () { EX = null; go('home'); };
   }
   function exFinish() {
     if (EX.finished) return; EX.finished = true;
-    var tot = exTotal(), ok = exPassed(), ex = S.exam = S.exam || {}, first = ok && !ex.passed;
+    S.cam = S.cam || {}; var tot = exTotal(), ok = exPassed(), ex = S.cam[EX.lv] = S.cam[EX.lv] || {}, first = ok && !ex.passed;
     ex.n = (ex.n || 0) + 1; ex.best = Math.max(ex.best || 0, tot); ex.last = { d: today(), tot: tot, sc: EX.sc }; if (ok) ex.passed = today();
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.12', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.13', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1576,6 +1640,29 @@
      und dort ist kein Fortschritt, zeigen wir, wie man den Fortschritt aus der App mitnimmt. */
   function appHintNeeded() { return isApple() && !isStandalone() && !hasProgress(S); }
   /* Rückkehr aus Bestätigungs- oder Passwort-Mail: Tokens stehen im #-Teil der Adresse */
+  /* Geteilte Wortliste aus dem Link übernehmen (#w=…) – erst Vorschau, dann bestätigen */
+  var WS_IN = null;
+  function wsFromHash() {
+    var m = /[#&]w=([A-Za-z0-9_-]+)/.exec(location.hash || ''); if (!m) return;
+    WS_IN = C.wordShareDecode(m[1]);
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    if (WS_IN) tab = 'wimport';
+  }
+  function renderWsImport() {
+    if (!WS_IN) return go('home');
+    var html = '<h1>📘 ' + esc(t('ws_in_t')) + '</h1><section class="card stack"><p>' + esc(t('ws_in_d').replace('{n}', WS_IN.words.length).replace('{u}', WS_IN.unit || '–')) + '</p>' +
+      '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="ws-u" maxlength="20" value="' + esc(WS_IN.unit) + '"></label>' +
+      '<div class="list">' + WS_IN.words.slice(0, 80).map(function (w) { return '<div class="li"><b lang="en">' + esc(w[0]) + '</b><span class="small muted">' + esc(w[1]) + '</span></div>'; }).join('') + '</div>' +
+      '<p class="small muted">' + esc(t('ws_in_note')) + '</p><div class="row"><button class="btn primary" id="ws-ok">' + esc(t('ws_in_ok')) + '</button><button class="btn" id="ws-no">' + esc(t('sch_conf_no')) + '</button></div></section>';
+    shell(html);
+    document.getElementById('ws-no').onclick = function () { WS_IN = null; go('home'); };
+    document.getElementById('ws-ok').onclick = function () {
+      var un = document.getElementById('ws-u').value.trim(), have = {}, n = 0;
+      S.custom.forEach(function (w) { have[(w[0] + '|' + w[1]).toLowerCase()] = 1; });
+      WS_IN.words.forEach(function (p) { if (have[(p[0] + '|' + p[1]).toLowerCase()]) return; S.custom.push(un ? [p[0], p[1], p[1], un] : [p[0], p[1], p[1]]); n++; });
+      if (un) S.lastUnit = un; WS_IN = null; save(); toast(t('mw_bulk_ok').replace('{n}', n)); go(S.school && S.school.grade ? 'school' : 'mywords');
+    };
+  }
   function sbFromHash() {
     var h = location.hash || ''; if (!/[#&](access_token|error)/.test(h)) return;
     var q = {}; h.slice(1).split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) q[decodeURIComponent(kv.slice(0, i))] = decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); });
@@ -1693,7 +1780,7 @@
   function renderMyWords() {
     var html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('mywords')) + '</h1>' +
       '<section class="card stack"><label class="fld">' + esc(t('pl')) + '<input type="text" id="mw-pl" autocomplete="off" lang="en"></label>' +
-      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || '') + '"></label><div class="seg" id="mw-uc" aria-label="' + esc(t('sch_unit')) + '">' + ['Welcome', 'Unit 1', 'Unit 2', 'Unit 3', 'Unit 4', 'Unit 5', 'Unit 6', 'Extra'].map(function (u) { return '<button type="button" class="chip" data-uc="' + u + '" aria-pressed="' + (S.lastUnit === u) + '">' + u + '</button>'; }).join('') + '</div>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button>' +
+      '<label class="fld">' + esc(t('meaning')) + '<input type="text" id="mw-m" autocomplete="off"></label>' + (S.school && S.school.grade ? '<label class="fld">' + esc(t('sch_unit')) + '<input type="text" id="mw-u" autocomplete="off" maxlength="20" placeholder="z. B. Unit 3" value="' + esc(S.lastUnit || (S.school && S.school.unit) || '') + '"></label><div class="seg" id="mw-uc" aria-label="' + esc(t('sch_unit')) + '">' + ['Welcome', 'Unit 1', 'Unit 2', 'Unit 3', 'Unit 4', 'Unit 5', 'Unit 6', 'Extra'].map(function (u) { return '<button type="button" class="chip" data-uc="' + u + '" aria-pressed="' + ((S.lastUnit || (S.school && S.school.unit)) === u) + '">' + u + '</button>'; }).join('') + '</div>' : '') + '<button class="btn primary" id="mw-add">' + esc(t('add')) + '</button>' +
       '<section class="card stack" id="ph"><h2>📷 ' + esc(t('ph_title')) + '</h2><p class="small">' + esc(t('ph_d')) + '</p>' +
       '<label class="btn primary" style="justify-self:start;cursor:pointer">' + esc(t('ph_take')) + '<input type="file" id="ph-in" accept="image/*" capture="environment" hidden></label>' +
       '<p class="small muted">' + esc(t('ph_tips')) + '</p><p class="small" id="ph-st" role="status"></p></section>' +
@@ -1974,6 +2061,19 @@
     var ed = document.getElementById('likes-edit'); if (ed) ed.onclick = function () { SCH.likeEdit = true; renderSchool(); };
   }
   function schCount(g) { return D.cases.filter(function (c) { return c.g === g; }).length; }
+  var SCH_UNITS = ['Welcome', 'Unit 1', 'Unit 2', 'Unit 3', 'Unit 4', 'Unit 5', 'Unit 6'];
+  /* Aktuelle Unit im Buch: steuert die Startkarte im Schulbereich, die Voreinstellung beim Wörter-Eintragen und „schon behandelt“ in der Probe-Arbeit */
+  function schCurBox() {
+    var sc = S.school || {}, cu = sc.unit; if (!cu) return '';
+    var UN = schUnits(), n = (UN[cu] || []).length, idx = SCH_UNITS.indexOf(cu), nx = SCH_UNITS[idx + 1];
+    return '<section class="card stack" style="border-color:var(--red)"><span class="eyebrow">📘 ' + esc(t('sch_cu_now')) + '</span><div class="big">' + esc(cu) + '</div>' +
+      '<p class="small">' + esc(n ? t('sch_cu_n').replace('{n}', n) : t('sch_cu_empty')) + '</p><div class="row" style="flex-wrap:wrap">' +
+      ((n >= 2 || ((S.unitGram || {})[cu] || []).length) ? '<button class="btn primary" data-su="' + esc(cu) + '">' + esc(t('sch_cu_go').replace('{u}', cu)) + '</button>' : '') +
+      '<button class="btn" id="cu-photo">📷 ' + esc(t('sch_cu_photo')) + '</button>' +
+      (nx ? '<button class="btn ghost" id="cu-next">' + esc(t('sch_cu_next').replace('{u}', nx)) + '</button>' : '') + '</div>' +
+      '<details' + (((S.unitGram || {})[cu] || []).length ? '' : ' open') + '><summary class="small"><b>' + esc(t('sch_cu_gram')) + '</b></summary><p class="small muted">' + esc(t('sch_cu_gram_d')) + '</p><div class="seg">' +
+      schTopics(sc.grade, 'new').concat(schTopics(sc.grade, 'old')).map(function (k) { var on = ((S.unitGram || {})[cu] || []).indexOf(k) >= 0; return '<button type="button" class="chip" data-ug="' + esc(k) + '" aria-pressed="' + on + '">' + esc(D.school.topics[k].t) + '</button>'; }).join('') + '</div></details></section>';
+  }
   function schSetup() {
     var sc = S.school || {}, SD = D.school;
     var opt = function (list, cur) { return list.map(function (x) { return '<option value="' + esc(x.id) + '"' + (x.on ? '' : ' disabled') + (cur === x.id ? ' selected' : '') + '>' + esc(x.name) + (x.on ? '' : ' (' + t('sch_soon') + ')') + '</option>'; }).join(''); };
@@ -1984,6 +2084,7 @@
       '<div class="stack"><b>' + esc(t('sch_class')) + '</b><div class="seg" id="sc-g">' + SD.grades.map(function (g) { return segBtn(String(g), String(g), sc.grade === g); }).join('') + '</div></div>' +
       '<label class="fld">' + esc(t('sch_book')) + '<select id="sc-bk"><option value="">' + esc(t('sch_book_none')) + '</option>' + SD.books.map(function (b) { return '<option value="' + esc(b.id) + '"' + (sc.book === b.id ? ' selected' : '') + '>' + esc(b.name) + '</option>'; }).join('') + '</select></label>' +
       '<p class="small muted">' + esc(t('sch_book_d')) + '</p>' +
+      '<div class="stack"><b>' + esc(t('sch_cu')) + '</b><div class="seg" id="sc-cu">' + SCH_UNITS.map(function (u) { return segBtn(u, u, (sc.unit || '') === u); }).join('') + '</div><p class="small muted">' + esc(t('sch_cu_d')) + '</p></div>' +
       '<button class="btn primary" id="sc-save"' + (sc.grade ? '' : ' disabled') + '>' + esc(t('sch_save')) + '</button>' + (SCH.prev ? '<button class="btn ghost" id="sc-cancel" style="justify-self:start">' + esc(t('sch_conf_no')) + '</button>' : '') + '</section>';
   }
   function renderSchool() {
@@ -1993,7 +2094,8 @@
       shell(html + schSetup());
       var st = function () { S.school.state = document.getElementById('sc-st').value; S.school.type = document.getElementById('sc-ty').value; S.school.book = document.getElementById('sc-bk').value; };
       bindSeg('sc-g', function (v) { st(); S.school.grade = +v; SCH.edit = true; renderSchool(); });
-      var fin = function () { var first = !SCH.prev; SCH.edit = false; SCH.prev = null; SCH.confirm = false; if (first) SCH.offerCheck = true; save(); renderSchool(); };
+      bindSeg('sc-cu', function (v) { st(); S.school.unit = S.school.unit === v ? '' : v; SCH.edit = true; renderSchool(); });
+      var fin = function () { if (!schoolReady()) return needSchool(fin); var first = !SCH.prev; SCH.edit = false; SCH.prev = null; SCH.confirm = false; if (first) SCH.offerCheck = true; save(); renderSchool(); };
       document.getElementById('sc-save').onclick = function () {
         st(); var pv = SCH.prev, bkName = function (id) { var b = D.school.books.filter(function (x) { return x.id === id; })[0]; return b ? b.name : t('sch_book_none'); };
         if (pv && (pv.grade !== S.school.grade || pv.book !== (S.school.book || ''))) {
@@ -2019,7 +2121,7 @@
     html += '<section class="card stack"><span class="eyebrow">' + esc(nm(SD.states, sc.state)) + ' · ' + esc(nm(SD.types, sc.type)) + '</span><div class="big">' + esc(t('sch_grade').replace('{g}', g)) + '</div>' +
       (sc.book ? '<p class="small">' + esc(t('sch_book')) + ': ' + esc(nm(SD.books, sc.book)) + (sc.book !== 'other' ? ' · ' + esc(t('sch_band')) + ' ' + (g - 4) : '') + '</p>' : '') +
       '<button class="btn ghost" id="sc-edit" style="justify-self:start">' + esc(t('sch_change')) + '</button></section>' +
-      schCheckBox(g) + ravenCard('school') + schLikesBox() +
+      schCurBox() + schCheckBox(g) + ravenCard('school') + schLikesBox() +
       '<section class="card stack"><h2>' + esc(t('sch_words')) + '</h2><p class="small muted">' + esc(t('sch_words_d')) + '</p><div class="list">' + packs.map(function (i) {
         var u = U[i], l = wordsOf(i), m = masteredCount(l);
         return '<button class="li linkish" data-sp="' + i + '" style="width:100%"><span aria-hidden="true">' + esc(u.ico) + '</span><span class="grow" style="text-align:left"><b>' + esc(u.city) + '</b><br><span class="small muted">' + esc(L(u.title)) + '</span></span><span class="small num muted">' + m + '/' + l.length + '</span></button>';
@@ -2037,7 +2139,7 @@
       '<div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-exam">' + esc(t('sch_exam_go')) + '</button><button class="btn" id="hw-make">📮 ' + esc(t('hw_make')) + '</button></div><p class="small muted" id="hw-out" role="status"></p>' + (S.schoolBest && S.schoolBest[g] != null ? '<p class="small muted">' + esc(t('best')) + ': ' + S.schoolBest[g] + '%</p>' : '') + '</section>' +
       (packs.length ? '<section class="card stack"><h2>✍️ ' + esc(t('sch_write')) + '</h2><p class="small muted">' + esc(t('sch_write_d')) + '</p><div class="row" style="flex-wrap:wrap">' + packs.map(function (i) { return '<button class="btn" data-sw="' + i + '">' + esc(U[i].ico + ' ' + U[i].city) + '</button>'; }).join('') + '</div></section>' : '') +
       '<section class="card stack"><h2>' + esc(t('sch_own')) + '</h2><p class="small">' + esc(t('sch_own_d')) + '</p>' +
-      (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button>'; }).join('') + '</div>' : '') +
+      (Object.keys(UN).length ? '<div class="list">' + Object.keys(UN).sort().map(function (k) { return '<button class="li linkish" data-su="' + esc(k) + '" style="width:100%;justify-content:space-between"><b>📘 ' + esc(k) + '</b><span class="small muted">' + UN[k].length + ' ' + esc(t('words')) + ' · ' + esc(t('sch_unit_go')) + ' →</span></button><button class="btn ghost small" data-wshare="' + esc(k) + '">🔗 ' + esc(t('ws_share')) + '</button>'; }).join('') + '</div><p class="small muted">' + esc(t('ws_note')) + '</p>' : '') +
       '<div class="row" style="flex-wrap:wrap"><button class="btn" id="sc-own">' + esc(t('sch_own_add')) + '</button><button class="btn" id="sc-photo">📷 ' + esc(t('ph_title')) + '</button></div></section>' +
       (packs.length ? '<section class="card stack"><h2>' + esc(t('chat')) + '</h2><p class="small">' + esc(t('sch_chat_d').replace('{g}', g)) + '</p><button class="btn" id="sc-chat" style="justify-self:start">' + esc(t('chat')) + '</button></section>' : '') +
       '<section class="card stack"><h2>👪 ' + esc(t('par_title')) + '</h2><p class="small">' + esc(t('par_d')) + '</p><pre class="small par-rep" id="par-txt">' + esc(parentReport(g)) + '</pre><button class="btn" id="par-share" style="justify-self:start">' + esc(t('par_share')) + '</button></section>' +
@@ -2047,6 +2149,11 @@
     var ck = document.getElementById('sc-check'); if (ck) ck.onclick = function () { SCH.offerCheck = false; startMode('scheck'); };
     var ckx = document.getElementById('sc-check-x'); if (ckx) ckx.onclick = function () { SCH.offerCheck = false; renderSchool(); };
     bindRavenCard();
+    var cup = document.getElementById('cu-photo'); if (cup) cup.onclick = function () { S.lastUnit = S.school.unit; save(); go('mywords'); setTimeout(function () { var el = document.getElementById('ph'); if (el) el.scrollIntoView({ block: 'start' }); }, 60); };
+    document.querySelectorAll('[data-ug]').forEach(function (b) { b.onclick = function () {
+      var cu = S.school.unit, k = b.getAttribute('data-ug'); S.unitGram = S.unitGram || {}; var a = S.unitGram[cu] = S.unitGram[cu] || [], i = a.indexOf(k);
+      if (i >= 0) a.splice(i, 1); else a.push(k); save(); renderSchool(); var d = document.querySelector('[data-ug]'); if (d) d.closest('details').open = true; }; });
+    var cun = document.getElementById('cu-next'); if (cun) cun.onclick = function () { var i = SCH_UNITS.indexOf(S.school.unit); if (SCH_UNITS[i + 1]) { S.school.unit = SCH_UNITS[i + 1]; S.lastUnit = S.school.unit; save(); toast(t('sch_cu_set').replace('{u}', S.school.unit)); renderSchool(); } };
     document.getElementById('par-share').onclick = function () { shareOut(parentReport(g)); };
     bindReport('rep-sch', 'school K' + g);
     document.getElementById('back').onclick = function () { go('practice'); };
@@ -2084,6 +2191,11 @@
     document.getElementById('sc-duel').onclick = function () { duelGrade = g; duelCodeDraft = C.duelNewCode(Math.random, '1', g); go('duel'); };
     document.querySelectorAll('[data-sw]').forEach(function (b) { b.onclick = function () { SCH.wr = null; go('writing', +b.getAttribute('data-sw')); }; });
     document.querySelectorAll('[data-su]').forEach(function (b) { b.onclick = function () { SCH.unit = b.getAttribute('data-su'); startMode('sunit'); }; });
+    document.querySelectorAll('[data-wshare]').forEach(function (b) { b.onclick = function () {
+      var k = b.getAttribute('data-wshare'), ws = (schUnits()[k] || []).map(function (x) { return [x.w[0], meaning(x.w)]; });
+      var url = SITE + '#w=' + C.wordShareEncode(k, g, ws);
+      shareOut(t('ws_msg').replace('{u}', k).replace('{n}', ws.length) + ' ' + url);
+    }; });
     var ch = document.getElementById('sc-chat'); if (ch) ch.onclick = function () { startMode('chat', packs[0]); };
   }
   /* Probe-Klassenarbeit wie in BW: Grammatik, Wortschatz, Hörverstehen (Listening), Leseverstehen (Reading) und
@@ -2196,9 +2308,10 @@
     document.getElementById('back').onclick = function () { go(S.school && S.school.grade ? 'school' : 'practice'); };
     bindSeg('ld-src', function (v) { S.liveSrc = v; save(); renderLiveSetup(); });
     var nm = function () { S.name = C.duelName(document.getElementById('ld-name').value) || S.name || ''; save(); return S.name || t('live_me'); };
-    document.getElementById('ld-new').onclick = function () { ldStart(C.duelNewCode(Math.random, '1', src === 'school' ? g : 0), nm()); };
+    document.getElementById('ld-new').onclick = function () { if (src === 'school' && !schoolReady()) return needSchool(function () { document.getElementById('ld-new').click(); }); ldStart(C.duelNewCode(Math.random, '1', src === 'school' ? g : 0), nm()); };
     document.getElementById('ld-go').onclick = function () {
       var pc = C.duelParse(document.getElementById('ld-code').value), er = document.getElementById('ld-err');
+      if (pc && pc.grade && !schoolReady()) return needSchool(function () { document.getElementById('ld-go').click(); });
       if (!pc || !C.duelPlan(RAW, pc.code)) { er.textContent = t('d2_bad'); er.hidden = false; return; }
       ldStart(pc.code, nm());
     };
@@ -2364,7 +2477,14 @@
     if (mode === 'sexam') return startSchoolExam();
     if (mode === 'shw') return startHomework();
     if (mode === 'scheck') return startSchoolCheck();
-    if (mode === 'sunit') { var uw = schUnits()[SCH.unit] || []; if (uw.length < 2) return toast(t('sch_unit_few')); return runGame({ title: SCH.unit, qs: mixedFor(uw, uw.length >= 4 ? uw : uw.concat(pool), Math.min(n, Math.max(uw.length * 2, 4))), back: 'school' }); }
+    if (mode === 'sunit') {
+      /* Eine Unit aus dem Buch üben: eigene Wörter dieser Unit + die Grammatik, die das Kind für die Unit ausgewählt hat */
+      var uw = schUnits()[SCH.unit] || [], ug = ((S.unitGram || {})[SCH.unit] || []), uc = (D.cases || []).filter(function (c) { return ug.indexOf(c.g) >= 0; });
+      if (uw.length < 2 && !uc.length) return toast(t('sch_unit_few'));
+      var uq = uw.length >= 2 ? mixedFor(uw, uw.length >= 4 ? uw : uw.concat(pool), Math.min(n, Math.max(uw.length * 2, 4))) : [];
+      uq = uq.concat(C.sample(uc, Math.min(uc.length, uw.length >= 2 ? 5 : 10), R).map(qCase));
+      return runGame({ title: SCH.unit, qs: C.shuffle(uq, R), back: 'school' });
+    }
     if (mode === 'conjgo') return runGame({ title: t('conj'), qs: conjQs(n), rerun: function () { startMode('conjgo'); }, back: 'conj' });
     if (mode === 'wr3') { var w3 = S.mistakes.map(byId).filter(Boolean).slice(0, 3); if (!w3.length) return go('home'); return runGame({ title: t('wr_title'), qs: mixedFor(w3, pool.concat(w3), 6) }); }
     if (mode === 'welcome') {
@@ -2435,6 +2555,8 @@
   function themeUnits(th) { return th.u.map(function (id) { for (var i = 0; i < U.length; i++) if (U[i].id === id) return i; return -1; }).filter(function (i) { return i >= 0; }); }
   function themeWords(th) { var a = []; themeUnits(th).forEach(function (i) { a = a.concat(wordsOf(i)); }); return a; }
   function renderThemes(id) {
+    if (RAW.unitsLazy) return needS3(function () { if (tab === 'themes') renderThemes(id); });
+    if (!schoolReady()) return needSchool(function () { if (tab === 'themes') renderThemes(id); });
     var th = id ? themeById(id) : null, html;
     if (!th) {
       html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('home')) + '</button><h1>' + esc(t('themes')) + '</h1><p class="muted">' + esc(t('themes_intro')) + '</p><section class="stack">' +
@@ -3197,6 +3319,7 @@
       S.name = C.duelName(document.getElementById('d2name').value); save();
       var pc0 = C.duelParse(document.getElementById('d2code').value);
       if (pc0 && pc0.pol && !RAW.polacy) { needPolacy(function () { document.getElementById('d2go').click(); }); return; }
+      if (pc0 && pc0.grade && !schoolReady()) { needSchool(function () { document.getElementById('d2go').click(); }); return; }
       var pl = C.duelPlan(RAW, document.getElementById('d2code').value), er = document.getElementById('d2err');
       if (!pl) { er.textContent = t('d2_bad'); er.hidden = false; return; }
       duelCodeDraft = pl.code; renderDuelReady(pl);
@@ -3560,11 +3683,14 @@
 
   function boot() {
     if (REVIEW) { needS3(function () { renderReview(); }); renderReview(); if (!RAW.polacy && RAW.polacyLazy) needPolacy(function () { renderReview(); }); return; }
-    startSafety(); sbFromHash(); if (S.vsrc) needAV();
+    startSafety(); sbFromHash(); wsFromHash(); if (S.vsrc) needAV();
     /* Erst zeichnen, wenn Szlak 2/3 da sind (aus dem Cache: Millisekunden) – spätestens nach 1,2 s; kommt es später, Startseite neu zeichnen */
     var first = false;
     function go1() { if (first) return; first = true; render(); setTimeout(installHint, 1200); if (A && A.uid) syncNow(); }
-    needS3(function () { if (first) { if (!G && tab === 'home') render(); } else go1(); });
+    needS3(function () {
+      var done = function () { if (first) { if (!G && (tab === 'home' || tab === 'school')) render(); } else go1(); };
+      if (needsSchoolData()) needSchool(done, true); else done();
+    });
     setTimeout(go1, 1200);
   }
   if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(boot); else boot();
@@ -3572,5 +3698,5 @@
   /* Service Worker nur im eigenen Hosting (nicht in Vorschauen/iframes) */
   try { if ('serviceWorker' in navigator && location.protocol === 'https:' && window.top === window.self && document.documentElement.getAttribute('data-pwa') === '1') navigator.serviceWorker.register('sw.js'); } catch (e) {}
 
-  window.PSApp = { state: function () { return S; }, startMode: startMode, go: go, game: function () { return G; }, data: function () { return D; }, live: function () { return LD; } };
+  window.PSApp = { state: function () { return S; }, startMode: startMode, go: go, game: function () { return G; }, data: function () { return D; }, raw: function () { return RAW; }, live: function () { return LD; } };
 })();

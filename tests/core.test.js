@@ -548,3 +548,12 @@ test('Vokabeln per Foto: ü-Lesefehler „ii“ wird im Deutschen korrigiert', (
   const W = (t, x0, x1) => ({ t, x0, x1, y0: 0, y1: 20 });
   assert.equal(JSON.stringify(C.ocrToList([{ words: [W('bridge', 0, 60), W('Briicke', 300, 380)] }, { words: [W('to fly', 0, 60), W('fliegen', 300, 380)] }])), JSON.stringify([['bridge', 'Brücke'], ['to fly', 'fliegen']]));
 });
+
+test('Wortliste teilen: Link kodieren und lesen (Umlaute, Sonderzeichen)', () => {
+  const code = C.wordShareEncode('Unit 3', 7, [['library', 'Bibliothek'], ['to borrow', '(sich) ausleihen'], ['bridge', 'Brücke'], ['a=b', 'x|y']]);
+  assert.ok(/^[A-Za-z0-9_-]+$/.test(code));
+  const d = C.wordShareDecode(code);
+  assert.equal(d.unit, 'Unit 3'); assert.equal(d.grade, 7); assert.equal(d.words.length, 4);
+  assert.equal(JSON.stringify(d.words[2]), JSON.stringify(['bridge', 'Brücke']));
+  assert.equal(C.wordShareDecode('kaputt'), null); assert.equal(C.wordShareDecode(''), null);
+});

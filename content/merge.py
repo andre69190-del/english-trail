@@ -17,6 +17,8 @@ import extras  # noqa: E402
 import school  # noqa: E402
 import interests  # noqa: E402
 import trail2  # noqa: E402
+import trail3  # noqa: E402
+import alltag  # noqa: E402
 
 DATA = os.path.join(ROOT, 'src', 'data.json')
 D = json.load(open(DATA, encoding='utf-8'))
@@ -116,6 +118,12 @@ for k in interests.PACKS:
     u['pack'] = 1; u['int'] = 1; u['ico'] = k['ico']
     D['units'].append(u)
 
+# 13.11.2026: Alltags-Pakete (Reisen, Arzt, Restaurant, Hotel, Notfall, Telefon) – Einheiten mit "pack": 1 und "alt": 1
+D['units'] = [u for u in D['units'] if not u.get('alt')]
+for k in alltag.PACKS:
+    u = unit(dict(k, city=k['name'], cityDe=k['title'], lon=-0.13, lat=51.51, trail='red', mission=None, radio=None, letter=None))
+    u['pack'] = 1; u['alt'] = 1; u['ico'] = k['ico']
+    D['units'].append(u)
 # Vor der Veröffentlichung (01.11.2026): alle noch polnischen Vorlage-Teile entfernen.
 # Trail 2/3, Themenpakete, Profi-Bereich, Tagebuch, Buch und B1-Prüfung kommen in Phase 6 neu auf Englisch dazu.
 D['units'] = [u for u in D['units'] if not u.get('legacy')]
@@ -129,11 +137,24 @@ for k in trail2.UNITS:
     x = trail2.EXTRA[k['id']]
     D['missions'][k['id']] = {'pl': x['mission'][0], 'd': P(x['mission'][1])}
     D['listen']['radio'][k['id']] = list(x['radio'])
+# Phase 6: Trail 3 (B1) direkt nach Trail 2, mit Buchkapiteln (read) und Rahmen „book“
+D['units'] = [u for u in D['units'] if u.get('r') != 3]
+_r3 = []
+for k in trail3.UNITS:
+    u3 = unit(k); u3['r'] = 3
+    rd = k['read']
+    u3['read'] = {'t': P(rd['t']), 'lines': [{'pl': en, 'tr': P(de)} for en, de in rd['lines']],
+                  'q': [{'q': qen, 'tr': P(qde), 'o': list(o), 'a': a} for qen, qde, o, a in rd['q']]}
+    _r3.append(u3)
+    D['missions'][k['id']] = {'pl': k['mission'][0], 'd': P(k['mission'][1])}
+    D['listen']['radio'][k['id']] = list(k['radio'])
+D['units'] = D['units'][:24] + _r3 + D['units'][24:]
+D['book'] = {'title': trail3.BOOK['title'], 'prolog': P(trail3.BOOK['prolog']), 'finale': P(trail3.BOOK['finale'])}
 D['diary'] = {'prolog': P(trail2.DIARY['prolog']), 'finale': P(trail2.DIARY['finale']),
               'lines': [dict({'u': k['id'], 'pl': trail2.EXTRA[k['id']]['card'][0], 'tr': P(trail2.EXTRA[k['id']]['card'][1])},
                              **({'bridge': P(trail2.EXTRA[k['id']]['card'][2])} if trail2.EXTRA[k['id']]['card'][2] else {})) for k in trail2.UNITS]}
 UID = {u['id'] for u in D['units']}
-for k in ('polacy', 'book'):
+for k in ('polacy',):
     D.pop(k, None)
 D['missions'] = {k: v for k, v in D['missions'].items() if k in UID}
 D['listen']['radio'] = {k: v for k, v in D['listen']['radio'].items() if k in UID}
@@ -141,6 +162,13 @@ D['listen']['learn'] = [list(x) for x in extras.LEARN]
 D['themes'] = [dict(th, u=[x for x in th['u'] if x in UID]) for th in D.get('themes') or []]
 D['themes'] = [th for th in D['themes'] if th['u'] and th['id'] != 'schule']
 D['themes'] = [th for th in D['themes'] if th['id'] != 'hobby']
+_alt = {}
+for k in alltag.PACKS: _alt.setdefault(k['theme'], []).append(k['id'])
+for th in D['themes']:
+    for x in _alt.get(th['id'], []):
+        if x not in th['u']: th['u'].append(x)
+if 'notfall' in _alt and not any(th['id'] == 'notfall' for th in D['themes']):
+    D['themes'].append({'id': 'notfall', 'ico': '🚨', 't': P('Notfall und Telefon'), 'u': list(_alt['notfall'])})
 D['themes'].append({'id': 'hobby', 'ico': '⭐', 't': P('Interessen: Gaming, Sport, Tiere, Musik …'), 'u': [u['id'] for u in D['units'] if u.get('int')]})
 D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW, Klassen 5–10'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
 D['news'] = [{'v': v, 'date': d, 'de': n, 'en': n} for v, d, n in extras.NEWS_ALL]

@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.13', '2026-11-13', ['Trail 3 (B1) ist da: 12 neue Orte vom Giant’s Causeway bis zum Ben Nevis – mit if-Sätzen, Passiv, indirekter Rede, Relativsätzen und mehr. Passt zu Klasse 8–10.', 'Schule: Gib an, bei welcher Unit ihr im Buch gerade seid – der Schulbereich startet dann mit dieser Unit. Wähle die Grammatik der Unit aus und übe sie zusammen mit deinen Wörtern.', 'Nach Thema: 6 neue Alltags-Pakete – Bahn und Flugzeug, Beim Arzt, Im Restaurant, Im Hotel, Hilfe und Notfälle, Am Telefon.', 'Vokabellisten teilen: Deine eingetragene Unit-Liste als Link an die Klasse schicken – die anderen übernehmen sie mit einem Tipp.', 'Neu unter Üben: Prüfungstraining Cambridge – A2 Key oder B1 Preliminary mit Hören, Grammatik, Lesen, Schreiben und Sprechen.', 'Neues Buch: „The Raven’s Key“ – an jedem Ort von Trail 3 liest du ein Kapitel auf Englisch und löst Fragen dazu.', 'Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.', 'English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.', 'Vorbereitung für weitere Bundesländer und Schularten.']),
   ('0.12', '2026-11-06', ['Schule einrichten geht schneller: nur noch Klasse und Buch wählen.', 'Neu: Startcheck „Wie fit bin ich?“ – 20 kurze Aufgaben, danach zeigt dir die App, was du wiederholen solltest. Keine Note!', 'Klasse oder Buch vertan? Unter „Ändern“ wechseln – mit Sicherheitsfrage, deine Wörter und Ergebnisse bleiben erhalten.', 'Buch-Vokabeln: Unit jetzt per Knopf wählen (Welcome, Unit 1–6, Extra).']),
   ('0.11', '2026-11-02', ['Neu unter Üben: „Selbst schreiben“ – alle Wörter, die du schon kennst, ohne Auswahl, nur selbst eintippen (mit Anfangsbuchstaben-Hilfe).', 'Wer lieber antippt: Ab und zu kommt ein „Schreib-Moment“ – ein schon bekanntes Wort schreibst du selbst. Höchstens zweimal pro Runde, abschaltbar unter „Ich“.', 'Selbst schreiben lohnt sich: Für je 5 selbst geschriebene Wörter gibt es eine Extra-Feder für „Mein Rabe“.']),
   ('0.10', '2026-11-01', ['Neu: Vokabeln per Foto! Fotografiere die Vokabelseite aus deinem Englischbuch – die App liest die Wörter, du prüfst kurz und speicherst sie mit deiner Unit. Das Foto bleibt auf deinem Handy.']),
@@ -321,6 +322,7 @@ GUIDE = {
   {'ico': '🎮', 't': 'Üben & Spiele', 'go': 'practice', 'items': [
     ['Wiederholen', 'Die App merkt sich, welche Wörter du bald vergisst, und fragt sie rechtzeitig.'],
     ['Selbst schreiben', 'Alle bekannten Wörter ohne Auswahl selbst eintippen – so merkt man sie sich am besten.'],
+    ['Prüfungstraining Cambridge', 'A2 Key oder B1 Preliminary üben: Hören, Grammatik, Lesen, Schreiben, Sprechen – mit Rückmeldung.'],
     ['Zeiten-Werkstatt & unregelmäßige Verben', 'Simple Past, Present Perfect, go – went – gone …'],
     ['Blitz, Memory, Stadt-Land-Fluss, Zungenbrecher', 'Schnelle Spiele für zwischendurch.'],
     ['KI-Gespräch', 'Unterhalte dich auf Englisch – passend zu deiner Klasse.']]},
@@ -348,7 +350,8 @@ GUIDE = {
     ['Wochen-Challenge', 'Alle Kinder einer Klassenstufe bekommen dieselben Fragen – ohne Anmeldung.'],
     ['Duell-Code mit Klassenstufe', 'Codes mit „-K7“ nutzen nur Stoff bis Klasse 7.'],
     ['Live-Duell', 'Zwei Kinder treten in Echtzeit an – ohne Konto, nur Spitzname.'],
-    ['Hausaufgaben-Code', 'Unter Schule → Probe-Klassenarbeit Themen und Pakete ankreuzen, „Als Hausaufgaben-Code teilen“ – fertig. Ohne Anmeldung, ohne Schülerdaten.']]},
+    ['Hausaufgaben-Code', 'Unter Schule → Probe-Klassenarbeit Themen und Pakete ankreuzen, „Als Hausaufgaben-Code teilen“ – fertig. Ohne Anmeldung, ohne Schülerdaten.'],
+    ['Wortlisten teilen', 'Eine selbst eingetippte oder fotografierte Unit-Liste als Link an die Klasse schicken; die Liste steckt nur im Link, kein Server.']]},
   {'ico': '🔒', 't': 'Datenschutz', 'items': [
     ['Ohne Konto nutzbar', 'Fortschritt bleibt auf dem Gerät. Geräte-Sync ist freiwillig.'],
     ['Live-Duell', 'Läuft über einen kurzlebigen Kanal; es wird nichts gespeichert, nur der Spitzname wird übertragen.'],

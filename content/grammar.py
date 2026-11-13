@@ -42,6 +42,10 @@ TOPICS = {
   'tags':   ('Question tags', 8),
   'link':   ('Verbindungswörter (although, because, so that …)', 8),
   'state':  ('Zustandsverben (know, like, belong …)', 10),
+  # 13.11.2026
+  'pastperfprog': ('Past perfect progressive', 8),
+  'advorder': ('Stellung der Adverbiale (Ort vor Zeit)', 9),
+  'passive3': ('Passiv mit zwei Objekten und Präpositionen', 10),
 }
 
 CASES = '''
@@ -223,6 +227,22 @@ state | Look, she ___ a picture of the sea. | draw | is drawing | draws; draw | 
 state | I ___ what you mean. | understand | understand | am understanding; understanding | understand ist ein Zustandsverb. | Ich verstehe, was du meinst.
 state | We ___ about the trip right now. | think | are thinking | think; thinks | think = nachdenken (Tätigkeit) → progressive möglich. | Wir denken gerade über die Reise nach.
 state | I ___ that's a good idea. | think | think | am thinking; thinking | think = meinen (Meinung) → simple. | Ich finde, das ist eine gute Idee.
+pastperfprog | She was tired because she ___ all day. | work | had been working | has been working; was working | Dauer bis zu einem Punkt in der Vergangenheit → had been + -ing. | Sie war müde, weil sie den ganzen Tag gearbeitet hatte.
+pastperfprog | How long ___ before the bus came? | you wait | had you been waiting | have you been waiting; did you wait | Dauer vor einem vergangenen Ereignis → had been + -ing. | Wie lange hattest du gewartet, bevor der Bus kam?
+pastperfprog | The ground was wet. It ___ . | rain | had been raining | has been raining; rained | Sichtbares Ergebnis einer Dauer in der Vergangenheit. | Der Boden war nass. Es hatte geregnet.
+pastperfprog | They ___ for hours when they finally found the hotel. | walk | had been walking | have been walking; were walk | Dauer vor „when … found“. | Sie waren schon stundenlang gelaufen, als sie endlich das Hotel fanden.
+pastperfprog | I ___ English for three years before I went to London. | learn | had been learning | have been learning; learnt | Zeitraum vor einem vergangenen Zeitpunkt. | Ich hatte drei Jahre Englisch gelernt, bevor ich nach London ging.
+advorder | We met ___ . | at school / yesterday | at school yesterday | yesterday at school; at yesterday school | Ort vor Zeit: at school yesterday. | Wir haben uns gestern in der Schule getroffen.
+advorder | She plays ___ . | the piano / very well | the piano very well | very well the piano; the piano well very | Objekt nicht vom Verb trennen: plays the piano very well. | Sie spielt sehr gut Klavier.
+advorder | I go ___ . | by bus / to school / every day | to school by bus every day | every day by bus to school; by bus every day to school | Reihenfolge: Ort – Art – Zeit. | Ich fahre jeden Tag mit dem Bus zur Schule.
+advorder | He ___ late. | never / is | is never | never is; is late never | Häufigkeitsadverb nach be. | Er kommt nie zu spät.
+advorder | They arrived ___ . | in London / on Monday | in London on Monday | on Monday in London; Monday in London on | Ort vor Zeit. | Sie kamen am Montag in London an.
+passive3 | I ___ a new phone for my birthday. | give | was given | was gave; gave | Person als Subjekt im Passiv: I was given … | Ich habe zum Geburtstag ein neues Handy bekommen.
+passive3 | The students ___ the results tomorrow. | will show | will be shown | will show; are show | Zukunft + Passiv mit Person als Subjekt. | Den Schülern werden morgen die Ergebnisse gezeigt.
+passive3 | The baby ___ by her grandparents. | look after | is looked after | is looked; looks after | Präposition bleibt beim Verb: is looked after. | Das Baby wird von seinen Großeltern betreut.
+passive3 | This problem must ___ . | deal with | be dealt with | be dealt; deal with | Modalverb + be + 3. Form + Präposition. | Mit diesem Problem muss man sich befassen.
+passive3 | She ___ a job in London. | offer | has been offered | has offered; was offer | present perfect passive: has been offered. | Ihr wurde eine Stelle in London angeboten.
+passive3 | The new rules ___ to us yesterday. | explain | were explained | was explained; explained | Plural → were explained. | Die neuen Regeln wurden uns gestern erklärt.
 '''
 
 # Simple vs. Progressive (ersetzt Verb-Aspekt): pf = 1 → simple richtig, 0 → progressive richtig

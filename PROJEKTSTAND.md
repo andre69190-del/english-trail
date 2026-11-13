@@ -222,3 +222,24 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - „Schreib-Momente“ im Antipp-Modus: Wörter mit Box ≥ 2 werden mit 30 % Chance zur Schreibfrage (`q.forceWrite = 2`), max. 2 pro Runde, nie in Duellen/Live/Zeit/Probe-Arbeit. Abschaltbar unter Ich (`S.writeMix`, Standard an).
 - perf-Budget 880 KB. Tests: UI 138 OK.
 - 0.11.1: Extra-Federn fürs Selbstschreiben – `S.wrOk` (+1 je richtig geschriebenem Wort mit `forceWrite`, +0,5 mit Anfangsbuchstaben-Hilfe), `rvEarned` + floor(wrOk/5). Toast bei neuer Feder. UI 139 OK.
+
+## Release 0.12 (06.11.2026) – Schule einfacher, Startcheck, Wechsel mit Bestätigung
+- Einrichtung: Bundesland/Schulart eingeklappt (nur BW-Gymnasium aktiv), Klasse + Buch reichen.
+- Startcheck (`scheck`, `startSchoolCheck`): 1 Aufgabe je Grammatikthema bis Klasse g (max. 16) + 4 Wörter der Vorjahre, keine Note; Ergebnis `S.schCheck[g] = {pct, d, weak}`, schwache Themen im Schulbereich verlinkt; nach der ersten Einrichtung angeboten (`SCH.offerCheck`).
+- Klasse/Buch ändern: `SCH.prev` beim Klick auf „Ändern“; Speichern mit anderer Klasse/Buch → Warnkarte `#sc-conf` (Ja, wechseln / Abbrechen); Zurück/Abbrechen stellt den alten Stand her. Nichts geht verloren.
+- Meine Wörter: Unit-Knöpfe Welcome, Unit 1–6, Extra.
+- Fehler behoben: zweiter Tab hat beim Speichern im anderen Tab die Seite neu gezeichnet (Eingaben weg, Live-Duell gestört) → kein Neuzeichnen beim Tippen/Live-Duell.
+- Samstags-Aufgabe „English Trail Samstags-Weiterarbeit“ (14:53 Uhr, PC muss an sein) arbeitet `docs/AUTOPLAN.md` ab.
+- Tests: UI 144 OK (2× hintereinander), Core 58.
+
+## Release 0.13 (13.11.2026) – Trail 3, Schulinhalte nachladen, neue Länder
+- Übernommen aus GitHub (Änderungen vom 09.11. auf dem PC): nginx 404 für unbekannte Pfade, sichtbarer „Über English Trail“-Text (shell.html/app.css/app.js `in-play`).
+- **Schulpakete nur bei Bedarf**: build.py schreibt `data-school-<land>-<schulart>.json` (bisher nur bw-gym, Felder `land`/`stype` am Paket, Standard bw/gym), Kern enthält `schoolLazy` + `schoolIds`. App: `needSchool`, `schoolReady`, `needsSchoolData` (lädt beim Start, wenn Schule gewählt oder Schulwörter gelernt), Schutz in Schule/Themen/Duell-/Live-Codes mit -K. Pakete werden hinten angehängt (Reihenfolge innerhalb der Datei bleibt → Hausaufgaben-/Duell-Codes stabil). Dockerfile kopiert `data-school-*.json`. index.html 822 → 734 KB (Budget 760).
+- **Trail 3 (B1)**: `content/trail3.py`, 12 Orte + Buch „The Raven's Key“ (`D.book`, `u.read`), Missionen, Radio. Polnische B1-Prüfung ausgeblendet (`EXAM_ON = false`).
+- **Klasse 9/10**: Pakete s9ind, s10can, s10saf; Grammatik pastperfprog, advorder, passive3.
+- **Prüfungstraining Cambridge** (A2 Key / B1 Preliminary) ersetzt die polnische B1-Prüfung: `exLv`, `EX.rd`, `S.cam`, englische Schreib-/Sprechaufgaben und Kriterien.
+- **Aktuelle Unit im Buch** (Andres Hinweis 13.11.): Einrichtung „Wo seid ihr gerade?“ (`S.school.unit`, Welcome/Unit 1–6), Karte `schCurBox` oben im Schulbereich (Unit üben, Foto, „Wir sind jetzt bei Unit x“), Grammatik je Unit wählbar (`S.unitGram[unit]`), Modus `sunit` mischt Unit-Wörter + gewählte Grammatik (geht auch ohne Wörter).
+- **Wortlisten teilen** per Link `#w=…` (kein Server), Import-Seite mit Vorschau; Datenschutz ergänzt.
+- **Alltags-Pakete** (content/alltag.py, 6 Pakete) für „Nach Thema“, nachgeladen über data-szlak.json.
+- Tests: UI 158 OK, Core 59. progress_lock 78 Einheiten, 1381 Wörter. progress_lock: 72 Orte/Pakete, 1285 Wörter.
+- Hinweis: Samstagsläufe 07.11. haben nichts veröffentlicht (PC nicht verbunden). Am 13.11. war der PC ebenfalls nicht verbunden → Dateien liegen fertig in /mnt/user-data/outputs/EnglishTrail und müssen auf den PC.

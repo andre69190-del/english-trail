@@ -1,1 +1,1 @@
-0.12 (06.11.2026) Startcheck, einfachere Schul-Einrichtung, Wechsel mit Bestaetigung
+0.13 (13.11.2026) Trail 3 mit Buch, Pruefungstraining Cambridge, Schulinhalte nachladen, neue Laender

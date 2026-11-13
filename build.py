@@ -30,19 +30,36 @@ def main():
     data = json.loads(read('data.json'))          # validiert JSON beim Build
     full_txt = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     # 3.0: „Dla Polaków“ wird nachgeladen (data-polacy.json) – die Deploy-Version bleibt so unter dem Größenbudget
-    lazy = dict(data); pol = lazy.pop('polacy', None)
+    lazy = dict(data); lazy['units'] = list(data['units']); pol = lazy.pop('polacy', None)
     if pol is not None:
         lazy['polacyLazy'] = 'data-polacy.json'
         with open(os.path.join(ROOT, 'data-polacy.json'), 'w', encoding='utf-8') as f:
             json.dump(pol, f, ensure_ascii=False, separators=(',', ':'))
     # 3.3: Szlak 2 und 3 werden nachgeladen (data-szlak.json, offline aus dem Service-Worker-Cache) – gleiche Reihenfolge,
     # die App fügt die Orte direkt nach Szlak 1 ein. Fortschritt hängt nur an den IDs (checks/progress_lock.py).
-    s3 = [u for u in data['units'] if (u.get('r') or 1) >= 2 and not u.get('pack')]
+    s3 = [u for u in data['units'] if ((u.get('r') or 1) >= 2 and not u.get('pack')) or u.get('alt')]   # 0.13: Alltags-Pakete mit nachladen
     if s3:
-        lazy['units'] = [u for u in data['units'] if u not in s3]
+        lazy['units'] = [u for u in lazy['units'] if u not in s3]
         lazy['unitsLazy'] = 1
         with open(os.path.join(ROOT, 'data-szlak.json'), 'w', encoding='utf-8') as f:
             json.dump(s3, f, ensure_ascii=False, separators=(',', ':'))
+    # 0.13: Schulpakete je Bundesland + Schulart als eigene Datei (data-school-<land>-<schulart>.json) – geladen wird nur die gewählte.
+    # Pakete werden hinten angehängt; die Reihenfolge innerhalb der Datei bleibt (Hausaufgaben-/Duell-Codes hängen daran).
+    sch = [u for u in lazy['units'] if u.get('sch')]
+    if sch:
+        lazy['units'] = [u for u in lazy['units'] if not u.get('sch')]
+        files = {}
+        for st in (data.get('school') or {}).get('states', []):
+            for ty in (data.get('school') or {}).get('types', []):
+                if st.get('on') and ty.get('on'):
+                    key = st['id'] + '-' + ty['id']
+                    part = [u for u in sch if (u.get('land') or 'bw') == st['id'] and (u.get('stype') or 'gym') == ty['id']]
+                    if part:
+                        files[key] = 'data-school-%s.json' % key
+                        with open(os.path.join(ROOT, files[key]), 'w', encoding='utf-8') as f:
+                            json.dump(part, f, ensure_ascii=False, separators=(',', ':'))
+        lazy['schoolLazy'] = files
+        lazy['schoolIds'] = [u['id'] for u in sch]
     data_txt = json.dumps(lazy, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     shell0 = read('shell.html')
     def fill(dtxt):

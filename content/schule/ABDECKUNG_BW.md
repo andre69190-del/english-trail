@@ -24,11 +24,11 @@
 | 9/10 | Erwachsenwerden, Generationen | ✅ s10gen |
 | 9/10 | Medien, Privatsphäre | ✅ s10med |
 | 9/10 | Regionale Identität (Schottland, Wales, Irland) | ✅ s10ide |
-| 9/10 | weitere englischsprachige Länder | 🟡 Australien/Neuseeland ✅; Indien, Kanada, Südafrika offen |
+| 9/10 | weitere englischsprachige Länder | ✅ Australien/Neuseeland, Indien, Kanada, Südafrika |
 
 ## Grammatik
 Alle Bildungsplan-Punkte 5/6, 7/8, 9/10 haben ein Übungsthema (34 Themen, 178 Aufgaben), u. a. neu: Possessivbegleiter/Pronomen, s-Genitiv, Fragewörter/Kurzantworten, Häufigkeitsadverbien, have to/needn’t/mustn’t, indirekte Rede ohne Zeitverschiebung, Artikel/zero article, Question tags, Verbindungswörter (Adverbialsätze), Zustandsverben.
-Noch nicht eigenes Thema: Stellung der Adverbiale (9/10), Passiv mit zwei Objekten / präpositionalen Verben (9/10, teils in passive2), past perfect progressive (7/8).
+Seit 0.13 auch: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten / präpositionalen Verben – alle Bildungsplan-Punkte haben ein Übungsthema.
 
 ## Lehrwerke (Green Line BW, Access BW)
 Die Verlage veröffentlichen keine vollständigen Inhaltsverzeichnisse je Unit frei; Vokabellisten sind urheberrechtlich geschützt.

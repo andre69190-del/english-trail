@@ -494,6 +494,34 @@
   }
   function maskOf(list, picked) { var m = 0; list.forEach(function (x, i) { if (picked.indexOf(x) >= 0) m += Math.pow(2, i); }); return m; }
   function fromMask(list, m) { return list.filter(function (x, i) { return Math.floor(m / Math.pow(2, i)) % 2 === 1; }); }
+  /* Wortliste teilen (ohne Server): Liste steckt im Link-Anker #w=… (Base64url von „v1|Unit|Klasse\nen=de\n…“) */
+  var B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+  function b64e(str) {   /* Base64url ohne Abhängigkeiten (läuft in Browser und Tests gleich) */
+    var b = unescape(encodeURIComponent(str)), out = '';
+    for (var i = 0; i < b.length; i += 3) {
+      var n = (b.charCodeAt(i) << 16) | ((b.charCodeAt(i + 1) || 0) << 8) | (b.charCodeAt(i + 2) || 0), k = b.length - i;
+      out += B64[(n >> 18) & 63] + B64[(n >> 12) & 63] + (k > 1 ? B64[(n >> 6) & 63] : '') + (k > 2 ? B64[n & 63] : '');
+    }
+    return out;
+  }
+  function b64d(s0) {
+    var s1 = String(s0 || ''), bytes = '', buf = 0, bits = 0;
+    for (var i = 0; i < s1.length; i++) { var v = B64.indexOf(s1[i]); if (v < 0) throw new Error('b64'); buf = (buf << 6) | v; bits += 6; if (bits >= 8) { bits -= 8; bytes += String.fromCharCode((buf >> bits) & 255); } }
+    return decodeURIComponent(escape(bytes));
+  }
+  function wordShareEncode(unit, grade, words) {
+    var clean = function (x) { return String(x || '').replace(/[\n|=]/g, ' ').trim().slice(0, 80); };
+    var lines = ['v1|' + clean(unit).slice(0, 20) + '|' + (grade || '')].concat((words || []).slice(0, 80).map(function (w) { return clean(w[0]) + '=' + clean(w[1]); }));
+    return b64e(lines.join('\n'));
+  }
+  function wordShareDecode(code) {
+    try {
+      var lines = b64d(code).split('\n'), head = lines[0].split('|');
+      if (head[0] !== 'v1') return null;
+      var words = lines.slice(1).map(function (l) { var i = l.indexOf('='); return i > 0 ? [l.slice(0, i).trim().slice(0, 80), l.slice(i + 1).trim().slice(0, 80)] : null; }).filter(function (w) { return w && w[0] && w[1]; }).slice(0, 80);
+      return words.length ? { unit: (head[1] || '').slice(0, 20), grade: +head[2] || 0, words: words } : null;
+    } catch (e) { return null; }
+  }
   function liveWinner(me, opp, myId, oppId) {
     var a = me && me.ok, b = opp && opp.ok;
     if (!a && !b) return 0; if (a && !b) return 1; if (b && !a) return -1;
@@ -679,7 +707,7 @@
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

@@ -6965,6 +6965,4264 @@
    "r": 2
   },
   {
+   "id": "gcw",
+   "city": "Giant's Causeway",
+   "cityDe": "Giant's Causeway",
+   "cityEn": "Giant's Causeway",
+   "lon": -6.51,
+   "lat": 55.24,
+   "trail": "blue",
+   "title": [
+    "Legenden erzählen",
+    "Legenden erzählen"
+   ],
+   "can": [
+    "Ich kann eine Legende nacherzählen und sagen, was vorher passiert war (past perfect).",
+    "Ich kann eine Legende nacherzählen und sagen, was vorher passiert war (past perfect)."
+   ],
+   "tip": [
+    "Past perfect (had + 3. Form) zeigt, was noch früher passiert war: „When we arrived, the bus had already left.“",
+    "Past perfect (had + 3. Form) zeigt, was noch früher passiert war: „When we arrived, the bus had already left.“"
+   ],
+   "fact": [
+    "Die rund 40 000 sechseckigen Basaltsäulen entstanden vor etwa 60 Millionen Jahren aus Lava. Die Legende sagt: Der Riese Finn McCool hat sie gebaut.",
+    "Die rund 40 000 sechseckigen Basaltsäulen entstanden vor etwa 60 Millionen Jahren aus Lava. Die Legende sagt: Der Riese Finn McCool hat sie gebaut."
+   ],
+   "words": [
+    [
+     "legend",
+     "Legende / Sage",
+     "Legende / Sage"
+    ],
+    [
+     "giant",
+     "Riese",
+     "Riese"
+    ],
+    [
+     "myth",
+     "Mythos",
+     "Mythos"
+    ],
+    [
+     "column",
+     "Säule",
+     "Säule"
+    ],
+    [
+     "coast",
+     "Küste",
+     "Küste"
+    ],
+    [
+     "lava",
+     "Lava",
+     "Lava"
+    ],
+    [
+     "to cool down",
+     "abkühlen",
+     "abkühlen"
+    ],
+    [
+     "to form",
+     "(sich) bilden",
+     "(sich) bilden"
+    ],
+    [
+     "to pretend",
+     "so tun, als ob",
+     "so tun, als ob"
+    ],
+    [
+     "to be scared of",
+     "Angst haben vor",
+     "Angst haben vor"
+    ],
+    [
+     "brave",
+     "mutig",
+     "mutig"
+    ],
+    [
+     "clever",
+     "schlau",
+     "schlau"
+    ],
+    [
+     "to escape",
+     "fliehen / entkommen",
+     "fliehen / entkommen"
+    ],
+    [
+     "enemy",
+     "Feind",
+     "Feind"
+    ],
+    [
+     "had already",
+     "hatte schon",
+     "hatte schon"
+    ],
+    [
+     "had never",
+     "hatte noch nie",
+     "hatte noch nie"
+    ],
+    [
+     "before that",
+     "davor",
+     "davor"
+    ],
+    [
+     "by the time",
+     "als … schon",
+     "als … schon"
+    ],
+    [
+     "according to",
+     "laut / gemäß",
+     "laut / gemäß"
+    ],
+    [
+     "to tell a story",
+     "eine Geschichte erzählen",
+     "eine Geschichte erzählen"
+    ]
+   ],
+   "sentences": [
+    [
+     "According to the legend, a giant built the causeway.",
+     "Laut der Legende hat ein Riese den Damm gebaut.",
+     "Laut der Legende hat ein Riese den Damm gebaut."
+    ],
+    [
+     "By the time we arrived, the rain had stopped.",
+     "Als wir ankamen, hatte der Regen schon aufgehört.",
+     "Als wir ankamen, hatte der Regen schon aufgehört."
+    ],
+    [
+     "I had never seen such strange rocks before.",
+     "Ich hatte noch nie zuvor so seltsame Felsen gesehen.",
+     "Ich hatte noch nie zuvor so seltsame Felsen gesehen."
+    ],
+    [
+     "The columns formed when the lava cooled down.",
+     "Die Säulen bildeten sich, als die Lava abkühlte.",
+     "Die Säulen bildeten sich, als die Lava abkühlte."
+    ],
+    [
+     "Finn pretended to be a baby to trick his enemy.",
+     "Finn tat so, als wäre er ein Baby, um seinen Feind auszutricksen.",
+     "Finn tat so, als wäre er ein Baby, um seinen Feind auszutricksen."
+    ],
+    [
+     "The other giant was scared and escaped to Scotland.",
+     "Der andere Riese bekam Angst und floh nach Schottland.",
+     "Der andere Riese bekam Angst und floh nach Schottland."
+    ],
+    [
+     "After we had walked along the coast, we had lunch.",
+     "Nachdem wir an der Küste entlanggelaufen waren, aßen wir zu Mittag.",
+     "Nachdem wir an der Küste entlanggelaufen waren, aßen wir zu Mittag."
+    ],
+    [
+     "Do you know any legends from your region?",
+     "Kennst du Sagen aus deiner Region?",
+     "Kennst du Sagen aus deiner Region?"
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Giant's Causeway, Nordirland. Wind und Wellen. Ein Guide in grüner Jacke erzählt einer Gruppe von der Legende.",
+     "Giant's Causeway, Nordirland. Wind und Wellen. Ein Guide in grüner Jacke erzählt einer Gruppe von der Legende."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Do you know who built the causeway?",
+       "Weißt du, wer den Damm gebaut hat?",
+       "Weißt du, wer den Damm gebaut hat?"
+      ],
+      "opts": [
+       [
+        "According to the legend, it was a giant called Finn McCool.",
+        "Laut der Legende war es ein Riese namens Finn McCool.",
+        "Laut der Legende war es ein Riese namens Finn McCool.",
+        1
+       ],
+       [
+        "I had built it yesterday.",
+        "Ich hatte ihn gestern gebaut.",
+        "Ich hatte ihn gestern gebaut.",
+        0
+       ]
+      ],
+      "hint": [
+       "„According to the legend …“ leitet eine Sage ein.",
+       "„According to the legend …“ leitet eine Sage ein."
+      ]
+     },
+     {
+      "npc": [
+       "Right! And what had happened before the Scottish giant ran away?",
+       "Richtig! Und was war passiert, bevor der schottische Riese weglief?",
+       "Richtig! Und was war passiert, bevor der schottische Riese weglief?"
+      ],
+      "opts": [
+       [
+        "He had seen Finn's 'baby' and thought the father must be enormous.",
+        "Er hatte Finns „Baby“ gesehen und dachte, der Vater müsse riesig sein.",
+        "Er hatte Finns „Baby“ gesehen und dachte, der Vater müsse riesig sein.",
+        1
+       ],
+       [
+        "He has run away tomorrow.",
+        "Er ist morgen weggelaufen.",
+        "Er ist morgen weggelaufen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Was vorher passiert war: had + 3. Form.",
+       "Was vorher passiert war: had + 3. Form."
+      ]
+     },
+     {
+      "npc": [
+       "Exactly. And what's the real explanation?",
+       "Genau. Und was ist die echte Erklärung?",
+       "Genau. Und was ist die echte Erklärung?"
+      ],
+      "opts": [
+       [
+        "The columns formed when lava cooled down millions of years ago.",
+        "Die Säulen entstanden, als vor Millionen Jahren Lava abkühlte.",
+        "Die Säulen entstanden, als vor Millionen Jahren Lava abkühlte.",
+        1
+       ],
+       [
+        "A giant is cooling down.",
+        "Ein Riese kühlt gerade ab.",
+        "Ein Riese kühlt gerade ab.",
+        0
+       ]
+      ],
+      "hint": [
+       "Wissenschaft statt Sage: lava, cooled down.",
+       "Wissenschaft statt Sage: lava, cooled down."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Gruppe klatscht. Der Guide zwinkert: „Personally, I prefer the giant.“",
+     "Die Gruppe klatscht. Der Guide zwinkert: „Personally, I prefer the giant.“"
+    ]
+   },
+   "lab": "l",
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 1: Der Brief im Buch",
+     "Kapitel 1: Der Brief im Buch"
+    ],
+    "lines": [
+     {
+      "pl": "Emma had always loved old books, but this one was different.",
+      "tr": [
+       "Emma hatte alte Bücher immer geliebt, aber dieses war anders.",
+       "Emma hatte alte Bücher immer geliebt, aber dieses war anders."
+      ]
+     },
+     {
+      "pl": "Her grandfather had left it to her before he died.",
+      "tr": [
+       "Ihr Großvater hatte es ihr hinterlassen, bevor er starb.",
+       "Ihr Großvater hatte es ihr hinterlassen, bevor er starb."
+      ]
+     },
+     {
+      "pl": "Inside the cover she found a letter and a small black feather.",
+      "tr": [
+       "Im Umschlag fand sie einen Brief und eine kleine schwarze Feder.",
+       "Im Umschlag fand sie einen Brief und eine kleine schwarze Feder."
+      ]
+     },
+     {
+      "pl": "The letter said: 'Follow the ravens and you will find the key.'",
+      "tr": [
+       "Im Brief stand: „Folge den Raben, und du wirst den Schlüssel finden.“",
+       "Im Brief stand: „Folge den Raben, und du wirst den Schlüssel finden.“"
+      ]
+     },
+     {
+      "pl": "Under the words there was a drawing of rocks shaped like honeycombs.",
+      "tr": [
+       "Unter den Worten war eine Zeichnung von Felsen, die wie Honigwaben aussahen.",
+       "Unter den Worten war eine Zeichnung von Felsen, die wie Honigwaben aussahen."
+      ]
+     },
+     {
+      "pl": "Emma knew the place at once: the Giant's Causeway.",
+      "tr": [
+       "Emma kannte den Ort sofort: den Giant’s Causeway.",
+       "Emma kannte den Ort sofort: den Giant’s Causeway."
+      ]
+     },
+     {
+      "pl": "On the highest column, someone had carved a tiny raven.",
+      "tr": [
+       "Auf der höchsten Säule hatte jemand einen winzigen Raben eingeritzt.",
+       "Auf der höchsten Säule hatte jemand einen winzigen Raben eingeritzt."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "Who had left Emma the book?",
+      "tr": [
+       "Wer hatte Emma das Buch hinterlassen?",
+       "Wer hatte Emma das Buch hinterlassen?"
+      ],
+      "o": [
+       "her grandfather",
+       "her teacher",
+       "a giant"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What did she find inside the cover?",
+      "tr": [
+       "Was fand sie im Umschlag?",
+       "Was fand sie im Umschlag?"
+      ],
+      "o": [
+       "a letter and a feather",
+       "a key and a map",
+       "a photo of a raven"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was carved on the highest column?",
+      "tr": [
+       "Was war in die höchste Säule eingeritzt?",
+       "Was war in die höchste Säule eingeritzt?"
+      ],
+      "o": [
+       "a tiny raven",
+       "her name",
+       "a key"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "abd",
+   "city": "Aberdeen",
+   "cityDe": "Aberdeen",
+   "cityEn": "Aberdeen",
+   "lon": -2.09,
+   "lat": 57.15,
+   "trail": "blue",
+   "title": [
+    "Energie und Zukunft",
+    "Energie und Zukunft"
+   ],
+   "can": [
+    "Ich kann über Pläne, Vorhersagen und feste Termine sprechen (will, going to, present progressive).",
+    "Ich kann über Pläne, Vorhersagen und feste Termine sprechen (will, going to, present progressive)."
+   ],
+   "tip": [
+    "Fester Termin: „I’m meeting Sam at six.“ Plan: „I’m going to study engineering.“ Vermutung: „I think it will rain.“",
+    "Fester Termin: „I’m meeting Sam at six.“ Plan: „I’m going to study engineering.“ Vermutung: „I think it will rain.“"
+   ],
+   "fact": [
+    "Aberdeen war jahrzehntelang die Ölhauptstadt Europas. Heute baut die Stadt Windparks im Meer und Wasserstoff-Busse.",
+    "Aberdeen war jahrzehntelang die Ölhauptstadt Europas. Heute baut die Stadt Windparks im Meer und Wasserstoff-Busse."
+   ],
+   "words": [
+    [
+     "energy",
+     "Energie",
+     "Energie"
+    ],
+    [
+     "oil",
+     "Öl",
+     "Öl"
+    ],
+    [
+     "wind farm",
+     "Windpark",
+     "Windpark"
+    ],
+    [
+     "offshore",
+     "vor der Küste",
+     "vor der Küste"
+    ],
+    [
+     "renewable",
+     "erneuerbar",
+     "erneuerbar"
+    ],
+    [
+     "hydrogen",
+     "Wasserstoff",
+     "Wasserstoff"
+    ],
+    [
+     "engineer",
+     "Ingenieur/in",
+     "Ingenieur/in"
+    ],
+    [
+     "apprenticeship",
+     "Ausbildung",
+     "Ausbildung"
+    ],
+    [
+     "to predict",
+     "vorhersagen",
+     "vorhersagen"
+    ],
+    [
+     "prediction",
+     "Vorhersage",
+     "Vorhersage"
+    ],
+    [
+     "probably",
+     "wahrscheinlich",
+     "wahrscheinlich"
+    ],
+    [
+     "definitely",
+     "auf jeden Fall",
+     "auf jeden Fall"
+    ],
+    [
+     "I'm meeting",
+     "ich treffe (fester Termin)",
+     "ich treffe (fester Termin)"
+    ],
+    [
+     "I'm going to",
+     "ich habe vor",
+     "ich habe vor"
+    ],
+    [
+     "it will",
+     "es wird (Vermutung)",
+     "es wird (Vermutung)"
+    ],
+    [
+     "in the future",
+     "in Zukunft",
+     "in Zukunft"
+    ],
+    [
+     "by 2040",
+     "bis 2040",
+     "bis 2040"
+    ],
+    [
+     "to switch to",
+     "umsteigen auf",
+     "umsteigen auf"
+    ],
+    [
+     "to reduce",
+     "verringern",
+     "verringern"
+    ],
+    [
+     "career",
+     "Laufbahn / Beruf",
+     "Laufbahn / Beruf"
+    ]
+   ],
+   "sentences": [
+    [
+     "I think renewable energy will become cheaper.",
+     "Ich glaube, erneuerbare Energie wird billiger werden.",
+     "Ich glaube, erneuerbare Energie wird billiger werden."
+    ],
+    [
+     "I'm going to do an apprenticeship as an engineer.",
+     "Ich habe vor, eine Ausbildung zum Ingenieur zu machen.",
+     "Ich habe vor, eine Ausbildung zum Ingenieur zu machen."
+    ],
+    [
+     "We're visiting a wind farm tomorrow morning.",
+     "Morgen früh besichtigen wir einen Windpark.",
+     "Morgen früh besichtigen wir einen Windpark."
+    ],
+    [
+     "By 2040 most buses will probably run on hydrogen.",
+     "Bis 2040 werden die meisten Busse wahrscheinlich mit Wasserstoff fahren.",
+     "Bis 2040 werden die meisten Busse wahrscheinlich mit Wasserstoff fahren."
+    ],
+    [
+     "Look at those clouds – it is going to rain.",
+     "Schau dir die Wolken an – es wird gleich regnen.",
+     "Schau dir die Wolken an – es wird gleich regnen."
+    ],
+    [
+     "Aberdeen is switching from oil to wind.",
+     "Aberdeen steigt von Öl auf Wind um.",
+     "Aberdeen steigt von Öl auf Wind um."
+    ],
+    [
+     "Nobody can predict the future exactly.",
+     "Niemand kann die Zukunft genau vorhersagen.",
+     "Niemand kann die Zukunft genau vorhersagen."
+    ],
+    [
+     "This job will definitely be important in the future.",
+     "Dieser Beruf wird in Zukunft auf jeden Fall wichtig sein.",
+     "Dieser Beruf wird in Zukunft auf jeden Fall wichtig sein."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Aberdeen, Hafen. Ein Schiff bringt Teile für einen Windpark. Eine Ingenieurin macht eine Führung für Schulklassen.",
+     "Aberdeen, Hafen. Ein Schiff bringt Teile für einen Windpark. Eine Ingenieurin macht eine Führung für Schulklassen."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What are you going to do after school?",
+       "Was hast du nach der Schule vor?",
+       "Was hast du nach der Schule vor?"
+      ],
+      "opts": [
+       [
+        "I'm going to study engineering – maybe here in Scotland!",
+        "Ich werde Ingenieurwesen studieren – vielleicht hier in Schottland!",
+        "Ich werde Ingenieurwesen studieren – vielleicht hier in Schottland!",
+        1
+       ],
+       [
+        "I will meeting my future.",
+        "Ich werde Zukunft treffen.",
+        "Ich werde Zukunft treffen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Plan: going to + Grundform.",
+       "Plan: going to + Grundform."
+      ]
+     },
+     {
+      "npc": [
+       "Great! Do you think wind energy will replace oil?",
+       "Super! Glaubst du, Windenergie wird Öl ersetzen?",
+       "Super! Glaubst du, Windenergie wird Öl ersetzen?"
+      ],
+      "opts": [
+       [
+        "I think it will, but it will probably take a long time.",
+        "Ich denke schon, aber es wird wahrscheinlich lange dauern.",
+        "Ich denke schon, aber es wird wahrscheinlich lange dauern.",
+        1
+       ],
+       [
+        "Yes, it is replacing tomorrow.",
+        "Ja, es ersetzt morgen.",
+        "Ja, es ersetzt morgen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vermutung: I think … will …",
+       "Vermutung: I think … will …"
+      ]
+     },
+     {
+      "npc": [
+       "Our boat to the wind farm leaves at ten. Are you coming?",
+       "Unser Boot zum Windpark fährt um zehn. Kommst du mit?",
+       "Unser Boot zum Windpark fährt um zehn. Kommst du mit?"
+      ],
+      "opts": [
+       [
+        "Yes! I'm meeting my class at the harbour at half past nine.",
+        "Ja! Ich treffe meine Klasse um halb zehn am Hafen.",
+        "Ja! Ich treffe meine Klasse um halb zehn am Hafen.",
+        1
+       ],
+       [
+        "I'm predicting a boat.",
+        "Ich sage ein Boot voraus.",
+        "Ich sage ein Boot voraus.",
+        0
+       ]
+      ],
+      "hint": [
+       "Fester Termin: present progressive.",
+       "Fester Termin: present progressive."
+      ]
+     }
+    ],
+    "outro": [
+     "Auf dem Boot zeigt die Ingenieurin auf die riesigen Rotoren: „One of them powers 7,000 homes.“",
+     "Auf dem Boot zeigt die Ingenieurin auf die riesigen Rotoren: „One of them powers 7,000 homes.“"
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 2: Die Nachricht im Hafen",
+     "Kapitel 2: Die Nachricht im Hafen"
+    ],
+    "lines": [
+     {
+      "pl": "The raven on the rock pointed north, so Emma took the ferry to Scotland.",
+      "tr": [
+       "Der Rabe auf dem Felsen zeigte nach Norden, also nahm Emma die Fähre nach Schottland.",
+       "Der Rabe auf dem Felsen zeigte nach Norden, also nahm Emma die Fähre nach Schottland."
+      ]
+     },
+     {
+      "pl": "In Aberdeen it was cold, and the wind was blowing hard.",
+      "tr": [
+       "In Aberdeen war es kalt, und der Wind blies stark.",
+       "In Aberdeen war es kalt, und der Wind blies stark."
+      ]
+     },
+     {
+      "pl": "At the harbour an old fisherman was mending a net.",
+      "tr": [
+       "Am Hafen flickte ein alter Fischer ein Netz.",
+       "Am Hafen flickte ein alter Fischer ein Netz."
+      ]
+     },
+     {
+      "pl": "'Your grandfather worked here on the oil platforms,' he said.",
+      "tr": [
+       "„Dein Großvater hat hier auf den Ölplattformen gearbeitet“, sagte er.",
+       "„Dein Großvater hat hier auf den Ölplattformen gearbeitet“, sagte er."
+      ]
+     },
+     {
+      "pl": "'He told me that a girl with a black feather would come one day.'",
+      "tr": [
+       "„Er hat mir gesagt, dass eines Tages ein Mädchen mit einer schwarzen Feder kommen würde.“",
+       "„Er hat mir gesagt, dass eines Tages ein Mädchen mit einer schwarzen Feder kommen würde.“"
+      ]
+     },
+     {
+      "pl": "He gave her an envelope with a train ticket inside.",
+      "tr": [
+       "Er gab ihr einen Umschlag mit einer Zugfahrkarte darin.",
+       "Er gab ihr einen Umschlag mit einer Zugfahrkarte darin."
+      ]
+     },
+     {
+      "pl": "The ticket was for tomorrow morning – to the Isle of Man.",
+      "tr": [
+       "Die Fahrkarte war für morgen früh – zur Isle of Man.",
+       "Die Fahrkarte war für morgen früh – zur Isle of Man."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "Where had Emma's grandfather worked?",
+      "tr": [
+       "Wo hatte Emmas Großvater gearbeitet?",
+       "Wo hatte Emmas Großvater gearbeitet?"
+      ],
+      "o": [
+       "on oil platforms",
+       "in a bookshop",
+       "on a farm"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was the fisherman doing?",
+      "tr": [
+       "Was machte der Fischer?",
+       "Was machte der Fischer?"
+      ],
+      "o": [
+       "mending a net",
+       "reading a book",
+       "selling fish"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was in the envelope?",
+      "tr": [
+       "Was war in dem Umschlag?",
+       "Was war in dem Umschlag?"
+      ],
+      "o": [
+       "a ticket",
+       "a key",
+       "money"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "iom",
+   "city": "Isle of Man",
+   "cityDe": "Isle of Man",
+   "cityEn": "Isle of Man",
+   "lon": -4.48,
+   "lat": 54.2,
+   "trail": "green",
+   "title": [
+    "Was wäre, wenn …?",
+    "Was wäre, wenn …?"
+   ],
+   "can": [
+    "Ich kann über unwahrscheinliche Situationen sprechen (if-Satz Typ II).",
+    "Ich kann über unwahrscheinliche Situationen sprechen (if-Satz Typ II)."
+   ],
+   "tip": [
+    "If-Satz Typ II: If + simple past, would + Grundform. „If I had a motorbike, I would ride it every day.“ Bei be: „If I were you …“",
+    "If-Satz Typ II: If + simple past, would + Grundform. „If I had a motorbike, I would ride it every day.“ Bei be: „If I were you …“"
+   ],
+   "fact": [
+    "Auf der Isle of Man findet seit 1907 das TT-Motorradrennen statt – auf ganz normalen Straßen, die dafür gesperrt werden.",
+    "Auf der Isle of Man findet seit 1907 das TT-Motorradrennen statt – auf ganz normalen Straßen, die dafür gesperrt werden."
+   ],
+   "words": [
+    [
+     "island",
+     "Insel",
+     "Insel"
+    ],
+    [
+     "race",
+     "Rennen",
+     "Rennen"
+    ],
+    [
+     "motorbike",
+     "Motorrad",
+     "Motorrad"
+    ],
+    [
+     "speed",
+     "Geschwindigkeit",
+     "Geschwindigkeit"
+    ],
+    [
+     "dangerous",
+     "gefährlich",
+     "gefährlich"
+    ],
+    [
+     "risk",
+     "Risiko",
+     "Risiko"
+    ],
+    [
+     "safe",
+     "sicher",
+     "sicher"
+    ],
+    [
+     "helmet",
+     "Helm",
+     "Helm"
+    ],
+    [
+     "to take a risk",
+     "ein Risiko eingehen",
+     "ein Risiko eingehen"
+    ],
+    [
+     "to crash",
+     "verunglücken / crashen",
+     "verunglücken / crashen"
+    ],
+    [
+     "If I were you",
+     "Wenn ich du wäre",
+     "Wenn ich du wäre"
+    ],
+    [
+     "I would",
+     "ich würde",
+     "ich würde"
+    ],
+    [
+     "I wouldn't",
+     "ich würde nicht",
+     "ich würde nicht"
+    ],
+    [
+     "if I had",
+     "wenn ich hätte",
+     "wenn ich hätte"
+    ],
+    [
+     "if I could",
+     "wenn ich könnte",
+     "wenn ich könnte"
+    ],
+    [
+     "to be allowed to",
+     "dürfen",
+     "dürfen"
+    ],
+    [
+     "rule",
+     "Regel",
+     "Regel"
+    ],
+    [
+     "cat without a tail",
+     "Katze ohne Schwanz",
+     "Katze ohne Schwanz"
+    ],
+    [
+     "parliament",
+     "Parlament",
+     "Parlament"
+    ],
+    [
+     "independent",
+     "unabhängig",
+     "unabhängig"
+    ]
+   ],
+   "sentences": [
+    [
+     "If I had a motorbike, I would ride it every day.",
+     "Wenn ich ein Motorrad hätte, würde ich es jeden Tag fahren.",
+     "Wenn ich ein Motorrad hätte, würde ich es jeden Tag fahren."
+    ],
+    [
+     "If I were you, I wouldn't take that risk.",
+     "Wenn ich du wäre, würde ich das Risiko nicht eingehen.",
+     "Wenn ich du wäre, würde ich das Risiko nicht eingehen."
+    ],
+    [
+     "What would you do if you could fly?",
+     "Was würdest du tun, wenn du fliegen könntest?",
+     "Was würdest du tun, wenn du fliegen könntest?"
+    ],
+    [
+     "The race is dangerous, but the riders love the speed.",
+     "Das Rennen ist gefährlich, aber die Fahrer lieben die Geschwindigkeit.",
+     "Das Rennen ist gefährlich, aber die Fahrer lieben die Geschwindigkeit."
+    ],
+    [
+     "The island has its own parliament.",
+     "Die Insel hat ein eigenes Parlament.",
+     "Die Insel hat ein eigenes Parlament."
+    ],
+    [
+     "If it were safer, more people would watch the race.",
+     "Wenn es sicherer wäre, würden mehr Leute das Rennen anschauen.",
+     "Wenn es sicherer wäre, würden mehr Leute das Rennen anschauen."
+    ],
+    [
+     "Manx cats have no tail.",
+     "Manx-Katzen haben keinen Schwanz.",
+     "Manx-Katzen haben keinen Schwanz."
+    ],
+    [
+     "You are not allowed to ride without a helmet.",
+     "Ohne Helm darfst du nicht fahren.",
+     "Ohne Helm darfst du nicht fahren."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Douglas, Isle of Man. Am Straßenrand stehen Strohballen, gleich beginnt ein Training. Ein Fan mit Fernglas spricht dich an.",
+     "Douglas, Isle of Man. Am Straßenrand stehen Strohballen, gleich beginnt ein Training. Ein Fan mit Fernglas spricht dich an."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Would you ever ride in the TT race?",
+       "Würdest du jemals beim TT-Rennen mitfahren?",
+       "Würdest du jemals beim TT-Rennen mitfahren?"
+      ],
+      "opts": [
+       [
+        "No! If I rode that fast, I would be terrified.",
+        "Nein! Wenn ich so schnell fahren würde, hätte ich riesige Angst.",
+        "Nein! Wenn ich so schnell fahren würde, hätte ich riesige Angst.",
+        1
+       ],
+       [
+        "If I will ride, I am terrified.",
+        "Wenn ich fahren werde, habe ich Angst.",
+        "Wenn ich fahren werde, habe ich Angst.",
+        0
+       ]
+      ],
+      "hint": [
+       "Typ II: If + simple past, would + Grundform.",
+       "Typ II: If + simple past, would + Grundform."
+      ]
+     },
+     {
+      "npc": [
+       "Ha! And what would you do if you lived on this island?",
+       "Ha! Und was würdest du machen, wenn du auf dieser Insel leben würdest?",
+       "Ha! Und was würdest du machen, wenn du auf dieser Insel leben würdest?"
+      ],
+      "opts": [
+       [
+        "I would go hiking and I would get a cat without a tail!",
+        "Ich würde wandern gehen und mir eine Katze ohne Schwanz holen!",
+        "Ich würde wandern gehen und mir eine Katze ohne Schwanz holen!",
+        1
+       ],
+       [
+        "I live here if I would.",
+        "Ich lebe hier, wenn ich würde.",
+        "Ich lebe hier, wenn ich würde.",
+        0
+       ]
+      ],
+      "hint": [
+       "would + Grundform für Träume.",
+       "would + Grundform für Träume."
+      ]
+     },
+     {
+      "npc": [
+       "My son wants to ride without a helmet. What would you say?",
+       "Mein Sohn will ohne Helm fahren. Was würdest du sagen?",
+       "Mein Sohn will ohne Helm fahren. Was würdest du sagen?"
+      ],
+      "opts": [
+       [
+        "If I were him, I would always wear a helmet.",
+        "Wenn ich er wäre, würde ich immer einen Helm tragen.",
+        "Wenn ich er wäre, würde ich immer einen Helm tragen.",
+        1
+       ],
+       [
+        "If I was helmet, I ride.",
+        "Wenn ich Helm war, fahre ich.",
+        "Wenn ich Helm war, fahre ich.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ratschlag: If I were …, I would …",
+       "Ratschlag: If I were …, I would …"
+      ]
+     }
+    ],
+    "outro": [
+     "Ein Motorrad rast vorbei – 200 km/h. Der Fan grinst: „If I were twenty years younger …“",
+     "Ein Motorrad rast vorbei – 200 km/h. Der Fan grinst: „If I were twenty years younger …“"
+    ]
+   },
+   "lab": "l",
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 3: Die Katze ohne Schwanz",
+     "Kapitel 3: Die Katze ohne Schwanz"
+    ],
+    "lines": [
+     {
+      "pl": "On the Isle of Man, Emma stayed in a tiny cottage by the sea.",
+      "tr": [
+       "Auf der Isle of Man wohnte Emma in einem winzigen Häuschen am Meer.",
+       "Auf der Isle of Man wohnte Emma in einem winzigen Häuschen am Meer."
+      ]
+     },
+     {
+      "pl": "A grey cat without a tail sat on the doorstep every morning.",
+      "tr": [
+       "Jeden Morgen saß eine graue Katze ohne Schwanz auf der Türschwelle.",
+       "Jeden Morgen saß eine graue Katze ohne Schwanz auf der Türschwelle."
+      ]
+     },
+     {
+      "pl": "Around its neck it wore a collar with a little silver tag.",
+      "tr": [
+       "Um den Hals trug sie ein Halsband mit einer kleinen silbernen Marke.",
+       "Um den Hals trug sie ein Halsband mit einer kleinen silbernen Marke."
+      ]
+     },
+     {
+      "pl": "On the tag Emma read: 'If you were a raven, where would you fly?'",
+      "tr": [
+       "Auf der Marke las Emma: „Wenn du ein Rabe wärst, wohin würdest du fliegen?“",
+       "Auf der Marke las Emma: „Wenn du ein Rabe wärst, wohin würdest du fliegen?“"
+      ]
+     },
+     {
+      "pl": "She thought about it for a long time.",
+      "tr": [
+       "Sie dachte lange darüber nach.",
+       "Sie dachte lange darüber nach."
+      ]
+     },
+     {
+      "pl": "'If I were a raven, I would fly to a castle,' she said to the cat.",
+      "tr": [
+       "„Wenn ich ein Rabe wäre, würde ich zu einer Burg fliegen“, sagte sie zur Katze.",
+       "„Wenn ich ein Rabe wäre, würde ich zu einer Burg fliegen“, sagte sie zur Katze."
+      ]
+     },
+     {
+      "pl": "The cat jumped onto her map and sat on Hadrian's Wall.",
+      "tr": [
+       "Die Katze sprang auf ihre Karte und setzte sich auf den Hadrianswall.",
+       "Die Katze sprang auf ihre Karte und setzte sich auf den Hadrianswall."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "What was special about the cat?",
+      "tr": [
+       "Was war besonders an der Katze?",
+       "Was war besonders an der Katze?"
+      ],
+      "o": [
+       "it had no tail",
+       "it could talk",
+       "it was black"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Where was the question written?",
+      "tr": [
+       "Wo stand die Frage?",
+       "Wo stand die Frage?"
+      ],
+      "o": [
+       "on a silver tag",
+       "on the door",
+       "in the book"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Where did the cat sit on the map?",
+      "tr": [
+       "Wohin setzte sich die Katze auf der Karte?",
+       "Wohin setzte sich die Katze auf der Karte?"
+      ],
+      "o": [
+       "on Hadrian's Wall",
+       "on Aberdeen",
+       "on Dublin"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "hdw",
+   "city": "Hadrian's Wall",
+   "cityDe": "Hadrianswall",
+   "cityEn": "Hadrian's Wall",
+   "lon": -2.37,
+   "lat": 55.0,
+   "trail": "green",
+   "title": [
+    "Wie es gemacht wurde",
+    "Wie es gemacht wurde"
+   ],
+   "can": [
+    "Ich kann erklären, was gebaut, erfunden oder entdeckt wurde (Passiv).",
+    "Ich kann erklären, was gebaut, erfunden oder entdeckt wurde (Passiv)."
+   ],
+   "tip": [
+    "Passiv: be + 3. Form. „The wall was built by the Romans.“ Wer es getan hat, steht mit „by“ – oder fällt weg.",
+    "Passiv: be + 3. Form. „The wall was built by the Romans.“ Wer es getan hat, steht mit „by“ – oder fällt weg."
+   ],
+   "fact": [
+    "Der Hadrianswall wurde ab dem Jahr 122 gebaut und ist 117 km lang. Archäologen fanden hier sogar Briefe römischer Soldaten auf Holztäfelchen.",
+    "Der Hadrianswall wurde ab dem Jahr 122 gebaut und ist 117 km lang. Archäologen fanden hier sogar Briefe römischer Soldaten auf Holztäfelchen."
+   ],
+   "words": [
+    [
+     "wall",
+     "Mauer",
+     "Mauer"
+    ],
+    [
+     "the Romans",
+     "die Römer",
+     "die Römer"
+    ],
+    [
+     "soldier",
+     "Soldat/in",
+     "Soldat/in"
+    ],
+    [
+     "fort",
+     "Kastell / Festung",
+     "Kastell / Festung"
+    ],
+    [
+     "emperor",
+     "Kaiser",
+     "Kaiser"
+    ],
+    [
+     "to build – built",
+     "bauen – gebaut",
+     "bauen – gebaut"
+    ],
+    [
+     "to find – found",
+     "finden – gefunden",
+     "finden – gefunden"
+    ],
+    [
+     "to discover",
+     "entdecken",
+     "entdecken"
+    ],
+    [
+     "was built",
+     "wurde gebaut",
+     "wurde gebaut"
+    ],
+    [
+     "were found",
+     "wurden gefunden",
+     "wurden gefunden"
+    ],
+    [
+     "is visited",
+     "wird besucht",
+     "wird besucht"
+    ],
+    [
+     "by",
+     "von (im Passiv)",
+     "von (im Passiv)"
+    ],
+    [
+     "archaeologist",
+     "Archäologe / Archäologin",
+     "Archäologe / Archäologin"
+    ],
+    [
+     "to dig",
+     "graben",
+     "graben"
+    ],
+    [
+     "ruins",
+     "Ruinen",
+     "Ruinen"
+    ],
+    [
+     "century",
+     "Jahrhundert",
+     "Jahrhundert"
+    ],
+    [
+     "border",
+     "Grenze",
+     "Grenze"
+    ],
+    [
+     "to protect",
+     "schützen",
+     "schützen"
+    ],
+    [
+     "museum",
+     "Museum",
+     "Museum"
+    ],
+    [
+     "World Heritage Site",
+     "Welterbe",
+     "Welterbe"
+    ]
+   ],
+   "sentences": [
+    [
+     "The wall was built by Roman soldiers.",
+     "Die Mauer wurde von römischen Soldaten gebaut.",
+     "Die Mauer wurde von römischen Soldaten gebaut."
+    ],
+    [
+     "It was ordered by Emperor Hadrian in the year 122.",
+     "Sie wurde im Jahr 122 von Kaiser Hadrian in Auftrag gegeben.",
+     "Sie wurde im Jahr 122 von Kaiser Hadrian in Auftrag gegeben."
+    ],
+    [
+     "Old letters were found near the fort.",
+     "In der Nähe des Kastells wurden alte Briefe gefunden.",
+     "In der Nähe des Kastells wurden alte Briefe gefunden."
+    ],
+    [
+     "Today the wall is visited by thousands of tourists.",
+     "Heute wird die Mauer von Tausenden Touristen besucht.",
+     "Heute wird die Mauer von Tausenden Touristen besucht."
+    ],
+    [
+     "The ruins are protected as a World Heritage Site.",
+     "Die Ruinen sind als Welterbe geschützt.",
+     "Die Ruinen sind als Welterbe geschützt."
+    ],
+    [
+     "Archaeologists are still digging here.",
+     "Archäologen graben hier immer noch.",
+     "Archäologen graben hier immer noch."
+    ],
+    [
+     "Many stones were taken away to build farms.",
+     "Viele Steine wurden weggebracht, um Bauernhöfe zu bauen.",
+     "Viele Steine wurden weggebracht, um Bauernhöfe zu bauen."
+    ],
+    [
+     "The wall marked the border of the Roman Empire.",
+     "Die Mauer markierte die Grenze des Römischen Reiches.",
+     "Die Mauer markierte die Grenze des Römischen Reiches."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Housesteads Fort am Hadrianswall. Nebel über den Hügeln. Eine Archäologin kniet in einer Grube und winkt dich heran.",
+     "Housesteads Fort am Hadrianswall. Nebel über den Hügeln. Eine Archäologin kniet in einer Grube und winkt dich heran."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Do you know when this wall was built?",
+       "Weißt du, wann diese Mauer gebaut wurde?",
+       "Weißt du, wann diese Mauer gebaut wurde?"
+      ],
+      "opts": [
+       [
+        "It was built about 1,900 years ago by the Romans.",
+        "Sie wurde vor etwa 1900 Jahren von den Römern gebaut.",
+        "Sie wurde vor etwa 1900 Jahren von den Römern gebaut.",
+        1
+       ],
+       [
+        "The Romans was built it.",
+        "Die Römer wurde sie gebaut.",
+        "Die Römer wurde sie gebaut.",
+        0
+       ]
+      ],
+      "hint": [
+       "Passiv: was built by …",
+       "Passiv: was built by …"
+      ]
+     },
+     {
+      "npc": [
+       "Look – this shoe was found here yesterday!",
+       "Schau – dieser Schuh wurde gestern hier gefunden!",
+       "Schau – dieser Schuh wurde gestern hier gefunden!"
+      ],
+      "opts": [
+       [
+        "Wow! Who was it worn by?",
+        "Wow! Von wem wurde er getragen?",
+        "Wow! Von wem wurde er getragen?",
+        1
+       ],
+       [
+        "Who found by it?",
+        "Wer gefunden von ihm?",
+        "Wer gefunden von ihm?",
+        0
+       ]
+      ],
+      "hint": [
+       "Frage im Passiv: Who was it worn by?",
+       "Frage im Passiv: Who was it worn by?"
+      ]
+     },
+     {
+      "npc": [
+       "Probably by a soldier's child. Children lived here too.",
+       "Wahrscheinlich von einem Soldatenkind. Hier lebten auch Kinder.",
+       "Wahrscheinlich von einem Soldatenkind. Hier lebten auch Kinder."
+      ],
+      "opts": [
+       [
+        "Amazing. Will it be shown in the museum?",
+        "Unglaublich. Wird er im Museum ausgestellt?",
+        "Unglaublich. Wird er im Museum ausgestellt?",
+        1
+       ],
+       [
+        "Amazing. It shows the museum.",
+        "Unglaublich. Er zeigt das Museum.",
+        "Unglaublich. Er zeigt das Museum.",
+        0
+       ]
+      ],
+      "hint": [
+       "Zukunft im Passiv: will be shown.",
+       "Zukunft im Passiv: will be shown."
+      ]
+     }
+    ],
+    "outro": [
+     "Ein kleiner Lederschuh, 1900 Jahre alt – und er passt fast in deine Hand.",
+     "Ein kleiner Lederschuh, 1900 Jahre alt – und er passt fast in deine Hand."
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 4: Die Tafel im Museum",
+     "Kapitel 4: Die Tafel im Museum"
+    ],
+    "lines": [
+     {
+      "pl": "At the museum near the wall, Emma looked at the Roman letters.",
+      "tr": [
+       "Im Museum an der Mauer sah sich Emma die römischen Briefe an.",
+       "Im Museum an der Mauer sah sich Emma die römischen Briefe an."
+      ]
+     },
+     {
+      "pl": "They had been written on thin pieces of wood.",
+      "tr": [
+       "Sie waren auf dünne Holzstücke geschrieben worden.",
+       "Sie waren auf dünne Holzstücke geschrieben worden."
+      ]
+     },
+     {
+      "pl": "One letter had been sent to a soldier by his mother.",
+      "tr": [
+       "Ein Brief war von seiner Mutter an einen Soldaten geschickt worden.",
+       "Ein Brief war von seiner Mutter an einen Soldaten geschickt worden."
+      ]
+     },
+     {
+      "pl": "Next to it, Emma noticed a modern card that was not part of the exhibition.",
+      "tr": [
+       "Daneben bemerkte Emma eine moderne Karte, die nicht zur Ausstellung gehörte.",
+       "Daneben bemerkte Emma eine moderne Karte, die nicht zur Ausstellung gehörte."
+      ]
+     },
+     {
+      "pl": "It was signed with a raven and her grandfather's initials.",
+      "tr": [
+       "Sie war mit einem Raben und den Initialen ihres Großvaters unterschrieben.",
+       "Sie war mit einem Raben und den Initialen ihres Großvaters unterschrieben."
+      ]
+     },
+     {
+      "pl": "'The key was not made of iron, but of steel,' it said.",
+      "tr": [
+       "„Der Schlüssel wurde nicht aus Eisen gemacht, sondern aus Stahl“, stand darauf.",
+       "„Der Schlüssel wurde nicht aus Eisen gemacht, sondern aus Stahl“, stand darauf."
+      ]
+     },
+     {
+      "pl": "Steel? Emma knew which city was famous for steel: Sheffield.",
+      "tr": [
+       "Stahl? Emma wusste, welche Stadt für Stahl berühmt war: Sheffield.",
+       "Stahl? Emma wusste, welche Stadt für Stahl berühmt war: Sheffield."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "What were the Roman letters written on?",
+      "tr": [
+       "Worauf waren die römischen Briefe geschrieben?",
+       "Worauf waren die römischen Briefe geschrieben?"
+      ],
+      "o": [
+       "wood",
+       "paper",
+       "stone"
+      ],
+      "a": 0
+     },
+     {
+      "q": "How was the modern card signed?",
+      "tr": [
+       "Wie war die moderne Karte unterschrieben?",
+       "Wie war die moderne Karte unterschrieben?"
+      ],
+      "o": [
+       "with a raven and initials",
+       "with a Roman name",
+       "with a feather"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was the key made of?",
+      "tr": [
+       "Woraus war der Schlüssel gemacht?",
+       "Woraus war der Schlüssel gemacht?"
+      ],
+      "o": [
+       "steel",
+       "iron",
+       "gold"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "shf",
+   "city": "Sheffield",
+   "cityDe": "Sheffield",
+   "cityEn": "Sheffield",
+   "lon": -1.47,
+   "lat": 53.38,
+   "trail": "yellow",
+   "title": [
+    "Dinge und Menschen beschreiben",
+    "Dinge und Menschen beschreiben"
+   ],
+   "can": [
+    "Ich kann Menschen und Dinge mit Relativsätzen genauer beschreiben (who, which, that, whose).",
+    "Ich kann Menschen und Dinge mit Relativsätzen genauer beschreiben (who, which, that, whose)."
+   ],
+   "tip": [
+    "Personen: who – Dinge: which – beides: that – Besitz: whose. „The man who made it …“, „the knife which/that I bought …“",
+    "Personen: who – Dinge: which – beides: that – Besitz: whose. „The man who made it …“, „the knife which/that I bought …“"
+   ],
+   "fact": [
+    "In Sheffield wurde 1913 der rostfreie Edelstahl erfunden. Heute ist die Stadt eine der grünsten Großbritanniens – mit über zwei Millionen Bäumen.",
+    "In Sheffield wurde 1913 der rostfreie Edelstahl erfunden. Heute ist die Stadt eine der grünsten Großbritanniens – mit über zwei Millionen Bäumen."
+   ],
+   "words": [
+    [
+     "steel",
+     "Stahl",
+     "Stahl"
+    ],
+    [
+     "stainless",
+     "rostfrei",
+     "rostfrei"
+    ],
+    [
+     "knife",
+     "Messer",
+     "Messer"
+    ],
+    [
+     "cutlery",
+     "Besteck",
+     "Besteck"
+    ],
+    [
+     "factory",
+     "Fabrik",
+     "Fabrik"
+    ],
+    [
+     "worker",
+     "Arbeiter/in",
+     "Arbeiter/in"
+    ],
+    [
+     "to invent",
+     "erfinden",
+     "erfinden"
+    ],
+    [
+     "invention",
+     "Erfindung",
+     "Erfindung"
+    ],
+    [
+     "to recycle",
+     "recyceln",
+     "recyceln"
+    ],
+    [
+     "material",
+     "Material",
+     "Material"
+    ],
+    [
+     "to repair",
+     "reparieren",
+     "reparieren"
+    ],
+    [
+     "second-hand",
+     "gebraucht",
+     "gebraucht"
+    ],
+    [
+     "who",
+     "der/die (Person)",
+     "der/die (Person)"
+    ],
+    [
+     "which",
+     "der/die/das (Sache)",
+     "der/die/das (Sache)"
+    ],
+    [
+     "that",
+     "der/die/das (Person oder Sache)",
+     "der/die/das (Person oder Sache)"
+    ],
+    [
+     "whose",
+     "dessen / deren",
+     "dessen / deren"
+    ],
+    [
+     "where",
+     "wo",
+     "wo"
+    ],
+    [
+     "craft",
+     "Handwerk",
+     "Handwerk"
+    ],
+    [
+     "tool",
+     "Werkzeug",
+     "Werkzeug"
+    ],
+    [
+     "green city",
+     "grüne Stadt",
+     "grüne Stadt"
+    ]
+   ],
+   "sentences": [
+    [
+     "Harry Brearley was the man who invented stainless steel.",
+     "Harry Brearley war der Mann, der rostfreien Stahl erfand.",
+     "Harry Brearley war der Mann, der rostfreien Stahl erfand."
+    ],
+    [
+     "This is the factory where my grandfather worked.",
+     "Das ist die Fabrik, in der mein Großvater gearbeitet hat.",
+     "Das ist die Fabrik, in der mein Großvater gearbeitet hat."
+    ],
+    [
+     "I bought a knife which will last for fifty years.",
+     "Ich habe ein Messer gekauft, das fünfzig Jahre halten wird.",
+     "Ich habe ein Messer gekauft, das fünfzig Jahre halten wird."
+    ],
+    [
+     "The girl whose bike was stolen got it back.",
+     "Das Mädchen, dessen Fahrrad gestohlen wurde, hat es zurückbekommen.",
+     "Das Mädchen, dessen Fahrrad gestohlen wurde, hat es zurückbekommen."
+    ],
+    [
+     "Things that can be repaired should not be thrown away.",
+     "Dinge, die repariert werden können, sollte man nicht wegwerfen.",
+     "Dinge, die repariert werden können, sollte man nicht wegwerfen."
+    ],
+    [
+     "Sheffield is a city that has more trees than people.",
+     "Sheffield ist eine Stadt, die mehr Bäume als Einwohner hat.",
+     "Sheffield ist eine Stadt, die mehr Bäume als Einwohner hat."
+    ],
+    [
+     "The tools which we used were very old.",
+     "Die Werkzeuge, die wir benutzten, waren sehr alt.",
+     "Die Werkzeuge, die wir benutzten, waren sehr alt."
+    ],
+    [
+     "I like shops that sell second-hand clothes.",
+     "Ich mag Läden, die gebrauchte Kleidung verkaufen.",
+     "Ich mag Läden, die gebrauchte Kleidung verkaufen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Sheffield, eine Werkstatt im alten Fabrikviertel. Eine Messerschmiedin schleift Klingen. Funken fliegen.",
+     "Sheffield, eine Werkstatt im alten Fabrikviertel. Eine Messerschmiedin schleift Klingen. Funken fliegen."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Do you know who invented stainless steel?",
+       "Weißt du, wer rostfreien Stahl erfunden hat?",
+       "Weißt du, wer rostfreien Stahl erfunden hat?"
+      ],
+      "opts": [
+       [
+        "It was a man who lived here in Sheffield – Harry Brearley.",
+        "Es war ein Mann, der hier in Sheffield lebte – Harry Brearley.",
+        "Es war ein Mann, der hier in Sheffield lebte – Harry Brearley.",
+        1
+       ],
+       [
+        "It was a man which invented here.",
+        "Es war ein Mann, welches hier erfand.",
+        "Es war ein Mann, welches hier erfand.",
+        0
+       ]
+      ],
+      "hint": [
+       "Person → who.",
+       "Person → who."
+      ]
+     },
+     {
+      "npc": [
+       "Right. This is a knife which I made for a famous chef.",
+       "Richtig. Das ist ein Messer, das ich für einen berühmten Koch gemacht habe.",
+       "Richtig. Das ist ein Messer, das ich für einen berühmten Koch gemacht habe."
+      ],
+      "opts": [
+       [
+        "Is that the chef whose restaurant is in London?",
+        "Ist das der Koch, dessen Restaurant in London ist?",
+        "Ist das der Koch, dessen Restaurant in London ist?",
+        1
+       ],
+       [
+        "Is that the chef who's knife is London?",
+        "Ist das der Koch, wer’s Messer London ist?",
+        "Ist das der Koch, wer’s Messer London ist?",
+        0
+       ]
+      ],
+      "hint": [
+       "Besitz → whose.",
+       "Besitz → whose."
+      ]
+     },
+     {
+      "npc": [
+       "Yes! And I also repair old knives that people bring me.",
+       "Ja! Und ich repariere auch alte Messer, die mir Leute bringen.",
+       "Ja! Und ich repariere auch alte Messer, die mir Leute bringen."
+      ],
+      "opts": [
+       [
+        "That's great – things that last are better for the planet.",
+        "Super – Dinge, die lange halten, sind besser für den Planeten.",
+        "Super – Dinge, die lange halten, sind besser für den Planeten.",
+        1
+       ],
+       [
+        "That's great – things who break are good.",
+        "Super – Dinge, wer kaputtgehen, sind gut.",
+        "Super – Dinge, wer kaputtgehen, sind gut.",
+        0
+       ]
+      ],
+      "hint": [
+       "Dinge → that/which.",
+       "Dinge → that/which."
+      ]
+     }
+    ],
+    "outro": [
+     "Zum Abschied schenkt sie dir einen kleinen Stahlanhänger in Form eines Raben.",
+     "Zum Abschied schenkt sie dir einen kleinen Stahlanhänger in Form eines Raben."
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 5: Die Werkstatt",
+     "Kapitel 5: Die Werkstatt"
+    ],
+    "lines": [
+     {
+      "pl": "In Sheffield, Emma found the workshop that was drawn on the card.",
+      "tr": [
+       "In Sheffield fand Emma die Werkstatt, die auf der Karte gezeichnet war.",
+       "In Sheffield fand Emma die Werkstatt, die auf der Karte gezeichnet war."
+      ]
+     },
+     {
+      "pl": "An old woman, whose hands were black from work, opened the door.",
+      "tr": [
+       "Eine alte Frau, deren Hände schwarz von der Arbeit waren, öffnete die Tür.",
+       "Eine alte Frau, deren Hände schwarz von der Arbeit waren, öffnete die Tür."
+      ]
+     },
+     {
+      "pl": "'I'm the one who made the key,' she said with a smile.",
+      "tr": [
+       "„Ich bin diejenige, die den Schlüssel gemacht hat“, sagte sie lächelnd.",
+       "„Ich bin diejenige, die den Schlüssel gemacht hat“, sagte sie lächelnd."
+      ]
+     },
+     {
+      "pl": "'But I don't have it. Your grandfather took it to a city where stories are kept.'",
+      "tr": [
+       "„Aber ich habe ihn nicht. Dein Großvater hat ihn in eine Stadt gebracht, in der Geschichten aufbewahrt werden.“",
+       "„Aber ich habe ihn nicht. Dein Großvater hat ihn in eine Stadt gebracht, in der Geschichten aufbewahrt werden.“"
+      ]
+     },
+     {
+      "pl": "She showed Emma a photo of a man who was standing outside a castle.",
+      "tr": [
+       "Sie zeigte Emma ein Foto von einem Mann, der vor einer Burg stand.",
+       "Sie zeigte Emma ein Foto von einem Mann, der vor einer Burg stand."
+      ]
+     },
+     {
+      "pl": "In his hand he held a bow and arrow.",
+      "tr": [
+       "In der Hand hielt er Pfeil und Bogen.",
+       "In der Hand hielt er Pfeil und Bogen."
+      ]
+     },
+     {
+      "pl": "'Nottingham,' Emma whispered. 'Robin Hood.'",
+      "tr": [
+       "„Nottingham“, flüsterte Emma. „Robin Hood.“",
+       "„Nottingham“, flüsterte Emma. „Robin Hood.“"
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "Who opened the door?",
+      "tr": [
+       "Wer öffnete die Tür?",
+       "Wer öffnete die Tür?"
+      ],
+      "o": [
+       "an old woman",
+       "a young man",
+       "Emma's grandfather"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Who had made the key?",
+      "tr": [
+       "Wer hatte den Schlüssel gemacht?",
+       "Wer hatte den Schlüssel gemacht?"
+      ],
+      "o": [
+       "the old woman",
+       "a Roman soldier",
+       "Robin Hood"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What did the man in the photo hold?",
+      "tr": [
+       "Was hielt der Mann auf dem Foto?",
+       "Was hielt der Mann auf dem Foto?"
+      ],
+      "o": [
+       "a bow and arrow",
+       "a key",
+       "a knife"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ntm",
+   "city": "Nottingham",
+   "cityDe": "Nottingham",
+   "cityEn": "Nottingham",
+   "lon": -1.15,
+   "lat": 52.95,
+   "trail": "yellow",
+   "title": [
+    "Was andere gesagt haben",
+    "Was andere gesagt haben"
+   ],
+   "can": [
+    "Ich kann wiedergeben, was jemand gesagt oder gefragt hat (indirekte Rede).",
+    "Ich kann wiedergeben, was jemand gesagt oder gefragt hat (indirekte Rede)."
+   ],
+   "tip": [
+    "Indirekte Rede mit Zeitverschiebung: „I am tired“ → She said (that) she was tired. Fragen: He asked if/where …",
+    "Indirekte Rede mit Zeitverschiebung: „I am tired“ → She said (that) she was tired. Fragen: He asked if/where …"
+   ],
+   "fact": [
+    "Robin Hood soll im Sherwood Forest bei Nottingham gelebt haben. Ob es ihn wirklich gab, weiß niemand – die ältesten Lieder über ihn sind über 600 Jahre alt.",
+    "Robin Hood soll im Sherwood Forest bei Nottingham gelebt haben. Ob es ihn wirklich gab, weiß niemand – die ältesten Lieder über ihn sind über 600 Jahre alt."
+   ],
+   "words": [
+    [
+     "forest",
+     "Wald",
+     "Wald"
+    ],
+    [
+     "outlaw",
+     "Geächteter / Gesetzloser",
+     "Geächteter / Gesetzloser"
+    ],
+    [
+     "to steal",
+     "stehlen",
+     "stehlen"
+    ],
+    [
+     "the rich",
+     "die Reichen",
+     "die Reichen"
+    ],
+    [
+     "the poor",
+     "die Armen",
+     "die Armen"
+    ],
+    [
+     "fair",
+     "gerecht",
+     "gerecht"
+    ],
+    [
+     "unfair",
+     "ungerecht",
+     "ungerecht"
+    ],
+    [
+     "justice",
+     "Gerechtigkeit",
+     "Gerechtigkeit"
+    ],
+    [
+     "to volunteer",
+     "ehrenamtlich helfen",
+     "ehrenamtlich helfen"
+    ],
+    [
+     "charity",
+     "Wohltätigkeitsorganisation",
+     "Wohltätigkeitsorganisation"
+    ],
+    [
+     "he said that",
+     "er sagte, dass",
+     "er sagte, dass"
+    ],
+    [
+     "she told me",
+     "sie sagte mir",
+     "sie sagte mir"
+    ],
+    [
+     "he asked if",
+     "er fragte, ob",
+     "er fragte, ob"
+    ],
+    [
+     "she asked where",
+     "sie fragte, wo",
+     "sie fragte, wo"
+    ],
+    [
+     "to promise",
+     "versprechen",
+     "versprechen"
+    ],
+    [
+     "to explain",
+     "erklären",
+     "erklären"
+    ],
+    [
+     "to complain",
+     "sich beschweren",
+     "sich beschweren"
+    ],
+    [
+     "to admit",
+     "zugeben",
+     "zugeben"
+    ],
+    [
+     "rumour",
+     "Gerücht",
+     "Gerücht"
+    ],
+    [
+     "sheriff",
+     "Sheriff",
+     "Sheriff"
+    ]
+   ],
+   "sentences": [
+    [
+     "The guide said that Robin Hood had lived in the forest.",
+     "Der Guide sagte, dass Robin Hood im Wald gelebt hatte.",
+     "Der Guide sagte, dass Robin Hood im Wald gelebt hatte."
+    ],
+    [
+     "She told me she was volunteering for a charity.",
+     "Sie sagte mir, dass sie ehrenamtlich für eine Hilfsorganisation arbeitete.",
+     "Sie sagte mir, dass sie ehrenamtlich für eine Hilfsorganisation arbeitete."
+    ],
+    [
+     "He asked if I had ever been to Sherwood Forest.",
+     "Er fragte, ob ich schon einmal im Sherwood Forest gewesen sei.",
+     "Er fragte, ob ich schon einmal im Sherwood Forest gewesen sei."
+    ],
+    [
+     "My friend asked where the castle was.",
+     "Mein Freund fragte, wo die Burg sei.",
+     "Mein Freund fragte, wo die Burg sei."
+    ],
+    [
+     "The sheriff promised that he would catch Robin.",
+     "Der Sheriff versprach, dass er Robin fangen würde.",
+     "Der Sheriff versprach, dass er Robin fangen würde."
+    ],
+    [
+     "Robin explained that he only stole from the rich.",
+     "Robin erklärte, dass er nur von den Reichen stehle.",
+     "Robin erklärte, dass er nur von den Reichen stehle."
+    ],
+    [
+     "People complained that the taxes were unfair.",
+     "Die Leute beschwerten sich, dass die Steuern ungerecht seien.",
+     "Die Leute beschwerten sich, dass die Steuern ungerecht seien."
+    ],
+    [
+     "She admitted that she had believed the rumour.",
+     "Sie gab zu, dass sie dem Gerücht geglaubt hatte.",
+     "Sie gab zu, dass sie dem Gerücht geglaubt hatte."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Sherwood Forest, an der riesigen Major Oak. Eine Ehrenamtliche im Robin-Hood-Kostüm sammelt Spenden für eine Kindertafel.",
+     "Sherwood Forest, an der riesigen Major Oak. Eine Ehrenamtliche im Robin-Hood-Kostüm sammelt Spenden für eine Kindertafel."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What did your guide tell you about Robin Hood?",
+       "Was hat dir dein Guide über Robin Hood erzählt?",
+       "Was hat dir dein Guide über Robin Hood erzählt?"
+      ],
+      "opts": [
+       [
+        "He said that Robin had stolen from the rich and given to the poor.",
+        "Er sagte, Robin habe von den Reichen gestohlen und den Armen gegeben.",
+        "Er sagte, Robin habe von den Reichen gestohlen und den Armen gegeben.",
+        1
+       ],
+       [
+        "He said that Robin steals tomorrow.",
+        "Er sagte, dass Robin morgen stiehlt.",
+        "Er sagte, dass Robin morgen stiehlt.",
+        0
+       ]
+      ],
+      "hint": [
+       "Zeitverschiebung: stole → had stolen.",
+       "Zeitverschiebung: stole → had stolen."
+      ]
+     },
+     {
+      "npc": [
+       "And what did your friend ask me a minute ago?",
+       "Und was hat mich dein Freund eben gefragt?",
+       "Und was hat mich dein Freund eben gefragt?"
+      ],
+      "opts": [
+       [
+        "She asked if you were paid for this job.",
+        "Sie fragte, ob Sie für diese Arbeit bezahlt werden.",
+        "Sie fragte, ob Sie für diese Arbeit bezahlt werden.",
+        1
+       ],
+       [
+        "She asked are you paid.",
+        "Sie fragte, sind Sie bezahlt.",
+        "Sie fragte, sind Sie bezahlt.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ja/Nein-Frage → asked if + normale Satzstellung.",
+       "Ja/Nein-Frage → asked if + normale Satzstellung."
+      ]
+     },
+     {
+      "npc": [
+       "And I told her that I was a volunteer!",
+       "Und ich habe ihr gesagt, dass ich ehrenamtlich arbeite!",
+       "Und ich habe ihr gesagt, dass ich ehrenamtlich arbeite!"
+      ],
+      "opts": [
+       [
+        "You explained that the money went to a food bank, right?",
+        "Sie haben erklärt, dass das Geld an eine Tafel geht, richtig?",
+        "Sie haben erklärt, dass das Geld an eine Tafel geht, richtig?",
+        1
+       ],
+       [
+        "You told that money go bank.",
+        "Sie sagten das Geld gehen Bank.",
+        "Sie sagten das Geld gehen Bank.",
+        0
+       ]
+      ],
+      "hint": [
+       "explained that + Vergangenheit.",
+       "explained that + Vergangenheit."
+      ]
+     }
+    ],
+    "outro": [
+     "Du wirfst eine Münze in die Dose. „A modern Robin Hood!“, lacht sie.",
+     "Du wirfst eine Münze in die Dose. „A modern Robin Hood!“, lacht sie."
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 6: Was der Wächter sagte",
+     "Kapitel 6: Was der Wächter sagte"
+    ],
+    "lines": [
+     {
+      "pl": "At Nottingham Castle, Emma asked the guard if he had seen a man with a raven feather.",
+      "tr": [
+       "Auf der Burg von Nottingham fragte Emma den Wächter, ob er einen Mann mit einer Rabenfeder gesehen habe.",
+       "Auf der Burg von Nottingham fragte Emma den Wächter, ob er einen Mann mit einer Rabenfeder gesehen habe."
+      ]
+     },
+     {
+      "pl": "The guard said that he had worked there for thirty years.",
+      "tr": [
+       "Der Wächter sagte, dass er seit dreißig Jahren dort arbeite.",
+       "Der Wächter sagte, dass er seit dreißig Jahren dort arbeite."
+      ]
+     },
+     {
+      "pl": "He told her that an old Irishman had visited every summer.",
+      "tr": [
+       "Er erzählte ihr, dass jeden Sommer ein alter Ire zu Besuch gekommen sei.",
+       "Er erzählte ihr, dass jeden Sommer ein alter Ire zu Besuch gekommen sei."
+      ]
+     },
+     {
+      "pl": "'He said he was looking for a place to hide a secret,' the guard explained.",
+      "tr": [
+       "„Er sagte, dass er einen Ort suche, um ein Geheimnis zu verstecken“, erklärte der Wächter.",
+       "„Er sagte, dass er einen Ort suche, um ein Geheimnis zu verstecken“, erklärte der Wächter."
+      ]
+     },
+     {
+      "pl": "Emma asked where the man had gone after that.",
+      "tr": [
+       "Emma fragte, wohin der Mann danach gegangen sei.",
+       "Emma fragte, wohin der Mann danach gegangen sei."
+      ]
+     },
+     {
+      "pl": "The guard answered that he had talked about a city full of books.",
+      "tr": [
+       "Der Wächter antwortete, dass er von einer Stadt voller Bücher gesprochen habe.",
+       "Der Wächter antwortete, dass er von einer Stadt voller Bücher gesprochen habe."
+      ]
+     },
+     {
+      "pl": "'Norwich,' he added. 'They call it the City of Stories.'",
+      "tr": [
+       "„Norwich“, fügte er hinzu. „Man nennt sie die Stadt der Geschichten.“",
+       "„Norwich“, fügte er hinzu. „Man nennt sie die Stadt der Geschichten.“"
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "How long had the guard worked at the castle?",
+      "tr": [
+       "Wie lange arbeitete der Wächter schon an der Burg?",
+       "Wie lange arbeitete der Wächter schon an der Burg?"
+      ],
+      "o": [
+       "thirty years",
+       "three years",
+       "one summer"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was the old man looking for?",
+      "tr": [
+       "Was suchte der alte Mann?",
+       "Was suchte der alte Mann?"
+      ],
+      "o": [
+       "a place to hide a secret",
+       "Robin Hood",
+       "a job"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Which city did the man talk about?",
+      "tr": [
+       "Von welcher Stadt sprach der Mann?",
+       "Von welcher Stadt sprach der Mann?"
+      ],
+      "o": [
+       "Norwich",
+       "London",
+       "Dublin"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "nrw",
+   "city": "Norwich",
+   "cityDe": "Norwich",
+   "cityEn": "Norwich",
+   "lon": 1.3,
+   "lat": 52.63,
+   "trail": "red",
+   "title": [
+    "Lesen, Schreiben, Medien",
+    "Lesen, Schreiben, Medien"
+   ],
+   "can": [
+    "Ich kann über Bücher und Medien sprechen und Gerundium oder Infinitiv richtig verwenden.",
+    "Ich kann über Bücher und Medien sprechen und Gerundium oder Infinitiv richtig verwenden."
+   ],
+   "tip": [
+    "Nach enjoy, avoid, finish, mind: -ing („I enjoy reading“). Nach want, decide, hope, plan: to + Grundform („I want to write“).",
+    "Nach enjoy, avoid, finish, mind: -ing („I enjoy reading“). Nach want, decide, hope, plan: to + Grundform („I want to write“)."
+   ],
+   "fact": [
+    "Norwich war 2012 die erste englische „City of Literature“ der UNESCO. Hier schrieb Julian of Norwich um 1395 das erste bekannte Buch einer Frau auf Englisch.",
+    "Norwich war 2012 die erste englische „City of Literature“ der UNESCO. Hier schrieb Julian of Norwich um 1395 das erste bekannte Buch einer Frau auf Englisch."
+   ],
+   "words": [
+    [
+     "novel",
+     "Roman",
+     "Roman"
+    ],
+    [
+     "author",
+     "Autor/in",
+     "Autor/in"
+    ],
+    [
+     "chapter",
+     "Kapitel",
+     "Kapitel"
+    ],
+    [
+     "character",
+     "Figur",
+     "Figur"
+    ],
+    [
+     "plot",
+     "Handlung",
+     "Handlung"
+    ],
+    [
+     "poem",
+     "Gedicht",
+     "Gedicht"
+    ],
+    [
+     "e-book",
+     "E-Book",
+     "E-Book"
+    ],
+    [
+     "audiobook",
+     "Hörbuch",
+     "Hörbuch"
+    ],
+    [
+     "podcast",
+     "Podcast",
+     "Podcast"
+    ],
+    [
+     "to enjoy doing",
+     "gern tun",
+     "gern tun"
+    ],
+    [
+     "to avoid doing",
+     "vermeiden zu tun",
+     "vermeiden zu tun"
+    ],
+    [
+     "to finish doing",
+     "fertig sein mit",
+     "fertig sein mit"
+    ],
+    [
+     "to decide to",
+     "sich entscheiden zu",
+     "sich entscheiden zu"
+    ],
+    [
+     "to hope to",
+     "hoffen zu",
+     "hoffen zu"
+    ],
+    [
+     "to plan to",
+     "planen zu",
+     "planen zu"
+    ],
+    [
+     "to be good at",
+     "gut sein in",
+     "gut sein in"
+    ],
+    [
+     "to be interested in",
+     "sich interessieren für",
+     "sich interessieren für"
+    ],
+    [
+     "review",
+     "Rezension / Kritik",
+     "Rezension / Kritik"
+    ],
+    [
+     "to recommend",
+     "empfehlen",
+     "empfehlen"
+    ],
+    [
+     "fake news",
+     "Falschmeldungen",
+     "Falschmeldungen"
+    ]
+   ],
+   "sentences": [
+    [
+     "I enjoy reading fantasy novels.",
+     "Ich lese gern Fantasy-Romane.",
+     "Ich lese gern Fantasy-Romane."
+    ],
+    [
+     "She decided to write her own story.",
+     "Sie beschloss, ihre eigene Geschichte zu schreiben.",
+     "Sie beschloss, ihre eigene Geschichte zu schreiben."
+    ],
+    [
+     "Have you finished reading the last chapter?",
+     "Hast du das letzte Kapitel fertig gelesen?",
+     "Hast du das letzte Kapitel fertig gelesen?"
+    ],
+    [
+     "I try to avoid reading fake news online.",
+     "Ich versuche zu vermeiden, online Falschmeldungen zu lesen.",
+     "Ich versuche zu vermeiden, online Falschmeldungen zu lesen."
+    ],
+    [
+     "He is good at writing poems.",
+     "Er kann gut Gedichte schreiben.",
+     "Er kann gut Gedichte schreiben."
+    ],
+    [
+     "We hope to meet the author at the festival.",
+     "Wir hoffen, die Autorin auf dem Festival zu treffen.",
+     "Wir hoffen, die Autorin auf dem Festival zu treffen."
+    ],
+    [
+     "Which book would you recommend?",
+     "Welches Buch würdest du empfehlen?",
+     "Welches Buch würdest du empfehlen?"
+    ],
+    [
+     "I prefer listening to audiobooks on the bus.",
+     "Im Bus höre ich lieber Hörbücher.",
+     "Im Bus höre ich lieber Hörbücher."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Norwich, die Bibliothek „The Forum“. Ein Schreibworkshop für Jugendliche. Die Autorin fragt in die Runde.",
+     "Norwich, die Bibliothek „The Forum“. Ein Schreibworkshop für Jugendliche. Die Autorin fragt in die Runde."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What do you enjoy doing in your free time?",
+       "Was machst du gern in deiner Freizeit?",
+       "Was machst du gern in deiner Freizeit?"
+      ],
+      "opts": [
+       [
+        "I enjoy reading and I sometimes try writing stories.",
+        "Ich lese gern und versuche manchmal, Geschichten zu schreiben.",
+        "Ich lese gern und versuche manchmal, Geschichten zu schreiben.",
+        1
+       ],
+       [
+        "I enjoy to read.",
+        "Ich genieße zu lesen (falsch).",
+        "Ich genieße zu lesen (falsch).",
+        0
+       ]
+      ],
+      "hint": [
+       "enjoy + -ing.",
+       "enjoy + -ing."
+      ]
+     },
+     {
+      "npc": [
+       "Lovely. What do you want to write about?",
+       "Schön. Worüber möchtest du schreiben?",
+       "Schön. Worüber möchtest du schreiben?"
+      ],
+      "opts": [
+       [
+        "I want to write about a girl who follows ravens.",
+        "Ich möchte über ein Mädchen schreiben, das Raben folgt.",
+        "Ich möchte über ein Mädchen schreiben, das Raben folgt.",
+        1
+       ],
+       [
+        "I want writing raven.",
+        "Ich möchte schreibend Rabe.",
+        "Ich möchte schreibend Rabe.",
+        0
+       ]
+      ],
+      "hint": [
+       "want + to + Grundform.",
+       "want + to + Grundform."
+      ]
+     },
+     {
+      "npc": [
+       "Fantastic plot! Have you finished planning it?",
+       "Tolle Handlung! Bist du mit der Planung fertig?",
+       "Tolle Handlung! Bist du mit der Planung fertig?"
+      ],
+      "opts": [
+       [
+        "Not yet, but I hope to finish the first chapter this week.",
+        "Noch nicht, aber ich hoffe, das erste Kapitel diese Woche fertigzuschreiben.",
+        "Noch nicht, aber ich hoffe, das erste Kapitel diese Woche fertigzuschreiben.",
+        1
+       ],
+       [
+        "Yes, I finished to plan.",
+        "Ja, ich beendete zu planen.",
+        "Ja, ich beendete zu planen.",
+        0
+       ]
+      ],
+      "hint": [
+       "finish + -ing, hope + to.",
+       "finish + -ing, hope + to."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Autorin notiert sich deine Idee: „I would like to read that book one day.“",
+     "Die Autorin notiert sich deine Idee: „I would like to read that book one day.“"
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 7: Das fehlende Kapitel",
+     "Kapitel 7: Das fehlende Kapitel"
+    ],
+    "lines": [
+     {
+      "pl": "In the library in Norwich, Emma asked to see the old books.",
+      "tr": [
+       "In der Bibliothek in Norwich bat Emma darum, die alten Bücher sehen zu dürfen.",
+       "In der Bibliothek in Norwich bat Emma darum, die alten Bücher sehen zu dürfen."
+      ]
+     },
+     {
+      "pl": "A librarian with green glasses remembered meeting her grandfather.",
+      "tr": [
+       "Eine Bibliothekarin mit grüner Brille erinnerte sich daran, ihren Großvater getroffen zu haben.",
+       "Eine Bibliothekarin mit grüner Brille erinnerte sich daran, ihren Großvater getroffen zu haben."
+      ]
+     },
+     {
+      "pl": "'He enjoyed sitting at that window,' she said, 'and he loved writing.'",
+      "tr": [
+       "„Er saß gern an diesem Fenster“, sagte sie, „und er schrieb leidenschaftlich gern.“",
+       "„Er saß gern an diesem Fenster“, sagte sie, „und er schrieb leidenschaftlich gern.“"
+      ]
+     },
+     {
+      "pl": "Under the window seat, Emma found a notebook with one page missing.",
+      "tr": [
+       "Unter dem Fenstersitz fand Emma ein Notizbuch, in dem eine Seite fehlte.",
+       "Unter dem Fenstersitz fand Emma ein Notizbuch, in dem eine Seite fehlte."
+      ]
+     },
+     {
+      "pl": "On the last page he had written: 'I decided to sail home.'",
+      "tr": [
+       "Auf der letzten Seite hatte er geschrieben: „Ich habe beschlossen, nach Hause zu segeln.“",
+       "Auf der letzten Seite hatte er geschrieben: „Ich habe beschlossen, nach Hause zu segeln.“"
+      ]
+     },
+     {
+      "pl": "There was a stamp of a ship and the name of a port: Plymouth.",
+      "tr": [
+       "Darunter war ein Stempel mit einem Schiff und dem Namen eines Hafens: Plymouth.",
+       "Darunter war ein Stempel mit einem Schiff und dem Namen eines Hafens: Plymouth."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "Who remembered Emma's grandfather?",
+      "tr": [
+       "Wer erinnerte sich an Emmas Großvater?",
+       "Wer erinnerte sich an Emmas Großvater?"
+      ],
+      "o": [
+       "a librarian",
+       "a sailor",
+       "an author"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was missing from the notebook?",
+      "tr": [
+       "Was fehlte in dem Notizbuch?",
+       "Was fehlte in dem Notizbuch?"
+      ],
+      "o": [
+       "one page",
+       "the cover",
+       "the key"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Which port was on the stamp?",
+      "tr": [
+       "Welcher Hafen stand auf dem Stempel?",
+       "Welcher Hafen stand auf dem Stempel?"
+      ],
+      "o": [
+       "Plymouth",
+       "Aberdeen",
+       "Cork"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ply",
+   "city": "Plymouth",
+   "cityDe": "Plymouth",
+   "cityEn": "Plymouth",
+   "lon": -4.14,
+   "lat": 50.37,
+   "trail": "red",
+   "title": [
+    "Was wäre gewesen, wenn …?",
+    "Was wäre gewesen, wenn …?"
+   ],
+   "can": [
+    "Ich kann über Vergangenes spekulieren, das anders hätte laufen können (if-Satz Typ III).",
+    "Ich kann über Vergangenes spekulieren, das anders hätte laufen können (if-Satz Typ III)."
+   ],
+   "tip": [
+    "If-Satz Typ III: If + had + 3. Form, would have + 3. Form. „If the ship hadn’t left, history would have been different.“",
+    "If-Satz Typ III: If + had + 3. Form, would have + 3. Form. „If the ship hadn’t left, history would have been different.“"
+   ],
+   "fact": [
+    "1620 segelte die „Mayflower“ von Plymouth nach Amerika. Rund 100 Passagiere suchten ein neues Leben – heute sagen Millionen US-Amerikaner, sie stammen von ihnen ab.",
+    "1620 segelte die „Mayflower“ von Plymouth nach Amerika. Rund 100 Passagiere suchten ein neues Leben – heute sagen Millionen US-Amerikaner, sie stammen von ihnen ab."
+   ],
+   "words": [
+    [
+     "ship",
+     "Schiff",
+     "Schiff"
+    ],
+    [
+     "voyage",
+     "Seereise",
+     "Seereise"
+    ],
+    [
+     "passenger",
+     "Passagier/in",
+     "Passagier/in"
+    ],
+    [
+     "to emigrate",
+     "auswandern",
+     "auswandern"
+    ],
+    [
+     "emigrant",
+     "Auswanderer/in",
+     "Auswanderer/in"
+    ],
+    [
+     "immigrant",
+     "Einwanderer/in",
+     "Einwanderer/in"
+    ],
+    [
+     "new life",
+     "neues Leben",
+     "neues Leben"
+    ],
+    [
+     "storm",
+     "Sturm",
+     "Sturm"
+    ],
+    [
+     "to survive",
+     "überleben",
+     "überleben"
+    ],
+    [
+     "to regret",
+     "bereuen",
+     "bereuen"
+    ],
+    [
+     "if I had known",
+     "wenn ich gewusst hätte",
+     "wenn ich gewusst hätte"
+    ],
+    [
+     "I would have",
+     "ich hätte / wäre",
+     "ich hätte / wäre"
+    ],
+    [
+     "I wouldn't have",
+     "ich hätte nicht",
+     "ich hätte nicht"
+    ],
+    [
+     "if it hadn't",
+     "wenn es nicht … hätte",
+     "wenn es nicht … hätte"
+    ],
+    [
+     "lucky",
+     "glücklich / Glück haben",
+     "glücklich / Glück haben"
+    ],
+    [
+     "to miss the boat",
+     "das Schiff verpassen",
+     "das Schiff verpassen"
+    ],
+    [
+     "harbour",
+     "Hafen",
+     "Hafen"
+    ],
+    [
+     "history",
+     "Geschichte",
+     "Geschichte"
+    ],
+    [
+     "to change",
+     "(sich) verändern",
+     "(sich) verändern"
+    ],
+    [
+     "different",
+     "anders",
+     "anders"
+    ]
+   ],
+   "sentences": [
+    [
+     "If the storm had been worse, the ship would have sunk.",
+     "Wenn der Sturm schlimmer gewesen wäre, wäre das Schiff gesunken.",
+     "Wenn der Sturm schlimmer gewesen wäre, wäre das Schiff gesunken."
+    ],
+    [
+     "If I had known about the trip, I would have come.",
+     "Wenn ich von der Reise gewusst hätte, wäre ich mitgekommen.",
+     "Wenn ich von der Reise gewusst hätte, wäre ich mitgekommen."
+    ],
+    [
+     "We wouldn't have missed the boat if we had got up earlier.",
+     "Wir hätten das Schiff nicht verpasst, wenn wir früher aufgestanden wären.",
+     "Wir hätten das Schiff nicht verpasst, wenn wir früher aufgestanden wären."
+    ],
+    [
+     "Many emigrants left to find a new life.",
+     "Viele Auswanderer gingen, um ein neues Leben zu finden.",
+     "Viele Auswanderer gingen, um ein neues Leben zu finden."
+    ],
+    [
+     "The voyage to America took more than two months.",
+     "Die Reise nach Amerika dauerte über zwei Monate.",
+     "Die Reise nach Amerika dauerte über zwei Monate."
+    ],
+    [
+     "Half of the passengers did not survive the first winter.",
+     "Die Hälfte der Passagiere überlebte den ersten Winter nicht.",
+     "Die Hälfte der Passagiere überlebte den ersten Winter nicht."
+    ],
+    [
+     "I don't regret moving to another country.",
+     "Ich bereue nicht, in ein anderes Land gezogen zu sein.",
+     "Ich bereue nicht, in ein anderes Land gezogen zu sein."
+    ],
+    [
+     "History would have been different if they had stayed.",
+     "Die Geschichte wäre anders verlaufen, wenn sie geblieben wären.",
+     "Die Geschichte wäre anders verlaufen, wenn sie geblieben wären."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Plymouth, Mayflower Steps am Hafen. Ein Museumsguide zeigt auf das Meer. Eine Schülergruppe aus den USA ist auch da.",
+     "Plymouth, Mayflower Steps am Hafen. Ein Museumsguide zeigt auf das Meer. Eine Schülergruppe aus den USA ist auch da."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What would have happened if the Mayflower hadn't reached America?",
+       "Was wäre passiert, wenn die Mayflower Amerika nicht erreicht hätte?",
+       "Was wäre passiert, wenn die Mayflower Amerika nicht erreicht hätte?"
+      ],
+      "opts": [
+       [
+        "If it hadn't arrived, history would have been very different.",
+        "Wenn sie nicht angekommen wäre, wäre die Geschichte ganz anders verlaufen.",
+        "Wenn sie nicht angekommen wäre, wäre die Geschichte ganz anders verlaufen.",
+        1
+       ],
+       [
+        "If it doesn't arrive, history is different.",
+        "Wenn sie nicht ankommt, ist die Geschichte anders.",
+        "Wenn sie nicht ankommt, ist die Geschichte anders.",
+        0
+       ]
+      ],
+      "hint": [
+       "Typ III: had + 3. Form … would have + 3. Form.",
+       "Typ III: had + 3. Form … would have + 3. Form."
+      ]
+     },
+     {
+      "npc": [
+       "Would you have joined the voyage in 1620?",
+       "Wärst du 1620 mitgefahren?",
+       "Wärst du 1620 mitgefahren?"
+      ],
+      "opts": [
+       [
+        "No – if I had known about the storms, I would have stayed at home.",
+        "Nein – wenn ich von den Stürmen gewusst hätte, wäre ich zu Hause geblieben.",
+        "Nein – wenn ich von den Stürmen gewusst hätte, wäre ich zu Hause geblieben.",
+        1
+       ],
+       [
+        "Yes, I would join if I know.",
+        "Ja, ich würde mitfahren, wenn ich weiß.",
+        "Ja, ich würde mitfahren, wenn ich weiß.",
+        0
+       ]
+      ],
+      "hint": [
+       "if I had known … I would have …",
+       "if I had known … I would have …"
+      ]
+     },
+     {
+      "npc": [
+       "My family emigrated to the USA, too. Do you think they regret it?",
+       "Meine Familie ist auch in die USA ausgewandert. Glaubst du, sie bereuen es?",
+       "Meine Familie ist auch in die USA ausgewandert. Glaubst du, sie bereuen es?"
+      ],
+      "opts": [
+       [
+        "Probably not – they found a new life there, didn't they?",
+        "Wahrscheinlich nicht – sie haben dort ein neues Leben gefunden, oder?",
+        "Wahrscheinlich nicht – sie haben dort ein neues Leben gefunden, oder?",
+        1
+       ],
+       [
+        "They regret to emigrate tomorrow.",
+        "Sie bereuen morgen auszuwandern.",
+        "Sie bereuen morgen auszuwandern.",
+        0
+       ]
+      ],
+      "hint": [
+       "Eine Vermutung mit Rückfrage (question tag).",
+       "Eine Vermutung mit Rückfrage (question tag)."
+      ]
+     }
+    ],
+    "outro": [
+     "Ein Junge aus Boston lacht: „If they hadn’t sailed, I would be British!“",
+     "Ein Junge aus Boston lacht: „If they hadn’t sailed, I would be British!“"
+    ]
+   },
+   "lab": "l",
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 8: Der verpasste Hafen",
+     "Kapitel 8: Der verpasste Hafen"
+    ],
+    "lines": [
+     {
+      "pl": "In Plymouth, Emma found the harbour office that was on the stamp.",
+      "tr": [
+       "In Plymouth fand Emma das Hafenbüro, das auf dem Stempel war.",
+       "In Plymouth fand Emma das Hafenbüro, das auf dem Stempel war."
+      ]
+     },
+     {
+      "pl": "A woman showed her an old list of boats from 1975.",
+      "tr": [
+       "Eine Frau zeigte ihr eine alte Liste mit Booten von 1975.",
+       "Eine Frau zeigte ihr eine alte Liste mit Booten von 1975."
+      ]
+     },
+     {
+      "pl": "Her grandfather's boat was on it: the 'Black Feather'.",
+      "tr": [
+       "Das Boot ihres Großvaters stand darauf: die „Black Feather“.",
+       "Das Boot ihres Großvaters stand darauf: die „Black Feather“."
+      ]
+     },
+     {
+      "pl": "'If he had left a day earlier, he would have avoided the storm,' the woman read.",
+      "tr": [
+       "„Wenn er einen Tag früher abgefahren wäre, hätte er den Sturm vermieden“, las die Frau vor.",
+       "„Wenn er einen Tag früher abgefahren wäre, hätte er den Sturm vermieden“, las die Frau vor."
+      ]
+     },
+     {
+      "pl": "'He had to stop in Wales to repair the boat.'",
+      "tr": [
+       "„Er musste in Wales anhalten, um das Boot zu reparieren.“",
+       "„Er musste in Wales anhalten, um das Boot zu reparieren.“"
+      ]
+     },
+     {
+      "pl": "If he hadn't stopped there, Emma thought, he would never have met Grandma.",
+      "tr": [
+       "Wenn er dort nicht angehalten hätte, dachte Emma, hätte er Oma nie kennengelernt.",
+       "Wenn er dort nicht angehalten hätte, dachte Emma, hätte er Oma nie kennengelernt."
+      ]
+     },
+     {
+      "pl": "Grandma came from Swansea. Emma's next stop was clear.",
+      "tr": [
+       "Oma stammte aus Swansea. Emmas nächstes Ziel war klar.",
+       "Oma stammte aus Swansea. Emmas nächstes Ziel war klar."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "What was the name of the boat?",
+      "tr": [
+       "Wie hieß das Boot?",
+       "Wie hieß das Boot?"
+      ],
+      "o": [
+       "the 'Black Feather'",
+       "the 'Mayflower'",
+       "the 'Raven'"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Why did he stop in Wales?",
+      "tr": [
+       "Warum hielt er in Wales an?",
+       "Warum hielt er in Wales an?"
+      ],
+      "o": [
+       "to repair the boat",
+       "to buy food",
+       "to visit friends"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Where did Emma's grandmother come from?",
+      "tr": [
+       "Woher stammte Emmas Großmutter?",
+       "Woher stammte Emmas Großmutter?"
+      ],
+      "o": [
+       "Swansea",
+       "Plymouth",
+       "Norwich"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "swa",
+   "city": "Swansea",
+   "cityDe": "Swansea",
+   "cityEn": "Swansea",
+   "lon": -3.94,
+   "lat": 51.62,
+   "trail": "black",
+   "title": [
+    "Hätte, sollte, könnte",
+    "Hätte, sollte, könnte"
+   ],
+   "can": [
+    "Ich kann über Vergangenes urteilen: Was jemand hätte tun sollen oder können (should have, could have, must have).",
+    "Ich kann über Vergangenes urteilen: Was jemand hätte tun sollen oder können (should have, could have, must have)."
+   ],
+   "tip": [
+    "should have + 3. Form = hätte … sollen; could have = hätte … können; must have = muss … haben (Vermutung).",
+    "should have + 3. Form = hätte … sollen; could have = hätte … können; must have = muss … haben (Vermutung)."
+   ],
+   "fact": [
+    "In Swansea wurde der Dichter Dylan Thomas geboren. Die Halbinsel Gower nebenan war das erste Gebiet Großbritanniens mit dem Titel „Area of Outstanding Natural Beauty“ (1956).",
+    "In Swansea wurde der Dichter Dylan Thomas geboren. Die Halbinsel Gower nebenan war das erste Gebiet Großbritanniens mit dem Titel „Area of Outstanding Natural Beauty“ (1956)."
+   ],
+   "words": [
+    [
+     "coast",
+     "Küste",
+     "Küste"
+    ],
+    [
+     "cliff",
+     "Klippe",
+     "Klippe"
+    ],
+    [
+     "tide",
+     "Gezeiten",
+     "Gezeiten"
+    ],
+    [
+     "high tide",
+     "Flut",
+     "Flut"
+    ],
+    [
+     "low tide",
+     "Ebbe",
+     "Ebbe"
+    ],
+    [
+     "to get stuck",
+     "festsitzen",
+     "festsitzen"
+    ],
+    [
+     "rescue",
+     "Rettung",
+     "Rettung"
+    ],
+    [
+     "lifeboat",
+     "Rettungsboot",
+     "Rettungsboot"
+    ],
+    [
+     "warning",
+     "Warnung",
+     "Warnung"
+    ],
+    [
+     "to ignore",
+     "ignorieren",
+     "ignorieren"
+    ],
+    [
+     "should have",
+     "hätte … sollen",
+     "hätte … sollen"
+    ],
+    [
+     "shouldn't have",
+     "hätte nicht … sollen",
+     "hätte nicht … sollen"
+    ],
+    [
+     "could have",
+     "hätte … können",
+     "hätte … können"
+    ],
+    [
+     "must have",
+     "muss … haben",
+     "muss … haben"
+    ],
+    [
+     "might have",
+     "könnte … haben",
+     "könnte … haben"
+    ],
+    [
+     "mistake",
+     "Fehler",
+     "Fehler"
+    ],
+    [
+     "careless",
+     "leichtsinnig",
+     "leichtsinnig"
+    ],
+    [
+     "to check",
+     "prüfen / nachsehen",
+     "prüfen / nachsehen"
+    ],
+    [
+     "poet",
+     "Dichter/in",
+     "Dichter/in"
+    ],
+    [
+     "Welsh",
+     "walisisch",
+     "walisisch"
+    ]
+   ],
+   "sentences": [
+    [
+     "We should have checked the tide times.",
+     "Wir hätten die Gezeitenzeiten prüfen sollen.",
+     "Wir hätten die Gezeitenzeiten prüfen sollen."
+    ],
+    [
+     "They shouldn't have ignored the warning signs.",
+     "Sie hätten die Warnschilder nicht ignorieren sollen.",
+     "Sie hätten die Warnschilder nicht ignorieren sollen."
+    ],
+    [
+     "You could have called the lifeboat earlier.",
+     "Ihr hättet das Rettungsboot früher rufen können.",
+     "Ihr hättet das Rettungsboot früher rufen können."
+    ],
+    [
+     "The path is wet – it must have rained in the night.",
+     "Der Weg ist nass – es muss in der Nacht geregnet haben.",
+     "Der Weg ist nass – es muss in der Nacht geregnet haben."
+    ],
+    [
+     "He might have forgotten his phone.",
+     "Er könnte sein Handy vergessen haben.",
+     "Er könnte sein Handy vergessen haben."
+    ],
+    [
+     "At high tide the island is cut off.",
+     "Bei Flut ist die Insel abgeschnitten.",
+     "Bei Flut ist die Insel abgeschnitten."
+    ],
+    [
+     "It was careless to climb the cliff without a rope.",
+     "Es war leichtsinnig, ohne Seil auf die Klippe zu klettern.",
+     "Es war leichtsinnig, ohne Seil auf die Klippe zu klettern."
+    ],
+    [
+     "Many people in Swansea speak Welsh.",
+     "Viele Menschen in Swansea sprechen Walisisch.",
+     "Viele Menschen in Swansea sprechen Walisisch."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Worm’s Head bei Swansea. Zwei Wanderer sitzen auf der Felszunge fest – die Flut kommt. Eine Rettungsschwimmerin funkt das Rettungsboot.",
+     "Worm’s Head bei Swansea. Zwei Wanderer sitzen auf der Felszunge fest – die Flut kommt. Eine Rettungsschwimmerin funkt das Rettungsboot."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Those two walkers are stuck. What should they have done?",
+       "Die beiden Wanderer sitzen fest. Was hätten sie tun sollen?",
+       "Die beiden Wanderer sitzen fest. Was hätten sie tun sollen?"
+      ],
+      "opts": [
+       [
+        "They should have checked the tide times before they left.",
+        "Sie hätten vorher die Gezeitenzeiten prüfen sollen.",
+        "Sie hätten vorher die Gezeitenzeiten prüfen sollen.",
+        1
+       ],
+       [
+        "They should check tide yesterday.",
+        "Sie sollten gestern Gezeiten prüfen.",
+        "Sie sollten gestern Gezeiten prüfen.",
+        0
+       ]
+      ],
+      "hint": [
+       "should have + 3. Form.",
+       "should have + 3. Form."
+      ]
+     },
+     {
+      "npc": [
+       "There's a big sign at the start. Why didn't they see it?",
+       "Am Anfang steht ein großes Schild. Warum haben sie es nicht gesehen?",
+       "Am Anfang steht ein großes Schild. Warum haben sie es nicht gesehen?"
+      ],
+      "opts": [
+       [
+        "They must have been looking at their phones.",
+        "Sie müssen auf ihre Handys geschaut haben.",
+        "Sie müssen auf ihre Handys geschaut haben.",
+        1
+       ],
+       [
+        "They must look phone.",
+        "Sie müssen Handy schauen.",
+        "Sie müssen Handy schauen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vermutung über Vergangenes: must have + 3. Form.",
+       "Vermutung über Vergangenes: must have + 3. Form."
+      ]
+     },
+     {
+      "npc": [
+       "The lifeboat is on its way. Could it have been dangerous?",
+       "Das Rettungsboot ist unterwegs. Hätte es gefährlich werden können?",
+       "Das Rettungsboot ist unterwegs. Hätte es gefährlich werden können?"
+      ],
+      "opts": [
+       [
+        "Yes, they could have been swept away by the waves.",
+        "Ja, sie hätten von den Wellen weggerissen werden können.",
+        "Ja, sie hätten von den Wellen weggerissen werden können.",
+        1
+       ],
+       [
+        "Yes, they could swept the waves.",
+        "Ja, sie konnten die Wellen fegen.",
+        "Ja, sie konnten die Wellen fegen.",
+        0
+       ]
+      ],
+      "hint": [
+       "could have + 3. Form.",
+       "could have + 3. Form."
+      ]
+     }
+    ],
+    "outro": [
+     "Zehn Minuten später sind beide an Bord. Einer ruft: „We should have listened to you!“",
+     "Zehn Minuten später sind beide an Bord. Einer ruft: „We should have listened to you!“"
+    ]
+   },
+   "lab": "l",
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 9: Omas Gedicht",
+     "Kapitel 9: Omas Gedicht"
+    ],
+    "lines": [
+     {
+      "pl": "In Swansea, Emma visited her grandmother's old school.",
+      "tr": [
+       "In Swansea besuchte Emma die alte Schule ihrer Großmutter.",
+       "In Swansea besuchte Emma die alte Schule ihrer Großmutter."
+      ]
+     },
+     {
+      "pl": "A teacher showed her a poem that Grandma had written in Welsh.",
+      "tr": [
+       "Ein Lehrer zeigte ihr ein Gedicht, das Oma auf Walisisch geschrieben hatte.",
+       "Ein Lehrer zeigte ihr ein Gedicht, das Oma auf Walisisch geschrieben hatte."
+      ]
+     },
+     {
+      "pl": "'She must have been very good at writing,' the teacher said.",
+      "tr": [
+       "„Sie muss sehr gut im Schreiben gewesen sein“, sagte der Lehrer.",
+       "„Sie muss sehr gut im Schreiben gewesen sein“, sagte der Lehrer."
+      ]
+     },
+     {
+      "pl": "The poem was about a raven that flew across the sea to Ireland.",
+      "tr": [
+       "Das Gedicht handelte von einem Raben, der übers Meer nach Irland flog.",
+       "Das Gedicht handelte von einem Raben, der übers Meer nach Irland flog."
+      ]
+     },
+     {
+      "pl": "'I should have read it years ago,' Emma thought.",
+      "tr": [
+       "„Ich hätte es vor Jahren lesen sollen“, dachte Emma.",
+       "„Ich hätte es vor Jahren lesen sollen“, dachte Emma."
+      ]
+     },
+     {
+      "pl": "The last line said: 'Where the lakes are many, the key is waiting.'",
+      "tr": [
+       "Die letzte Zeile lautete: „Wo die Seen zahlreich sind, wartet der Schlüssel.“",
+       "Die letzte Zeile lautete: „Wo die Seen zahlreich sind, wartet der Schlüssel.“"
+      ]
+     },
+     {
+      "pl": "Lakes in Ireland? That could only mean Killarney.",
+      "tr": [
+       "Seen in Irland? Das konnte nur Killarney bedeuten.",
+       "Seen in Irland? Das konnte nur Killarney bedeuten."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "Who had written the poem?",
+      "tr": [
+       "Wer hatte das Gedicht geschrieben?",
+       "Wer hatte das Gedicht geschrieben?"
+      ],
+      "o": [
+       "Emma's grandmother",
+       "the teacher",
+       "Dylan Thomas"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was the poem about?",
+      "tr": [
+       "Wovon handelte das Gedicht?",
+       "Wovon handelte das Gedicht?"
+      ],
+      "o": [
+       "a raven flying to Ireland",
+       "a storm at sea",
+       "a school in Wales"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Where does Emma go next?",
+      "tr": [
+       "Wohin reist Emma als Nächstes?",
+       "Wohin reist Emma als Nächstes?"
+      ],
+      "o": [
+       "Killarney",
+       "Cardiff",
+       "London"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "kil",
+   "city": "Killarney",
+   "cityDe": "Killarney",
+   "cityEn": "Killarney",
+   "lon": -9.51,
+   "lat": 52.06,
+   "trail": "black",
+   "title": [
+    "Meinung und Diskussion",
+    "Meinung und Diskussion"
+   ],
+   "can": [
+    "Ich kann meine Meinung sagen, begründen und auf andere Meinungen eingehen.",
+    "Ich kann meine Meinung sagen, begründen und auf andere Meinungen eingehen."
+   ],
+   "tip": [
+    "Für Diskussionen: „In my opinion …“, „I agree / disagree because …“, „That’s a good point, but …“, „On the other hand …“",
+    "Für Diskussionen: „In my opinion …“, „I agree / disagree because …“, „That’s a good point, but …“, „On the other hand …“"
+   ],
+   "fact": [
+    "Der Killarney-Nationalpark war 1932 der erste Nationalpark Irlands. Hier leben die einzigen wilden Rothirsche, die es in Irland seit der Eiszeit ununterbrochen gibt.",
+    "Der Killarney-Nationalpark war 1932 der erste Nationalpark Irlands. Hier leben die einzigen wilden Rothirsche, die es in Irland seit der Eiszeit ununterbrochen gibt."
+   ],
+   "words": [
+    [
+     "national park",
+     "Nationalpark",
+     "Nationalpark"
+    ],
+    [
+     "tourism",
+     "Tourismus",
+     "Tourismus"
+    ],
+    [
+     "tourist",
+     "Tourist/in",
+     "Tourist/in"
+    ],
+    [
+     "nature",
+     "Natur",
+     "Natur"
+    ],
+    [
+     "to protect",
+     "schützen",
+     "schützen"
+    ],
+    [
+     "to allow",
+     "erlauben",
+     "erlauben"
+    ],
+    [
+     "to ban",
+     "verbieten",
+     "verbieten"
+    ],
+    [
+     "in my opinion",
+     "meiner Meinung nach",
+     "meiner Meinung nach"
+    ],
+    [
+     "I agree",
+     "ich stimme zu",
+     "ich stimme zu"
+    ],
+    [
+     "I disagree",
+     "ich bin anderer Meinung",
+     "ich bin anderer Meinung"
+    ],
+    [
+     "that's a good point",
+     "das ist ein gutes Argument",
+     "das ist ein gutes Argument"
+    ],
+    [
+     "on the other hand",
+     "andererseits",
+     "andererseits"
+    ],
+    [
+     "however",
+     "jedoch",
+     "jedoch"
+    ],
+    [
+     "the advantage is",
+     "der Vorteil ist",
+     "der Vorteil ist"
+    ],
+    [
+     "the disadvantage is",
+     "der Nachteil ist",
+     "der Nachteil ist"
+    ],
+    [
+     "I'm not sure",
+     "ich bin nicht sicher",
+     "ich bin nicht sicher"
+    ],
+    [
+     "to compromise",
+     "einen Kompromiss finden",
+     "einen Kompromiss finden"
+    ],
+    [
+     "traffic",
+     "Verkehr",
+     "Verkehr"
+    ],
+    [
+     "local people",
+     "Einheimische",
+     "Einheimische"
+    ],
+    [
+     "balance",
+     "Gleichgewicht",
+     "Gleichgewicht"
+    ]
+   ],
+   "sentences": [
+    [
+     "In my opinion, cars should be banned in the park.",
+     "Meiner Meinung nach sollten Autos im Park verboten werden.",
+     "Meiner Meinung nach sollten Autos im Park verboten werden."
+    ],
+    [
+     "I agree, because the traffic disturbs the animals.",
+     "Ich stimme zu, weil der Verkehr die Tiere stört.",
+     "Ich stimme zu, weil der Verkehr die Tiere stört."
+    ],
+    [
+     "That's a good point, but local people need tourists.",
+     "Das ist ein gutes Argument, aber die Einheimischen brauchen Touristen.",
+     "Das ist ein gutes Argument, aber die Einheimischen brauchen Touristen."
+    ],
+    [
+     "On the other hand, too many visitors damage nature.",
+     "Andererseits schaden zu viele Besucher der Natur.",
+     "Andererseits schaden zu viele Besucher der Natur."
+    ],
+    [
+     "The advantage of buses is that they are cleaner.",
+     "Der Vorteil von Bussen ist, dass sie sauberer sind.",
+     "Der Vorteil von Bussen ist, dass sie sauberer sind."
+    ],
+    [
+     "I'm not sure if a ban is the best solution.",
+     "Ich bin nicht sicher, ob ein Verbot die beste Lösung ist.",
+     "Ich bin nicht sicher, ob ein Verbot die beste Lösung ist."
+    ],
+    [
+     "We need a balance between tourism and nature.",
+     "Wir brauchen ein Gleichgewicht zwischen Tourismus und Natur.",
+     "Wir brauchen ein Gleichgewicht zwischen Tourismus und Natur."
+    ],
+    [
+     "Maybe we can find a compromise.",
+     "Vielleicht können wir einen Kompromiss finden.",
+     "Vielleicht können wir einen Kompromiss finden."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Killarney, Rathaus. Eine Bürgerversammlung: Sollen Autos aus dem Nationalpark verbannt werden? Jugendliche dürfen mitreden.",
+     "Killarney, Rathaus. Eine Bürgerversammlung: Sollen Autos aus dem Nationalpark verbannt werden? Jugendliche dürfen mitreden."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "What's your opinion? Should cars be banned from the park?",
+       "Was ist deine Meinung? Sollen Autos aus dem Park verbannt werden?",
+       "Was ist deine Meinung? Sollen Autos aus dem Park verbannt werden?"
+      ],
+      "opts": [
+       [
+        "In my opinion, yes – the animals need peace and quiet.",
+        "Meiner Meinung nach ja – die Tiere brauchen Ruhe.",
+        "Meiner Meinung nach ja – die Tiere brauchen Ruhe.",
+        1
+       ],
+       [
+        "My opinion is car.",
+        "Meine Meinung ist Auto.",
+        "Meine Meinung ist Auto.",
+        0
+       ]
+      ],
+      "hint": [
+       "Meinung + Begründung.",
+       "Meinung + Begründung."
+      ]
+     },
+     {
+      "npc": [
+       "But the jaunting car drivers need tourists to earn money!",
+       "Aber die Kutschenfahrer brauchen Touristen, um Geld zu verdienen!",
+       "Aber die Kutschenfahrer brauchen Touristen, um Geld zu verdienen!"
+      ],
+      "opts": [
+       [
+        "That's a good point. However, horse carriages could still be allowed.",
+        "Das ist ein gutes Argument. Allerdings könnten Pferdekutschen weiter erlaubt sein.",
+        "Das ist ein gutes Argument. Allerdings könnten Pferdekutschen weiter erlaubt sein.",
+        1
+       ],
+       [
+        "I disagree. Horses are cars.",
+        "Ich bin anderer Meinung. Pferde sind Autos.",
+        "Ich bin anderer Meinung. Pferde sind Autos.",
+        0
+       ]
+      ],
+      "hint": [
+       "Gegenargument anerkennen: That’s a good point. However, …",
+       "Gegenargument anerkennen: That’s a good point. However, …"
+      ]
+     },
+     {
+      "npc": [
+       "So what do you suggest?",
+       "Was schlägst du also vor?",
+       "Was schlägst du also vor?"
+      ],
+      "opts": [
+       [
+        "A compromise: electric buses and carriages, but no private cars.",
+        "Ein Kompromiss: E-Busse und Kutschen, aber keine Privatautos.",
+        "Ein Kompromiss: E-Busse und Kutschen, aber keine Privatautos.",
+        1
+       ],
+       [
+        "I suggest that nothing.",
+        "Ich schlage vor, dass nichts.",
+        "Ich schlage vor, dass nichts.",
+        0
+       ]
+      ],
+      "hint": [
+       "Lösung vorschlagen: a compromise …",
+       "Lösung vorschlagen: a compromise …"
+      ]
+     }
+    ],
+    "outro": [
+     "Applaus! Die Bürgermeisterin schreibt deinen Vorschlag auf.",
+     "Applaus! Die Bürgermeisterin schreibt deinen Vorschlag auf."
+    ]
+   },
+   "lab": "l",
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 10: Der Streit am See",
+     "Kapitel 10: Der Streit am See"
+    ],
+    "lines": [
+     {
+      "pl": "At the lakes of Killarney, Emma met two brothers who were arguing.",
+      "tr": [
+       "An den Seen von Killarney traf Emma zwei Brüder, die sich stritten.",
+       "An den Seen von Killarney traf Emma zwei Brüder, die sich stritten."
+      ]
+     },
+     {
+      "pl": "'In my opinion, the old boathouse should be sold,' said the older one.",
+      "tr": [
+       "„Meiner Meinung nach sollte das alte Bootshaus verkauft werden“, sagte der Ältere.",
+       "„Meiner Meinung nach sollte das alte Bootshaus verkauft werden“, sagte der Ältere."
+      ]
+     },
+     {
+      "pl": "'I disagree – Grandad wanted us to keep it,' said the younger one.",
+      "tr": [
+       "„Da bin ich anderer Meinung – Opa wollte, dass wir es behalten“, sagte der Jüngere.",
+       "„Da bin ich anderer Meinung – Opa wollte, dass wir es behalten“, sagte der Jüngere."
+      ]
+     },
+     {
+      "pl": "When Emma showed them the black feather, they stopped arguing.",
+      "tr": [
+       "Als Emma ihnen die schwarze Feder zeigte, hörten sie auf zu streiten.",
+       "Als Emma ihnen die schwarze Feder zeigte, hörten sie auf zu streiten."
+      ]
+     },
+     {
+      "pl": "'Your grandfather was our grandfather's best friend,' they said.",
+      "tr": [
+       "„Dein Großvater war der beste Freund unseres Großvaters“, sagten sie.",
+       "„Dein Großvater war der beste Freund unseres Großvaters“, sagten sie."
+      ]
+     },
+     {
+      "pl": "In the boathouse there was a wooden box with a lock, but no key.",
+      "tr": [
+       "Im Bootshaus stand eine Holzkiste mit einem Schloss, aber ohne Schlüssel.",
+       "Im Bootshaus stand eine Holzkiste mit einem Schloss, aber ohne Schlüssel."
+      ]
+     },
+     {
+      "pl": "A note on the box said: 'Ask the stone-cutters in the medieval city.'",
+      "tr": [
+       "Ein Zettel auf der Kiste sagte: „Frag die Steinmetze in der mittelalterlichen Stadt.“",
+       "Ein Zettel auf der Kiste sagte: „Frag die Steinmetze in der mittelalterlichen Stadt.“"
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "What were the brothers arguing about?",
+      "tr": [
+       "Worüber stritten die Brüder?",
+       "Worüber stritten die Brüder?"
+      ],
+      "o": [
+       "the old boathouse",
+       "a football match",
+       "the weather"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Why did they stop arguing?",
+      "tr": [
+       "Warum hörten sie auf zu streiten?",
+       "Warum hörten sie auf zu streiten?"
+      ],
+      "o": [
+       "Emma showed them the feather",
+       "it started to rain",
+       "their mother called"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was in the boathouse?",
+      "tr": [
+       "Was war im Bootshaus?",
+       "Was war im Bootshaus?"
+      ],
+      "o": [
+       "a wooden box with a lock",
+       "the key",
+       "a raven"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "klk",
+   "city": "Kilkenny",
+   "cityDe": "Kilkenny",
+   "cityEn": "Kilkenny",
+   "lon": -7.25,
+   "lat": 52.65,
+   "trail": "black",
+   "title": [
+    "Was ich schon lange mache",
+    "Was ich schon lange mache"
+   ],
+   "can": [
+    "Ich kann sagen, wie lange ich etwas schon mache (present perfect progressive), z. B. im Bewerbungsgespräch.",
+    "Ich kann sagen, wie lange ich etwas schon mache (present perfect progressive), z. B. im Bewerbungsgespräch."
+   ],
+   "tip": [
+    "Seit wann? How long have you been …ing? – „I have been learning English for six years.“ for = Zeitraum, since = Zeitpunkt.",
+    "Seit wann? How long have you been …ing? – „I have been learning English for six years.“ for = Zeitraum, since = Zeitpunkt."
+   ],
+   "fact": [
+    "Kilkenny heißt „Marble City“ wegen des schwarzen Kalksteins, der hier abgebaut wurde. Die mittelalterliche Altstadt hat ein Schloss, eine Kathedrale und viele Handwerksbetriebe.",
+    "Kilkenny heißt „Marble City“ wegen des schwarzen Kalksteins, der hier abgebaut wurde. Die mittelalterliche Altstadt hat ein Schloss, eine Kathedrale und viele Handwerksbetriebe."
+   ],
+   "words": [
+    [
+     "medieval",
+     "mittelalterlich",
+     "mittelalterlich"
+    ],
+    [
+     "castle",
+     "Schloss / Burg",
+     "Schloss / Burg"
+    ],
+    [
+     "craft",
+     "Handwerk",
+     "Handwerk"
+    ],
+    [
+     "craftsman",
+     "Handwerker",
+     "Handwerker"
+    ],
+    [
+     "stonemason",
+     "Steinmetz/in",
+     "Steinmetz/in"
+    ],
+    [
+     "apprentice",
+     "Auszubildende/r",
+     "Auszubildende/r"
+    ],
+    [
+     "apprenticeship",
+     "Ausbildung",
+     "Ausbildung"
+    ],
+    [
+     "job interview",
+     "Vorstellungsgespräch",
+     "Vorstellungsgespräch"
+    ],
+    [
+     "experience",
+     "Erfahrung",
+     "Erfahrung"
+    ],
+    [
+     "skill",
+     "Fähigkeit",
+     "Fähigkeit"
+    ],
+    [
+     "to apply for",
+     "sich bewerben um",
+     "sich bewerben um"
+    ],
+    [
+     "CV",
+     "Lebenslauf",
+     "Lebenslauf"
+    ],
+    [
+     "I have been working",
+     "ich arbeite schon (seit)",
+     "ich arbeite schon (seit)"
+    ],
+    [
+     "How long have you been …?",
+     "Wie lange … schon?",
+     "Wie lange … schon?"
+    ],
+    [
+     "for six years",
+     "seit sechs Jahren",
+     "seit sechs Jahren"
+    ],
+    [
+     "since 2020",
+     "seit 2020",
+     "seit 2020"
+    ],
+    [
+     "reliable",
+     "zuverlässig",
+     "zuverlässig"
+    ],
+    [
+     "hard-working",
+     "fleißig",
+     "fleißig"
+    ],
+    [
+     "to be interested in",
+     "sich interessieren für",
+     "sich interessieren für"
+    ],
+    [
+     "work experience",
+     "Praktikum",
+     "Praktikum"
+    ]
+   ],
+   "sentences": [
+    [
+     "I have been learning English for six years.",
+     "Ich lerne seit sechs Jahren Englisch.",
+     "Ich lerne seit sechs Jahren Englisch."
+    ],
+    [
+     "How long have you been working here?",
+     "Wie lange arbeiten Sie schon hier?",
+     "Wie lange arbeiten Sie schon hier?"
+    ],
+    [
+     "She has been carving stone since she was sixteen.",
+     "Sie bearbeitet Stein, seit sie sechzehn ist.",
+     "Sie bearbeitet Stein, seit sie sechzehn ist."
+    ],
+    [
+     "I'm applying for an apprenticeship as a stonemason.",
+     "Ich bewerbe mich um eine Ausbildung als Steinmetz.",
+     "Ich bewerbe mich um eine Ausbildung als Steinmetz."
+    ],
+    [
+     "I did two weeks of work experience at a workshop.",
+     "Ich habe zwei Wochen Praktikum in einer Werkstatt gemacht.",
+     "Ich habe zwei Wochen Praktikum in einer Werkstatt gemacht."
+    ],
+    [
+     "I am reliable and hard-working.",
+     "Ich bin zuverlässig und fleißig.",
+     "Ich bin zuverlässig und fleißig."
+    ],
+    [
+     "It has been raining all day – let's stay inside.",
+     "Es regnet schon den ganzen Tag – lass uns drinnen bleiben.",
+     "Es regnet schon den ganzen Tag – lass uns drinnen bleiben."
+    ],
+    [
+     "I'm interested in old crafts.",
+     "Ich interessiere mich für alte Handwerke.",
+     "Ich interessiere mich für alte Handwerke."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Kilkenny, eine Steinmetzwerkstatt neben der Kathedrale. Die Meisterin sucht Praktikanten für den Sommer.",
+     "Kilkenny, eine Steinmetzwerkstatt neben der Kathedrale. Die Meisterin sucht Praktikanten für den Sommer."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "So, why are you interested in this work experience?",
+       "Warum interessierst du dich für dieses Praktikum?",
+       "Warum interessierst du dich für dieses Praktikum?"
+      ],
+      "opts": [
+       [
+        "I'm interested in old crafts and I love working with my hands.",
+        "Ich interessiere mich für altes Handwerk und arbeite gern mit den Händen.",
+        "Ich interessiere mich für altes Handwerk und arbeite gern mit den Händen.",
+        1
+       ],
+       [
+        "I am interest for work.",
+        "Ich bin Interesse für Arbeit.",
+        "Ich bin Interesse für Arbeit.",
+        0
+       ]
+      ],
+      "hint": [
+       "interested in + -ing / Nomen.",
+       "interested in + -ing / Nomen."
+      ]
+     },
+     {
+      "npc": [
+       "How long have you been learning English?",
+       "Wie lange lernst du schon Englisch?",
+       "Wie lange lernst du schon Englisch?"
+      ],
+      "opts": [
+       [
+        "I've been learning it for six years, since year five.",
+        "Ich lerne es seit sechs Jahren, seit der fünften Klasse.",
+        "Ich lerne es seit sechs Jahren, seit der fünften Klasse.",
+        1
+       ],
+       [
+        "I learn it since six years.",
+        "Ich lerne es seit sechs Jahren (falsch: since).",
+        "Ich lerne es seit sechs Jahren (falsch: since).",
+        0
+       ]
+      ],
+      "hint": [
+       "have been + -ing, for + Zeitraum.",
+       "have been + -ing, for + Zeitraum."
+      ]
+     },
+     {
+      "npc": [
+       "Good. Why should I choose you?",
+       "Gut. Warum sollte ich dich nehmen?",
+       "Gut. Warum sollte ich dich nehmen?"
+      ],
+      "opts": [
+       [
+        "Because I'm reliable and I've already done a project with stone at school.",
+        "Weil ich zuverlässig bin und schon ein Steinprojekt in der Schule gemacht habe.",
+        "Weil ich zuverlässig bin und schon ein Steinprojekt in der Schule gemacht habe.",
+        1
+       ],
+       [
+        "Because you choose.",
+        "Weil du wählst.",
+        "Weil du wählst.",
+        0
+       ]
+      ],
+      "hint": [
+       "Eigenschaft + Erfahrung nennen.",
+       "Eigenschaft + Erfahrung nennen."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Meisterin gibt dir die Hand: „You start on Monday. Don’t be late!“",
+     "Die Meisterin gibt dir die Hand: „You start on Monday. Don’t be late!“"
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 11: Die Steinmetzin",
+     "Kapitel 11: Die Steinmetzin"
+    ],
+    "lines": [
+     {
+      "pl": "In Kilkenny, Emma found a stonemason who had been working there for fifty years.",
+      "tr": [
+       "In Kilkenny fand Emma eine Steinmetzin, die seit fünfzig Jahren dort arbeitete.",
+       "In Kilkenny fand Emma eine Steinmetzin, die seit fünfzig Jahren dort arbeitete."
+      ]
+     },
+     {
+      "pl": "'I've been waiting for you for a long time,' the old woman said.",
+      "tr": [
+       "„Ich warte schon lange auf dich“, sagte die alte Frau.",
+       "„Ich warte schon lange auf dich“, sagte die alte Frau."
+      ]
+     },
+     {
+      "pl": "She took a black stone from a shelf and gave it to Emma.",
+      "tr": [
+       "Sie nahm einen schwarzen Stein aus einem Regal und gab ihn Emma.",
+       "Sie nahm einen schwarzen Stein aus einem Regal und gab ihn Emma."
+      ]
+     },
+     {
+      "pl": "Inside the stone, a small steel key was hidden.",
+      "tr": [
+       "Im Stein war ein kleiner Stahlschlüssel versteckt.",
+       "Im Stein war ein kleiner Stahlschlüssel versteckt."
+      ]
+     },
+     {
+      "pl": "'Your grandfather asked me to keep it until you were ready,' she explained.",
+      "tr": [
+       "„Dein Großvater bat mich, ihn aufzubewahren, bis du bereit bist“, erklärte sie.",
+       "„Dein Großvater bat mich, ihn aufzubewahren, bis du bereit bist“, erklärte sie."
+      ]
+     },
+     {
+      "pl": "'But the box is not the end. He wanted you to climb the highest mountain.'",
+      "tr": [
+       "„Aber die Kiste ist nicht das Ende. Er wollte, dass du den höchsten Berg besteigst.“",
+       "„Aber die Kiste ist nicht das Ende. Er wollte, dass du den höchsten Berg besteigst.“"
+      ]
+     },
+     {
+      "pl": "The highest mountain in Britain: Ben Nevis.",
+      "tr": [
+       "Der höchste Berg Großbritanniens: der Ben Nevis.",
+       "Der höchste Berg Großbritanniens: der Ben Nevis."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "How long had the stonemason been working there?",
+      "tr": [
+       "Wie lange arbeitete die Steinmetzin schon dort?",
+       "Wie lange arbeitete die Steinmetzin schon dort?"
+      ],
+      "o": [
+       "fifty years",
+       "five years",
+       "one year"
+      ],
+      "a": 0
+     },
+     {
+      "q": "Where was the key hidden?",
+      "tr": [
+       "Wo war der Schlüssel versteckt?",
+       "Wo war der Schlüssel versteckt?"
+      ],
+      "o": [
+       "inside a black stone",
+       "in a book",
+       "under the castle"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What did her grandfather want her to do?",
+      "tr": [
+       "Was sollte sie nach dem Wunsch ihres Großvaters tun?",
+       "Was sollte sie nach dem Wunsch ihres Großvaters tun?"
+      ],
+      "o": [
+       "climb the highest mountain",
+       "sell the box",
+       "stay in Kilkenny"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "bnv",
+   "city": "Ben Nevis",
+   "cityDe": "Ben Nevis",
+   "cityEn": "Ben Nevis",
+   "lon": -5.0,
+   "lat": 56.8,
+   "trail": "black",
+   "title": [
+    "Abenteuer und Grenzen",
+    "Abenteuer und Grenzen"
+   ],
+   "can": [
+    "Ich kann von einem Abenteuer berichten und Sätze mit Partizipien verkürzen.",
+    "Ich kann von einem Abenteuer berichten und Sätze mit Partizipien verkürzen."
+   ],
+   "tip": [
+    "Partizipien machen Sätze kürzer: „Feeling tired, we stopped.“ = Because we felt tired, we stopped. „Having reached the top, …“ = After we had reached the top, …",
+    "Partizipien machen Sätze kürzer: „Feeling tired, we stopped.“ = Because we felt tired, we stopped. „Having reached the top, …“ = After we had reached the top, …"
+   ],
+   "fact": [
+    "Der Ben Nevis ist mit 1345 m der höchste Berg Großbritanniens. Auf dem Gipfel ist es so oft neblig, dass man ihn an nur etwa 50 Tagen im Jahr klar sieht.",
+    "Der Ben Nevis ist mit 1345 m der höchste Berg Großbritanniens. Auf dem Gipfel ist es so oft neblig, dass man ihn an nur etwa 50 Tagen im Jahr klar sieht."
+   ],
+   "words": [
+    [
+     "summit",
+     "Gipfel",
+     "Gipfel"
+    ],
+    [
+     "mountain rescue",
+     "Bergwacht",
+     "Bergwacht"
+    ],
+    [
+     "fog",
+     "Nebel",
+     "Nebel"
+    ],
+    [
+     "path",
+     "Weg",
+     "Weg"
+    ],
+    [
+     "equipment",
+     "Ausrüstung",
+     "Ausrüstung"
+    ],
+    [
+     "challenge",
+     "Herausforderung",
+     "Herausforderung"
+    ],
+    [
+     "to give up",
+     "aufgeben",
+     "aufgeben"
+    ],
+    [
+     "to keep going",
+     "weitermachen",
+     "weitermachen"
+    ],
+    [
+     "exhausted",
+     "erschöpft",
+     "erschöpft"
+    ],
+    [
+     "proud",
+     "stolz",
+     "stolz"
+    ],
+    [
+     "limit",
+     "Grenze",
+     "Grenze"
+    ],
+    [
+     "teamwork",
+     "Teamarbeit",
+     "Teamarbeit"
+    ],
+    [
+     "feeling tired",
+     "weil wir müde waren",
+     "weil wir müde waren"
+    ],
+    [
+     "having reached",
+     "nachdem wir erreicht hatten",
+     "nachdem wir erreicht hatten"
+    ],
+    [
+     "seen from above",
+     "von oben gesehen",
+     "von oben gesehen"
+    ],
+    [
+     "to set off",
+     "aufbrechen",
+     "aufbrechen"
+    ],
+    [
+     "to turn back",
+     "umkehren",
+     "umkehren"
+    ],
+    [
+     "weather forecast",
+     "Wettervorhersage",
+     "Wettervorhersage"
+    ],
+    [
+     "compass",
+     "Kompass",
+     "Kompass"
+    ],
+    [
+     "achievement",
+     "Leistung / Erfolg",
+     "Leistung / Erfolg"
+    ]
+   ],
+   "sentences": [
+    [
+     "Feeling exhausted, we stopped for a break.",
+     "Weil wir erschöpft waren, machten wir eine Pause.",
+     "Weil wir erschöpft waren, machten wir eine Pause."
+    ],
+    [
+     "Having reached the summit, we took a photo.",
+     "Nachdem wir den Gipfel erreicht hatten, machten wir ein Foto.",
+     "Nachdem wir den Gipfel erreicht hatten, machten wir ein Foto."
+    ],
+    [
+     "Seen from above, the lakes looked like mirrors.",
+     "Von oben gesehen sahen die Seen wie Spiegel aus.",
+     "Von oben gesehen sahen die Seen wie Spiegel aus."
+    ],
+    [
+     "We set off at six after checking the weather forecast.",
+     "Wir brachen um sechs auf, nachdem wir die Wettervorhersage geprüft hatten.",
+     "Wir brachen um sechs auf, nachdem wir die Wettervorhersage geprüft hatten."
+    ],
+    [
+     "When the fog came, we didn't give up.",
+     "Als der Nebel kam, gaben wir nicht auf.",
+     "Als der Nebel kam, gaben wir nicht auf."
+    ],
+    [
+     "It is important to know your limits.",
+     "Es ist wichtig, seine Grenzen zu kennen.",
+     "Es ist wichtig, seine Grenzen zu kennen."
+    ],
+    [
+     "Without teamwork we would have turned back.",
+     "Ohne Teamarbeit wären wir umgekehrt.",
+     "Ohne Teamarbeit wären wir umgekehrt."
+    ],
+    [
+     "I'm proud of this achievement.",
+     "Ich bin stolz auf diese Leistung.",
+     "Ich bin stolz auf diese Leistung."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ben Nevis, kurz unter dem Gipfel. Dichter Nebel. Ein Mitglied der Bergwacht kommt euch mit Kompass entgegen.",
+     "Ben Nevis, kurz unter dem Gipfel. Dichter Nebel. Ein Mitglied der Bergwacht kommt euch mit Kompass entgegen."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "You look tired. Do you want to turn back?",
+       "Ihr seht müde aus. Wollt ihr umkehren?",
+       "Ihr seht müde aus. Wollt ihr umkehren?"
+      ],
+      "opts": [
+       [
+        "Feeling tired, yes – but we checked the forecast and we have the right equipment.",
+        "Müde schon – aber wir haben die Vorhersage geprüft und die richtige Ausrüstung.",
+        "Müde schon – aber wir haben die Vorhersage geprüft und die richtige Ausrüstung.",
+        1
+       ],
+       [
+        "Tired feeling turn.",
+        "Müde Gefühl umkehren.",
+        "Müde Gefühl umkehren.",
+        0
+       ]
+      ],
+      "hint": [
+       "Partizip am Satzanfang: Feeling tired, …",
+       "Partizip am Satzanfang: Feeling tired, …"
+      ]
+     },
+     {
+      "npc": [
+       "Good. Stay on the path and use your compass. Have you done this before?",
+       "Gut. Bleibt auf dem Weg und nutzt den Kompass. Habt ihr das schon mal gemacht?",
+       "Gut. Bleibt auf dem Weg und nutzt den Kompass. Habt ihr das schon mal gemacht?"
+      ],
+      "opts": [
+       [
+        "Yes, having practised in the Alps, we know how to use it.",
+        "Ja, da wir in den Alpen geübt haben, wissen wir, wie man ihn benutzt.",
+        "Ja, da wir in den Alpen geübt haben, wissen wir, wie man ihn benutzt.",
+        1
+       ],
+       [
+        "Yes, having practise Alps.",
+        "Ja, habend üben Alpen.",
+        "Ja, habend üben Alpen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vorzeitigkeit: having + 3. Form.",
+       "Vorzeitigkeit: having + 3. Form."
+      ]
+     },
+     {
+      "npc": [
+       "Then off you go – the summit is ten minutes away.",
+       "Dann los – der Gipfel ist zehn Minuten entfernt.",
+       "Dann los – der Gipfel ist zehn Minuten entfernt."
+      ],
+      "opts": [
+       [
+        "Thanks! We'll keep going and be careful.",
+        "Danke! Wir machen weiter und passen auf.",
+        "Danke! Wir machen weiter und passen auf.",
+        1
+       ],
+       [
+        "Thanks! We give up going.",
+        "Danke! Wir geben gehen auf.",
+        "Danke! Wir geben gehen auf.",
+        0
+       ]
+      ],
+      "hint": [
+       "Weitermachen: keep going.",
+       "Weitermachen: keep going."
+      ]
+     }
+    ],
+    "outro": [
+     "Plötzlich reißt der Nebel auf. Ganz Schottland liegt unter dir.",
+     "Plötzlich reißt der Nebel auf. Ganz Schottland liegt unter dir."
+    ]
+   },
+   "r": 3,
+   "read": {
+    "t": [
+     "Kapitel 12: Auf dem Gipfel",
+     "Kapitel 12: Auf dem Gipfel"
+    ],
+    "lines": [
+     {
+      "pl": "Having climbed for five hours, Emma finally reached the summit of Ben Nevis.",
+      "tr": [
+       "Nachdem sie fünf Stunden geklettert war, erreichte Emma endlich den Gipfel des Ben Nevis.",
+       "Nachdem sie fünf Stunden geklettert war, erreichte Emma endlich den Gipfel des Ben Nevis."
+      ]
+     },
+     {
+      "pl": "Feeling tired but happy, she sat down next to the old stone shelter.",
+      "tr": [
+       "Müde, aber glücklich setzte sie sich neben die alte Steinhütte.",
+       "Müde, aber glücklich setzte sie sich neben die alte Steinhütte."
+      ]
+     },
+     {
+      "pl": "In a gap in the wall, she found a small steel box with a raven on it.",
+      "tr": [
+       "In einer Lücke in der Mauer fand sie eine kleine Stahlkiste mit einem Raben darauf.",
+       "In einer Lücke in der Mauer fand sie eine kleine Stahlkiste mit einem Raben darauf."
+      ]
+     },
+     {
+      "pl": "The key from Kilkenny fitted perfectly.",
+      "tr": [
+       "Der Schlüssel aus Kilkenny passte genau.",
+       "Der Schlüssel aus Kilkenny passte genau."
+      ]
+     },
+     {
+      "pl": "Inside there was no gold, only a letter written by her grandfather.",
+      "tr": [
+       "Darin war kein Gold, nur ein Brief, den ihr Großvater geschrieben hatte.",
+       "Darin war kein Gold, nur ein Brief, den ihr Großvater geschrieben hatte."
+      ]
+     },
+     {
+      "pl": "'The treasure is the journey,' it said. 'Now you speak the language of the whole island.'",
+      "tr": [
+       "„Der Schatz ist die Reise“, stand darin. „Jetzt sprichst du die Sprache der ganzen Insel.“",
+       "„Der Schatz ist die Reise“, stand darin. „Jetzt sprichst du die Sprache der ganzen Insel.“"
+      ]
+     },
+     {
+      "pl": "Above her, a black raven flew through the clouds.",
+      "tr": [
+       "Über ihr flog ein schwarzer Rabe durch die Wolken.",
+       "Über ihr flog ein schwarzer Rabe durch die Wolken."
+      ]
+     }
+    ],
+    "q": [
+     {
+      "q": "How long did Emma climb?",
+      "tr": [
+       "Wie lange kletterte Emma?",
+       "Wie lange kletterte Emma?"
+      ],
+      "o": [
+       "five hours",
+       "one hour",
+       "two days"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What did the key open?",
+      "tr": [
+       "Was öffnete der Schlüssel?",
+       "Was öffnete der Schlüssel?"
+      ],
+      "o": [
+       "a small steel box",
+       "a castle door",
+       "a boathouse"
+      ],
+      "a": 0
+     },
+     {
+      "q": "What was the treasure, according to the letter?",
+      "tr": [
+       "Was war laut Brief der Schatz?",
+       "Was war laut Brief der Schatz?"
+      ],
+      "o": [
+       "the journey",
+       "gold",
+       "the raven"
+      ],
+      "a": 0
+     }
+    ]
+   }
+  },
+  {
    "id": "s5sch",
    "city": "My school",
    "cityDe": "Klasse 5: Meine Schule",
@@ -12852,6 +17110,693 @@
    "ico": "♻️"
   },
   {
+   "id": "s9ind",
+   "city": "India",
+   "cityDe": "Klasse 9: Indien",
+   "cityEn": "India",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Indien",
+    "Indien"
+   ],
+   "can": [
+    "Ich kann über Indien sprechen – Sprachen, Geschichte, Alltag und Indiens Rolle in der Welt.",
+    "Ich kann über Indien sprechen – Sprachen, Geschichte, Alltag und Indiens Rolle in der Welt."
+   ],
+   "tip": [
+    "In Indien ist Englisch eine wichtige Verkehrssprache neben Hindi. Indisches Englisch hat eigene Wörter, z. B. „prepone“ (vorverlegen).",
+    "In Indien ist Englisch eine wichtige Verkehrssprache neben Hindi. Indisches Englisch hat eigene Wörter, z. B. „prepone“ (vorverlegen)."
+   ],
+   "fact": [
+    "Indien hat über 1,4 Milliarden Einwohner und 22 offiziell anerkannte Sprachen. 1947 wurde es von Großbritannien unabhängig – auch dank Mahatma Gandhis gewaltfreiem Widerstand.",
+    "Indien hat über 1,4 Milliarden Einwohner und 22 offiziell anerkannte Sprachen. 1947 wurde es von Großbritannien unabhängig – auch dank Mahatma Gandhis gewaltfreiem Widerstand."
+   ],
+   "words": [
+    [
+     "population",
+     "Bevölkerung",
+     "Bevölkerung"
+    ],
+    [
+     "independence",
+     "Unabhängigkeit",
+     "Unabhängigkeit"
+    ],
+    [
+     "colony",
+     "Kolonie",
+     "Kolonie"
+    ],
+    [
+     "non-violence",
+     "Gewaltlosigkeit",
+     "Gewaltlosigkeit"
+    ],
+    [
+     "religion",
+     "Religion",
+     "Religion"
+    ],
+    [
+     "festival of lights",
+     "Lichterfest (Diwali)",
+     "Lichterfest (Diwali)"
+    ],
+    [
+     "cricket",
+     "Cricket",
+     "Cricket"
+    ],
+    [
+     "spices",
+     "Gewürze",
+     "Gewürze"
+    ],
+    [
+     "crowded",
+     "überfüllt",
+     "überfüllt"
+    ],
+    [
+     "megacity",
+     "Megastadt",
+     "Megastadt"
+    ],
+    [
+     "call centre",
+     "Callcenter",
+     "Callcenter"
+    ],
+    [
+     "IT industry",
+     "IT-Branche",
+     "IT-Branche"
+    ],
+    [
+     "poverty",
+     "Armut",
+     "Armut"
+    ],
+    [
+     "to develop",
+     "(sich) entwickeln",
+     "(sich) entwickeln"
+    ],
+    [
+     "official language",
+     "Amtssprache",
+     "Amtssprache"
+    ],
+    [
+     "diverse",
+     "vielfältig",
+     "vielfältig"
+    ]
+   ],
+   "sentences": [
+    [
+     "India became independent in 1947.",
+     "Indien wurde 1947 unabhängig.",
+     "Indien wurde 1947 unabhängig."
+    ],
+    [
+     "Gandhi believed in non-violence.",
+     "Gandhi glaubte an Gewaltlosigkeit.",
+     "Gandhi glaubte an Gewaltlosigkeit."
+    ],
+    [
+     "Mumbai is one of the most crowded cities in the world.",
+     "Mumbai ist eine der am dichtesten besiedelten Städte der Welt.",
+     "Mumbai ist eine der am dichtesten besiedelten Städte der Welt."
+    ],
+    [
+     "English is used as a common language in business.",
+     "Englisch wird im Geschäftsleben als gemeinsame Sprache verwendet.",
+     "Englisch wird im Geschäftsleben als gemeinsame Sprache verwendet."
+    ],
+    [
+     "Diwali is celebrated with lights and sweets.",
+     "Diwali wird mit Lichtern und Süßigkeiten gefeiert.",
+     "Diwali wird mit Lichtern und Süßigkeiten gefeiert."
+    ],
+    [
+     "India's IT industry has grown very fast.",
+     "Indiens IT-Branche ist sehr schnell gewachsen.",
+     "Indiens IT-Branche ist sehr schnell gewachsen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Videocall mit deiner Partnerklasse in Bengaluru. Priya zeigt dir ihr Klassenzimmer.",
+     "Videocall mit deiner Partnerklasse in Bengaluru. Priya zeigt dir ihr Klassenzimmer."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "How many languages do you speak at home?",
+       "Wie viele Sprachen sprecht ihr zu Hause?",
+       "Wie viele Sprachen sprecht ihr zu Hause?"
+      ],
+      "opts": [
+       [
+        "Only German – how about you?",
+        "Nur Deutsch – und ihr?",
+        "Nur Deutsch – und ihr?",
+        1
+       ],
+       [
+        "I speaks two languages.",
+        "Ich spricht zwei Sprachen.",
+        "Ich spricht zwei Sprachen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Zurückfragen: How about you?",
+       "Zurückfragen: How about you?"
+      ]
+     },
+     {
+      "npc": [
+       "We speak Kannada, Hindi and English. English is used at school.",
+       "Wir sprechen Kannada, Hindi und Englisch. In der Schule wird Englisch benutzt.",
+       "Wir sprechen Kannada, Hindi und Englisch. In der Schule wird Englisch benutzt."
+      ],
+      "opts": [
+       [
+        "That's amazing! India is really diverse.",
+        "Unglaublich! Indien ist wirklich vielfältig.",
+        "Unglaublich! Indien ist wirklich vielfältig.",
+        1
+       ],
+       [
+        "That is diverse language one.",
+        "Das ist vielfältig Sprache eins.",
+        "Das ist vielfältig Sprache eins.",
+        0
+       ]
+      ],
+      "hint": [
+       "Reagieren mit einem Adjektiv aus der Lektion.",
+       "Reagieren mit einem Adjektiv aus der Lektion."
+      ]
+     },
+     {
+      "npc": [
+       "Next week we celebrate Diwali. Do you have a festival of lights?",
+       "Nächste Woche feiern wir Diwali. Habt ihr auch ein Lichterfest?",
+       "Nächste Woche feiern wir Diwali. Habt ihr auch ein Lichterfest?"
+      ],
+      "opts": [
+       [
+        "Kind of – at Christmas we put lights everywhere.",
+        "So ähnlich – an Weihnachten hängen wir überall Lichter auf.",
+        "So ähnlich – an Weihnachten hängen wir überall Lichter auf.",
+        1
+       ],
+       [
+        "Yes, we celebrate cricket.",
+        "Ja, wir feiern Cricket.",
+        "Ja, wir feiern Cricket.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vergleich mit einem eigenen Fest.",
+       "Vergleich mit einem eigenen Fest."
+      ]
+     }
+    ],
+    "outro": [
+     "Priya schickt dir ein Foto von bunten Öllampen: „Happy Diwali!“",
+     "Priya schickt dir ein Foto von bunten Öllampen: „Happy Diwali!“"
+    ]
+   },
+   "pack": 1,
+   "sch": 9,
+   "ico": "🇮🇳"
+  },
+  {
+   "id": "s10can",
+   "city": "Canada",
+   "cityDe": "Klasse 10: Kanada",
+   "cityEn": "Canada",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Kanada",
+    "Kanada"
+   ],
+   "can": [
+    "Ich kann über Kanada sprechen – Zweisprachigkeit, Natur, First Nations und Einwanderung.",
+    "Ich kann über Kanada sprechen – Zweisprachigkeit, Natur, First Nations und Einwanderung."
+   ],
+   "tip": [
+    "Kanadisches Englisch mischt britische Schreibweise („colour“) mit amerikanischen Wörtern („truck“). Und ja: „eh?“ hört man wirklich.",
+    "Kanadisches Englisch mischt britische Schreibweise („colour“) mit amerikanischen Wörtern („truck“). Und ja: „eh?“ hört man wirklich."
+   ],
+   "fact": [
+    "Kanada ist das zweitgrößte Land der Erde, hat aber nur rund 40 Millionen Einwohner. Englisch und Französisch sind Amtssprachen; die Ureinwohner nennen sich First Nations, Inuit und Métis.",
+    "Kanada ist das zweitgrößte Land der Erde, hat aber nur rund 40 Millionen Einwohner. Englisch und Französisch sind Amtssprachen; die Ureinwohner nennen sich First Nations, Inuit und Métis."
+   ],
+   "words": [
+    [
+     "bilingual",
+     "zweisprachig",
+     "zweisprachig"
+    ],
+    [
+     "French-speaking",
+     "französischsprachig",
+     "französischsprachig"
+    ],
+    [
+     "First Nations",
+     "First Nations (indigene Völker)",
+     "First Nations (indigene Völker)"
+    ],
+    [
+     "residential school",
+     "Internatsschule (für indigene Kinder)",
+     "Internatsschule (für indigene Kinder)"
+    ],
+    [
+     "reconciliation",
+     "Versöhnung",
+     "Versöhnung"
+    ],
+    [
+     "immigration",
+     "Einwanderung",
+     "Einwanderung"
+    ],
+    [
+     "multicultural",
+     "multikulturell",
+     "multikulturell"
+    ],
+    [
+     "wilderness",
+     "Wildnis",
+     "Wildnis"
+    ],
+    [
+     "maple syrup",
+     "Ahornsirup",
+     "Ahornsirup"
+    ],
+    [
+     "ice hockey",
+     "Eishockey",
+     "Eishockey"
+    ],
+    [
+     "province",
+     "Provinz",
+     "Provinz"
+    ],
+    [
+     "vast",
+     "riesig / weit",
+     "riesig / weit"
+    ],
+    [
+     "to apologize",
+     "sich entschuldigen",
+     "sich entschuldigen"
+    ],
+    [
+     "to welcome",
+     "willkommen heißen",
+     "willkommen heißen"
+    ],
+    [
+     "refugee",
+     "Geflüchtete/r",
+     "Geflüchtete/r"
+    ],
+    [
+     "identity",
+     "Identität",
+     "Identität"
+    ]
+   ],
+   "sentences": [
+    [
+     "Canada is a bilingual country.",
+     "Kanada ist ein zweisprachiges Land.",
+     "Kanada ist ein zweisprachiges Land."
+    ],
+    [
+     "Quebec is the largest French-speaking province.",
+     "Quebec ist die größte französischsprachige Provinz.",
+     "Quebec ist die größte französischsprachige Provinz."
+    ],
+    [
+     "The government apologized for the residential schools.",
+     "Die Regierung entschuldigte sich für die Internatsschulen.",
+     "Die Regierung entschuldigte sich für die Internatsschulen."
+    ],
+    [
+     "Canada has welcomed many refugees.",
+     "Kanada hat viele Geflüchtete aufgenommen.",
+     "Kanada hat viele Geflüchtete aufgenommen."
+    ],
+    [
+     "Toronto is one of the most multicultural cities in the world.",
+     "Toronto ist eine der multikulturellsten Städte der Welt.",
+     "Toronto ist eine der multikulturellsten Städte der Welt."
+    ],
+    [
+     "Most Canadians live close to the US border.",
+     "Die meisten Kanadier leben nahe der Grenze zu den USA.",
+     "Die meisten Kanadier leben nahe der Grenze zu den USA."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Austauschjahr in Vancouver. Deine Gastschwester Maya erklärt dir den ersten Schultag.",
+     "Austauschjahr in Vancouver. Deine Gastschwester Maya erklärt dir den ersten Schultag."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Our school starts every morning with a land acknowledgement.",
+       "Unsere Schule beginnt jeden Morgen mit einer Anerkennung des Landes der Ureinwohner.",
+       "Unsere Schule beginnt jeden Morgen mit einer Anerkennung des Landes der Ureinwohner."
+      ],
+      "opts": [
+       [
+        "What does that mean exactly?",
+        "Was bedeutet das genau?",
+        "Was bedeutet das genau?",
+        1
+       ],
+       [
+        "I acknowledge land tomorrow.",
+        "Ich erkenne Land morgen an.",
+        "Ich erkenne Land morgen an.",
+        0
+       ]
+      ],
+      "hint": [
+       "Nachfragen, wenn man etwas nicht kennt.",
+       "Nachfragen, wenn man etwas nicht kennt."
+      ]
+     },
+     {
+      "npc": [
+       "We say that the school is on the land of the First Nations who lived here first.",
+       "Wir sagen, dass die Schule auf dem Land der First Nations steht, die zuerst hier lebten.",
+       "Wir sagen, dass die Schule auf dem Land der First Nations steht, die zuerst hier lebten."
+      ],
+      "opts": [
+       [
+        "That's an important part of reconciliation, isn't it?",
+        "Das ist ein wichtiger Teil der Versöhnung, oder?",
+        "Das ist ein wichtiger Teil der Versöhnung, oder?",
+        1
+       ],
+       [
+        "That is a maple syrup.",
+        "Das ist Ahornsirup.",
+        "Das ist Ahornsirup.",
+        0
+       ]
+      ],
+      "hint": [
+       "question tag: isn’t it?",
+       "question tag: isn’t it?"
+      ]
+     },
+     {
+      "npc": [
+       "Exactly. And after school – ice hockey or French class?",
+       "Genau. Und nach der Schule – Eishockey oder Französischkurs?",
+       "Genau. Und nach der Schule – Eishockey oder Französischkurs?"
+      ],
+      "opts": [
+       [
+        "Ice hockey! I've never played it before.",
+        "Eishockey! Das habe ich noch nie gespielt.",
+        "Eishockey! Das habe ich noch nie gespielt.",
+        1
+       ],
+       [
+        "French hockey class.",
+        "Französisch Hockey Klasse.",
+        "Französisch Hockey Klasse.",
+        0
+       ]
+      ],
+      "hint": [
+       "present perfect: I’ve never …",
+       "present perfect: I’ve never …"
+      ]
+     }
+    ],
+    "outro": [
+     "Am Abend gibt es Pancakes mit echtem Ahornsirup. Maya grinst: „Welcome to Canada, eh?“",
+     "Am Abend gibt es Pancakes mit echtem Ahornsirup. Maya grinst: „Welcome to Canada, eh?“"
+    ]
+   },
+   "pack": 1,
+   "sch": 10,
+   "ico": "🇨🇦"
+  },
+  {
+   "id": "s10saf",
+   "city": "South Africa",
+   "cityDe": "Klasse 10: Südafrika",
+   "cityEn": "South Africa",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Südafrika",
+    "Südafrika"
+   ],
+   "can": [
+    "Ich kann über Südafrika sprechen – Apartheid, Nelson Mandela, die „Regenbogennation“ und heutige Herausforderungen.",
+    "Ich kann über Südafrika sprechen – Apartheid, Nelson Mandela, die „Regenbogennation“ und heutige Herausforderungen."
+   ],
+   "tip": [
+    "Südafrika hat 12 Amtssprachen, darunter Englisch, Afrikaans, isiZulu und isiXhosa. „Ubuntu“ bedeutet etwa: Ich bin, weil wir sind.",
+    "Südafrika hat 12 Amtssprachen, darunter Englisch, Afrikaans, isiZulu und isiXhosa. „Ubuntu“ bedeutet etwa: Ich bin, weil wir sind."
+   ],
+   "fact": [
+    "Nelson Mandela saß 27 Jahre im Gefängnis, weil er gegen die Apartheid kämpfte. 1994 wurde er der erste schwarze Präsident Südafrikas.",
+    "Nelson Mandela saß 27 Jahre im Gefängnis, weil er gegen die Apartheid kämpfte. 1994 wurde er der erste schwarze Präsident Südafrikas."
+   ],
+   "words": [
+    [
+     "apartheid",
+     "Apartheid (Rassentrennung)",
+     "Apartheid (Rassentrennung)"
+    ],
+    [
+     "segregation",
+     "Trennung / Segregation",
+     "Trennung / Segregation"
+    ],
+    [
+     "equality",
+     "Gleichberechtigung",
+     "Gleichberechtigung"
+    ],
+    [
+     "human rights",
+     "Menschenrechte",
+     "Menschenrechte"
+    ],
+    [
+     "prison",
+     "Gefängnis",
+     "Gefängnis"
+    ],
+    [
+     "to fight for",
+     "kämpfen für",
+     "kämpfen für"
+    ],
+    [
+     "to vote",
+     "wählen",
+     "wählen"
+    ],
+    [
+     "election",
+     "Wahl",
+     "Wahl"
+    ],
+    [
+     "rainbow nation",
+     "Regenbogennation",
+     "Regenbogennation"
+    ],
+    [
+     "township",
+     "Township (Wohnsiedlung)",
+     "Township (Wohnsiedlung)"
+    ],
+    [
+     "inequality",
+     "Ungleichheit",
+     "Ungleichheit"
+    ],
+    [
+     "unemployment",
+     "Arbeitslosigkeit",
+     "Arbeitslosigkeit"
+    ],
+    [
+     "wildlife",
+     "Tierwelt",
+     "Tierwelt"
+    ],
+    [
+     "safari",
+     "Safari",
+     "Safari"
+    ],
+    [
+     "to forgive",
+     "vergeben",
+     "vergeben"
+    ],
+    [
+     "freedom",
+     "Freiheit",
+     "Freiheit"
+    ]
+   ],
+   "sentences": [
+    [
+     "Apartheid separated people because of their skin colour.",
+     "Die Apartheid trennte Menschen wegen ihrer Hautfarbe.",
+     "Die Apartheid trennte Menschen wegen ihrer Hautfarbe."
+    ],
+    [
+     "Nelson Mandela was in prison for 27 years.",
+     "Nelson Mandela war 27 Jahre im Gefängnis.",
+     "Nelson Mandela war 27 Jahre im Gefängnis."
+    ],
+    [
+     "In 1994 everybody was allowed to vote for the first time.",
+     "1994 durften zum ersten Mal alle wählen.",
+     "1994 durften zum ersten Mal alle wählen."
+    ],
+    [
+     "Mandela chose to forgive instead of taking revenge.",
+     "Mandela entschied sich zu vergeben, statt sich zu rächen.",
+     "Mandela entschied sich zu vergeben, statt sich zu rächen."
+    ],
+    [
+     "Inequality is still a big problem today.",
+     "Ungleichheit ist bis heute ein großes Problem.",
+     "Ungleichheit ist bis heute ein großes Problem."
+    ],
+    [
+     "South Africa is called the rainbow nation.",
+     "Südafrika wird Regenbogennation genannt.",
+     "Südafrika wird Regenbogennation genannt."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Kapstadt, Robben Island. Ein ehemaliger Häftling führt Besucher durch das Gefängnis, in dem Nelson Mandela saß.",
+     "Kapstadt, Robben Island. Ein ehemaliger Häftling führt Besucher durch das Gefängnis, in dem Nelson Mandela saß."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "This was Mandela’s cell. How do you feel standing here?",
+       "Das war Mandelas Zelle. Wie fühlst du dich, wenn du hier stehst?",
+       "Das war Mandelas Zelle. Wie fühlst du dich, wenn du hier stehst?"
+      ],
+      "opts": [
+       [
+        "It's hard to imagine spending 18 years in such a small room.",
+        "Es ist schwer vorstellbar, 18 Jahre in so einem kleinen Raum zu verbringen.",
+        "Es ist schwer vorstellbar, 18 Jahre in so einem kleinen Raum zu verbringen.",
+        1
+       ],
+       [
+        "I feel prison.",
+        "Ich fühle Gefängnis.",
+        "Ich fühle Gefängnis.",
+        0
+       ]
+      ],
+      "hint": [
+       "Gefühle mit „It’s hard to imagine …“ ausdrücken.",
+       "Gefühle mit „It’s hard to imagine …“ ausdrücken."
+      ]
+     },
+     {
+      "npc": [
+       "Why do you think he forgave the people who put him here?",
+       "Warum, glaubst du, hat er den Menschen vergeben, die ihn hier eingesperrt haben?",
+       "Warum, glaubst du, hat er den Menschen vergeben, die ihn hier eingesperrt haben?"
+      ],
+      "opts": [
+       [
+        "Maybe he knew that peace was only possible without revenge.",
+        "Vielleicht wusste er, dass Frieden nur ohne Rache möglich war.",
+        "Vielleicht wusste er, dass Frieden nur ohne Rache möglich war.",
+        1
+       ],
+       [
+        "Because he forgave yesterday.",
+        "Weil er gestern vergab.",
+        "Weil er gestern vergab.",
+        0
+       ]
+      ],
+      "hint": [
+       "Begründete Vermutung: Maybe he knew that …",
+       "Begründete Vermutung: Maybe he knew that …"
+      ]
+     },
+     {
+      "npc": [
+       "And what problems does South Africa still have?",
+       "Und welche Probleme hat Südafrika noch?",
+       "Und welche Probleme hat Südafrika noch?"
+      ],
+      "opts": [
+       [
+        "There is still a lot of inequality and unemployment.",
+        "Es gibt immer noch viel Ungleichheit und Arbeitslosigkeit.",
+        "Es gibt immer noch viel Ungleichheit und Arbeitslosigkeit.",
+        1
+       ],
+       [
+        "It has a rainbow problem.",
+        "Es hat ein Regenbogenproblem.",
+        "Es hat ein Regenbogenproblem.",
+        0
+       ]
+      ],
+      "hint": [
+       "Wörter aus der Lektion: inequality, unemployment.",
+       "Wörter aus der Lektion: inequality, unemployment."
+      ]
+     }
+    ],
+    "outro": [
+     "Zum Abschied sagt er: „Ubuntu – I am because we are.“",
+     "Zum Abschied sagt er: „Ubuntu – I am because we are.“"
+    ]
+   },
+   "pack": 1,
+   "sch": 10,
+   "ico": "🇿🇦"
+  },
+  {
    "id": "i_game",
    "city": "Gaming and streaming",
    "cityDe": "Gaming und Streaming",
@@ -14682,6 +19627,1380 @@
    "pack": 1,
    "int": 1,
    "ico": "👗"
+  },
+  {
+   "id": "a_travel",
+   "city": "Travelling by train and plane",
+   "cityDe": "Unterwegs: Bahn und Flugzeug",
+   "cityEn": "Travelling by train and plane",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "red",
+   "title": [
+    "Unterwegs: Bahn und Flugzeug",
+    "Unterwegs: Bahn und Flugzeug"
+   ],
+   "can": [
+    "Ich kann Fahrkarten kaufen, nach Gleis und Abfahrt fragen und am Flughafen zurechtkommen.",
+    "Ich kann Fahrkarten kaufen, nach Gleis und Abfahrt fragen und am Flughafen zurechtkommen."
+   ],
+   "tip": [
+    "„Single“ = einfache Fahrt, „return“ = hin und zurück. In Großbritannien heißt der Bahnsteig „platform“.",
+    "„Single“ = einfache Fahrt, „return“ = hin und zurück. In Großbritannien heißt der Bahnsteig „platform“."
+   ],
+   "fact": [
+    "In London gibt es über 270 U-Bahn-Stationen. Mit einer kontaktlosen Bankkarte kann man direkt durch die Sperre gehen.",
+    "In London gibt es über 270 U-Bahn-Stationen. Mit einer kontaktlosen Bankkarte kann man direkt durch die Sperre gehen."
+   ],
+   "words": [
+    [
+     "ticket",
+     "Fahrkarte / Ticket",
+     "Fahrkarte / Ticket"
+    ],
+    [
+     "single",
+     "einfache Fahrt",
+     "einfache Fahrt"
+    ],
+    [
+     "return",
+     "Hin- und Rückfahrt",
+     "Hin- und Rückfahrt"
+    ],
+    [
+     "platform",
+     "Bahnsteig / Gleis",
+     "Bahnsteig / Gleis"
+    ],
+    [
+     "departure",
+     "Abfahrt / Abflug",
+     "Abfahrt / Abflug"
+    ],
+    [
+     "arrival",
+     "Ankunft",
+     "Ankunft"
+    ],
+    [
+     "delay",
+     "Verspätung",
+     "Verspätung"
+    ],
+    [
+     "to change trains",
+     "umsteigen",
+     "umsteigen"
+    ],
+    [
+     "boarding pass",
+     "Bordkarte",
+     "Bordkarte"
+    ],
+    [
+     "gate",
+     "Flugsteig",
+     "Flugsteig"
+    ],
+    [
+     "luggage",
+     "Gepäck",
+     "Gepäck"
+    ],
+    [
+     "hand luggage",
+     "Handgepäck",
+     "Handgepäck"
+    ],
+    [
+     "security check",
+     "Sicherheitskontrolle",
+     "Sicherheitskontrolle"
+    ],
+    [
+     "passport",
+     "Reisepass",
+     "Reisepass"
+    ],
+    [
+     "window seat",
+     "Fensterplatz",
+     "Fensterplatz"
+    ],
+    [
+     "cancelled",
+     "gestrichen / ausgefallen",
+     "gestrichen / ausgefallen"
+    ]
+   ],
+   "sentences": [
+    [
+     "A return ticket to Oxford, please.",
+     "Eine Rückfahrkarte nach Oxford, bitte.",
+     "Eine Rückfahrkarte nach Oxford, bitte."
+    ],
+    [
+     "Which platform does the train leave from?",
+     "Von welchem Gleis fährt der Zug ab?",
+     "Von welchem Gleis fährt der Zug ab?"
+    ],
+    [
+     "Do I have to change trains?",
+     "Muss ich umsteigen?",
+     "Muss ich umsteigen?"
+    ],
+    [
+     "The flight has a delay of forty minutes.",
+     "Der Flug hat vierzig Minuten Verspätung.",
+     "Der Flug hat vierzig Minuten Verspätung."
+    ],
+    [
+     "Can I take this bag as hand luggage?",
+     "Kann ich diese Tasche als Handgepäck mitnehmen?",
+     "Kann ich diese Tasche als Handgepäck mitnehmen?"
+    ],
+    [
+     "Could I have a window seat, please?",
+     "Könnte ich bitte einen Fensterplatz haben?",
+     "Könnte ich bitte einen Fensterplatz haben?"
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "London King’s Cross. Du willst nach York. Am Schalter wartet ein freundlicher Mitarbeiter.",
+     "London King’s Cross. Du willst nach York. Am Schalter wartet ein freundlicher Mitarbeiter."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hello! Where would you like to go?",
+       "Hallo! Wohin möchtest du fahren?",
+       "Hallo! Wohin möchtest du fahren?"
+      ],
+      "opts": [
+       [
+        "A return ticket to York, please.",
+        "Eine Rückfahrkarte nach York, bitte.",
+        "Eine Rückfahrkarte nach York, bitte.",
+        1
+       ],
+       [
+        "I would like a platform.",
+        "Ich hätte gern einen Bahnsteig.",
+        "Ich hätte gern einen Bahnsteig.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ziel + Art der Fahrkarte.",
+       "Ziel + Art der Fahrkarte."
+      ]
+     },
+     {
+      "npc": [
+       "That’s £45. The next train leaves at 10:30.",
+       "Das macht 45 Pfund. Der nächste Zug fährt um 10:30.",
+       "Das macht 45 Pfund. Der nächste Zug fährt um 10:30."
+      ],
+      "opts": [
+       [
+        "Which platform does it leave from?",
+        "Von welchem Gleis fährt er?",
+        "Von welchem Gleis fährt er?",
+        1
+       ],
+       [
+        "Is it a passport?",
+        "Ist es ein Reisepass?",
+        "Ist es ein Reisepass?",
+        0
+       ]
+      ],
+      "hint": [
+       "Nach dem Gleis fragen.",
+       "Nach dem Gleis fragen."
+      ]
+     },
+     {
+      "npc": [
+       "Platform 4. And it’s direct – no need to change.",
+       "Gleis 4. Und er fährt direkt – kein Umsteigen.",
+       "Gleis 4. Und er fährt direkt – kein Umsteigen."
+      ],
+      "opts": [
+       [
+        "Great, thank you!",
+        "Super, danke!",
+        "Super, danke!",
+        1
+       ],
+       [
+        "Do I have to delay?",
+        "Muss ich verspäten?",
+        "Muss ich verspäten?",
+        0
+       ]
+      ],
+      "hint": [
+       "Bedanken.",
+       "Bedanken."
+      ]
+     }
+    ],
+    "outro": [
+     "Pünktlich um 10:30 rollt der Zug los – Richtung Norden.",
+     "Pünktlich um 10:30 rollt der Zug los – Richtung Norden."
+    ]
+   },
+   "pack": 1,
+   "alt": 1,
+   "ico": "🚆"
+  },
+  {
+   "id": "a_doc",
+   "city": "At the doctor’s",
+   "cityDe": "Beim Arzt",
+   "cityEn": "At the doctor’s",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "red",
+   "title": [
+    "Beim Arzt",
+    "Beim Arzt"
+   ],
+   "can": [
+    "Ich kann sagen, was mir wehtut, und verstehen, was der Arzt oder die Apotheke rät.",
+    "Ich kann sagen, was mir wehtut, und verstehen, was der Arzt oder die Apotheke rät."
+   ],
+   "tip": [
+    "Schmerzen: „I’ve got a headache / a sore throat.“ „My leg hurts.“ In Großbritannien geht man zuerst zum „GP“ (Hausarzt).",
+    "Schmerzen: „I’ve got a headache / a sore throat.“ „My leg hurts.“ In Großbritannien geht man zuerst zum „GP“ (Hausarzt)."
+   ],
+   "fact": [
+    "Im Notfall wählt man in Großbritannien 999 oder 112, in Irland 112 oder 999. Für nicht dringende Fälle gibt es die Nummer 111.",
+    "Im Notfall wählt man in Großbritannien 999 oder 112, in Irland 112 oder 999. Für nicht dringende Fälle gibt es die Nummer 111."
+   ],
+   "words": [
+    [
+     "doctor",
+     "Arzt / Ärztin",
+     "Arzt / Ärztin"
+    ],
+    [
+     "appointment",
+     "Termin",
+     "Termin"
+    ],
+    [
+     "headache",
+     "Kopfschmerzen",
+     "Kopfschmerzen"
+    ],
+    [
+     "stomach ache",
+     "Bauchschmerzen",
+     "Bauchschmerzen"
+    ],
+    [
+     "sore throat",
+     "Halsschmerzen",
+     "Halsschmerzen"
+    ],
+    [
+     "cough",
+     "Husten",
+     "Husten"
+    ],
+    [
+     "cold",
+     "Erkältung",
+     "Erkältung"
+    ],
+    [
+     "temperature",
+     "Fieber / Temperatur",
+     "Fieber / Temperatur"
+    ],
+    [
+     "to hurt",
+     "wehtun",
+     "wehtun"
+    ],
+    [
+     "pain",
+     "Schmerz",
+     "Schmerz"
+    ],
+    [
+     "medicine",
+     "Medikament",
+     "Medikament"
+    ],
+    [
+     "tablet",
+     "Tablette",
+     "Tablette"
+    ],
+    [
+     "chemist’s",
+     "Apotheke",
+     "Apotheke"
+    ],
+    [
+     "prescription",
+     "Rezept",
+     "Rezept"
+    ],
+    [
+     "allergic to",
+     "allergisch gegen",
+     "allergisch gegen"
+    ],
+    [
+     "to feel sick",
+     "sich übel fühlen",
+     "sich übel fühlen"
+    ]
+   ],
+   "sentences": [
+    [
+     "I’ve got a terrible headache.",
+     "Ich habe schlimme Kopfschmerzen.",
+     "Ich habe schlimme Kopfschmerzen."
+    ],
+    [
+     "My ankle hurts when I walk.",
+     "Mein Knöchel tut weh, wenn ich gehe.",
+     "Mein Knöchel tut weh, wenn ich gehe."
+    ],
+    [
+     "I’d like to make an appointment, please.",
+     "Ich möchte bitte einen Termin vereinbaren.",
+     "Ich möchte bitte einen Termin vereinbaren."
+    ],
+    [
+     "I’m allergic to nuts.",
+     "Ich bin allergisch gegen Nüsse.",
+     "Ich bin allergisch gegen Nüsse."
+    ],
+    [
+     "Take one tablet three times a day.",
+     "Nimm dreimal täglich eine Tablette.",
+     "Nimm dreimal täglich eine Tablette."
+    ],
+    [
+     "I feel sick and I’ve got a temperature.",
+     "Mir ist übel und ich habe Fieber.",
+     "Mir ist übel und ich habe Fieber."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Austauschwoche in Brighton. Du fühlst dich nicht gut. Deine Gastmutter bringt dich zur Praxis.",
+     "Austauschwoche in Brighton. Du fühlst dich nicht gut. Deine Gastmutter bringt dich zur Praxis."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hello. What seems to be the problem?",
+       "Hallo. Was fehlt dir denn?",
+       "Hallo. Was fehlt dir denn?"
+      ],
+      "opts": [
+       [
+        "I’ve got a sore throat and a cough.",
+        "Ich habe Halsschmerzen und Husten.",
+        "Ich habe Halsschmerzen und Husten.",
+        1
+       ],
+       [
+        "I’ve got a chemist.",
+        "Ich habe eine Apotheke.",
+        "Ich habe eine Apotheke.",
+        0
+       ]
+      ],
+      "hint": [
+       "Beschwerden mit „I’ve got …“.",
+       "Beschwerden mit „I’ve got …“."
+      ]
+     },
+     {
+      "npc": [
+       "Do you have a temperature?",
+       "Hast du Fieber?",
+       "Hast du Fieber?"
+      ],
+      "opts": [
+       [
+        "Yes, a little. 38 degrees this morning.",
+        "Ja, ein bisschen. Heute Morgen 38 Grad.",
+        "Ja, ein bisschen. Heute Morgen 38 Grad.",
+        1
+       ],
+       [
+        "Yes, it is cold weather.",
+        "Ja, es ist kaltes Wetter.",
+        "Ja, es ist kaltes Wetter.",
+        0
+       ]
+      ],
+      "hint": [
+       "temperature = Fieber.",
+       "temperature = Fieber."
+      ]
+     },
+     {
+      "npc": [
+       "It’s just a cold. Are you allergic to any medicine?",
+       "Es ist nur eine Erkältung. Bist du gegen Medikamente allergisch?",
+       "Es ist nur eine Erkältung. Bist du gegen Medikamente allergisch?"
+      ],
+      "opts": [
+       [
+        "No, I’m not allergic to anything.",
+        "Nein, ich bin gegen nichts allergisch.",
+        "Nein, ich bin gegen nichts allergisch.",
+        1
+       ],
+       [
+        "I am medicine.",
+        "Ich bin Medizin.",
+        "Ich bin Medizin.",
+        0
+       ]
+      ],
+      "hint": [
+       "allergic to …",
+       "allergic to …"
+      ]
+     }
+    ],
+    "outro": [
+     "Mit Tee, Honig und Ruhe bist du nach zwei Tagen wieder fit.",
+     "Mit Tee, Honig und Ruhe bist du nach zwei Tagen wieder fit."
+    ]
+   },
+   "pack": 1,
+   "alt": 1,
+   "ico": "🩺"
+  },
+  {
+   "id": "a_rest",
+   "city": "At the restaurant",
+   "cityDe": "Im Restaurant",
+   "cityEn": "At the restaurant",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "red",
+   "title": [
+    "Im Restaurant",
+    "Im Restaurant"
+   ],
+   "can": [
+    "Ich kann einen Tisch reservieren, bestellen, nach Zutaten fragen und bezahlen.",
+    "Ich kann einen Tisch reservieren, bestellen, nach Zutaten fragen und bezahlen."
+   ],
+   "tip": [
+    "Höflich bestellen: „Could I have …?“ oder „I’d like …“. Die Rechnung heißt in GB „the bill“, in den USA „the check“.",
+    "Höflich bestellen: „Could I have …?“ oder „I’d like …“. Die Rechnung heißt in GB „the bill“, in den USA „the check“."
+   ],
+   "fact": [
+    "In Großbritannien gibt man im Restaurant meist 10–12,5 % Trinkgeld – manchmal steht es schon als „service charge“ auf der Rechnung.",
+    "In Großbritannien gibt man im Restaurant meist 10–12,5 % Trinkgeld – manchmal steht es schon als „service charge“ auf der Rechnung."
+   ],
+   "words": [
+    [
+     "menu",
+     "Speisekarte",
+     "Speisekarte"
+    ],
+    [
+     "starter",
+     "Vorspeise",
+     "Vorspeise"
+    ],
+    [
+     "main course",
+     "Hauptgericht",
+     "Hauptgericht"
+    ],
+    [
+     "dessert",
+     "Nachtisch",
+     "Nachtisch"
+    ],
+    [
+     "vegetarian",
+     "vegetarisch",
+     "vegetarisch"
+    ],
+    [
+     "vegan",
+     "vegan",
+     "vegan"
+    ],
+    [
+     "gluten-free",
+     "glutenfrei",
+     "glutenfrei"
+    ],
+    [
+     "to order",
+     "bestellen",
+     "bestellen"
+    ],
+    [
+     "waiter",
+     "Kellner",
+     "Kellner"
+    ],
+    [
+     "waitress",
+     "Kellnerin",
+     "Kellnerin"
+    ],
+    [
+     "bill",
+     "Rechnung",
+     "Rechnung"
+    ],
+    [
+     "tip",
+     "Trinkgeld",
+     "Trinkgeld"
+    ],
+    [
+     "to book a table",
+     "einen Tisch reservieren",
+     "einen Tisch reservieren"
+    ],
+    [
+     "still water",
+     "stilles Wasser",
+     "stilles Wasser"
+    ],
+    [
+     "spicy",
+     "scharf",
+     "scharf"
+    ],
+    [
+     "delicious",
+     "lecker",
+     "lecker"
+    ]
+   ],
+   "sentences": [
+    [
+     "Could we have a table for four, please?",
+     "Könnten wir bitte einen Tisch für vier haben?",
+     "Könnten wir bitte einen Tisch für vier haben?"
+    ],
+    [
+     "Can I see the menu, please?",
+     "Kann ich bitte die Speisekarte sehen?",
+     "Kann ich bitte die Speisekarte sehen?"
+    ],
+    [
+     "I’d like the fish and chips, please.",
+     "Ich hätte gern Fish and Chips, bitte.",
+     "Ich hätte gern Fish and Chips, bitte."
+    ],
+    [
+     "Is this dish vegetarian?",
+     "Ist dieses Gericht vegetarisch?",
+     "Ist dieses Gericht vegetarisch?"
+    ],
+    [
+     "Could we have the bill, please?",
+     "Könnten wir bitte die Rechnung haben?",
+     "Könnten wir bitte die Rechnung haben?"
+    ],
+    [
+     "Is service included?",
+     "Ist das Trinkgeld inbegriffen?",
+     "Ist das Trinkgeld inbegriffen?"
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ein Pub in York, Sonntagmittag. Die Kellnerin kommt mit ihrem Block.",
+     "Ein Pub in York, Sonntagmittag. Die Kellnerin kommt mit ihrem Block."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Are you ready to order?",
+       "Seid ihr bereit zu bestellen?",
+       "Seid ihr bereit zu bestellen?"
+      ],
+      "opts": [
+       [
+        "Yes, I’d like the Sunday roast, please.",
+        "Ja, ich hätte gern den Sonntagsbraten, bitte.",
+        "Ja, ich hätte gern den Sonntagsbraten, bitte.",
+        1
+       ],
+       [
+        "Yes, I’d like the bill to eat.",
+        "Ja, ich hätte gern die Rechnung zu essen.",
+        "Ja, ich hätte gern die Rechnung zu essen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Bestellen: I’d like …",
+       "Bestellen: I’d like …"
+      ]
+     },
+     {
+      "npc": [
+       "Anything to drink?",
+       "Etwas zu trinken?",
+       "Etwas zu trinken?"
+      ],
+      "opts": [
+       [
+        "Still water, please.",
+        "Stilles Wasser, bitte.",
+        "Stilles Wasser, bitte.",
+        1
+       ],
+       [
+        "Spicy water, please.",
+        "Scharfes Wasser, bitte.",
+        "Scharfes Wasser, bitte.",
+        0
+       ]
+      ],
+      "hint": [
+       "still water = stilles Wasser.",
+       "still water = stilles Wasser."
+      ]
+     },
+     {
+      "npc": [
+       "Here you are. Enjoy your meal!",
+       "Bitte schön. Guten Appetit!",
+       "Bitte schön. Guten Appetit!"
+      ],
+      "opts": [
+       [
+        "Thank you! It looks delicious.",
+        "Danke! Sieht lecker aus.",
+        "Danke! Sieht lecker aus.",
+        1
+       ],
+       [
+        "Thank you! It’s vegan the bill.",
+        "Danke! Es ist vegan die Rechnung.",
+        "Danke! Es ist vegan die Rechnung.",
+        0
+       ]
+      ],
+      "hint": [
+       "Bedanken und loben.",
+       "Bedanken und loben."
+      ]
+     }
+    ],
+    "outro": [
+     "Yorkshire Pudding, Kartoffeln und Soße – einfach lecker.",
+     "Yorkshire Pudding, Kartoffeln und Soße – einfach lecker."
+    ]
+   },
+   "pack": 1,
+   "alt": 1,
+   "ico": "🍽️"
+  },
+  {
+   "id": "a_hotel",
+   "city": "At the hotel",
+   "cityDe": "Im Hotel",
+   "cityEn": "At the hotel",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "red",
+   "title": [
+    "Im Hotel",
+    "Im Hotel"
+   ],
+   "can": [
+    "Ich kann einchecken, Fragen zum Zimmer stellen und ein Problem melden.",
+    "Ich kann einchecken, Fragen zum Zimmer stellen und ein Problem melden."
+   ],
+   "tip": [
+    "Ein Problem höflich melden: „I’m afraid the shower doesn’t work.“ – „I’m afraid“ macht die Beschwerde freundlicher.",
+    "Ein Problem höflich melden: „I’m afraid the shower doesn’t work.“ – „I’m afraid“ macht die Beschwerde freundlicher."
+   ],
+   "fact": [
+    "In Großbritannien ist das „Full English Breakfast“ im Hotel oft inklusive: Eier, Bacon, Würstchen, Bohnen, Toast und Tomaten.",
+    "In Großbritannien ist das „Full English Breakfast“ im Hotel oft inklusive: Eier, Bacon, Würstchen, Bohnen, Toast und Tomaten."
+   ],
+   "words": [
+    [
+     "reception",
+     "Rezeption",
+     "Rezeption"
+    ],
+    [
+     "reservation",
+     "Reservierung",
+     "Reservierung"
+    ],
+    [
+     "to check in",
+     "einchecken",
+     "einchecken"
+    ],
+    [
+     "to check out",
+     "auschecken",
+     "auschecken"
+    ],
+    [
+     "single room",
+     "Einzelzimmer",
+     "Einzelzimmer"
+    ],
+    [
+     "double room",
+     "Doppelzimmer",
+     "Doppelzimmer"
+    ],
+    [
+     "key card",
+     "Schlüsselkarte",
+     "Schlüsselkarte"
+    ],
+    [
+     "breakfast included",
+     "Frühstück inklusive",
+     "Frühstück inklusive"
+    ],
+    [
+     "floor",
+     "Stockwerk",
+     "Stockwerk"
+    ],
+    [
+     "lift",
+     "Aufzug",
+     "Aufzug"
+    ],
+    [
+     "towel",
+     "Handtuch",
+     "Handtuch"
+    ],
+    [
+     "Wi-Fi",
+     "WLAN",
+     "WLAN"
+    ],
+    [
+     "to work",
+     "funktionieren",
+     "funktionieren"
+    ],
+    [
+     "noisy",
+     "laut",
+     "laut"
+    ],
+    [
+     "I’m afraid",
+     "leider",
+     "leider"
+    ],
+    [
+     "receipt",
+     "Quittung",
+     "Quittung"
+    ]
+   ],
+   "sentences": [
+    [
+     "I have a reservation in the name of Weber.",
+     "Ich habe eine Reservierung auf den Namen Weber.",
+     "Ich habe eine Reservierung auf den Namen Weber."
+    ],
+    [
+     "Is breakfast included?",
+     "Ist das Frühstück inklusive?",
+     "Ist das Frühstück inklusive?"
+    ],
+    [
+     "What time is check-out?",
+     "Wann muss man auschecken?",
+     "Wann muss man auschecken?"
+    ],
+    [
+     "I’m afraid the Wi-Fi doesn’t work.",
+     "Leider funktioniert das WLAN nicht.",
+     "Leider funktioniert das WLAN nicht."
+    ],
+    [
+     "Could I have another towel, please?",
+     "Könnte ich bitte noch ein Handtuch bekommen?",
+     "Könnte ich bitte noch ein Handtuch bekommen?"
+    ],
+    [
+     "The room is on the third floor.",
+     "Das Zimmer ist im dritten Stock.",
+     "Das Zimmer ist im dritten Stock."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ein kleines Hotel in Edinburgh, abends. Hinter der Rezeption steht ein Mann mit Schottenkaro-Krawatte.",
+     "Ein kleines Hotel in Edinburgh, abends. Hinter der Rezeption steht ein Mann mit Schottenkaro-Krawatte."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Good evening! How can I help you?",
+       "Guten Abend! Wie kann ich helfen?",
+       "Guten Abend! Wie kann ich helfen?"
+      ],
+      "opts": [
+       [
+        "Hello, I have a reservation in the name of Müller.",
+        "Hallo, ich habe eine Reservierung auf den Namen Müller.",
+        "Hallo, ich habe eine Reservierung auf den Namen Müller.",
+        1
+       ],
+       [
+        "Hello, I am a double room.",
+        "Hallo, ich bin ein Doppelzimmer.",
+        "Hallo, ich bin ein Doppelzimmer.",
+        0
+       ]
+      ],
+      "hint": [
+       "Reservierung + Name.",
+       "Reservierung + Name."
+      ]
+     },
+     {
+      "npc": [
+       "Here’s your key card. Room 204, second floor.",
+       "Hier ist deine Schlüsselkarte. Zimmer 204, zweiter Stock.",
+       "Hier ist deine Schlüsselkarte. Zimmer 204, zweiter Stock."
+      ],
+      "opts": [
+       [
+        "Thank you. Is breakfast included?",
+        "Danke. Ist Frühstück inklusive?",
+        "Danke. Ist Frühstück inklusive?",
+        1
+       ],
+       [
+        "Thank you. Is the lift a towel?",
+        "Danke. Ist der Aufzug ein Handtuch?",
+        "Danke. Ist der Aufzug ein Handtuch?",
+        0
+       ]
+      ],
+      "hint": [
+       "Nach dem Frühstück fragen.",
+       "Nach dem Frühstück fragen."
+      ]
+     },
+     {
+      "npc": [
+       "Yes, from 7 to 10. Anything else?",
+       "Ja, von 7 bis 10. Sonst noch etwas?",
+       "Ja, von 7 bis 10. Sonst noch etwas?"
+      ],
+      "opts": [
+       [
+        "What’s the Wi-Fi password, please?",
+        "Wie ist bitte das WLAN-Passwort?",
+        "Wie ist bitte das WLAN-Passwort?",
+        1
+       ],
+       [
+        "I check out the reception.",
+        "Ich checke die Rezeption aus.",
+        "Ich checke die Rezeption aus.",
+        0
+       ]
+      ],
+      "hint": [
+       "Eine praktische Frage stellen.",
+       "Eine praktische Frage stellen."
+      ]
+     }
+    ],
+    "outro": [
+     "Zimmer 204 hat einen Blick auf das Schloss. Perfekt!",
+     "Zimmer 204 hat einen Blick auf das Schloss. Perfekt!"
+    ]
+   },
+   "pack": 1,
+   "alt": 1,
+   "ico": "🏨"
+  },
+  {
+   "id": "a_emer",
+   "city": "Help and emergencies",
+   "cityDe": "Hilfe und Notfälle",
+   "cityEn": "Help and emergencies",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "red",
+   "title": [
+    "Hilfe und Notfälle",
+    "Hilfe und Notfälle"
+   ],
+   "can": [
+    "Ich kann um Hilfe bitten, einen Unfall oder Verlust melden und wichtige Notfallsätze sagen.",
+    "Ich kann um Hilfe bitten, einen Unfall oder Verlust melden und wichtige Notfallsätze sagen."
+   ],
+   "tip": [
+    "Notruf in GB: 999 (oder 112). Man wird gefragt: „Which service? Police, fire or ambulance?“",
+    "Notruf in GB: 999 (oder 112). Man wird gefragt: „Which service? Police, fire or ambulance?“"
+   ],
+   "fact": [
+    "Fundsachen gibt man in London bei „Transport for London Lost Property“ ab – dort landen jedes Jahr über 300 000 Gegenstände.",
+    "Fundsachen gibt man in London bei „Transport for London Lost Property“ ab – dort landen jedes Jahr über 300 000 Gegenstände."
+   ],
+   "words": [
+    [
+     "help",
+     "Hilfe",
+     "Hilfe"
+    ],
+    [
+     "emergency",
+     "Notfall",
+     "Notfall"
+    ],
+    [
+     "ambulance",
+     "Krankenwagen",
+     "Krankenwagen"
+    ],
+    [
+     "police",
+     "Polizei",
+     "Polizei"
+    ],
+    [
+     "fire brigade",
+     "Feuerwehr",
+     "Feuerwehr"
+    ],
+    [
+     "accident",
+     "Unfall",
+     "Unfall"
+    ],
+    [
+     "injured",
+     "verletzt",
+     "verletzt"
+    ],
+    [
+     "to lose – lost",
+     "verlieren – verloren",
+     "verlieren – verloren"
+    ],
+    [
+     "stolen",
+     "gestohlen",
+     "gestohlen"
+    ],
+    [
+     "wallet",
+     "Geldbeutel",
+     "Geldbeutel"
+    ],
+    [
+     "lost property",
+     "Fundbüro",
+     "Fundbüro"
+    ],
+    [
+     "to call",
+     "anrufen",
+     "anrufen"
+    ],
+    [
+     "quickly",
+     "schnell",
+     "schnell"
+    ],
+    [
+     "address",
+     "Adresse",
+     "Adresse"
+    ],
+    [
+     "Are you OK?",
+     "Alles in Ordnung?",
+     "Alles in Ordnung?"
+    ],
+    [
+     "Watch out!",
+     "Pass auf!",
+     "Pass auf!"
+    ]
+   ],
+   "sentences": [
+    [
+     "Help! Please call an ambulance!",
+     "Hilfe! Bitte ruft einen Krankenwagen!",
+     "Hilfe! Bitte ruft einen Krankenwagen!"
+    ],
+    [
+     "There has been an accident.",
+     "Es hat einen Unfall gegeben.",
+     "Es hat einen Unfall gegeben."
+    ],
+    [
+     "I think my wallet has been stolen.",
+     "Ich glaube, mein Geldbeutel wurde gestohlen.",
+     "Ich glaube, mein Geldbeutel wurde gestohlen."
+    ],
+    [
+     "I’ve lost my phone on the bus.",
+     "Ich habe mein Handy im Bus verloren.",
+     "Ich habe mein Handy im Bus verloren."
+    ],
+    [
+     "Where is the nearest police station?",
+     "Wo ist die nächste Polizeiwache?",
+     "Wo ist die nächste Polizeiwache?"
+    ],
+    [
+     "Are you OK? Can I help you?",
+     "Ist alles in Ordnung? Kann ich helfen?",
+     "Ist alles in Ordnung? Kann ich helfen?"
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ein Platz in Manchester. Ein Radfahrer ist gestürzt. Eine Passantin kniet bei ihm und schaut dich an.",
+     "Ein Platz in Manchester. Ein Radfahrer ist gestürzt. Eine Passantin kniet bei ihm und schaut dich an."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Can you call 999? He’s injured!",
+       "Kannst du 999 anrufen? Er ist verletzt!",
+       "Kannst du 999 anrufen? Er ist verletzt!"
+      ],
+      "opts": [
+       [
+        "Yes! … Hello, we need an ambulance, please.",
+        "Ja! … Hallo, wir brauchen bitte einen Krankenwagen.",
+        "Ja! … Hallo, wir brauchen bitte einen Krankenwagen.",
+        1
+       ],
+       [
+        "Yes, I need a wallet.",
+        "Ja, ich brauche einen Geldbeutel.",
+        "Ja, ich brauche einen Geldbeutel.",
+        0
+       ]
+      ],
+      "hint": [
+       "Dienst nennen: ambulance.",
+       "Dienst nennen: ambulance."
+      ]
+     },
+     {
+      "npc": [
+       "(Phone) What is the address?",
+       "(Telefon) Wie ist die Adresse?",
+       "(Telefon) Wie ist die Adresse?"
+      ],
+      "opts": [
+       [
+        "We are in Albert Square, next to the town hall.",
+        "Wir sind am Albert Square, neben dem Rathaus.",
+        "Wir sind am Albert Square, neben dem Rathaus.",
+        1
+       ],
+       [
+        "The address is an accident.",
+        "Die Adresse ist ein Unfall.",
+        "Die Adresse ist ein Unfall.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ort möglichst genau beschreiben.",
+       "Ort möglichst genau beschreiben."
+      ]
+     },
+     {
+      "npc": [
+       "(Phone) Is he conscious? Can he talk?",
+       "(Telefon) Ist er bei Bewusstsein? Kann er sprechen?",
+       "(Telefon) Ist er bei Bewusstsein? Kann er sprechen?"
+      ],
+      "opts": [
+       [
+        "Yes, he can talk, but his arm hurts.",
+        "Ja, er kann sprechen, aber sein Arm tut weh.",
+        "Ja, er kann sprechen, aber sein Arm tut weh.",
+        1
+       ],
+       [
+        "Yes, he talks police.",
+        "Ja, er redet Polizei.",
+        "Ja, er redet Polizei.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ruhig und kurz antworten.",
+       "Ruhig und kurz antworten."
+      ]
+     }
+    ],
+    "outro": [
+     "Fünf Minuten später ist der Krankenwagen da. „Well done!“, sagt die Sanitäterin.",
+     "Fünf Minuten später ist der Krankenwagen da. „Well done!“, sagt die Sanitäterin."
+    ]
+   },
+   "pack": 1,
+   "alt": 1,
+   "ico": "🚨"
+  },
+  {
+   "id": "a_phone",
+   "city": "On the phone",
+   "cityDe": "Am Telefon",
+   "cityEn": "On the phone",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "red",
+   "title": [
+    "Am Telefon",
+    "Am Telefon"
+   ],
+   "can": [
+    "Ich kann auf Englisch telefonieren: mich melden, nach jemandem fragen, eine Nachricht hinterlassen.",
+    "Ich kann auf Englisch telefonieren: mich melden, nach jemandem fragen, eine Nachricht hinterlassen."
+   ],
+   "tip": [
+    "Am Telefon sagt man „This is Lena“ statt „I am Lena“. Buchstabieren lernen lohnt sich: A wie „ay“, E wie „ee“, I wie „eye“.",
+    "Am Telefon sagt man „This is Lena“ statt „I am Lena“. Buchstabieren lernen lohnt sich: A wie „ay“, E wie „ee“, I wie „eye“."
+   ],
+   "fact": [
+    "Die Telefonzelle ist ein Symbol Großbritanniens. Viele rote Häuschen sind heute Mini-Bibliotheken oder enthalten einen Defibrillator.",
+    "Die Telefonzelle ist ein Symbol Großbritanniens. Viele rote Häuschen sind heute Mini-Bibliotheken oder enthalten einen Defibrillator."
+   ],
+   "words": [
+    [
+     "to call",
+     "anrufen",
+     "anrufen"
+    ],
+    [
+     "to ring back",
+     "zurückrufen",
+     "zurückrufen"
+    ],
+    [
+     "to hang up",
+     "auflegen",
+     "auflegen"
+    ],
+    [
+     "Hold on, please.",
+     "Bleiben Sie bitte dran.",
+     "Bleiben Sie bitte dran."
+    ],
+    [
+     "Speaking.",
+     "Am Apparat.",
+     "Am Apparat."
+    ],
+    [
+     "This is …",
+     "Hier ist …",
+     "Hier ist …"
+    ],
+    [
+     "Can I speak to …?",
+     "Kann ich … sprechen?",
+     "Kann ich … sprechen?"
+    ],
+    [
+     "message",
+     "Nachricht",
+     "Nachricht"
+    ],
+    [
+     "voicemail",
+     "Mailbox",
+     "Mailbox"
+    ],
+    [
+     "to spell",
+     "buchstabieren",
+     "buchstabieren"
+    ],
+    [
+     "number",
+     "Nummer",
+     "Nummer"
+    ],
+    [
+     "line",
+     "Leitung",
+     "Leitung"
+    ],
+    [
+     "busy",
+     "besetzt",
+     "besetzt"
+    ],
+    [
+     "bad connection",
+     "schlechte Verbindung",
+     "schlechte Verbindung"
+    ],
+    [
+     "Could you repeat that?",
+     "Könnten Sie das wiederholen?",
+     "Könnten Sie das wiederholen?"
+    ],
+    [
+     "text message",
+     "SMS / Textnachricht",
+     "SMS / Textnachricht"
+    ]
+   ],
+   "sentences": [
+    [
+     "Hello, this is Max. Can I speak to Mrs Brown, please?",
+     "Hallo, hier ist Max. Kann ich bitte Frau Brown sprechen?",
+     "Hallo, hier ist Max. Kann ich bitte Frau Brown sprechen?"
+    ],
+    [
+     "Hold on, please. I’ll put you through.",
+     "Bleiben Sie bitte dran. Ich verbinde.",
+     "Bleiben Sie bitte dran. Ich verbinde."
+    ],
+    [
+     "Could you repeat that, please? The connection is bad.",
+     "Könnten Sie das bitte wiederholen? Die Verbindung ist schlecht.",
+     "Könnten Sie das bitte wiederholen? Die Verbindung ist schlecht."
+    ],
+    [
+     "Can I leave a message?",
+     "Kann ich eine Nachricht hinterlassen?",
+     "Kann ich eine Nachricht hinterlassen?"
+    ],
+    [
+     "Could you spell your name, please?",
+     "Könnten Sie bitte Ihren Namen buchstabieren?",
+     "Könnten Sie bitte Ihren Namen buchstabieren?"
+    ],
+    [
+     "I’ll ring you back later.",
+     "Ich rufe dich später zurück.",
+     "Ich rufe dich später zurück."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Du rufst bei deiner Gastfamilie in Liverpool an. Der Vater geht ran.",
+     "Du rufst bei deiner Gastfamilie in Liverpool an. Der Vater geht ran."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hello, 0151 496 0732.",
+       "Hallo, 0151 496 0732.",
+       "Hallo, 0151 496 0732."
+      ],
+      "opts": [
+       [
+        "Hello, this is Lena from Germany. Can I speak to Sophie, please?",
+        "Hallo, hier ist Lena aus Deutschland. Kann ich bitte Sophie sprechen?",
+        "Hallo, hier ist Lena aus Deutschland. Kann ich bitte Sophie sprechen?",
+        1
+       ],
+       [
+        "Hello, I am a phone.",
+        "Hallo, ich bin ein Telefon.",
+        "Hallo, ich bin ein Telefon.",
+        0
+       ]
+      ],
+      "hint": [
+       "Am Telefon: This is …",
+       "Am Telefon: This is …"
+      ]
+     },
+     {
+      "npc": [
+       "Sorry, she’s out at the moment. Can I take a message?",
+       "Tut mir leid, sie ist gerade nicht da. Soll ich etwas ausrichten?",
+       "Tut mir leid, sie ist gerade nicht da. Soll ich etwas ausrichten?"
+      ],
+      "opts": [
+       [
+        "Yes, please. Could you tell her I’ll arrive on Friday?",
+        "Ja, bitte. Könnten Sie ihr sagen, dass ich am Freitag ankomme?",
+        "Ja, bitte. Könnten Sie ihr sagen, dass ich am Freitag ankomme?",
+        1
+       ],
+       [
+        "Yes, please hang up.",
+        "Ja, bitte auflegen.",
+        "Ja, bitte auflegen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Nachricht hinterlassen.",
+       "Nachricht hinterlassen."
+      ]
+     },
+     {
+      "npc": [
+       "Of course. Could you spell your name?",
+       "Natürlich. Kannst du deinen Namen buchstabieren?",
+       "Natürlich. Kannst du deinen Namen buchstabieren?"
+      ],
+      "opts": [
+       [
+        "Sure: L-E-N-A.",
+        "Klar: L-E-N-A.",
+        "Klar: L-E-N-A.",
+        1
+       ],
+       [
+        "Sure: busy line.",
+        "Klar: besetzte Leitung.",
+        "Klar: besetzte Leitung.",
+        0
+       ]
+      ],
+      "hint": [
+       "Buchstabieren!",
+       "Buchstabieren!"
+      ]
+     }
+    ],
+    "outro": [
+     "„Lovely, I’ll tell her. Safe journey, Lena!“",
+     "„Lovely, I’ll tell her. Safe journey, Lena!“"
+    ]
+   },
+   "pack": 1,
+   "alt": 1,
+   "ico": "📞"
   }
  ],
  "cases": [
@@ -18956,6 +25275,390 @@
    ],
    "g": "state",
    "k": 10
+  },
+  {
+   "s": "She was tired because she ___ all day.",
+   "base": "work",
+   "opts": [
+    "had been working",
+    "has been working",
+    "was working"
+   ],
+   "a": "had been working",
+   "case": [
+    "Past perfect progressive",
+    "Past perfect progressive"
+   ],
+   "why": [
+    "Dauer bis zu einem Punkt in der Vergangenheit → had been + -ing.",
+    "Dauer bis zu einem Punkt in der Vergangenheit → had been + -ing."
+   ],
+   "tr": [
+    "Sie war müde, weil sie den ganzen Tag gearbeitet hatte.",
+    "Sie war müde, weil sie den ganzen Tag gearbeitet hatte."
+   ],
+   "g": "pastperfprog",
+   "k": 8
+  },
+  {
+   "s": "How long ___ before the bus came?",
+   "base": "you wait",
+   "opts": [
+    "had you been waiting",
+    "have you been waiting",
+    "did you wait"
+   ],
+   "a": "had you been waiting",
+   "case": [
+    "Past perfect progressive",
+    "Past perfect progressive"
+   ],
+   "why": [
+    "Dauer vor einem vergangenen Ereignis → had been + -ing.",
+    "Dauer vor einem vergangenen Ereignis → had been + -ing."
+   ],
+   "tr": [
+    "Wie lange hattest du gewartet, bevor der Bus kam?",
+    "Wie lange hattest du gewartet, bevor der Bus kam?"
+   ],
+   "g": "pastperfprog",
+   "k": 8
+  },
+  {
+   "s": "The ground was wet. It ___ .",
+   "base": "rain",
+   "opts": [
+    "had been raining",
+    "has been raining",
+    "rained"
+   ],
+   "a": "had been raining",
+   "case": [
+    "Past perfect progressive",
+    "Past perfect progressive"
+   ],
+   "why": [
+    "Sichtbares Ergebnis einer Dauer in der Vergangenheit.",
+    "Sichtbares Ergebnis einer Dauer in der Vergangenheit."
+   ],
+   "tr": [
+    "Der Boden war nass. Es hatte geregnet.",
+    "Der Boden war nass. Es hatte geregnet."
+   ],
+   "g": "pastperfprog",
+   "k": 8
+  },
+  {
+   "s": "They ___ for hours when they finally found the hotel.",
+   "base": "walk",
+   "opts": [
+    "had been walking",
+    "have been walking",
+    "were walk"
+   ],
+   "a": "had been walking",
+   "case": [
+    "Past perfect progressive",
+    "Past perfect progressive"
+   ],
+   "why": [
+    "Dauer vor „when … found“.",
+    "Dauer vor „when … found“."
+   ],
+   "tr": [
+    "Sie waren schon stundenlang gelaufen, als sie endlich das Hotel fanden.",
+    "Sie waren schon stundenlang gelaufen, als sie endlich das Hotel fanden."
+   ],
+   "g": "pastperfprog",
+   "k": 8
+  },
+  {
+   "s": "I ___ English for three years before I went to London.",
+   "base": "learn",
+   "opts": [
+    "had been learning",
+    "have been learning",
+    "learnt"
+   ],
+   "a": "had been learning",
+   "case": [
+    "Past perfect progressive",
+    "Past perfect progressive"
+   ],
+   "why": [
+    "Zeitraum vor einem vergangenen Zeitpunkt.",
+    "Zeitraum vor einem vergangenen Zeitpunkt."
+   ],
+   "tr": [
+    "Ich hatte drei Jahre Englisch gelernt, bevor ich nach London ging.",
+    "Ich hatte drei Jahre Englisch gelernt, bevor ich nach London ging."
+   ],
+   "g": "pastperfprog",
+   "k": 8
+  },
+  {
+   "s": "We met ___ .",
+   "base": "at school / yesterday",
+   "opts": [
+    "at school yesterday",
+    "yesterday at school",
+    "at yesterday school"
+   ],
+   "a": "at school yesterday",
+   "case": [
+    "Stellung der Adverbiale (Ort vor Zeit)",
+    "Stellung der Adverbiale (Ort vor Zeit)"
+   ],
+   "why": [
+    "Ort vor Zeit: at school yesterday.",
+    "Ort vor Zeit: at school yesterday."
+   ],
+   "tr": [
+    "Wir haben uns gestern in der Schule getroffen.",
+    "Wir haben uns gestern in der Schule getroffen."
+   ],
+   "g": "advorder",
+   "k": 9
+  },
+  {
+   "s": "She plays ___ .",
+   "base": "the piano / very well",
+   "opts": [
+    "the piano very well",
+    "very well the piano",
+    "the piano well very"
+   ],
+   "a": "the piano very well",
+   "case": [
+    "Stellung der Adverbiale (Ort vor Zeit)",
+    "Stellung der Adverbiale (Ort vor Zeit)"
+   ],
+   "why": [
+    "Objekt nicht vom Verb trennen: plays the piano very well.",
+    "Objekt nicht vom Verb trennen: plays the piano very well."
+   ],
+   "tr": [
+    "Sie spielt sehr gut Klavier.",
+    "Sie spielt sehr gut Klavier."
+   ],
+   "g": "advorder",
+   "k": 9
+  },
+  {
+   "s": "I go ___ .",
+   "base": "by bus / to school / every day",
+   "opts": [
+    "to school by bus every day",
+    "every day by bus to school",
+    "by bus every day to school"
+   ],
+   "a": "to school by bus every day",
+   "case": [
+    "Stellung der Adverbiale (Ort vor Zeit)",
+    "Stellung der Adverbiale (Ort vor Zeit)"
+   ],
+   "why": [
+    "Reihenfolge: Ort – Art – Zeit.",
+    "Reihenfolge: Ort – Art – Zeit."
+   ],
+   "tr": [
+    "Ich fahre jeden Tag mit dem Bus zur Schule.",
+    "Ich fahre jeden Tag mit dem Bus zur Schule."
+   ],
+   "g": "advorder",
+   "k": 9
+  },
+  {
+   "s": "He ___ late.",
+   "base": "never / is",
+   "opts": [
+    "is never",
+    "never is",
+    "is late never"
+   ],
+   "a": "is never",
+   "case": [
+    "Stellung der Adverbiale (Ort vor Zeit)",
+    "Stellung der Adverbiale (Ort vor Zeit)"
+   ],
+   "why": [
+    "Häufigkeitsadverb nach be.",
+    "Häufigkeitsadverb nach be."
+   ],
+   "tr": [
+    "Er kommt nie zu spät.",
+    "Er kommt nie zu spät."
+   ],
+   "g": "advorder",
+   "k": 9
+  },
+  {
+   "s": "They arrived ___ .",
+   "base": "in London / on Monday",
+   "opts": [
+    "in London on Monday",
+    "on Monday in London",
+    "Monday in London on"
+   ],
+   "a": "in London on Monday",
+   "case": [
+    "Stellung der Adverbiale (Ort vor Zeit)",
+    "Stellung der Adverbiale (Ort vor Zeit)"
+   ],
+   "why": [
+    "Ort vor Zeit.",
+    "Ort vor Zeit."
+   ],
+   "tr": [
+    "Sie kamen am Montag in London an.",
+    "Sie kamen am Montag in London an."
+   ],
+   "g": "advorder",
+   "k": 9
+  },
+  {
+   "s": "I ___ a new phone for my birthday.",
+   "base": "give",
+   "opts": [
+    "was given",
+    "was gave",
+    "gave"
+   ],
+   "a": "was given",
+   "case": [
+    "Passiv mit zwei Objekten und Präpositionen",
+    "Passiv mit zwei Objekten und Präpositionen"
+   ],
+   "why": [
+    "Person als Subjekt im Passiv: I was given …",
+    "Person als Subjekt im Passiv: I was given …"
+   ],
+   "tr": [
+    "Ich habe zum Geburtstag ein neues Handy bekommen.",
+    "Ich habe zum Geburtstag ein neues Handy bekommen."
+   ],
+   "g": "passive3",
+   "k": 10
+  },
+  {
+   "s": "The students ___ the results tomorrow.",
+   "base": "will show",
+   "opts": [
+    "will be shown",
+    "will show",
+    "are show"
+   ],
+   "a": "will be shown",
+   "case": [
+    "Passiv mit zwei Objekten und Präpositionen",
+    "Passiv mit zwei Objekten und Präpositionen"
+   ],
+   "why": [
+    "Zukunft + Passiv mit Person als Subjekt.",
+    "Zukunft + Passiv mit Person als Subjekt."
+   ],
+   "tr": [
+    "Den Schülern werden morgen die Ergebnisse gezeigt.",
+    "Den Schülern werden morgen die Ergebnisse gezeigt."
+   ],
+   "g": "passive3",
+   "k": 10
+  },
+  {
+   "s": "The baby ___ by her grandparents.",
+   "base": "look after",
+   "opts": [
+    "is looked after",
+    "is looked",
+    "looks after"
+   ],
+   "a": "is looked after",
+   "case": [
+    "Passiv mit zwei Objekten und Präpositionen",
+    "Passiv mit zwei Objekten und Präpositionen"
+   ],
+   "why": [
+    "Präposition bleibt beim Verb: is looked after.",
+    "Präposition bleibt beim Verb: is looked after."
+   ],
+   "tr": [
+    "Das Baby wird von seinen Großeltern betreut.",
+    "Das Baby wird von seinen Großeltern betreut."
+   ],
+   "g": "passive3",
+   "k": 10
+  },
+  {
+   "s": "This problem must ___ .",
+   "base": "deal with",
+   "opts": [
+    "be dealt with",
+    "be dealt",
+    "deal with"
+   ],
+   "a": "be dealt with",
+   "case": [
+    "Passiv mit zwei Objekten und Präpositionen",
+    "Passiv mit zwei Objekten und Präpositionen"
+   ],
+   "why": [
+    "Modalverb + be + 3. Form + Präposition.",
+    "Modalverb + be + 3. Form + Präposition."
+   ],
+   "tr": [
+    "Mit diesem Problem muss man sich befassen.",
+    "Mit diesem Problem muss man sich befassen."
+   ],
+   "g": "passive3",
+   "k": 10
+  },
+  {
+   "s": "She ___ a job in London.",
+   "base": "offer",
+   "opts": [
+    "has been offered",
+    "has offered",
+    "was offer"
+   ],
+   "a": "has been offered",
+   "case": [
+    "Passiv mit zwei Objekten und Präpositionen",
+    "Passiv mit zwei Objekten und Präpositionen"
+   ],
+   "why": [
+    "present perfect passive: has been offered.",
+    "present perfect passive: has been offered."
+   ],
+   "tr": [
+    "Ihr wurde eine Stelle in London angeboten.",
+    "Ihr wurde eine Stelle in London angeboten."
+   ],
+   "g": "passive3",
+   "k": 10
+  },
+  {
+   "s": "The new rules ___ to us yesterday.",
+   "base": "explain",
+   "opts": [
+    "were explained",
+    "was explained",
+    "explained"
+   ],
+   "a": "were explained",
+   "case": [
+    "Passiv mit zwei Objekten und Präpositionen",
+    "Passiv mit zwei Objekten und Präpositionen"
+   ],
+   "why": [
+    "Plural → were explained.",
+    "Plural → were explained."
+   ],
+   "tr": [
+    "Die neuen Regeln wurden uns gestern erklärt.",
+    "Die neuen Regeln wurden uns gestern erklärt."
+   ],
+   "g": "passive3",
+   "k": 10
   }
  ],
  "sounds": [
@@ -21670,6 +28373,90 @@
     "Erzähl jemandem auf Englisch, was du später werden möchtest und warum („I think I’ll be …“).",
     "Erzähl jemandem auf Englisch, was du später werden möchtest und warum („I think I’ll be …“)."
    ]
+  },
+  "gcw": {
+   "pl": "Tell a legend",
+   "d": [
+    "Erzähle jemandem auf Englisch eine Sage aus deiner Gegend in fünf Sätzen – mit mindestens einem „had + 3. Form“.",
+    "Erzähle jemandem auf Englisch eine Sage aus deiner Gegend in fünf Sätzen – mit mindestens einem „had + 3. Form“."
+   ]
+  },
+  "abd": {
+   "pl": "Three futures",
+   "d": [
+    "Schreib drei Sätze über deine Zukunft: einen festen Termin (I’m …ing), einen Plan (going to) und eine Vermutung (will).",
+    "Schreib drei Sätze über deine Zukunft: einen festen Termin (I’m …ing), einen Plan (going to) und eine Vermutung (will)."
+   ]
+  },
+  "iom": {
+   "pl": "What would you do?",
+   "d": [
+    "Stell drei Leuten eine „What would you do if …?“-Frage auf Englisch und notiere die Antworten.",
+    "Stell drei Leuten eine „What would you do if …?“-Frage auf Englisch und notiere die Antworten."
+   ]
+  },
+  "hdw": {
+   "pl": "It was invented by …",
+   "d": [
+    "Finde drei Dinge in deinem Zimmer und schreib auf Englisch, wo sie hergestellt wurden („It was made in …“).",
+    "Finde drei Dinge in deinem Zimmer und schreib auf Englisch, wo sie hergestellt wurden („It was made in …“)."
+   ]
+  },
+  "shf": {
+   "pl": "Describe it!",
+   "d": [
+    "Beschreibe drei Gegenstände mit Relativsätzen, ohne den Namen zu sagen – kann jemand sie erraten? („It’s a thing which …“)",
+    "Beschreibe drei Gegenstände mit Relativsätzen, ohne den Namen zu sagen – kann jemand sie erraten? („It’s a thing which …“)"
+   ]
+  },
+  "ntm": {
+   "pl": "Report it",
+   "d": [
+    "Frag ein Familienmitglied drei Dinge auf Englisch und erzähle danach in indirekter Rede, was es gesagt hat („She said that …“).",
+    "Frag ein Familienmitglied drei Dinge auf Englisch und erzähle danach in indirekter Rede, was es gesagt hat („She said that …“)."
+   ]
+  },
+  "nrw": {
+   "pl": "Recommend a book",
+   "d": [
+    "Schreib eine kurze Buch-, Film- oder Serienempfehlung auf Englisch (5 Sätze) mit „I enjoyed …“ und „I would recommend …“.",
+    "Schreib eine kurze Buch-, Film- oder Serienempfehlung auf Englisch (5 Sätze) mit „I enjoyed …“ und „I would recommend …“."
+   ]
+  },
+  "ply": {
+   "pl": "If I had …",
+   "d": [
+    "Denk an eine Entscheidung aus der letzten Woche: Schreib zwei Sätze, was passiert wäre, wenn du dich anders entschieden hättest (Typ III).",
+    "Denk an eine Entscheidung aus der letzten Woche: Schreib zwei Sätze, was passiert wäre, wenn du dich anders entschieden hättest (Typ III)."
+   ]
+  },
+  "swa": {
+   "pl": "I should have …",
+   "d": [
+    "Schreib zwei Sätze über etwas, das du diese Woche hättest anders machen sollen – ehrlich, aber freundlich zu dir selbst.",
+    "Schreib zwei Sätze über etwas, das du diese Woche hättest anders machen sollen – ehrlich, aber freundlich zu dir selbst."
+   ]
+  },
+  "kil": {
+   "pl": "Debate at dinner",
+   "d": [
+    "Diskutiere beim Abendessen eine Frage auf Englisch (z. B. „Should phones be banned at school?“) – mit mindestens zwei Redemitteln aus dieser Lektion.",
+    "Diskutiere beim Abendessen eine Frage auf Englisch (z. B. „Should phones be banned at school?“) – mit mindestens zwei Redemitteln aus dieser Lektion."
+   ]
+  },
+  "klk": {
+   "pl": "Mini CV",
+   "d": [
+    "Schreib einen Mini-Lebenslauf auf Englisch: drei Sätze mit „I have been …ing for/since …“ und zwei Stärken.",
+    "Schreib einen Mini-Lebenslauf auf Englisch: drei Sätze mit „I have been …ing for/since …“ und zwei Stärken."
+   ]
+  },
+  "bnv": {
+   "pl": "My adventure",
+   "d": [
+    "Schreib einen kurzen Bericht (6–8 Sätze) über ein eigenes kleines Abenteuer – mit mindestens einem Partizip am Satzanfang.",
+    "Schreib einen kurzen Bericht (6–8 Sätze) über ein eigenes kleines Abenteuer – mit mindestens einem Partizip am Satzanfang."
+   ]
   }
  },
  "listen": {
@@ -21769,6 +28556,54 @@
    "ncl": [
     "BBC Radio Newcastle",
     "https://www.bbc.co.uk/sounds/play/live:bbc_radio_newcastle"
+   ],
+   "gcw": [
+    "BBC Radio Ulster",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_ulster"
+   ],
+   "abd": [
+    "BBC Radio Scotland",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_scotland_fm"
+   ],
+   "iom": [
+    "Manx Radio",
+    "https://www.manxradio.com/"
+   ],
+   "hdw": [
+    "BBC Radio Cumbria",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_cumbria"
+   ],
+   "shf": [
+    "BBC Radio Sheffield",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_sheffield"
+   ],
+   "ntm": [
+    "BBC Radio Nottingham",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_nottingham"
+   ],
+   "nrw": [
+    "BBC Radio Norfolk",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_norfolk"
+   ],
+   "ply": [
+    "BBC Radio Devon",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_devon"
+   ],
+   "swa": [
+    "BBC Radio Wales",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_wales_fm"
+   ],
+   "kil": [
+    "RTÉ Radio 1",
+    "https://www.rte.ie/radio/radio1/"
+   ],
+   "klk": [
+    "RTÉ Radio 1",
+    "https://www.rte.ie/radio/radio1/"
+   ],
+   "bnv": [
+    "BBC Radio Scotland",
+    "https://www.bbc.co.uk/sounds/play/live:bbc_radio_scotland_fm"
    ]
   },
   "learn": [
@@ -22874,7 +29709,8 @@
     "Doctor & health"
    ],
    "u": [
-    "dub"
+    "dub",
+    "a_doc"
    ]
   },
   {
@@ -22885,7 +29721,8 @@
     "Food & restaurants"
    ],
    "u": [
-    "crd"
+    "crd",
+    "a_rest"
    ]
   },
   {
@@ -22910,7 +29747,9 @@
    "u": [
     "lon",
     "edi",
-    "inv"
+    "inv",
+    "a_travel",
+    "a_hotel"
    ]
   },
   {
@@ -22958,6 +29797,18 @@
    "u": [
     "lon",
     "brg"
+   ]
+  },
+  {
+   "id": "notfall",
+   "ico": "🚨",
+   "t": [
+    "Notfall und Telefon",
+    "Notfall und Telefon"
+   ],
+   "u": [
+    "a_emer",
+    "a_phone"
    ]
   },
   {
@@ -23010,11 +29861,40 @@
     "s7rol",
     "s8his",
     "s9aus",
-    "s10sus"
+    "s10sus",
+    "s9ind",
+    "s10can",
+    "s10saf"
    ]
   }
  ],
  "news": [
+  {
+   "v": "0.13",
+   "date": "2026-11-13",
+   "de": [
+    "Trail 3 (B1) ist da: 12 neue Orte vom Giant’s Causeway bis zum Ben Nevis – mit if-Sätzen, Passiv, indirekter Rede, Relativsätzen und mehr. Passt zu Klasse 8–10.",
+    "Schule: Gib an, bei welcher Unit ihr im Buch gerade seid – der Schulbereich startet dann mit dieser Unit. Wähle die Grammatik der Unit aus und übe sie zusammen mit deinen Wörtern.",
+    "Nach Thema: 6 neue Alltags-Pakete – Bahn und Flugzeug, Beim Arzt, Im Restaurant, Im Hotel, Hilfe und Notfälle, Am Telefon.",
+    "Vokabellisten teilen: Deine eingetragene Unit-Liste als Link an die Klasse schicken – die anderen übernehmen sie mit einem Tipp.",
+    "Neu unter Üben: Prüfungstraining Cambridge – A2 Key oder B1 Preliminary mit Hören, Grammatik, Lesen, Schreiben und Sprechen.",
+    "Neues Buch: „The Raven’s Key“ – an jedem Ort von Trail 3 liest du ein Kapitel auf Englisch und löst Fragen dazu.",
+    "Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.",
+    "English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.",
+    "Vorbereitung für weitere Bundesländer und Schularten."
+   ],
+   "en": [
+    "Trail 3 (B1) ist da: 12 neue Orte vom Giant’s Causeway bis zum Ben Nevis – mit if-Sätzen, Passiv, indirekter Rede, Relativsätzen und mehr. Passt zu Klasse 8–10.",
+    "Schule: Gib an, bei welcher Unit ihr im Buch gerade seid – der Schulbereich startet dann mit dieser Unit. Wähle die Grammatik der Unit aus und übe sie zusammen mit deinen Wörtern.",
+    "Nach Thema: 6 neue Alltags-Pakete – Bahn und Flugzeug, Beim Arzt, Im Restaurant, Im Hotel, Hilfe und Notfälle, Am Telefon.",
+    "Vokabellisten teilen: Deine eingetragene Unit-Liste als Link an die Klasse schicken – die anderen übernehmen sie mit einem Tipp.",
+    "Neu unter Üben: Prüfungstraining Cambridge – A2 Key oder B1 Preliminary mit Hören, Grammatik, Lesen, Schreiben und Sprechen.",
+    "Neues Buch: „The Raven’s Key“ – an jedem Ort von Trail 3 liest du ein Kapitel auf Englisch und löst Fragen dazu.",
+    "Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.",
+    "English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.",
+    "Vorbereitung für weitere Bundesländer und Schularten."
+   ]
+  },
   {
    "v": "0.12",
    "date": "2026-11-06",
@@ -23443,6 +30323,18 @@
    "state": {
     "t": "Zustandsverben (know, like, belong …)",
     "k": 10
+   },
+   "pastperfprog": {
+    "t": "Past perfect progressive",
+    "k": 8
+   },
+   "advorder": {
+    "t": "Stellung der Adverbiale (Ort vor Zeit)",
+    "k": 9
+   },
+   "passive3": {
+    "t": "Passiv mit zwei Objekten und Präpositionen",
+    "k": 10
    }
   }
  },
@@ -23541,6 +30433,10 @@
      [
       "Selbst schreiben",
       "Alle bekannten Wörter ohne Auswahl selbst eintippen – so merkt man sie sich am besten."
+     ],
+     [
+      "Prüfungstraining Cambridge",
+      "A2 Key oder B1 Preliminary üben: Hören, Grammatik, Lesen, Schreiben, Sprechen – mit Rückmeldung."
      ],
      [
       "Zeiten-Werkstatt & unregelmäßige Verben",
@@ -23661,6 +30557,10 @@
      [
       "Hausaufgaben-Code",
       "Unter Schule → Probe-Klassenarbeit Themen und Pakete ankreuzen, „Als Hausaufgaben-Code teilen“ – fertig. Ohne Anmeldung, ohne Schülerdaten."
+     ],
+     [
+      "Wortlisten teilen",
+      "Eine selbst eingetippte oder fotografierte Unit-Liste als Link an die Klasse schicken; die Liste steckt nur im Link, kein Server."
      ]
     ]
    },
@@ -23853,6 +30753,17 @@
      "Ich bin jetzt in Newcastle. Komm mich treffen – ich bin an der Brücke!"
     ]
    }
+  ]
+ },
+ "book": {
+  "title": "The Raven's Key",
+  "prolog": [
+   "Emma hat dir ein Buch geschickt: „The Raven’s Key“ – Der Schlüssel des Raben. Auf der ersten Seite steht: „Lies an jedem Ort ein Kapitel. Am Ende wartet ein Schatz auf dem höchsten Berg.“",
+   "Emma hat dir ein Buch geschickt: „The Raven’s Key“ – Der Schlüssel des Raben. Auf der ersten Seite steht: „Lies an jedem Ort ein Kapitel. Am Ende wartet ein Schatz auf dem höchsten Berg.“"
+  ],
+  "finale": [
+   "Du hast das ganze Buch auf Englisch gelesen – von der Legende am Giant’s Causeway bis zum Gipfel des Ben Nevis. Emma schreibt dir: „You did it! Your English is B1 now.“",
+   "Du hast das ganze Buch auf Englisch gelesen – von der Legende am Giant’s Causeway bis zum Gipfel des Ben Nevis. Emma schreibt dir: „You did it! Your English is B1 now.“"
   ]
  }
 }
