@@ -37,7 +37,7 @@ TOPICS = {
   'qw':     ('Fragewörter und Kurzantworten', 5),
   'freq':   ('Häufigkeitsadverbien (always, never …)', 5),
   'haveto': ("have to / needn't / mustn't", 6),
-  'repsimple': ('Indirekte Rede (ohne Zeitverschiebung)', 6),
+  'repsimple': ('Indirekte Rede (ohne Zeitverschiebung)', 7),   # 13.11.2026: G9/V2 nimmt sie aus dem Standardraum 5/6 heraus (Lesehilfe KM 2025)
   'artic':  ('Artikel: a, an, the oder ohne', 8),
   'tags':   ('Question tags', 8),
   'link':   ('Verbindungswörter (although, because, so that …)', 8),

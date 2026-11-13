@@ -9,12 +9,14 @@ STATES = [
   ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
-TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 0)]
+TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaftsschule', 1), ('wrs', 'Werkrealschule / Hauptschule', 1)]
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym']
-PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'nw-gym': 'nw'}
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs']
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw'}
+# Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
+NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm']}
 GRADES = [5, 6, 7, 8, 9, 10]
 # Lehrwerke für BW-Gymnasium (nur Name/Band – Unit-Struktur folgt in Phase 5)
 BOOKS = [
@@ -31,7 +33,7 @@ BOOKS = [
   ('ctnw', 'Camden Town G9 – Nordrhein-Westfalen (Westermann)'),
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
-BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms'], 'hlbw': ['bw-rs', 'bw-gms'],
+BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
               'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
@@ -56,6 +58,16 @@ SEK1_TOPICS = {
   'if3': 10, 'advorder': 10, 'passive3': 10, 'part': 10, 'future': 10, 'gerund': 10, 'state': 10, 'passive2': 10,
   'pastperfprog': None,
 }
+
+# Sekundarstufe I, Niveau E (erweitert): wie M, aber indirekte Rede ohne Zeitverschiebung schon 5/6, past perfect progressive (nur E),
+# Arbeitswelt erst 9/10 (wie Gymnasium). Quellen wie oben (Spalte E).
+SEK1E_PACKS = dict(SEK1_PACKS, s9job=9)
+SEK1E_TOPICS = dict(SEK1_TOPICS, repsimple=6, pastperfprog=9)
+# Niveau G (grundlegend): present perfect und going to in 5/6 nur rezeptiv → 7; vieles in 7/8/9 nur rezeptiv → 10 oder entfällt;
+# Lebenswelt ohne historische Entwicklungen (Britische Geschichte entfällt).
+SEK1G_PACKS = dict(SEK1_PACKS, s8his=None)
+SEK1G_TOPICS = dict(SEK1_TOPICS, perf=7, goingto=7, perfpast=None, pastprog=9, tags=9, artic=9, link=None,
+                    pastperf=10, passive=10, reported=10, perfprog=10, gerund=None, state=None, passive2=None, part=None)
 
 # Nordrhein-Westfalen, Gymnasium G9 (Kernlehrplan Englisch Sek I Gymnasium NRW 2019: Erprobungsstufe 5/6, erste Stufe, zweite Stufe;
 # übliche Verteilung erste Stufe = 7/8, zweite Stufe = 9/10). Klassen-Zuordnung nach der Progression der G9-Lehrwerke

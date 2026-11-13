@@ -573,6 +573,16 @@ with sync_playwright() as p:
     (ok if 'realschule' in rp.inner_text('#sc-conf').lower() else bad)('Schulart wechseln: Warnung nennt Realschule → Gymnasium')
     rp.click('#sc-conf-no'); rp.wait_for_timeout(150)
     (ok if rp.evaluate("() => window.PSApp.state().school.type") == 'rs' else bad)('Schulart-Wechsel abbrechen: bleibt Realschule')
+    # 0.16: Niveau E an der Gemeinschaftsschule, Werkrealschule mit Niveau G
+    rp.click('#sc-edit'); rp.click('#sc-ty [data-v="gms"]'); rp.wait_for_selector('#sc-nv [data-v="e"]')
+    (ok if rp.locator('#sc-nv [data-v]').count() == 3 else bad)('Gemeinschaftsschule: Niveau G/M/E wählbar')
+    rp.click('#sc-nv [data-v="e"]'); rp.click('#sc-g [data-v="6"]'); rp.click('#sc-save'); rp.wait_for_selector('#sc-conf'); rp.click('#sc-conf-yes'); rp.wait_for_selector('#sc-exam')
+    t2 = rp.inner_text('main')
+    (ok if 'e (erweitert)' in t2.lower() and rp.locator('[data-sg="repsimple"]').count() and '-E6' in t2 else bad)('GMS Niveau E Kl. 6: indirekte Rede ohne Zeitverschiebung schon dran, Code mit E')
+    rp.click('#sc-edit'); rp.click('#sc-ty [data-v="wrs"]'); rp.wait_for_selector('#sc-nv [data-v="g"][aria-pressed="true"]')
+    rp.click('#sc-g [data-v="7"]'); rp.click('#sc-save'); rp.wait_for_selector('#sc-conf'); rp.click('#sc-conf-yes'); rp.wait_for_selector('#sc-exam')
+    t3 = rp.inner_text('main')
+    (ok if 'werkrealschule' in t3.lower() and rp.locator('[data-sg="perf"]').count() and rp.locator('[data-sg="pastprog"]').count() == 0 else bad)('Werkrealschule Niveau G Kl. 7: present perfect jetzt neu, past progressive noch nicht')
     rx.close()
     # ---------- 0.15: Nordrhein-Westfalen, Gymnasium ----------
     nx = b.new_context(viewport={'width': 375, 'height': 812}); np_ = nx.new_page(); np_.on('pageerror', lambda e: errors.append(str(e)))

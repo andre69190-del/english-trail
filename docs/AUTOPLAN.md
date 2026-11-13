@@ -37,5 +37,8 @@ Neue Ideen kommen unten in „Ideen-Speicher“, nicht mitten in die Liste.
 - ✅ 06.11.2026 (0.12): Schul-Einrichtung vereinfacht (BW/Gymnasium eingeklappt), Startcheck „Wie fit bin ich?“, Buch/Klasse wechseln mit Warnung + Bestätigung, Unit-Auswahl als Knöpfe (Welcome, Unit 1–6, Extra).
 
 ## Ideen-Speicher (noch nicht eingeplant)
-- Gemeinschaftsschule: Niveau G/M/E wählbar (E = Gymnasium-Zuordnung, G = langsamer); Werkrealschule (Niveau G) freischalten.
+- ✅ 0.16: Niveau G/M/E, Werkrealschule.
+- Prüfungstraining Realschulabschluss BW (schriftlich + Kommunikationsprüfung) – in Arbeit (0.17).
+- Englisch als 2. Fremdsprache (Gymnasium, z. B. Rheinschiene). Oberstufe / berufliche Schulen.
+- Sommer 2026: G9-Bildungsplan Englisch (gedehnt, bis Kl. 11) prüfen; Sek I V2 (Kl. 5–7) prüfen.
 - Eltern-Ansicht mit PIN (wie GeoQuest), Klassen-Rangliste über Codes, Sprechprüfung (Kommunikationsprüfung Kl. 10) mit Aufnahme + Checkliste, weitere Bundesländer/Schularten.

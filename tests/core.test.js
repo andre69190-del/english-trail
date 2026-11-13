@@ -588,3 +588,15 @@ test('NRW Gymnasium: eigene Klassen-Zuordnung, Codes mit N', () => {
   assert.ok(DATA.school.combos.includes('nw-gym')); assert.equal(DATA.school.planOf['nw-gym'], 'nw');
   assert.ok(DATA.school.books.filter(b => (b.k || []).includes('nw-gym')).length >= 2);
 });
+
+test('Sek I Niveaus G/E: eigene Zuordnung, Codes mit G/E, Grammatik im Duell nach Lehrplan', () => {
+  const P = DATA.school.plans;
+  assert.equal(P.sek1e.t.repsimple, 6); assert.equal(P.sek1.t.repsimple, 7); assert.equal(P.sek1g.t.perf, 7);
+  assert.equal(P.sek1g.p.s8his, undefined); assert.equal(C.schGradeOf(DATA, DATA.units.find(x => x.id === 's8his'), 'sek1g'), 0);
+  assert.equal(C.schLoOf(8, 'sek1g'), 7); assert.equal(C.schLoOf(10, 'sek1e'), 10);
+  assert.equal(C.duelParse('FOX-123-1-G9').plan, 'sek1g'); assert.equal(C.duelParse('FOX-123-1-E9').plan, 'sek1e');
+  assert.equal(C.hwParse('HA9E-P3-T3').plan, 'sek1e');
+  const pl = C.duelPlan(DATA, 'FOX-123-1-G6');
+  pl.plan.filter(q => q.k === 'c').forEach(q => { const c = DATA.cases[q.i]; assert.ok(P.sek1g.t[c.g] && P.sek1g.t[c.g] <= 6, 'Grammatik zu früh für G6: ' + c.g); });
+  assert.equal(DATA.school.topics.repsimple.k, 7);
+});

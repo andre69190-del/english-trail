@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.16', '2026-11-13', ['Gemeinschaftsschule und Realschule: Wähle dein Niveau – G, M oder E. Wörter und Grammatik kommen dann im passenden Tempo.', 'Neu: Werkrealschule / Hauptschule in Baden-Württemberg.', 'Gymnasium Klasse 5/6: an den neuen G9-Bildungsplan angepasst.']),
   ('0.15', '2026-11-13', ['Jetzt auch für Nordrhein-Westfalen: Wähle im Schulbereich NRW und Gymnasium – Wörter und Grammatik kommen in der Reihenfolge, wie ihr sie in NRW lernt.', 'Lehrwerke für NRW: English G Access G9, Green Line G9 und Camden Town G9.']),
   ('0.14', '2026-11-13', ['Jetzt auch für Realschule und Gemeinschaftsschule in Baden-Württemberg: Wähle im Schulbereich deine Schulart – Wörter und Grammatik passen dann zu deinem Bildungsplan.', 'Neue Lehrwerke zur Auswahl: Red Line (Klett) und Highlight (Cornelsen).', 'Neues Paket „Berufe, Praktikum und Bewerbung“ – mit Szene im Hotel in Edinburgh.', 'Vokabeln per Foto noch schneller: Der Kamera-Knopf im Schulbereich öffnet direkt die Kamera, und unter „Meine Wörter“ steht das Foto jetzt ganz oben.']),
   ('0.13', '2026-11-13', ['Trail 3 (B1) ist da: 12 neue Orte vom Giant’s Causeway bis zum Ben Nevis – mit if-Sätzen, Passiv, indirekter Rede, Relativsätzen und mehr. Passt zu Klasse 8–10.', 'Schule: Gib an, bei welcher Unit ihr im Buch gerade seid – der Schulbereich startet dann mit dieser Unit. Wähle die Grammatik der Unit aus und übe sie zusammen mit deinen Wörtern.', 'Nach Thema: 6 neue Alltags-Pakete – Bahn und Flugzeug, Beim Arzt, Im Restaurant, Im Hotel, Hilfe und Notfälle, Am Telefon.', 'Vokabellisten teilen: Deine eingetragene Unit-Liste als Link an die Klasse schicken – die anderen übernehmen sie mit einem Tipp.', 'Neu unter Üben: Prüfungstraining Cambridge – A2 Key oder B1 Preliminary mit Hören, Grammatik, Lesen, Schreiben und Sprechen.', 'Neues Buch: „The Raven’s Key“ – an jedem Ort von Trail 3 liest du ein Kapitel auf Englisch und löst Fragen dazu.', 'Klasse 9/10: neue Länder-Pakete Indien, Kanada und Südafrika – dazu Grammatik: past perfect progressive, Stellung der Adverbiale, Passiv mit zwei Objekten.', 'English Trail startet schneller: Die Schulinhalte werden nur noch geladen, wenn du den Schulbereich nutzt – und nur für dein Bundesland und deine Schulart.', 'Vorbereitung für weitere Bundesländer und Schularten.']),
@@ -307,7 +308,7 @@ GUIDE = {
     ['12 Orte', 'Von London bis Dublin – jeder Ort hat ein Thema, Wörter, Sätze und eine kleine Szene.'],
     ['Brief von Emma', 'Nach jedem Ort kannst du einen Satz mehr lesen. Rabe Rufus bringt ihn dir.'],
     ['Orts-Prüfung', 'Wenn die Wörter sitzen, schaltest du den nächsten Ort frei.']]},
-  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule · NRW: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
+  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
     ['Stoff deiner Klasse', 'Wortschatz-Pakete und Grammatik passend zum Bildungsplan.'],
     ['Startcheck', 'Wie fit bist du für deine Klasse? Danach weißt du, was du wiederholen solltest.'],
     ['Deine Buch-Vokabeln', 'Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste.'],

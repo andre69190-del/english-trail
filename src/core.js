@@ -241,7 +241,7 @@
   /* English Trail: optional „-K7“ = nur Schulstoff der Klasse 7 (Gymnasium BW) – gleiche Fragen für alle mit diesem Code */
   /* 13.11.2026: „-S7“ = Schulstoff Klasse 7 nach Bildungsplan Sekundarstufe I (Realschule, Gemeinschaftsschule) */
   /* 13.11.2026: Lehrplan im Code: K = Gymnasium BW, S = Sekundarstufe I BW (Realschule/GMS), N = Gymnasium NRW */
-  var PLAN_L = { sek1: 'S', nw: 'N' }, L_PLAN = { S: 'sek1', N: 'nw' };
+  var PLAN_L = { sek1: 'S', nw: 'N', sek1g: 'G', sek1e: 'E' }, L_PLAN = { S: 'sek1', N: 'nw', G: 'sek1g', E: 'sek1e' };
   function planLetter(plan) { return PLAN_L[plan] || 'K'; }
   function duelNewCode(r, level, grade, plan) {
     r = r || Math.random;
@@ -257,12 +257,12 @@
     return P && P.p && P.p[u.id] ? P.p[u.id] : 0;
   }
   /* Erste Klasse der Standardstufe: Gymnasium 5/6, 7/8, 9/10 – Sekundarstufe I 5/6, 7/8/9, 10 */
-  function schLoOf(g, plan) { if (plan === 'sek1') return g <= 6 ? 5 : g <= 9 ? 7 : 10; return g - ((g - 5) % 2); }
-  function schHiOf(g, plan) { if (plan === 'sek1') return g <= 6 ? 6 : g <= 9 ? 9 : 10; return schLoOf(g) + 1; }
+  function schLoOf(g, plan) { if (/^sek1/.test(plan || '')) return g <= 6 ? 5 : g <= 9 ? 7 : 10; return g - ((g - 5) % 2); }
+  function schHiOf(g, plan) { if (/^sek1/.test(plan || '')) return g <= 6 ? 6 : g <= 9 ? 9 : 10; return schLoOf(g) + 1; }
   function duelWeight(lv) { return DUEL_WEIGHT[String(lv)] || 1; }
   function duelParse(str) {
     var c = String(str || '').toUpperCase().replace(/[\s_.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSN])(5|6|7|8|9|10))?$/);
+    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGE])(5|6|7|8|9|10))?$/);
     if (!m) return null;
     var n = +m[4], lv = m[3] + n, k = m[6] ? +m[6] : 0, pl = k ? (L_PLAN[m[5]] || '') : '';
     return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-' + planLetter(pl) + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k, plan: pl };
@@ -321,7 +321,8 @@
       });
       plan.push({ k: 'w', dir: n % 2 ? 'x2pl' : 'pl2x', item: x, opts: shuffle([x].concat(outs), r) });
     });
-    var cIdx = idx(data.cases.length).filter(function (ci) { return !K || (data.cases[ci].k || 5) <= K; });
+    var PT = pc.plan && data.school && data.school.plans && data.school.plans[pc.plan] ? data.school.plans[pc.plan].t : null;   /* Grammatik nach Lehrplan des Codes */
+    var cIdx = idx(data.cases.length).filter(function (ci) { var c = data.cases[ci], ck = PT && c.g ? (PT[c.g] || 99) : (c.k || 5); return !K || ck <= K; });
     shuffle(cIdx, r).slice(0, MIX.c).forEach(function (ci) {
       plan.push({ k: 'c', i: ci, type: cfg.clozeType, opts: shuffle(data.cases[ci].opts, r) });
     });
@@ -500,7 +501,7 @@
     return 'HA' + grade + (PLAN_L[plan] || '') + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
   }
   function hwParse(code) {
-    var m = /^HA(5|6|7|8|9|10)([SN]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
+    var m = /^HA(5|6|7|8|9|10)([SNGE]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
     if (!m) return null;
     var g = +m[1], pl = L_PLAN[m[2]] || '', pm = parseInt(m[3], 36), tm = parseInt(m[4], 36);
     if (!(pm || tm) || isNaN(pm) || isNaN(tm)) return null;

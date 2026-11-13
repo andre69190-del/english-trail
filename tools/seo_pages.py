@@ -112,9 +112,9 @@ def main():
     PK = {k['id']: k for k in school.PACKS}
     b = ['<h1>Englisch üben für Realschule und Gemeinschaftsschule in Baden-Württemberg (Klasse 5–10)</h1>',
          '<p>English Trail ist eine kostenlose Lern-App ohne Werbung. Im <b>Schulmodus</b> wählst du <b>Realschule</b> oder '
-         '<b>Gemeinschaftsschule</b>, deine Klasse und dein Lehrwerk (z. B. <b>Red Line</b> von Klett oder <b>Highlight</b> von Cornelsen). '
-         'Wortschatz und Grammatik sind nach dem gemeinsamen Bildungsplan der Sekundarstufe I (mittleres Niveau M) den Klassen zugeordnet.</p>'
-         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse</h2>']
+         '<b>Gemeinschaftsschule</b> oder <b>Werkrealschule</b>, dein Niveau (G, M oder E), deine Klasse und dein Lehrwerk (z. B. <b>Red Line</b> von Klett oder <b>Highlight</b> von Cornelsen). '
+         'Wortschatz und Grammatik sind nach dem gemeinsamen Bildungsplan der Sekundarstufe I (mittleres Niveau M) den Klassen zugeordnet. Die Übersicht unten zeigt Niveau M.</p>'
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Themen und Grammatik nach Klasse (Niveau M)</h2>']
     for g in range(5, 11):
         pk = [PK[i] for i, kk in school.SEK1_PACKS.items() if kk == g]
         gr = [grammar.TOPICS[t][0] for t, kk in school.SEK1_TOPICS.items() if kk == g]

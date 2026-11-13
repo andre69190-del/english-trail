@@ -264,3 +264,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Lehrwerke NRW: English G Access G9, Green Line G9, Camden Town G9. SEO: `englisch-gymnasium-nrw.html`; Texte in shell.html (Beschreibung) um RS/GMS/NRW ergänzt.
 - Tests: Core 61, UI 174+.
 - Offen: Startseite arndt-software.de (homepage-Repo) Text „weitere Länder folgen“ anpassen; Bayern als nächstes Land.
+
+## Release 0.16 (13.11.2026) – Niveaus G/M/E, Werkrealschule, G9-Anpassung
+- **G9 / Bildungsplan V2 (Gymnasium Kl. 5/6):** Lesehilfe KM 2025 nimmt u. a. indirekte Rede ohne Zeitverschiebung und das Stützwort „one“ aus dem Standardraum 5/6 → `TOPICS['repsimple']` 6 → 7. Sonst keine Grammatik unserer Themen betroffen (present perfect, will, going to, Steigerung nicht genannt). Inkraftsetzung des „gedehnten“ G9-Plans für Sommer 2026 angekündigt → dann erneut prüfen (G9 hat Klasse 11!). Sek I V2 gilt seit 2025/26 in Kl. 5–7 – Details noch nicht geprüft.
+- **Niveaus Sek I:** `school.NIVEAUS` (RS: M/G, GMS: M/G/E, WRS: G/M; erstes = Standard), `S.school.niv`. Pläne `sek1g` (G) und `sek1e` (E) aus `SEK1_*` abgeleitet (`SEK1G_*`, `SEK1E_*`; `None` = entfällt). Codes: G/E (`FOX-123-1-G9`, `HA9E-…`).
+- **Werkrealschule/Hauptschule** freigeschaltet (bw-wrs, Standard Niveau G).
+- core.js: Duell-Grammatik (`cases`) jetzt nach Lehrplan des Codes (vorher immer Gymnasium-Klasse).
+- Tests: Core 62, UI 177 OK.
