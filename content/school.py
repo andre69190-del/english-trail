@@ -5,7 +5,7 @@
 
 STATES = [
   ('bw', 'Baden-Württemberg', 1), ('by', 'Bayern', 1), ('be', 'Berlin', 0), ('bb', 'Brandenburg', 0), ('hb', 'Bremen', 0),
-  ('hh', 'Hamburg', 0), ('he', 'Hessen', 0), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
+  ('hh', 'Hamburg', 0), ('he', 'Hessen', 1), ('mv', 'Mecklenburg-Vorpommern', 0), ('ni', 'Niedersachsen', 1),
   ('nw', 'Nordrhein-Westfalen', 1), ('rp', 'Rheinland-Pfalz', 0), ('sl', 'Saarland', 0), ('sn', 'Sachsen', 0),
   ('st', 'Sachsen-Anhalt', 0), ('sh', 'Schleswig-Holstein', 0), ('th', 'Thüringen', 0),
 ]
@@ -13,10 +13,10 @@ TYPES = [('gym', 'Gymnasium', 1), ('rs', 'Realschule', 1), ('gms', 'Gemeinschaft
 # 13.11.2026: Realschule + Gemeinschaftsschule folgen dem gemeinsamen Bildungsplan der Sekundarstufe I (BW 2016, Niveau M).
 # Gleiche Pakete und Grammatik-Aufgaben wie am Gymnasium (gleiche IDs → Lernstand bleibt beim Wechsel), nur andere Klassen-Zuordnung.
 # Freigeschaltete Kombinationen Bundesland-Schulart und ihr Lehrplan (leer = Gymnasium BW, Grundzuordnung u.sch / TOPICS)
-COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym']
+COMBOS = ['bw-gym', 'bw-rs', 'bw-gms', 'nw-gym', 'bw-wrs', 'by-gym', 'ni-gym', 'he-gym']
 # ni-gym: kein eigener Plan → Grundzuordnung (wie Gymnasium BW). Das KC Englisch Gymnasium NI (2015) beschreibt Grammatik nur funktional
 # (Ende 6/8/10: z. B. Passiv und indirekte Rede bis Ende 8, Arbeitswelt in 9/10) – das passt zur BW-Progression. Siehe content/schule/RECHERCHE_NI.md
-PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by'}
+PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 'by-gym': 'by', 'he-gym': 'he'}
 # Sekundarstufe I BW: Niveau je Schulart wählbar (erstes = Standard). Plan: M = sek1, G = sek1g, E = sek1e
 NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm']}
 GRADES = [5, 6, 7, 8, 9, 10]
@@ -40,10 +40,14 @@ BOOKS = [
   ('acni', 'English G Access (Cornelsen)'),
   ('glni', 'Green Line (Klett)'),
   ('ctni', 'Camden Town (Westermann)'),
+  # 13.11.2026: Gymnasium Hessen
+  ('ache', 'English G Access (Cornelsen)'),
+  ('glhe', 'Green Line (Klett)'),
+  ('cthe', 'Camden Town (Westermann)'),
 ]
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
-              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym']}
+              'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym'], 'glni': ['ni-gym'], 'ctni': ['ni-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym']}
 
 # Sekundarstufe I (Bildungsplan 2016 BW, Englisch 1. Fremdsprache, Niveau M) – Standards am Ende von Klasse 6, 9 und 10.
 # Quellen: bildungsplaene-bw.de, BP2016BW_ALLG_SEK1_E1_IK_5-6_01/_03_08, _7-8-9_01/_03_08, _10_01/_03_08 (abgerufen 13.11.2026)
@@ -116,6 +120,24 @@ BY_TOPICS = {
   'adv': 7, 'perfprog': 7, 'perfpast': 7, 'pastperf': 7, 'if2': 7, 'if3': 7,
   'artic': 8, 'gerund': 8, 'passive': 8, 'passive2': 8, 'passive3': 8,
   'part': 9, 'future': 9, 'reported': 9, 'repsimple': 9, 'state': 9, 'pastperfprog': 9,
+}
+
+# Hessen, Gymnasium G9 (Lehrplan Englisch Gymnasium, Jahrgangsstufen 5–10, je Jahrgangsstufe). Quelle: content/schule/RECHERCHE_HE.md
+HE_PACKS = {
+  's5sch': 5, 's5hom': 5, 's5hob': 5, 's5fam': 5, 's5day': 5, 's6sho': 5,
+  's8tow': 6, 's6wea': 6, 's7spo': 6, 's7fri': 6, 's6fes': 6, 's8env': 6,
+  's6lon': 7, 's8his': 7, 's7rol': 7,
+  's8usa': 8, 's7med': 8, 's9tec': 8,
+  's9job': 9, 's10gen': 9, 's10ide': 9, 's9aus': 9, 's9gap': 9,
+  's9vol': 10, 's10saf': 10, 's10med': 10, 's10sus': 10, 's9ind': 10, 's10can': 10,
+}
+HE_TOPICS = {
+  'pres': 5, 'prog': 5, 'goingto': 5, 'can': 5, 'quant': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5,
+  'tags': 6, 'rel': 6, 'if1': 6, 'link': 6, 'past': 6, 'pastprog': 6, 'perf': 6, 'will': 6, 'comp': 6, 'adv': 6, 'haveto': 6,
+  'repsimple': 7, 'if2': 7, 'passive': 7, 'perfpast': 7, 'advorder': 7,
+  'reported': 8, 'if3': 8, 'gerund': 8, 'perfprog': 8, 'pastperf': 8, 'future': 8,
+  'part': 9, 'state': 9, 'pastperfprog': 9, 'artic': 9, 'passive2': 9,
+  'passive3': 10,
 }
 
 PACKS = []

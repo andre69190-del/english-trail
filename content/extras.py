@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.20', '2026-11-13', ['Jetzt auch für Hessen: Wähle im Schulbereich Hessen und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem hessischen Lehrplan.']),
   ('0.19', '2026-11-13', ['Jetzt auch für Niedersachsen: Wähle im Schulbereich Niedersachsen und Gymnasium.', 'Lehrwerke: English G Access, Green Line und Camden Town.']),
   ('0.18', '2026-11-13', ['Jetzt auch für Bayern: Wähle im Schulbereich Bayern und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem LehrplanPLUS.', 'Lehrwerke für Bayern: Green Line und English G Access.']),
   ('0.17', '2026-11-13', ['Neu für Klasse 9 und 10 an Realschule, Gemeinschaftsschule und Werkrealschule: Abschluss-Training! Übe die Kommunikationsprüfung – Präsentation mit Stichworten, Timer und Nachfragen, Gespräch in Alltagssituationen und Sprachmittlung – und sieh deine ungefähre Note.', 'Schriftliche Prüfung üben: Listening, Reading, Use of Language und Interpreting – dazu Schreibaufgaben mit Checkliste.']),
@@ -311,7 +312,7 @@ GUIDE = {
     ['12 Orte', 'Von London bis Dublin – jeder Ort hat ein Thema, Wörter, Sätze und eine kleine Szene.'],
     ['Brief von Emma', 'Nach jedem Ort kannst du einen Satz mehr lesen. Rabe Rufus bringt ihn dir.'],
     ['Orts-Prüfung', 'Wenn die Wörter sitzen, schaltest du den nächsten Ort frei.']]},
-  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Bayern, Niedersachsen: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
+  {'ico': '🎒', 't': 'Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)', 'go': 'school', 'items': [
     ['Stoff deiner Klasse', 'Wortschatz-Pakete und Grammatik passend zum Bildungsplan.'],
     ['Startcheck', 'Wie fit bist du für deine Klasse? Danach weißt du, was du wiederholen solltest.'],
     ['Deine Buch-Vokabeln', 'Trag die Wörter aus deinem Englischbuch mit Unit ein – auch als ganze Liste.'],

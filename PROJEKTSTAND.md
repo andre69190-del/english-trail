@@ -289,3 +289,8 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - `ni-gym` freigeschaltet, **ohne eigenen Plan** (Grundzuordnung wie BW-Gymnasium, Codes mit K): Das KC Englisch Gymnasium NI 2015 beschreibt Grammatik nur funktional (Passiv, indirekte Rede bis Ende 8; Arbeitswelt 9/10) – passt zur BW-Progression. Recherche `content/schule/RECHERCHE_NI.md`.
 - Lehrwerke: English G Access, Green Line, Camden Town (ohne Ausgabe-Angabe). SEO `englisch-gymnasium-niedersachsen.html`.
 - Tests: Core 65, UI 188 OK (2×). Nächste Länder: Hessen, Rheinland-Pfalz; offen: Oberschule NI.
+
+## Release 0.20 (13.11.2026) – Hessen, Gymnasium (G9)
+- Plan **he** (`HE_PACKS`, `HE_TOPICS`), Quelle: Lehrplan Englisch Gymnasium G9 Hessen, je Jahrgangsstufe (`content/schule/RECHERCHE_HE.md`). Fenster = eine Jahrgangsstufe, Codes mit **H**. Lehrwerke Access, Green Line, Camden Town. SEO `englisch-gymnasium-hessen.html`.
+- Hessen: going to schon Kl. 5; simple past, present perfect, will, if I Kl. 6; Passiv, if II Kl. 7; USA-Schwerpunkt Kl. 8.
+- Tests: Core 66, UI 189 OK (2×). Nächstes Land: Rheinland-Pfalz.

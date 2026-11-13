@@ -30100,6 +30100,16 @@
  ],
  "news": [
   {
+   "v": "0.20",
+   "date": "2026-11-13",
+   "de": [
+    "Jetzt auch für Hessen: Wähle im Schulbereich Hessen und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem hessischen Lehrplan."
+   ],
+   "en": [
+    "Jetzt auch für Hessen: Wähle im Schulbereich Hessen und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem hessischen Lehrplan."
+   ]
+  },
+  {
    "v": "0.19",
    "date": "2026-11-13",
    "de": [
@@ -30399,7 +30409,7 @@
    {
     "id": "he",
     "name": "Hessen",
-    "on": 0
+    "on": 1
    },
    {
     "id": "mv",
@@ -30476,14 +30486,16 @@
    "nw-gym",
    "bw-wrs",
    "by-gym",
-   "ni-gym"
+   "ni-gym",
+   "he-gym"
   ],
   "planOf": {
    "bw-rs": "sek1",
    "bw-gms": "sek1",
    "bw-wrs": "sek1",
    "nw-gym": "nw",
-   "by-gym": "by"
+   "by-gym": "by",
+   "he-gym": "he"
   },
   "grades": [
    5,
@@ -30591,6 +30603,27 @@
     "name": "Camden Town (Westermann)",
     "k": [
      "ni-gym"
+    ]
+   },
+   {
+    "id": "ache",
+    "name": "English G Access (Cornelsen)",
+    "k": [
+     "he-gym"
+    ]
+   },
+   {
+    "id": "glhe",
+    "name": "Green Line (Klett)",
+    "k": [
+     "he-gym"
+    ]
+   },
+   {
+    "id": "cthe",
+    "name": "Camden Town (Westermann)",
+    "k": [
+     "he-gym"
     ]
    }
   ],
@@ -30888,6 +30921,78 @@
      "advorder": 10
     }
    },
+   "he": {
+    "p": {
+     "s5sch": 5,
+     "s5hom": 5,
+     "s5hob": 5,
+     "s5fam": 5,
+     "s5day": 5,
+     "s6sho": 5,
+     "s8tow": 6,
+     "s6wea": 6,
+     "s7spo": 6,
+     "s7fri": 6,
+     "s6fes": 6,
+     "s8env": 6,
+     "s6lon": 7,
+     "s8his": 7,
+     "s7rol": 7,
+     "s8usa": 8,
+     "s7med": 8,
+     "s9tec": 8,
+     "s9job": 9,
+     "s10gen": 9,
+     "s10ide": 9,
+     "s9aus": 9,
+     "s9gap": 9,
+     "s9vol": 10,
+     "s10saf": 10,
+     "s10med": 10,
+     "s10sus": 10,
+     "s9ind": 10,
+     "s10can": 10
+    },
+    "t": {
+     "pres": 5,
+     "prog": 5,
+     "goingto": 5,
+     "can": 5,
+     "quant": 5,
+     "poss": 5,
+     "gen": 5,
+     "qw": 5,
+     "freq": 5,
+     "tags": 6,
+     "rel": 6,
+     "if1": 6,
+     "link": 6,
+     "past": 6,
+     "pastprog": 6,
+     "perf": 6,
+     "will": 6,
+     "comp": 6,
+     "adv": 6,
+     "haveto": 6,
+     "repsimple": 7,
+     "if2": 7,
+     "passive": 7,
+     "perfpast": 7,
+     "advorder": 7,
+     "reported": 8,
+     "if3": 8,
+     "gerund": 8,
+     "perfprog": 8,
+     "pastperf": 8,
+     "future": 8,
+     "part": 9,
+     "state": 9,
+     "pastperfprog": 9,
+     "artic": 9,
+     "passive2": 9,
+     "passive3": 10
+    }
+   },
    "by": {
     "p": {
      "s5sch": 5,
@@ -31136,7 +31241,7 @@
    },
    {
     "ico": "🎒",
-    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Bayern, Niedersachsen: Gymnasium – Klasse 5–10)",
+    "t": "Schule (BW: Gymnasium, Realschule, Gemeinschaftsschule, Werkrealschule · NRW, Bayern, Niedersachsen, Hessen: Gymnasium – Klasse 5–10)",
     "go": "school",
     "items": [
      [

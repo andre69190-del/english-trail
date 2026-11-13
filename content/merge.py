@@ -116,6 +116,7 @@ D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.ST
                # 13.11.2026: Sekundarstufe I (Realschule, Gemeinschaftsschule) – andere Klassen-Zuordnung derselben Pakete/Themen
                'plans': {'sek1': {'p': school.SEK1_PACKS, 't': {k: v for k, v in school.SEK1_TOPICS.items() if v}},
                          'nw': {'p': school.NW_PACKS, 't': {k: v for k, v in school.NW_TOPICS.items() if v}},
+                         'he': {'p': school.HE_PACKS, 't': {k: v for k, v in school.HE_TOPICS.items() if v}},
                          'by': {'p': school.BY_PACKS, 't': {k: v for k, v in school.BY_TOPICS.items() if v}},
                          'sek1e': {'p': school.SEK1E_PACKS, 't': {k: v for k, v in school.SEK1E_TOPICS.items() if v}},
                          'sek1g': {'p': {k: v for k, v in school.SEK1G_PACKS.items() if v}, 't': {k: v for k, v in school.SEK1G_TOPICS.items() if v}}},
@@ -124,6 +125,7 @@ _ids = {k['id'] for k in school.PACKS}
 assert set(school.SEK1_PACKS) == _ids, ('SEK1_PACKS unvollständig', _ids ^ set(school.SEK1_PACKS))
 assert set(school.SEK1_TOPICS) == set(grammar.TOPICS), ('SEK1_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.SEK1_TOPICS))
 assert set(school.NW_PACKS) == _ids, ('NW_PACKS unvollständig', _ids ^ set(school.NW_PACKS))
+assert set(school.HE_PACKS) == _ids and set(school.HE_TOPICS) == set(grammar.TOPICS), 'HE_* unvollständig'
 assert set(school.BY_PACKS) == _ids and set(school.BY_TOPICS) == set(grammar.TOPICS), 'BY_* unvollständig'
 assert set(school.NW_TOPICS) == set(grammar.TOPICS), ('NW_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.NW_TOPICS))
 

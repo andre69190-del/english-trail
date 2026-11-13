@@ -619,3 +619,9 @@ test('Niedersachsen Gymnasium: freigeschaltet, Grundzuordnung, eigene Lehrwerke'
   assert.ok(DATA.school.combos.includes('ni-gym')); assert.equal(DATA.school.planOf['ni-gym'], undefined);
   assert.ok(DATA.school.books.filter(b => (b.k || []).includes('ni-gym')).length >= 3);
 });
+
+test('Hessen Gymnasium: Plan he, Codes mit H, Jahrgangsstufen', () => {
+  assert.equal(DATA.school.planOf['he-gym'], 'he'); assert.equal(DATA.school.plans.he.t.passive, 7); assert.equal(DATA.school.plans.he.t.goingto, 5);
+  assert.equal(C.schLoOf(8, 'he'), 8); assert.equal(C.duelParse('FOX-123-1-H8').plan, 'he'); assert.equal(C.hwParse('HA8H-P1-T1').plan, 'he');
+  DATA.units.filter(x => x.sch).forEach(x => assert.ok(C.schGradeOf(DATA, x, 'he') >= 5, 'HE-Klasse fehlt: ' + x.id));
+});

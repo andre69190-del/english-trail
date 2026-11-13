@@ -628,6 +628,10 @@ with sync_playwright() as p:
     (ok if 'acni' in bks and 'ctni' in bks and 'glby' not in bks else bad)('Niedersachsen: eigene Lehrwerke')
     np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
     (ok if 'niedersachsen' in np_.inner_text('main').lower() and '-K7' in np_.inner_text('main') else bad)('Niedersachsen Kl. 7 eingerichtet')
+    # 0.20: Hessen
+    np_.click('#sc-edit'); np_.select_option('#sc-st', 'he'); np_.wait_for_timeout(150); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    th = np_.inner_text('main')
+    (ok if 'hessen' in th.lower() and '-H7' in th and np_.locator('[data-sg="passive"]').count() and 'Neu in Klasse 7.' in th else bad)('Hessen Kl. 7: Passiv neu, Code mit H')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------
