@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.22', '2026-11-13', ['NRW, Klasse 9 und 10: Training für die Zentrale Prüfung 10 (ZP10) Englisch – Hörverstehen, Leseverstehen, Wortschatz und Schreiben, mit der Gewichtung wie in der echten Prüfung.']),
   ('0.21', '2026-11-13', ['NRW komplett: Jetzt auch Realschule, Gesamtschule, Sekundarschule und Hauptschule – an Gesamt- und Sekundarschule mit Grund- oder Erweiterungskurs.', 'Lehrwerke: Red Line, Orange Line, Lighthouse, Highlight, Camden Market.']),
   ('0.20', '2026-11-13', ['Jetzt auch für Hessen: Wähle im Schulbereich Hessen und Gymnasium – Wörter und Grammatik kommen Jahrgangsstufe für Jahrgangsstufe nach dem hessischen Lehrplan.']),
   ('0.19', '2026-11-13', ['Jetzt auch für Niedersachsen: Wähle im Schulbereich Niedersachsen und Gymnasium.', 'Lehrwerke: English G Access, Green Line und Camden Town.']),

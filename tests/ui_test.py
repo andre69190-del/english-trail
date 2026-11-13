@@ -641,6 +641,15 @@ with sync_playwright() as p:
     (ok if 'gesamtschule' in tg.lower() and '-U8' in tg and np_.locator('[data-sg="if1"]').count() and np_.locator('[data-sg="passive"]').count() == 0 else bad)('NRW Gesamtschule G-Kurs Kl. 8: if I ja, Passiv noch nicht, Code mit U')
     np_.click('#sc-edit'); np_.click('#sc-nv [data-v="ek"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
     (ok if '-R8' in np_.inner_text('main') and np_.locator('[data-sg="passive"]').count() else bad)('NRW Gesamtschule E-Kurs Kl. 8: Passiv dran, Code mit R')
+    # 0.22: ZP10 NRW (Gesamtschule E-Kurs Kl. 8 → noch nicht; Kl. 10 → ja, MSA)
+    (ok if np_.locator('#grad-open').count() == 0 else bad)('ZP10-Training erst ab Klasse 9')
+    np_.click('#sc-edit'); np_.click('#sc-g [data-v="10"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#grad-open')
+    np_.click('#grad-open'); np_.wait_for_selector('#zp-quiz')
+    tz = np_.inner_text('main')
+    (ok if 'Niveau MSA' in tz and '60 %' in tz and np_.locator('[data-sp]').count() == 1 else bad)('ZP10: Niveau MSA, Gewichtung Schreiben 60 %, Paket Australien/Neuseeland')
+    np_.click('#zp-quiz'); np_.wait_for_selector('.game')
+    (ok if np_.evaluate("() => window.PSApp.game().qs.length") == 24 and play_through(np_, 300) else bad)('ZP10: 24 Fragen durchspielbar')
+    (ok if np_.evaluate("() => window.PSApp.state().grad.zp") is not None else bad)('ZP10: Bestwert gespeichert')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

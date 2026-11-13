@@ -190,6 +190,9 @@
       seo_link_rs: 'Realschule und GMS BW', seo_link_nw: 'Gymnasium NRW', seo_link_by: 'Gymnasium Bayern', seo_link_ni: 'Gymnasium Niedersachsen', seo_link_he: 'Gymnasium Hessen', seo_link: 'Englisch Klasse 5–10',
       ph_title: 'Vokabeln per Foto', ph_d: 'Fotografiere die Vokabelseite aus deinem Englischbuch. Die App liest die Wörter – du prüfst sie kurz und übernimmst sie mit deiner Unit.', ph_or: 'Oder Wort für Wort eintippen:', ph_take: 'Foto aufnehmen oder auswählen', ph_tips: 'Tipps: Buch flach hinlegen, gutes Licht, nur die Vokabelseite, Handy gerade halten. Das Foto bleibt auf deinem Gerät. Beim ersten Mal lädt die App einmalig ca. 8 MB (am besten im WLAN).', ph_load: 'Texterkennung wird geladen …', ph_read: 'Lese die Wörter …', ph_found: '{n} Wörter erkannt – bitte unten prüfen, verbessern und dann übernehmen.', ph_none: 'Ich konnte keine Wörter erkennen. Versuch es mit mehr Licht und das Buch ganz gerade fotografieren.', ph_fail: 'Das hat nicht geklappt. Bitte noch einmal versuchen.', ph_offline: 'Für das erste Foto braucht die App einmal Internet.',
       sw_title: 'Selbst schreiben', sw_d: 'Alle Wörter, die du schon kennst – selbst eintippen. Bringt Extra-Federn für deinen Raben!', sw_few: 'Lerne erst ein paar Wörter – dann kannst du sie hier selbst schreiben.', sw_first: 'Anfangsbuchstabe', sw_end: 'Selbst geschrieben: {p} % richtig. Schreiben merkt man sich am besten!', wm_title: 'Schreib-Moment!', wm_d: 'Dieses Wort kennst du schon – schreib es diesmal selbst.', wm_set: 'Ab und zu ein bekanntes Wort selbst schreiben (empfohlen)',
+      grad_zp10: 'ZP10 Englisch', zp_lv_eesa: 'Niveau EESA (Hauptschulabschluss)', zp_lv_msa: 'Niveau MSA', zp_lv_gym: 'gymnasiale Differenzierung', zp_title: 'Zentrale Prüfung 10 üben', zp_d: 'Aufbau wie in NRW: Teil 1 Hörverstehen (2 Hörtexte, ca. 20 Minuten), Teil 2 Leseverstehen, themengebundener Wortschatz und Schreiben. So zählen die Teile:',
+      zp_p1: 'Teil 1: Hörverstehen', zp_p2r: 'Teil 2: Leseverstehen', zp_p2w: 'Teil 2: Wortschatz', zp_p2s: 'Teil 2: Schreiben', zp_quiz: 'Hören, Lesen, Wortschatz üben (24 Fragen)', zp_write: 'Schreiben üben',
+      zp_note: 'Übungsfragen im Stil der Prüfung, keine Originalaufgaben. Schreiben zählt am meisten – übe es regelmäßig.', zp_cult: 'Bezugskulturen', zp_cult_d: 'In der ZP10 2026 bilden Großbritannien und Neuseeland den Rahmen (kein Faktenwissen abgefragt). Passend dazu:',
       grad: 'Abschlussprüfung', grad_d: 'Training für die Kommunikationsprüfung und die schriftliche Englisch-Prüfung – wie in Baden-Württemberg.', grad_go: 'Zum Prüfungstraining', grad_rs: 'Realschulabschluss', grad_hs: 'Hauptschulabschluss', grad_wrs: 'Werkrealschulabschluss',
       grad_kp: 'Kommunikationsprüfung', grad_kp_d: 'Drei Teile ohne Vorbereitungszeit, zusammen ca. 15 Minuten, je Teil 10 Punkte.', grad_a: 'a) Präsentation deines Schwerpunktthemas', grad_b: 'b) Gespräch in einer Alltagssituation', grad_c: 'c) Sprachmittlung',
       grad_sum: 'Deine Selbsteinschätzung: {p} von 30 Punkten · ungefähr Note {n}', grad_sum_none: 'Übe die drei Teile und schätze dich jeweils selbst ein – dann siehst du deine ungefähre Note.', grad_note: 'Note nach der Punktetabelle des Kultusministeriums, Zwischenwerte gerundet. Echte Bewertung durch zwei Lehrkräfte.',
@@ -339,6 +342,9 @@
       seo_link_rs: 'Realschule/GMS BW', seo_link_nw: 'Gymnasium NRW', seo_link_by: 'Gymnasium Bayern', seo_link_ni: 'Gymnasium Niedersachsen', seo_link_he: 'Gymnasium Hessen', seo_link: 'English years 5–10',
       ph_or: 'Or type word by word:', ph_title: 'Words from a photo', ph_d: 'Take a photo of the vocabulary page in your English book. The app reads the words – you check them quickly and save them with your unit.', ph_take: 'Take or choose a photo', ph_tips: 'Tips: lay the book flat, good light, only the vocabulary page, hold the phone straight. The photo stays on your device. The first time, the app downloads about 8 MB once (best on Wi-Fi).', ph_load: 'Loading text recognition …', ph_read: 'Reading the words …', ph_found: '{n} words found – please check and correct them below, then save.', ph_none: 'I could not find any words. Try more light and hold the book straight.', ph_fail: 'That did not work. Please try again.', ph_offline: 'The first photo needs an internet connection once.',
       sw_title: 'Write it yourself', sw_d: 'All the words you already know – no choices, just type them', sw_few: 'Learn a few words first – then you can write them here yourself.', sw_first: 'First letter', sw_end: 'Written yourself: {p} % right. Writing helps you remember best!', wm_title: 'Writing moment!', wm_d: 'You already know this word – write it yourself this time.', wm_set: 'Now and then write a known word yourself (recommended)',
+      grad_zp10: 'ZP10 English', zp_lv_eesa: 'Level EESA', zp_lv_msa: 'Level MSA', zp_lv_gym: 'grammar school level', zp_title: 'Practise the final exam', zp_d: 'Part 1 listening, part 2 reading, vocabulary and writing:',
+      zp_p1: 'Part 1: Listening', zp_p2r: 'Part 2: Reading', zp_p2w: 'Part 2: Vocabulary', zp_p2s: 'Part 2: Writing', zp_quiz: 'Practise listening, reading, vocabulary (24 questions)', zp_write: 'Practise writing',
+      zp_note: 'Practice questions, not original tasks.', zp_cult: 'Reference cultures', zp_cult_d: 'Great Britain and New Zealand:',
       grad: 'Final exam', grad_d: 'Practice for the speaking exam and the written English exam.', grad_go: 'Exam practice', grad_rs: 'Realschulabschluss', grad_hs: 'Hauptschulabschluss', grad_wrs: 'Werkrealschulabschluss',
       grad_kp: 'Speaking exam', grad_kp_d: 'Three parts, about 15 minutes, 10 points each.', grad_a: 'a) Presentation of your topic', grad_b: 'b) Conversation in an everyday situation', grad_c: 'c) Mediation',
       grad_sum: 'Your self-assessment: {p} of 30 points · about grade {n}', grad_sum_none: 'Practise the three parts and rate yourself.', grad_note: 'Grade from the official points table, rounded.',
@@ -1358,7 +1364,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.21', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.22', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -2295,8 +2301,11 @@
      Kommunikationsprüfung: a) Präsentation Schwerpunktthema, b) dialogisches Sprechen, c) Sprachmittlung – je 10 Punkte (KM BW).
      Selbsteinschätzung in S.grad.sc = {a, b, c}; Stichworte je Thema in S.grad.notes. Schriftlich: A–E (Quiz) + D (Schreiben). */
   var GR = { part: '', topic: '', med: -1, show: false, fq: [], wr: -1, tm: null };
-  function gradExam(g) { var ty = (S.school && S.school.type) || 'gym'; if (ty === 'wrs') return g >= 10 ? 'grad_wrs' : 'grad_hs'; return 'grad_rs'; }
-  function gradOn(g) { return !!(D.grad && /^sek1/.test(schPlan()) && g >= 9); }
+  function gradNrw() { return !!(S.school && S.school.state === 'nw'); }
+  function gradExam(g) { if (gradNrw()) return 'grad_zp10'; var ty = (S.school && S.school.type) || 'gym'; if (ty === 'wrs') return g >= 10 ? 'grad_wrs' : 'grad_hs'; return 'grad_rs'; }
+  function gradOn(g) { return !!(D.grad && g >= 9 && (/^sek1/.test(schPlan()) || gradNrw())); }
+  /* 13.11.2026: ZP10 NRW – Niveau EESA (Hauptschule, G-Kurs) oder MSA/GYM; Gewichtung laut QUA-LiS 2026 */
+  function zpLevel() { return schPlan() === 'nwg' ? 'eesa' : (S.school && S.school.type === 'gym' ? 'gym' : 'msa'); }
   function gradCard(g) {
     if (!gradOn(g)) return '';
     return '<section class="card stack" style="border-color:var(--amber)"><span class="eyebrow">🎓 ' + esc(t(gradExam(g))) + '</span><h2>' + esc(t('grad')) + '</h2><p class="small">' + esc(t('grad_d')) + '</p>' +
@@ -2308,7 +2317,16 @@
   function renderGrad() {
     var sc0 = S.school || {}, g = sc0.grade || 10, st = gradSt(), GD = D.grad, html = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>🎓 ' + esc(t('grad')) + '</h1>';
     if (GR.tm && GR.part !== 'a') { clearInterval(GR.tm); GR.tm = null; }
-    if (!GR.part) {
+    if (!GR.part && gradNrw()) {
+      var lv = zpLevel(), wt = lv === 'eesa' ? [20, 20, 15, 45] : [15, 15, 10, 60], nzi = -1;
+      for (var zi = 0; zi < U.length; zi++) if (U[zi].id === 's9aus') nzi = zi;
+      html += '<p class="small muted">' + esc(t('grad_zp10')) + ' · ' + esc(t('zp_lv_' + lv)) + ' · ' + esc(t('sch_grade').replace('{g}', g)) + '</p>' +
+        '<section class="card stack"><h2>📝 ' + esc(t('zp_title')) + '</h2><p class="small">' + esc(t('zp_d')) + '</p>' +
+        '<ul class="news-ul"><li class="small">' + esc(t('zp_p1')) + ' – ' + wt[0] + ' %</li><li class="small">' + esc(t('zp_p2r')) + ' – ' + wt[1] + ' %</li><li class="small">' + esc(t('zp_p2w')) + ' – ' + wt[2] + ' %</li><li class="small">' + esc(t('zp_p2s')) + ' – ' + wt[3] + ' %</li></ul>' +
+        '<div class="row" style="flex-wrap:wrap"><button class="btn primary" id="zp-quiz">' + esc(t('zp_quiz')) + '</button><button class="btn" id="gw-write">✍️ ' + esc(t('zp_write')) + '</button></div>' +
+        (S.grad && S.grad.zp != null ? '<p class="small num">' + esc(t('best')) + ': ' + S.grad.zp + ' %</p>' : '') + '<p class="small muted">' + esc(t('zp_note')) + '</p></section>' +
+        (nzi >= 0 ? '<section class="card stack"><h2>🌏 ' + esc(t('zp_cult')) + '</h2><p class="small">' + esc(t('zp_cult_d')) + '</p><button class="btn" data-sp="' + nzi + '" style="justify-self:start">' + esc(U[nzi].ico + ' ' + U[nzi].city) + '</button></section>' : '');
+    } else if (!GR.part) {
       var sc = st.sc, n = ['a', 'b', 'c'].filter(function (k) { return sc[k] != null; }).length, pts = (sc.a || 0) + (sc.b || 0) + (sc.c || 0);
       html += '<p class="small muted">' + esc(t(gradExam(g))) + ' · ' + esc(t('sch_grade').replace('{g}', g)) + '</p>' +
         '<section class="card stack"><h2>🎤 ' + esc(t('grad_kp')) + '</h2><p class="small">' + esc(t('grad_kp_d')) + '</p><div class="list">' +
@@ -2348,7 +2366,7 @@
     } else if (GR.part === 'write') {
       if (GR.wr < 0) GR.wr = Math.floor(R() * GD.wr.length);
       var w = GD.wr[GR.wr];
-      html += '<section class="card stack"><span class="eyebrow">D Writing · ' + esc(t('grad_wr_task')) + '</span><h2 lang="en">' + esc(w.t) + '</h2><p>' + esc(w.d) + '</p><p class="small"><b>' + esc(t('sch_write_use')) + ':</b> ' + w.words.map(function (x) { return '<span class="badge" lang="en">' + esc(x) + '</span>'; }).join(' ') + '</p>' +
+      html += '<section class="card stack"><span class="eyebrow">' + (gradNrw() ? esc(t('zp_p2s')) : 'D Writing') + ' · ' + esc(t('grad_wr_task')) + '</span><h2 lang="en">' + esc(w.t) + '</h2><p>' + esc(w.d) + '</p><p class="small"><b>' + esc(t('sch_write_use')) + ':</b> ' + w.words.map(function (x) { return '<span class="badge" lang="en">' + esc(x) + '</span>'; }).join(' ') + '</p>' +
         '<textarea id="gw-txt" rows="10" lang="en" maxlength="3000" aria-label="' + esc(t('grad_wr_task')) + '">' + esc(GR.wtxt || '') + '</textarea><p class="small muted num" id="gw-wc"></p>' +
         '<div class="row" style="flex-wrap:wrap"><button class="btn primary" id="gw-check">' + esc(t('sch_write_check')) + '</button><button class="btn ghost" id="gw-other">' + esc(t('grad_wr_other')) + '</button></div><div id="gw-res"></div></section>';
     }
@@ -2358,6 +2376,8 @@
     document.querySelectorAll('[data-say]').forEach(function (b) { b.onclick = function () { speak(b.getAttribute('data-say')); }; });
     var b;
     if ((b = document.getElementById('gw-quiz'))) b.onclick = function () { startGradQuiz(g); };
+    if ((b = document.getElementById('zp-quiz'))) b.onclick = function () { startZpQuiz(g); };
+    document.querySelectorAll('#app [data-sp]').forEach(function (x) { x.onclick = function () { go('city', +x.getAttribute('data-sp')); }; });
     if ((b = document.getElementById('gw-write'))) b.onclick = function () { GR.part = 'write'; GR.wr = -1; GR.wtxt = ''; renderGrad(); };
     bindSeg('gr-1', function (v) { GR.r1 = +v; renderGrad(); });
     bindSeg('gr-2', function (v) { GR.r2 = +v; renderGrad(); });
@@ -2390,6 +2410,17 @@
         if (r.score >= 80) { addXp(20); markActive(); save(); }
       };
     }
+  }
+  /* ZP10 NRW: Teil 1 Hörverstehen, Teil 2 Leseverstehen + themengebundener Wortschatz (Schreiben separat) */
+  function startZpQuiz(g) {
+    var packs = []; for (var i = 0; i < U.length; i++) { var k = U[i].sch ? schGrade(U[i]) : 0; if (k && k <= g) packs.push(i); }
+    var sl = sentencesOf(packs), wl = []; packs.forEach(function (i) { wl = wl.concat(wordsOf(i)); });
+    if (sl.length < 8 || wl.length < 8) return toast(t('sch_exam_none'));
+    var ss = C.shuffle(sl, R), qs = [], tag = function (q, k) { q.ask = t(k) + ' · ' + q.ask; return q; };
+    ss.slice(0, 8).forEach(function (s) { qs.push(tag(schSentQ(s, sl, 'listen'), 'zp_p1')); });
+    ss.slice(8, 16).forEach(function (s) { qs.push(tag(schSentQ(s, sl, 'read'), 'zp_p2r')); });
+    C.sample(wl, 8, R).forEach(function (x, j) { qs.push(tag(qMC(x, wl, j % 2 ? 'x2pl' : 'pl2x'), 'zp_p2w')); });
+    return runGame({ title: '📝 ' + t('zp_title'), qs: qs, back: 'grad', zp: true, rerun: function () { startZpQuiz(g); } });
   }
   /* Schriftliche Prüfung Teile A, B, C, E: Sätze aus den Schulpaketen bis zur eigenen Klasse, Grammatik nach Lehrplan */
   function startGradQuiz(g) {
@@ -3167,6 +3198,7 @@
     }
     if (g.cfg.selfWrite) { var swp = Math.round(g.right / g.qs.length * 100); if (swp > (S.swBest || 0)) S.swBest = swp; extras += '<div class="banner pop"><strong>✍️ ' + esc(t('sw_end').replace('{p}', swp)) + '</strong></div>'; }
     if (g.cfg.homework) { var hp = Math.round(g.right / g.qs.length * 100); S.hwDone = S.hwDone || {}; if (hp >= (S.hwDone[g.cfg.homework] || 0)) S.hwDone[g.cfg.homework] = hp; extras += '<div class="banner pop"><strong>📮 ' + esc(t('hw')) + ' ' + esc(g.cfg.homework) + ': ' + hp + ' %</strong><button class="btn" id="hw-res" style="margin-top:8px">' + esc(t('hw_res')) + '</button></div>'; }
+    if (g.cfg.zp) { var zpp = Math.round(g.right / g.qs.length * 100); S.grad = S.grad || {}; if (zpp > (S.grad.zp || 0)) S.grad.zp = zpp; }
     if (g.cfg.schoolExam) { var xp = Math.round(g.right / g.qs.length * 100); S.schoolBest = S.schoolBest || {}; if (xp > (S.schoolBest[g.cfg.schoolExam] || 0)) S.schoolBest[g.cfg.schoolExam] = xp; extras += '<div class="banner pop"><strong>' + esc(t('sch_exam')) + ': ' + xp + ' %</strong> · ' + esc(C.schoolMark(xp)) + '</div>'; }
     if (g.cfg.survival) { S.best = S.best || {}; if (g.right > (S.best.survival || 0)) { S.best.survival = g.right; extras += '<div class="banner pop"><strong>' + esc(t('best')) + ': ' + g.right + '</strong></div>'; } }
     if (g.cfg.boss) {

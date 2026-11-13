@@ -301,3 +301,8 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Lehrwerke: Red Line, Orange Line, English G Lighthouse, English G Highlight, Camden Market (je nach Schulart). Recherche-Ergänzung in `content/schule/RECHERCHE_NRW.md` (Realschul-KLP 2022 nicht direkt abrufbar; Gesamtschul-KLP 2004).
 - Abschluss-Training bleibt BW-spezifisch (NRW: ZP 10 → später).
 - Tests: Core 67, UI 192 OK (2×).
+
+## Release 0.22 (13.11.2026) – ZP10-Training NRW
+- Quelle: QUA-LiS „Zentrale Prüfungen 10 Englisch – Informationen zur Prüfung 2026“ (Teil 1 Hörverstehen, 2 Hörtexte, ca. 20 Min.; Teil 2 Leseverstehen, themengebundener Wortschatz, Schreiben; Gewichtung EESA 20/20/15/45, MSA/GYM 15/15/10/60). Bezugskulturen 2026: Großbritannien und Neuseeland.
+- `gradOn` jetzt auch für NRW (alle Schularten, ab Kl. 9); `gradNrw`, `zpLevel` (nwg → EESA, Gymnasium → GYM, sonst MSA), `startZpQuiz` (8 Hören, 8 Lesen, 8 Wortschatz), Bestwert `S.grad.zp`, Schreiben über vorhandene Schreibaufgaben, Link zum Paket Australien/Neuseeland.
+- Tests: UI 196 OK (2×), Core 67.
