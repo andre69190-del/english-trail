@@ -119,6 +119,7 @@ D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.ST
                          'nwrs': {'p': school.NWRS_PACKS, 't': {k: v for k, v in school.NWRS_TOPICS.items() if v}},
                          'nwg': {'p': {k: v for k, v in school.NWG_PACKS.items() if v}, 't': {k: v for k, v in school.NWG_TOPICS.items() if v}},
                          'sn': {'p': school.SN_PACKS, 't': {k: v for k, v in school.SN_TOPICS.items() if v}},
+                         'mv': {'p': school.MV_PACKS, 't': {k: v for k, v in school.MV_TOPICS.items() if v}},
                          'rp': {'p': school.RP_PACKS, 't': {k: v for k, v in school.RP_TOPICS.items() if v}},
                          'he': {'p': school.HE_PACKS, 't': {k: v for k, v in school.HE_TOPICS.items() if v}},
                          'by': {'p': school.BY_PACKS, 't': {k: v for k, v in school.BY_TOPICS.items() if v}},
@@ -131,6 +132,7 @@ assert set(school.SEK1_TOPICS) == set(grammar.TOPICS), ('SEK1_TOPICS unvollstän
 assert set(school.NW_PACKS) == _ids, ('NW_PACKS unvollständig', _ids ^ set(school.NW_PACKS))
 assert set(school.NWRS_TOPICS) == set(grammar.TOPICS) and set(school.NWG_TOPICS) == set(grammar.TOPICS), 'NWRS/NWG_TOPICS unvollständig'
 assert set(school.RP_TOPICS) == set(grammar.TOPICS), 'RP_TOPICS unvollständig'
+assert set(school.MV_PACKS) == _ids and set(school.MV_TOPICS) == set(grammar.TOPICS), ('MV_* unvollständig', _ids ^ set(school.MV_PACKS), set(grammar.TOPICS) ^ set(school.MV_TOPICS))
 assert set(school.SN_PACKS) == _ids and set(school.SN_TOPICS) == set(grammar.TOPICS), 'SN_* unvollständig'
 assert set(school.HE_PACKS) == _ids and set(school.HE_TOPICS) == set(grammar.TOPICS), 'HE_* unvollständig'
 assert set(school.BY_PACKS) == _ids and set(school.BY_TOPICS) == set(grammar.TOPICS), 'BY_* unvollständig'

@@ -671,3 +671,13 @@ test('Schleswig-Holstein/Hamburg: Gymnasium, Gemeinschaftsschule, Stadtteilschul
   assert.ok(S.states.find(x => x.id === 'sh').on && S.states.find(x => x.id === 'hh').on);
   ['sh-gym', 'sh-gms', 'hh-gym', 'hh-sts'].forEach(k => assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k));
 });
+
+test('Thüringen, Sachsen-Anhalt, MV: Schularten und Plan mv', () => {
+  const S = DATA.school; ['th-gym', 'th-rgs', 'th-gms', 'st-gym', 'st-sek', 'st-gms', 'mv-gym', 'mv-reg', 'mv-ge'].forEach(k => {
+    assert.ok(S.combos.includes(k), k); assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k); });
+  assert.equal(S.planOf['mv-gym'], 'mv'); assert.equal(S.nivPlan['st-sek'].hsa, 'sek1g'); assert.equal(S.nivPlan['th-gms'].ob, 'sek1e');
+  const P = DATA.school.plans.mv; assert.equal(P.t.passive, 7); assert.equal(P.t.reported, 7); assert.equal(P.t.if3, 8); assert.equal(P.t.gerund, 8);
+  assert.ok(Object.values(P.t).every(g => g <= 9), 'MV Kl. 10 ohne neue Grammatik');
+  assert.equal(C.schLoOf(7, 'mv'), 7); assert.equal(C.schHiOf(7, 'mv'), 7); assert.equal(C.schLoOf(6, 'mv'), 5);
+  const code = C.hwCode(7, 1, 1, 'mv'); assert.match(code, /^HA7M-/); assert.equal(C.hwParse(code).plan, 'mv');
+});

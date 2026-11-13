@@ -30100,6 +30100,13 @@
  ],
  "news": [
   {
+   "v": "0.27",
+   "date": "2026-11-14",
+   "de": [
+    "Jetzt auch für Thüringen, Sachsen-Anhalt und Mecklenburg-Vorpommern: Gymnasium, Regelschule, Sekundarschule, Regionale Schule, Gemeinschafts- und Gesamtschule. MV-Gymnasium mit eigener Grammatik-Reihenfolge je Klasse."
+   ]
+  },
+  {
    "v": "0.26",
    "date": "2026-11-14",
    "de": [
@@ -30361,7 +30368,7 @@
    {
     "id": "mv",
     "name": "Mecklenburg-Vorpommern",
-    "on": 0
+    "on": 1
    },
    {
     "id": "ni",
@@ -30391,7 +30398,7 @@
    {
     "id": "st",
     "name": "Sachsen-Anhalt",
-    "on": 0
+    "on": 1
    },
    {
     "id": "sh",
@@ -30401,7 +30408,7 @@
    {
     "id": "th",
     "name": "Thüringen",
-    "on": 0
+    "on": 1
    }
   ],
   "types": [
@@ -30469,6 +30476,16 @@
     "id": "sts",
     "name": "Stadtteilschule",
     "on": 1
+   },
+   {
+    "id": "rgs",
+    "name": "Regelschule",
+    "on": 1
+   },
+   {
+    "id": "reg",
+    "name": "Regionale Schule",
+    "on": 1
    }
   ],
   "combos": [
@@ -30498,7 +30515,16 @@
    "sh-gym",
    "sh-gms",
    "hh-gym",
-   "hh-sts"
+   "hh-sts",
+   "th-gym",
+   "th-rgs",
+   "th-gms",
+   "st-gym",
+   "st-sek",
+   "st-gms",
+   "mv-gym",
+   "mv-reg",
+   "mv-ge"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30519,7 +30545,14 @@
    "bb-obs": "sek1",
    "bb-ge": "sek1",
    "sh-gms": "sek1",
-   "hh-sts": "sek1"
+   "hh-sts": "sek1",
+   "th-rgs": "sek1",
+   "th-gms": "sek1",
+   "st-sek": "sek1",
+   "st-gms": "sek1",
+   "mv-gym": "mv",
+   "mv-reg": "sek1",
+   "mv-ge": "sek1"
   },
   "grades": [
    5,
@@ -30619,7 +30652,10 @@
      "bb-gym",
      "bb-ge",
      "sh-gym",
-     "hh-gym"
+     "hh-gym",
+     "th-gym",
+     "st-gym",
+     "mv-gym"
     ]
    },
    {
@@ -30633,7 +30669,10 @@
      "bb-gym",
      "bb-ge",
      "sh-gym",
-     "hh-gym"
+     "hh-gym",
+     "th-gym",
+     "st-gym",
+     "mv-gym"
     ]
    },
    {
@@ -30647,7 +30686,10 @@
      "bb-gym",
      "bb-ge",
      "sh-gym",
-     "hh-gym"
+     "hh-gym",
+     "th-gym",
+     "st-gym",
+     "mv-gym"
     ]
    },
    {
@@ -30683,7 +30725,13 @@
      "bb-obs",
      "bb-ge",
      "sh-gms",
-     "hh-sts"
+     "hh-sts",
+     "th-rgs",
+     "th-gms",
+     "st-sek",
+     "st-gms",
+     "mv-reg",
+     "mv-ge"
     ]
    },
    {
@@ -30693,7 +30741,13 @@
      "nw-ge",
      "nw-sek",
      "sh-gms",
-     "hh-sts"
+     "hh-sts",
+     "th-rgs",
+     "th-gms",
+     "st-sek",
+     "st-gms",
+     "mv-reg",
+     "mv-ge"
     ]
    },
    {
@@ -30707,7 +30761,13 @@
      "bb-obs",
      "bb-ge",
      "sh-gms",
-     "hh-sts"
+     "hh-sts",
+     "th-rgs",
+     "th-gms",
+     "st-sek",
+     "st-gms",
+     "mv-reg",
+     "mv-ge"
     ]
    },
    {
@@ -30721,7 +30781,13 @@
      "bb-obs",
      "bb-ge",
      "sh-gms",
-     "hh-sts"
+     "hh-sts",
+     "th-rgs",
+     "th-gms",
+     "st-sek",
+     "st-gms",
+     "mv-reg",
+     "mv-ge"
     ]
    },
    {
@@ -30736,7 +30802,13 @@
      "bb-obs",
      "bb-ge",
      "sh-gms",
-     "hh-sts"
+     "hh-sts",
+     "th-rgs",
+     "th-gms",
+     "st-sek",
+     "st-gms",
+     "mv-reg",
+     "mv-ge"
     ]
    },
    {
@@ -30957,6 +31029,7 @@
    "nwrs": "555666777788aaaaa9556879998a9|565566665776777889899aaa55556897690aa",
    "nwg": "555666777788aaaaa0556809998a9|56557676570887aaaa00a0005555690060000",
    "sn": "5556567888779a9aa9556779a88a9|5556666656767667787888885555577768898",
+   "mv": "555666777788999aaa556789a99a9|5556666657766777778888985555678889898",
    "rp": "555666777888999aaa556789a9aa9|5556666657777788988989995555679889aaa",
    "he": "555657686668a899a9556779aaaa9|555656665676667878888989555567966997a",
    "by": "555556776687aa9a985568799a8a9|5555666656766777897788995555598669958",
@@ -31013,6 +31086,32 @@
    "hh-sts": [
     "eh",
     "gr"
+   ],
+   "th-rgs": [
+    "rsa",
+    "hsa"
+   ],
+   "th-gms": [
+    "rsa",
+    "hsa",
+    "ob"
+   ],
+   "st-sek": [
+    "rsa",
+    "hsa"
+   ],
+   "st-gms": [
+    "rsa",
+    "hsa",
+    "ob"
+   ],
+   "mv-reg": [
+    "rsa",
+    "hsa"
+   ],
+   "mv-ge": [
+    "ek",
+    "gk"
    ]
   },
   "nivPlan": {
@@ -31053,6 +31152,26 @@
    },
    "hh-sts": {
     "gr": "sek1g"
+   },
+   "th-rgs": {
+    "hsa": "sek1g"
+   },
+   "th-gms": {
+    "hsa": "sek1g",
+    "ob": "sek1e"
+   },
+   "st-sek": {
+    "hsa": "sek1g"
+   },
+   "st-gms": {
+    "hsa": "sek1g",
+    "ob": "sek1e"
+   },
+   "mv-reg": {
+    "hsa": "sek1g"
+   },
+   "mv-ge": {
+    "gk": "sek1g"
    }
   },
   "pOrd": [

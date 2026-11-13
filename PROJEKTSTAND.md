@@ -333,3 +333,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - **Annahme:** Beide Länder beschreiben Grammatik nur funktional (HH: Mindestanforderungen Ende 6/8/10) → Zuordnung über vorhandene Pläne. Notiz `content/schule/RECHERCHE_SH_HH.md`.
 - SEO `englisch-schleswig-holstein-hamburg.html`. index.html 809 KB (Budget 820). Tests: Core 72, UI 205 OK (2×).
 - Offen: ESA/MSA-Training SH/HH; Thüringen, Sachsen-Anhalt, MV, Saarland, Bremen.
+
+## Release 0.27 (14.11.2026) – Thüringen, Sachsen-Anhalt, Mecklenburg-Vorpommern
+- Neue Schularten (angehängt): `rgs` Regelschule, `reg` Regionale Schule. Neue Niveaus `rsa` (Realschulabschluss/Mittlere Reife → sek1), `hsa` (Hauptschulabschluss/Berufsreife → sek1g); `ob` → sek1e.
+- COMBOS th-gym/rgs/gms, st-gym/sek/gms, mv-gym/reg/ge. TH/ST Gymnasium → Grundzuordnung (**Annahme**, Plan-PDF ST nur mit Anmeldung, TH ohne Einzelzuordnung).
+- **Neuer Plan `mv`** (Codes **M**) nach Rahmenplan MV Gymnasium 7–10 (2019): Kl. 7 Passiv, indirekte Rede, if II, past perfect; Kl. 8 Gerundium, Partizipien, if III; Kl. 9 Zeitformen-/Zukunftsüberblick; Kl. 10 nichts Neues. Ab Kl. 7 einzelne Klassen (schLoOf/schHiOf), 5/6 Doppeljahrgang.
+- Notiz `content/schule/RECHERCHE_TH_ST_MV.md`. SEO `englisch-thueringen-sachsen-anhalt-mv.html`.
+- index.html 811 KB (Budget 820). Tests: Core 73, UI 210 OK (2×). Offen: Saarland, Bremen.
