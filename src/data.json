@@ -19912,6 +19912,2076 @@
    "ico": "🖋️"
   },
   {
+   "id": "b_apply",
+   "city": "Applying for a job",
+   "cityDe": "Beruf: Bewerbung und Vorstellungsgespräch",
+   "cityEn": "Applying for a job",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Bewerbung und Vorstellungsgespräch",
+    "Bewerbung und Vorstellungsgespräch"
+   ],
+   "can": [
+    "Ich kann mich auf Englisch bewerben, meinen Lebenslauf erklären und im Vorstellungsgespräch antworten.",
+    "Ich kann mich auf Englisch bewerben, meinen Lebenslauf erklären und im Vorstellungsgespräch antworten."
+   ],
+   "tip": [
+    "Im Lebenslauf (CV) und im Gespräch: Erfahrungen im simple past („I worked …“), was bis heute gilt im present perfect („I have been an apprentice since 2025“).",
+    "Im Lebenslauf (CV) und im Gespräch: Erfahrungen im simple past („I worked …“), was bis heute gilt im present perfect („I have been an apprentice since 2025“)."
+   ],
+   "fact": [
+    "In Großbritannien und den USA kommt in den Lebenslauf meist kein Foto und kein Geburtsdatum – so soll niemand benachteiligt werden.",
+    "In Großbritannien und den USA kommt in den Lebenslauf meist kein Foto und kein Geburtsdatum – so soll niemand benachteiligt werden."
+   ],
+   "words": [
+    [
+     "application",
+     "Bewerbung",
+     "Bewerbung"
+    ],
+    [
+     "to apply for",
+     "sich bewerben um",
+     "sich bewerben um"
+    ],
+    [
+     "CV (curriculum vitae)",
+     "Lebenslauf",
+     "Lebenslauf"
+    ],
+    [
+     "cover letter",
+     "Anschreiben",
+     "Anschreiben"
+    ],
+    [
+     "job interview",
+     "Vorstellungsgespräch",
+     "Vorstellungsgespräch"
+    ],
+    [
+     "apprenticeship",
+     "Ausbildung",
+     "Ausbildung"
+    ],
+    [
+     "apprentice",
+     "Auszubildende(r)",
+     "Auszubildende(r)"
+    ],
+    [
+     "qualification",
+     "Abschluss / Qualifikation",
+     "Abschluss / Qualifikation"
+    ],
+    [
+     "work experience",
+     "Berufserfahrung / Praktikum",
+     "Berufserfahrung / Praktikum"
+    ],
+    [
+     "skills",
+     "Fähigkeiten",
+     "Fähigkeiten"
+    ],
+    [
+     "reliable",
+     "zuverlässig",
+     "zuverlässig"
+    ],
+    [
+     "strength",
+     "Stärke",
+     "Stärke"
+    ],
+    [
+     "weakness",
+     "Schwäche",
+     "Schwäche"
+    ],
+    [
+     "to be responsible for",
+     "verantwortlich sein für",
+     "verantwortlich sein für"
+    ],
+    [
+     "employer",
+     "Arbeitgeber(in)",
+     "Arbeitgeber(in)"
+    ],
+    [
+     "salary",
+     "Gehalt",
+     "Gehalt"
+    ]
+   ],
+   "sentences": [
+    [
+     "I am writing to apply for the position of trainee in your company.",
+     "Hiermit bewerbe ich mich um die Stelle als Auszubildende(r) in Ihrem Unternehmen.",
+     "Hiermit bewerbe ich mich um die Stelle als Auszubildende(r) in Ihrem Unternehmen."
+    ],
+    [
+     "I have been an apprentice at a car repair shop since September.",
+     "Seit September bin ich Auszubildender in einer Autowerkstatt.",
+     "Seit September bin ich Auszubildender in einer Autowerkstatt."
+    ],
+    [
+     "During my work experience, I was responsible for the stock.",
+     "Während meines Praktikums war ich für das Lager verantwortlich.",
+     "Während meines Praktikums war ich für das Lager verantwortlich."
+    ],
+    [
+     "One of my strengths is that I am very reliable.",
+     "Eine meiner Stärken ist, dass ich sehr zuverlässig bin.",
+     "Eine meiner Stärken ist, dass ich sehr zuverlässig bin."
+    ],
+    [
+     "Please find my CV attached.",
+     "Meinen Lebenslauf finden Sie im Anhang.",
+     "Meinen Lebenslauf finden Sie im Anhang."
+    ],
+    [
+     "I look forward to hearing from you.",
+     "Ich freue mich darauf, von Ihnen zu hören.",
+     "Ich freue mich darauf, von Ihnen zu hören."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Videogespräch mit Ms Taylor von einer Firma in Dublin – du bewirbst dich um ein Auslandspraktikum.",
+     "Videogespräch mit Ms Taylor von einer Firma in Dublin – du bewirbst dich um ein Auslandspraktikum."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Thank you for your application. Could you tell me a bit about yourself?",
+       "Danke für Ihre Bewerbung. Können Sie etwas über sich erzählen?",
+       "Danke für Ihre Bewerbung. Können Sie etwas über sich erzählen?"
+      ],
+      "opts": [
+       [
+        "Sure. I'm in my second year of an apprenticeship, and I've always enjoyed working with people.",
+        "Gern. Ich bin im zweiten Ausbildungsjahr und habe schon immer gern mit Menschen gearbeitet.",
+        "Gern. Ich bin im zweiten Ausbildungsjahr und habe schon immer gern mit Menschen gearbeitet.",
+        1
+       ],
+       [
+        "I am 19 and I am liking my job very much since two years.",
+        "Ich bin 19 und mag meinen Job seit zwei Jahren (fehlerhaft).",
+        "Ich bin 19 und mag meinen Job seit zwei Jahren (fehlerhaft).",
+        0
+       ]
+      ],
+      "hint": [
+       "Kurz vorstellen: present perfect für „schon immer / seit“.",
+       "Kurz vorstellen: present perfect für „schon immer / seit“."
+      ]
+     },
+     {
+      "npc": [
+       "What would you say is your greatest strength?",
+       "Was ist Ihre größte Stärke?",
+       "Was ist Ihre größte Stärke?"
+      ],
+      "opts": [
+       [
+        "I'm very reliable – I've never been late in two years.",
+        "Ich bin sehr zuverlässig – ich war in zwei Jahren nie zu spät.",
+        "Ich bin sehr zuverlässig – ich war in zwei Jahren nie zu spät.",
+        1
+       ],
+       [
+        "I have no weaknesses.",
+        "Ich habe keine Schwächen.",
+        "Ich habe keine Schwächen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Stärke nennen + Beispiel.",
+       "Stärke nennen + Beispiel."
+      ]
+     },
+     {
+      "npc": [
+       "Great. Do you have any questions for us?",
+       "Prima. Haben Sie Fragen an uns?",
+       "Prima. Haben Sie Fragen an uns?"
+      ],
+      "opts": [
+       [
+        "Yes – what would a typical day look like for an intern?",
+        "Ja – wie sähe ein typischer Tag für einen Praktikanten aus?",
+        "Ja – wie sähe ein typischer Tag für einen Praktikanten aus?",
+        1
+       ],
+       [
+        "No. When do I get the money?",
+        "Nein. Wann bekomme ich das Geld?",
+        "Nein. Wann bekomme ich das Geld?",
+        0
+       ]
+      ],
+      "hint": [
+       "Interesse zeigen mit einer Frage zur Arbeit.",
+       "Interesse zeigen mit einer Frage zur Arbeit."
+      ]
+     }
+    ],
+    "outro": [
+     "Ms Taylor lächelt: „We’ll be in touch by Friday.“ Eine Woche später kommt die Zusage.",
+     "Ms Taylor lächelt: „We’ll be in touch by Friday.“ Eine Woche später kommt die Zusage."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "📄",
+   "bs": 1
+  },
+  {
+   "id": "b_phone",
+   "city": "Business calls",
+   "cityDe": "Beruf: Telefonieren im Beruf",
+   "cityEn": "Business calls",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Telefonieren im Beruf",
+    "Telefonieren im Beruf"
+   ],
+   "can": [
+    "Ich kann geschäftliche Anrufe annehmen, weiterverbinden, Nachrichten aufnehmen und Termine vereinbaren.",
+    "Ich kann geschäftliche Anrufe annehmen, weiterverbinden, Nachrichten aufnehmen und Termine vereinbaren."
+   ],
+   "tip": [
+    "Höflich am Telefon: „Could you …?“, „Would you like to leave a message?“, „I’ll put you through.“ Buchstabieren mit dem Alphabet üben!",
+    "Höflich am Telefon: „Could you …?“, „Would you like to leave a message?“, „I’ll put you through.“ Buchstabieren mit dem Alphabet üben!"
+   ],
+   "fact": [
+    "Am Telefon meldet man sich auf Englisch mit Firmenname und eigenem Namen: „Good morning, Miller Electrics, Anna speaking. How can I help you?“",
+    "Am Telefon meldet man sich auf Englisch mit Firmenname und eigenem Namen: „Good morning, Miller Electrics, Anna speaking. How can I help you?“"
+   ],
+   "words": [
+    [
+     "to call back",
+     "zurückrufen",
+     "zurückrufen"
+    ],
+    [
+     "to put through",
+     "durchstellen / verbinden",
+     "durchstellen / verbinden"
+    ],
+    [
+     "to hold the line",
+     "am Apparat bleiben",
+     "am Apparat bleiben"
+    ],
+    [
+     "extension",
+     "Durchwahl",
+     "Durchwahl"
+    ],
+    [
+     "to leave a message",
+     "eine Nachricht hinterlassen",
+     "eine Nachricht hinterlassen"
+    ],
+    [
+     "to take a message",
+     "etwas ausrichten",
+     "etwas ausrichten"
+    ],
+    [
+     "to spell",
+     "buchstabieren",
+     "buchstabieren"
+    ],
+    [
+     "appointment",
+     "Termin",
+     "Termin"
+    ],
+    [
+     "to arrange",
+     "vereinbaren",
+     "vereinbaren"
+    ],
+    [
+     "to confirm",
+     "bestätigen",
+     "bestätigen"
+    ],
+    [
+     "to cancel",
+     "absagen",
+     "absagen"
+    ],
+    [
+     "available",
+     "erreichbar / verfügbar",
+     "erreichbar / verfügbar"
+    ],
+    [
+     "engaged / busy",
+     "besetzt",
+     "besetzt"
+    ],
+    [
+     "voicemail",
+     "Mailbox",
+     "Mailbox"
+    ],
+    [
+     "urgent",
+     "dringend",
+     "dringend"
+    ],
+    [
+     "I'm afraid …",
+     "Leider …",
+     "Leider …"
+    ]
+   ],
+   "sentences": [
+    [
+     "Good morning, Miller Electrics, Anna speaking. How can I help you?",
+     "Guten Morgen, Miller Electrics, Anna am Apparat. Wie kann ich Ihnen helfen?",
+     "Guten Morgen, Miller Electrics, Anna am Apparat. Wie kann ich Ihnen helfen?"
+    ],
+    [
+     "I'm afraid Mr Smith is not available at the moment.",
+     "Leider ist Herr Smith im Moment nicht erreichbar.",
+     "Leider ist Herr Smith im Moment nicht erreichbar."
+    ],
+    [
+     "Would you like to leave a message?",
+     "Möchten Sie eine Nachricht hinterlassen?",
+     "Möchten Sie eine Nachricht hinterlassen?"
+    ],
+    [
+     "Could you spell your surname, please?",
+     "Könnten Sie bitte Ihren Nachnamen buchstabieren?",
+     "Könnten Sie bitte Ihren Nachnamen buchstabieren?"
+    ],
+    [
+     "Please hold the line. I'll put you through.",
+     "Bitte bleiben Sie dran. Ich verbinde Sie.",
+     "Bitte bleiben Sie dran. Ich verbinde Sie."
+    ],
+    [
+     "I'm calling to confirm our appointment on Thursday at ten.",
+     "Ich rufe an, um unseren Termin am Donnerstag um zehn zu bestätigen.",
+     "Ich rufe an, um unseren Termin am Donnerstag um zehn zu bestätigen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Du sitzt am Empfang deines Ausbildungsbetriebs. Ein Kunde aus England ruft an.",
+     "Du sitzt am Empfang deines Ausbildungsbetriebs. Ein Kunde aus England ruft an."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hello, this is David Brown. Can I speak to Mrs Weber, please?",
+       "Hallo, hier ist David Brown. Kann ich bitte Frau Weber sprechen?",
+       "Hallo, hier ist David Brown. Kann ich bitte Frau Weber sprechen?"
+      ],
+      "opts": [
+       [
+        "I'm afraid she's in a meeting. Would you like to leave a message?",
+        "Sie ist leider in einer Besprechung. Möchten Sie eine Nachricht hinterlassen?",
+        "Sie ist leider in einer Besprechung. Möchten Sie eine Nachricht hinterlassen?",
+        1
+       ],
+       [
+        "No, she is not here. Bye.",
+        "Nein, sie ist nicht da. Tschüss.",
+        "Nein, sie ist nicht da. Tschüss.",
+        0
+       ]
+      ],
+      "hint": [
+       "Höflich absagen + Hilfe anbieten.",
+       "Höflich absagen + Hilfe anbieten."
+      ]
+     },
+     {
+      "npc": [
+       "Yes, please. Could she call me back today? It's urgent.",
+       "Ja, bitte. Kann sie mich heute zurückrufen? Es ist dringend.",
+       "Ja, bitte. Kann sie mich heute zurückrufen? Es ist dringend."
+      ],
+      "opts": [
+       [
+        "Of course. Could you spell your surname and give me your number?",
+        "Natürlich. Könnten Sie Ihren Nachnamen buchstabieren und mir Ihre Nummer geben?",
+        "Natürlich. Könnten Sie Ihren Nachnamen buchstabieren und mir Ihre Nummer geben?",
+        1
+       ],
+       [
+        "Of course. She call you tomorrow maybe.",
+        "Natürlich. Sie ruft vielleicht morgen an (fehlerhaft).",
+        "Natürlich. Sie ruft vielleicht morgen an (fehlerhaft).",
+        0
+       ]
+      ],
+      "hint": [
+       "Daten aufnehmen: Name buchstabieren lassen, Nummer.",
+       "Daten aufnehmen: Name buchstabieren lassen, Nummer."
+      ]
+     },
+     {
+      "npc": [
+       "It's B-R-O-W-N, and my number is 0044 20 7946 0321.",
+       "B-R-O-W-N, und meine Nummer ist 0044 20 7946 0321.",
+       "B-R-O-W-N, und meine Nummer ist 0044 20 7946 0321."
+      ],
+      "opts": [
+       [
+        "Thank you, Mr Brown. I'll make sure she gets the message.",
+        "Danke, Herr Brown. Ich sorge dafür, dass sie die Nachricht bekommt.",
+        "Danke, Herr Brown. Ich sorge dafür, dass sie die Nachricht bekommt.",
+        1
+       ],
+       [
+        "OK. Is that all?",
+        "OK. War es das?",
+        "OK. War es das?",
+        0
+       ]
+      ],
+      "hint": [
+       "Zusage machen: „I’ll make sure …“",
+       "Zusage machen: „I’ll make sure …“"
+      ]
+     }
+    ],
+    "outro": [
+     "Frau Weber ruft Mr Brown eine Stunde später zurück – der Auftrag ist gerettet.",
+     "Frau Weber ruft Mr Brown eine Stunde später zurück – der Auftrag ist gerettet."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "☎️",
+   "bs": 1
+  },
+  {
+   "id": "b_mail",
+   "city": "Business e-mails",
+   "cityDe": "Beruf: Geschäftliche E-Mails",
+   "cityEn": "Business e-mails",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Geschäftliche E-Mails",
+    "Geschäftliche E-Mails"
+   ],
+   "can": [
+    "Ich kann geschäftliche E-Mails mit passender Anrede, klarem Anliegen und höflichem Schluss schreiben.",
+    "Ich kann geschäftliche E-Mails mit passender Anrede, klarem Anliegen und höflichem Schluss schreiben."
+   ],
+   "tip": [
+    "Aufbau: Anrede („Dear Ms Taylor,“) – Anlass („I am writing to …“) – Anliegen – Schluss („Kind regards“). Unbekannter Name: „Dear Sir or Madam,“",
+    "Aufbau: Anrede („Dear Ms Taylor,“) – Anlass („I am writing to …“) – Anliegen – Schluss („Kind regards“). Unbekannter Name: „Dear Sir or Madam,“"
+   ],
+   "fact": [
+    "„Yours sincerely“ schreibt man, wenn man den Namen kennt, „Yours faithfully“ bei „Dear Sir or Madam“. In E-Mails ist „Kind regards“ heute am häufigsten.",
+    "„Yours sincerely“ schreibt man, wenn man den Namen kennt, „Yours faithfully“ bei „Dear Sir or Madam“. In E-Mails ist „Kind regards“ heute am häufigsten."
+   ],
+   "words": [
+    [
+     "Dear Sir or Madam",
+     "Sehr geehrte Damen und Herren",
+     "Sehr geehrte Damen und Herren"
+    ],
+    [
+     "regarding",
+     "bezüglich",
+     "bezüglich"
+    ],
+    [
+     "enquiry",
+     "Anfrage",
+     "Anfrage"
+    ],
+    [
+     "to attach",
+     "anhängen",
+     "anhängen"
+    ],
+    [
+     "attachment",
+     "Anhang",
+     "Anhang"
+    ],
+    [
+     "order",
+     "Bestellung / Auftrag",
+     "Bestellung / Auftrag"
+    ],
+    [
+     "delivery",
+     "Lieferung",
+     "Lieferung"
+    ],
+    [
+     "invoice",
+     "Rechnung",
+     "Rechnung"
+    ],
+    [
+     "to apologise for",
+     "sich entschuldigen für",
+     "sich entschuldigen für"
+    ],
+    [
+     "inconvenience",
+     "Unannehmlichkeit",
+     "Unannehmlichkeit"
+    ],
+    [
+     "as soon as possible",
+     "so bald wie möglich",
+     "so bald wie möglich"
+    ],
+    [
+     "to reply",
+     "antworten",
+     "antworten"
+    ],
+    [
+     "further information",
+     "weitere Informationen",
+     "weitere Informationen"
+    ],
+    [
+     "Kind regards",
+     "Mit freundlichen Grüßen",
+     "Mit freundlichen Grüßen"
+    ],
+    [
+     "in advance",
+     "im Voraus",
+     "im Voraus"
+    ],
+    [
+     "deadline",
+     "Frist / Termin",
+     "Frist / Termin"
+    ]
+   ],
+   "sentences": [
+    [
+     "I am writing regarding your enquiry of 3 May.",
+     "Ich schreibe Ihnen bezüglich Ihrer Anfrage vom 3. Mai.",
+     "Ich schreibe Ihnen bezüglich Ihrer Anfrage vom 3. Mai."
+    ],
+    [
+     "Please find the invoice attached.",
+     "Die Rechnung finden Sie im Anhang.",
+     "Die Rechnung finden Sie im Anhang."
+    ],
+    [
+     "We apologise for any inconvenience caused.",
+     "Wir entschuldigen uns für eventuelle Unannehmlichkeiten.",
+     "Wir entschuldigen uns für eventuelle Unannehmlichkeiten."
+    ],
+    [
+     "Could you please send us further information?",
+     "Könnten Sie uns bitte weitere Informationen schicken?",
+     "Könnten Sie uns bitte weitere Informationen schicken?"
+    ],
+    [
+     "The delivery will arrive by Friday at the latest.",
+     "Die Lieferung kommt spätestens am Freitag an.",
+     "Die Lieferung kommt spätestens am Freitag an."
+    ],
+    [
+     "Thank you in advance for your help.",
+     "Vielen Dank im Voraus für Ihre Hilfe.",
+     "Vielen Dank im Voraus für Ihre Hilfe."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Deine Chefin bittet dich, eine E-Mail an einen Lieferanten in Manchester zu schreiben. Du wählst die passenden Sätze.",
+     "Deine Chefin bittet dich, eine E-Mail an einen Lieferanten in Manchester zu schreiben. Du wählst die passenden Sätze."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "How do you start an e-mail to someone whose name you don't know?",
+       "Wie beginnt man eine E-Mail an jemanden, dessen Namen man nicht kennt?",
+       "Wie beginnt man eine E-Mail an jemanden, dessen Namen man nicht kennt?"
+      ],
+      "opts": [
+       [
+        "Dear Sir or Madam,",
+        "Sehr geehrte Damen und Herren,",
+        "Sehr geehrte Damen und Herren,",
+        1
+       ],
+       [
+        "Hey you,",
+        "Hey du,",
+        "Hey du,",
+        0
+       ]
+      ],
+      "hint": [
+       "Formelle Anrede ohne Namen.",
+       "Formelle Anrede ohne Namen."
+      ]
+     },
+     {
+      "npc": [
+       "The delivery is late. How do you say that politely?",
+       "Die Lieferung ist zu spät. Wie sagt man das höflich?",
+       "Die Lieferung ist zu spät. Wie sagt man das höflich?"
+      ],
+      "opts": [
+       [
+        "Unfortunately, we have not received the order yet. Could you please check the status?",
+        "Leider haben wir die Bestellung noch nicht erhalten. Könnten Sie bitte den Stand prüfen?",
+        "Leider haben wir die Bestellung noch nicht erhalten. Könnten Sie bitte den Stand prüfen?",
+        1
+       ],
+       [
+        "Where is our stuff? Send it now!",
+        "Wo ist unser Zeug? Schicken Sie es sofort!",
+        "Wo ist unser Zeug? Schicken Sie es sofort!",
+        0
+       ]
+      ],
+      "hint": [
+       "Höflich: „Unfortunately …“ + „Could you please …?“",
+       "Höflich: „Unfortunately …“ + „Could you please …?“"
+      ]
+     },
+     {
+      "npc": [
+       "And how do you end the e-mail?",
+       "Und wie beendet man die E-Mail?",
+       "Und wie beendet man die E-Mail?"
+      ],
+      "opts": [
+       [
+        "Thank you in advance. Kind regards, …",
+        "Vielen Dank im Voraus. Mit freundlichen Grüßen, …",
+        "Vielen Dank im Voraus. Mit freundlichen Grüßen, …",
+        1
+       ],
+       [
+        "Bye!!! xoxo",
+        "Tschüss!!! Küsschen",
+        "Tschüss!!! Küsschen",
+        0
+       ]
+      ],
+      "hint": [
+       "Höflicher Schluss.",
+       "Höflicher Schluss."
+      ]
+     }
+    ],
+    "outro": [
+     "Am nächsten Morgen antwortet der Lieferant: Die Ware ist unterwegs – mit Entschuldigung.",
+     "Am nächsten Morgen antwortet der Lieferant: Die Ware ist unterwegs – mit Entschuldigung."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "📧",
+   "bs": 1
+  },
+  {
+   "id": "b_cust",
+   "city": "Customer service",
+   "cityDe": "Beruf: Kundengespräch und Beschwerden",
+   "cityEn": "Customer service",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Kundengespräch und Beschwerden",
+    "Kundengespräch und Beschwerden"
+   ],
+   "can": [
+    "Ich kann Kunden beraten, auf Beschwerden reagieren und Lösungen anbieten.",
+    "Ich kann Kunden beraten, auf Beschwerden reagieren und Lösungen anbieten."
+   ],
+   "tip": [
+    "Beschwerden: zuhören, entschuldigen, Lösung anbieten. „I’m sorry to hear that.“ – „Let me see what I can do.“ – „Would a replacement be OK?“",
+    "Beschwerden: zuhören, entschuldigen, Lösung anbieten. „I’m sorry to hear that.“ – „Let me see what I can do.“ – „Would a replacement be OK?“"
+   ],
+   "fact": [
+    "In englischsprachigen Ländern gilt: Erst Verständnis zeigen, dann die Lösung. Ein freundliches „I completely understand“ wirkt oft Wunder.",
+    "In englischsprachigen Ländern gilt: Erst Verständnis zeigen, dann die Lösung. Ein freundliches „I completely understand“ wirkt oft Wunder."
+   ],
+   "words": [
+    [
+     "customer",
+     "Kunde / Kundin",
+     "Kunde / Kundin"
+    ],
+    [
+     "complaint",
+     "Beschwerde",
+     "Beschwerde"
+    ],
+    [
+     "to complain about",
+     "sich beschweren über",
+     "sich beschweren über"
+    ],
+    [
+     "faulty",
+     "fehlerhaft / defekt",
+     "fehlerhaft / defekt"
+    ],
+    [
+     "refund",
+     "Rückerstattung",
+     "Rückerstattung"
+    ],
+    [
+     "replacement",
+     "Ersatz",
+     "Ersatz"
+    ],
+    [
+     "receipt",
+     "Kassenbon / Quittung",
+     "Kassenbon / Quittung"
+    ],
+    [
+     "warranty",
+     "Garantie",
+     "Garantie"
+    ],
+    [
+     "to deal with",
+     "sich kümmern um",
+     "sich kümmern um"
+    ],
+    [
+     "to recommend",
+     "empfehlen",
+     "empfehlen"
+    ],
+    [
+     "discount",
+     "Rabatt",
+     "Rabatt"
+    ],
+    [
+     "in stock",
+     "vorrätig",
+     "vorrätig"
+    ],
+    [
+     "out of stock",
+     "ausverkauft",
+     "ausverkauft"
+    ],
+    [
+     "to exchange",
+     "umtauschen",
+     "umtauschen"
+    ],
+    [
+     "satisfied",
+     "zufrieden",
+     "zufrieden"
+    ],
+    [
+     "I'm sorry to hear that",
+     "Das tut mir leid",
+     "Das tut mir leid"
+    ]
+   ],
+   "sentences": [
+    [
+     "I'm sorry to hear that. Let me see what I can do.",
+     "Das tut mir leid. Ich schaue, was ich tun kann.",
+     "Das tut mir leid. Ich schaue, was ich tun kann."
+    ],
+    [
+     "Do you have the receipt with you?",
+     "Haben Sie den Kassenbon dabei?",
+     "Haben Sie den Kassenbon dabei?"
+    ],
+    [
+     "We can offer you a replacement or a refund.",
+     "Wir können Ihnen Ersatz oder eine Rückerstattung anbieten.",
+     "Wir können Ihnen Ersatz oder eine Rückerstattung anbieten."
+    ],
+    [
+     "I'm afraid this model is out of stock at the moment.",
+     "Leider ist dieses Modell gerade ausverkauft.",
+     "Leider ist dieses Modell gerade ausverkauft."
+    ],
+    [
+     "I would recommend this one – it has a two-year warranty.",
+     "Ich würde dieses empfehlen – es hat zwei Jahre Garantie.",
+     "Ich würde dieses empfehlen – es hat zwei Jahre Garantie."
+    ],
+    [
+     "Is there anything else I can help you with?",
+     "Kann ich Ihnen sonst noch helfen?",
+     "Kann ich Ihnen sonst noch helfen?"
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Eine Kundin aus Kanada kommt verärgert in euren Laden. Ihr neuer Föhn funktioniert nicht.",
+     "Eine Kundin aus Kanada kommt verärgert in euren Laden. Ihr neuer Föhn funktioniert nicht."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "I bought this hairdryer here last week and it already doesn't work!",
+       "Ich habe den Föhn letzte Woche hier gekauft und er funktioniert schon nicht mehr!",
+       "Ich habe den Föhn letzte Woche hier gekauft und er funktioniert schon nicht mehr!"
+      ],
+      "opts": [
+       [
+        "I'm sorry to hear that. Do you have the receipt with you?",
+        "Das tut mir leid. Haben Sie den Kassenbon dabei?",
+        "Das tut mir leid. Haben Sie den Kassenbon dabei?",
+        1
+       ],
+       [
+        "Not my problem. You broke it.",
+        "Nicht mein Problem. Sie haben ihn kaputt gemacht.",
+        "Nicht mein Problem. Sie haben ihn kaputt gemacht.",
+        0
+       ]
+      ],
+      "hint": [
+       "Verständnis zeigen, dann nach dem Beleg fragen.",
+       "Verständnis zeigen, dann nach dem Beleg fragen."
+      ]
+     },
+     {
+      "npc": [
+       "Yes, here it is. What can you do?",
+       "Ja, hier ist er. Was können Sie tun?",
+       "Ja, hier ist er. Was können Sie tun?"
+      ],
+      "opts": [
+       [
+        "We can exchange it for a new one or give you a refund – whichever you prefer.",
+        "Wir können ihn umtauschen oder Ihnen das Geld zurückgeben – wie es Ihnen lieber ist.",
+        "Wir können ihn umtauschen oder Ihnen das Geld zurückgeben – wie es Ihnen lieber ist.",
+        1
+       ],
+       [
+        "We can do nothing for you.",
+        "Wir können nichts für Sie tun.",
+        "Wir können nichts für Sie tun.",
+        0
+       ]
+      ],
+      "hint": [
+       "Lösungen anbieten.",
+       "Lösungen anbieten."
+      ]
+     },
+     {
+      "npc": [
+       "A new one, please. Thank you – that's very kind.",
+       "Einen neuen, bitte. Danke – das ist sehr nett.",
+       "Einen neuen, bitte. Danke – das ist sehr nett."
+      ],
+      "opts": [
+       [
+        "You're welcome. Is there anything else I can help you with?",
+        "Gern geschehen. Kann ich Ihnen sonst noch helfen?",
+        "Gern geschehen. Kann ich Ihnen sonst noch helfen?",
+        1
+       ],
+       [
+        "Yes, yes. Go now.",
+        "Ja, ja. Gehen Sie jetzt.",
+        "Ja, ja. Gehen Sie jetzt.",
+        0
+       ]
+      ],
+      "hint": [
+       "Freundlicher Abschluss.",
+       "Freundlicher Abschluss."
+      ]
+     }
+    ],
+    "outro": [
+     "Die Kundin geht zufrieden und schreibt später eine Fünf-Sterne-Bewertung.",
+     "Die Kundin geht zufrieden und schreibt später eine Fünf-Sterne-Bewertung."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "🤝",
+   "bs": 1
+  },
+  {
+   "id": "b_safe",
+   "city": "Health and safety at work",
+   "cityDe": "Beruf: Arbeitssicherheit",
+   "cityEn": "Health and safety at work",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Arbeitssicherheit",
+    "Arbeitssicherheit"
+   ],
+   "can": [
+    "Ich kann Sicherheitsregeln verstehen und erklären, Gefahren melden und bei einem Unfall Hilfe holen.",
+    "Ich kann Sicherheitsregeln verstehen und erklären, Gefahren melden und bei einem Unfall Hilfe holen."
+   ],
+   "tip": [
+    "Regeln: „You must wear …“, „You mustn’t …“ (= verboten!), „Make sure you …“. Warnungen kurz und klar: „Watch out!“, „Careful – the floor is wet.“",
+    "Regeln: „You must wear …“, „You mustn’t …“ (= verboten!), „Make sure you …“. Warnungen kurz und klar: „Watch out!“, „Careful – the floor is wet.“"
+   ],
+   "fact": [
+    "Achtung, falscher Freund: „mustn’t“ heißt „darf nicht“, nicht „muss nicht“. „Muss nicht“ heißt „don’t have to“ oder „needn’t“.",
+    "Achtung, falscher Freund: „mustn’t“ heißt „darf nicht“, nicht „muss nicht“. „Muss nicht“ heißt „don’t have to“ oder „needn’t“."
+   ],
+   "words": [
+    [
+     "safety",
+     "Sicherheit",
+     "Sicherheit"
+    ],
+    [
+     "hazard",
+     "Gefahr / Gefahrenquelle",
+     "Gefahr / Gefahrenquelle"
+    ],
+    [
+     "protective clothing",
+     "Schutzkleidung",
+     "Schutzkleidung"
+    ],
+    [
+     "safety goggles",
+     "Schutzbrille",
+     "Schutzbrille"
+    ],
+    [
+     "gloves",
+     "Handschuhe",
+     "Handschuhe"
+    ],
+    [
+     "hard hat",
+     "Schutzhelm",
+     "Schutzhelm"
+    ],
+    [
+     "fire exit",
+     "Notausgang",
+     "Notausgang"
+    ],
+    [
+     "fire extinguisher",
+     "Feuerlöscher",
+     "Feuerlöscher"
+    ],
+    [
+     "first aid kit",
+     "Verbandskasten",
+     "Verbandskasten"
+    ],
+    [
+     "injury",
+     "Verletzung",
+     "Verletzung"
+    ],
+    [
+     "to injure",
+     "verletzen",
+     "verletzen"
+    ],
+    [
+     "to report",
+     "melden",
+     "melden"
+    ],
+    [
+     "slippery",
+     "rutschig",
+     "rutschig"
+    ],
+    [
+     "to switch off",
+     "ausschalten",
+     "ausschalten"
+    ],
+    [
+     "emergency",
+     "Notfall",
+     "Notfall"
+    ],
+    [
+     "to prevent",
+     "verhindern",
+     "verhindern"
+    ]
+   ],
+   "sentences": [
+    [
+     "You must wear safety goggles when you use this machine.",
+     "Du musst eine Schutzbrille tragen, wenn du diese Maschine benutzt.",
+     "Du musst eine Schutzbrille tragen, wenn du diese Maschine benutzt."
+    ],
+    [
+     "You mustn't block the fire exit.",
+     "Du darfst den Notausgang nicht versperren.",
+     "Du darfst den Notausgang nicht versperren."
+    ],
+    [
+     "Make sure you switch off the power before you repair it.",
+     "Schalte unbedingt den Strom aus, bevor du es reparierst.",
+     "Schalte unbedingt den Strom aus, bevor du es reparierst."
+    ],
+    [
+     "Careful – the floor is slippery!",
+     "Vorsicht – der Boden ist rutschig!",
+     "Vorsicht – der Boden ist rutschig!"
+    ],
+    [
+     "Every accident must be reported to your supervisor.",
+     "Jeder Unfall muss deinem Vorgesetzten gemeldet werden.",
+     "Jeder Unfall muss deinem Vorgesetzten gemeldet werden."
+    ],
+    [
+     "The first aid kit is next to the door.",
+     "Der Verbandskasten ist neben der Tür.",
+     "Der Verbandskasten ist neben der Tür."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ein neuer Kollege aus Irland beginnt heute in deinem Betrieb. Du zeigst ihm die Sicherheitsregeln.",
+     "Ein neuer Kollege aus Irland beginnt heute in deinem Betrieb. Du zeigst ihm die Sicherheitsregeln."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Do I have to wear these goggles all the time?",
+       "Muss ich die Brille die ganze Zeit tragen?",
+       "Muss ich die Brille die ganze Zeit tragen?"
+      ],
+      "opts": [
+       [
+        "Yes, you must wear them whenever the machines are running.",
+        "Ja, du musst sie tragen, sobald die Maschinen laufen.",
+        "Ja, du musst sie tragen, sobald die Maschinen laufen.",
+        1
+       ],
+       [
+        "No, you mustn't wear them.",
+        "Nein, du darfst sie nicht tragen.",
+        "Nein, du darfst sie nicht tragen.",
+        0
+       ]
+      ],
+      "hint": [
+       "must = muss; mustn’t = darf nicht.",
+       "must = muss; mustn’t = darf nicht."
+      ]
+     },
+     {
+      "npc": [
+       "What should I do if someone gets injured?",
+       "Was soll ich tun, wenn sich jemand verletzt?",
+       "Was soll ich tun, wenn sich jemand verletzt?"
+      ],
+      "opts": [
+       [
+        "Get the first aid kit, call the first aider and report the accident.",
+        "Hol den Verbandskasten, ruf den Ersthelfer und melde den Unfall.",
+        "Hol den Verbandskasten, ruf den Ersthelfer und melde den Unfall.",
+        1
+       ],
+       [
+        "Wait until the end of the shift.",
+        "Bis zum Schichtende warten.",
+        "Bis zum Schichtende warten.",
+        0
+       ]
+      ],
+      "hint": [
+       "Klare Schritte im Imperativ.",
+       "Klare Schritte im Imperativ."
+      ]
+     },
+     {
+      "npc": [
+       "And where is the nearest fire exit?",
+       "Und wo ist der nächste Notausgang?",
+       "Und wo ist der nächste Notausgang?"
+      ],
+      "opts": [
+       [
+        "It's at the end of the hall, next to the fire extinguisher. Never block it.",
+        "Am Ende der Halle, neben dem Feuerlöscher. Niemals zustellen.",
+        "Am Ende der Halle, neben dem Feuerlöscher. Niemals zustellen.",
+        1
+       ],
+       [
+        "Fire? There is no fire.",
+        "Feuer? Es brennt doch nicht.",
+        "Feuer? Es brennt doch nicht.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ort beschreiben + Regel.",
+       "Ort beschreiben + Regel."
+      ]
+     }
+    ],
+    "outro": [
+     "Dein Kollege bedankt sich: „Thanks – that was really clear.“",
+     "Dein Kollege bedankt sich: „Thanks – that was really clear.“"
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "⛑️",
+   "bs": 1
+  },
+  {
+   "id": "b_tech",
+   "city": "In the workshop",
+   "cityDe": "Beruf: Technik und Werkstatt",
+   "cityEn": "In the workshop",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Technik und Werkstatt",
+    "Technik und Werkstatt"
+   ],
+   "can": [
+    "Ich kann Werkzeuge, Materialien und Arbeitsschritte beschreiben und einen Fehler erklären.",
+    "Ich kann Werkzeuge, Materialien und Arbeitsschritte beschreiben und einen Fehler erklären."
+   ],
+   "tip": [
+    "Arbeitsschritte: „First, … Then, … After that, … Finally, …“ Fehler beschreiben: „It doesn’t work.“, „It’s broken / leaking / loose.“",
+    "Arbeitsschritte: „First, … Then, … After that, … Finally, …“ Fehler beschreiben: „It doesn’t work.“, „It’s broken / leaking / loose.“"
+   ],
+   "fact": [
+    "In Großbritannien und Irland fährt man links – deshalb sitzen Lenkrad und Pedale bei Autos von dort auf der rechten Seite.",
+    "In Großbritannien und Irland fährt man links – deshalb sitzen Lenkrad und Pedale bei Autos von dort auf der rechten Seite."
+   ],
+   "words": [
+    [
+     "tool",
+     "Werkzeug",
+     "Werkzeug"
+    ],
+    [
+     "screwdriver",
+     "Schraubenzieher",
+     "Schraubenzieher"
+    ],
+    [
+     "spanner",
+     "Schraubenschlüssel",
+     "Schraubenschlüssel"
+    ],
+    [
+     "drill",
+     "Bohrmaschine",
+     "Bohrmaschine"
+    ],
+    [
+     "screw",
+     "Schraube",
+     "Schraube"
+    ],
+    [
+     "cable",
+     "Kabel",
+     "Kabel"
+    ],
+    [
+     "to measure",
+     "messen",
+     "messen"
+    ],
+    [
+     "to install",
+     "einbauen / installieren",
+     "einbauen / installieren"
+    ],
+    [
+     "to repair",
+     "reparieren",
+     "reparieren"
+    ],
+    [
+     "to replace",
+     "austauschen",
+     "austauschen"
+    ],
+    [
+     "spare part",
+     "Ersatzteil",
+     "Ersatzteil"
+    ],
+    [
+     "to leak",
+     "undicht sein / tropfen",
+     "undicht sein / tropfen"
+    ],
+    [
+     "loose",
+     "locker",
+     "locker"
+    ],
+    [
+     "broken",
+     "kaputt",
+     "kaputt"
+    ],
+    [
+     "manual",
+     "Bedienungsanleitung",
+     "Bedienungsanleitung"
+    ],
+    [
+     "to check",
+     "prüfen",
+     "prüfen"
+    ]
+   ],
+   "sentences": [
+    [
+     "First, switch off the power. Then remove the cover.",
+     "Zuerst den Strom ausschalten. Dann die Abdeckung abnehmen.",
+     "Zuerst den Strom ausschalten. Dann die Abdeckung abnehmen."
+    ],
+    [
+     "The pipe under the sink is leaking.",
+     "Das Rohr unter dem Waschbecken ist undicht.",
+     "Das Rohr unter dem Waschbecken ist undicht."
+    ],
+    [
+     "We need to replace this part – it is broken.",
+     "Wir müssen dieses Teil austauschen – es ist kaputt.",
+     "Wir müssen dieses Teil austauschen – es ist kaputt."
+    ],
+    [
+     "Could you pass me the screwdriver, please?",
+     "Kannst du mir bitte den Schraubenzieher geben?",
+     "Kannst du mir bitte den Schraubenzieher geben?"
+    ],
+    [
+     "The spare part will be delivered tomorrow.",
+     "Das Ersatzteil wird morgen geliefert.",
+     "Das Ersatzteil wird morgen geliefert."
+    ],
+    [
+     "Check the manual before you install the new unit.",
+     "Lies die Anleitung, bevor du das neue Gerät einbaust.",
+     "Lies die Anleitung, bevor du das neue Gerät einbaust."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Auf Montage in Belfast: Ein Kunde ruft dich zu einer Maschine, die nicht mehr läuft.",
+     "Auf Montage in Belfast: Ein Kunde ruft dich zu einer Maschine, die nicht mehr läuft."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "The machine stopped working this morning. Can you have a look?",
+       "Die Maschine ist heute Morgen ausgefallen. Können Sie mal schauen?",
+       "Die Maschine ist heute Morgen ausgefallen. Können Sie mal schauen?"
+      ],
+      "opts": [
+       [
+        "Of course. First, I need to switch off the power and check the cables.",
+        "Natürlich. Zuerst muss ich den Strom ausschalten und die Kabel prüfen.",
+        "Natürlich. Zuerst muss ich den Strom ausschalten und die Kabel prüfen.",
+        1
+       ],
+       [
+        "Of course. I hit it with a hammer.",
+        "Natürlich. Ich haue mit dem Hammer drauf.",
+        "Natürlich. Ich haue mit dem Hammer drauf.",
+        0
+       ]
+      ],
+      "hint": [
+       "Arbeitsschritte: „First, …“",
+       "Arbeitsschritte: „First, …“"
+      ]
+     },
+     {
+      "npc": [
+       "So what is the problem?",
+       "Und was ist das Problem?",
+       "Und was ist das Problem?"
+      ],
+      "opts": [
+       [
+        "One cable is loose and a part is broken. We need to replace it.",
+        "Ein Kabel ist locker und ein Teil ist kaputt. Wir müssen es austauschen.",
+        "Ein Kabel ist locker und ein Teil ist kaputt. Wir müssen es austauschen.",
+        1
+       ],
+       [
+        "Problem is big. Machine is dead.",
+        "Problem ist groß. Maschine ist tot.",
+        "Problem ist groß. Maschine ist tot.",
+        0
+       ]
+      ],
+      "hint": [
+       "Fehler beschreiben: loose, broken, replace.",
+       "Fehler beschreiben: loose, broken, replace."
+      ]
+     },
+     {
+      "npc": [
+       "How long will it take?",
+       "Wie lange dauert das?",
+       "Wie lange dauert das?"
+      ],
+      "opts": [
+       [
+        "The spare part will arrive tomorrow, so it'll be ready by noon.",
+        "Das Ersatzteil kommt morgen, also ist sie bis mittags fertig.",
+        "Das Ersatzteil kommt morgen, also ist sie bis mittags fertig.",
+        1
+       ],
+       [
+        "It takes long time maybe.",
+        "Es dauert vielleicht lange Zeit (fehlerhaft).",
+        "Es dauert vielleicht lange Zeit (fehlerhaft).",
+        0
+       ]
+      ],
+      "hint": [
+       "Zeitangabe mit will.",
+       "Zeitangabe mit will."
+      ]
+     }
+    ],
+    "outro": [
+     "Am nächsten Mittag läuft die Maschine wieder. Der Kunde bestellt gleich die Wartung fürs nächste Jahr.",
+     "Am nächsten Mittag läuft die Maschine wieder. Der Kunde bestellt gleich die Wartung fürs nächste Jahr."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "🔧",
+   "bs": 1
+  },
+  {
+   "id": "b_off",
+   "city": "In the office",
+   "cityDe": "Beruf: Büro und Wirtschaft",
+   "cityEn": "In the office",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Büro und Wirtschaft",
+    "Büro und Wirtschaft"
+   ],
+   "can": [
+    "Ich kann über Büroabläufe, Bestellungen, Zahlen und Termine sprechen.",
+    "Ich kann über Büroabläufe, Bestellungen, Zahlen und Termine sprechen."
+   ],
+   "tip": [
+    "Zahlen sicher sagen: „1,5 Mio.“ = „1.5 million“ (Punkt statt Komma!), „3.000“ = „3,000“. Termine: „on Monday“, „at 3 pm“, „by Friday“ (= bis spätestens).",
+    "Zahlen sicher sagen: „1,5 Mio.“ = „1.5 million“ (Punkt statt Komma!), „3.000“ = „3,000“. Termine: „on Monday“, „at 3 pm“, „by Friday“ (= bis spätestens)."
+   ],
+   "fact": [
+    "Im Englischen trennt das Komma Tausender und der Punkt Dezimalstellen – genau umgekehrt wie im Deutschen.",
+    "Im Englischen trennt das Komma Tausender und der Punkt Dezimalstellen – genau umgekehrt wie im Deutschen."
+   ],
+   "words": [
+    [
+     "meeting",
+     "Besprechung",
+     "Besprechung"
+    ],
+    [
+     "agenda",
+     "Tagesordnung",
+     "Tagesordnung"
+    ],
+    [
+     "schedule",
+     "Zeitplan",
+     "Zeitplan"
+    ],
+    [
+     "colleague",
+     "Kollege / Kollegin",
+     "Kollege / Kollegin"
+    ],
+    [
+     "department",
+     "Abteilung",
+     "Abteilung"
+    ],
+    [
+     "to order",
+     "bestellen",
+     "bestellen"
+    ],
+    [
+     "to deliver",
+     "liefern",
+     "liefern"
+    ],
+    [
+     "quote",
+     "Angebot (Preis)",
+     "Angebot (Preis)"
+    ],
+    [
+     "price list",
+     "Preisliste",
+     "Preisliste"
+    ],
+    [
+     "payment",
+     "Zahlung",
+     "Zahlung"
+    ],
+    [
+     "to pay by bank transfer",
+     "per Überweisung zahlen",
+     "per Überweisung zahlen"
+    ],
+    [
+     "turnover",
+     "Umsatz",
+     "Umsatz"
+    ],
+    [
+     "profit",
+     "Gewinn",
+     "Gewinn"
+    ],
+    [
+     "to increase",
+     "steigen / erhöhen",
+     "steigen / erhöhen"
+    ],
+    [
+     "to decrease",
+     "sinken / senken",
+     "sinken / senken"
+    ],
+    [
+     "figures",
+     "Zahlen",
+     "Zahlen"
+    ]
+   ],
+   "sentences": [
+    [
+     "The meeting has been moved to Thursday at 2 pm.",
+     "Die Besprechung wurde auf Donnerstag 14 Uhr verschoben.",
+     "Die Besprechung wurde auf Donnerstag 14 Uhr verschoben."
+    ],
+    [
+     "Could you send us a quote for 500 units?",
+     "Könnten Sie uns ein Angebot für 500 Stück schicken?",
+     "Könnten Sie uns ein Angebot für 500 Stück schicken?"
+    ],
+    [
+     "Payment is due within 30 days.",
+     "Die Zahlung ist innerhalb von 30 Tagen fällig.",
+     "Die Zahlung ist innerhalb von 30 Tagen fällig."
+    ],
+    [
+     "Our turnover increased by 12 percent last year.",
+     "Unser Umsatz ist letztes Jahr um 12 Prozent gestiegen.",
+     "Unser Umsatz ist letztes Jahr um 12 Prozent gestiegen."
+    ],
+    [
+     "I will forward your e-mail to the sales department.",
+     "Ich leite Ihre E-Mail an die Vertriebsabteilung weiter.",
+     "Ich leite Ihre E-Mail an die Vertriebsabteilung weiter."
+    ],
+    [
+     "The figures show that costs decreased slightly.",
+     "Die Zahlen zeigen, dass die Kosten leicht gesunken sind.",
+     "Die Zahlen zeigen, dass die Kosten leicht gesunken sind."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Videokonferenz mit dem Team eurer Partnerfirma in Leeds. Teamleiterin Jess fragt nach den aktuellen Zahlen.",
+     "Videokonferenz mit dem Team eurer Partnerfirma in Leeds. Teamleiterin Jess fragt nach den aktuellen Zahlen."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "How were the sales figures last month?",
+       "Wie waren die Verkaufszahlen letzten Monat?",
+       "Wie waren die Verkaufszahlen letzten Monat?"
+      ],
+      "opts": [
+       [
+        "Sales increased by 8 percent, mainly because of our new online shop.",
+        "Der Absatz stieg um 8 Prozent, vor allem wegen unseres neuen Onlineshops.",
+        "Der Absatz stieg um 8 Prozent, vor allem wegen unseres neuen Onlineshops.",
+        1
+       ],
+       [
+        "The sales were 8 percent more bigger.",
+        "Die Verkäufe waren 8 Prozent mehr größer (fehlerhaft).",
+        "Die Verkäufe waren 8 Prozent mehr größer (fehlerhaft).",
+        0
+       ]
+      ],
+      "hint": [
+       "Entwicklung: increase by + Prozent, Grund mit because of.",
+       "Entwicklung: increase by + Prozent, Grund mit because of."
+      ]
+     },
+     {
+      "npc": [
+       "Great. Can you send me the details by Friday?",
+       "Super. Können Sie mir die Details bis Freitag schicken?",
+       "Super. Können Sie mir die Details bis Freitag schicken?"
+      ],
+      "opts": [
+       [
+        "Sure, I'll send you the report by Friday morning.",
+        "Klar, ich schicke Ihnen den Bericht bis Freitagmorgen.",
+        "Klar, ich schicke Ihnen den Bericht bis Freitagmorgen.",
+        1
+       ],
+       [
+        "Sure, I send it until Friday.",
+        "Klar, ich schicke es bis Freitag (fehlerhaft: until).",
+        "Klar, ich schicke es bis Freitag (fehlerhaft: until).",
+        0
+       ]
+      ],
+      "hint": [
+       "„by Friday“ = spätestens Freitag; „until“ = andauernd bis.",
+       "„by Friday“ = spätestens Freitag; „until“ = andauernd bis."
+      ]
+     },
+     {
+      "npc": [
+       "Perfect. Shall we schedule the next meeting?",
+       "Perfekt. Sollen wir das nächste Treffen planen?",
+       "Perfekt. Sollen wir das nächste Treffen planen?"
+      ],
+      "opts": [
+       [
+        "How about Tuesday the 14th at 10 am?",
+        "Wie wäre Dienstag, der 14., um 10 Uhr?",
+        "Wie wäre Dienstag, der 14., um 10 Uhr?",
+        1
+       ],
+       [
+        "Tuesday at 10 o'clock in the evening in the night.",
+        "Dienstag um 10 Uhr abends in der Nacht.",
+        "Dienstag um 10 Uhr abends in der Nacht.",
+        0
+       ]
+      ],
+      "hint": [
+       "Vorschlag: „How about …?“",
+       "Vorschlag: „How about …?“"
+      ]
+     }
+    ],
+    "outro": [
+     "Jess bedankt sich – dein Bericht wird in der nächsten Runde allen gezeigt.",
+     "Jess bedankt sich – dein Bericht wird in der nächsten Runde allen gezeigt."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "💼",
+   "bs": 1
+  },
+  {
+   "id": "b_care",
+   "city": "Health and care",
+   "cityDe": "Beruf: Gesundheit und Pflege",
+   "cityEn": "Health and care",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Gesundheit und Pflege",
+    "Gesundheit und Pflege"
+   ],
+   "can": [
+    "Ich kann mit Patientinnen und Patienten freundlich sprechen, nach Beschwerden fragen und Abläufe erklären.",
+    "Ich kann mit Patientinnen und Patienten freundlich sprechen, nach Beschwerden fragen und Abläufe erklären."
+   ],
+   "tip": [
+    "Fragen nach Beschwerden: „Where does it hurt?“, „How long have you had the pain?“ (present perfect!). Beruhigen: „Don’t worry, …“, „I’m going to …“",
+    "Fragen nach Beschwerden: „Where does it hurt?“, „How long have you had the pain?“ (present perfect!). Beruhigen: „Don’t worry, …“, „I’m going to …“"
+   ],
+   "fact": [
+    "In Großbritannien heißt das staatliche Gesundheitssystem NHS (National Health Service) – die Behandlung ist dort für alle kostenlos.",
+    "In Großbritannien heißt das staatliche Gesundheitssystem NHS (National Health Service) – die Behandlung ist dort für alle kostenlos."
+   ],
+   "words": [
+    [
+     "patient",
+     "Patient(in)",
+     "Patient(in)"
+    ],
+    [
+     "nurse",
+     "Pflegekraft / Krankenschwester",
+     "Pflegekraft / Krankenschwester"
+    ],
+    [
+     "pain",
+     "Schmerz",
+     "Schmerz"
+    ],
+    [
+     "to hurt",
+     "wehtun",
+     "wehtun"
+    ],
+    [
+     "to feel dizzy",
+     "sich schwindelig fühlen",
+     "sich schwindelig fühlen"
+    ],
+    [
+     "blood pressure",
+     "Blutdruck",
+     "Blutdruck"
+    ],
+    [
+     "temperature",
+     "Temperatur / Fieber",
+     "Temperatur / Fieber"
+    ],
+    [
+     "medication",
+     "Medikamente",
+     "Medikamente"
+    ],
+    [
+     "prescription",
+     "Rezept",
+     "Rezept"
+    ],
+    [
+     "treatment",
+     "Behandlung",
+     "Behandlung"
+    ],
+    [
+     "to lie down",
+     "sich hinlegen",
+     "sich hinlegen"
+    ],
+    [
+     "to take a deep breath",
+     "tief einatmen",
+     "tief einatmen"
+    ],
+    [
+     "swollen",
+     "geschwollen",
+     "geschwollen"
+    ],
+    [
+     "allergic to",
+     "allergisch gegen",
+     "allergisch gegen"
+    ],
+    [
+     "appointment",
+     "Termin",
+     "Termin"
+    ],
+    [
+     "to recover",
+     "sich erholen",
+     "sich erholen"
+    ]
+   ],
+   "sentences": [
+    [
+     "Where does it hurt?",
+     "Wo tut es weh?",
+     "Wo tut es weh?"
+    ],
+    [
+     "How long have you had the pain?",
+     "Seit wann haben Sie die Schmerzen?",
+     "Seit wann haben Sie die Schmerzen?"
+    ],
+    [
+     "I'm going to check your blood pressure now.",
+     "Ich messe jetzt Ihren Blutdruck.",
+     "Ich messe jetzt Ihren Blutdruck."
+    ],
+    [
+     "Are you allergic to any medication?",
+     "Sind Sie gegen Medikamente allergisch?",
+     "Sind Sie gegen Medikamente allergisch?"
+    ],
+    [
+     "Please lie down and take a deep breath.",
+     "Bitte legen Sie sich hin und atmen Sie tief ein.",
+     "Bitte legen Sie sich hin und atmen Sie tief ein."
+    ],
+    [
+     "Don't worry – you will recover quickly.",
+     "Keine Sorge – Sie werden sich schnell erholen.",
+     "Keine Sorge – Sie werden sich schnell erholen."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Ein Tourist aus Australien kommt mit Knieschmerzen in die Physiotherapie-Praxis, in der du deine Ausbildung machst.",
+     "Ein Tourist aus Australien kommt mit Knieschmerzen in die Physiotherapie-Praxis, in der du deine Ausbildung machst."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hi, my knee really hurts. I hurt it while hiking.",
+       "Hallo, mein Knie tut sehr weh. Ich habe es mir beim Wandern verletzt.",
+       "Hallo, mein Knie tut sehr weh. Ich habe es mir beim Wandern verletzt."
+      ],
+      "opts": [
+       [
+        "I'm sorry to hear that. How long have you had the pain?",
+        "Das tut mir leid. Seit wann haben Sie die Schmerzen?",
+        "Das tut mir leid. Seit wann haben Sie die Schmerzen?",
+        1
+       ],
+       [
+        "How long do you have the pain since?",
+        "Wie lange haben Sie die Schmerzen seit? (fehlerhaft)",
+        "Wie lange haben Sie die Schmerzen seit? (fehlerhaft)",
+        0
+       ]
+      ],
+      "hint": [
+       "„How long have you had …?“ – present perfect.",
+       "„How long have you had …?“ – present perfect."
+      ]
+     },
+     {
+      "npc": [
+       "Since Monday. It's a bit swollen too.",
+       "Seit Montag. Es ist auch etwas geschwollen.",
+       "Seit Montag. Es ist auch etwas geschwollen."
+      ],
+      "opts": [
+       [
+        "Please lie down. I'm going to have a look at your knee.",
+        "Bitte legen Sie sich hin. Ich schaue mir Ihr Knie an.",
+        "Bitte legen Sie sich hin. Ich schaue mir Ihr Knie an.",
+        1
+       ],
+       [
+        "Lie! I look knee.",
+        "Liegen! Ich schauen Knie.",
+        "Liegen! Ich schauen Knie.",
+        0
+       ]
+      ],
+      "hint": [
+       "Ablauf ankündigen: „I’m going to …“",
+       "Ablauf ankündigen: „I’m going to …“"
+      ]
+     },
+     {
+      "npc": [
+       "Is it serious?",
+       "Ist es schlimm?",
+       "Ist es schlimm?"
+      ],
+      "opts": [
+       [
+        "Don't worry. With some exercises and rest, you should recover in a few weeks.",
+        "Keine Sorge. Mit ein paar Übungen und Schonung sollten Sie sich in ein paar Wochen erholen.",
+        "Keine Sorge. Mit ein paar Übungen und Schonung sollten Sie sich in ein paar Wochen erholen.",
+        1
+       ],
+       [
+        "Yes. Very bad. Maybe never walking.",
+        "Ja. Sehr schlimm. Vielleicht nie mehr laufen.",
+        "Ja. Sehr schlimm. Vielleicht nie mehr laufen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Beruhigen: „Don’t worry …“",
+       "Beruhigen: „Don’t worry …“"
+      ]
+     }
+    ],
+    "outro": [
+     "Der Patient lacht erleichtert: „Cheers, mate – you’ve been a great help!“",
+     "Der Patient lacht erleichtert: „Cheers, mate – you’ve been a great help!“"
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "🩺",
+   "bs": 1
+  },
+  {
+   "id": "b_gast",
+   "city": "Hospitality",
+   "cityDe": "Beruf: Gastronomie und Hotel",
+   "cityEn": "Hospitality",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Gastronomie und Hotel",
+    "Gastronomie und Hotel"
+   ],
+   "can": [
+    "Ich kann Gäste begrüßen, Bestellungen aufnehmen, Speisen erklären und auf Wünsche eingehen.",
+    "Ich kann Gäste begrüßen, Bestellungen aufnehmen, Speisen erklären und auf Wünsche eingehen."
+   ],
+   "tip": [
+    "Höflich anbieten: „Would you like …?“, „Can I get you anything else?“ Gerichte erklären: „It’s made with …“, „It comes with …“",
+    "Höflich anbieten: „Would you like …?“, „Can I get you anything else?“ Gerichte erklären: „It’s made with …“, „It comes with …“"
+   ],
+   "fact": [
+    "In Großbritannien bestellt man im Pub an der Theke und bezahlt sofort – Bedienung am Tisch gibt es dort meist nur beim Essen.",
+    "In Großbritannien bestellt man im Pub an der Theke und bezahlt sofort – Bedienung am Tisch gibt es dort meist nur beim Essen."
+   ],
+   "words": [
+    [
+     "guest",
+     "Gast",
+     "Gast"
+    ],
+    [
+     "reservation",
+     "Reservierung",
+     "Reservierung"
+    ],
+    [
+     "to book a table",
+     "einen Tisch reservieren",
+     "einen Tisch reservieren"
+    ],
+    [
+     "starter",
+     "Vorspeise",
+     "Vorspeise"
+    ],
+    [
+     "main course",
+     "Hauptgericht",
+     "Hauptgericht"
+    ],
+    [
+     "dessert",
+     "Nachtisch",
+     "Nachtisch"
+    ],
+    [
+     "side dish",
+     "Beilage",
+     "Beilage"
+    ],
+    [
+     "vegetarian",
+     "vegetarisch",
+     "vegetarisch"
+    ],
+    [
+     "vegan",
+     "vegan",
+     "vegan"
+    ],
+    [
+     "gluten-free",
+     "glutenfrei",
+     "glutenfrei"
+    ],
+    [
+     "to recommend",
+     "empfehlen",
+     "empfehlen"
+    ],
+    [
+     "the bill",
+     "die Rechnung",
+     "die Rechnung"
+    ],
+    [
+     "tip",
+     "Trinkgeld",
+     "Trinkgeld"
+    ],
+    [
+     "to check in",
+     "einchecken",
+     "einchecken"
+    ],
+    [
+     "double room",
+     "Doppelzimmer",
+     "Doppelzimmer"
+    ],
+    [
+     "reception",
+     "Rezeption",
+     "Rezeption"
+    ]
+   ],
+   "sentences": [
+    [
+     "Good evening. Do you have a reservation?",
+     "Guten Abend. Haben Sie reserviert?",
+     "Guten Abend. Haben Sie reserviert?"
+    ],
+    [
+     "Would you like something to drink first?",
+     "Möchten Sie zuerst etwas trinken?",
+     "Möchten Sie zuerst etwas trinken?"
+    ],
+    [
+     "Today's special is fish – it comes with potatoes and salad.",
+     "Das Tagesgericht ist Fisch – dazu gibt es Kartoffeln und Salat.",
+     "Das Tagesgericht ist Fisch – dazu gibt es Kartoffeln und Salat."
+    ],
+    [
+     "We have several vegetarian and gluten-free dishes.",
+     "Wir haben mehrere vegetarische und glutenfreie Gerichte.",
+     "Wir haben mehrere vegetarische und glutenfreie Gerichte."
+    ],
+    [
+     "Can I get you anything else?",
+     "Darf ich Ihnen noch etwas bringen?",
+     "Darf ich Ihnen noch etwas bringen?"
+    ],
+    [
+     "Here's your key – your room is on the second floor.",
+     "Hier ist Ihr Schlüssel – Ihr Zimmer ist im zweiten Stock.",
+     "Hier ist Ihr Schlüssel – Ihr Zimmer ist im zweiten Stock."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Abendservice im Hotelrestaurant: Ein Paar aus Schottland setzt sich an deinen Tisch.",
+     "Abendservice im Hotelrestaurant: Ein Paar aus Schottland setzt sich an deinen Tisch."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Hello! What would you recommend tonight?",
+       "Hallo! Was würden Sie heute Abend empfehlen?",
+       "Hallo! Was würden Sie heute Abend empfehlen?"
+      ],
+      "opts": [
+       [
+        "I'd recommend the trout – it comes with potatoes and fresh vegetables.",
+        "Ich würde die Forelle empfehlen – dazu gibt es Kartoffeln und frisches Gemüse.",
+        "Ich würde die Forelle empfehlen – dazu gibt es Kartoffeln und frisches Gemüse.",
+        1
+       ],
+       [
+        "Everything is good. Choose.",
+        "Alles ist gut. Wählen Sie.",
+        "Alles ist gut. Wählen Sie.",
+        0
+       ]
+      ],
+      "hint": [
+       "Empfehlen + Gericht erklären: „It comes with …“",
+       "Empfehlen + Gericht erklären: „It comes with …“"
+      ]
+     },
+     {
+      "npc": [
+       "My wife is vegan. Is there anything for her?",
+       "Meine Frau ist Veganerin. Gibt es etwas für sie?",
+       "Meine Frau ist Veganerin. Gibt es etwas für sie?"
+      ],
+      "opts": [
+       [
+        "Yes, our curry is vegan, and the chef can make it without nuts if needed.",
+        "Ja, unser Curry ist vegan, und der Koch kann es bei Bedarf ohne Nüsse machen.",
+        "Ja, unser Curry ist vegan, und der Koch kann es bei Bedarf ohne Nüsse machen.",
+        1
+       ],
+       [
+        "Vegan? She can eat the salad without the meat.",
+        "Vegan? Sie kann den Salat ohne Fleisch essen.",
+        "Vegan? Sie kann den Salat ohne Fleisch essen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Auf Wünsche eingehen.",
+       "Auf Wünsche eingehen."
+      ]
+     },
+     {
+      "npc": [
+       "Lovely. And could we have the bill later, please?",
+       "Schön. Und könnten wir später bitte die Rechnung haben?",
+       "Schön. Und könnten wir später bitte die Rechnung haben?"
+      ],
+      "opts": [
+       [
+        "Of course. Just let me know when you're ready.",
+        "Natürlich. Sagen Sie einfach Bescheid, wenn Sie so weit sind.",
+        "Natürlich. Sagen Sie einfach Bescheid, wenn Sie so weit sind.",
+        1
+       ],
+       [
+        "No, pay now.",
+        "Nein, jetzt zahlen.",
+        "Nein, jetzt zahlen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Höflich: „Just let me know …“",
+       "Höflich: „Just let me know …“"
+      ]
+     }
+    ],
+    "outro": [
+     "Das Paar lobt den Abend – und lässt ein großzügiges Trinkgeld da.",
+     "Das Paar lobt den Abend – und lässt ein großzügiges Trinkgeld da."
+    ]
+   },
+   "pack": 1,
+   "sch": 11,
+   "ico": "🍽️",
+   "bs": 1
+  },
+  {
    "id": "i_game",
    "city": "Gaming and streaming",
    "cityDe": "Gaming und Streaming",
@@ -32564,11 +34634,27 @@
     "s11env",
     "s12usa",
     "s12lit",
-    "s12wri"
+    "s12wri",
+    "b_apply",
+    "b_phone",
+    "b_mail",
+    "b_cust",
+    "b_safe",
+    "b_tech",
+    "b_off",
+    "b_care",
+    "b_gast"
    ]
   }
  ],
  "news": [
+  {
+   "v": "0.39",
+   "date": "2026-11-14",
+   "de": [
+    "Neu für Azubis: Im Schulbereich gibt es jetzt „Berufliche Schule“. Du übst Bewerbung, Telefonieren, E-Mails, Kundengespräche und Arbeitssicherheit – dazu dein Berufsfeld: Technik, Wirtschaft, Gesundheit oder Gastronomie. Die Probe-Prüfung ist wie beim KMK-Fremdsprachenzertifikat aufgebaut."
+   ]
+  },
   {
    "v": "0.38",
    "date": "2026-11-14",
@@ -33040,6 +35126,11 @@
     "id": "ms",
     "name": "Mittelschule",
     "on": 1
+   },
+   {
+    "id": "bs",
+    "name": "Berufliche Schule (Berufsschule, Berufskolleg)",
+    "on": 1
    }
   ],
   "combos": [
@@ -33092,7 +35183,23 @@
    "he-rs",
    "he-hs",
    "he-igs",
-   "sn-obs"
+   "sn-obs",
+   "bw-bs",
+   "by-bs",
+   "be-bs",
+   "bb-bs",
+   "hb-bs",
+   "hh-bs",
+   "he-bs",
+   "mv-bs",
+   "ni-bs",
+   "nw-bs",
+   "rp-bs",
+   "sl-bs",
+   "sn-bs",
+   "st-bs",
+   "sh-bs",
+   "th-bs"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -33132,7 +35239,23 @@
    "he-rs": "sek1",
    "he-hs": "sek1g",
    "he-igs": "sek1",
-   "sn-obs": "sek1"
+   "sn-obs": "sek1",
+   "bw-bs": "bs",
+   "by-bs": "bs",
+   "be-bs": "bs",
+   "bb-bs": "bs",
+   "hb-bs": "bs",
+   "hh-bs": "bs",
+   "he-bs": "bs",
+   "mv-bs": "bs",
+   "ni-bs": "bs",
+   "nw-bs": "bs",
+   "rp-bs": "bs",
+   "sl-bs": "bs",
+   "sn-bs": "bs",
+   "st-bs": "bs",
+   "sh-bs": "bs",
+   "th-bs": "bs"
   },
   "grades": [
    5,
@@ -33544,6 +35667,9 @@
    "gms",
    "sts"
   ],
+  "bsTypes": [
+   "bs"
+  ],
   "topics": {
    "pres": {
     "t": "Simple present",
@@ -33711,18 +35837,23 @@
    }
   },
   "plans": {
-   "sek1": "555666777888a9aaaa55689999aa88abbbccc|5556666657877788899aaaaa555567888a0aabbbb",
-   "nw": "555666777788aaaaa9556879998a98abbbccc|55566666676666777878898955556887789a9bbbb",
-   "nwrs": "555666777788aaaaa9556879998a98abbbccc|565566665776777889899aaa55556897690aabbbb",
-   "nwg": "555666777788aaaaa0556809998a98abbbccc|56557676570887aaaa00a0005555690060000bbbb",
-   "sn": "5556567888779a9aa9556779a88a98abbbccc|5556666656767667787888885555577768898bbbb",
-   "mv": "555666777788999aaa556789a99a98abbbccc|5556666657766777778888985555678889898bbbb",
-   "rp": "555666777888999aaa556789a9aa98abbbccc|5556666657777788988989995555679889aaabbbb",
-   "he": "555657686668a899a9556779aaaa98abbbccc|555656665676667878888989555567966997abbbb",
-   "by": "555556776687aa9a985568799a8a98abbbccc|5555666656766777897788995555598669958bbbb",
-   "sek1e": "555666777888a9aaaa55689999aa98abbbccc|5556666657877788899aaaaa555566888a9aabbbb",
-   "sek1g": "555666777888a9aaaa55680999aa88abbbccc|555676765907778aaaaa00a055556799000aabbbb",
-   "e2": "666777888999aaaaaa66789aaaaaa9abbbccc|6667777768888899999aaaaa666678999a9aabbbb"
+   "sek1": "555666777888a9aaaa55689999aa88abbbccc000000000|5556666657877788899aaaaa555567888a0aabbbb",
+   "nw": "555666777788aaaaa9556879998a98abbbccc000000000|55566666676666777878898955556887789a9bbbb",
+   "nwrs": "555666777788aaaaa9556879998a98abbbccc000000000|565566665776777889899aaa55556897690aabbbb",
+   "nwg": "555666777788aaaaa0556809998a98abbbccc000000000|56557676570887aaaa00a0005555690060000bbbb",
+   "sn": "5556567888779a9aa9556779a88a98abbbccc000000000|5556666656767667787888885555577768898bbbb",
+   "mv": "555666777788999aaa556789a99a98abbbccc000000000|5556666657766777778888985555678889898bbbb",
+   "rp": "555666777888999aaa556789a9aa98abbbccc000000000|5556666657777788988989995555679889aaabbbb",
+   "he": "555657686668a899a9556779aaaa98abbbccc000000000|555656665676667878888989555567966997abbbb",
+   "by": "555556776687aa9a985568799a8a98abbbccc000000000|5555666656766777897788995555598669958bbbb",
+   "sek1e": "555666777888a9aaaa55689999aa98abbbccc000000000|5556666657877788899aaaaa555566888a9aabbbb",
+   "sek1g": "555666777888a9aaaa55680999aa88abbbccc000000000|555676765907778aaaaa00a055556799000aabbbb",
+   "e2": "666777888999aaaaaa66789aaaaaa9abbbccc000000000|6667777768888899999aaaaa666678999a9aabbbb",
+   "bs": "0000000000000000000000000000000000000bbbbbbbbb|5556666657777788888999aa555567888a89a0000",
+   "bst": "0000000000000000000000000000000000000bbbbbb000|5556666657777788888999aa555567888a89a0000",
+   "bsw": "0000000000000000000000000000000000000bbbbb0b00|5556666657777788888999aa555567888a89a0000",
+   "bsg": "0000000000000000000000000000000000000bbbbb00b0|5556666657777788888999aa555567888a89a0000",
+   "bsh": "0000000000000000000000000000000000000bbbbb000b|5556666657777788888999aa555567888a89a0000"
   },
   "niveaus": {
    "bw-rs": [
@@ -33830,6 +35961,118 @@
    "sn-obs": [
     "rsa",
     "hsa"
+   ],
+   "bw-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "by-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "be-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "bb-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "hb-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "hh-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "he-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "mv-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "ni-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "nw-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "rp-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "sl-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "sn-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "st-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "sh-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
+   ],
+   "th-bs": [
+    "alle",
+    "tech",
+    "wirt",
+    "ges",
+    "gast"
    ]
   },
   "nivPlan": {
@@ -33913,6 +36156,102 @@
    },
    "sn-obs": {
     "hsa": "sek1g"
+   },
+   "bw-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "by-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "be-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "bb-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "hb-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "hh-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "he-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "mv-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "ni-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "nw-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "rp-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "sl-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "sn-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "st-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "sh-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
+   },
+   "th-bs": {
+    "tech": "bst",
+    "wirt": "bsw",
+    "ges": "bsg",
+    "gast": "bsh"
    }
   },
   "pOrd": [
@@ -33952,7 +36291,16 @@
    "s11env",
    "s12usa",
    "s12lit",
-   "s12wri"
+   "s12wri",
+   "b_apply",
+   "b_phone",
+   "b_mail",
+   "b_cust",
+   "b_safe",
+   "b_tech",
+   "b_off",
+   "b_care",
+   "b_gast"
   ]
  },
  "guide": {

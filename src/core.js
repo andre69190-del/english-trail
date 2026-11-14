@@ -241,7 +241,7 @@
   /* English Trail: optional „-K7“ = nur Schulstoff der Klasse 7 (Gymnasium BW) – gleiche Fragen für alle mit diesem Code */
   /* 13.11.2026: „-S7“ = Schulstoff Klasse 7 nach Bildungsplan Sekundarstufe I (Realschule, Gemeinschaftsschule) */
   /* 13.11.2026: Lehrplan im Code: K = Gymnasium BW, S = Sekundarstufe I BW (Realschule/GMS), N = Gymnasium NRW */
-  var PLAN_L = { sek1: 'S', nw: 'N', sek1g: 'G', sek1e: 'E', by: 'B', he: 'H', nwrs: 'R', nwg: 'U', rp: 'P', sn: 'X', mv: 'M', e2: 'Z' }, L_PLAN = { S: 'sek1', N: 'nw', G: 'sek1g', E: 'sek1e', B: 'by', H: 'he', R: 'nwrs', U: 'nwg', P: 'rp', X: 'sn', M: 'mv', Z: 'e2' };
+  var PLAN_L = { sek1: 'S', nw: 'N', sek1g: 'G', sek1e: 'E', by: 'B', he: 'H', nwrs: 'R', nwg: 'U', rp: 'P', sn: 'X', mv: 'M', e2: 'Z', bs: 'A', bst: 'T', bsw: 'W', bsg: 'C', bsh: 'F' }, L_PLAN = { S: 'sek1', N: 'nw', G: 'sek1g', E: 'sek1e', B: 'by', H: 'he', R: 'nwrs', U: 'nwg', P: 'rp', X: 'sn', M: 'mv', Z: 'e2', A: 'bs', T: 'bst', W: 'bsw', C: 'bsg', F: 'bsh' };
   function planLetter(plan) { return PLAN_L[plan] || 'K'; }
   function duelNewCode(r, level, grade, plan) {
     r = r || Math.random;
@@ -262,7 +262,7 @@
   }
   function schGradeOf(data, u, plan) {
     if (!u || !u.sch) return 0;
-    if (!plan) return u.sch;
+    if (!plan) return u.bs ? 0 : u.sch;   /* 0.39: Berufs-Pakete nur in den Plänen der beruflichen Schulen */
     var P = schPlanObj(data, plan);
     return P && P.p && P.p[u.id] ? P.p[u.id] : 0;
   }
@@ -272,7 +272,7 @@
   function duelWeight(lv) { return DUEL_WEIGHT[String(lv)] || 1; }
   function duelParse(str) {
     var c = String(str || '').toUpperCase().replace(/[\s_.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGEBHRUPXMZ])(10|11|12|13|5|6|7|8|9))?$/);
+    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGEBHRUPXMZATWCF])(10|11|12|13|5|6|7|8|9))?$/);
     if (!m) return null;
     var n = +m[4], lv = m[3] + n, k = m[6] ? +m[6] : 0, pl = k ? (L_PLAN[m[5]] || '') : '';
     return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-' + planLetter(pl) + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k, plan: pl };
@@ -290,7 +290,7 @@
       results.map(function (r) { return r ? '\ud83d\udfe9' : '\u2b1c'; }).join('') + '\n~' + duelSign(code, check, name, good, results.length, secs, inp);
   }
   function duelReadResult(text) {
-    var t = String(text || ''), mc = t.match(/([A-Za-z]{2,8}-\d{3}-[Pp]?[123](?:-[KSNGEBHRUPXMZ](?:1[0-3]|[5-9]))?)/i)  /* 14.11.2026: Klassen-Suffix (-K7) gehört zum Code, sonst passte die Prüfsumme bei Schul-Codes nie */, ms = t.match(/(\d+)\s*\/\s*(\d+)/), mt = t.match(/(\d+):(\d{2})/), mk = t.match(/#([0-9A-Za-z]{4})/);
+    var t = String(text || ''), mc = t.match(/([A-Za-z]{2,8}-\d{3}-[Pp]?[123](?:-[KSNGEBHRUPXMZATWCF](?:1[0-3]|[5-9]))?)/i)  /* 14.11.2026: Klassen-Suffix (-K7) gehört zum Code, sonst passte die Prüfsumme bei Schul-Codes nie */, ms = t.match(/(\d+)\s*\/\s*(\d+)/), mt = t.match(/(\d+):(\d{2})/), mk = t.match(/#([0-9A-Za-z]{4})/);
     if (!ms) return null;
     var line = t.match(/\n\s*([^\n\u00b7]*?)\s*\u00b7\s*\d+\s*\/\s*\d+/), mi = t.match(/\d:\d{2}\s*\u00b7\s*([WST])\b/), msg = t.match(/~([0-9A-Za-z]{4})/);
     var pc = mc ? duelParse(mc[1]) : null, o = { code: pc ? pc.code : null, base: pc ? pc.base : null, lv: pc ? pc.lv : null, check: mk ? mk[1].toUpperCase() : null, right: +ms[1], total: +ms[2], ms: mt ? (+mt[1] * 60 + +mt[2]) * 1000 : null,
@@ -542,7 +542,7 @@
     return 'HA' + grade + (PLAN_L[plan] || '') + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
   }
   function hwParse(code) {
-    var m = /^HA(10|11|12|13|5|6|7|8|9)([SNGEBHRUPXMZ]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
+    var m = /^HA(10|11|12|13|5|6|7|8|9)([SNGEBHRUPXMZATWCF]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
     if (!m) return null;
     var g = +m[1], pl = L_PLAN[m[2]] || '', pm = parseInt(m[3], 36), tm = parseInt(m[4], 36);
     if (!(pm || tm) || isNaN(pm) || isNaN(tm)) return null;

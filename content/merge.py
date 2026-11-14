@@ -19,6 +19,7 @@ import interests  # noqa: E402
 import trail2  # noqa: E402
 import trail3  # noqa: E402
 import alltag  # noqa: E402
+import beruf  # noqa: E402
 import abschluss  # noqa: E402
 
 DATA = os.path.join(ROOT, 'src', 'data.json')
@@ -103,7 +104,8 @@ for k in school.PACKS:
     u = unit(dict(k, city=k['name'], cityDe='Klasse %d: %s' % (k['grade'], k['title']), lon=-0.13, lat=51.51, trail='blue',
                   mission=None, radio=None, letter=None))
     u['pack'] = 1; u['sch'] = k['grade']; u['ico'] = k['ico']
-    if k['grade'] >= 11: u['cityDe'] = 'Oberstufe: %s' % k['title']
+    if k['grade'] >= 11: u['cityDe'] = ('Beruf: %s' if k.get('bs') else 'Oberstufe: %s') % k['title']
+    if k.get('bs'): u['bs'] = 1
     if k['id'] in school.EMOJI:
         em = school.EMOJI[k['id']]; assert len(em) == len(u['words']), k['id']
         u['em'] = em
@@ -113,7 +115,7 @@ D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.ST
                'combos': school.COMBOS, 'planOf': school.PLAN_OF,
                'grades': school.GRADES,
                'books': [dict({'id': i, 'name': n}, **({'k': school.BOOK_WHERE[i]} if i in school.BOOK_WHERE else {}), **({'ob': 1} if i in school.OB_BOOKS else {})) for i, n in school.BOOKS],
-               'obTypes': school.OB_TYPES,
+               'obTypes': school.OB_TYPES, 'bsTypes': school.BS_TYPES,
                'topics': {g: {'t': n, 'k': kk} for g, (n, kk) in grammar.TOPICS.items()},
                # 13.11.2026: Sekundarstufe I (Realschule, Gemeinschaftsschule) – andere Klassen-Zuordnung derselben Pakete/Themen
                'plans': {'sek1': {'p': school.SEK1_PACKS, 't': {k: v for k, v in school.SEK1_TOPICS.items() if v}},
@@ -146,8 +148,14 @@ D['school']['plans']['e2'] = {'p': {k['id']: min(10, k['grade'] + 1) for k in sc
                               't': {g: min(10, kk + 1) for g, (n, kk) in grammar.TOPICS.items() if kk <= 10}}
 # 14.11.2026 (0.38): Oberstufe – Pakete und Themen ab Klasse 11 in jedem Plan gleich
 for _P in D['school']['plans'].values():
-    _P['p'].update({k['id']: k['grade'] for k in school.PACKS if k['grade'] >= 11})
+    _P['p'].update({k['id']: k['grade'] for k in school.PACKS if k['grade'] >= 11 and not k.get('bs')})
     _P['t'].update({g: kk for g, (n, kk) in grammar.TOPICS.items() if kk >= 11})
+# 14.11.2026 (0.39): Berufliche Schulen – Grundpakete + Berufsfeld; Grammatik der Klassen 5–10 zum Wiederholen, keine Oberstufen-Themen
+_bsg = {k['id']: k['grade'] for k in school.PACKS if k.get('bs') and not k['field']}
+_bst = {g: kk for g, (n, kk) in grammar.TOPICS.items() if kk <= 10}
+D['school']['plans']['bs'] = {'p': dict(_bsg, **{k['id']: k['grade'] for k in school.PACKS if k.get('bs') and k['field']}), 't': dict(_bst)}
+for _f, _n, _p in beruf.FIELDS:
+    D['school']['plans'][_p] = {'p': dict(_bsg, **{k['id']: k['grade'] for k in school.PACKS if k.get('field') == _f}), 't': dict(_bst)}
 # 14.11.2026: Pläne kompakt – je Plan ein String "<Pakete>|<Themen>", ein Zeichen je Eintrag (0 = nicht vorgesehen, 5–9, a = 10),
 # Reihenfolge D.school.pOrd bzw. Schlüssel von D.school.topics. Entpackt in PSCore.schPlanObj.
 def _pc(v):

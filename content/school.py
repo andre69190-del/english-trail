@@ -1464,3 +1464,14 @@ import oberstufe  # noqa: E402
 SEK1_IDS = [k['id'] for k in PACKS]
 PACKS.extend(oberstufe.OB_PACKS)
 EMOJI.update(oberstufe.EMOJI)
+
+# 14.11.2026 (0.39): Berufliche Schulen (Berufsschule, Berufsfachschule, Berufskolleg) – eigene Schulart in allen Ländern,
+# Klasse 11–13 = 1.–3. Ausbildungsjahr, „Niveau“ = Berufsfeld (alle / Technik / Wirtschaft / Gesundheit / Gastronomie)
+import beruf  # noqa: E402
+TYPES.append(('bs', 'Berufliche Schule (Berufsschule, Berufskolleg)', 1))
+BS_TYPES = ['bs']
+for _st, _n, _a in STATES:
+    COMBOS.append(_st + '-bs'); PLAN_OF[_st + '-bs'] = 'bs'
+    NIVEAUS[_st + '-bs'] = ['alle'] + [f for f, _, _ in beruf.FIELDS]
+    NIV_PLAN[_st + '-bs'] = {f: p for f, _, p in beruf.FIELDS}
+PACKS.extend(beruf.BS_PACKS)

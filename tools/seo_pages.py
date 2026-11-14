@@ -329,6 +329,29 @@ def main():
     page('englisch-oberstufe-abitur.html', 'Englisch Oberstufe und Abitur üben (Klasse 11–13) – kostenlose App',
          'Kostenlose Englisch-App für die Oberstufe: Abi-Themen (Globalisierung, Medien, Klima, American Dream, Literatur und Film), Stil-Grammatik, Analyse und Kommentar, Probe-Klausur. Ohne Werbung.',
          '\n'.join(b)); files.append('englisch-oberstufe-abitur.html')
+    # 14.11.2026 (0.39): Berufliche Schulen
+    import beruf
+    b = ['<h1>Englisch für Berufsschule und Berufskolleg – kostenlos üben</h1>',
+         '<p>Im <b>Schulmodus</b> von English Trail wählst du <b>Berufliche Schule</b>, dein Ausbildungsjahr und dein Berufsfeld '
+         '(Technik und Handwerk, Wirtschaft und Verwaltung, Gesundheit und Pflege oder Gastronomie und Hotel). '
+         'Die Übungen orientieren sich an den Teilen des KMK-Fremdsprachenzertifikats: Rezeption, Produktion, Mediation und Interaktion.</p>',
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Berufsenglisch für alle</h2>']
+    for k in beruf.BS_PACKS:
+        if k['field'] == '':
+            b.append(f'<div class="box"><b>{E(k["ico"])} {E(k["title"])}</b><br>{E(k["can"])}</div>')
+    b.append('<h2>Dein Berufsfeld</h2>')
+    for k in beruf.BS_PACKS:
+        if k['field']:
+            words = [l.split('|')[0].strip() for l in k['words'].strip().split('\n')][:8]
+            b.append(f'<div class="box"><b>{E(k["ico"])} {E(k["title"])}</b><br>{E(k["can"])}<br><span class="muted">Beispielwörter: {E(", ".join(words))} …</span></div>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Probe-Prüfung</b> mit Hör- und Leseverstehen, Sprachmittlung und Wortschatz.</li>'
+             '<li><b>Szenen aus dem Arbeitsalltag</b>: Vorstellungsgespräch, Telefonat, Kundengespräch, Patientengespräch, Restaurant.</li>'
+             '<li><b>Grammatik wiederholen</b> – alle Themen aus Klasse 5–10.</li>'
+             '<li>Eigene Fachvokabeln eintragen oder per Foto übernehmen.</li><li>Kostenlos, keine Werbung, keine Anmeldung nötig.</li></ul>'
+             '<a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-berufsschule.html', 'Englisch für Berufsschule und Berufskolleg üben – kostenlose App',
+         'Kostenlose Englisch-App für berufliche Schulen: Bewerbung, Telefonieren, E-Mails, Kundengespräch, Arbeitssicherheit und Berufsfelder (Technik, Wirtschaft, Gesundheit, Gastronomie). Training wie KMK-Fremdsprachenzertifikat.',
+         '\n'.join(b)); files.append('englisch-berufsschule.html')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
           f'  <url><loc>{SITE}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     sm += [f'  <url><loc>{SITE}{f}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' for f in files]
