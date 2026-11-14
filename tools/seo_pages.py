@@ -310,7 +310,7 @@ def main():
          'Kostenlose Englisch-App für das Saarland und Bremen: Gymnasium, Gemeinschaftsschule, Oberschule, Klasse 5 bis 10, Vokabeln per Foto, Probe-Klassenarbeit. Ohne Werbung.',
          '\n'.join(b)); files.insert(11, 'englisch-saarland-bremen.html')
     # 14.11.2026 (0.38): Oberstufe (alle Länder)
-    ob = [k for k in school.PACKS if k['grade'] >= 11]
+    ob = [k for k in school.PACKS if k['grade'] >= 11 and not k.get('bs')]
     otops = [v[0] for k, v in grammar.TOPICS.items() if v[1] >= 11]
     b = ['<h1>Englisch Oberstufe und Abitur – kostenlos üben</h1>',
          '<p>English Trail begleitet dich bis zum Abitur: Im <b>Schulmodus</b> wählst du dein Bundesland, Gymnasium oder Gesamtschule und <b>Klasse 11, 12 oder 13</b>. '
