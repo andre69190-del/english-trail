@@ -210,6 +210,25 @@ if R3:
             o = q.get('o', [])
             if len(o) != 3 or len(set(o)) != 3 or q.get('a') not in (0, 1, 2): e(f'{W} Frage {qi + 1}: braucht 3 verschiedene Optionen und a')
             pair(q.get('tr'), f'{W} Frage {qi + 1}.tr')
+# 0.28 (AUTOPLAN 13): keine polnischen Buchstaben in sichtbaren Texten – Daten (Kern + nachgeladene Dateien) und App-Code
+PL_CH = re.compile('[ąćęłńśźżĄĆĘŁŃŚŹŻ]')
+def _pl_walk(o, path):
+    if isinstance(o, str):
+        if PL_CH.search(o): e(f'Polnisch-Rest in {path}: {o[:60]}')
+    elif isinstance(o, dict):
+        for k, v in o.items(): _pl_walk(v, f'{path}.{k}')
+    elif isinstance(o, list):
+        for i, v in enumerate(o): _pl_walk(v, f'{path}[{i}]')
+import glob
+_pl_walk(D, 'data.json')
+for _f in sorted(glob.glob(os.path.join(ROOT, 'data-*.json'))):
+    _pl_walk(json.load(open(_f, encoding='utf-8')), os.path.basename(_f))
+_app = open(os.path.join(ROOT, 'src', 'app.js'), encoding='utf-8').read()
+_app = re.sub(r'/\*.*?\*/', '', _app, flags=re.S)
+_rv0, _rv1 = _app.find('var RVX = {'), _app.find('function renderReview')  # Prüfmodus: AUTOPLAN 12
+if _rv0 >= 0 and _rv1 > _rv0: _app = _app[:_rv0] + _app[_rv1:]
+for _n, _l in enumerate(_app.split('\n')):
+    if PL_CH.search(_l): e(f'Polnisch-Rest in app.js: {_l.strip()[:80]}')
 total = sum(len(u['words']) for u in D['units'])
 print(f'  Städte {len(D["units"])} · Wörter {total} · Sätze {sum(len(u["sentences"]) for u in D["units"])} · '
       f'Szenen {sum(1 for u in D["units"] if u.get("scene"))} · Fälle {len(D["cases"])} · Laute {len(D["sounds"])}')

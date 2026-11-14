@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.28', '2026-11-14', ['Aufgeräumt: Der Stimmen-Test und der freie KI-Chat starten jetzt auf Englisch (vorher war dort noch ein polnischer Satz).', 'Die App ist etwas kleiner und lädt schneller.']),
   ('0.27', '2026-11-14', ['Jetzt auch für Thüringen, Sachsen-Anhalt und Mecklenburg-Vorpommern: Gymnasium, Regelschule, Sekundarschule, Regionale Schule, Gemeinschafts- und Gesamtschule. MV-Gymnasium mit eigener Grammatik-Reihenfolge je Klasse.']),
   ('0.26', '2026-11-14', ['Jetzt auch für Schleswig-Holstein (Gymnasium, Gemeinschaftsschule mit ESA-, MSA- oder Oberstufen-Niveau) und Hamburg (Gymnasium, Stadtteilschule).']),
   ('0.25', '2026-11-13', ['Jetzt auch für Berlin und Brandenburg: Grundschule (Klasse 5/6), Gymnasium, Integrierte Sekundarschule, Oberschule und Gesamtschule – mit Niveau bzw. Kurs.']),

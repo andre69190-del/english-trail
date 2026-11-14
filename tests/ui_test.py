@@ -157,7 +157,8 @@ with sync_playwright() as p:
 
     # Englisch als Basissprache
     page.evaluate("() => { window.PSApp.state().base='en'; window.PSApp.go('home'); }")
-    (ok if 'Continue on the Szlak' in page.inner_text('#cta') else bad)('Englische Oberfläche')
+    (ok if 'Weiter auf dem Trail' in page.inner_text('#cta') else bad)('Alte Einstellung base=en fällt auf Deutsch zurück (0.28)')
+    (ok if page.evaluate("() => !/[ąęłńśźżć]/.test(document.body.innerText)") else bad)('Keine polnischen Buchstaben auf der Startseite')
 
     # Dark Mode
     page.emulate_media(color_scheme='dark'); page.evaluate("() => window.PSApp.go('home')")
@@ -404,6 +405,13 @@ with sync_playwright() as p:
     vp.click('#ob-why [data-v="travel"]'); vp.click('#ob-goal [data-v="3"]'); vp.click('#ob-go'); vp.wait_for_timeout(400)
     vp.evaluate("() => window.PSApp.go('me')"); vp.wait_for_selector('#voice')
     (ok if vp.locator('#vs-src').count() == 0 else bad)('Keine polnischen App-Stimmen in English Trail')
+    # 0.28: Stimmen-Test spricht Englisch (vorher polnischer Satz)
+    vp.evaluate("() => { window.__said = []; try { const o = speechSynthesis.speak.bind(speechSynthesis); speechSynthesis.speak = function (u) { window.__said.push(u.text); try { o(u); } catch (e) {} }; } catch (e) {} }")
+    tb = vp.locator('#vc-test, #vc-diag').first
+    if tb.count():
+        tb.click(); vp.wait_for_timeout(300)
+        said = vp.evaluate("() => (window.__said || []).join(' | ')")
+        (ok if said and 'Hello' in said and not any(c in said for c in 'ąęłńśźżć') else bad)(f'Stimmen-Test spricht Englisch ({said})')
     vx.close()
 
     # ---------- 3.5 Weiterlernen statt warten, „sicher“ erklärt ----------

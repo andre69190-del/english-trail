@@ -31,7 +31,7 @@ Neue Ideen kommen unten in „Ideen-Speicher“, nicht mitten in die Liste.
 - ⬜ **10. Weitere Länder + Schularten** schrittweise (Realschule/Oberschule/Gesamtschule), jeweils erst wenn ein Land vollständig getestet ist.
 - ⬜ **11. Design Phase 8**: Raben-Grafik statt Zwerg (`krasnalSvg`), Postkarten-Gestaltung, Startseite mit „Mein Rabe“ als Begleiter.
 - ⬜ **12. Muttersprachler-Prüfmodus (`?review`) für englische Texte** anpassen (Polnisch-Reste in den Texten entfernen), damit jemand alle Inhalte gegenlesen kann.
-- ⬜ **13. Aufräumen**: alle restlichen polnischen Texte in TX (en-Texte, ausgeblendete Funktionen) entfernen oder ersetzen; `content_check.py` um eine Prüfung „keine polnischen Wörter in sichtbaren Texten“ erweitern.
+- ✅ 14.11.2026 (0.28) **13. Aufräumen** – ungenutzter englischer TX-Block (voller Polnisch-Reste) entfernt, TX.en = TX.de; Polnisch-Bereich „Dla Polaków“, polnischer Rechtschreib-Modus, PLX und tote Schlüssel (pol_*, rule_*, g_*, cls_*) entfernt; sichtbare Polnisch-Sätze ersetzt (Stimmen-Test, Start des freien KI-Chats). Neue Prüfung in content_check.py: keine polnischen Buchstaben in Daten (inkl. data-*.json) und app.js (außer Prüfmodus RVX → Punkt 12); i18n_check prüft TX.de. index.html 830 → 774 KB. Alte Duell-Codes mit P-Stufe bleiben lesbar.
 
 ## Erledigt
 - ✅ 06.11.2026 (0.12): Schul-Einrichtung vereinfacht (BW/Gymnasium eingeklappt), Startcheck „Wie fit bin ich?“, Buch/Klasse wechseln mit Warnung + Bestätigung, Unit-Auswahl als Knöpfe (Welcome, Unit 1–6, Extra).

@@ -1,1 +1,1 @@
-0.27 (14.11.2026) Thueringen Sachsen-Anhalt Mecklenburg-Vorpommern
+0.28 (14.11.2026) Aufraeumen Polnisch-Reste entfernt

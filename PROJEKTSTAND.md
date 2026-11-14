@@ -340,3 +340,11 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - **Neuer Plan `mv`** (Codes **M**) nach Rahmenplan MV Gymnasium 7–10 (2019): Kl. 7 Passiv, indirekte Rede, if II, past perfect; Kl. 8 Gerundium, Partizipien, if III; Kl. 9 Zeitformen-/Zukunftsüberblick; Kl. 10 nichts Neues. Ab Kl. 7 einzelne Klassen (schLoOf/schHiOf), 5/6 Doppeljahrgang.
 - Notiz `content/schule/RECHERCHE_TH_ST_MV.md`. SEO `englisch-thueringen-sachsen-anhalt-mv.html`.
 - index.html 811 KB (Budget 820). Tests: Core 73, UI 210 OK (2×). Offen: Saarland, Bremen.
+
+## Release 0.28 (14.11.2026) – Aufräumen: Polnisch-Reste entfernt (AUTOPLAN 13, interaktive Sitzung)
+- `TX.en` (ungenutzt, `S.base` ist immer `de`, voller Polnisch-Texte) entfernt → `TX.en = TX.de`. i18n_check angepasst (keine DE=EN-Warnungen mehr, Fehler bei polnischen Buchstaben in TX.de).
+- Entfernt: Bereich „Dla Polaków“ (renderPolacy/startPol/startPolTest, Kachel unter Land, Ergebnis-Zweig polTest), `PLX`-Texte, polnischer Rechtschreib-Modus (`qSpell`, Modus `spell`), `plKeysPl`, tote Schlüssel pol_*, spell*, rule_*, g_*, cls_am/i/uje/e, clsn_i/uje/e, conj_past_tip. `needPolacy` ist nur noch ein Stub; `PCATS`/`qPol` bleiben für alte Duell-Codes (P-Stufe). Spielstand-Felder `plv`/`plBest` bleiben unverändert.
+- Sichtbare Fehler behoben: Stimmen-Test sprach „Kiedy mogę zacząć pracę?“ / „Dzień dobry!“ → jetzt Englisch; freier KI-Chat begann mit „Cześć! Jak się masz?“ → „Hi! How are you today?“.
+- Neue Prüfung in `checks/content_check.py`: keine polnischen Buchstaben in data.json, allen data-*.json und app.js (ohne Kommentare; Prüfmodus `RVX` ausgenommen bis AUTOPLAN 12).
+- index.html 830 → 774 KB. Tests: Core 73, UI 212 OK (2×), alle Checks grün.
+- Offen: AUTOPLAN 12 (Prüfmodus `?review` auf Englisch umbauen), core.js enthält noch polnische Hilfsfunktionen (Zahlwörter, misspell) – ungenutzt, getestet, unschädlich.
