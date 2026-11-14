@@ -16,6 +16,10 @@ Neue Ideen kommen unten in „Ideen-Speicher“, nicht mitten in die Liste.
 
 ## Arbeitsliste (Reihenfolge = Priorität)
 > 🔧 14.11.2026 ab 16:02: Interaktive Sitzung mit Andre arbeitet an **Punkt 12** und danach am Ideen-Speicher (Eltern-Ansicht, Englisch ab Kl. 6 …). Samstagslauf 21:33: vorher RELEASE.txt + diese Datei neu vom PC lesen, nur Punkte ohne 🔧 nehmen, sonst nur prüfen und melden.
+> 🔎 14.11.2026 21:33 Samstagslauf (abends): Arbeitsliste hat keine offenen ⬜-Punkte mehr → nur geprüft: Live 0.36, unbekannte Pfade 404, keine JS-Fehler, Upload 3a4800b ok. Nichts veröffentlicht. → Andre hat danach entschieden: alle Ideen umsetzen (Punkte 14–16).
+- ✅ 14.11.2026 (0.37) **14. Klassen-Rangliste über Codes** – Ergebnisse aus dem Klassenchat einfügen, Rangliste je Code (bestes Ergebnis je Name), teilen; Fehler bei Klassen-Codes (Prüfsumme) behoben. (Andre 14.11. abends: „alle 3“ Ideen umsetzen)
+- ⬜ **15. Oberstufe (Kl. 11–13)** – Kursstufe/Qualifikationsphase: Klassen 11–12 (G8) bzw. 11–13 (G9) wählbar, eigene Pakete (Abi-Themen: Globalisierung, Medien, Umwelt, Identität, Shakespeare/Literatur-Grundbegriffe, Analyse-/Kommentar-Redemittel), Grammatik-Wiederholung + Stil (Partizipialkonstruktionen, Inversion, Cleft sentences), Abi-Training (Textaufgabe Analyse/Kommentar, Mediation). Pakete nur anhängen, neue Plan-Klassen ohne bestehende Codes zu ändern.
+- ⬜ **16. Berufliche Schulen** – Berufsschule/Berufsfachschule/Berufskolleg: Grundpaket Berufsenglisch (Bewerbung, Telefon, E-Mail, Kundengespräch, Arbeitssicherheit), Wahl der Berufsfelder (Technik, Wirtschaft/Büro, Gesundheit/Pflege, Gastronomie), KMK-Fremdsprachenzertifikat-Training (Rezeption, Produktion, Mediation, Interaktion).
 - ✅ 13.11.2026 **1. Live-Prüfung**: Seite liefert 0.12, unbekannte Pfade 404 (Änderung vom 09.11.). Feedback-Tabelle noch nicht vorhanden → übersprungen. Hinweis: Die Samstagsläufe am 07.11. haben nichts veröffentlicht (PC vermutlich aus).: english.arndt-software.de prüfen (aktuelle Version ausgeliefert, keine JS-Fehler). Falls Andre die Tabelle `et_feedback` angelegt hat und ein Weg zum Lesen besteht: Meldungen auswerten und Fehler beheben (sonst überspringen).
 - ✅ 13.11.2026 (0.13) **2. Schulinhalte nur bei Bedarf laden** – erledigt: `data-school-bw-gym.json` (build.py, Felder `land`/`stype` an Paketen, Standard bw/gym), `needSchool`, index.html 822 → 720 KB, Budget 760 KB. Noch offen für Schritt 9: Grammatik-Zuordnung je Land (TOPICS-Klassen) ebenfalls in die Land-Datei. (Vorbereitung für weitere Bundesländer)**: index.html liegt bei ~820 KB. Aufteilen in
   - **Kern** (immer): App, Trail 1, gemeinsame Grammatik-Aufgaben, Interessen.
@@ -40,10 +44,10 @@ Neue Ideen kommen unten in „Ideen-Speicher“, nicht mitten in die Liste.
 ## Ideen-Speicher (noch nicht eingeplant)
 - ✅ 0.16: Niveau G/M/E, Werkrealschule.
 - ✅ 0.17: Abschluss-Training Sek I BW (Kommunikationsprüfung a/b/c mit Note, schriftlich A–E). Nächste Ausbaustufe: Aufnahme/Spracherkennung bei der Präsentation, echte Lesetexte für Teil B.
-- Oberstufe / berufliche Schulen.
+- → Oberstufe / berufliche Schulen: eingeplant als Punkte 15/16.
 - ✅ 14.11.2026 G9-Bildungsplan BW geprüft, auch mit dem vollständigen Fachplan V3.0 (von Andre): Standardräume 5/6, 7/8, 9/10, 11 – unsere Zuordnung passt, kein eigener G9-Plan nötig (Details content/schule/RECHERCHE_BW.md).
 - ✅ 0.34: Neue Pakete nach G9-Themen: s8wel „Wohlbefinden und Stress“ (Kl. 8) und s10rig „Rechte, Pflichten und Rollenbilder“ (Kl. 10), in allen Plänen.
 - ✅ 0.36: Englisch als 2. Fremdsprache ab Kl. 6 (Gymnasium, Plan `e2` = Grundzuordnung +1, Codes mit Z).
 - ✅ 0.30: Sprechprüfung mit Aufnahme + Checkliste (Präsentation, Sprachmittlung), optionale Mitschrift mit Wörtern/Minute und Redemitteln.
 - ✅ 0.35: Eltern-Bereich mit PIN (Lernzeit 14 Tage + 4 Wochen, Wörter, knifflige Wörter, Schule, Wochenziel, KI-Chat erlauben, PIN-Reset sichtbar vermerkt).
-- Klassen-Rangliste über Codes.
+- ✅ 0.37: Klassen-Rangliste über Codes (Punkt 14).

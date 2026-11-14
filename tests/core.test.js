@@ -717,3 +717,19 @@ test('Englisch ab Klasse 6 (Plan e2): Grundzuordnung +1, Codes mit Z', () => {
   assert.equal(C.schLoOf(7, 'e2'), 6); assert.equal(C.schHiOf(7, 'e2'), 8); assert.equal(C.schLoOf(10, 'e2'), 9);
   const code = C.hwCode(7, 1, 1, 'e2'); assert.match(code, /^HA7Z-/); assert.equal(C.hwParse(code).plan, 'e2'); assert.equal(C.duelParse('FOX-123-1-Z7').plan, 'e2');
 });
+
+test('Klassen-Rangliste: Klassen-Code signiert, Chat einlesen, bestes je Name, Sicherung zusammenführen', () => {
+  const R = Array(20).fill(1), code = 'WEEK-321-2-K7';
+  const a = C.duelResultText(code, 'AB12', R, 61000, { name: 'Tom' });
+  assert.equal(C.duelReadResult(a).code, code); assert.ok(C.duelReadResult(a).signed, 'Schul-Code mit Klasse ist gültig signiert');
+  const chat = '[18:01] Tom: ' + a + '\n' + C.duelResultText(code, 'AB12', R.slice(0, 19).concat([0]), 50000, { name: 'Mia' }) + '\n' +
+    C.duelResultText(code, 'AB12', R.slice(0, 5), 9000, { name: 'tom' }) + '\n' + C.duelResultText('FOX-123-1', 'AAAA', R, 5000, { name: 'Max' }) + '\nEnglish Trail ⚔ ' + code + ' #AB12\nBen · 20/20 · 0:05\n~ABCD';
+  const r = C.boardRead(chat, code); assert.equal(r.rows.length, 3); assert.equal(r.bad, 1); assert.equal(r.other, 1);
+  const B = {}; r.rows.forEach(o => C.boardAdd(B, o)); const L = C.boardList(B);
+  assert.equal(L.map(e => e.name).join(','), 'Tom,Mia'); assert.equal(L[0].right, 20);
+  assert.equal(C.boardAdd(B, { name: 'Mia', right: 19, total: 20, ms: 40000 }), true, 'gleich viele richtig, aber schneller');
+  assert.equal(C.boardAdd(B, { name: 'Mia', right: 18, total: 20, ms: 1000 }), false);
+  assert.match(C.boardText(code, C.boardList(B)), /1\. Tom · 20\/20 · 1:01\n2\. Mia · 19\/20 · 0:40/);
+  const m = C.mergeSave({ app: 'english-trail', cards: {}, xp: 1, cboard: { [code]: { mia: { name: 'Mia', right: 19, total: 20, ms: 40000 } } } }, { app: 'english-trail', cards: {}, xp: 1, cboard: { [code]: { mia: { name: 'Mia', right: 20, total: 20, ms: 90000 }, tom: { name: 'Tom', right: 3, total: 20, ms: 1 } } } });
+  assert.equal(m.cboard[code].mia.right, 20); assert.ok(m.cboard[code].tom);
+});

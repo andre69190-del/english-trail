@@ -391,3 +391,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 ## Release 0.36 (14.11.2026) – Englisch ab Klasse 6 (interaktive Sitzung)
 - Schul-Einrichtung (nur Gymnasium): „Englisch seit Klasse 5 / Klasse 6 (2. Fremdsprache)“ → `S.school.e2`; `schPlan()` liefert dann Plan `e2` (in merge.py: Grundzuordnung +1 Klasse, max. 10; Standardräume 6–8 / 9–10). Klasse 5 dann nicht wählbar. Wechsel mit Warnung wie bisher, alte Werte (inkl. e2) werden beim Abbrechen wiederhergestellt.
 - Codes: Plan-Buchstabe **Z** (Duell, Hausaufgabe). Tests: Core 78, UI 240 OK.
+
+## Release 0.37 (14.11.2026) – Klassen-Rangliste über Codes (AUTOPLAN 14)
+- Ohne Server: Ergebnistexte aus dem Klassenchat (beliebig viele auf einmal) einfügen → `C.boardRead` (nur signierte mit Namen, gleicher Code), `C.boardAdd` (pro Name das beste: mehr richtig, dann schneller), `C.boardList`, `C.boardText` (zum Teilen). Gespeichert in `S.cboard[code]` (neues Feld, Standard `{}`, max. 12 Codes, in mergeSave zusammengeführt).
+- Bildschirm `renderBoard(code)`: Einstieg im Schulbereich (Wochen-Challenge → „🏆 Klassen-Rangliste“) und nach jedem Code-Duell. Eigenes Ergebnis kommt automatisch hinein, wenn ein Name gesetzt ist; beim Vergleichen auch das des Gegners. Frühere Codes abrufbar.
+- **Fehler behoben:** Ergebnisse mit Klassen-Code (z. B. `WEEK-144-2-K7`) wurden beim Einlesen ohne `-K7` gelesen → Prüfsumme nie gültig, kamen nie in die Rangliste und galten als „gemischtes Duell“. `duelReadResult` liest den Klassen-Teil jetzt mit.
+- Veralteter Feature-Check „Dla Polaków“ (seit 0.28 entfernt) aus check_features.sh genommen. Tests: Core 79, UI 244 OK.

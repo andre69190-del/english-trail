@@ -583,6 +583,23 @@ with sync_playwright() as p:
     sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#sc-week')
     sp.click('#sc-week'); sp.wait_for_timeout(300)
     (ok if 'WEEK-' in sp.inner_text('main') else bad)('Wochen-Challenge öffnet mit Klassen-Code')
+    # 0.37: Klassen-Rangliste über Codes
+    sp.evaluate("() => { const s = window.PSApp.state(); s.name = 'Lena'; }")
+    wk = sp.inner_text('main').split('WEEK-')[1].split()[0].split('#')[0].strip(); wk = 'WEEK-' + wk
+    sp.click('#d2play'); play_through(sp, 300); sp.wait_for_selector('#d2board')
+    sp.click('#d2board'); sp.wait_for_selector('#cb-in')
+    (ok if sp.inner_text('#cb-code') == wk and 'Lena' in sp.inner_text('.cb-tab') else bad)('Klassen-Rangliste: eigenes Ergebnis automatisch eingetragen (%s)' % wk)
+    chat = sp.evaluate("""(c) => { const C = window.PSCore, pl = C.duelPlan(window.PSApp.raw ? window.PSApp.raw() : window.PSApp.data(), c);
+      const ck = pl ? pl.check : 'XXXX', R = Array(20).fill(1);
+      return '[18:01] Tom: ' + C.duelResultText(c, ck, R, 61000, {name: 'Tom'}) + '\\n[18:05] Mia: ' + C.duelResultText(c, ck, R.slice(0, 19).concat([0]), 50000, {name: 'Mia'}) +
+        '\\n' + C.duelResultText(c, ck, R.slice(0, 5), 9000, {name: 'Tom'}) + '\\n' + C.duelResultText('FOX-123-1', 'AAAA', R, 5000, {name: 'Max'}) + '\\nEnglish Trail \\u2694 ' + c + ' #' + ck + '\\nBen · 20/20 · 0:05\\n~ABCD'; }""", wk)
+    sp.fill('#cb-in', chat); sp.click('#cb-go'); sp.wait_for_timeout(200)
+    names = [r.split('\t')[1] if '\t' in r else r for r in sp.locator('.cb-tab tbody tr').all_inner_texts()]
+    msg = sp.inner_text('#cb-msg')
+    (ok if len(names) == 3 and 'Tom' in names[0] and 'Mia' in names[1] and 'Lena' in names[2] and '1 ohne' in msg and '1 mit anderem' in msg else bad)('Klassen-Rangliste: Chat einfügen, bestes je Name, falsche Prüfsumme/anderer Code ignoriert (%s | %s)' % (names, msg))
+    (ok if sp.evaluate("() => Object.keys(window.PSApp.state().cboard).length") == 1 else bad)('Klassen-Rangliste wird gespeichert (cboard)')
+    sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#sc-board'); sp.click('#sc-board'); sp.wait_for_selector('#cb-in')
+    (ok if sp.locator('.cb-tab tbody tr').count() == 3 and sp.evaluate("() => document.documentElement.scrollWidth") <= 375 else bad)('Klassen-Rangliste aus dem Schulbereich, ohne horizontales Scrollen')
     sp.evaluate("() => window.PSApp.go('school')"); sp.wait_for_selector('#sc-face'); sp.click('#sc-face'); sp.wait_for_selector('#fsrc')
     (ok if sp.locator('#fsrc [data-v="school"][aria-pressed="true"]').count() == 1 and sp.locator('#fsrc [data-v="u:Unit 3"]').count() == 0 and sp.locator('#fsrc [data-v="u:Unit 4"]').count() == 0 else bad)('Gegenüber: Quelle Klasse gewählt (Units mit < 4 Wörtern ausgeblendet)')
     sp.click('#fgo'); sp.wait_for_timeout(300)

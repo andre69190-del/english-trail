@@ -290,7 +290,7 @@
       results.map(function (r) { return r ? '\ud83d\udfe9' : '\u2b1c'; }).join('') + '\n~' + duelSign(code, check, name, good, results.length, secs, inp);
   }
   function duelReadResult(text) {
-    var t = String(text || ''), mc = t.match(/([A-Za-z]{2,8}-\d{3}-[Pp]?[123])/), ms = t.match(/(\d+)\s*\/\s*(\d+)/), mt = t.match(/(\d+):(\d{2})/), mk = t.match(/#([0-9A-Za-z]{4})/);
+    var t = String(text || ''), mc = t.match(/([A-Za-z]{2,8}-\d{3}-[Pp]?[123](?:-[KSNGEBHRUPXMZ](?:10|[5-9]))?)/i)  /* 14.11.2026: Klassen-Suffix (-K7) gehört zum Code, sonst passte die Prüfsumme bei Schul-Codes nie */, ms = t.match(/(\d+)\s*\/\s*(\d+)/), mt = t.match(/(\d+):(\d{2})/), mk = t.match(/#([0-9A-Za-z]{4})/);
     if (!ms) return null;
     var line = t.match(/\n\s*([^\n\u00b7]*?)\s*\u00b7\s*\d+\s*\/\s*\d+/), mi = t.match(/\d:\d{2}\s*\u00b7\s*([WST])\b/), msg = t.match(/~([0-9A-Za-z]{4})/);
     var pc = mc ? duelParse(mc[1]) : null, o = { code: pc ? pc.code : null, base: pc ? pc.base : null, lv: pc ? pc.lv : null, check: mk ? mk[1].toUpperCase() : null, right: +ms[1], total: +ms[2], ms: mt ? (+mt[1] * 60 + +mt[2]) * 1000 : null,
@@ -385,6 +385,8 @@
     each('wlog', function (x, y) { var r = {}; [x, y].forEach(function (z) { Object.keys(obj(z)).forEach(function (f) { r[f] = Math.max(r[f] || 0, +z[f] || 0); }); }); return r; });
     each('daily', function (x, y) { return ((y && y.score) || 0) > ((x && x.score) || 0) ? y : x; });
     each('rank', function (x, y) { return ((y && y.g) || 0) > ((x && x.g) || 0) ? y : x; });
+    /* 14.11.2026 Klassen-Rangliste: je Code und Name das bessere Ergebnis */
+    each('cboard', function (x, y) { var r = {}; [x, y].forEach(function (b) { Object.keys(obj(b)).forEach(function (k) { var e = b[k]; if (e && boardBetter(e, r[k])) r[k] = e; }); }); return r; });
     /* eigene Wörter: vom neueren Stand, fehlende vom älteren hinten anhängen */
     var custom = arr(nw.custom).slice(), mapOld = {}, keyOf = function (w) { return String(w && w[0]).toLowerCase() + '|' + String(w && w[1]).toLowerCase(); };
     var idx = {}; custom.forEach(function (w, i) { idx[keyOf(w)] = i; });
@@ -416,6 +418,35 @@
     return Object.keys(rank || {}).map(function (k) { return rank[k]; }).sort(function (a, b) { return b.w - a.w || b.pts - a.pts || a.g - b.g || (a.name < b.name ? -1 : 1); });
   }
 
+  /* Klassen-Rangliste (ohne Server): viele Ergebnis-Texte auf einmal einfügen (z. B. aus dem Klassenchat).
+     Nur Ergebnisse mit gültiger Prüfsumme und gleichem Code zählen; pro Name zählt das beste Ergebnis
+     (mehr richtig, bei Gleichstand die schnellere Zeit). board = { name_klein: {name, right, total, ms, inp} } */
+  function boardRead(text, code) {
+    var want = code ? (duelParse(code) || {}).code : null, out = { rows: [], bad: 0, other: 0 };
+    String(text || '').split(/(?=English Trail\s*\u2694)/).forEach(function (part) {
+      if (!/\d+\s*\/\s*\d+/.test(part)) return;
+      var o = duelReadResult(part);
+      if (!o || !o.signed || !o.name) { out.bad++; return; }
+      if (want && o.code !== want) { out.other++; return; }
+      out.rows.push(o);
+    });
+    return out;
+  }
+  function boardBetter(a, b) { return !b || a.right > b.right || (a.right === b.right && a.ms < b.ms); }
+  function boardAdd(board, o) {
+    var name = duelName(o.name), key = name.toLowerCase();
+    if (!key) return false;
+    var e = { name: name, right: o.right, total: o.total, ms: o.ms, inp: o.input || '' };
+    if (!boardBetter(e, board[key])) return false;
+    board[key] = e; return true;
+  }
+  function boardList(board) {
+    return Object.keys(board || {}).map(function (k) { return board[k]; }).sort(function (a, b) { return b.right - a.right || a.ms - b.ms || (a.name < b.name ? -1 : 1); });
+  }
+  function boardText(code, list) {
+    return 'English Trail \ud83c\udfc6 ' + code + '\n' + (list || []).slice(0, 40).map(function (e, i) { return (i + 1) + '. ' + e.name + ' \u00b7 ' + e.right + '/' + e.total + ' \u00b7 ' + fmtTime(e.ms); }).join('\n');
+  }
+
   /* Satzbau: Wörter eines Satzes (Satzzeichen bleiben am Wort) */
   function tokens(sentence) { return String(sentence).trim().split(/\s+/); }
   function sameSentence(a, b) { return norm(a) === norm(b); }
@@ -437,7 +468,7 @@
     if (o.app == null) { if (!o.cards && !o.boss && !o.xp) return null; o.app = 'english-trail'; }
     if (typeof o.xp !== 'number' || !(o.xp >= 0)) o.xp = Math.max(0, +o.xp || 0);
     if (!o.cards || typeof o.cards !== 'object' || Array.isArray(o.cards)) o.cards = {};
-    ['boss', 'skipped', 'scenes', 'opened', 'active', 'best', 'done', 'missions', 'weekXp', 'wlog', 'daily', 'plBest', 'rank'].forEach(function (k) {
+    ['boss', 'skipped', 'scenes', 'opened', 'active', 'best', 'done', 'missions', 'weekXp', 'wlog', 'daily', 'plBest', 'rank', 'cboard'].forEach(function (k) {
       if (o[k] != null && (typeof o[k] !== 'object' || Array.isArray(o[k]))) delete o[k];
     });
     ['custom', 'krasnale', 'mistakes', 'rankSeen'].forEach(function (k) { if (o[k] != null && !Array.isArray(o[k])) delete o[k]; });
@@ -752,7 +783,7 @@
     INTERVALS: INTERVALS, MASTERED_BOX: MASTERED_BOX, srsUpdate: srsUpdate, isDue: isDue,
     dayKey: dayKey, addDays: addDays, weekKey: weekKey, prevWeek: prevWeek, daysInWeek: daysInWeek, daysSince: daysSince, STEPS: STEPS, nextStep: nextStep, cityRipe: cityRipe, letterRead: letterRead,
     weekStreak: weekStreak, totalDays: totalDays,
-    duelPlan: duelPlan, duelNewCode: duelNewCode, duelParse: duelParse, duelCheck: duelCheck, duelResultText: duelResultText, duelReadResult: duelReadResult, duelCompare: duelCompare, fmtTime: fmtTime, duelWeight: duelWeight, duelScore: duelScore, duelSign: duelSign, duelName: duelName, rankAdd: rankAdd, rankList: rankList, mergeSave: mergeSave,
+    duelPlan: duelPlan, duelNewCode: duelNewCode, duelParse: duelParse, duelCheck: duelCheck, duelResultText: duelResultText, duelReadResult: duelReadResult, duelCompare: duelCompare, fmtTime: fmtTime, duelWeight: duelWeight, duelScore: duelScore, duelSign: duelSign, duelName: duelName, rankAdd: rankAdd, rankList: rankList, boardRead: boardRead, boardAdd: boardAdd, boardList: boardList, boardText: boardText, mergeSave: mergeSave,
     hash: hash, rng: rng, shuffle: shuffle, sample: sample,
     xpForLevel: xpForLevel, levelFromXp: levelFromXp, comboBonus: comboBonus, xpFor: xpFor,
     shareText: shareText, tokens: tokens, sameSentence: sameSentence, validateSave: validateSave, repairSave: repairSave, saveStats: saveStats, saveWeight: saveWeight, addBackup: addBackup

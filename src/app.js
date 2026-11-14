@@ -113,6 +113,10 @@
       d2_mix: 'Gemischt spielen: Dein Gegenüber nimmt denselben Code mit eigener Stufe, z. B. KOT-472-1 gegen KOT-472-P2. Dann gibt es unterschiedliche Fragen, und die richtigen Antworten werden gewichtet: Stufe 1 ×1 · 2 ×1,5 · 3 ×2 · P1 ×2 · P2 ×2,5 · P3 ×3.',
       d2_rec: 'Empfohlen für dich', d2_mixed: 'Gemischtes Duell – unterschiedliche Fragen, Punkte gewichtet', d2_pts: 'Punkte', d2_inp_diff: 'Hinweis: Ihr habt mit unterschiedlicher Antwortart gespielt (W = Schreiben, S = Sprechen, T = Antippen).',
       d2_other_base: 'Anderer Code-Stamm – das Ergebnis gehört nicht zu diesem Duell.',
+      cb: 'Klassen-Rangliste', cb_d: 'Alle in der Klasse spielen denselben Code und schicken ihr Ergebnis in den Klassenchat. Kopiere die Nachrichten (gern alle auf einmal) und füge sie hier ein. Es zählen nur Ergebnisse mit Namen und gültiger Prüfsumme, pro Name das beste. Alles bleibt auf diesem Handy, kein Server.',
+      cb_code: 'Code', cb_paste: 'Ergebnisse aus dem Klassenchat einfügen', cb_go: 'Auswerten', cb_empty: 'Noch keine Ergebnisse für diesen Code. Spiele selbst (mit Namen) oder füge Ergebnisse aus dem Chat ein.',
+      cb_added: '{n} Ergebnis(se) übernommen.', cb_bad: '{n} ohne Namen oder gültige Prüfsumme ignoriert.', cb_other: '{n} mit anderem Code ignoriert.', cb_none: 'Keine Ergebnisse gefunden. Kopiere die ganze Nachricht ab „English Trail ⚔“.',
+      cb_share: 'Rangliste kopieren', cb_clear: 'Diese Rangliste löschen', cb_clear_q: 'Rangliste für diesen Code wirklich löschen?', cb_open: '🏆 Klassen-Rangliste', cb_name: 'Tipp: Gib unter „Duell“ deinen Namen ein, dann kommt dein Ergebnis automatisch in die Rangliste.', cb_old: 'Frühere Codes',
       rank: 'Rangliste', rank_d: 'Auf diesem Handy gespeichert (wird mit „Fortschritt sichern“ mitgesichert). Es zählen nur Ergebnisse mit gültiger Prüfsumme, jedes Duell nur einmal. Sortiert nach Siegen, dann Punkten.',
       rank_empty: 'Noch keine Duelle eingetragen. Nach einem Duell-Code-Spiel das Ergebnis deines Gegenübers einfügen und vergleichen.', rank_g: 'Spiele', rank_w: 'Siege', rank_d2: 'Unent.', rank_pts: 'Punkte', rank_clear: 'Rangliste löschen', rank_clear_q: 'Rangliste wirklich löschen?',
       rank_added: 'In die Rangliste eingetragen.', rank_dupe: 'Dieses Duell steht schon in der Rangliste.', rank_unsigned: 'Nicht in die Rangliste eingetragen: Das Ergebnis hat keine gültige Prüfsumme (verändert oder alte App-Version).',
@@ -229,7 +233,7 @@
   function fresh() {
     return { app: 'english-trail', v: 1, base: 'de', accent: 'gb', school: null, onboarded: false, why: '', goal: 4, len: 10,
       xp: 0, cards: {}, active: {}, unlocked: 0, boss: {}, scenes: {}, krasnale: [], mistakes: [], custom: [], weekXp: {}, hardcore: false, slow: false,
-      theme: 'auto', instHint: false, ts: 0, daily: {}, seenWeek: '', diff: 'easy', free: false, skipped: {}, jokers: { five0: 3, freeze: 3, hint: 3 }, jokerWeek: '', best: {}, input: 'write', plv: null, plBest: {}, name: '', gender: '', rank: {}, rankSeen: [], done: {}, welcomeDay: '', missions: {}, tour: false, letterQuiz: 0, wlog: {}, wrSeen: '', seenVer: '', rem: { days: ['MO', 'WE', 'FR'], time: '19:00' }, voice: '', vsrc: '', read: {}, exam: {} }; /* PATCH002 PATCH004 */
+      theme: 'auto', instHint: false, ts: 0, daily: {}, seenWeek: '', diff: 'easy', free: false, skipped: {}, jokers: { five0: 3, freeze: 3, hint: 3 }, jokerWeek: '', best: {}, input: 'write', plv: null, plBest: {}, name: '', gender: '', rank: {}, rankSeen: [], cboard: {}, done: {}, welcomeDay: '', missions: {}, tour: false, letterQuiz: 0, wlog: {}, wrSeen: '', seenVer: '', rem: { days: ['MO', 'WE', 'FR'], time: '19:00' }, voice: '', vsrc: '', read: {}, exam: {} }; /* PATCH002 PATCH004 */
   }
   var BAK_KEY = 'english_trail_bak', RESCUE_KEY = 'english_trail_rescue', RESCUE = '', saveFailed = false;
   var S = load();
@@ -1282,7 +1286,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.36', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.37', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -2152,7 +2156,7 @@
       '<section class="card stack"><h2>' + esc(t('sch_gram')) + '</h2><p class="small muted">' + esc(t('sch_gram_d').replace('{a}/{b}', schRange(g))) + '</p><div class="list">' + tNew.map(topicBtn).join('') + '</div>' +
       (tNew.length ? '<button class="btn" id="sc-gall" style="justify-self:start">' + esc(t('sch_gram_all')) + '</button>' : '') +
       (tOld.length ? '<details><summary class="small"><b>' + esc(t('sch_repeat')) + '</b> (' + tOld.length + ')</summary><div class="list">' + tOld.map(topicBtn).join('') + '</div></details>' : '') + '</section>' +
-      '<section class="card stack"><h2>🏆 ' + esc(t('sch_week')) + '</h2><p class="small">' + esc(t('sch_week_d')) + '</p><p class="small muted">Code: <b class="num">' + esc(C.weekChallengeCode(today(), g, schPlan())) + '</b></p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-week">' + esc(t('sch_week_go')) + '</button><button class="btn" id="sc-face">' + esc(t('face')) + '</button><button class="btn" id="sc-duel">' + esc(t('sch_duel')) + '</button><button class="btn" id="sc-live">⚡ ' + esc(t('live')) + '</button></div></section>' +
+      '<section class="card stack"><h2>🏆 ' + esc(t('sch_week')) + '</h2><p class="small">' + esc(t('sch_week_d')) + '</p><p class="small muted">Code: <b class="num">' + esc(C.weekChallengeCode(today(), g, schPlan())) + '</b></p><div class="row" style="flex-wrap:wrap"><button class="btn primary" id="sc-week">' + esc(t('sch_week_go')) + '</button><button class="btn" id="sc-face">' + esc(t('face')) + '</button><button class="btn" id="sc-duel">' + esc(t('sch_duel')) + '</button><button class="btn" id="sc-board">' + esc(t('cb_open')) + '</button><button class="btn" id="sc-live">⚡ ' + esc(t('live')) + '</button></div></section>' +
       '<section class="card stack"><h2>📮 ' + esc(t('hw')) + '</h2><p class="small">' + esc(t('hw_d')) + '</p><div class="row" style="flex-wrap:nowrap"><input id="hw-in" class="num" autocapitalize="characters" autocomplete="off" placeholder="HA7-P3-T5" aria-label="' + esc(t('hw')) + '" style="flex:1;min-width:0"><button class="btn primary" id="hw-go">' + esc(t('hw_go')) + '</button></div>' + (S.hwDone && Object.keys(S.hwDone).length ? '<p class="small muted">' + esc(t('hw_done')) + ' ' + Object.keys(S.hwDone).slice(-3).map(function (k) { return k + ' (' + S.hwDone[k] + ' %)'; }).join(' · ') + '</p>' : '') + '</section>' +
       '<section class="card stack"><h2>📝 ' + esc(t('sch_exam')) + '</h2><p class="small muted">' + esc(t('sch_exam_d')) + '</p>' +
       '<fieldset class="stack" style="border:0;padding:0;margin:0"><legend class="small"><b>' + esc(t('sch_exam_pick')) + '</b></legend>' +
@@ -2216,6 +2220,7 @@
     };
     document.getElementById('sc-week').onclick = function () { var pl = C.duelPlan(RAW, C.weekChallengeCode(today(), g, schPlan())); if (!pl) return toast(t('d2_bad')); duelCodeDraft = pl.code; duelGrade = g; duelSek = schPlan(); tab = 'duel'; renderDuelReady(pl); };
     document.getElementById('sc-face').onclick = function () { faceSrc = 'school'; go('face'); };
+    document.getElementById('sc-board').onclick = function () { renderBoard(C.weekChallengeCode(today(), g, schPlan()), function () { go('school'); }); };
     document.getElementById('sc-live').onclick = function () { S.liveSrc = 'school'; go('live'); };
     document.getElementById('sc-duel').onclick = function () { duelGrade = g; duelSek = schPlan(); duelCodeDraft = C.duelNewCode(Math.random, '1', g, schPlan()); go('duel'); };
     document.querySelectorAll('[data-sw]').forEach(function (b) { b.onclick = function () { SCH.wr = null; go('writing', +b.getAttribute('data-sw')); }; });
@@ -3399,7 +3404,7 @@
       '<div class="row" style="justify-content:space-between"><span>' + esc(t('d2_time')) + '</span><b class="num">' + esc(C.fmtTime(g.ms)) + '</b></div>' +
       '<button class="btn primary" id="d2share">' + esc(t('d2_share')) + '</button>' +
       '<label class="small" for="d2other">' + esc(t('d2_paste')) + '</label><textarea id="d2other" rows="3" placeholder="English Trail \u2694 ' + esc(d.code) + ' #' + esc(d.check) + '&#10;15/20 \u00b7 2:13"></textarea>' +
-      '<button class="btn" id="d2cmp">' + esc(t('d2_compare')) + '</button><div id="d2verdict" role="status"></div></div>';
+      '<button class="btn" id="d2cmp">' + esc(t('d2_compare')) + '</button><div id="d2verdict" role="status"></div><button class="btn ghost" id="d2board">' + esc(t('cb_open')) + '</button></div>';
   }
   function bindDuelResult(g) {
     var d = g.cfg.duel, myName = C.duelName(S.name) || t('d2_me'), me = { right: g.right, total: g.results.length, ms: g.ms, lv: d.lv, name: myName };
@@ -3407,6 +3412,9 @@
     function fmtP(x) { return String(x).replace('.', S.base === 'de' ? ',' : '.'); }
     function line(p) { return esc(p.name || '?') + ' (' + esc(p.lv || '?') + '): ' + p.right + '/' + p.total + (p.ms != null ? ' · ' + esc(C.fmtTime(p.ms)) : ''); }
     document.getElementById('d2share').onclick = function () { copy(C.duelResultText(d.code, d.check, g.results, g.ms, { name: S.name, input: S.input })); };
+    /* Klassen-Rangliste: eigenes Ergebnis (mit Namen) automatisch eintragen */
+    if (C.duelName(S.name) && !g.cfg.boardSaved) { g.cfg.boardSaved = true; boardSave(d.code, { name: S.name, right: g.right, total: g.results.length, ms: g.ms, input: myInp }); }
+    document.getElementById('d2board').onclick = function () { renderBoard(d.code, function () { go('duel'); }); };
     document.getElementById('d2cmp').onclick = function () {
       var o = C.duelReadResult(document.getElementById('d2other').value), out = document.getElementById('d2verdict'), msg, mixed = false;
       if (o && !o.lv) o.lv = d.lv;
@@ -3426,12 +3434,46 @@
         else if (S.rankSeen.indexOf(key) >= 0) msg += '<p class="small muted">' + esc(t('rank_dupe')) + '</p>';
         else {
           C.rankAdd(S.rank, me, v); C.rankAdd(S.rank, o, -v);
+          if (!mixed && o.code === d.code && o.name !== '?') boardSave(d.code, o);
           S.rankSeen.push(key); if (S.rankSeen.length > 300) S.rankSeen = S.rankSeen.slice(-300); save();
           msg += '<p class="small">' + esc(t('rank_added')) + '</p>';
         }
       }
       out.innerHTML = msg;
     };
+  }
+
+  /* ---------- Klassen-Rangliste über Codes (S.cboard[code], Logik in C.boardRead/boardAdd/boardList) ---------- */
+  function boardSave(code, o) {
+    if (!S.cboard || typeof S.cboard !== 'object' || Array.isArray(S.cboard)) S.cboard = {};
+    var b = S.cboard[code] || {}, ch = C.boardAdd(b, o);
+    delete S.cboard[code]; S.cboard[code] = b;   /* zuletzt benutzter Code nach hinten */
+    var ks = Object.keys(S.cboard); while (ks.length > 12) { delete S.cboard[ks.shift()]; }
+    save(); return ch;
+  }
+  function renderBoard(code, back, msg) {
+    if (!S.cboard || typeof S.cboard !== 'object' || Array.isArray(S.cboard)) S.cboard = {};
+    var list = C.boardList(S.cboard[code]), others = Object.keys(S.cboard).filter(function (k) { return k !== code && Object.keys(S.cboard[k] || {}).length; }).reverse();
+    var tbl = !list.length ? '<p class="small" id="cb-empty">' + esc(t('cb_empty')) + '</p>' :
+      '<table class="small num cb-tab" style="width:100%;border-collapse:collapse"><thead><tr><th scope="col" style="text-align:left">#</th><th scope="col" style="text-align:left">' + esc(t('players')) + '</th><th scope="col">' + esc(t('rank_pts')) + '</th><th scope="col">' + esc(t('d2_time')) + '</th></tr></thead><tbody>' +
+      list.map(function (e, i) { var me = C.duelName(S.name) && e.name.toLowerCase() === C.duelName(S.name).toLowerCase(); return '<tr' + (me ? ' style="font-weight:700"' : '') + '><td>' + (i < 3 ? ['🥇', '🥈', '🥉'][i] : i + 1) + '</td><td style="text-align:left">' + esc(e.name) + '</td><td style="text-align:center">' + e.right + '/' + e.total + '</td><td style="text-align:center">' + esc(C.fmtTime(e.ms)) + '</td></tr>'; }).join('') + '</tbody></table>';
+    shell('<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>' + esc(t('cb')) + '</h1>' +
+      '<section class="card stack"><p class="small muted">' + esc(t('cb_d')) + '</p><p class="small">' + esc(t('cb_code')) + ': <b class="num" lang="en" id="cb-code">' + esc(code) + '</b></p>' + tbl +
+      (!C.duelName(S.name) ? '<p class="small muted">' + esc(t('cb_name')) + '</p>' : '') +
+      (list.length ? '<div class="row" style="flex-wrap:wrap"><button class="btn" id="cb-share">' + esc(t('cb_share')) + '</button><button class="btn ghost" id="cb-clr">' + esc(t('cb_clear')) + '</button></div>' : '') + '</section>' +
+      '<section class="card stack"><label class="small" for="cb-in"><b>' + esc(t('cb_paste')) + '</b></label><textarea id="cb-in" rows="6" placeholder="English Trail \u2694 ' + esc(code) + ' #…&#10;Lena · 17/20 · 2:13"></textarea>' +
+      '<button class="btn primary" id="cb-go">' + esc(t('cb_go')) + '</button><div id="cb-msg" role="status">' + (msg || '') + '</div></section>' +
+      (others.length ? '<section class="card stack"><b class="small">' + esc(t('cb_old')) + '</b><div class="row" style="flex-wrap:wrap">' + others.map(function (k) { return '<button class="btn ghost num" data-cb="' + esc(k) + '">' + esc(k) + '</button>'; }).join('') + '</div></section>' : ''));
+    document.getElementById('back').onclick = back;
+    document.getElementById('cb-go').onclick = function () {
+      var r = C.boardRead(document.getElementById('cb-in').value, code), n = 0;
+      r.rows.forEach(function (o) { if (boardSave(code, o)) n++; });
+      var m = !r.rows.length && !r.bad && !r.other ? t('cb_none') : [t('cb_added').replace('{n}', n), r.bad ? t('cb_bad').replace('{n}', r.bad) : '', r.other ? t('cb_other').replace('{n}', r.other) : ''].filter(Boolean).join(' ');
+      renderBoard(code, back, '<p class="small">' + esc(m) + '</p>');
+    };
+    var sh = document.getElementById('cb-share'); if (sh) sh.onclick = function () { copy(C.boardText(code, list)); };
+    var cl = document.getElementById('cb-clr'); if (cl) cl.onclick = function () { if (!window.confirm(t('cb_clear_q'))) return; delete S.cboard[code]; save(); renderBoard(code, back); };
+    document.querySelectorAll('[data-cb]').forEach(function (b) { b.onclick = function () { renderBoard(b.getAttribute('data-cb'), back); }; });
   }
 
   /* ---------- Lokale Rangliste (S.rank, Logik in C.rankAdd/C.rankList) ---------- */
