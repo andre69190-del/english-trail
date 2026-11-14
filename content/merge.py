@@ -103,6 +103,7 @@ for k in school.PACKS:
     u = unit(dict(k, city=k['name'], cityDe='Klasse %d: %s' % (k['grade'], k['title']), lon=-0.13, lat=51.51, trail='blue',
                   mission=None, radio=None, letter=None))
     u['pack'] = 1; u['sch'] = k['grade']; u['ico'] = k['ico']
+    if k['grade'] >= 11: u['cityDe'] = 'Oberstufe: %s' % k['title']
     if k['id'] in school.EMOJI:
         em = school.EMOJI[k['id']]; assert len(em) == len(u['words']), k['id']
         u['em'] = em
@@ -111,7 +112,8 @@ D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.ST
                'types': [{'id': i, 'name': n, 'on': a} for i, n, a in school.TYPES],
                'combos': school.COMBOS, 'planOf': school.PLAN_OF,
                'grades': school.GRADES,
-               'books': [dict({'id': i, 'name': n}, **({'k': school.BOOK_WHERE[i]} if i in school.BOOK_WHERE else {})) for i, n in school.BOOKS],
+               'books': [dict({'id': i, 'name': n}, **({'k': school.BOOK_WHERE[i]} if i in school.BOOK_WHERE else {}), **({'ob': 1} if i in school.OB_BOOKS else {})) for i, n in school.BOOKS],
+               'obTypes': school.OB_TYPES,
                'topics': {g: {'t': n, 'k': kk} for g, (n, kk) in grammar.TOPICS.items()},
                # 13.11.2026: Sekundarstufe I (Realschule, Gemeinschaftsschule) – andere Klassen-Zuordnung derselben Pakete/Themen
                'plans': {'sek1': {'p': school.SEK1_PACKS, 't': {k: v for k, v in school.SEK1_TOPICS.items() if v}},
@@ -126,26 +128,31 @@ D['school'] = {'states': [{'id': i, 'name': n, 'on': a} for i, n, a in school.ST
                          'sek1e': {'p': school.SEK1E_PACKS, 't': {k: v for k, v in school.SEK1E_TOPICS.items() if v}},
                          'sek1g': {'p': {k: v for k, v in school.SEK1G_PACKS.items() if v}, 't': {k: v for k, v in school.SEK1G_TOPICS.items() if v}}},
                'niveaus': school.NIVEAUS, 'nivPlan': school.NIV_PLAN}
-_ids = {k['id'] for k in school.PACKS}
+_ids = set(school.SEK1_IDS)   # Sek I; Oberstufen-Pakete (Klasse 11+) gelten in allen Plänen gleich
+_TSEK = {g for g, (n, kk) in grammar.TOPICS.items() if kk <= 10}
 assert set(school.SEK1_PACKS) == _ids, ('SEK1_PACKS unvollständig', _ids ^ set(school.SEK1_PACKS))
-assert set(school.SEK1_TOPICS) == set(grammar.TOPICS), ('SEK1_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.SEK1_TOPICS))
+assert set(school.SEK1_TOPICS) == _TSEK, ('SEK1_TOPICS unvollständig', _TSEK ^ set(school.SEK1_TOPICS))
 assert set(school.NW_PACKS) == _ids, ('NW_PACKS unvollständig', _ids ^ set(school.NW_PACKS))
-assert set(school.NWRS_TOPICS) == set(grammar.TOPICS) and set(school.NWG_TOPICS) == set(grammar.TOPICS), 'NWRS/NWG_TOPICS unvollständig'
-assert set(school.RP_TOPICS) == set(grammar.TOPICS), 'RP_TOPICS unvollständig'
-assert set(school.MV_PACKS) == _ids and set(school.MV_TOPICS) == set(grammar.TOPICS), ('MV_* unvollständig', _ids ^ set(school.MV_PACKS), set(grammar.TOPICS) ^ set(school.MV_TOPICS))
-assert set(school.SN_PACKS) == _ids and set(school.SN_TOPICS) == set(grammar.TOPICS), 'SN_* unvollständig'
-assert set(school.HE_PACKS) == _ids and set(school.HE_TOPICS) == set(grammar.TOPICS), 'HE_* unvollständig'
-assert set(school.BY_PACKS) == _ids and set(school.BY_TOPICS) == set(grammar.TOPICS), 'BY_* unvollständig'
-assert set(school.NW_TOPICS) == set(grammar.TOPICS), ('NW_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.NW_TOPICS))
+assert set(school.NWRS_TOPICS) == _TSEK and set(school.NWG_TOPICS) == _TSEK, 'NWRS/NWG_TOPICS unvollständig'
+assert set(school.RP_TOPICS) == _TSEK, 'RP_TOPICS unvollständig'
+assert set(school.MV_PACKS) == _ids and set(school.MV_TOPICS) == _TSEK, ('MV_* unvollständig', _ids ^ set(school.MV_PACKS), _TSEK ^ set(school.MV_TOPICS))
+assert set(school.SN_PACKS) == _ids and set(school.SN_TOPICS) == _TSEK, 'SN_* unvollständig'
+assert set(school.HE_PACKS) == _ids and set(school.HE_TOPICS) == _TSEK, 'HE_* unvollständig'
+assert set(school.BY_PACKS) == _ids and set(school.BY_TOPICS) == _TSEK, 'BY_* unvollständig'
+assert set(school.NW_TOPICS) == _TSEK, ('NW_TOPICS unvollständig', _TSEK ^ set(school.NW_TOPICS))
 
 # 14.11.2026 (0.36): Englisch als 2. Fremdsprache ab Klasse 6 (Gymnasium, z. B. Saarland, BW Rheinschiene) – Grundzuordnung um 1 Klasse verschoben, höchstens 10
-D['school']['plans']['e2'] = {'p': {k['id']: min(10, k['grade'] + 1) for k in school.PACKS},
-                              't': {g: min(10, kk + 1) for g, (n, kk) in grammar.TOPICS.items()}}
+D['school']['plans']['e2'] = {'p': {k['id']: min(10, k['grade'] + 1) for k in school.PACKS if k['grade'] <= 10},
+                              't': {g: min(10, kk + 1) for g, (n, kk) in grammar.TOPICS.items() if kk <= 10}}
+# 14.11.2026 (0.38): Oberstufe – Pakete und Themen ab Klasse 11 in jedem Plan gleich
+for _P in D['school']['plans'].values():
+    _P['p'].update({k['id']: k['grade'] for k in school.PACKS if k['grade'] >= 11})
+    _P['t'].update({g: kk for g, (n, kk) in grammar.TOPICS.items() if kk >= 11})
 # 14.11.2026: Pläne kompakt – je Plan ein String "<Pakete>|<Themen>", ein Zeichen je Eintrag (0 = nicht vorgesehen, 5–9, a = 10),
 # Reihenfolge D.school.pOrd bzw. Schlüssel von D.school.topics. Entpackt in PSCore.schPlanObj.
 def _pc(v):
-    assert v in (0, 5, 6, 7, 8, 9, 10), v
-    return 'a' if v == 10 else str(v)
+    assert v in (0, 5, 6, 7, 8, 9, 10, 11, 12), v
+    return {10: 'a', 11: 'b', 12: 'c'}.get(v, str(v))
 _pord = [k['id'] for k in school.PACKS]
 D['school']['pOrd'] = _pord
 D['school']['plans'] = {n: ''.join(_pc(P['p'].get(i, 0)) for i in _pord) + '|' + ''.join(_pc(P['t'].get(g, 0)) for g in D['school']['topics'])
@@ -210,7 +217,7 @@ for th in D['themes']:
 if 'notfall' in _alt and not any(th['id'] == 'notfall' for th in D['themes']):
     D['themes'].append({'id': 'notfall', 'ico': '🚨', 't': P('Notfall und Telefon'), 'u': list(_alt['notfall'])})
 D['themes'].append({'id': 'hobby', 'ico': '⭐', 't': P('Interessen: Gaming, Sport, Tiere, Musik …'), 'u': [u['id'] for u in D['units'] if u.get('int')]})
-D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Gymnasium BW, Klassen 5–10'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
+D['themes'].append({'id': 'schule', 'ico': '🎒', 't': P('Schule: Klassen 5–10 und Oberstufe'), 'u': [u['id'] for u in D['units'] if u.get('sch')]})
 D['news'] = [{'v': v, 'date': d, 'de': n} for v, d, n in extras.NEWS_ALL]   # 13.11.2026: 'en' entfällt (identisch) – spart ~8 KB
 D['audio'] = {}
 D['guide'] = extras.GUIDE

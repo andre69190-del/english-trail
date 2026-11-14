@@ -32,7 +32,8 @@ PLAN_OF = {'bw-rs': 'sek1', 'bw-gms': 'sek1', 'bw-wrs': 'sek1', 'nw-gym': 'nw', 
 NIVEAUS = {'bw-rs': ['m', 'g'], 'bw-gms': ['m', 'g', 'e'], 'bw-wrs': ['g', 'm'], 'nw-ge': ['ek', 'gk'], 'nw-sek': ['ek', 'gk'], 'rp-rsp': ['st', 'eh'], 'rp-igs': ['st', 'eh'], 'be-iss': ['er', 'gr'], 'bb-obs': ['for', 'ebr'], 'bb-ge': ['ek', 'gk'], 'sh-gms': ['msa', 'esa', 'ob'], 'hh-sts': ['eh', 'gr'], 'th-rgs': ['rsa', 'hsa'], 'th-gms': ['rsa', 'hsa', 'ob'], 'st-sek': ['rsa', 'hsa'], 'st-gms': ['rsa', 'hsa', 'ob'], 'mv-reg': ['rsa', 'hsa'], 'mv-ge': ['ek', 'gk'], 'sl-gms': ['er', 'gr', 'ob'], 'hb-obs': ['er', 'gr', 'ob'], 'by-ms': ['hsa', 'rsa'], 'ni-obs': ['ek', 'gk'], 'ni-igs': ['ek', 'gk'], 'he-igs': ['ek', 'gk'], 'sn-obs': ['rsa', 'hsa']}
 # Niveau → Lehrplan (überschreibt PLAN_OF). BW: M = sek1, G = sek1g, E = sek1e. NRW Gesamt-/Sekundarschule: E-Kurs = nwrs, G-Kurs = nwg
 NIV_PLAN = {'bw-rs': {'g': 'sek1g'}, 'bw-gms': {'g': 'sek1g', 'e': 'sek1e'}, 'bw-wrs': {'g': 'sek1g'}, 'nw-ge': {'gk': 'nwg'}, 'nw-sek': {'gk': 'nwg'}, 'rp-rsp': {'eh': 'rp'}, 'rp-igs': {'eh': 'rp'}, 'be-iss': {'gr': 'sek1g'}, 'bb-obs': {'ebr': 'sek1g'}, 'bb-ge': {'gk': 'sek1g'}, 'sh-gms': {'esa': 'sek1g', 'ob': 'sek1e'}, 'hh-sts': {'gr': 'sek1g'}, 'th-rgs': {'hsa': 'sek1g'}, 'th-gms': {'hsa': 'sek1g', 'ob': 'sek1e'}, 'st-sek': {'hsa': 'sek1g'}, 'st-gms': {'hsa': 'sek1g', 'ob': 'sek1e'}, 'mv-reg': {'hsa': 'sek1g'}, 'mv-ge': {'gk': 'sek1g'}, 'sl-gms': {'gr': 'sek1g', 'ob': 'sek1e'}, 'hb-obs': {'gr': 'sek1g', 'ob': 'sek1e'}, 'by-ms': {'hsa': 'sek1g'}, 'ni-obs': {'gk': 'sek1g'}, 'ni-igs': {'gk': 'sek1g'}, 'he-igs': {'gk': 'sek1g'}, 'sn-obs': {'hsa': 'sek1g'}}
-GRADES = [5, 6, 7, 8, 9, 10]
+GRADES = [5, 6, 7, 8, 9, 10, 11, 12, 13]   # 14.11.2026 (0.38): Oberstufe 11–13 (nur Schularten in OB_TYPES)
+OB_TYPES = ['gym', 'ge', 'igs', 'gms', 'sts']
 # Lehrwerke für BW-Gymnasium (nur Name/Band – Unit-Struktur folgt in Phase 5)
 BOOKS = [
   ('gl25', 'Green Line – Ausgabe Baden-Württemberg G9 (ab 2025, Klett)'),
@@ -73,7 +74,12 @@ BOOKS = [
   ('glsn', 'Green Line (Klett)'),
   ('acsn', 'English G Access (Cornelsen)'),
   ('ctsn', 'Camden Town (Westermann)'),
+  # 14.11.2026 (0.38): Oberstufe (nur Namen, bundesweit)
+  ('glob', 'Green Line Oberstufe (Klett)'),
+  ('ctxt', 'Context (Cornelsen)'),
+  ('ctob', 'Camden Town Oberstufe (Westermann)'),
 ]
+OB_BOOKS = ['glob', 'ctxt', 'ctob']
 # Welche Lehrwerke bei welcher Schulart angeboten werden ('other' immer)
 BOOK_WHERE = {'gl25': ['bw-gym'], 'gl16': ['bw-gym'], 'ac25': ['bw-gym'], 'rl14': ['bw-rs', 'bw-gms', 'bw-wrs'], 'hlbw': ['bw-rs', 'bw-gms', 'bw-wrs'],
               'acnw': ['nw-gym'], 'glnw': ['nw-gym'], 'ctnw': ['nw-gym'], 'glby': ['by-gym'], 'acby': ['by-gym'], 'acni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge', 'sh-gym', 'hh-gym', 'th-gym', 'st-gym', 'mv-gym', 'sl-gym', 'hb-gym'], 'glni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge', 'sh-gym', 'hh-gym', 'th-gym', 'st-gym', 'mv-gym', 'sl-gym', 'hb-gym'], 'ctni': ['ni-gym', 'be-gs', 'be-gym', 'bb-gs', 'bb-gym', 'bb-ge', 'sh-gym', 'hh-gym', 'th-gym', 'st-gym', 'mv-gym', 'sl-gym', 'hb-gym'], 'ache': ['he-gym'], 'glhe': ['he-gym'], 'cthe': ['he-gym'], 'rlnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts', 'th-rgs', 'th-gms', 'st-sek', 'st-gms', 'mv-reg', 'mv-ge', 'sl-gms', 'hb-obs', 'by-rs', 'by-ms', 'ni-obs', 'ni-rs', 'ni-hs', 'ni-igs', 'he-rs', 'he-hs', 'he-igs', 'sn-obs'], 'olnw': ['nw-ge', 'nw-sek', 'sh-gms', 'hh-sts', 'th-rgs', 'th-gms', 'st-sek', 'st-gms', 'mv-reg', 'mv-ge', 'sl-gms', 'hb-obs', 'by-rs', 'by-ms', 'ni-obs', 'ni-rs', 'ni-hs', 'ni-igs', 'he-rs', 'he-hs', 'he-igs', 'sn-obs'], 'lhnw': ['nw-rs', 'nw-ge', 'nw-sek', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts', 'th-rgs', 'th-gms', 'st-sek', 'st-gms', 'mv-reg', 'mv-ge', 'sl-gms', 'hb-obs', 'by-rs', 'by-ms', 'ni-obs', 'ni-rs', 'ni-hs', 'ni-igs', 'he-rs', 'he-hs', 'he-igs', 'sn-obs'], 'hlnw': ['nw-hs', 'nw-ge', 'nw-sek', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts', 'th-rgs', 'th-gms', 'st-sek', 'st-gms', 'mv-reg', 'mv-ge', 'sl-gms', 'hb-obs', 'by-rs', 'by-ms', 'ni-obs', 'ni-rs', 'ni-hs', 'ni-igs', 'he-rs', 'he-hs', 'he-igs', 'sn-obs'], 'cmnw': ['nw-rs', 'nw-ge', 'nw-sek', 'nw-hs', 'be-iss', 'bb-obs', 'bb-ge', 'sh-gms', 'hh-sts', 'th-rgs', 'th-gms', 'st-sek', 'st-gms', 'mv-reg', 'mv-ge', 'sl-gms', 'hb-obs', 'by-rs', 'by-ms', 'ni-obs', 'ni-rs', 'ni-hs', 'ni-igs', 'he-rs', 'he-hs', 'he-igs', 'sn-obs'], 'glrp': ['rp-gym', 'rp-igs'], 'acrp': ['rp-gym', 'rp-igs'], 'rlrp': ['rp-rsp', 'rp-igs'], 'lhrp': ['rp-rsp', 'rp-igs'], 'cmrp': ['rp-rsp', 'rp-igs'], 'glsn': ['sn-gym'], 'acsn': ['sn-gym'], 'ctsn': ['sn-gym']}
@@ -1452,3 +1458,9 @@ EMOJI = {
   's6wea': ['🌤️', '☀️', '🌧️', '☁️', '💨', '❄️', '🌫️', '☂️', '🧥', '👢', '🧣', '🧤', '👗', '👖', '👟', '👕'],
   's6lon': ['📸', '🗼', '🏰', '🌉', '🚇', '🚌', '🏖️', '🏝️', '🪨', '🏘️', '🎣', '🏄', '', '', '', '✈️'],
 }
+
+# 14.11.2026 (0.38): Oberstufe – Pakete hinten anhängen (Klasse 11/12, in allen Ländern gleich, merge.py trägt sie in jeden Plan ein)
+import oberstufe  # noqa: E402
+SEK1_IDS = [k['id'] for k in PACKS]
+PACKS.extend(oberstufe.OB_PACKS)
+EMOJI.update(oberstufe.EMOJI)

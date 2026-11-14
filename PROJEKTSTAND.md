@@ -397,3 +397,10 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Bildschirm `renderBoard(code)`: Einstieg im Schulbereich (Wochen-Challenge → „🏆 Klassen-Rangliste“) und nach jedem Code-Duell. Eigenes Ergebnis kommt automatisch hinein, wenn ein Name gesetzt ist; beim Vergleichen auch das des Gegners. Frühere Codes abrufbar.
 - **Fehler behoben:** Ergebnisse mit Klassen-Code (z. B. `WEEK-144-2-K7`) wurden beim Einlesen ohne `-K7` gelesen → Prüfsumme nie gültig, kamen nie in die Rangliste und galten als „gemischtes Duell“. `duelReadResult` liest den Klassen-Teil jetzt mit.
 - Veralteter Feature-Check „Dla Polaków“ (seit 0.28 entfernt) aus check_features.sh genommen. Tests: Core 79, UI 244 OK.
+
+## Release 0.38 (14.11.2026) – Oberstufe Klasse 11–13 (AUTOPLAN 15)
+- `content/oberstufe.py`: 6 Pakete, hinten an `school.PACKS` angehängt – Kl. 11: s11glo Globalisierung, s11med Medien/Fake News, s11env Klima/Nachhaltigkeit; Kl. 12: s12usa American Dream, s12lit Literatur und Film analysieren, s12wri Abi-Training Analyse/Kommentar (Redemittel). Je 16 Wörter, 6 Sätze, Szene mit 3 Schritten; eigene Texte.
+- Grammatik (k = 11, hinten angehängt): inv (Inversion), cleft (Hervorhebung), wish (I wish / If only / It's time), mixedif (gemischte If-Sätze) – je 6 Aufgaben.
+- Daten: `GRADES` 5–13, `OB_TYPES` (gym, ge, igs, gms, sts), Oberstufen-Lehrwerke nur als Namen (Green Line Oberstufe, Context, Camden Town Oberstufe; Feld `ob`). merge.py trägt Oberstufen-Pakete/-Themen in **jeden** Plan ein (gleich in allen Ländern); Plan-Zeichen b = 11, c = 12.
+- Logik: `schLoOf/HiOf` ab 11 → 11 bzw. min(g, 12); Klasse 12/13 = alle Abi-Pakete (`schPacks`); Codes (Duell, Woche, Hausaufgabe, Ergebnis) mit Klasse 11–13. Abschluss-Training Sek I nur bis Kl. 10. Kein „Band“ bei Oberstufen-Büchern, „Probe-Klausur“ statt „Probe-Klassenarbeit“, Hinweis G8 (Abi nach 12 → Klasse 12 wählen). Realschule u. a.: keine 11–13 (Klasse wird beim Wechsel zurückgesetzt).
+- SEO-Seite `englisch-oberstufe-abitur.html`, Link auf der Startseite. progress_lock aktualisiert (87 Einheiten, 1525 Wörter). Tests: Core 80, UI 253 OK.

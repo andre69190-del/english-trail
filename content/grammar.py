@@ -46,6 +46,11 @@ TOPICS = {
   'pastperfprog': ('Past perfect progressive', 8),
   'advorder': ('Stellung der Adverbiale (Ort vor Zeit)', 9),
   'passive3': ('Passiv mit zwei Objekten und Präpositionen', 10),
+  # 14.11.2026 (0.38): Oberstufe – Stilmittel und Bedingungen (Klasse 11 = Einführungsphase)
+  'inv':     ('Inversion (Never have I …, Not only …)', 11),
+  'cleft':   ('Hervorhebung (It was … who, What I need is …)', 11),
+  'wish':    ("I wish / If only / It's time", 11),
+  'mixedif': ('Gemischte If-Sätze', 11),
 }
 
 CASES = '''
@@ -243,6 +248,30 @@ passive3 | The baby ___ by her grandparents. | look after | is looked after | is
 passive3 | This problem must ___ . | deal with | be dealt with | be dealt; deal with | Modalverb + be + 3. Form + Präposition. | Mit diesem Problem muss man sich befassen.
 passive3 | She ___ a job in London. | offer | has been offered | has offered; was offer | present perfect passive: has been offered. | Ihr wurde eine Stelle in London angeboten.
 passive3 | The new rules ___ to us yesterday. | explain | were explained | was explained; explained | Plural → were explained. | Die neuen Regeln wurden uns gestern erklärt.
+inv | Never ___ such a beautiful sunset. | I / see | have I seen | I have seen; have seen I | Nach „Never“ am Satzanfang folgt die Wortstellung einer Frage: have I seen. | Noch nie habe ich so einen schönen Sonnenuntergang gesehen.
+inv | Not only ___ late, but he also forgot his books. | he / be | was he | he was; he were | Nach „Not only“ am Satzanfang steht das Verb vor dem Subjekt. | Er kam nicht nur zu spät, sondern vergaß auch noch seine Bücher.
+inv | Hardly ___ home when it started to rain. | we / arrive | had we arrived | we had arrived; did we arrive | Hardly … when: past perfect mit Inversion. | Kaum waren wir zu Hause angekommen, als es zu regnen begann.
+inv | Only then ___ how serious the problem was. | she / realise | did she realise | she realised; realised she | „Only then“ + Inversion mit did im simple past. | Erst dann erkannte sie, wie ernst das Problem war.
+inv | Under no circumstances ___ your password with anyone. | you / should share | should you share | you should share; share you should | Nach „Under no circumstances“ steht das Modalverb vor dem Subjekt. | Unter keinen Umständen solltest du dein Passwort mit jemandem teilen.
+inv | Little ___ that the test would be so easy. | they / know | did they know | they knew; knew they | „Little did they know“ = sie ahnten nicht – Inversion mit did. | Sie ahnten nicht, dass der Test so leicht sein würde.
+cleft | It ___ my sister who found the solution, not me. | be | was | is being; were | Hervorhebung: It is/was + betonter Teil + who/that. Vergangenheit → was. | Es war meine Schwester, die die Lösung gefunden hat, nicht ich.
+cleft | It was in 1969 ___ the first man walked on the moon. | that | that | which; what | „It was … that …“ hebt eine Zeitangabe hervor. | Es war im Jahr 1969, als der erste Mensch den Mond betrat.
+cleft | ___ I need now is a long holiday. | what | What | That; Which | „What … is …“ hebt hervor, was man braucht oder will. | Was ich jetzt brauche, ist ein langer Urlaub.
+cleft | All I want ___ some peace and quiet. | be | is | are; am | „All I want is …“ – Singular, weil „all“ hier „das Einzige“ bedeutet. | Alles, was ich will, ist etwas Ruhe.
+cleft | It's not the money ___ matters, it's the experience. | that | that | what; who | It's … that … – bei Sachen that, bei Personen who oder that. | Nicht das Geld zählt, sondern die Erfahrung.
+cleft | What surprised me ___ how friendly everyone was. | be | was | were; is being | What-Satz + was + Ergänzung (hier Vergangenheit). | Was mich überrascht hat, war, wie freundlich alle waren.
+wish | I wish I ___ more time for my hobbies. | have | had | have; would have | Wunsch für die Gegenwart: I wish + simple past. | Ich wünschte, ich hätte mehr Zeit für meine Hobbys.
+wish | If only I ___ to the party last night! | go | had gone | went; would go | Bedauern über die Vergangenheit: If only + past perfect. | Wäre ich doch gestern Abend auf die Party gegangen!
+wish | I wish you ___ interrupting me all the time. | stop | would stop | stopped; stop | Ärger über das Verhalten anderer: I wish + would. | Ich wünschte, du würdest aufhören, mich ständig zu unterbrechen.
+wish | She wishes she ___ so rude to her friend yesterday. | not be | hadn't been | wasn't; wouldn't be | Bedauern über die Vergangenheit (yesterday) → past perfect. | Sie wünschte, sie wäre gestern nicht so unhöflich zu ihrer Freundin gewesen.
+wish | It's time we ___ something about climate change. | do | did | do; would do | „It's (high) time“ + simple past. | Es ist höchste Zeit, dass wir etwas gegen den Klimawandel tun.
+wish | I'd rather you ___ my phone without asking. | not use | didn't use | don't use; wouldn't use | „I'd rather + jemand“ + simple past. | Mir wäre lieber, du würdest mein Handy nicht ohne zu fragen benutzen.
+mixedif | If I had studied harder, I ___ at university now. | be | would be | would have been; will be | Bedingung in der Vergangenheit, Folge heute (now): would + Grundform. | Wenn ich mehr gelernt hätte, wäre ich jetzt an der Uni.
+mixedif | If I had taken the job in London, I ___ there now. | live | would live | would have lived; will live | Signalwort now → Folge in der Gegenwart: would + Grundform. | Wenn ich die Stelle in London angenommen hätte, würde ich jetzt dort wohnen.
+mixedif | If we hadn't missed the train, we ___ in Edinburgh right now. | be | would be | would have been; are | right now → Folge in der Gegenwart: would be. | Hätten wir den Zug nicht verpasst, wären wir jetzt gerade in Edinburgh.
+mixedif | If you ___ more careful, you wouldn't have lost your keys again. | be | were | are; will be | Eigenschaft, die allgemein gilt (if + simple past), Folge in der Vergangenheit. | Wenn du sorgfältiger wärst, hättest du deine Schlüssel nicht schon wieder verloren.
+mixedif | She ___ so tired today if she had gone to bed earlier. | not be | wouldn't be | wouldn't have been; isn't | today → Folge in der Gegenwart: wouldn't be. | Sie wäre heute nicht so müde, wenn sie früher ins Bett gegangen wäre.
+mixedif | If he hadn't broken his leg, he ___ in the final next week. | play | would play | would have played; plays | Folge in der Zukunft (next week): would + Grundform. | Wenn er sich nicht das Bein gebrochen hätte, würde er nächste Woche im Finale spielen.
 '''
 
 # Simple vs. Progressive (ersetzt Verb-Aspekt): pf = 1 → simple richtig, 0 → progressive richtig

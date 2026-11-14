@@ -655,7 +655,7 @@ test('Berlin/Brandenburg: Schularten mit Niveau/Kurs', () => {
 });
 
 test('14.11.2026: Pläne kompakt gespeichert und verlustfrei entpackt', () => {
-  Object.keys(PLANS_RAW).forEach(function (k) { assert.equal(typeof PLANS_RAW[k], 'string'); assert.match(PLANS_RAW[k], /^[05-9a]+\|[05-9a]+$/); });
+  Object.keys(PLANS_RAW).forEach(function (k) { assert.equal(typeof PLANS_RAW[k], 'string'); assert.match(PLANS_RAW[k], /^[05-9a-c]+\|[05-9a-c]+$/); });
   assert.equal(PLANS_RAW.sek1.split('|')[0].length, DATA.school.pOrd.length);
   assert.equal(PLANS_RAW.sek1.split('|')[1].length, Object.keys(DATA.school.topics).length);
   assert.equal(DATA.school.plans.sek1.p.s9vol, 10); assert.equal(DATA.school.plans.sek1.t.pres, 5);
@@ -677,7 +677,7 @@ test('Thüringen, Sachsen-Anhalt, MV: Schularten und Plan mv', () => {
     assert.ok(S.combos.includes(k), k); assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k); });
   assert.equal(S.planOf['mv-gym'], 'mv'); assert.equal(S.nivPlan['st-sek'].hsa, 'sek1g'); assert.equal(S.nivPlan['th-gms'].ob, 'sek1e');
   const P = DATA.school.plans.mv; assert.equal(P.t.passive, 7); assert.equal(P.t.reported, 7); assert.equal(P.t.if3, 8); assert.equal(P.t.gerund, 8);
-  assert.ok(Object.values(P.t).every(g => g <= 9), 'MV Kl. 10 ohne neue Grammatik');
+  assert.ok(Object.values(P.t).every(g => g <= 9 || g >= 11), 'MV Kl. 10 ohne neue Grammatik');
   assert.equal(C.schLoOf(7, 'mv'), 7); assert.equal(C.schHiOf(7, 'mv'), 7); assert.equal(C.schLoOf(6, 'mv'), 5);
   const code = C.hwCode(7, 1, 1, 'mv'); assert.match(code, /^HA7M-/); assert.equal(C.hwParse(code).plan, 'mv');
 });
@@ -707,7 +707,7 @@ test('Weitere Schularten BY, NI, HE, SN', () => {
 });
 
 test('Neue G9-Pakete s8wel und s10rig: angehängt, in allen Plänen', () => {
-  const ids = DATA.units.filter(u => u.sch).map(u => u.id); assert.deepEqual(ids.slice(-2), ['s8wel', 's10rig']);
+  const ids = DATA.units.filter(u => u.sch && u.sch <= 10).map(u => u.id); assert.equal(ids.slice(-2).join(','), 's8wel,s10rig');
   Object.keys(DATA.school.plans).forEach(p => { const P = DATA.school.plans[p]; if (p !== 'sek1g' && p !== 'nwg') { assert.ok(P.p.s8wel && P.p.s10rig, p); } });
   const w = DATA.units.find(u => u.id === 's8wel'); assert.equal(w.words.length, 16); assert.equal(w.scene.steps.length, 3);
 });
@@ -732,4 +732,22 @@ test('Klassen-Rangliste: Klassen-Code signiert, Chat einlesen, bestes je Name, S
   assert.match(C.boardText(code, C.boardList(B)), /1\. Tom · 20\/20 · 1:01\n2\. Mia · 19\/20 · 0:40/);
   const m = C.mergeSave({ app: 'english-trail', cards: {}, xp: 1, cboard: { [code]: { mia: { name: 'Mia', right: 19, total: 20, ms: 40000 } } } }, { app: 'english-trail', cards: {}, xp: 1, cboard: { [code]: { mia: { name: 'Mia', right: 20, total: 20, ms: 90000 }, tom: { name: 'Tom', right: 3, total: 20, ms: 1 } } } });
   assert.equal(m.cboard[code].mia.right, 20); assert.ok(m.cboard[code].tom);
+});
+
+test('Oberstufe 11–13: Pakete, Themen, Codes, Bereiche', () => {
+  const ob = DATA.units.filter(u => u.sch >= 11).map(u => u.id).join(','); assert.equal(ob, 's11glo,s11med,s11env,s12usa,s12lit,s12wri');
+  assert.equal(DATA.school.pOrd.slice(-6).join(','), ob.replace(/,/g, ','), 'Oberstufe hinten angehängt');
+  DATA.units.filter(u => u.sch >= 11).forEach(u => { assert.equal(u.words.length, 16, u.id); assert.equal(u.scene.steps.length, 3, u.id); });
+  ['inv', 'cleft', 'wish', 'mixedif'].forEach(k => { assert.equal(DATA.school.topics[k].k, 11, k); assert.equal(DATA.cases.filter(c => c.g === k).length, 6, k); });
+  assert.equal(Object.keys(DATA.school.topics).slice(-4).join(','), 'inv,cleft,wish,mixedif', 'Themen hinten angehängt (Hausaufgaben-Codes)');
+  Object.keys(PLANS_RAW).forEach(p => { const P = C.schPlanObj(DATA, p); assert.equal(P.p.s11glo, 11, p); assert.equal(P.p.s12wri, 12, p); assert.equal(P.t.inv, 11, p); });
+  assert.equal(C.schLoOf(11, 'nw'), 11); assert.equal(C.schHiOf(11, 'nw'), 11); assert.equal(C.schLoOf(13, ''), 11); assert.equal(C.schHiOf(13, 'by'), 12);
+  assert.equal(C.schGradeOf(DATA, DATA.units.find(u => u.id === 's12lit'), 'e2'), 12);
+  const dc = C.duelNewCode(() => 0.5, '2', 12, 'nw'); assert.match(dc, /-N12$/); assert.equal(C.duelParse(dc).grade, 12);
+  assert.equal(C.duelParse('FOX-123-1-K13').grade, 13); assert.equal(C.duelParse('FOX-123-1-K10').grade, 10);
+  const pl = C.duelPlan(DATA, 'FOX-123-1-K11'); assert.ok(pl && pl.plan.length >= 15, 'Duell Oberstufe hat Fragen');
+  const h = C.hwCode(12, 3, 1, ''); assert.match(h, /^HA12-/); assert.equal(C.hwParse(h).grade, 12);
+  const r = C.duelReadResult(C.duelResultText('WEEK-200-2-K12', 'AB12', [1, 1], 9000, { name: 'Ana' })); assert.ok(r.signed); assert.equal(r.code, 'WEEK-200-2-K12');
+  assert.ok(DATA.school.grades.includes(13) && DATA.school.obTypes.includes('gym') && !DATA.school.obTypes.includes('rs'));
+  assert.equal(DATA.school.books.filter(b => b.ob).length, 3);
 });

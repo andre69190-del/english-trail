@@ -309,6 +309,26 @@ def main():
     page('englisch-saarland-bremen.html', 'Englisch üben Saarland und Bremen Klasse 5–10 – kostenlose App',
          'Kostenlose Englisch-App für das Saarland und Bremen: Gymnasium, Gemeinschaftsschule, Oberschule, Klasse 5 bis 10, Vokabeln per Foto, Probe-Klassenarbeit. Ohne Werbung.',
          '\n'.join(b)); files.insert(11, 'englisch-saarland-bremen.html')
+    # 14.11.2026 (0.38): Oberstufe (alle Länder)
+    ob = [k for k in school.PACKS if k['grade'] >= 11]
+    otops = [v[0] for k, v in grammar.TOPICS.items() if v[1] >= 11]
+    b = ['<h1>Englisch Oberstufe und Abitur – kostenlos üben</h1>',
+         '<p>English Trail begleitet dich bis zum Abitur: Im <b>Schulmodus</b> wählst du dein Bundesland, Gymnasium oder Gesamtschule und <b>Klasse 11, 12 oder 13</b>. '
+         'Du übst Wortschatz zu den typischen Abi-Themen, Stil-Grammatik und die Redemittel für Summary, Analysis und Comment. '
+         'Abitur schon nach Klasse 12? Dann ist Klasse 12 dein Abi-Jahr – die Inhalte von 12 und 13 sind gleich.</p>',
+         '<a class="cta" href="./">Jetzt kostenlos üben →</a>', '<h2>Abi-Themen und Wortschatz</h2>']
+    for k in ob:
+        words = [l.split('|')[0].strip() for l in k['words'].strip().split('\n')][:8]
+        b.append(f'<div class="box"><b>{E(k["ico"])} {E(k["title"])}</b> <span class="muted">(Klasse {k["grade"]})</span><br>{E(k["can"])}<br><span class="muted">Beispielwörter: {E(", ".join(words))} …</span></div>')
+    b.append('<h2>Grammatik in der Oberstufe</h2><ul>' + ''.join(f'<li><b>{E(n)}</b></li>' for n in otops) + '<li>Wiederholung aller Themen aus Klasse 5–10</li></ul>')
+    b.append('<h2>Was die App bietet</h2><ul><li><b>Probe-Klausur</b> mit Grammatik, Wortschatz, Hör- und Leseverstehen und Sprachmittlung.</li>'
+             '<li><b>Schreibaufträge</b> zu jedem Abi-Thema mit Checkliste.</li>'
+             '<li><b>Vokabeln aus deinem Lehrwerk</b> (z. B. Green Line Oberstufe, Context, Camden Town Oberstufe) selbst eintragen oder per Foto.</li>'
+             '<li><b>Wochen-Challenge mit Klassen-Rangliste</b>, Live-Duell, KI-Gesprächspartner.</li>'
+             '<li>Kostenlos, keine Werbung, keine Anmeldung nötig.</li></ul><a class="cta" href="./">English Trail öffnen →</a>')
+    page('englisch-oberstufe-abitur.html', 'Englisch Oberstufe und Abitur üben (Klasse 11–13) – kostenlose App',
+         'Kostenlose Englisch-App für die Oberstufe: Abi-Themen (Globalisierung, Medien, Klima, American Dream, Literatur und Film), Stil-Grammatik, Analyse und Kommentar, Probe-Klausur. Ohne Werbung.',
+         '\n'.join(b)); files.append('englisch-oberstufe-abitur.html')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
           f'  <url><loc>{SITE}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     sm += [f'  <url><loc>{SITE}{f}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>' for f in files]

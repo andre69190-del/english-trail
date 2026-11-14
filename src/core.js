@@ -247,7 +247,7 @@
     r = r || Math.random;
     var w = DUEL_WORDS[Math.floor(r() * DUEL_WORDS.length)], n = 100 + Math.floor(r() * 900);
     var lv = DUEL_WEIGHT[String(level).toUpperCase()] ? String(level).toUpperCase() : '1';
-    return w + '-' + n + '-' + lv + (grade >= 5 && grade <= 10 ? '-' + planLetter(plan) + grade : '');
+    return w + '-' + n + '-' + lv + (grade >= 5 && grade <= 13 ? '-' + planLetter(plan) + grade : '');
   }
   /* Klasse eines Schulpakets je Bildungsplan (ohne Plan = Gymnasium = u.sch); 0 = in diesem Plan nicht vorgesehen */
   /* 14.11.2026: Plan entpacken ("<Pakete>|<Themen>", 0 = nicht vorgesehen, a = 10) → {p: {id: Klasse}, t: {thema: Klasse}}; wird zwischengespeichert */
@@ -255,7 +255,7 @@
     var S = data && data.school, P = S && S.plans && plan ? S.plans[plan] : null;
     if (typeof P !== 'string') return P || null;
     var parts = P.split('|'), o = { p: {}, t: {} }, tk = Object.keys(S.topics || {}), ord = S.pOrd || [];
-    function g(ch) { return ch === 'a' ? 10 : +ch; }
+    function g(ch) { return ch === 'a' ? 10 : ch === 'b' ? 11 : ch === 'c' ? 12 : +ch; }   /* 0.38: b/c = Oberstufe 11/12 */
     ord.forEach(function (id, i) { var v = g(parts[0].charAt(i)); if (v) o.p[id] = v; });
     tk.forEach(function (k, i) { var v = g((parts[1] || '').charAt(i)); if (v) o.t[k] = v; });
     S.plans[plan] = o; return o;
@@ -267,12 +267,12 @@
     return P && P.p && P.p[u.id] ? P.p[u.id] : 0;
   }
   /* Erste Klasse der Standardstufe: Gymnasium 5/6, 7/8, 9/10 – Sekundarstufe I 5/6, 7/8/9, 10 */
-  function schLoOf(g, plan) { if (plan === 'e2') return g <= 8 ? 6 : 9; if (plan === 'by' || plan === 'he' || (plan === 'mv' && g >= 7)) return g; if (/^sek1/.test(plan || '')) return g <= 6 ? 5 : g <= 9 ? 7 : 10; return g - ((g - 5) % 2); }
-  function schHiOf(g, plan) { if (plan === 'e2') return g <= 8 ? 8 : 10; if (plan === 'by' || plan === 'he' || (plan === 'mv' && g >= 7)) return g; if (/^sek1/.test(plan || '')) return g <= 6 ? 6 : g <= 9 ? 9 : 10; return schLoOf(g) + 1; }
+  function schLoOf(g, plan) { if (g >= 11) return 11; if (plan === 'e2') return g <= 8 ? 6 : 9; if (plan === 'by' || plan === 'he' || (plan === 'mv' && g >= 7)) return g; if (/^sek1/.test(plan || '')) return g <= 6 ? 5 : g <= 9 ? 7 : 10; return g - ((g - 5) % 2); }
+  function schHiOf(g, plan) { if (g >= 11) return Math.min(g, 12); if (plan === 'e2') return g <= 8 ? 8 : 10; if (plan === 'by' || plan === 'he' || (plan === 'mv' && g >= 7)) return g; if (/^sek1/.test(plan || '')) return g <= 6 ? 6 : g <= 9 ? 9 : 10; return schLoOf(g) + 1; }
   function duelWeight(lv) { return DUEL_WEIGHT[String(lv)] || 1; }
   function duelParse(str) {
     var c = String(str || '').toUpperCase().replace(/[\s_.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGEBHRUPXMZ])(5|6|7|8|9|10))?$/);
+    var m = c.match(/^([A-Z]{2,8})-?(\d{3})-?(P?)-?([123])(?:-?([KSNGEBHRUPXMZ])(10|11|12|13|5|6|7|8|9))?$/);
     if (!m) return null;
     var n = +m[4], lv = m[3] + n, k = m[6] ? +m[6] : 0, pl = k ? (L_PLAN[m[5]] || '') : '';
     return { code: m[1] + '-' + m[2] + '-' + lv + (k ? '-' + planLetter(pl) + k : ''), base: m[1] + '-' + m[2], lv: lv, pol: !!m[3], level: n, diff: m[3] ? 'hard' : DUEL_DIFFS[n - 1], weight: duelWeight(lv), grade: k, plan: pl };
@@ -290,7 +290,7 @@
       results.map(function (r) { return r ? '\ud83d\udfe9' : '\u2b1c'; }).join('') + '\n~' + duelSign(code, check, name, good, results.length, secs, inp);
   }
   function duelReadResult(text) {
-    var t = String(text || ''), mc = t.match(/([A-Za-z]{2,8}-\d{3}-[Pp]?[123](?:-[KSNGEBHRUPXMZ](?:10|[5-9]))?)/i)  /* 14.11.2026: Klassen-Suffix (-K7) gehört zum Code, sonst passte die Prüfsumme bei Schul-Codes nie */, ms = t.match(/(\d+)\s*\/\s*(\d+)/), mt = t.match(/(\d+):(\d{2})/), mk = t.match(/#([0-9A-Za-z]{4})/);
+    var t = String(text || ''), mc = t.match(/([A-Za-z]{2,8}-\d{3}-[Pp]?[123](?:-[KSNGEBHRUPXMZ](?:1[0-3]|[5-9]))?)/i)  /* 14.11.2026: Klassen-Suffix (-K7) gehört zum Code, sonst passte die Prüfsumme bei Schul-Codes nie */, ms = t.match(/(\d+)\s*\/\s*(\d+)/), mt = t.match(/(\d+):(\d{2})/), mk = t.match(/#([0-9A-Za-z]{4})/);
     if (!ms) return null;
     var line = t.match(/\n\s*([^\n\u00b7]*?)\s*\u00b7\s*\d+\s*\/\s*\d+/), mi = t.match(/\d:\d{2}\s*\u00b7\s*([WST])\b/), msg = t.match(/~([0-9A-Za-z]{4})/);
     var pc = mc ? duelParse(mc[1]) : null, o = { code: pc ? pc.code : null, base: pc ? pc.base : null, lv: pc ? pc.lv : null, check: mk ? mk[1].toUpperCase() : null, right: +ms[1], total: +ms[2], ms: mt ? (+mt[1] * 60 + +mt[2]) * 1000 : null,
@@ -542,7 +542,7 @@
     return 'HA' + grade + (PLAN_L[plan] || '') + '-P' + packMask.toString(36).toUpperCase() + '-T' + topicMask.toString(36).toUpperCase();
   }
   function hwParse(code) {
-    var m = /^HA(5|6|7|8|9|10)([SNGEBHRUPXMZ]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
+    var m = /^HA(10|11|12|13|5|6|7|8|9)([SNGEBHRUPXMZ]?)-?P([0-9A-Z]+)-?T([0-9A-Z]+)$/.exec(String(code || '').toUpperCase().replace(/\s+/g, ''));
     if (!m) return null;
     var g = +m[1], pl = L_PLAN[m[2]] || '', pm = parseInt(m[3], 36), tm = parseInt(m[4], 36);
     if (!(pm || tm) || isNaN(pm) || isNaN(tm)) return null;

@@ -282,6 +282,7 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.38', '2026-11-14', ['Jetzt auch für die Oberstufe: Wähle im Schulbereich Klasse 11, 12 oder 13. Es gibt sechs Abi-Themen (Globalisierung, Medien, Klima, American Dream, Literatur und Film, Analyse und Kommentar), neue Grammatik wie Inversion und gemischte If-Sätze und eine Probe-Klausur.']),
   ('0.37', '2026-11-14', ['Neu: die Klassen-Rangliste 🏆. Spielt alle denselben Code (zum Beispiel die Wochen-Challenge), kopiert die Ergebnisse aus dem Klassenchat und fügt sie ein – schon seht ihr, wer vorne liegt. Alles bleibt auf deinem Handy.']),
   ('0.36', '2026-11-14', ['Englisch erst seit Klasse 6? Im Schulbereich kannst du jetzt „Englisch seit Klasse 6 (2. Fremdsprache)“ wählen – dann passen Themen und Grammatik zu deinem Jahr.']),
   ('0.35', '2026-11-14', ['Neu unter „Ich“: der Eltern-Bereich mit PIN. Eltern sehen, wann und wie viel geübt wurde, welche Wörter knifflig sind, und können das Wochenziel und den KI-Chat einstellen.']),
