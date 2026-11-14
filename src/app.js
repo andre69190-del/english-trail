@@ -92,7 +92,7 @@
       can: 'Danach kannst du', tip: 'Kurz erklärt', words: 'Wortschatz', check: 'Prüfen', next: 'Weiter', skip: 'Überspringen', right: 'Richtig', wrong: 'Nicht ganz',
       solution: 'Lösung', almost_dia: 'Richtig, achte auf die Schreibweise', almost_typo: 'Fast, ein Tippfehler', listen_again: 'Nochmal hören', slow: 'Langsam',
       done: 'Fertig', score: 'Ergebnis', xp: 'XP', combo: 'Kombo', back: 'Zurück', home: 'Zur Karte', again: 'Nochmal', share: 'Ergebnis kopieren', copied: 'Kopiert',
-      postcards: 'Postkarten', krasnale: 'Tower-Raben', krasnal_found: 'Du hast einen Raben gefunden', krasnal_hint: 'Die Raben aus dem Tower of London verstecken sich nach Übungen. Jeder bringt ein neues Wort mit.',
+      pc_stamp: 'Briefmarke', rvb_can: 'Du hast genug Federn – schalte etwas Neues für mich frei!', rvb_need: 'Noch {n} Federn, dann kannst du mir etwas Neues aussuchen.', rvb_all: 'Ich habe alles! Danke fürs fleißige Üben.', postcards: 'Postkarten', krasnale: 'Tower-Raben', krasnal_found: 'Du hast einen Raben gefunden', krasnal_hint: 'Die Raben aus dem Tower of London verstecken sich nach Übungen. Jeder bringt ein neues Wort mit.',
       postcard_new: 'Neue Postkarte', unlocked: 'Neue Stadt freigeschaltet', passed: 'Bestanden', failed: 'Diesmal nicht. Die Fehler kommen in dein Fehlerheft.',
       accent: 'Aussprache', accent_gb: 'Britisch', accent_us: 'Amerikanisch', accent_d: 'Gilt für Vorlesen und Spracherkennung. In der Schule in Baden-Württemberg ist Britisch üblich.',
       settings: 'Einstellungen', base_lang: 'Ich lerne Englisch über', goal: 'Wochenziel (Lerntage)', len: 'Länge einer Runde', short: 'Kurz', medium: 'Mittel', long: 'Lang',
@@ -188,6 +188,7 @@
       zp_p1: 'Teil 1: Hörverstehen', zp_p2r: 'Teil 2: Leseverstehen', zp_p2w: 'Teil 2: Wortschatz', zp_p2s: 'Teil 2: Schreiben', zp_quiz: 'Hören, Lesen, Wortschatz üben (24 Fragen)', zp_write: 'Schreiben üben',
       zp_note: 'Übungsfragen im Stil der Prüfung, keine Originalaufgaben. Schreiben zählt am meisten – übe es regelmäßig.', zp_cult: 'Bezugskulturen', zp_cult_d: 'In der ZP10 2026 bilden Großbritannien und Neuseeland den Rahmen (kein Faktenwissen abgefragt). Passend dazu:',
       grad: 'Abschlussprüfung', grad_d: 'Training für die Kommunikationsprüfung und die schriftliche Englisch-Prüfung – wie in Baden-Württemberg.', grad_go: 'Zum Prüfungstraining', grad_rs: 'Realschulabschluss', grad_hs: 'Hauptschulabschluss', grad_wrs: 'Werkrealschulabschluss',
+      xr_title: 'Mich aufnehmen', xr_d_a: 'Halte deinen Vortrag und nimm dich dabei auf. Danach hörst du dich selbst – so merkst du, wo du hängst, zu schnell bist oder „ähm“ sagst.', xr_d_c: 'Sprich deine Sprachmittlung laut und nimm sie auf. Hör sie dir danach an und vergleiche mit dem Lösungsvorschlag.', xr_start: 'Aufnahme starten', xr_stop: 'Aufnahme beenden', xr_again: 'Neu aufnehmen', xr_del: 'Aufnahme löschen', xr_keep: 'Hör dich an – wie würde das auf die Prüfer wirken?', xr_mit: 'Mitschrift anzeigen (Spracherkennung des Browsers – bei Chrome verarbeitet Google die Sprache)', xr_res: 'Auswertung der Mitschrift', xr_words: '{n} Wörter erkannt · {w} Wörter pro Minute', xr_tempo_slow: 'eher langsam – sprich flüssiger, kleine Fehler sind okay', xr_tempo_ok: 'gutes Tempo', xr_tempo_fast: 'sehr schnell – mach mehr Pausen', xr_phr: 'Redemittel benutzt: {n}', xr_txt: 'Was die Spracherkennung verstanden hat', xr_notxt: 'Die Spracherkennung hat nichts verstanden – sprich näher am Mikrofon oder lass die Mitschrift aus.', xr_check: 'Checkliste zum Anhören:', xr_c1: 'Ich habe mein Thema und die Gliederung am Anfang genannt.', xr_c2: 'Ich habe frei gesprochen und nicht abgelesen.', xr_c3: 'Man versteht mich gut (deutlich, nicht zu schnell).', xr_c4: 'Ich habe Verbindungswörter benutzt (first, another point, for example …).', xr_c5: 'Ich habe einen klaren Schluss.', xr_priv: 'Die Aufnahme bleibt nur in diesem Fenster und wird nicht gespeichert oder verschickt.', xr_none: 'Dein Browser kann keine Aufnahmen machen. Tipp: Nimm dich mit der Sprachmemo-App deines Handys auf.',
       grad_kp: 'Kommunikationsprüfung', grad_kp_d: 'Drei Teile ohne Vorbereitungszeit, zusammen ca. 15 Minuten, je Teil 10 Punkte.', grad_a: 'a) Präsentation deines Schwerpunktthemas', grad_b: 'b) Gespräch in einer Alltagssituation', grad_c: 'c) Sprachmittlung',
       grad_sum: 'Deine Selbsteinschätzung: {p} von 30 Punkten · ungefähr Note {n}', grad_sum_none: 'Übe die drei Teile und schätze dich jeweils selbst ein – dann siehst du deine ungefähre Note.', grad_note: 'Note nach der Punktetabelle des Kultusministeriums, Zwischenwerte gerundet. Echte Bewertung durch zwei Lehrkräfte.',
       grad_topic: 'Dein Thema', grad_topic_own: 'eigenes Thema …', grad_topic_ph: 'z. B. Life in Scotland', grad_notes: 'Deine Stichworte (nur Stichworte sind in der Prüfung erlaubt)', grad_phr: 'Redemittel – antippen zum Anhören',
@@ -196,7 +197,7 @@
       grad_b_d: 'Du bekommst eine Situation und reagierst spontan. Tipp: Antworte in ganzen Sätzen, frag nach, wenn du etwas nicht verstehst.', grad_b_go: 'Situation ziehen', grad_c_d: 'Du hörst oder liest etwas und gibst das Wichtigste in der anderen Sprache weiter – nicht Wort für Wort übersetzen!', grad_c_go: 'Neue Situation', grad_c_show: 'Lösungsvorschlag zeigen', grad_c_keys: 'Das sollte drin sein:', grad_c_say: 'Sprich deine Antwort laut, dann vergleiche.', grad_c_dir_de: 'Deutsch → Englisch', grad_c_dir_en: 'Englisch → Deutsch',
       grad_wr: 'Schriftliche Prüfung', grad_wr_d: 'Aufbau: A Listening · B Text-based Tasks · C Use of Language · D Writing · E Interpreting. In Teil A kein Wörterbuch, in B–E ein zweisprachiges Wörterbuch.', grad_wr_quiz: 'Teile A, B, C, E üben (24 Fragen)', grad_wr_write: 'Teil D: Writing üben', grad_wr_task: 'Schreibaufgabe', grad_wr_other: 'Andere Aufgabe',
       grad_q_a: 'A Listening', grad_q_b: 'B Reading', grad_q_c: 'C Use of Language', grad_q_e: 'E Interpreting',
-      sch_where: 'Bundesland:', sch_where_chg: 'Alle 16 Bundesländer sind dabei. Gymnasium überall; weitere Schularten in Baden-Württemberg, Nordrhein-Westfalen, Rheinland-Pfalz, Berlin, Brandenburg, Schleswig-Holstein, Hamburg, Thüringen, Sachsen-Anhalt, Mecklenburg-Vorpommern, im Saarland und in Bremen. Weitere Schularten folgen.', sch_sek1_d: 'Realschule, Gemeinschaftsschule und Werkrealschule lernen nach dem gemeinsamen Bildungsplan der Sekundarstufe I. Pakete und Grammatik sind den Klassen nach deinem Niveau zugeordnet.', sch_niv: 'Niveau', sch_niv_g: 'G (grundlegend)', sch_niv_m: 'M (mittel)', sch_niv_e: 'E (erweitert)', sch_niv_ek: 'E-Kurs (Erweiterungskurs)', sch_niv_gk: 'G-Kurs (Grundkurs)', sch_niv_st: 'Standardniveau', sch_niv_eh: 'erhöhtes Niveau', sch_niv_er: 'erweitertes Niveau', sch_niv_gr: 'grundlegendes Niveau', sch_niv_for: 'FOR-Klasse (erweiterte Bildung)', sch_niv_ebr: 'EBR-Klasse (grundlegende Bildung)', sch_niv_msa: 'MSA-Niveau (Mittlerer Abschluss)', sch_niv_esa: 'ESA-Niveau (Erster Abschluss)', sch_niv_ob: 'Oberstufen-Niveau', sch_niv_rsa: 'Realschulabschluss / Mittlere Reife', sch_niv_hsa: 'Hauptschulabschluss / Berufsreife', sch_niv_d: 'Steht im Zeugnis oder fragt eure Lehrkraft. Unsicher? Dann den ersten Knopf. In Klasse 5/6 gibt es meist noch keine Kurse – dann E-Kurs bzw. M wählen.', sch_conf_t: 'Wirklich wechseln?', sch_conf_d: 'Von {a} zu {b}. Danach siehst du die Pakete, Grammatik und Probe-Arbeiten der neuen Auswahl.', sch_conf_keep: 'Keine Sorge: Deine Wörter, Buch-Vokabeln, Ergebnisse und Federn bleiben erhalten. Du kannst jederzeit zurückwechseln.', sch_conf_yes: 'Ja, wechseln', sch_conf_no: 'Abbrechen',
+      sch_where: 'Bundesland:', sch_where_chg: 'Alle 16 Bundesländer mit Gymnasium, Realschule, Ober-, Mittel-, Gemeinschafts- und Gesamtschule. Fehlt deine Schulart? Wähl die ähnlichste – oder melde es uns über „Fehler melden“.', sch_sek1_d: 'Realschule, Gemeinschaftsschule und Werkrealschule lernen nach dem gemeinsamen Bildungsplan der Sekundarstufe I. Pakete und Grammatik sind den Klassen nach deinem Niveau zugeordnet.', sch_niv: 'Niveau', sch_niv_g: 'G (grundlegend)', sch_niv_m: 'M (mittel)', sch_niv_e: 'E (erweitert)', sch_niv_ek: 'E-Kurs (Erweiterungskurs)', sch_niv_gk: 'G-Kurs (Grundkurs)', sch_niv_st: 'Standardniveau', sch_niv_eh: 'erhöhtes Niveau', sch_niv_er: 'erweitertes Niveau', sch_niv_gr: 'grundlegendes Niveau', sch_niv_for: 'FOR-Klasse (erweiterte Bildung)', sch_niv_ebr: 'EBR-Klasse (grundlegende Bildung)', sch_niv_msa: 'MSA-Niveau (Mittlerer Abschluss)', sch_niv_esa: 'ESA-Niveau (Erster Abschluss)', sch_niv_ob: 'Oberstufen-Niveau', sch_niv_rsa: 'Realschulabschluss / Mittlere Reife', sch_niv_hsa: 'Hauptschulabschluss / Berufsreife', sch_niv_d: 'Steht im Zeugnis oder fragt eure Lehrkraft. Unsicher? Dann den ersten Knopf. In Klasse 5/6 gibt es meist noch keine Kurse – dann E-Kurs bzw. M wählen.', sch_conf_t: 'Wirklich wechseln?', sch_conf_d: 'Von {a} zu {b}. Danach siehst du die Pakete, Grammatik und Probe-Arbeiten der neuen Auswahl.', sch_conf_keep: 'Keine Sorge: Deine Wörter, Buch-Vokabeln, Ergebnisse und Federn bleiben erhalten. Du kannst jederzeit zurückwechseln.', sch_conf_yes: 'Ja, wechseln', sch_conf_no: 'Abbrechen',
       chk_title: 'Startcheck', chk_d: 'Wie fit bist du für Klasse {g}? 20 kurze Aufgaben aus allem bis jetzt – danach weißt du, was sich zu wiederholen lohnt. Keine Note.', chk_new: 'Willkommen in Klasse {g}! Mach den kurzen Startcheck – dann zeigt dir die App, was du wiederholen solltest. Dauert ca. 5 Minuten, keine Note.', chk_go: 'Startcheck machen', chk_later: 'Später', chk_weak: 'Das lohnt sich zu wiederholen:', chk_practice: 'üben', chk_all_ok: 'Super – in allen Grammatik-Themen warst du sicher!', chk_again: 'Startcheck wiederholen', chk_res: 'Startcheck: {p} % richtig · {n} Themen zum Wiederholen (siehe Schulbereich)',
       ex_lv_a2: 'A2 Key: passt zu Klasse 7–8 und Trail 2.', ex_lv_b1: 'B1 Preliminary: passt zu Klasse 9–10 und Trail 3.', ex_a2_cards: 'Emmas Postkarten', ex_w_len_a2: 'mindestens 25 Wörter', ex_w_len_b1: 'etwa 100 Wörter (mindestens 80)',
       sch_cu: 'Wo seid ihr gerade im Buch?', sch_cu_d: 'Freiwillig. Dann startet der Schulbereich mit deiner aktuellen Unit, und neue Wörter landen automatisch dort.', sch_cu_now: 'Aktuell im Buch', sch_cu_n: '{n} Wörter eingetragen', sch_cu_empty: 'Noch keine Wörter für diese Unit – fotografiere die Vokabelseite oder trag sie ein.', sch_cu_go: '{u} üben', sch_cu_photo: 'Vokabelseite fotografieren', sch_cu_next: 'Wir sind jetzt bei {u} →', sch_cu_set: 'Aktuelle Unit: {u}',
@@ -430,8 +431,17 @@
     x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>'
   };
   function blaze(tr) { return '<span class="blaze tr-' + tr + '" aria-hidden="true"><i></i><i></i><i></i></span>'; }
+  /* 0.32: Tower-Rabe „Rufus“ statt Zwerg (Design Phase 8) – feste Farben, Umriss für Dark Mode; Funktionsname bleibt (viele Aufrufe) */
   function krasnalSvg() {
-    return '<svg viewBox="0 0 56 64" aria-hidden="true"><path d="M28 2 14 26h28z" fill="var(--red)"/><circle cx="28" cy="31" r="9" fill="var(--amber)"/><path d="M18 34c2 10 18 10 20 0-3 6-17 6-20 0z" fill="var(--blaze-white)" stroke="var(--map-edge)"/><rect x="17" y="40" width="22" height="16" rx="5" fill="var(--t-green)"/><rect x="18" y="56" width="8" height="6" rx="2" fill="var(--ink)"/><rect x="30" y="56" width="8" height="6" rx="2" fill="var(--ink)"/></svg>';
+    return '<svg viewBox="0 0 56 64" aria-hidden="true"><g stroke="var(--map-edge)" stroke-width="1.2" stroke-linejoin="round">' +
+      '<path d="M10 52c4-3 9-5 14-5l-6 11z" fill="#2b2f36"/>' +
+      '<ellipse cx="29" cy="40" rx="15" ry="16" fill="#23262b"/>' +
+      '<path d="M18 38c-6 4-8 11-7 16 6-2 11-7 13-13z" fill="#353a43"/>' +
+      '<circle cx="31" cy="21" r="11" fill="#23262b"/>' +
+      '<path d="M41 19l12 4-12 4z" fill="#f2ad45"/>' +
+      '<path d="M22 30c5 3 13 3 18 0l-1 5c-5 2-11 2-16 0z" fill="var(--red)"/>' +
+      '<path d="M25 56v5M33 56v5M23 61h5M31 61h5" fill="none" stroke="#f2ad45" stroke-width="2" stroke-linecap="round"/></g>' +
+      '<circle cx="35" cy="18" r="3.2" fill="#fff"/><circle cx="35.8" cy="18.3" r="1.6" fill="#111"/></svg>';
   }
 
   /* ---------- Fortschritt buchen ---------- */
@@ -618,7 +628,7 @@
         : '<button class="btn primary block" id="cta">' + blaze(u.trail) + esc(t('continue')) + ': ' + esc(u.city) + (step ? ' · ' + esc(t(step)) : '') + '</button>') +
       (step ? '<div class="row small" style="justify-content:space-between"><span class="muted">' + (alt ? '' : esc(t('next_up')) + ': ' + esc(t('step_' + step))) + '</span><button class="btn ghost small" id="cta-city" style="min-height:36px;padding:4px 0">' + esc(t('view_city')) + ' →</button></div>' : '') + '</section>' +
       (step === 'wait' ? moreBox(nUnit, pre, preOk, due, alt) : '') +
-      storyCard() +
+      ravenBuddy() + storyCard() +
       '<section class="map-wrap card" style="padding:8px">' + mapSeg() + mapSvg() + '</section>' +
       '<section class="tiles">' + tileBtn('themes', t('themes'), t('themes_d')) +
         tileBtn('review', t('review'), t('review_d'), due ? '<span class="badge num">' + due + ' ' + esc(t('due')) + '</span>' : '') +
@@ -643,7 +653,7 @@
     var wrx = document.getElementById('wr-x'); if (wrx) wrx.onclick = function () { S.wrSeen = wk; save(); var e = document.getElementById('wr'); if (e) e.remove(); };
     var wrg = document.getElementById('wr-go'); if (wrg) wrg.onclick = function () { S.wrSeen = wk; save(); startMode('wr3'); };
     var wl = document.getElementById('wb-later'); if (wl) wl.onclick = function () { var w = document.getElementById('wb'); if (w) w.remove(); };
-    bindTiles();
+    bindTiles(); bindRavenCard();
     if (!S.tour && !banner) setTimeout(function () { if (tab === 'home' && !view && !G) startTour(); }, 400);
     document.querySelectorAll('[data-city]').forEach(function (g) {
       var open = function () { go('city', +g.getAttribute('data-city')); };
@@ -910,14 +920,21 @@
     var free = rvEarned() - rvSpent(), r = rvState();
     return '<section class="card row" style="flex-wrap:nowrap;gap:14px;align-items:center"><span>' + ravenSvg(r.on, 72) + '</span><div class="stack" style="gap:6px;flex:1"><b>' + esc(r.name || t('rv_title')) + '</b><span class="small muted">🪶 ' + free + ' ' + esc(t('rv_feathers')) + '</span><button class="btn" data-rvopen="' + from + '" style="justify-self:start">' + esc(t('rv_open')) + ' →</button></div></section>';
   }
+  /* 0.32: „Mein Rabe“ als Begleiter auf der Startseite – kleiner Rabe mit Sprechblase (nächstes freischaltbares Teil) */
+  function ravenBuddy() {
+    var r = rvState(), free = rvEarned() - rvSpent(), next = null;
+    Object.keys(RV_PARTS).forEach(function (k) { RV_PARTS[k].forEach(function (p) { if (p[2] > 0 && !rvOwns(k, p[0]) && (!next || p[2] < next)) next = p[2]; }); });
+    var msg = next == null ? t('rvb_all') : free >= next ? t('rvb_can') : t('rvb_need').replace('{n}', next - free);
+    return '<button type="button" class="rv-buddy" data-rvopen="home" aria-label="' + esc(t('rv_title')) + '">' + ravenSvg(r.on, 52) + '<span class="rv-bubble small"><b>' + esc(r.name || t('rv_title')) + ':</b> ' + esc(msg) + '</span></button>';
+  }
   function bindRavenCard() { document.querySelectorAll('[data-rvopen]').forEach(function (b) { b.onclick = function () { rvBack = b.getAttribute('data-rvopen'); go('raven'); }; }); }
 
   function renderAlbum() {
     var html = '<h1>' + esc(t('nav_album')) + '</h1>' + ravenCard('album') + '<section class="stack"><h2>' + esc(t('postcards')) + ' <span class="muted num">' + routeIdx().filter(function (i) { return S.boss[U[i].id]; }).length + '/' + routeIdx().length + '</span></h2><div class="grid2">' +
       routeIdx().map(function (i) {
         var u = U[i], got = !!S.boss[u.id];
-        return '<article class="postcard tr-' + u.trail + (got ? '' : ' locked') + '"><div class="pc-top"><div class="row" style="justify-content:space-between;align-items:start"><div><div class="pl">' + esc(u.city) + '</div><div class="small muted">' + esc(L(u.title)) + '</div></div><div class="stamp">' + (got ? 'PL' : (i + 1)) + '</div></div></div>' +
-          '<div class="pc-bot">' + (got ? esc(L(u.fact)) : '<span class="muted">' + esc(t('locked')) + '</span>') + '</div></article>';
+        return '<article class="postcard tr-' + u.trail + (got ? '' : ' locked') + '"><div class="pc-top"><div class="row" style="justify-content:space-between;align-items:start"><div><div class="pl">' + esc(u.city) + '</div><div class="small muted">' + esc(L(u.title)) + '</div></div><div class="stamp"' + (got ? ' aria-label="' + esc(t('pc_stamp')) + '"' : '') + '>' + (got ? '<span class="st-ico" aria-hidden="true">' + esc(u.ico || '✉') + '</span><span class="st-v">1st</span>' : (i + 1)) + '</div></div></div>' +
+          (got ? '<div class="pc-mark" aria-hidden="true">ENGLISH TRAIL · ' + esc(String(u.city).toUpperCase()) + '</div>' : '') + '<div class="pc-bot">' + (got ? esc(L(u.fact)) : '<span class="muted">' + esc(t('locked')) + '</span>') + '</div></article>';
       }).join('') + '</div></section>' +
       '<section class="stack"><h2>' + esc(t('krasnale')) + ' <span class="muted num">' + S.krasnale.length + '/' + D.krasnale.length + '</span></h2><p class="small muted">' + esc(t('krasnal_hint')) + '</p><div class="grid3">' +
       D.krasnale.map(function (k, i) {
@@ -1039,7 +1056,7 @@
     else if (D.book && ui === szlakUnits(3)[0]) txt = D.book.prolog;
     else { var pu = U[ui - 1].id; letterLines('letter').concat(letterLines('diary')).forEach(function (l) { if (l.u === pu && l.bridge) txt = l.bridge; }); }
     if (!txt) return '';
-    return '<div class="szymek row pop"><div class="krasnal" style="padding:0">' + krasnalSvg() + '</div><p class="small grow">' + (ui ? '<b>Szymek:</b> ' : '') + esc(L(txt)) + '</p></div>';
+    return '<div class="szymek row pop"><div class="krasnal" style="padding:0">' + krasnalSvg() + '</div><p class="small grow">' + (ui ? '<b>Rufus:</b> ' : '') + esc(L(txt)) + '</p></div>';
   }
 
 
@@ -1204,7 +1221,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.29', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.32', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1273,6 +1290,71 @@
         };
         mr.start(); b.textContent = '■ ' + t('rec_stop');
         setTimeout(function () { if (mr && mr.state === 'recording') mr.stop(); }, 6000);
+      }, function () { toast(t('no_mic')); });
+    };
+  }
+
+  /* ---------- 0.30: Sprechprüfung mit Aufnahme (Prüfungstraining) ----------
+     Aufnahme nur im Browser-Speicher (Blob-URL), wird beim Neuaufnehmen/Verlassen verworfen, nie gespeichert oder versendet.
+     Optional „Mitschrift“ über die Spracherkennung des Browsers → Wörter, Tempo, benutzte Redemittel (C.speechStats). */
+  var XR = { mr: null, stream: null, sr: null, t0: 0, tick: null, url: '', secs: 0, txt: '', live: '', part: '', max: 300, mit: false };
+  function exRecOk() { return !!(window.MediaRecorder && navigator.mediaDevices && navigator.mediaDevices.getUserMedia); }
+  function exRecDrop() { if (XR.url) { try { URL.revokeObjectURL(XR.url); } catch (e) {} } XR.url = ''; XR.secs = 0; XR.txt = ''; XR.live = ''; }
+  function exRecStop() { if (XR.mr && XR.mr.state === 'recording') XR.mr.stop(); if (XR.sr) { try { XR.sr.stop(); } catch (e) {} } }
+  function exRecHtml(part, max, phrases) {
+    if (!exRecOk()) return '<section class="card stack"><h2>🎙️ ' + esc(t('xr_title')) + '</h2><p class="small muted">' + esc(t('xr_none')) + '</p></section>';
+    if (XR.part !== part) { exRecStop(); exRecDrop(); XR.part = part; }
+    XR.max = max; var on = !!(XR.mr && XR.mr.state === 'recording'), hasSR = !!(window.SpeechRecognition || window.webkitSpeechRecognition), h = '';
+    h += '<section class="card stack" id="xr-box"><h2>🎙️ ' + esc(t('xr_title')) + '</h2><p class="small">' + esc(t(part === 'a' ? 'xr_d_a' : 'xr_d_c')) + '</p>';
+    if (hasSR) h += '<label class="row small" style="gap:8px;align-items:center"><input type="checkbox" id="xr-mit"' + (XR.mit ? ' checked' : '') + (on ? ' disabled' : '') + '> ' + esc(t('xr_mit')) + '</label>';
+    h += '<div class="row" style="flex-wrap:wrap;align-items:center"><button class="btn ' + (on ? '' : 'primary') + '" id="xr-go">' + (on ? '■ ' + esc(t('xr_stop')) : '● ' + esc(XR.url ? t('xr_again') : t('xr_start'))) + '</button><b class="num big" id="xr-clock" aria-live="off">' + C.fmtTime((on ? Math.round((Date.now() - XR.t0) / 1000) : XR.secs) * 1000) + '</b><span class="small muted num">/ ' + C.fmtTime(max * 1000) + '</span></div>';
+    if (on && XR.mit) h += '<p class="small muted" id="xr-live" lang="en">' + esc(XR.live || '…') + '</p>';
+    if (!on && XR.url) {
+      h += '<audio controls src="' + esc(XR.url) + '" id="xr-audio" style="width:100%"></audio><p class="small muted">' + esc(t('xr_keep')) + '</p>';
+      if (XR.mit && XR.txt) {
+        var st = C.speechStats(XR.txt, XR.secs, (phrases || []).map(function (p) { return p[1]; }));
+        h += '<div class="card stack"><b>' + esc(t('xr_res')) + '</b><p class="small num">' + esc(t('xr_words').replace('{n}', st.words).replace('{w}', st.wpm || '–')) + (st.tempo ? ' · ' + esc(t('xr_tempo_' + st.tempo)) : '') + '</p>' +
+          (phrases ? '<p class="small">' + esc(t('xr_phr').replace('{n}', st.used.length)) + (st.used.length ? ': ' + st.used.map(function (x) { return '<span class="badge" lang="en">' + esc(x) + '</span>'; }).join(' ') : '') + '</p>' : '') +
+          '<details><summary class="small">' + esc(t('xr_txt')) + '</summary><p class="small" lang="en">' + esc(XR.txt) + '</p></details></div>';
+      } else if (XR.mit) h += '<p class="small muted">' + esc(t('xr_notxt')) + '</p>';
+      h += '<p class="small"><b>' + esc(t('xr_check')) + '</b></p><div class="stack" style="gap:4px">' + ['xr_c1', 'xr_c2', 'xr_c3', 'xr_c4', 'xr_c5'].filter(function (k) { return part === 'a' || k !== 'xr_c1'; }).map(function (k) { return '<label class="row small" style="gap:8px;align-items:center"><input type="checkbox" class="xr-ck"> ' + esc(t(k)) + '</label>'; }).join('') + '</div>' +
+        '<button class="btn ghost" id="xr-del" style="justify-self:start">🗑 ' + esc(t('xr_del')) + '</button>';
+    }
+    return h + '<p class="small muted">' + esc(t('xr_priv')) + '</p></section>';
+  }
+  function bindExRec(rerender) {
+    var mit = document.getElementById('xr-mit'); if (mit) mit.onchange = function () { XR.mit = mit.checked; };
+    var del = document.getElementById('xr-del'); if (del) del.onclick = function () { exRecDrop(); rerender(); };
+    var b = document.getElementById('xr-go'); if (!b) return;
+    b.onclick = function () {
+      if (XR.mr && XR.mr.state === 'recording') { exRecStop(); return; }
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        exRecDrop(); XR.stream = stream; var chunks = [], mr = new MediaRecorder(stream); XR.mr = mr; XR.t0 = Date.now();
+        mr.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
+        mr.onstop = function () {
+          stream.getTracks().forEach(function (tr) { tr.stop(); });
+          clearInterval(XR.tick); XR.tick = null; XR.secs = Math.round((Date.now() - XR.t0) / 1000);
+          XR.url = URL.createObjectURL(new Blob(chunks, { type: mr.mimeType || 'audio/webm' })); XR.mr = null;
+          if (XR.sr) { try { XR.sr.stop(); } catch (e) {} }
+          markActive(); addXp(10); save();
+          setTimeout(function () { if (tab === 'grad') rerender(); }, XR.mit ? 600 : 0);
+        };
+        mr.start();
+        if (XR.mit) {
+          try {
+            var Rec = window.SpeechRecognition || window.webkitSpeechRecognition, sr = new Rec(), fin = '';
+            sr.lang = TL(); sr.continuous = true; sr.interimResults = true; XR.sr = sr;
+            sr.onresult = function (ev) { var inter = ''; for (var i = ev.resultIndex; i < ev.results.length; i++) { if (ev.results[i].isFinal) fin += ev.results[i][0].transcript + ' '; else inter += ev.results[i][0].transcript; } XR.txt = fin.trim(); XR.live = (fin + inter).slice(-160); var lv = document.getElementById('xr-live'); if (lv) lv.textContent = XR.live; };
+            sr.onend = function () { if (XR.mr && XR.mr.state === 'recording') { try { sr.start(); } catch (e) {} } else XR.sr = null; };
+            sr.onerror = function () {};
+            sr.start();
+          } catch (e) { XR.sr = null; }
+        }
+        XR.tick = setInterval(function () {
+          var sec = Math.round((Date.now() - XR.t0) / 1000), c = document.getElementById('xr-clock'); if (c) c.textContent = C.fmtTime(sec * 1000);
+          if (sec >= XR.max || tab !== 'grad') exRecStop();
+        }, 500);
+        rerender();
       }, function () { toast(t('no_mic')); });
     };
   }
@@ -2176,6 +2258,7 @@
         (/^own:/.test(GR.topic) ? '<input type="text" id="ga-own" maxlength="60" lang="en" placeholder="' + esc(t('grad_topic_ph')) + '" value="' + esc(GR.topic.slice(4)) + '">' : '') +
         '<label class="fld">' + esc(t('grad_notes')) + '<textarea id="ga-notes" rows="5" lang="en" maxlength="1200">' + esc(st.notes[GR.topic] || '') + '</textarea></label>' +
         '<div class="row" style="flex-wrap:wrap;align-items:center"><button class="btn primary" id="ga-timer">⏱ ' + esc(GR.tm ? t('grad_stop') : t('grad_timer')) + '</button><b class="num big" id="ga-clock" aria-live="polite">' + (GR.left != null ? C.fmtTime(GR.left * 1000) : '5:00') + '</b></div></section>' +
+        exRecHtml('a', 300, GD.phr) +
         '<section class="card stack"><h2>' + esc(t('grad_fq')) + '</h2><p class="small">' + esc(t('grad_fq_d')) + '</p>' + (GR.fq.length ? '<div class="list">' + GR.fq.map(function (q) { return '<button class="li linkish" data-say="' + esc(q) + '" style="width:100%;text-align:left" lang="en">🔊 ' + esc(q) + '</button>'; }).join('') + '</div>' : '') +
         '<button class="btn" id="ga-fq" style="justify-self:start">❓ ' + esc(t('grad_fq')) + '</button></section>' +
         '<section class="card stack"><h2>' + esc(t('grad_phr')) + '</h2>' + ['start', 'main', 'end', 'help'].map(grp).join('') + '</section>' +
@@ -2195,6 +2278,7 @@
         (GR.show ? '<section class="card stack"><p' + (m.r === 'de-en' ? ' lang="en"' : '') + '>' + esc(m.model) + '</p><p class="small"><b>' + esc(t('grad_c_keys')) + '</b></p><ul class="news-ul">' + m.keys.map(function (k) { return '<li class="small">' + esc(k) + '</li>'; }).join('') + '</ul>' + (m.r === 'de-en' ? '<button class="btn" id="gc-model" style="justify-self:start">' + I.spk + esc(t('listen_again')) + '</button>' : '') + '</section>'
           : '<button class="btn primary" id="gc-show" style="justify-self:start">' + esc(t('grad_c_show')) + '</button>') +
         '<button class="btn ghost" id="gc-next" style="justify-self:start">🎲 ' + esc(t('grad_c_go')) + '</button></section>' +
+        exRecHtml('c', 120, null) +
         '<section class="card stack"><h2>' + esc(t('grad_rate')) + '</h2><p class="small">' + esc(t('grad_r_med')) + '</p>' + rateSeg('gr-1', 10, GR.r1) +
         '<button class="btn primary" id="gr-save" style="justify-self:start"' + (GR.r1 == null ? ' disabled' : '') + '>' + esc(t('grad_save')) + '</button></section>';
     } else if (GR.part === 'write') {
@@ -2205,6 +2289,7 @@
         '<div class="row" style="flex-wrap:wrap"><button class="btn primary" id="gw-check">' + esc(t('sch_write_check')) + '</button><button class="btn ghost" id="gw-other">' + esc(t('grad_wr_other')) + '</button></div><div id="gw-res"></div></section>';
     }
     shell(html);
+    if (GR.part === 'a' || GR.part === 'c') bindExRec(renderGrad); else if (XR.part) { exRecStop(); exRecDrop(); XR.part = ''; }
     document.getElementById('back').onclick = function () { if (GR.part) { if (GR.tm) { clearInterval(GR.tm); GR.tm = null; } GR.part = ''; renderGrad(); } else go('school'); };
     document.querySelectorAll('[data-gp]').forEach(function (b) { b.onclick = function () { GR.part = b.getAttribute('data-gp'); GR.r1 = GR.r2 = null; GR.show = false; GR.fq = []; renderGrad(); window.scrollTo(0, 0); }; });
     document.querySelectorAll('[data-say]').forEach(function (b) { b.onclick = function () { speak(b.getAttribute('data-say')); }; });

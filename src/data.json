@@ -30100,6 +30100,28 @@
  ],
  "news": [
   {
+   "v": "0.32",
+   "date": "2026-11-14",
+   "de": [
+    "Neues Design: Überall begleitet dich jetzt Rabe Rufus statt des alten Zwergs, und dein eigener Rabe begrüßt dich auf der Startseite.",
+    "Deine Postkarten haben jetzt einen Luftpost-Rand, eine Briefmarke und einen Poststempel."
+   ]
+  },
+  {
+   "v": "0.31",
+   "date": "2026-11-14",
+   "de": [
+    "Mehr Schularten: Realschule und Mittelschule in Bayern, Ober-, Real-, Haupt- und Gesamtschule in Niedersachsen, Real-, Haupt- und Gesamtschule in Hessen sowie die Oberschule in Sachsen."
+   ]
+  },
+  {
+   "v": "0.30",
+   "date": "2026-11-14",
+   "de": [
+    "Prüfungstraining: Nimm deine Präsentation und deine Sprachmittlung auf und hör sie dir danach an – mit Checkliste. Auf Wunsch zeigt eine Mitschrift, wie viele Wörter pro Minute du sprichst und welche Redemittel du benutzt hast. Die Aufnahme bleibt nur auf deinem Gerät."
+   ]
+  },
+  {
    "v": "0.29",
    "date": "2026-11-14",
    "de": [
@@ -30501,6 +30523,11 @@
     "id": "reg",
     "name": "Regionale Schule",
     "on": 1
+   },
+   {
+    "id": "ms",
+    "name": "Mittelschule",
+    "on": 1
    }
   ],
   "combos": [
@@ -30543,7 +30570,17 @@
    "sl-gym",
    "sl-gms",
    "hb-gym",
-   "hb-obs"
+   "hb-obs",
+   "by-rs",
+   "by-ms",
+   "ni-obs",
+   "ni-rs",
+   "ni-hs",
+   "ni-igs",
+   "he-rs",
+   "he-hs",
+   "he-igs",
+   "sn-obs"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30573,7 +30610,17 @@
    "mv-reg": "sek1",
    "mv-ge": "sek1",
    "sl-gms": "sek1",
-   "hb-obs": "sek1"
+   "hb-obs": "sek1",
+   "by-rs": "sek1",
+   "by-ms": "sek1",
+   "ni-obs": "sek1",
+   "ni-rs": "sek1",
+   "ni-hs": "sek1g",
+   "ni-igs": "sek1",
+   "he-rs": "sek1",
+   "he-hs": "sek1g",
+   "he-igs": "sek1",
+   "sn-obs": "sek1"
   },
   "grades": [
    5,
@@ -30760,7 +30807,17 @@
      "mv-reg",
      "mv-ge",
      "sl-gms",
-     "hb-obs"
+     "hb-obs",
+     "by-rs",
+     "by-ms",
+     "ni-obs",
+     "ni-rs",
+     "ni-hs",
+     "ni-igs",
+     "he-rs",
+     "he-hs",
+     "he-igs",
+     "sn-obs"
     ]
    },
    {
@@ -30778,7 +30835,17 @@
      "mv-reg",
      "mv-ge",
      "sl-gms",
-     "hb-obs"
+     "hb-obs",
+     "by-rs",
+     "by-ms",
+     "ni-obs",
+     "ni-rs",
+     "ni-hs",
+     "ni-igs",
+     "he-rs",
+     "he-hs",
+     "he-igs",
+     "sn-obs"
     ]
    },
    {
@@ -30800,7 +30867,17 @@
      "mv-reg",
      "mv-ge",
      "sl-gms",
-     "hb-obs"
+     "hb-obs",
+     "by-rs",
+     "by-ms",
+     "ni-obs",
+     "ni-rs",
+     "ni-hs",
+     "ni-igs",
+     "he-rs",
+     "he-hs",
+     "he-igs",
+     "sn-obs"
     ]
    },
    {
@@ -30822,7 +30899,17 @@
      "mv-reg",
      "mv-ge",
      "sl-gms",
-     "hb-obs"
+     "hb-obs",
+     "by-rs",
+     "by-ms",
+     "ni-obs",
+     "ni-rs",
+     "ni-hs",
+     "ni-igs",
+     "he-rs",
+     "he-hs",
+     "he-igs",
+     "sn-obs"
     ]
    },
    {
@@ -30845,7 +30932,17 @@
      "mv-reg",
      "mv-ge",
      "sl-gms",
-     "hb-obs"
+     "hb-obs",
+     "by-rs",
+     "by-ms",
+     "ni-obs",
+     "ni-rs",
+     "ni-hs",
+     "ni-igs",
+     "he-rs",
+     "he-hs",
+     "he-igs",
+     "sn-obs"
     ]
    },
    {
@@ -31159,6 +31256,26 @@
     "er",
     "gr",
     "ob"
+   ],
+   "by-ms": [
+    "hsa",
+    "rsa"
+   ],
+   "ni-obs": [
+    "ek",
+    "gk"
+   ],
+   "ni-igs": [
+    "ek",
+    "gk"
+   ],
+   "he-igs": [
+    "ek",
+    "gk"
+   ],
+   "sn-obs": [
+    "rsa",
+    "hsa"
    ]
   },
   "nivPlan": {
@@ -31227,6 +31344,21 @@
    "hb-obs": {
     "gr": "sek1g",
     "ob": "sek1e"
+   },
+   "by-ms": {
+    "hsa": "sek1g"
+   },
+   "ni-obs": {
+    "gk": "sek1g"
+   },
+   "ni-igs": {
+    "gk": "sek1g"
+   },
+   "he-igs": {
+    "gk": "sek1g"
+   },
+   "sn-obs": {
+    "hsa": "sek1g"
    }
   },
   "pOrd": [

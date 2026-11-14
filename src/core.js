@@ -730,11 +730,22 @@
     });
   }
 
+  /* 0.30: Sprechprüfung mit Aufnahme – Auswertung der Mitschrift (Wörter, Tempo, benutzte Redemittel) */
+  function speechStats(txt, secs, phrases) {
+    var clean = String(txt || '').toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').replace(/\s+/g, ' ').trim();
+    var words = clean ? clean.split(' ').length : 0, min = Math.max(1, secs || 0) / 60, wpm = secs >= 10 ? Math.round(words / min) : 0;
+    var used = (phrases || []).filter(function (p) {
+      var key = String(p).toLowerCase().replace(/\.\.\.|…/g, ' ').replace(/[^a-z0-9' ]+/g, ' ').replace(/\s+/g, ' ').trim().split(' ').slice(0, 4).join(' ');
+      return key.length >= 6 && (' ' + clean + ' ').indexOf(' ' + key + ' ') >= 0;
+    });
+    return { words: words, wpm: wpm, tempo: !wpm ? '' : wpm < 70 ? 'slow' : wpm > 170 ? 'fast' : 'ok', used: used };
+  }
+
   G.PSCore = {
     gform: gform, hasG: hasG, wordDiff: wordDiff, icsReminder: icsReminder,
     pmLetterOk: pmLetterOk, pmKnown: pmKnown, pmScore: pmScore,
     misspell: misspell, spellWorthy: spellWorthy,
-    schoolMark: schoolMark, liveWinner: liveWinner, hwCode: hwCode, kpGrade: kpGrade, schPlanObj: schPlanObj, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
+    schoolMark: schoolMark, speechStats: speechStats, liveWinner: liveWinner, hwCode: hwCode, kpGrade: kpGrade, schPlanObj: schPlanObj, schGradeOf: schGradeOf, schLoOf: schLoOf, schHiOf: schHiOf, wordShareEncode: wordShareEncode, wordShareDecode: wordShareDecode, ocrToList: ocrToList, ocrRows: ocrRows, ocrSplitText: ocrSplitText, hwParse: hwParse, maskOf: maskOf, fromMask: fromMask, weekChallengeCode: weekChallengeCode, parseWordList: parseWordList, writingCheck: writingCheck, numToEn: numToEn, priceEn: priceEn, priceTag: priceTag, proj: proj, unproj: unproj, distKm: distKm, hlPair: hlPair, orderOk: orderOk, scramble: scramble,
     DIFF: DIFF, diffCfg: diffCfg, pickKind: pickKind, placementStart: placementStart, polLevel: polLevel,
     stripDia: stripDia, norm: norm, variants: variants, lev: lev, checkAnswer: checkAnswer,
     numToPl: numToPl, zlotyForm: zlotyForm, priceWords: priceWords,

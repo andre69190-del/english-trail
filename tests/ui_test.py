@@ -65,7 +65,7 @@ def play_through(page, max_steps=150):
 
 
 with sync_playwright() as p:
-    b = p.chromium.launch()
+    b = p.chromium.launch(args=['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream'])
     ctx = b.new_context(viewport={'width': 390, 'height': 844}, locale='de-DE')
     page = ctx.new_page()
     errors = []
@@ -294,6 +294,14 @@ with sync_playwright() as p:
     page.evaluate("() => { const s = window.PSApp.state(); s.xp = s._xp; s.krasnale = s._kr; delete s._xp; delete s._kr; }")
     col = page.evaluate("() => getComputedStyle(document.querySelector('[data-rv][aria-pressed=true]')).color") ; bgc = page.evaluate("() => getComputedStyle(document.querySelector('[data-rv][aria-pressed=true]')).backgroundColor")
     (ok if col != bgc else bad)('Gewählter Chip lesbar (Text ≠ Hintergrund)')
+    # 0.32: Rabe als Begleiter auf der Startseite, Raben statt Zwerge, Postkarten mit Briefmarke
+    page.evaluate("() => window.PSApp.go('home')"); page.wait_for_selector('.rv-buddy')
+    (ok if page.locator('.rv-buddy svg').count() == 1 and 'feder' in page.inner_text('.rv-buddy').lower() or 'alles' in page.inner_text('.rv-buddy').lower() else bad)('Startseite: Mein Rabe als Begleiter mit Sprechblase')
+    page.click('.rv-buddy'); page.wait_for_selector('[data-rv]'); page.click('#back'); page.wait_for_selector('.rv-buddy')
+    (ok if True else bad)('Begleiter öffnet Mein Rabe, Zurück führt zur Startseite')
+    page.evaluate("() => window.PSApp.go('album')"); page.wait_for_selector('.postcard')
+    alb = page.inner_text('main')
+    (ok if 'PL' not in [x.strip() for x in alb.split('\n')] and page.locator('.krasnal svg path[d^="M41 19"]').count() >= 1 else bad)('Album: kein „PL“-Stempel mehr, Raben-Grafik statt Zwerg')
 
     # Übersicht „Was kann English Trail?“ + kinderleichtes Fehler melden (0.5)
     page.evaluate("() => window.PSApp.go('news')"); page.wait_for_selector('#nw-guide'); page.click('#nw-guide'); page.wait_for_selector('[data-gw]')
@@ -598,8 +606,19 @@ with sync_playwright() as p:
     rp.click('#grad-open'); rp.wait_for_selector('[data-gp="a"]')
     rp.click('[data-gp="a"]'); rp.wait_for_selector('#ga-topic'); rp.fill('#ga-notes', 'castles, tartan, Edinburgh'); rp.click('#ga-fq'); rp.wait_for_timeout(150)
     (ok if rp.locator('[data-say]').count() >= 15 else bad)('Präsentation: Thema, Stichworte, Redemittel und Nachfragen')
+    # 0.30: Sprechprüfung mit Aufnahme
+    (ok if rp.locator('#xr-go').count() == 1 and rp.locator('#xr-box').count() == 1 else bad)('Präsentation: Aufnahme-Bereich da')
+    rp.click('#xr-go'); rp.wait_for_function("() => /beenden/i.test((document.getElementById('xr-go') || {}).textContent || '')", timeout=5000); rp.wait_for_timeout(1200)
+    (ok if 'beenden' in rp.inner_text('#xr-go').lower() else bad)('Aufnahme läuft (Knopf zeigt Beenden)')
+    rp.click('#gr-1 [data-v="2"]'); rp.wait_for_timeout(200)
+    (ok if 'beenden' in rp.inner_text('#xr-go').lower() else bad)('Aufnahme läuft weiter, wenn die Seite neu gezeichnet wird')
+    rp.click('#xr-go'); rp.wait_for_selector('#xr-audio', timeout=5000)
+    (ok if rp.locator('.xr-ck').count() == 5 and rp.evaluate("() => document.getElementById('xr-audio').src.startsWith('blob:')") else bad)('Aufnahme anhören + Checkliste (5 Punkte), nur als Blob im Browser')
+    rp.click('#xr-del'); rp.wait_for_timeout(100)
+    (ok if rp.locator('#xr-audio').count() == 0 else bad)('Aufnahme löschen')
     rp.click('#gr-1 [data-v="4"]'); rp.click('#gr-2 [data-v="3"]'); rp.click('#gr-save'); rp.wait_for_selector('[data-gp="c"]')
     rp.click('[data-gp="c"]'); rp.wait_for_selector('#gc-show'); rp.click('#gc-show'); rp.wait_for_selector('#gc-next')
+    (ok if rp.locator('#xr-box').count() == 1 and rp.locator('#xr-audio').count() == 0 else bad)('Sprachmittlung: eigener Aufnahme-Bereich, alte Aufnahme verworfen')
     rp.click('#gr-1 [data-v="8"]'); rp.click('#gr-save'); rp.wait_for_selector('[data-gp="b"]')
     rp.click('[data-gp="b"]'); rp.click('#gr-1 [data-v="5"]'); rp.click('#gr-2 [data-v="4"]'); rp.click('#gr-save'); rp.wait_for_selector('[data-gp="a"]')
     (ok if 'note 2,0' in rp.inner_text('main').lower() and rp.evaluate("() => window.PSApp.state().grad.notes['s10gen'] || Object.values(window.PSApp.state().grad.notes)[0]") else bad)('Kommunikationsprüfung: 24 Punkte → ungefähr Note 2,0, Stichworte gespeichert')
@@ -717,6 +736,15 @@ with sync_playwright() as p:
     np_.click('#sc-ty [data-v="obs"]'); np_.wait_for_selector('#sc-nv [data-v="gr"]'); np_.click('#sc-nv [data-v="gr"]'); np_.click('#sc-g [data-v="8"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
     thb = np_.inner_text('main')
     (ok if 'bremen' in thb.lower() and 'oberschule' in thb.lower() and '-G8' in thb else bad)('Bremen Oberschule grundlegend Kl. 8: Code mit G')
+    # 0.31: weitere Schularten
+    np_.click('#sc-edit')
+    for st_, want in (('ni', ['gym', 'obs', 'rs', 'hs', 'igs']), ('he', ['gym', 'rs', 'hs', 'igs']), ('sn', ['gym', 'obs']), ('by', ['gym', 'rs', 'ms'])):
+        np_.select_option('#sc-st', st_); np_.wait_for_timeout(150)
+        tys = np_.evaluate("() => [...document.querySelectorAll('#sc-ty [data-v]')].map(b => b.getAttribute('data-v'))")
+        (ok if set(tys) == set(want) else bad)('%s: Schularten %s' % (st_, ','.join(tys)))
+    np_.click('#sc-ty [data-v="ms"]'); np_.wait_for_selector('#sc-nv [data-v="hsa"]'); np_.click('#sc-nv [data-v="hsa"]'); np_.click('#sc-g [data-v="7"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    tby = np_.inner_text('main')
+    (ok if 'mittelschule' in tby.lower() and '-G7' in tby else bad)('Bayern Mittelschule Regelklasse Kl. 7: Code mit G')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

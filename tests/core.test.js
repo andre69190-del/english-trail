@@ -688,3 +688,20 @@ test('Saarland und Bremen: alle Bundesländer an', () => {
   assert.equal(S.planOf['sl-gms'], 'sek1'); assert.equal(S.nivPlan['hb-obs'].gr, 'sek1g'); assert.equal(S.nivPlan['sl-gms'].ob, 'sek1e');
   assert.deepEqual(S.niveaus['hb-obs'], ['er', 'gr', 'ob']);
 });
+
+test('Sprechprüfung: speechStats zählt Wörter, Tempo und Redemittel', () => {
+  const r = C.speechStats('Today I am going to talk about Scotland. First of all, Scotland is beautiful.', 6, ['Today I am going to talk about …', 'First of all, …', 'To sum up, …']);
+  assert.equal(r.words, 14); assert.equal(r.wpm, 0); assert.equal(r.tempo, '');
+  assert.deepEqual(r.used, ['Today I am going to talk about …', 'First of all, …']);
+  const long = Array(120).fill('word').join(' ');
+  assert.equal(C.speechStats(long, 60, []).wpm, 120); assert.equal(C.speechStats(long, 60, []).tempo, 'ok');
+  assert.equal(C.speechStats(long, 180, []).tempo, 'slow'); assert.equal(C.speechStats(long, 30, []).tempo, 'fast');
+  assert.equal(C.speechStats('', 0, []).words, 0);
+});
+
+test('Weitere Schularten BY, NI, HE, SN', () => {
+  const S = DATA.school; ['by-rs', 'by-ms', 'ni-obs', 'ni-rs', 'ni-hs', 'ni-igs', 'he-rs', 'he-hs', 'he-igs', 'sn-obs'].forEach(k => {
+    assert.ok(S.combos.includes(k), k); assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k); });
+  assert.ok(S.types.find(x => x.id === 'ms'), 'Mittelschule'); assert.equal(S.types[S.types.length - 1].id, 'ms', 'Schularten nur angehängt');
+  assert.equal(S.planOf['ni-hs'], 'sek1g'); assert.equal(S.nivPlan['by-ms'].hsa, 'sek1g'); assert.deepEqual(S.niveaus['sn-obs'], ['rsa', 'hsa']);
+});

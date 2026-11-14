@@ -230,6 +230,15 @@ button.chip { cursor: pointer; min-height: 40px; } /* PATCH004 */
 .postcard .pc-top .pl { font-family: var(--f-display); font-weight: 800; font-size: 1.35rem; }
 .postcard .pc-bot { padding: 10px 14px; font-size: .9rem; }
 .postcard.locked { opacity: .55; }
+/* 0.32: Postkarten-Gestaltung – Luftpost-Rand, Briefmarke mit Ort-Symbol, Poststempel */
+.postcard:not(.locked) { border: 0; padding: 5px; background: repeating-linear-gradient(-45deg, var(--red) 0 10px, var(--surface) 10px 18px, #2f5fb3 18px 28px, var(--surface) 28px 36px); }
+.postcard:not(.locked) > * { background: var(--surface); }
+.postcard:not(.locked) .pc-top { border-radius: calc(var(--r) - 4px) calc(var(--r) - 4px) 0 0; }
+.postcard:not(.locked) .pc-bot { border-radius: 0 0 calc(var(--r) - 4px) calc(var(--r) - 4px); }
+.postcard .pc-mark { padding: 2px 14px 0; font-size: .62rem; letter-spacing: .12em; color: var(--muted); font-weight: 700; }
+.postcard:not(.locked) .stamp { border-style: dashed; gap: 0; align-content: center; transform: rotate(4deg); }
+.postcard .stamp .st-ico { font-size: 1.3rem; line-height: 1; }
+.postcard .stamp .st-v { font-size: .55rem; letter-spacing: .05em; }
 .postcard .stamp { justify-self: end; width: 44px; height: 52px; border: 2px dotted var(--c, var(--line)); border-radius: 4px; display: grid; place-items: center; font-family: var(--f-display); font-weight: 800; color: var(--c, var(--muted)); font-size: .8rem; }
 .krasnal { display: grid; justify-items: center; gap: 6px; padding: 12px 8px; text-align: center; }
 .krasnal svg { width: 56px; height: 64px; }
@@ -351,3 +360,9 @@ a.ext { font-weight: 700; color: var(--ink); }
 .seo-about a { color: inherit; }
 body.in-play .seo-about { display: none; }
 @media (display-mode: standalone) { .seo-about { display: none; } }
+
+/* 0.32: Mein Rabe als Begleiter (Startseite) */
+.rv-buddy { display: flex; align-items: center; gap: 10px; width: 100%; padding: 6px 4px; background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.rv-buddy svg { flex: 0 0 auto; border-radius: 14px; }
+.rv-bubble { position: relative; flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 8px 12px; }
+.rv-bubble::before { content: ""; position: absolute; left: -7px; top: 50%; width: 12px; height: 12px; background: var(--surface); border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); transform: translateY(-50%) rotate(45deg); }

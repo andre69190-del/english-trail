@@ -282,6 +282,9 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.32', '2026-11-14', ['Neues Design: Überall begleitet dich jetzt Rabe Rufus statt des alten Zwergs, und dein eigener Rabe begrüßt dich auf der Startseite.', 'Deine Postkarten haben jetzt einen Luftpost-Rand, eine Briefmarke und einen Poststempel.']),
+  ('0.31', '2026-11-14', ['Mehr Schularten: Realschule und Mittelschule in Bayern, Ober-, Real-, Haupt- und Gesamtschule in Niedersachsen, Real-, Haupt- und Gesamtschule in Hessen sowie die Oberschule in Sachsen.']),
+  ('0.30', '2026-11-14', ['Prüfungstraining: Nimm deine Präsentation und deine Sprachmittlung auf und hör sie dir danach an – mit Checkliste. Auf Wunsch zeigt eine Mitschrift, wie viele Wörter pro Minute du sprichst und welche Redemittel du benutzt hast. Die Aufnahme bleibt nur auf deinem Gerät.']),
   ('0.29', '2026-11-14', ['Jetzt sind alle 16 Bundesländer dabei: neu sind das Saarland (Gymnasium, Gemeinschaftsschule) und Bremen (Gymnasium, Oberschule) – mit Niveau-Auswahl.']),
   ('0.28', '2026-11-14', ['Aufgeräumt: Der Stimmen-Test und der freie KI-Chat starten jetzt auf Englisch (vorher war dort noch ein polnischer Satz).', 'Die App ist etwas kleiner und lädt schneller.']),
   ('0.27', '2026-11-14', ['Jetzt auch für Thüringen, Sachsen-Anhalt und Mecklenburg-Vorpommern: Gymnasium, Regelschule, Sekundarschule, Regionale Schule, Gemeinschafts- und Gesamtschule. MV-Gymnasium mit eigener Grammatik-Reihenfolge je Klasse.']),

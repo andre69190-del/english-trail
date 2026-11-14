@@ -354,3 +354,21 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Lehrwerke wie TH/ST/MV (Gym: Access/Green Line/Camden Town; Sek I: Red Line, Orange Line, Lighthouse, Highlight, Camden Market).
 - Notiz `content/schule/RECHERCHE_SL_HB.md` (u. a. Saarland: oft Französisch 1. FS → Idee „Englisch ab Klasse 6“). SEO `englisch-saarland-bremen.html` (Dockerfile, Sitemap, Footer, shell).
 - Tests: Core 74, UI 215 OK.
+
+## Release 0.30 (14.11.2026) – Sprechprüfung mit Aufnahme (interaktive Sitzung)
+- Prüfungstraining (Kommunikationsprüfung): in Teil a) Präsentation (max. 5:00) und c) Sprachmittlung (max. 2:00) ein Bereich „Mich aufnehmen“: Aufnahme (MediaRecorder), Uhr, Anhören (`<audio>` mit Blob-URL), Checkliste (5 bzw. 4 Punkte), Löschen. +10 XP pro Aufnahme.
+- Optionale **Mitschrift** (SpeechRecognition, continuous, `TL()`): Wörter, Wörter/Minute mit Tempo-Hinweis (<70 langsam, >170 schnell) und benutzte Redemittel aus `D.grad.phr` → `C.speechStats(txt, secs, phrases)` (Core-Test).
+- Aufnahme nur im Speicher (`XR`), verworfen beim Neuaufnehmen, Löschen, Teilwechsel oder Verlassen; Datenschutzerklärung ergänzt. Nicht unterstützt → Hinweis auf Sprachmemo-App.
+- UI-Test mit Fake-Mikrofon (`--use-fake-device-for-media-stream`). Tests: Core 75, UI 221 OK.
+- Außerdem: G9-Bildungsplan BW geprüft (V3.0, siehe `content/schule/RECHERCHE_BW.md`).
+
+## Release 0.31 (14.11.2026) – weitere Schularten BY, NI, HE, SN (interaktive Sitzung)
+- Neue Schulart `ms` Mittelschule (angehängt). COMBOS by-rs, by-ms (Niveau hsa Regelklasse → sek1g, rsa M-Zug → sek1), ni-obs/ni-igs (E-/G-Kurs), ni-rs, ni-hs (sek1g), he-rs, he-hs (sek1g), he-igs (E-/G-Kurs), sn-obs (rsa/hsa).
+- Lehrwerke: Sek-I-Liste (Red Line, Orange Line, Lighthouse, Highlight, Camden Market). Text „Bundesland“-Hinweis angepasst. Notiz `content/schule/RECHERCHE_SCHULARTEN.md`.
+- Tests: Core 76, UI 226 OK.
+
+## Release 0.32 (14.11.2026) – Design Phase 8: Rabe statt Zwerg (interaktive Sitzung)
+- `krasnalSvg()` = Tower-Rabe (Name der Funktion bleibt wegen vieler Aufrufe). Sprecher-Label „Rufus:“ (vorher „Szymek:“).
+- Postkarten: Luftpost-Rand (CSS-Streifen), Briefmarke mit `u.ico`/✉ und „1st“, Poststempel „ENGLISH TRAIL · STADT“; vorher stand „PL“ auf der Marke.
+- Startseite: `ravenBuddy()` zwischen Hero und Brief – eigener Rabe (ravenSvg 52) mit Sprechblase (Federn bis zum nächsten Teil / kann freischalten / alles), öffnet „Mein Rabe“, Zurück → Startseite.
+- Screenshots hell/dunkel geprüft. Tests: Core 76, UI 229 OK.

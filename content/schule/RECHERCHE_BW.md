@@ -61,3 +61,10 @@ Quellen:
 - https://www.bildungsplaene-bw.de/,Lde/BP2016BW_ALLG_GYM_E1_IK_5-6_03_08 (ebenso 7-8, 9-10; Themen: …_01)
 - https://www.klett.de/inhalt/media_fast_path/145/Synopse_GL_2025_1_BW_BP2016_V2.pdf
 - https://www.jpc.de/jpcng/books/detail/-/art/access-baden-wuerttemberg-g9-ausgabe-2025-band-1-5-schuljahr/hnum/12254163
+
+## G9-Prüfung (14.11.2026, interaktive Sitzung)
+- **Bildungsplan Gymnasium Englisch 1. FS V3.0 vom 23.03.2026**, in Kraft 1.8.2026, gilt für alle, die 2026/27 in Kl. 5, 6 oder 7 eintreten. Kl. 8–12 lernen 2026/27 weiter nach G8 (V1/V2). Aufwuchs: 2027/28 bis Kl. 8 usw. (Quelle: bildungsplaene-bw.de/32504784, FAQ bildungsplaene-bw.de/33092937).
+- Laut KM-FAQ ist G9 überwiegend eine **Dehnung** des Bildungsplans 2016, keine Neugestaltung.
+- Lesehilfe 5/6 (2025): aus dem Standardraum 5/6 fallen u. a. **reported speech without backshift** und **prop word „one“** heraus → bereits in 0.16 umgesetzt (`repsimple` Kl. 7). Weitere Grammatik unserer Themen ist nicht betroffen.
+- Unsere Grundzuordnung (Kl. 7: adv, if1, pastprog, perfpast, rel, repsimple; Kl. 8: passive, reported, if2, pastperf …) passt zu G9-Kl. 7 (A2+). Da die Klassen 8–10 2026/27 noch G8 lernen, bleibt die Zuordnung für 8–10 unverändert.
+- **Offen (manuell):** Fachplan-PDF V3.0 öffnen und prüfen, ob der Standardraum 7/8 im G9 auf 7/8/9 gestreckt ist. Falls ja, ab Schuljahr 2027/28 Kl. 8-Grammatik (if2, passive, pastperf, reported) teilweise nach Kl. 9 verschieben – über einen eigenen Plan `bwg9` (Codes neu, alte Codes bleiben gültig).

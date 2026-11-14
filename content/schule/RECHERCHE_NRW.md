@@ -24,3 +24,9 @@ Quellen:
 - Gesamtschule (KLP 2004, Ende 6/8/10; G- und E-Kurs): Ende 6 u. a. simple past, present perfect, will, going to; Ende 8 G-Kurs: present/past, Modalverben, Aktiv, Relativsätze, Vergleich, if I – E-Kurs zusätzlich past perfect, Passiv, if I und II; Ende 10 G-Kurs (teils rezeptiv): past perfect, if II, indirekte Rede, Passiv, Gerundium – E-Kurs: weitere Zukunftsformen, Modal-Ersatzformen, indirekte Rede, if II und III. https://lehrplannavigator.nrw.de/system/files/media/document/file/gs_englisch.pdf
 - Sekundarschule: wie Gesamtschule (G-/E-Kurs). Hauptschule (KLP 2022): Grundkurs-Zuordnung.
 - Umsetzung: Plan „nwrs“ (Realschule, E-Kurs; Codes R) und „nwg“ (G-Kurs, Hauptschule; Codes U), `NIV_PLAN` für nw-ge/nw-sek (ek/gk). Abschluss-Training (BW) gilt nicht für NRW (ZP 10 hat anderes Format) – später.
+
+## Gegenprüfung 14.11.2026 (interaktive Sitzung)
+- Das KLP-PDF (schulentwicklung.nrw.de) leitet weiterhin auf qua-lis.nrw.de um und ist nicht automatisch abrufbar. Der KLP nennt Grammatik ohnehin nur je Stufe (Ende Erprobungsstufe / erste Stufe / Ende Sek I), nicht je Klasse.
+- Abgleich mit einem zweiten, unabhängigen schulinternen Lehrplan (Bert-Brecht-Gymnasium, G9, 2024): Kl. 6 present perfect, will vs. going to, if I ✓ (NW_TOPICS: 6); Kl. 7 passive (simple present/past, present perfect), past progressive, present perfect progressive ✓ (NW_TOPICS: 7). Gerund/Infinitiv dort Kl. 7/8 → bei uns 8 (passt).
+- Ergebnis: NW_TOPICS bleibt. Keine Änderung nötig.
+- TH, ST, RP, SH, HH, SL, HB: Lehrpläne beschreiben Grammatik funktional (Ende Doppeljahrgangsstufe) → eine genauere Klassen-Zuordnung als die Grundzuordnung lässt sich aus den Originalen nicht ableiten; Annahmen bleiben dokumentiert. Verbesserung nur über Rückmeldungen („Fehler melden“) aus diesen Ländern.
