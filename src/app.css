@@ -366,3 +366,11 @@ body.in-play .seo-about { display: none; }
 .rv-buddy svg { flex: 0 0 auto; border-radius: 14px; }
 .rv-bubble { position: relative; flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 8px 12px; }
 .rv-bubble::before { content: ""; position: absolute; left: -7px; top: 50%; width: 12px; height: 12px; background: var(--surface); border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); transform: translateY(-50%) rotate(45deg); }
+
+/* 0.35: Eltern-Bereich */
+.pa-days { display: grid; grid-template-columns: repeat(14, 1fr); gap: 4px; }
+.pa-day { display: block; aspect-ratio: 1; border-radius: 4px; background: var(--line); }
+.pa-day.on { background: var(--t-green); }
+.pa-tab { width: 100%; border-collapse: collapse; }
+.pa-tab th, .pa-tab td { padding: 6px 4px; text-align: right; border-bottom: 1px solid var(--line); }
+.pa-tab th[scope=row], .pa-tab tr > th:first-child { text-align: left; }

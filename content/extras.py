@@ -282,6 +282,8 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.36', '2026-11-14', ['Englisch erst seit Klasse 6? Im Schulbereich kannst du jetzt „Englisch seit Klasse 6 (2. Fremdsprache)“ wählen – dann passen Themen und Grammatik zu deinem Jahr.']),
+  ('0.35', '2026-11-14', ['Neu unter „Ich“: der Eltern-Bereich mit PIN. Eltern sehen, wann und wie viel geübt wurde, welche Wörter knifflig sind, und können das Wochenziel und den KI-Chat einstellen.']),
   ('0.34', '2026-11-14', ['Zwei neue Schul-Pakete passend zum neuen Bildungsplan: „Wohlbefinden und Stress“ (Klasse 8) und „Rechte, Pflichten und Rollenbilder“ (Klasse 10) – mit Wörtern, Sätzen und einer Szene.']),
   ('0.33', '2026-11-14', ['Der Prüf-Link für Leute mit Englisch als Muttersprache (unter Ich → Englisch gegenlesen lassen) ist jetzt ganz auf Englisch und enthält alle Inhalte – auch Grammatik und Schul-Pakete.']),
   ('0.32', '2026-11-14', ['Neues Design: Überall begleitet dich jetzt Rabe Rufus statt des alten Zwergs, und dein eigener Rabe begrüßt dich auf der Startseite.', 'Deine Postkarten haben jetzt einen Luftpost-Rand, eine Briefmarke und einen Poststempel.']),

@@ -30560,6 +30560,20 @@
  ],
  "news": [
   {
+   "v": "0.36",
+   "date": "2026-11-14",
+   "de": [
+    "Englisch erst seit Klasse 6? Im Schulbereich kannst du jetzt „Englisch seit Klasse 6 (2. Fremdsprache)“ wählen – dann passen Themen und Grammatik zu deinem Jahr."
+   ]
+  },
+  {
+   "v": "0.35",
+   "date": "2026-11-14",
+   "de": [
+    "Neu unter „Ich“: der Eltern-Bereich mit PIN. Eltern sehen, wann und wie viel geübt wurde, welche Wörter knifflig sind, und können das Wochenziel und den KI-Chat einstellen."
+   ]
+  },
+  {
    "v": "0.34",
    "date": "2026-11-14",
    "de": [
@@ -31642,7 +31656,8 @@
    "he": "555657686668a899a9556779aaaa98a|555656665676667878888989555567966997a",
    "by": "555556776687aa9a985568799a8a98a|5555666656766777897788995555598669958",
    "sek1e": "555666777888a9aaaa55689999aa98a|5556666657877788899aaaaa555566888a9aa",
-   "sek1g": "555666777888a9aaaa55680999aa88a|555676765907778aaaaa00a055556799000aa"
+   "sek1g": "555666777888a9aaaa55680999aa88a|555676765907778aaaaa00a055556799000aa",
+   "e2": "666777888999aaaaaa66789aaaaaa9a|6667777768888899999aaaaa666678999a9aa"
   },
   "niveaus": {
    "bw-rs": [

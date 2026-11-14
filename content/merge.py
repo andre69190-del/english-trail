@@ -138,6 +138,9 @@ assert set(school.HE_PACKS) == _ids and set(school.HE_TOPICS) == set(grammar.TOP
 assert set(school.BY_PACKS) == _ids and set(school.BY_TOPICS) == set(grammar.TOPICS), 'BY_* unvollständig'
 assert set(school.NW_TOPICS) == set(grammar.TOPICS), ('NW_TOPICS unvollständig', set(grammar.TOPICS) ^ set(school.NW_TOPICS))
 
+# 14.11.2026 (0.36): Englisch als 2. Fremdsprache ab Klasse 6 (Gymnasium, z. B. Saarland, BW Rheinschiene) – Grundzuordnung um 1 Klasse verschoben, höchstens 10
+D['school']['plans']['e2'] = {'p': {k['id']: min(10, k['grade'] + 1) for k in school.PACKS},
+                              't': {g: min(10, kk + 1) for g, (n, kk) in grammar.TOPICS.items()}}
 # 14.11.2026: Pläne kompakt – je Plan ein String "<Pakete>|<Themen>", ein Zeichen je Eintrag (0 = nicht vorgesehen, 5–9, a = 10),
 # Reihenfolge D.school.pOrd bzw. Schlüssel von D.school.topics. Entpackt in PSCore.schPlanObj.
 def _pc(v):

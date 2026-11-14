@@ -711,3 +711,9 @@ test('Neue G9-Pakete s8wel und s10rig: angehängt, in allen Plänen', () => {
   Object.keys(DATA.school.plans).forEach(p => { const P = DATA.school.plans[p]; if (p !== 'sek1g' && p !== 'nwg') { assert.ok(P.p.s8wel && P.p.s10rig, p); } });
   const w = DATA.units.find(u => u.id === 's8wel'); assert.equal(w.words.length, 16); assert.equal(w.scene.steps.length, 3);
 });
+
+test('Englisch ab Klasse 6 (Plan e2): Grundzuordnung +1, Codes mit Z', () => {
+  const P = C.schPlanObj(DATA, 'e2'); assert.equal(P.t.pres, 6); assert.equal(P.t.if1, 8); assert.equal(P.t.passive3, 10); assert.equal(P.p.s5sch, 6); assert.equal(P.p.s10gen, 10);
+  assert.equal(C.schLoOf(7, 'e2'), 6); assert.equal(C.schHiOf(7, 'e2'), 8); assert.equal(C.schLoOf(10, 'e2'), 9);
+  const code = C.hwCode(7, 1, 1, 'e2'); assert.match(code, /^HA7Z-/); assert.equal(C.hwParse(code).plan, 'e2'); assert.equal(C.duelParse('FOX-123-1-Z7').plan, 'e2');
+});

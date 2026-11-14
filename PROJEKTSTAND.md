@@ -382,3 +382,12 @@ Datenmodell (geplant, `src/data.json` → `school`):
 ## Release 0.34 (14.11.2026) – neue Schul-Pakete nach G9 BW V3.0 (interaktive Sitzung)
 - `s8wel` Feeling good / Wohlbefinden und Stress (Kl. 8; if I, when-Sätze, Szene mit Maya vor der Mathearbeit) und `s10rig` Rights and roles / Rechte, Pflichten und Rollenbilder (Kl. 10; Passiv, if III, Debatte Wahlalter 16 mit Mr Patel). Je 16 Wörter, 6 Sätze, Szene mit 3 Schritten. Angehängt (PACKS-Ende), in SEK1/NW/BY/HE/SN/MV-Plänen (Kl. 8/10), abgeleitete Pläne automatisch; progress_lock aktualisiert (81 Einheiten, 1429 Wörter).
 - Tests: Core 77, UI 231 OK.
+
+## Release 0.35 (14.11.2026) – Eltern-Bereich mit PIN (interaktive Sitzung)
+- Neuer Tab `parent` (Ich → Eltern-Bereich): PIN 4–6 Ziffern, gespeichert als Hash `S.parent.pin` (`parHash`), 3 Fehlversuche → 30 s Sperre. Inhalt: 14-Tage-Kalender aus `S.active`, Tabelle 4 Wochen (Tage/Ziel, XP, neue Wörter, richtig/falsch aus `S.wlog`), Wortschatz, knifflige Wörter, Schule (Klasse, Unit, beste Probe-Arbeit je Klasse).
+- Einstellungen: Wochenziel `S.goal`, KI-Chat erlauben (`S.parent.noChat` sperrt `startMode('chat')`), Bericht teilen, PIN ändern. „PIN vergessen“: Zurücksetzen mit Doppel-Tipp, danach dauerhafter Hinweis mit Datum (`S.parent.reset`).
+- Datenschutzerklärung ergänzt. Tests: Core 77, UI 238 OK.
+
+## Release 0.36 (14.11.2026) – Englisch ab Klasse 6 (interaktive Sitzung)
+- Schul-Einrichtung (nur Gymnasium): „Englisch seit Klasse 5 / Klasse 6 (2. Fremdsprache)“ → `S.school.e2`; `schPlan()` liefert dann Plan `e2` (in merge.py: Grundzuordnung +1 Klasse, max. 10; Standardräume 6–8 / 9–10). Klasse 5 dann nicht wählbar. Wechsel mit Warnung wie bisher, alte Werte (inkl. e2) werden beim Abbrechen wiederhergestellt.
+- Codes: Plan-Buchstabe **Z** (Duell, Hausaufgabe). Tests: Core 78, UI 240 OK.

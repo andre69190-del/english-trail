@@ -92,6 +92,8 @@
       can: 'Danach kannst du', tip: 'Kurz erklärt', words: 'Wortschatz', check: 'Prüfen', next: 'Weiter', skip: 'Überspringen', right: 'Richtig', wrong: 'Nicht ganz',
       solution: 'Lösung', almost_dia: 'Richtig, achte auf die Schreibweise', almost_typo: 'Fast, ein Tippfehler', listen_again: 'Nochmal hören', slow: 'Langsam',
       done: 'Fertig', score: 'Ergebnis', xp: 'XP', combo: 'Kombo', back: 'Zurück', home: 'Zur Karte', again: 'Nochmal', share: 'Ergebnis kopieren', copied: 'Kopiert',
+      pa_title: 'Eltern-Bereich', pa_entry_d: 'Überblick und Einstellungen – mit PIN geschützt', pa_open_btn: 'Öffnen', pa_setup_d: 'Lege eine PIN (4–6 Ziffern) fest. Damit sehen Eltern den Lernverlauf und können Einstellungen ändern. Alles bleibt auf diesem Gerät.', pa_new_d: 'Neue PIN festlegen.', pa_pin: 'PIN', pa_pin2: 'PIN wiederholen', pa_set: 'PIN speichern', pa_note: 'Die PIN schützt vor versehentlichen Änderungen. Sie wird nur verschlüsselt auf diesem Gerät gespeichert.', pa_bad_fmt: 'Bitte 4 bis 6 Ziffern eingeben.', pa_mismatch: 'Die beiden PINs sind nicht gleich.', pa_saved: 'PIN gespeichert.', pa_enter_d: 'Bitte die Eltern-PIN eingeben.', pa_open: 'Öffnen', pa_wrong: 'Falsche PIN.', pa_wait: 'Zu viele Versuche – bitte {s} Sekunden warten.', pa_forgot: 'PIN vergessen?', pa_forgot_d: 'Die PIN kann zurückgesetzt werden. Danach wird eine neue PIN festgelegt – im Eltern-Bereich steht dann dauerhaft, wann zurückgesetzt wurde.', pa_reset: 'PIN zurücksetzen', pa_reset_sure: 'Wirklich zurücksetzen? Nochmal tippen.', pa_was_reset: 'Hinweis: Die PIN wurde am {d} zurückgesetzt.', pa_act: 'Lernzeit', pa_days14: 'Die letzten 14 Tage (gefüllt = geübt)', pa_weeks_ago: 'vor {n} Wochen', pa_c_days: 'Tage/Ziel', pa_c_new: 'neue Wörter', pa_c_rw: 'richtig / falsch', pa_words: 'Wortschatz', pa_words_d: '{m} Wörter sicher gelernt · {s} Wörter schon geübt', pa_school: 'Schule', pa_set_t: 'Einstellungen', pa_goal: 'Wochenziel (Lerntage pro Woche)', pa_chat: 'KI-Chat erlauben', pa_chat_d: 'Der freie Chat nutzt eine KI auf dem Server (nur mit Konto). Ausgeschaltet ist der Chat für das Kind gesperrt.', pa_chat_off: 'Der Chat ist im Eltern-Bereich ausgeschaltet.', pa_chg: 'PIN ändern', pa_lock: 'Schließen',
+      sch_e2: 'Englisch seit', sch_e2_1: 'Klasse 5 (1. Fremdsprache)', sch_e2_2: 'Klasse 6 (2. Fremdsprache)', sch_e2_d: 'An manchen Gymnasien (z. B. im Saarland oder an der Rheinschiene) beginnt Englisch erst in Klasse 6. Dann kommen Themen und Grammatik ein Jahr später.',
       pc_stamp: 'Briefmarke', rvb_can: 'Du hast genug Federn – schalte etwas Neues für mich frei!', rvb_need: 'Noch {n} Federn, dann kannst du mir etwas Neues aussuchen.', rvb_all: 'Ich habe alles! Danke fürs fleißige Üben.', postcards: 'Postkarten', krasnale: 'Tower-Raben', krasnal_found: 'Du hast einen Raben gefunden', krasnal_hint: 'Die Raben aus dem Tower of London verstecken sich nach Übungen. Jeder bringt ein neues Wort mit.',
       postcard_new: 'Neue Postkarte', unlocked: 'Neue Stadt freigeschaltet', passed: 'Bestanden', failed: 'Diesmal nicht. Die Fehler kommen in dein Fehlerheft.',
       accent: 'Aussprache', accent_gb: 'Britisch', accent_us: 'Amerikanisch', accent_d: 'Gilt für Vorlesen und Spracherkennung. In der Schule in Baden-Württemberg ist Britisch üblich.',
@@ -512,6 +514,7 @@
     if (tab === 'practice') return renderPractice();
     if (tab === 'album') return renderAlbum();
     if (tab === 'raven') return renderRaven();
+    if (tab === 'parent') return renderParent();
     if (tab === 'grad') return renderGrad();
     if (tab === 'me') return renderMe();
     if (tab === 'land') return renderLand();
@@ -708,6 +711,64 @@
       (S.mistakes || []).length ? t('par_hard') + ' ' + S.mistakes.map(byId).filter(Boolean).slice(0, 5).map(function (x) { return x.w[0]; }).join(', ') : '',
       SITE];
     return lines.filter(Boolean).join('\n');
+  }
+  /* ---------- 0.35: Eltern-Bereich mit PIN (Idee aus GeoQuest) ----------
+     PIN nur als Hash (S.parent.pin), schützt vor versehentlichen Änderungen durch das Kind – kein Sicherheitsversprechen.
+     Zeigt die letzten 4 Wochen, Wörter, knifflige Wörter, Schul-Ergebnisse; Einstellungen: Wochenziel, KI-Chat erlauben. */
+  var PAR = { open: false, bad: 0, until: 0, step: '' };
+  function parHash(pin) { return 'h' + C.hash('english-trail-parent|' + pin); }
+  function parSt() { var p = S.parent = S.parent || {}; return p; }
+  function renderParent() {
+    var p = parSt(), back = '<button class="btn ghost" id="back" style="justify-self:start;padding-left:0">← ' + esc(t('back')) + '</button><h1>👪 ' + esc(t('pa_title')) + '</h1>', html = back;
+    if (!p.pin || PAR.step === 'new') {
+      html += '<section class="card stack"><p class="small">' + esc(t(p.pin ? 'pa_new_d' : 'pa_setup_d')) + '</p>' +
+        '<label class="fld">' + esc(t('pa_pin')) + '<input type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" id="pa-p1" autocomplete="new-password"></label>' +
+        '<label class="fld">' + esc(t('pa_pin2')) + '<input type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" id="pa-p2" autocomplete="new-password"></label>' +
+        '<button class="btn primary" id="pa-set" style="justify-self:start">' + esc(t('pa_set')) + '</button><p class="small muted" id="pa-msg" role="status"></p><p class="small muted">' + esc(t('pa_note')) + '</p></section>';
+    } else if (!PAR.open) {
+      var wait = Math.max(0, Math.ceil((PAR.until - Date.now()) / 1000));
+      html += '<section class="card stack"><p class="small">' + esc(t('pa_enter_d')) + '</p><label class="fld">' + esc(t('pa_pin')) + '<input type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" id="pa-in" autocomplete="current-password"' + (wait ? ' disabled' : '') + '></label>' +
+        '<button class="btn primary" id="pa-go" style="justify-self:start"' + (wait ? ' disabled' : '') + '>' + esc(t('pa_open')) + '</button><p class="small muted" id="pa-msg" role="status">' + (wait ? esc(t('pa_wait').replace('{s}', wait)) : '') + '</p>' +
+        '<details><summary class="small">' + esc(t('pa_forgot')) + '</summary><p class="small muted">' + esc(t('pa_forgot_d')) + '</p><button class="btn ghost" id="pa-reset">' + esc(t('pa_reset')) + '</button></details></section>';
+    } else {
+      var wk = C.weekKey(today()), rows = [], w = wk;
+      for (var i = 0; i < 4; i++) { var lg = (S.wlog || {})[w] || {}; rows.push('<tr><th scope="row" class="small">' + esc(i === 0 ? t('this_w') : i === 1 ? t('last_w') : t('pa_weeks_ago').replace('{n}', i)) + '</th><td class="num">' + C.daysInWeek(S.active, w) + '/' + S.goal + '</td><td class="num">' + ((S.weekXp || {})[w] || 0) + '</td><td class="num">' + (lg.n || 0) + '</td><td class="num">' + (lg.r || 0) + ' / ' + (lg.w || 0) + '</td></tr>'); w = C.prevWeek(w); }
+      var days = [], d = today(); for (var j = 13; j >= 0; j--) { var dd = C.addDays(d, -j); days.push('<i class="pa-day' + ((S.active || {})[dd] ? ' on' : '') + '" title="' + esc(dd) + '"></i>'); }
+      var hard = (S.mistakes || []).map(byId).filter(Boolean).slice(0, 10), sc = S.school || {}, best = S.schoolBest || {};
+      if (p.reset) html += '<div class="banner"><span>' + esc(t('pa_was_reset').replace('{d}', new Date(p.reset + 'T12:00').toLocaleDateString('de-DE'))) + '</span></div>';
+      html += '<section class="card stack"><h2>' + esc(t('pa_act')) + '</h2><div class="pa-days" aria-label="' + esc(t('pa_days14')) + '">' + days.join('') + '</div><p class="small muted">' + esc(t('pa_days14')) + '</p>' +
+        '<div style="overflow-x:auto"><table class="pa-tab small"><tr><th></th><th scope="col">' + esc(t('pa_c_days')) + '</th><th scope="col">XP</th><th scope="col">' + esc(t('pa_c_new')) + '</th><th scope="col">' + esc(t('pa_c_rw')) + '</th></tr>' + rows.join('') + '</table></div></section>' +
+        '<section class="card stack"><h2>' + esc(t('pa_words')) + '</h2><p class="small num">' + esc(t('pa_words_d').replace('{m}', masteredCount()).replace('{s}', Object.keys(S.cards || {}).length)) + '</p>' +
+        (hard.length ? '<p class="small"><b>' + esc(t('par_hard')) + '</b> ' + hard.map(function (x) { return '<span class="badge" lang="en">' + esc(x.w[0]) + '</span>'; }).join(' ') + '</p>' : '') + '</section>' +
+        (sc.grade ? '<section class="card stack"><h2>' + esc(t('pa_school')) + '</h2><p class="small">' + esc(t('sch_grade').replace('{g}', sc.grade)) + (sc.unit ? ' · ' + esc(sc.unit) : '') + '</p>' +
+          Object.keys(best).sort().map(function (g) { return '<p class="small num">' + esc(t('par_exam').replace('{p}', best[g]).replace('{m}', C.schoolMark(best[g]))) + ' (' + esc(t('sch_grade').replace('{g}', g)) + ')</p>'; }).join('') + '</section>' : '') +
+        '<section class="card stack"><h2>' + esc(t('pa_set_t')) + '</h2><b class="small">' + esc(t('pa_goal')) + '</b><div class="seg" id="pa-goal">' + [2, 3, 4, 5, 6, 7].map(function (n) { return segBtn(String(n), String(n), S.goal === n); }).join('') + '</div>' +
+        '<label class="row small" style="gap:8px;align-items:center"><input type="checkbox" id="pa-chat"' + (p.noChat ? '' : ' checked') + '> ' + esc(t('pa_chat')) + '</label><p class="small muted">' + esc(t('pa_chat_d')) + '</p>' +
+        '<div class="row" style="flex-wrap:wrap"><button class="btn" id="par-share2">' + esc(t('par_share')) + '</button><button class="btn ghost" id="pa-chg">' + esc(t('pa_chg')) + '</button><button class="btn ghost" id="pa-lock">🔒 ' + esc(t('pa_lock')) + '</button></div></section>';
+    }
+    shell(html);
+    document.getElementById('back').onclick = function () { PAR.open = false; PAR.step = ''; go('me'); };
+    var b, msg = function (m) { var e = document.getElementById('pa-msg'); if (e) e.textContent = m; };
+    if ((b = document.getElementById('pa-set'))) b.onclick = function () {
+      var a = document.getElementById('pa-p1').value.trim(), c = document.getElementById('pa-p2').value.trim();
+      if (!/^\d{4,6}$/.test(a)) return msg(t('pa_bad_fmt'));
+      if (a !== c) return msg(t('pa_mismatch'));
+      p.pin = parHash(a); PAR.open = true; PAR.step = ''; save(); toast(t('pa_saved')); renderParent();
+    };
+    var inp = document.getElementById('pa-in');
+    if (inp) { inp.focus(); inp.onkeydown = function (e) { e.stopPropagation(); if (e.key === 'Enter') document.getElementById('pa-go').click(); }; }
+    if ((b = document.getElementById('pa-go'))) b.onclick = function () {
+      if (parHash(inp.value.trim()) === p.pin) { PAR.open = true; PAR.bad = 0; renderParent(); return; }
+      PAR.bad++; inp.value = '';
+      if (PAR.bad >= 3) { PAR.until = Date.now() + 30000; PAR.bad = 0; renderParent(); setTimeout(function () { if (tab === 'parent') renderParent(); }, 30500); }
+      else msg(t('pa_wrong'));
+    };
+    if ((b = document.getElementById('pa-reset'))) b.onclick = function () { var rb = this; if (!rb.dataset.sure) { rb.dataset.sure = '1'; rb.textContent = t('pa_reset_sure'); return; } p.pin = null; p.reset = today(); PAR.open = false; save(); renderParent(); };
+    bindSeg('pa-goal', function (v) { S.goal = +v; save(); renderParent(); });
+    var ch = document.getElementById('pa-chat'); if (ch) ch.onchange = function () { p.noChat = !ch.checked; save(); };
+    if ((b = document.getElementById('par-share2'))) b.onclick = function () { shareOut(parentReport((S.school && S.school.grade) || '')); };
+    if ((b = document.getElementById('pa-chg'))) b.onclick = function () { PAR.step = 'new'; renderParent(); };
+    if ((b = document.getElementById('pa-lock'))) b.onclick = function () { PAR.open = false; go('me'); };
   }
   /* ---------- Was kann English Trail? Übersicht für Kinder und für Eltern & Lehrkräfte ---------- */
   function renderGuide(who) {
@@ -1221,7 +1282,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.34', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.36', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -1435,7 +1496,7 @@
     var html = '<h1>' + esc(t('nav_me')) + '</h1>' +
       '<section class="card stack"><div class="row" style="justify-content:space-between"><b>' + esc(t('level')) + ' ' + lv.level + '</b><span class="small muted num">' + lv.into + ' / ' + lv.need + ' ' + t('xp') + '</span></div><div class="bar amber"><i style="width:' + (lv.into / lv.need * 100) + '%"></i></div>' +
       '<div class="stats3"><div class="stat"><b class="num">' + masteredCount() + '</b><span class="small muted">' + esc(t('mastered')) + '</span></div><div class="stat"><b class="num">' + C.totalDays(S.active) + '</b><span class="small muted">' + esc(t('total_days')) + '</span></div><div class="stat"><b class="num">' + C.weekStreak(S.active, S.goal, today()) + '</b><span class="small muted">' + esc(t('wk_streak')) + '</span></div></div></section>' +
-      candoBox() + installBox() + syncBox() +
+      candoBox() + '<section class="card row" style="justify-content:space-between;align-items:center"><div class="stack" style="gap:2px"><b>👪 ' + esc(t('pa_title')) + '</b><span class="small muted">' + esc(t('pa_entry_d')) + '</span></div><button class="btn" id="pa-open">' + esc(t('pa_open_btn')) + '</button></section>' + installBox() + syncBox() +
       '<section class="card stack"><h2>' + esc(t('settings')) + '</h2>' +
       '<div class="stack"><b>' + esc(t('accent')) + '</b><div class="seg" id="s-acc">' + segBtn('gb', t('accent_gb'), S.accent !== 'us') + segBtn('us', t('accent_us'), S.accent === 'us') + '</div><p class="small muted">' + esc(t('accent_d')) + '</p></div>' +
       '<div class="stack"><b>' + esc(t('goal')) + '</b><div class="seg" id="s-goal">' + [2, 3, 4, 5, 7].map(function (n) { return segBtn(String(n), String(n), S.goal === n); }).join('') + '</div></div>' +
@@ -1456,6 +1517,7 @@
       '<section class="card stack"><h2>' + esc(t('rv_me')) + '</h2><p class="small">' + esc(t('rv_me_d')) + '</p><button class="btn" id="rv-link" style="justify-self:start">' + esc(t('rv_me_btn')) + '</button></section>' +
       '<section class="card stack"><h2>' + esc(t('about')) + '</h2><p class="small">' + esc(t('about_d')) + '</p><p class="small"><a href="impressum.html">' + esc(t('legal')) + '</a> · <a href="datenschutz.html">' + esc(t('privacy')) + '</a></p><button class="btn ghost" id="tour-again" style="justify-self:start;padding-left:0">' + esc(t('tour_again')) + '</button><p class="small muted">' + esc(t('rep_d')) + '</p>' + reportHtml('rep-me') + '<button class="btn" id="reset" style="justify-self:start;color:var(--bad)">' + esc(resetArmed ? t('reset_q') : t('reset')) + '</button></section>';
     shell(html);
+    var paO = document.getElementById('pa-open'); if (paO) paO.onclick = function () { go('parent'); };
     bindSeg('s-acc', function (v) { S.accent = v; pickVoice(); save(); renderMe(); });
     bindSeg('s-goal', function (v) { S.goal = +v; save(); renderMe(); });
     bindSeg('s-len', function (v) { S.len = +v; save(); renderMe(); });
@@ -1982,7 +2044,7 @@
   function schKeyOf(st, ty) { var sc = S.school || {}; return (st || sc.state || 'bw') + '-' + (ty || sc.type || 'gym'); }
   function schNivs(ty, st) { return ((D.school && D.school.niveaus) || {})[schKeyOf(st, ty)] || []; }
   function schNiv(ty, st) { var nv = schNivs(ty, st), cur = S.school && S.school.niv; return nv.length ? (nv.indexOf(cur) >= 0 ? cur : nv[0]) : ''; }
-  function schPlan(ty, st) { var k = schKeyOf(st, ty), p = ((D.school && D.school.planOf) || {})[k] || '', nv = schNiv(ty, st), np = ((D.school && D.school.nivPlan) || {})[k] || {}; return np[nv] || p; }
+  function schPlan(ty, st) { if ((ty || (S.school && S.school.type) || 'gym') === 'gym' && S.school && S.school.e2) return 'e2'; var k = schKeyOf(st, ty), p = ((D.school && D.school.planOf) || {})[k] || '', nv = schNiv(ty, st), np = ((D.school && D.school.nivPlan) || {})[k] || {}; return np[nv] || p; }
   function schCombos() { return (D.school && D.school.combos) || ['bw-gym']; }
   function schGrade(u, plan) { return C.schGradeOf(RAW, u, plan === undefined ? schPlan() : plan); }
   function topK(k, plan) { plan = plan === undefined ? schPlan() : plan; var T = (D.school && D.school.topics) || {}; if (!plan) return T[k] ? T[k].k : 0; var P = C.schPlanObj(D, plan); return (P && P.t && P.t[k]) || 0; }
@@ -2036,7 +2098,8 @@
       '<div class="stack"><b>' + esc(t('sch_type')) + '</b><div class="seg" id="sc-ty">' + SD.types.filter(function (x) { return schCombos().indexOf((sc.state || 'bw') + '-' + x.id) >= 0; }).map(function (x) { return segBtn(x.id, x.name, (sc.type || 'gym') === x.id); }).join('') + '</div>' +
       ((sc.state || 'bw') === 'bw' && /^sek1/.test(schPlan(sc.type)) ? '<p class="small muted">' + esc(t('sch_sek1_d')) + '</p>' : '') + '</div>' +
       (schNivs().length ? '<div class="stack"><b>' + esc(t('sch_niv')) + '</b><div class="seg" id="sc-nv">' + schNivs().map(function (n) { return segBtn(n, t('sch_niv_' + n), schNiv() === n); }).join('') + '</div><p class="small muted">' + esc(t('sch_niv_d')) + '</p></div>' : '') +
-      '<div class="stack"><b>' + esc(t('sch_class')) + '</b><div class="seg" id="sc-g">' + SD.grades.map(function (g) { return segBtn(String(g), String(g), sc.grade === g); }).join('') + '</div></div>' +
+      ((sc.type || 'gym') === 'gym' ? '<div class="stack"><b>' + esc(t('sch_e2')) + '</b><div class="seg" id="sc-e2">' + segBtn('1', t('sch_e2_1'), !sc.e2) + segBtn('2', t('sch_e2_2'), !!sc.e2) + '</div><p class="small muted">' + esc(t('sch_e2_d')) + '</p></div>' : '') +
+      '<div class="stack"><b>' + esc(t('sch_class')) + '</b><div class="seg" id="sc-g">' + SD.grades.filter(function (g) { return !(sc.e2 && (sc.type || 'gym') === 'gym' && g < 6); }).map(function (g) { return segBtn(String(g), String(g), sc.grade === g); }).join('') + '</div></div>' +
       '<label class="fld">' + esc(t('sch_book')) + '<select id="sc-bk"><option value="">' + esc(t('sch_book_none')) + '</option>' + SD.books.filter(function (b) { return bookOk(b); }).sort(function (a, b) { return (a.id === 'other') - (b.id === 'other'); }).map(function (b) { return '<option value="' + esc(b.id) + '"' + (sc.book === b.id ? ' selected' : '') + '>' + esc(b.name) + '</option>'; }).join('') + '</select></label>' +
       '<p class="small muted">' + esc(t('sch_book_d')) + '</p>' +
       '<div class="stack"><b>' + esc(t('sch_cu')) + '</b><div class="seg" id="sc-cu">' + SCH_UNITS.map(function (u) { return segBtn(u, u, (sc.unit || '') === u); }).join('') + '</div><p class="small muted">' + esc(t('sch_cu_d')) + '</p></div>' +
@@ -2051,27 +2114,28 @@
       var fixBook = function () { var b = D.school.books.filter(function (x) { return x.id === S.school.book; })[0]; if (b && !bookOk(b)) S.school.book = ''; };
       bindSeg('sc-ty', function (v) { st(); S.school.type = v; fixBook(); S.school.niv = schNiv(); SCH.edit = true; renderSchool(); });
       bindSeg('sc-nv', function (v) { st(); S.school.niv = v; SCH.edit = true; renderSchool(); });
+      bindSeg('sc-e2', function (v) { st(); S.school.e2 = v === '2'; if (S.school.e2 && S.school.grade === 5) S.school.grade = 0; SCH.edit = true; renderSchool(); });
       document.getElementById('sc-st').onchange = function () { st(); var c = schCombos(); if (c.indexOf(S.school.state + '-' + (S.school.type || 'gym')) < 0) S.school.type = (c.filter(function (k) { return k.split('-')[0] === S.school.state; })[0] || 'bw-gym').split('-')[1]; fixBook(); SCH.edit = true; renderSchool(); };
       bindSeg('sc-g', function (v) { st(); S.school.grade = +v; SCH.edit = true; renderSchool(); });
       bindSeg('sc-cu', function (v) { st(); S.school.unit = S.school.unit === v ? '' : v; SCH.edit = true; renderSchool(); });
       var fin = function () { if (!schoolReady()) return needSchool(fin); var first = !SCH.prev; SCH.edit = false; SCH.prev = null; SCH.confirm = false; if (first) SCH.offerCheck = true; save(); renderSchool(); };
       document.getElementById('sc-save').onclick = function () {
         st(); var pv = SCH.prev, tyName = function (id, stt) { var x = D.school.types.filter(function (y) { return y.id === (id || 'gym'); })[0], z = D.school.states.filter(function (y) { return y.id === (stt || 'bw'); })[0]; return (z ? z.name + ' · ' : '') + (x ? x.name : ''); }, bkName = function (id) { var b = D.school.books.filter(function (x) { return x.id === id; })[0]; return b ? b.name : t('sch_book_none'); };
-        if (pv && (pv.grade !== S.school.grade || pv.book !== (S.school.book || '') || (pv.type || 'gym') !== (S.school.type || 'gym') || (pv.state || 'bw') !== (S.school.state || 'bw') || (pv.niv || '') !== (schNiv() || ''))) {
+        if (pv && (pv.grade !== S.school.grade || pv.book !== (S.school.book || '') || (pv.type || 'gym') !== (S.school.type || 'gym') || (pv.state || 'bw') !== (S.school.state || 'bw') || (pv.niv || '') !== (schNiv() || '') || !!pv.e2 !== !!S.school.e2)) {
           var box = document.getElementById('sc-conf');
           if (!box) {
             document.getElementById('sc-save').insertAdjacentHTML('afterend', '<div class="card stack" id="sc-conf" role="alertdialog" style="border-color:var(--amber)"><b>⚠️ ' + esc(t('sch_conf_t')) + '</b>' +
               '<p class="small">' + esc(t('sch_conf_d').replace('{a}', tyName(pv.type, pv.state) + ' · ' + t('sch_grade').replace('{g}', pv.grade) + ' · ' + bkName(pv.book)).replace('{b}', tyName(S.school.type, S.school.state) + ' · ' + t('sch_grade').replace('{g}', S.school.grade) + ' · ' + bkName(S.school.book))) + '</p>' +
               '<p class="small muted">' + esc(t('sch_conf_keep')) + '</p><div class="row"><button class="btn primary" id="sc-conf-yes">' + esc(t('sch_conf_yes')) + '</button><button class="btn" id="sc-conf-no">' + esc(t('sch_conf_no')) + '</button></div></div>');
             document.getElementById('sc-conf-yes').onclick = fin;
-            document.getElementById('sc-conf-no').onclick = function () { S.school.grade = pv.grade; S.school.book = pv.book; S.school.type = pv.type || 'gym'; S.school.state = pv.state || 'bw'; S.school.niv = pv.niv || ''; SCH.edit = false; SCH.prev = null; save(); renderSchool(); };
+            document.getElementById('sc-conf-no').onclick = function () { S.school.grade = pv.grade; S.school.book = pv.book; S.school.type = pv.type || 'gym'; S.school.state = pv.state || 'bw'; S.school.e2 = !!pv.e2; S.school.niv = pv.niv || ''; SCH.edit = false; SCH.prev = null; save(); renderSchool(); };
           }
           return;
         }
         fin();
       };
-      document.getElementById('back').onclick = function () { var pv = SCH.prev; if (pv) { S.school.grade = pv.grade; S.school.book = pv.book; S.school.type = pv.type || 'gym'; S.school.state = pv.state || 'bw'; S.school.niv = pv.niv || ''; save(); } SCH.edit = false; SCH.prev = null; go('practice'); };
-      var cx = document.getElementById('sc-cancel'); if (cx) cx.onclick = function () { var pv = SCH.prev; if (pv) { S.school.grade = pv.grade; S.school.book = pv.book; S.school.type = pv.type || 'gym'; S.school.state = pv.state || 'bw'; S.school.niv = pv.niv || ''; } SCH.edit = false; SCH.prev = null; save(); renderSchool(); };
+      document.getElementById('back').onclick = function () { var pv = SCH.prev; if (pv) { S.school.grade = pv.grade; S.school.book = pv.book; S.school.type = pv.type || 'gym'; S.school.state = pv.state || 'bw'; S.school.e2 = !!pv.e2; S.school.niv = pv.niv || ''; save(); } SCH.edit = false; SCH.prev = null; go('practice'); };
+      var cx = document.getElementById('sc-cancel'); if (cx) cx.onclick = function () { var pv = SCH.prev; if (pv) { S.school.grade = pv.grade; S.school.book = pv.book; S.school.type = pv.type || 'gym'; S.school.state = pv.state || 'bw'; S.school.e2 = !!pv.e2; S.school.niv = pv.niv || ''; } SCH.edit = false; SCH.prev = null; save(); renderSchool(); };
       return;
     }
     var g = sc.grade, SD = D.school, nm = function (list, id) { var x = list.filter(function (y) { return y.id === id; })[0]; return x ? x.name : ''; };
@@ -2122,7 +2186,7 @@
     bindReport('rep-sch', 'school K' + g);
     document.getElementById('back').onclick = function () { go('practice'); };
     var gop = document.getElementById('grad-open'); if (gop) gop.onclick = function () { GR.part = ''; go('grad'); };
-    document.getElementById('sc-edit').onclick = function () { SCH.edit = true; SCH.prev = { grade: sc.grade, book: sc.book || '', type: sc.type || 'gym', state: sc.state || 'bw', niv: schNiv() }; renderSchool(); };
+    document.getElementById('sc-edit').onclick = function () { SCH.edit = true; SCH.prev = { grade: sc.grade, book: sc.book || '', type: sc.type || 'gym', state: sc.state || 'bw', niv: schNiv(), e2: !!sc.e2 }; renderSchool(); };
     bindLikes();
     document.querySelectorAll('[data-sp]').forEach(function (b) { b.onclick = function () { go('city', +b.getAttribute('data-sp')); }; });
     document.querySelectorAll('[data-sg]').forEach(function (b) { b.onclick = function () { SCH.topics = [b.getAttribute('data-sg')]; startMode('sgram'); }; });
@@ -2563,7 +2627,7 @@
     }
     if (mode === 'themes') { tab = 'themes'; return renderThemes(); }
     if (mode === 'exam') { go('exam'); return; }
-    if (mode === 'chat') { tab = 'chat'; view = null; polUI = false; return renderChat(ui != null ? ui : null); }
+    if (mode === 'chat') { if (S.parent && S.parent.noChat) { toast(t('pa_chat_off')); return; } tab = 'chat'; view = null; polUI = false; return renderChat(ui != null ? ui : null); }
     if (mode === 'themelearn' || mode === 'themeq') {
       var th = themeById(curTheme); if (!th) return go('themes');
       var tw = themeWords(th);

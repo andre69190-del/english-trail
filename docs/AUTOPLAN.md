@@ -40,9 +40,10 @@ Neue Ideen kommen unten in „Ideen-Speicher“, nicht mitten in die Liste.
 ## Ideen-Speicher (noch nicht eingeplant)
 - ✅ 0.16: Niveau G/M/E, Werkrealschule.
 - ✅ 0.17: Abschluss-Training Sek I BW (Kommunikationsprüfung a/b/c mit Note, schriftlich A–E). Nächste Ausbaustufe: Aufnahme/Spracherkennung bei der Präsentation, echte Lesetexte für Teil B.
-- Englisch als 2. Fremdsprache (Gymnasium, z. B. Rheinschiene). Oberstufe / berufliche Schulen.
+- Oberstufe / berufliche Schulen.
 - ✅ 14.11.2026 G9-Bildungsplan BW geprüft, auch mit dem vollständigen Fachplan V3.0 (von Andre): Standardräume 5/6, 7/8, 9/10, 11 – unsere Zuordnung passt, kein eigener G9-Plan nötig (Details content/schule/RECHERCHE_BW.md).
 - ✅ 0.34: Neue Pakete nach G9-Themen: s8wel „Wohlbefinden und Stress“ (Kl. 8) und s10rig „Rechte, Pflichten und Rollenbilder“ (Kl. 10), in allen Plänen.
-- Englisch als 2. Fremdsprache ab Kl. 6 (Saarland: oft Französisch 1. FS; BW Rheinschiene).
+- ✅ 0.36: Englisch als 2. Fremdsprache ab Kl. 6 (Gymnasium, Plan `e2` = Grundzuordnung +1, Codes mit Z).
 - ✅ 0.30: Sprechprüfung mit Aufnahme + Checkliste (Präsentation, Sprachmittlung), optionale Mitschrift mit Wörtern/Minute und Redemitteln.
-- Eltern-Ansicht mit PIN (wie GeoQuest), Klassen-Rangliste über Codes.
+- ✅ 0.35: Eltern-Bereich mit PIN (Lernzeit 14 Tage + 4 Wochen, Wörter, knifflige Wörter, Schule, Wochenziel, KI-Chat erlauben, PIN-Reset sichtbar vermerkt).
+- Klassen-Rangliste über Codes.
