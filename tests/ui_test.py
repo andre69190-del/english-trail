@@ -445,7 +445,7 @@ with sync_playwright() as p:
     (ok if not sp.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['bw-gym']); }") else bad)('Ohne Schule: Schulpakete werden nicht geladen')
     sp.click('#ob-why [data-v="school"]'); sp.click('#ob-go'); sp.wait_for_selector('#sc-st', state='attached')
     (ok if sp.evaluate("() => { const R = window.PSApp.raw(); return !!(R.schoolHave && R.schoolHave['bw-gym']); }") else bad)('Schule gewählt: Pakete für BW-Gymnasium nachgeladen')
-    (ok if sp.locator('#sc-st option[value="sl"][disabled]').count() == 1 else bad)('Schule: andere Bundesländer noch gesperrt (bald)')
+    (ok if sp.locator('#sc-st option[disabled]').count() == 0 and sp.locator('#sc-st option').count() == 16 else bad)('Schule: alle 16 Bundesländer wählbar (0.29)')
     sp.click('#sc-g [data-v="7"]'); sp.select_option('#sc-bk', 'gl25'); sp.click('#sc-cu [data-v="Unit 2"]'); sp.click('#sc-save'); sp.wait_for_selector('#sc-exam')
     (ok if 'aktuell im buch' in sp.inner_text('main').lower() and sp.evaluate("() => window.PSApp.state().school.unit") == 'Unit 2' else bad)('Schule: aktuelle Unit im Buch wählbar (Unit 2)')
     (ok if sp.locator('#cu-photo.primary #cu-ph-in[capture]').count() == 1 else bad)('Schule: Kamera-Knopf groß (primär) und öffnet direkt die Kamera, solange die Unit leer ist')
@@ -707,6 +707,16 @@ with sync_playwright() as p:
     np_.click('#sc-ty [data-v="gym"]'); np_.wait_for_timeout(100); np_.click('#sc-g [data-v="7"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
     tmv = np_.inner_text('main')
     (ok if 'mecklenburg' in tmv.lower() and '-M7' in tmv and np_.locator('[data-sg="passive"]').count() and np_.locator('[data-sg="if3"]').count() == 0 else bad)('MV Gymnasium Kl. 7: Passiv schon dran, if III noch nicht, Code mit M')
+    # 0.29: Saarland, Bremen
+    np_.click('#sc-edit'); np_.select_option('#sc-st', 'sl'); np_.wait_for_timeout(150)
+    tys = np_.evaluate("() => [...document.querySelectorAll('#sc-ty [data-v]')].map(b => b.getAttribute('data-v'))")
+    (ok if set(tys) == set(['gym', 'gms']) else bad)('Saarland: Gymnasium, Gemeinschaftsschule (%s)' % ','.join(tys))
+    np_.select_option('#sc-st', 'hb'); np_.wait_for_timeout(150)
+    tys = np_.evaluate("() => [...document.querySelectorAll('#sc-ty [data-v]')].map(b => b.getAttribute('data-v'))")
+    (ok if set(tys) == set(['gym', 'obs']) else bad)('Bremen: Gymnasium, Oberschule (%s)' % ','.join(tys))
+    np_.click('#sc-ty [data-v="obs"]'); np_.wait_for_selector('#sc-nv [data-v="gr"]'); np_.click('#sc-nv [data-v="gr"]'); np_.click('#sc-g [data-v="8"]'); np_.click('#sc-save'); np_.wait_for_selector('#sc-conf'); np_.click('#sc-conf-yes'); np_.wait_for_selector('#sc-exam')
+    thb = np_.inner_text('main')
+    (ok if 'bremen' in thb.lower() and 'oberschule' in thb.lower() and '-G8' in thb else bad)('Bremen Oberschule grundlegend Kl. 8: Code mit G')
     nx.close()
 
     # ---------- English Trail: Live-Duell (2 Seiten, WebSocket durch BroadcastChannel ersetzt) ----------

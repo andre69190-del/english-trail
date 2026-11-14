@@ -348,3 +348,9 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Neue Prüfung in `checks/content_check.py`: keine polnischen Buchstaben in data.json, allen data-*.json und app.js (ohne Kommentare; Prüfmodus `RVX` ausgenommen bis AUTOPLAN 12).
 - index.html 830 → 774 KB. Tests: Core 73, UI 212 OK (2×), alle Checks grün.
 - Offen: AUTOPLAN 12 (Prüfmodus `?review` auf Englisch umbauen), core.js enthält noch polnische Hilfsfunktionen (Zahlwörter, misspell) – ungenutzt, getestet, unschädlich.
+
+## Release 0.29 (14.11.2026) – Saarland und Bremen, alle 16 Bundesländer (interaktive Sitzung)
+- STATES hb/sl an; COMBOS sl-gym, sl-gms (Niveaus er/gr/ob: Erweiterungs-/Grund-/Aufbauebene → sek1/sek1g/sek1e), hb-gym, hb-obs (erweitert/grundlegend/gymnasial → sek1/sek1g/sek1e). Gymnasien → Grundzuordnung (**Annahme**, Saarland-G9-PDFs nicht automatisch abrufbar).
+- Lehrwerke wie TH/ST/MV (Gym: Access/Green Line/Camden Town; Sek I: Red Line, Orange Line, Lighthouse, Highlight, Camden Market).
+- Notiz `content/schule/RECHERCHE_SL_HB.md` (u. a. Saarland: oft Französisch 1. FS → Idee „Englisch ab Klasse 6“). SEO `englisch-saarland-bremen.html` (Dockerfile, Sitemap, Footer, shell).
+- Tests: Core 74, UI 215 OK.

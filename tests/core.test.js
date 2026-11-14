@@ -681,3 +681,10 @@ test('Thüringen, Sachsen-Anhalt, MV: Schularten und Plan mv', () => {
   assert.equal(C.schLoOf(7, 'mv'), 7); assert.equal(C.schHiOf(7, 'mv'), 7); assert.equal(C.schLoOf(6, 'mv'), 5);
   const code = C.hwCode(7, 1, 1, 'mv'); assert.match(code, /^HA7M-/); assert.equal(C.hwParse(code).plan, 'mv');
 });
+
+test('Saarland und Bremen: alle Bundesländer an', () => {
+  const S = DATA.school; assert.ok(S.states.every(x => x.on), 'alle 16 Länder freigeschaltet');
+  ['sl-gym', 'sl-gms', 'hb-gym', 'hb-obs'].forEach(k => { assert.ok(S.combos.includes(k), k); assert.ok(S.books.filter(b => (b.k || []).includes(k)).length >= 2, 'Lehrwerke ' + k); });
+  assert.equal(S.planOf['sl-gms'], 'sek1'); assert.equal(S.nivPlan['hb-obs'].gr, 'sek1g'); assert.equal(S.nivPlan['sl-gms'].ob, 'sek1e');
+  assert.deepEqual(S.niveaus['hb-obs'], ['er', 'gr', 'ob']);
+});

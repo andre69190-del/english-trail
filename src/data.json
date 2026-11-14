@@ -30100,6 +30100,13 @@
  ],
  "news": [
   {
+   "v": "0.29",
+   "date": "2026-11-14",
+   "de": [
+    "Jetzt sind alle 16 Bundesländer dabei: neu sind das Saarland (Gymnasium, Gemeinschaftsschule) und Bremen (Gymnasium, Oberschule) – mit Niveau-Auswahl."
+   ]
+  },
+  {
    "v": "0.28",
    "date": "2026-11-14",
    "de": [
@@ -30361,7 +30368,7 @@
    {
     "id": "hb",
     "name": "Bremen",
-    "on": 0
+    "on": 1
    },
    {
     "id": "hh",
@@ -30396,7 +30403,7 @@
    {
     "id": "sl",
     "name": "Saarland",
-    "on": 0
+    "on": 1
    },
    {
     "id": "sn",
@@ -30532,7 +30539,11 @@
    "st-gms",
    "mv-gym",
    "mv-reg",
-   "mv-ge"
+   "mv-ge",
+   "sl-gym",
+   "sl-gms",
+   "hb-gym",
+   "hb-obs"
   ],
   "planOf": {
    "bw-rs": "sek1",
@@ -30560,7 +30571,9 @@
    "st-gms": "sek1",
    "mv-gym": "mv",
    "mv-reg": "sek1",
-   "mv-ge": "sek1"
+   "mv-ge": "sek1",
+   "sl-gms": "sek1",
+   "hb-obs": "sek1"
   },
   "grades": [
    5,
@@ -30663,7 +30676,9 @@
      "hh-gym",
      "th-gym",
      "st-gym",
-     "mv-gym"
+     "mv-gym",
+     "sl-gym",
+     "hb-gym"
     ]
    },
    {
@@ -30680,7 +30695,9 @@
      "hh-gym",
      "th-gym",
      "st-gym",
-     "mv-gym"
+     "mv-gym",
+     "sl-gym",
+     "hb-gym"
     ]
    },
    {
@@ -30697,7 +30714,9 @@
      "hh-gym",
      "th-gym",
      "st-gym",
-     "mv-gym"
+     "mv-gym",
+     "sl-gym",
+     "hb-gym"
     ]
    },
    {
@@ -30739,7 +30758,9 @@
      "st-sek",
      "st-gms",
      "mv-reg",
-     "mv-ge"
+     "mv-ge",
+     "sl-gms",
+     "hb-obs"
     ]
    },
    {
@@ -30755,7 +30776,9 @@
      "st-sek",
      "st-gms",
      "mv-reg",
-     "mv-ge"
+     "mv-ge",
+     "sl-gms",
+     "hb-obs"
     ]
    },
    {
@@ -30775,7 +30798,9 @@
      "st-sek",
      "st-gms",
      "mv-reg",
-     "mv-ge"
+     "mv-ge",
+     "sl-gms",
+     "hb-obs"
     ]
    },
    {
@@ -30795,7 +30820,9 @@
      "st-sek",
      "st-gms",
      "mv-reg",
-     "mv-ge"
+     "mv-ge",
+     "sl-gms",
+     "hb-obs"
     ]
    },
    {
@@ -30816,7 +30843,9 @@
      "st-sek",
      "st-gms",
      "mv-reg",
-     "mv-ge"
+     "mv-ge",
+     "sl-gms",
+     "hb-obs"
     ]
    },
    {
@@ -31120,6 +31149,16 @@
    "mv-ge": [
     "ek",
     "gk"
+   ],
+   "sl-gms": [
+    "er",
+    "gr",
+    "ob"
+   ],
+   "hb-obs": [
+    "er",
+    "gr",
+    "ob"
    ]
   },
   "nivPlan": {
@@ -31180,6 +31219,14 @@
    },
    "mv-ge": {
     "gk": "sek1g"
+   },
+   "sl-gms": {
+    "gr": "sek1g",
+    "ob": "sek1e"
+   },
+   "hb-obs": {
+    "gr": "sek1g",
+    "ob": "sek1e"
    }
   },
   "pOrd": [
