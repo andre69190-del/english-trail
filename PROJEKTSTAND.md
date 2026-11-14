@@ -411,3 +411,4 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - `schGradeOf` ohne Plan (Gymnasium BW) blendet Berufs-Pakete aus; Oberstufen-Injektion in merge.py lässt sie aus. Probe-Prüfung heißt „wie KMK-Fremdsprachenzertifikat“, Hinweistext zu Ausbildungsjahren und Prüfungsteilen.
 - SEO-Seite `englisch-berufsschule.html`, Link auf der Startseite. progress_lock aktualisiert (96 Einheiten, 1669 Wörter). Tests: Core 81, UI 260 OK.
 - ⚠️ index.html jetzt 810 KB bei Budget 820 KB → vor weiteren Inhalten Schul-Pakete (Oberstufe/Beruf) in eine nachgeladene Datei auslagern (wie data-school-*.json).
+- Nachtrag: Dockerfile kopierte SEO-Seiten einzeln → neue Seiten (Oberstufe, Berufsschule) gaben 404. Jetzt `COPY … englisch-*.html` (alle SEO-Seiten automatisch).
