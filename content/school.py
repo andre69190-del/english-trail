@@ -89,6 +89,7 @@ SEK1_PACKS = {
   's7rol': 8, 's8tow': 8, 's8usa': 8, 's8env': 8, 's9job': 8,
   's8his': 9, 's9aus': 9, 's9tec': 9, 's10sus': 9, 's9ind': 9,
   's9vol': 10, 's9gap': 10, 's10gen': 10, 's10ide': 10, 's10med': 10, 's10can': 10, 's10saf': 10,
+  's8wel': 8, 's10rig': 10,
 }
 # Grammatik-Thema → Klasse (Niveau M). None = im M-Niveau nicht vorgesehen (nur E) → wird nicht angezeigt.
 SEK1_TOPICS = {
@@ -122,6 +123,7 @@ NW_PACKS = {
   's8usa': 8, 's8env': 8, 's7rol': 8, 's10can': 8,
   's9aus': 9, 's9job': 9, 's10sus': 9, 's9ind': 9, 's10ide': 9,
   's9vol': 10, 's9gap': 10, 's10gen': 10, 's10med': 10, 's9tec': 10, 's10saf': 10,
+  's8wel': 8, 's10rig': 10,
 }
 NW_TOPICS = {
   'pres': 5, 'prog': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5,
@@ -142,6 +144,7 @@ BY_PACKS = {
   's10can': 8, 's7rol': 8, 's8env': 8, 's10ide': 8,
   's9aus': 9, 's9job': 9, 's10sus': 9, 's9gap': 9, 's10med': 9,
   's9vol': 10, 's9tec': 10, 's9ind': 10, 's10gen': 10, 's10saf': 10,
+  's8wel': 8, 's10rig': 10,
 }
 BY_TOPICS = {
   'pres': 5, 'prog': 5, 'can': 5, 'haveto': 5, 'quant': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5, 'past': 5, 'advorder': 5,
@@ -159,6 +162,7 @@ HE_PACKS = {
   's8usa': 8, 's7med': 8, 's9tec': 8,
   's9job': 9, 's10gen': 9, 's10ide': 9, 's9aus': 9, 's9gap': 9,
   's9vol': 10, 's10saf': 10, 's10med': 10, 's10sus': 10, 's9ind': 10, 's10can': 10,
+  's8wel': 8, 's10rig': 10,
 }
 HE_TOPICS = {
   'pres': 5, 'prog': 5, 'goingto': 5, 'can': 5, 'quant': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5,
@@ -209,6 +213,7 @@ SN_PACKS = {
   's7med': 8, 's8tow': 8, 's10can': 8, 's7spo': 8, 's9ind': 8,
   's9job': 9, 's9gap': 9, 's9vol': 9, 's9aus': 9, 's10ide': 9,
   's10med': 10, 's10saf': 10, 's10gen': 10, 's9tec': 10, 's10sus': 10,
+  's8wel': 8, 's10rig': 10,
 }
 SN_TOPICS = {
   'pres': 5, 'prog': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5, 'quant': 5, 'haveto': 5,
@@ -230,6 +235,7 @@ MV_PACKS = {
   's8usa': 8, 's8env': 8, 's8his': 8,
   's9aus': 9, 's9ind': 9, 's10can': 9, 's9vol': 9, 's9gap': 9, 's9job': 9, 's9tec': 9,
   's10gen': 10, 's10med': 10, 's10ide': 10, 's10sus': 10, 's10saf': 10,
+  's8wel': 8, 's10rig': 10,
 }
 MV_TOPICS = {
   'pres': 5, 'prog': 5, 'can': 5, 'poss': 5, 'gen': 5, 'qw': 5, 'freq': 5, 'quant': 5,
@@ -1354,6 +1360,83 @@ customer | Kunde/Kundin""",
                          opts=[("Of course – here you are. Can I help you with anything else?", 'Natürlich – bitte sehr. Kann ich Ihnen sonst noch helfen?', 1), ('Map is there. Go.', 'Karte ist da. Geh.', 0)],
                          hint='Höflich: „Here you are“ und Hilfe anbieten.')],
              outro='Die Managerin lächelt: „Well done – you are a natural!“ Dein erster Tag läuft super.'))
+
+# 14.11.2026 (0.34): neue Pakete nach den G9-Themen BW V3.0 (mental well-being 7/8; concept of gender, Rechte und Pflichten 9/10) – nur angehängt
+K(id='s8wel', grade=8, ico='💚', name='Feeling good', title='Wohlbefinden und Stress',
+  can='Ich kann über Stress und Gefühle sprechen und Freunden Tipps geben.',
+  tip='Tipps gibst du mit if-Sätzen (Typ I) und „when“: „If you take a break, you will feel better.“',
+  fact='In Großbritannien gibt es jedes Jahr im Mai die „Mental Health Awareness Week“ – viele Schulen sprechen dann besonders über Wohlbefinden.',
+  words="""stress | Stress
+stressed | gestresst
+nervous | nervös
+worried | besorgt
+to relax | sich entspannen
+to calm down | sich beruhigen
+to take a break | eine Pause machen
+to talk to someone | mit jemandem reden
+to trust | vertrauen
+to support | unterstützen
+healthy | gesund
+enough sleep | genug Schlaf
+exercise | Bewegung
+screen time | Bildschirmzeit
+mood | Stimmung / Laune
+to feel better | sich besser fühlen""",
+  sentences=[('When I feel stressed, I go for a walk.', 'Wenn ich gestresst bin, gehe ich spazieren.'),
+             ('If you are worried, talk to someone you trust.', 'Wenn du dir Sorgen machst, rede mit jemandem, dem du vertraust.'),
+             ("I usually feel better after a good night's sleep.", 'Nach einer guten Nacht fühle ich mich meistens besser.'),
+             ('She takes a short break so that she can relax.', 'Sie macht eine kurze Pause, damit sie sich entspannen kann.'),
+             ('Too much screen time can put you in a bad mood.', 'Zu viel Bildschirmzeit kann dir schlechte Laune machen.'),
+             ('Friends support each other when things are difficult.', 'Freunde unterstützen sich gegenseitig, wenn es schwierig ist.')],
+  scene=dict(intro='Am Abend schickt dir deine Freundin Maya aus Manchester eine Sprachnachricht. Morgen schreibt ihre Klasse eine Mathearbeit.',
+             steps=[dict(npc=("I can't sleep. I'm so nervous about the maths test!", 'Ich kann nicht schlafen. Ich bin so nervös wegen der Mathearbeit!'),
+                         opts=[("That's normal. Shall we revise together tomorrow morning?", 'Das ist normal. Sollen wir morgen früh zusammen lernen?', 1), ('Nervous is you. Sleep not.', 'Nervös bist du. Schlaf nicht.', 0)],
+                         hint='Verständnis zeigen und etwas vorschlagen: „Shall we …?“'),
+                    dict(npc=('Yes, please. But what if I fail?', 'Ja, gern. Aber was, wenn ich es nicht schaffe?'),
+                         opts=[("If you prepare well, you'll be fine.", 'Wenn du dich gut vorbereitest, schaffst du das.', 1), ('If you will prepare well, you are fine.', 'Wenn du dich gut vorbereiten wirst, bist du gut.', 0)],
+                         hint='if-Satz Typ I: if + present, will + Grundform.'),
+                    dict(npc=("Thanks. What do you do when you're stressed?", 'Danke. Was machst du, wenn du gestresst bist?'),
+                         opts=[('I go for a run or listen to music, and I talk to my mum.', 'Ich gehe laufen oder höre Musik, und ich rede mit meiner Mama.', 1), ('I am go run and music.', 'Ich bin gehen laufen und Musik.', 0)],
+                         hint='Gewohnheiten: simple present.')],
+             outro='Maya schickt dir ein Smiley: „You’re a good friend. See you tomorrow!“'))
+
+K(id='s10rig', grade=10, ico='⚖️', name='Rights and roles', title='Rechte, Pflichten und Rollenbilder',
+  can='Ich kann über Rechte, Pflichten und Rollenbilder diskutieren und meine Meinung begründen.',
+  tip='Diskutieren: „In my opinion …“, „I see your point, but …“, „To sum up …“. Regeln oft im Passiv: „You are allowed to …“',
+  fact='In Deutschland darf man bei der Europawahl seit 2024 schon ab 16 wählen, bei der Bundestagswahl erst ab 18.',
+  words="""right | Recht
+responsibility | Verantwortung / Pflicht
+equal | gleich / gleichberechtigt
+equality | Gleichberechtigung
+to vote | wählen
+law | Gesetz
+to be allowed to | dürfen
+adult | Erwachsene(r)
+gender | Geschlecht (gesellschaftlich)
+stereotype | Klischee / Stereotyp
+to expect | erwarten
+fair | fair / gerecht
+to make decisions | Entscheidungen treffen
+independent | unabhängig
+to speak up | sich zu Wort melden
+opinion | Meinung""",
+  sentences=[('In Germany, you are allowed to vote in national elections when you are 18.', 'In Deutschland darfst du bei der Bundestagswahl mit 18 wählen.'),
+             ('Women and men should be paid the same for the same job.', 'Frauen und Männer sollten für die gleiche Arbeit gleich bezahlt werden.'),
+             ('Girls are often expected to be quiet – that is a stereotype.', 'Von Mädchen wird oft erwartet, dass sie leise sind – das ist ein Klischee.'),
+             ('With more rights, young people also have more responsibility.', 'Mit mehr Rechten haben junge Leute auch mehr Verantwortung.'),
+             ("If she hadn't spoken up, nothing would have changed.", 'Wenn sie sich nicht zu Wort gemeldet hätte, hätte sich nichts geändert.'),
+             ('Everyone should be treated fairly, whatever their gender.', 'Alle sollten fair behandelt werden, egal welches Geschlecht sie haben.')],
+  scene=dict(intro='Englischunterricht in Leeds: Die Klasse diskutiert, ob 16-Jährige wählen dürfen sollen. Dein Lehrer Mr Patel leitet die Debatte.',
+             steps=[dict(npc=('Should 16-year-olds be allowed to vote? What do you think?', 'Sollten 16-Jährige wählen dürfen? Was meinst du?'),
+                         opts=[('In my opinion, they should, because the decisions affect their future.', 'Meiner Meinung nach ja, weil die Entscheidungen ihre Zukunft betreffen.', 1), ('In my opinion they should because of they future.', 'Meiner Meinung nach sollten sie wegen sie Zukunft.', 0)],
+                         hint='Meinung + Begründung: „In my opinion …, because …“'),
+                    dict(npc=('But some people say teenagers are not mature enough.', 'Aber manche sagen, Jugendliche seien nicht reif genug.'),
+                         opts=[('I see your point, but many teenagers are well informed.', 'Ich verstehe dein Argument, aber viele Jugendliche sind gut informiert.', 1), ('No. That is a stupid idea and you are wrong.', 'Nein. Das ist eine dumme Idee und du liegst falsch.', 0)],
+                         hint='Höflich widersprechen: „I see your point, but …“'),
+                    dict(npc=('Good. Can you sum up your argument?', 'Gut. Kannst du dein Argument zusammenfassen?'),
+                         opts=[('To sum up, young people should have a say because they will live with the results.', 'Zusammengefasst: Junge Leute sollten mitreden, weil sie mit den Folgen leben werden.', 1), ('To sum up, I have nothing to say.', 'Zusammengefasst habe ich nichts zu sagen.', 0)],
+                         hint='Schluss: „To sum up, …“')],
+             outro='Mr Patel: „Excellent arguments on both sides!“ Die Klasse stimmt ab – es wird knapp.'))
 
 # Rheinland-Pfalz: Themen-Zuordnung wie Grundzuordnung (Gymnasium)
 RP_PACKS = {k['id']: k['grade'] for k in PACKS}

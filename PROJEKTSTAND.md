@@ -372,3 +372,13 @@ Datenmodell (geplant, `src/data.json` → `school`):
 - Postkarten: Luftpost-Rand (CSS-Streifen), Briefmarke mit `u.ico`/✉ und „1st“, Poststempel „ENGLISH TRAIL · STADT“; vorher stand „PL“ auf der Marke.
 - Startseite: `ravenBuddy()` zwischen Hero und Brief – eigener Rabe (ravenSvg 52) mit Sprechblase (Federn bis zum nächsten Teil / kann freischalten / alles), öffnet „Mein Rabe“, Zurück → Startseite.
 - Screenshots hell/dunkel geprüft. Tests: Core 76, UI 229 OK.
+
+## Release 0.33 (14.11.2026) – Prüfmodus englisch (AUTOPLAN 12, interaktive Sitzung)
+- `?review`: RVX komplett englisch, neue Abschnittsnamen, Grammatik-/Zeitform-Aufgaben zeigen die falschen Optionen (✗ …) zur Kontrolle, falsche Szenen-Optionen mit englischem Hinweis. Boot lädt `needSchool(…, 'bw-gym')` → Schul-Pakete enthalten. Polnisch-Abschnitt entfernt.
+- content_check: Ausnahme für RVX entfernt (ganze app.js ohne polnische Buchstaben, Kommentare ausgenommen).
+- G9 BW mit Fachplan V3.0 (Text von Andre) geprüft → Zuordnung passt; Themen-Lücken notiert (well-being, gender/Rechte).
+- Tests: Core 76, UI 233 OK.
+
+## Release 0.34 (14.11.2026) – neue Schul-Pakete nach G9 BW V3.0 (interaktive Sitzung)
+- `s8wel` Feeling good / Wohlbefinden und Stress (Kl. 8; if I, when-Sätze, Szene mit Maya vor der Mathearbeit) und `s10rig` Rights and roles / Rechte, Pflichten und Rollenbilder (Kl. 10; Passiv, if III, Debatte Wahlalter 16 mit Mr Patel). Je 16 Wörter, 6 Sätze, Szene mit 3 Schritten. Angehängt (PACKS-Ende), in SEK1/NW/BY/HE/SN/MV-Plänen (Kl. 8/10), abgeleitete Pläne automatisch; progress_lock aktualisiert (81 Einheiten, 1429 Wörter).
+- Tests: Core 77, UI 231 OK.

@@ -1221,7 +1221,7 @@
     addXp(first ? 150 : 40); markActive(); save(); toast('+' + (first ? 150 : 40) + ' XP');
   }
   /* ---------- Fehler melden (Vorschlag J): Text + Übungs-Kontext in public.ps_feedback, sonst per Mail ---------- */
-  var APP_VER = '0.32', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
+  var APP_VER = '0.34', SITE = 'https://english.arndt-software.de/', FB_MAIL = 'farndt691@gmail.com';
   function reportHtml(id) {
     return '<details class="report" id="' + id + '"><summary class="small">⚑ ' + esc(t('rep')) + '</summary><div class="stack" style="margin-top:8px">' +
       '<p class="small muted">' + esc(t('rep_pick')) + '</p><div class="seg">' + ['rep_c1', 'rep_c2', 'rep_c3', 'rep_c4', 'rep_c5'].map(function (k) { return '<button type="button" class="chip" data-rc="' + k + '" aria-pressed="false">' + esc(t(k)) + '</button>'; }).join('') + '</div>' +
@@ -3662,13 +3662,14 @@
 
   /* ---------- Start ---------- */
   /* ================================================================
-     Prüfmodus für Muttersprachler (3.0): english.arndt-software.de/?review
-     Alle polnischen Inhalte nacheinander: ✓ poprawne / ✗ do poprawy (+ Vorschlag). Ergebnisse gehen in ps_feedback,
+     Prüfmodus für Muttersprachler (3.0, englisch seit 0.33): english.arndt-software.de/?review
+     Alle englischen Inhalte nacheinander: ✓ correct / ✗ needs a fix (+ Vorschlag). Ergebnisse gehen in et_feedback,
      ✓ gesammelt in Paketen, ✗ sofort. Fortschritt bleibt im Browser (localStorage english_trail_review).
      ================================================================ */
   var REVIEW = /[?&]review\b/.test(location.search), RVK = 'english_trail_review', RV = null, rvSec = 'new', rvCur = null, rvBad = false;
-  var RVX = { title: 'Sprawdzanie treści', intro: 'Dziękujemy za pomoc! Sprawdź, czy polskie zdania są poprawne i naturalne, a tłumaczenia pasują. Formy w nawiasach {…|…} pokazujemy jako wersję męską i żeńską.', name: 'Twoje imię (opcjonalnie)', all: 'Wszystko', newer: 'Najpierw: Szlak 2, 3 i pakiety', ok: '✓ Poprawne', bad: '✗ Do poprawy', skip: 'Pomiń', how: 'Jak powinno być? Co jest nie tak?', send: 'Wyślij uwagę', done: 'Gotowe! Wszystko w tej części sprawdzone.', prog: 'sprawdzone', sent: 'Wysłano', pend: 'czeka na wysłanie', flush: 'Wyślij teraz', export: 'Wyniki jako tekst (kopia zapasowa)', copy: 'Kopiuj', fail: 'Brak połączenia – wyniki są zapisane i zostaną wysłane później.', back: 'Do aplikacji', listen: 'Odsłuchaj', undo: 'Cofnij ostatnie',
-    secs: { rd: 'Książka (Szlak 3)', w: 'Słówka', s: 'Zdania', sc: 'Scenki', l: 'List i pocztówki', m: 'Misje', c: 'Przypadki', a: 'Aspekt', v: 'Czasowniki', t: 'Łamańce językowe', k: 'Krasnale', p: 'Dla Polaków' } };
+  /* 0.33 (AUTOPLAN 12): Prüfmodus für englische Muttersprachler – Oberfläche Englisch, alle englischen Inhalte inkl. Schul-Pakete */
+  var RVX = { title: 'Content check', intro: 'Thank you for helping! Please check whether each English text is correct and sounds natural (British English, for German pupils aged 10–16). The German line is only there for context. Forms in {…|…} are shown as a male and a female version.', name: 'Your name (optional)', all: 'Everything', newer: 'Start here: Trail 2, 3 and topic/school packs', ok: '✓ Correct', bad: '✗ Needs a fix', skip: 'Skip', how: 'What should it say? What is wrong?', send: 'Send note', done: 'Done! Everything in this part has been checked.', prog: 'checked', sent: 'Sent', pend: 'waiting to be sent', flush: 'Send now', export: 'Results as text (backup)', copy: 'Copy', fail: 'No connection – your results are saved and will be sent later.', back: 'Back to the app', listen: 'Listen', undo: 'Undo last', wrong: '(wrong option on purpose – must be correct English, but must not fit the situation)', gap: 'answer',
+    secs: { rd: 'Book (Trail 3)', w: 'Words', s: 'Sentences', sc: 'Scenes', l: 'Letter and diary', m: 'Missions', c: 'Grammar exercises', a: 'Tense choice', v: 'Irregular verbs', t: 'Tongue twisters', k: 'Ravens' } };
   function rvLoad() { try { RV = JSON.parse(localStorage.getItem(RVK) || 'null'); } catch (e) {} if (!RV || typeof RV !== 'object') RV = { name: '', res: {}, pend: [], hist: [] }; RV.res = RV.res || {}; RV.pend = RV.pend || []; RV.hist = RV.hist || []; }
   function rvSave() { try { localStorage.setItem(RVK, JSON.stringify(RV)); } catch (e) {} }
   function rvShow(s) { return C.hasG(s) ? C.gform(s, 'm') + '  ·  ' + C.gform(s, 'f') : String(s); }
@@ -3685,7 +3686,7 @@
       }
       if (u.scene) u.scene.steps.forEach(function (st, si) {
         add('sc:' + u.id + ':' + si + ':n', 'sc', st.npc[0], st.npc[1], st.npc[2], u.city + ' · NPC');
-        st.opts.forEach(function (o, oi) { add('sc:' + u.id + ':' + si + ':' + oi, 'sc', o[0], o[1], o[2], u.city + (o[3] ? ' · ✓' : ' · (zła odpowiedź – ma być poprawna polszczyzna, ale nie pasuje do sytuacji)')); });
+        st.opts.forEach(function (o, oi) { add('sc:' + u.id + ':' + si + ':' + oi, 'sc', o[0], o[1], o[2], u.city + (o[3] ? ' · ✓' : ' · ' + RVX.wrong)); });
       });
     });
     rvR = 1;
@@ -3693,12 +3694,11 @@
     rvR = 2;
     Object.keys(R0.missions || {}).forEach(function (k) { add('m:' + k, 'm', R0.missions[k].pl, R0.missions[k].d[0], R0.missions[k].d[1]); });
     rvR = 1;
-    (R0.cases || []).forEach(function (c, i) { add('c:' + i, 'c', c.s.replace('___', c.a), c.tr[0], c.tr[1], c.base + ' → ' + c.a + ' · ' + c.case[0]); });
-    (R0.aspects || []).forEach(function (c, i) { add('a:' + i, 'a', c.s.replace('___', c.a), c.tr[0], c.tr[1], c.base + ' → ' + c.a); });
+    (R0.cases || []).forEach(function (c, i) { add('c:' + i, 'c', c.s.replace('___', c.a), c.tr[0], c.tr[1], c.base + ' → ' + c.a + ' · ' + c.case[1] + ' · ✗ ' + c.opts.filter(function (o) { return o !== c.a; }).join(' / ')); });
+    (R0.aspects || []).forEach(function (c, i) { add('a:' + i, 'a', c.s.replace('___', c.a), c.tr[0], c.tr[1], c.base + ' → ' + c.a + ' · ✗ ' + c.opts.filter(function (o) { return o !== c.a; }).join(' / ')); });
     (R0.verbs || []).forEach(function (v) { add('v:' + v.inf, 'v', v.inf + ' – ' + v.past + ' – ' + v.pp, v.de, v.en); });
     (R0.twisters || []).forEach(function (x, i) { add('t:' + i, 't', x[0], x[1], x[2]); });
     (R0.krasnale || []).forEach(function (x, i) { add('k:' + i, 'k', x[0] + ' – ' + x[1], x[2], x[3]); });
-    Object.keys(R0.polacy || {}).forEach(function (c) { R0.polacy[c].forEach(function (x, i) { add('p:' + c + ':' + i, 'p', (x.s ? x.s.replace('___', x.a) + '  —  ' : '') + x.q + ' → ' + x.a, '', '', 'Źle: ' + x.o.join(' / ') + (x.x ? ' · ' + x.x : '')); }); });
     return it;
   }
   function rvSend(msg, ctx) { return sbFetch('/rest/v1/et_feedback', { method: 'POST', prefer: 'return=minimal', body: { msg: String(msg).slice(0, 1000), ctx: String(ctx).slice(0, 500), lang: S.base === 'en' ? 'en' : 'de', ver: APP_VER } }); } /* Tabelle erlaubt nur de/en; „review“ steht im ctx */
@@ -3753,7 +3753,7 @@
   if (REVIEW) document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden' && RV && RV.pend.length) rvFlush().catch(function () {}); });
 
   function boot() {
-    if (REVIEW) { needS3(function () { renderReview(); }); renderReview(); if (!RAW.polacy && RAW.polacyLazy) needPolacy(function () { renderReview(); }); return; }
+    if (REVIEW) { needS3(function () { renderReview(); }); renderReview(); needSchool(function () { renderReview(); }, true, 'bw-gym'); return; }
     startSafety(); sbFromHash(); wsFromHash(); if (S.vsrc) needAV();
     /* Erst zeichnen, wenn Szlak 2/3 da sind (aus dem Cache: Millisekunden) – spätestens nach 1,2 s; kommt es später, Startseite neu zeichnen */
     var first = false;

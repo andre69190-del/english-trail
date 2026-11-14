@@ -705,3 +705,9 @@ test('Weitere Schularten BY, NI, HE, SN', () => {
   assert.ok(S.types.find(x => x.id === 'ms'), 'Mittelschule'); assert.equal(S.types[S.types.length - 1].id, 'ms', 'Schularten nur angehängt');
   assert.equal(S.planOf['ni-hs'], 'sek1g'); assert.equal(S.nivPlan['by-ms'].hsa, 'sek1g'); assert.deepEqual(S.niveaus['sn-obs'], ['rsa', 'hsa']);
 });
+
+test('Neue G9-Pakete s8wel und s10rig: angehängt, in allen Plänen', () => {
+  const ids = DATA.units.filter(u => u.sch).map(u => u.id); assert.deepEqual(ids.slice(-2), ['s8wel', 's10rig']);
+  Object.keys(DATA.school.plans).forEach(p => { const P = DATA.school.plans[p]; if (p !== 'sek1g' && p !== 'nwg') { assert.ok(P.p.s8wel && P.p.s10rig, p); } });
+  const w = DATA.units.find(u => u.id === 's8wel'); assert.equal(w.words.length, 16); assert.equal(w.scene.steps.length, 3);
+});

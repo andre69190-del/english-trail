@@ -18026,6 +18026,464 @@
    "ico": "💼"
   },
   {
+   "id": "s8wel",
+   "city": "Feeling good",
+   "cityDe": "Klasse 8: Wohlbefinden und Stress",
+   "cityEn": "Feeling good",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Wohlbefinden und Stress",
+    "Wohlbefinden und Stress"
+   ],
+   "can": [
+    "Ich kann über Stress und Gefühle sprechen und Freunden Tipps geben.",
+    "Ich kann über Stress und Gefühle sprechen und Freunden Tipps geben."
+   ],
+   "tip": [
+    "Tipps gibst du mit if-Sätzen (Typ I) und „when“: „If you take a break, you will feel better.“",
+    "Tipps gibst du mit if-Sätzen (Typ I) und „when“: „If you take a break, you will feel better.“"
+   ],
+   "fact": [
+    "In Großbritannien gibt es jedes Jahr im Mai die „Mental Health Awareness Week“ – viele Schulen sprechen dann besonders über Wohlbefinden.",
+    "In Großbritannien gibt es jedes Jahr im Mai die „Mental Health Awareness Week“ – viele Schulen sprechen dann besonders über Wohlbefinden."
+   ],
+   "words": [
+    [
+     "stress",
+     "Stress",
+     "Stress"
+    ],
+    [
+     "stressed",
+     "gestresst",
+     "gestresst"
+    ],
+    [
+     "nervous",
+     "nervös",
+     "nervös"
+    ],
+    [
+     "worried",
+     "besorgt",
+     "besorgt"
+    ],
+    [
+     "to relax",
+     "sich entspannen",
+     "sich entspannen"
+    ],
+    [
+     "to calm down",
+     "sich beruhigen",
+     "sich beruhigen"
+    ],
+    [
+     "to take a break",
+     "eine Pause machen",
+     "eine Pause machen"
+    ],
+    [
+     "to talk to someone",
+     "mit jemandem reden",
+     "mit jemandem reden"
+    ],
+    [
+     "to trust",
+     "vertrauen",
+     "vertrauen"
+    ],
+    [
+     "to support",
+     "unterstützen",
+     "unterstützen"
+    ],
+    [
+     "healthy",
+     "gesund",
+     "gesund"
+    ],
+    [
+     "enough sleep",
+     "genug Schlaf",
+     "genug Schlaf"
+    ],
+    [
+     "exercise",
+     "Bewegung",
+     "Bewegung"
+    ],
+    [
+     "screen time",
+     "Bildschirmzeit",
+     "Bildschirmzeit"
+    ],
+    [
+     "mood",
+     "Stimmung / Laune",
+     "Stimmung / Laune"
+    ],
+    [
+     "to feel better",
+     "sich besser fühlen",
+     "sich besser fühlen"
+    ]
+   ],
+   "sentences": [
+    [
+     "When I feel stressed, I go for a walk.",
+     "Wenn ich gestresst bin, gehe ich spazieren.",
+     "Wenn ich gestresst bin, gehe ich spazieren."
+    ],
+    [
+     "If you are worried, talk to someone you trust.",
+     "Wenn du dir Sorgen machst, rede mit jemandem, dem du vertraust.",
+     "Wenn du dir Sorgen machst, rede mit jemandem, dem du vertraust."
+    ],
+    [
+     "I usually feel better after a good night's sleep.",
+     "Nach einer guten Nacht fühle ich mich meistens besser.",
+     "Nach einer guten Nacht fühle ich mich meistens besser."
+    ],
+    [
+     "She takes a short break so that she can relax.",
+     "Sie macht eine kurze Pause, damit sie sich entspannen kann.",
+     "Sie macht eine kurze Pause, damit sie sich entspannen kann."
+    ],
+    [
+     "Too much screen time can put you in a bad mood.",
+     "Zu viel Bildschirmzeit kann dir schlechte Laune machen.",
+     "Zu viel Bildschirmzeit kann dir schlechte Laune machen."
+    ],
+    [
+     "Friends support each other when things are difficult.",
+     "Freunde unterstützen sich gegenseitig, wenn es schwierig ist.",
+     "Freunde unterstützen sich gegenseitig, wenn es schwierig ist."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Am Abend schickt dir deine Freundin Maya aus Manchester eine Sprachnachricht. Morgen schreibt ihre Klasse eine Mathearbeit.",
+     "Am Abend schickt dir deine Freundin Maya aus Manchester eine Sprachnachricht. Morgen schreibt ihre Klasse eine Mathearbeit."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "I can't sleep. I'm so nervous about the maths test!",
+       "Ich kann nicht schlafen. Ich bin so nervös wegen der Mathearbeit!",
+       "Ich kann nicht schlafen. Ich bin so nervös wegen der Mathearbeit!"
+      ],
+      "opts": [
+       [
+        "That's normal. Shall we revise together tomorrow morning?",
+        "Das ist normal. Sollen wir morgen früh zusammen lernen?",
+        "Das ist normal. Sollen wir morgen früh zusammen lernen?",
+        1
+       ],
+       [
+        "Nervous is you. Sleep not.",
+        "Nervös bist du. Schlaf nicht.",
+        "Nervös bist du. Schlaf nicht.",
+        0
+       ]
+      ],
+      "hint": [
+       "Verständnis zeigen und etwas vorschlagen: „Shall we …?“",
+       "Verständnis zeigen und etwas vorschlagen: „Shall we …?“"
+      ]
+     },
+     {
+      "npc": [
+       "Yes, please. But what if I fail?",
+       "Ja, gern. Aber was, wenn ich es nicht schaffe?",
+       "Ja, gern. Aber was, wenn ich es nicht schaffe?"
+      ],
+      "opts": [
+       [
+        "If you prepare well, you'll be fine.",
+        "Wenn du dich gut vorbereitest, schaffst du das.",
+        "Wenn du dich gut vorbereitest, schaffst du das.",
+        1
+       ],
+       [
+        "If you will prepare well, you are fine.",
+        "Wenn du dich gut vorbereiten wirst, bist du gut.",
+        "Wenn du dich gut vorbereiten wirst, bist du gut.",
+        0
+       ]
+      ],
+      "hint": [
+       "if-Satz Typ I: if + present, will + Grundform.",
+       "if-Satz Typ I: if + present, will + Grundform."
+      ]
+     },
+     {
+      "npc": [
+       "Thanks. What do you do when you're stressed?",
+       "Danke. Was machst du, wenn du gestresst bist?",
+       "Danke. Was machst du, wenn du gestresst bist?"
+      ],
+      "opts": [
+       [
+        "I go for a run or listen to music, and I talk to my mum.",
+        "Ich gehe laufen oder höre Musik, und ich rede mit meiner Mama.",
+        "Ich gehe laufen oder höre Musik, und ich rede mit meiner Mama.",
+        1
+       ],
+       [
+        "I am go run and music.",
+        "Ich bin gehen laufen und Musik.",
+        "Ich bin gehen laufen und Musik.",
+        0
+       ]
+      ],
+      "hint": [
+       "Gewohnheiten: simple present.",
+       "Gewohnheiten: simple present."
+      ]
+     }
+    ],
+    "outro": [
+     "Maya schickt dir ein Smiley: „You’re a good friend. See you tomorrow!“",
+     "Maya schickt dir ein Smiley: „You’re a good friend. See you tomorrow!“"
+    ]
+   },
+   "pack": 1,
+   "sch": 8,
+   "ico": "💚"
+  },
+  {
+   "id": "s10rig",
+   "city": "Rights and roles",
+   "cityDe": "Klasse 10: Rechte, Pflichten und Rollenbilder",
+   "cityEn": "Rights and roles",
+   "lon": -0.13,
+   "lat": 51.51,
+   "trail": "blue",
+   "title": [
+    "Rechte, Pflichten und Rollenbilder",
+    "Rechte, Pflichten und Rollenbilder"
+   ],
+   "can": [
+    "Ich kann über Rechte, Pflichten und Rollenbilder diskutieren und meine Meinung begründen.",
+    "Ich kann über Rechte, Pflichten und Rollenbilder diskutieren und meine Meinung begründen."
+   ],
+   "tip": [
+    "Diskutieren: „In my opinion …“, „I see your point, but …“, „To sum up …“. Regeln oft im Passiv: „You are allowed to …“",
+    "Diskutieren: „In my opinion …“, „I see your point, but …“, „To sum up …“. Regeln oft im Passiv: „You are allowed to …“"
+   ],
+   "fact": [
+    "In Deutschland darf man bei der Europawahl seit 2024 schon ab 16 wählen, bei der Bundestagswahl erst ab 18.",
+    "In Deutschland darf man bei der Europawahl seit 2024 schon ab 16 wählen, bei der Bundestagswahl erst ab 18."
+   ],
+   "words": [
+    [
+     "right",
+     "Recht",
+     "Recht"
+    ],
+    [
+     "responsibility",
+     "Verantwortung / Pflicht",
+     "Verantwortung / Pflicht"
+    ],
+    [
+     "equal",
+     "gleich / gleichberechtigt",
+     "gleich / gleichberechtigt"
+    ],
+    [
+     "equality",
+     "Gleichberechtigung",
+     "Gleichberechtigung"
+    ],
+    [
+     "to vote",
+     "wählen",
+     "wählen"
+    ],
+    [
+     "law",
+     "Gesetz",
+     "Gesetz"
+    ],
+    [
+     "to be allowed to",
+     "dürfen",
+     "dürfen"
+    ],
+    [
+     "adult",
+     "Erwachsene(r)",
+     "Erwachsene(r)"
+    ],
+    [
+     "gender",
+     "Geschlecht (gesellschaftlich)",
+     "Geschlecht (gesellschaftlich)"
+    ],
+    [
+     "stereotype",
+     "Klischee / Stereotyp",
+     "Klischee / Stereotyp"
+    ],
+    [
+     "to expect",
+     "erwarten",
+     "erwarten"
+    ],
+    [
+     "fair",
+     "fair / gerecht",
+     "fair / gerecht"
+    ],
+    [
+     "to make decisions",
+     "Entscheidungen treffen",
+     "Entscheidungen treffen"
+    ],
+    [
+     "independent",
+     "unabhängig",
+     "unabhängig"
+    ],
+    [
+     "to speak up",
+     "sich zu Wort melden",
+     "sich zu Wort melden"
+    ],
+    [
+     "opinion",
+     "Meinung",
+     "Meinung"
+    ]
+   ],
+   "sentences": [
+    [
+     "In Germany, you are allowed to vote in national elections when you are 18.",
+     "In Deutschland darfst du bei der Bundestagswahl mit 18 wählen.",
+     "In Deutschland darfst du bei der Bundestagswahl mit 18 wählen."
+    ],
+    [
+     "Women and men should be paid the same for the same job.",
+     "Frauen und Männer sollten für die gleiche Arbeit gleich bezahlt werden.",
+     "Frauen und Männer sollten für die gleiche Arbeit gleich bezahlt werden."
+    ],
+    [
+     "Girls are often expected to be quiet – that is a stereotype.",
+     "Von Mädchen wird oft erwartet, dass sie leise sind – das ist ein Klischee.",
+     "Von Mädchen wird oft erwartet, dass sie leise sind – das ist ein Klischee."
+    ],
+    [
+     "With more rights, young people also have more responsibility.",
+     "Mit mehr Rechten haben junge Leute auch mehr Verantwortung.",
+     "Mit mehr Rechten haben junge Leute auch mehr Verantwortung."
+    ],
+    [
+     "If she hadn't spoken up, nothing would have changed.",
+     "Wenn sie sich nicht zu Wort gemeldet hätte, hätte sich nichts geändert.",
+     "Wenn sie sich nicht zu Wort gemeldet hätte, hätte sich nichts geändert."
+    ],
+    [
+     "Everyone should be treated fairly, whatever their gender.",
+     "Alle sollten fair behandelt werden, egal welches Geschlecht sie haben.",
+     "Alle sollten fair behandelt werden, egal welches Geschlecht sie haben."
+    ]
+   ],
+   "scene": {
+    "intro": [
+     "Englischunterricht in Leeds: Die Klasse diskutiert, ob 16-Jährige wählen dürfen sollen. Dein Lehrer Mr Patel leitet die Debatte.",
+     "Englischunterricht in Leeds: Die Klasse diskutiert, ob 16-Jährige wählen dürfen sollen. Dein Lehrer Mr Patel leitet die Debatte."
+    ],
+    "steps": [
+     {
+      "npc": [
+       "Should 16-year-olds be allowed to vote? What do you think?",
+       "Sollten 16-Jährige wählen dürfen? Was meinst du?",
+       "Sollten 16-Jährige wählen dürfen? Was meinst du?"
+      ],
+      "opts": [
+       [
+        "In my opinion, they should, because the decisions affect their future.",
+        "Meiner Meinung nach ja, weil die Entscheidungen ihre Zukunft betreffen.",
+        "Meiner Meinung nach ja, weil die Entscheidungen ihre Zukunft betreffen.",
+        1
+       ],
+       [
+        "In my opinion they should because of they future.",
+        "Meiner Meinung nach sollten sie wegen sie Zukunft.",
+        "Meiner Meinung nach sollten sie wegen sie Zukunft.",
+        0
+       ]
+      ],
+      "hint": [
+       "Meinung + Begründung: „In my opinion …, because …“",
+       "Meinung + Begründung: „In my opinion …, because …“"
+      ]
+     },
+     {
+      "npc": [
+       "But some people say teenagers are not mature enough.",
+       "Aber manche sagen, Jugendliche seien nicht reif genug.",
+       "Aber manche sagen, Jugendliche seien nicht reif genug."
+      ],
+      "opts": [
+       [
+        "I see your point, but many teenagers are well informed.",
+        "Ich verstehe dein Argument, aber viele Jugendliche sind gut informiert.",
+        "Ich verstehe dein Argument, aber viele Jugendliche sind gut informiert.",
+        1
+       ],
+       [
+        "No. That is a stupid idea and you are wrong.",
+        "Nein. Das ist eine dumme Idee und du liegst falsch.",
+        "Nein. Das ist eine dumme Idee und du liegst falsch.",
+        0
+       ]
+      ],
+      "hint": [
+       "Höflich widersprechen: „I see your point, but …“",
+       "Höflich widersprechen: „I see your point, but …“"
+      ]
+     },
+     {
+      "npc": [
+       "Good. Can you sum up your argument?",
+       "Gut. Kannst du dein Argument zusammenfassen?",
+       "Gut. Kannst du dein Argument zusammenfassen?"
+      ],
+      "opts": [
+       [
+        "To sum up, young people should have a say because they will live with the results.",
+        "Zusammengefasst: Junge Leute sollten mitreden, weil sie mit den Folgen leben werden.",
+        "Zusammengefasst: Junge Leute sollten mitreden, weil sie mit den Folgen leben werden.",
+        1
+       ],
+       [
+        "To sum up, I have nothing to say.",
+        "Zusammengefasst habe ich nichts zu sagen.",
+        "Zusammengefasst habe ich nichts zu sagen.",
+        0
+       ]
+      ],
+      "hint": [
+       "Schluss: „To sum up, …“",
+       "Schluss: „To sum up, …“"
+      ]
+     }
+    ],
+    "outro": [
+     "Mr Patel: „Excellent arguments on both sides!“ Die Klasse stimmt ab – es wird knapp.",
+     "Mr Patel: „Excellent arguments on both sides!“ Die Klasse stimmt ab – es wird knapp."
+    ]
+   },
+   "pack": 1,
+   "sch": 10,
+   "ico": "⚖️"
+  },
+  {
    "id": "i_game",
    "city": "Gaming and streaming",
    "cityDe": "Gaming und Streaming",
@@ -30094,11 +30552,27 @@
     "s9ind",
     "s10can",
     "s10saf",
-    "s9job"
+    "s9job",
+    "s8wel",
+    "s10rig"
    ]
   }
  ],
  "news": [
+  {
+   "v": "0.34",
+   "date": "2026-11-14",
+   "de": [
+    "Zwei neue Schul-Pakete passend zum neuen Bildungsplan: „Wohlbefinden und Stress“ (Klasse 8) und „Rechte, Pflichten und Rollenbilder“ (Klasse 10) – mit Wörtern, Sätzen und einer Szene."
+   ]
+  },
+  {
+   "v": "0.33",
+   "date": "2026-11-14",
+   "de": [
+    "Der Prüf-Link für Leute mit Englisch als Muttersprache (unter Ich → Englisch gegenlesen lassen) ist jetzt ganz auf Englisch und enthält alle Inhalte – auch Grammatik und Schul-Pakete."
+   ]
+  },
   {
    "v": "0.32",
    "date": "2026-11-14",
@@ -31158,17 +31632,17 @@
    }
   },
   "plans": {
-   "sek1": "555666777888a9aaaa55689999aa8|5556666657877788899aaaaa555567888a0aa",
-   "nw": "555666777788aaaaa9556879998a9|55566666676666777878898955556887789a9",
-   "nwrs": "555666777788aaaaa9556879998a9|565566665776777889899aaa55556897690aa",
-   "nwg": "555666777788aaaaa0556809998a9|56557676570887aaaa00a0005555690060000",
-   "sn": "5556567888779a9aa9556779a88a9|5556666656767667787888885555577768898",
-   "mv": "555666777788999aaa556789a99a9|5556666657766777778888985555678889898",
-   "rp": "555666777888999aaa556789a9aa9|5556666657777788988989995555679889aaa",
-   "he": "555657686668a899a9556779aaaa9|555656665676667878888989555567966997a",
-   "by": "555556776687aa9a985568799a8a9|5555666656766777897788995555598669958",
-   "sek1e": "555666777888a9aaaa55689999aa9|5556666657877788899aaaaa555566888a9aa",
-   "sek1g": "555666777888a9aaaa55680999aa8|555676765907778aaaaa00a055556799000aa"
+   "sek1": "555666777888a9aaaa55689999aa88a|5556666657877788899aaaaa555567888a0aa",
+   "nw": "555666777788aaaaa9556879998a98a|55566666676666777878898955556887789a9",
+   "nwrs": "555666777788aaaaa9556879998a98a|565566665776777889899aaa55556897690aa",
+   "nwg": "555666777788aaaaa0556809998a98a|56557676570887aaaa00a0005555690060000",
+   "sn": "5556567888779a9aa9556779a88a98a|5556666656767667787888885555577768898",
+   "mv": "555666777788999aaa556789a99a98a|5556666657766777778888985555678889898",
+   "rp": "555666777888999aaa556789a9aa98a|5556666657777788988989995555679889aaa",
+   "he": "555657686668a899a9556779aaaa98a|555656665676667878888989555567966997a",
+   "by": "555556776687aa9a985568799a8a98a|5555666656766777897788995555598669958",
+   "sek1e": "555666777888a9aaaa55689999aa98a|5556666657877788899aaaaa555566888a9aa",
+   "sek1g": "555666777888a9aaaa55680999aa88a|555676765907778aaaaa00a055556799000aa"
   },
   "niveaus": {
    "bw-rs": [
@@ -31390,7 +31864,9 @@
    "s9ind",
    "s10can",
    "s10saf",
-   "s9job"
+   "s9job",
+   "s8wel",
+   "s10rig"
   ]
  },
  "guide": {

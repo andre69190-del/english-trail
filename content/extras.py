@@ -282,6 +282,8 @@ NEWS = [
 ]
 
 NEWS_ALL = [
+  ('0.34', '2026-11-14', ['Zwei neue Schul-Pakete passend zum neuen Bildungsplan: „Wohlbefinden und Stress“ (Klasse 8) und „Rechte, Pflichten und Rollenbilder“ (Klasse 10) – mit Wörtern, Sätzen und einer Szene.']),
+  ('0.33', '2026-11-14', ['Der Prüf-Link für Leute mit Englisch als Muttersprache (unter Ich → Englisch gegenlesen lassen) ist jetzt ganz auf Englisch und enthält alle Inhalte – auch Grammatik und Schul-Pakete.']),
   ('0.32', '2026-11-14', ['Neues Design: Überall begleitet dich jetzt Rabe Rufus statt des alten Zwergs, und dein eigener Rabe begrüßt dich auf der Startseite.', 'Deine Postkarten haben jetzt einen Luftpost-Rand, eine Briefmarke und einen Poststempel.']),
   ('0.31', '2026-11-14', ['Mehr Schularten: Realschule und Mittelschule in Bayern, Ober-, Real-, Haupt- und Gesamtschule in Niedersachsen, Real-, Haupt- und Gesamtschule in Hessen sowie die Oberschule in Sachsen.']),
   ('0.30', '2026-11-14', ['Prüfungstraining: Nimm deine Präsentation und deine Sprachmittlung auf und hör sie dir danach an – mit Checkliste. Auf Wunsch zeigt eine Mitschrift, wie viele Wörter pro Minute du sprichst und welche Redemittel du benutzt hast. Die Aufnahme bleibt nur auf deinem Gerät.']),

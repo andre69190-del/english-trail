@@ -225,8 +225,6 @@ for _f in sorted(glob.glob(os.path.join(ROOT, 'data-*.json'))):
     _pl_walk(json.load(open(_f, encoding='utf-8')), os.path.basename(_f))
 _app = open(os.path.join(ROOT, 'src', 'app.js'), encoding='utf-8').read()
 _app = re.sub(r'/\*.*?\*/', '', _app, flags=re.S)
-_rv0, _rv1 = _app.find('var RVX = {'), _app.find('function renderReview')  # Prüfmodus: AUTOPLAN 12
-if _rv0 >= 0 and _rv1 > _rv0: _app = _app[:_rv0] + _app[_rv1:]
 for _n, _l in enumerate(_app.split('\n')):
     if PL_CH.search(_l): e(f'Polnisch-Rest in app.js: {_l.strip()[:80]}')
 total = sum(len(u['words']) for u in D['units'])
